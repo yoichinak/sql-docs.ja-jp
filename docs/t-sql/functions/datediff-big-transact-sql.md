@@ -56,7 +56,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |*datepart*|省略形|  
 |---|---|
 |**year**|**yy、yyyy**|  
-|**quater**|**qq、q**|  
+|**quarter**|**qq、q**|  
 |**month**|**mm、m**|  
 |**dayofyear**|**dy、y**|  
 |**day**|**dd、d**|  
