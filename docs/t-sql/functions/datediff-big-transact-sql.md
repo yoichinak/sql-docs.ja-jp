@@ -55,18 +55,18 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 |*datepart*|省略形|  
 |---|---|
-|**1 年**|**yy、yyyy**|  
-|**四半期**|**qq、q**|  
-|**月**|**mm、m**|  
+|**year**|**yy、yyyy**|  
+|**quater**|**qq、q**|  
+|**month**|**mm、m**|  
 |**dayofyear**|**dy、y**|  
-|**1 日**|**dd、d**|  
-|**週**|**wk、ww**|  
-|**1 時間**|**mm**|  
-|**1 分**|**mi、n**|  
-|**1 秒**|**ss、s**|  
-|**ミリ秒**|**ms**|  
-|**マイクロ秒**|**mcs**|  
-|**ナノ秒**|**ns**|  
+|**day**|**dd、d**|  
+|**week**|**wk、ww**|  
+|**hour**|**mm**|  
+|**minute**|**mi、n**|  
+|**second**|**ss、s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *startdate*  
 式に解決されることができるは、**時間**、**日付**、 **smalldatetime**、 **datetime**、 **datetime2**、または**datetimeoffset**値。 *日付*できる式、列式、ユーザー定義変数または文字列リテラルです。 *startdate*から差し引かれます*enddate*です。  
