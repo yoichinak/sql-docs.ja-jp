@@ -59,19 +59,19 @@ DATEPART ( datepart , date )
   
 |*datepart*|省略形|  
 |---|---|
-|**1 年**|**yy**、 **yyyy**|  
-|**四半期**|**qq**、 **q**|  
-|**月**|**mm**、 **m**|  
+|**year**|**yy**、 **yyyy**|  
+|**quarter**|**qq**、 **q**|  
+|**month**|**mm**、 **m**|  
 |**dayofyear**|**dy**、 **y**|  
-|**1 日**|**dd**、 **d**|  
-|**週**|**wk**、 **ww**|  
-|**曜日**|**データ ウェアハウス**|  
-|**1 時間**|**mm**|  
-|**1 分**|**mi、n**|  
-|**1 秒**|**ss**、 **s**|  
-|**ミリ秒**|**ms**|  
-|**マイクロ秒**|**mcs**|  
-|**ナノ秒**|**ns**|  
+|**day**|**dd**、 **d**|  
+|**week**|**wk**、 **ww**|  
+|**weekday**|**データ ウェアハウス**|  
+|**hour**|**mm**|  
+|**minute**|**mi、n**|  
+|**second**|**ss**、 **s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
 |**TZoffset**|**tz**|  
 |**ISO_WEEK**|**isowk**、 **isoww**|  
   
@@ -87,31 +87,31 @@ DATEPART ( datepart , date )
   
 戻り値を使用して設定した言語環境に依存[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)および、 [default language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)ログインします。 場合*日付*文字列は、いくつかの形式のリテラル、戻り値によって異なりますを使用して指定された形式[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)です。 date が日付データ型や時刻データ型の列式である場合、SET DATEFORMAT は戻り値に影響しません。
   
-次の表では、すべて一覧表示*datepart*と対応する引数は、ステートメントの値を返す`SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`です。 データ型、*日付*引数は**datetimeoffset (7)**です。 **ナノ秒***datepart*小数点以下桁数は 9 の値を返します (. 123456700) と最後の 2 つの桁は常に 00 です。
+次の表では、すべて一覧表示*datepart*と対応する引数は、ステートメントの値を返す`SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`です。 データ型、*日付*引数は**datetimeoffset (7)**です。 **nanosecond** *datepart*小数点以下桁数は 9 の値を返します (. 123456700) と最後の 2 つの桁は常に 00 です。
   
 |*datepart*|戻り値|  
 |---|---|
 |**year、yyyy, yy**|2007|  
-|**四半期、qq、q**|4|  
-|**月、mm、m**|10|  
+|**quarter、qq、q**|4|  
+|**month、mm、m**|10|  
 |**dayofyear、dy、y**|303|  
-|**日、dd、d**|30|  
+|**day、dd、d**|30|  
 |**week、wk、ww**|45|  
-|**平日、dw**|1|  
+|**weekday、dw**|1|  
 |**hour、hh**|12|  
-|**1 分、n**|15|  
-|**2 番目、ss、s**|32|  
+|**minute、n**|15|  
+|**second、ss、s**|32|  
 |**millisecond、ms**|123|  
-|**マイクロ秒、mcs**|123456|  
-|**(ナノ秒)、ns**|123456700|  
+|**microsecond、mcs**|123456|  
+|**nanosecond、ns**|123456700|  
 |**TZoffset、tz**|310|  
   
 ## <a name="week-and-weekday-datepart-arguments"></a>曜日の週の datepart 引数
-ときに*datepart*は**週**(**wk**、 **ww**) または**平日**(**dw**)、戻り値を使用して設定されている値に依存[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)です。
+ときに*datepart*は**week**(**wk**、 **ww**) または**weekday**(**dw**)、戻り値を使用して設定されている値に依存[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)です。
   
-任意の年 1 月 1 日の開始番号の定義、**週***datepart*、たとえば: DATEPART (**wk**、' Jan 1, *xxx*x') = 1, 場所*xxxx*は任意の年。
+任意の年 1 月 1 日の開始番号の定義、**week** *datepart*、たとえば: DATEPART (**wk**、' Jan 1, *xxx*x') = 1, 場所*xxxx*は任意の年。
   
-次の表は、戻り値の**週**と**平日***datepart*の ' 2007-04-21' が各 SET DATEFIRST 引数。 西暦 2007 年 1 月 1 日は月曜日です。 西暦 2007 年 4 月 21 日は土曜日です。 SET DATEFIRST 7、日曜日は、米国の既定値英語版です。
+次の表は、戻り値の**week**と**weekday** *datepart*の ' 2007-04-21' が各 SET DATEFIRST 引数。 西暦 2007 年 1 月 1 日は月曜日です。 西暦 2007 年 4 月 21 日は土曜日です。 SET DATEFIRST 7、日曜日は、米国の既定値英語版です。
   
 |SET DATEFIRST<br /><br /> 引数 (argument)|week<br /><br /> 返される|weekday<br /><br /> 返される|  
 |---|---|---|
@@ -124,7 +124,7 @@ DATEPART ( datepart , date )
 |7|16|7|  
   
 ## <a name="year-month-and-day-datepart-arguments"></a>year、month、day (datepart 引数)  
-DATEPART の返される値 (**年**、*日付*)、DATEPART (**月**、*日付*)、および DATEPART (**日**、*日付*) は、関数によって返されるものと同じ[年](../../t-sql/functions/year-transact-sql.md)、[月](../../t-sql/functions/month-transact-sql.md)、および[日](../../t-sql/functions/day-transact-sql.md)、fそれぞれします。
+DATEPART の返される値 (**year**、*date*)、DATEPART (**month**、*date*)、および DATEPART (**day**、*date*) は、関数によって返されるものと同じ[年](../../t-sql/functions/year-transact-sql.md)、[月](../../t-sql/functions/month-transact-sql.md)、および[日](../../t-sql/functions/day-transact-sql.md)、fそれぞれします。
   
 ## <a name="isoweek-datepart"></a>ISO_WEEK (datepart)  
 ISO 8601 には、ISO 週日付方式 (週番号方式) が規定されています。 それぞれの週は、木曜日が出現する年と関連付けられます。 たとえば、2004 年の第 1 週 (2004W01) は、2003 年 12 月 29 日 月曜日から 2004 年 1 月 4 日 日曜日です。 年の最大の週番号は 52 または 53 になります。 この付番方法は、主に欧州諸国/地域で用いられ、それ以外の国/地域で使用されることはまれです。
@@ -141,7 +141,7 @@ ISO 8601 には、ISO 週日付方式 (週番号方式) が規定されていま
 |土曜日|1 月 1 日<br /><br /> 最初の金曜日<br /><br /> 年の 1 ～ 7 日|可||  
   
 ## <a name="tzoffset"></a>TZoffset  
-**TZoffset** (**tz**) (署名) 分数として返されます。 次のステートメントは、310 分のタイム ゾーン オフセットを返します。
+**TZoffset** (**tz**)分の数 (符号付き) として返されます。 次のステートメントは、310 分のタイム ゾーン オフセットを返します。
   
 ```sql
 SELECT DATEPART (TZoffset, '2007-05-10  00:00:01.1234567 +05:10');  
