@@ -57,19 +57,19 @@ DATENAME ( datepart , date )
   
 |*datepart*|省略形|  
 |---|---|
-|**1 年**|**yy、yyyy**|  
-|**四半期**|**qq、q**|  
-|**月**|**mm、m**|  
+|**year**|**yy、yyyy**|  
+|**quarter**|**qq、q**|  
+|**month**|**mm、m**|  
 |**dayofyear**|**dy、y**|  
-|**1 日**|**dd、d**|  
-|**週**|**wk、ww**|  
-|**曜日**|**dw、w**|  
-|**1 時間**|**mm**|  
-|**1 分**|**mi、n**|  
-|**1 秒**|**ss、s**|  
-|**ミリ秒**|**ms**|  
-|**マイクロ秒**|**mcs**|  
-|**ナノ秒**|**ns**|  
+|**day**|**dd、d**|  
+|**week**|**wk、ww**|  
+|**weekday**|**dw、w**|  
+|**hour**|**mm**|  
+|**minute**|**mi、n**|  
+|**second**|**ss、s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
 |**TZoffset**|**tz**|  
 |**ISO_WEEK**|**ISOWK、ISOWW**|  
   
