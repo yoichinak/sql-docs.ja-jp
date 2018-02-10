@@ -46,7 +46,7 @@ SIN ( float_expression )
 
 ## <a name="arguments"></a>引数  
  *float_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**または float 型に暗黙的に変換できる型です。  
+ **float** 型、または暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
@@ -84,7 +84,7 @@ SELECT SIN(45.175643);
 ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 
