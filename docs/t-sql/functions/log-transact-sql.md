@@ -1,5 +1,5 @@
 ---
-title: "ログ (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "LOG (Transact-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定したの自然対数を返します**float**式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  指定された **float** 式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の自然対数を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,27 +54,27 @@ LOG ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**または型に暗黙的に変換できる**float**です。  
+ **float** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)、または暗黙的に **float** 型に変換できる式を指定します。  
   
  *ベース*  
  対数の底を設定するオプションの整数引数です。  
   
-**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用範囲**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]から[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
 ## <a name="remarks"></a>解説  
- 既定では、 **LOG()**自然対数を返します。 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、対数の底を別の値に変更するには、オプションを使用して*基本*パラメーター。  
+ 既定では、**LOG()** は自然対数を返します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、オプションの *base* パラメーターを使用して対数の底を別の値に変更できます。  
   
- 自然対数を底とする対数**e**ここで、 **e** 2.718281828 にほぼ等しい無理定数がします。  
+ 自然対数は **e** を底とする対数です。ここで、**e** は 2.718281828 にほぼ等しい無理定数です。  
   
- 数値の指数の自然対数は数自体: ログ (EXP (  *n*  )) =  *n*です。 数値の自然対数の指数は数自体: EXP (ログ (  *n*  )) =  *n*です。  
+ 数値の指数の自然対数は数自体: LOG (EXP (  *n*  )) =  *n*です。 数値の自然対数の指数は数自体: EXP (LOG (  *n*  )) =  *n*です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 数値の自然対数を計算する  
- 次の例では、計算、 `LOG` 、指定された**float**式。  
+ 次の例では、指定した **float** 式の `LOG` を計算します。  
   
 ```  
 DECLARE @var float = 10;  
@@ -110,7 +110,7 @@ SELECT LOG (EXP (10));
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 数値の自然対数を計算します。  
- 次の例では、計算、 `LOG` 、指定された**float**式。  
+ 次の例では、指定した **float** 式の `LOG` を計算します。  
   
 ```  
 SELECT LOG(10);  
@@ -125,9 +125,9 @@ SELECT LOG(10);
  ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Exp 関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/exp-transact-sql.md)   
- [Log10 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/log10-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [EXP &#40;Transact-SQL&#41;](../../t-sql/functions/exp-transact-sql.md)   
+ [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
   
   
 
