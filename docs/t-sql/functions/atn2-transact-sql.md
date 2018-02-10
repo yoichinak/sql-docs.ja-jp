@@ -45,13 +45,14 @@ ATN2 ( float_expression , float_expression )
 ```  
   
 ## <a name="arguments"></a>引数  
-*float_expression*は、[式](../../t-sql/language-elements/expressions-transact-sql.md)の**float**データ型。
+*float_expression*  
+**float** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
   
 ## <a name="examples"></a>使用例  
-次の例では、指定された `ATN2` コンポーネントと `x` コンポーネントの `y` を計算します。
+次の例では、指定された x コンポーネントと y コンポーネントの ATN2 を計算します。
   
 ```sql
 DECLARE @x float = 35.175643, @y float = 129.44;  
@@ -68,8 +69,8 @@ The ATN2 of the angle is: 0.265345
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[float、real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[数学関数&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 
