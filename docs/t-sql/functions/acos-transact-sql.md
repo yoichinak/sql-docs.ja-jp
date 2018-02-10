@@ -70,7 +70,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]及び[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 
 次の例では、指定された数値の ACOS を返します。
   
@@ -90,7 +90,7 @@ The ACOS of the number is: 3.14159
 ```  
   
 ## <a name="see-also"></a>参照
-[数学関数 (TRANSACT-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[数学関数 &#40;TRANSACT-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [関数](../../t-sql/functions/functions.md)
   
   
