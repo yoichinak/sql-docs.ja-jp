@@ -53,13 +53,13 @@ ROUND (numeric_expression , length )
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)の正確な型または概数の数値データのカテゴリを除く入力、**ビット**データ型。  
+ **bit** 型を除く、真数型または概数型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
  *length*  
- 有効桁数を*numeric_expression*丸めた後です。 *長さ*型の式を指定する必要があります**tinyint**、 **smallint**、または**int**です。ときに*長さ*正の整数*numeric_expression*で指定された小数点以下桁数に丸められます*長さ*です。 ときに*長さ*、負の値は、 *numeric_expression*で指定したとおり、小数点の左側にあるで丸められます*長さ*です。  
+ *numeric_expression* を丸める有効桁数です。 *length* は **tinyint** 型、**smallint** 型、または **int** 型の式である必要があります。 *length* に正の値を指定した場合、*numeric_expression* は *length* で指定した小数点以下桁数に丸められます。 *length* に負の値を指定した場合、*numeric_expression* は *length* で指定した小数点の左側の位置で丸められます。  
   
- *関数 (function)*  
- 実行する操作の種類です。 *関数*する必要があります**tinyint**、 **smallint**、または**int**です。ときに*関数*を省略するか、0 (既定値) の値を持つ*numeric_expression*は丸められます。 以外の値 0 が指定した場合、 *numeric_expression*が切り詰められています。  
+ *function*  
+ 実行する操作の種類です。 *function* は、**tinyint** 型、**smallint** 型、または **int** 型のいずれかである必要があります。 *function* を省略した場合、または 0 (既定値) を指定した場合、*numeric_expression* は丸められます。 0 以外の値を指定した場合、*numeric_expression* は切り捨てられます。  
   
 ## <a name="return-types"></a>戻り値の型  
  次のデータ型を返します。  
@@ -68,20 +68,20 @@ ROUND (numeric_expression , length )
 |-----------------------|-----------------|  
 |**tinyint**|**int**|  
 |**smallint**|**int**|  
-|**ssNoversion**|**int**|  
+|**int**|**int**|  
 |**bigint**|**bigint**|  
-|**10 進**と**数値**型 (p, s)|**decimal (p, s)**|  
+|**decimal**と**numeric**型 (p, s)|**decimal (p, s)**|  
 |**money**と**smallmoney**カテゴリ|**money**|  
-|**float**と**実際**カテゴリ|**float**|  
+|**float**と**real**カテゴリ|**float**|  
   
 ## <a name="remarks"></a>解説  
- ROUND は常に値を返します。 場合*長さ*は負の値であり、小数点の前に数字の数よりも大きい、ROUND は 0 を返します。  
+ ROUND は常に値を返します。 *length* が負の値で、整数部の桁数より大きい場合、ROUND は 0 を返します。  
   
 |例|結果|  
 |-------------|------------|  
 |ROUND (748.58、-4)|0|  
   
- ラウンドは、角の丸いを返します*numeric_expression*データ型に関係なく、ときに*長さ*負の数値します。  
+ ROUND は、*length* が負の値であるときは、データ型に関係なく、*numeric_expression* を丸めて返します。  
   
 |使用例|結果|  
 |--------------|------------|  
@@ -122,7 +122,7 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ```
   
 ### <a name="c-using-round-to-truncate"></a>C. ROUND を使用して切り捨てを行う  
- 次の例を使用して 2 つ`SELECT`ステートメントを丸め処理と切り捨ての違いを示します。 最初のステートメントは、結果を丸めます。 2 番目のステートメントは、結果を切り捨てます。  
+ 次の例では、2 つの `SELECT` ステートメントを使用して、丸め処理と切り捨て処理の違いを示します。 最初のステートメントは、結果を丸めます。 2 番目のステートメントは、結果を切り捨てます。  
   
 ```  
 SELECT ROUND(150.75, 0);  
@@ -162,11 +162,11 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
 ```
   
 ## <a name="see-also"></a>参照  
- [CEILING &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ceiling-transact-sql.md)   
+ [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [FLOOR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/floor-transact-sql.md)   
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [FLOOR &#40;Transact-SQL&#41;](../../t-sql/functions/floor-transact-sql.md)   
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 
