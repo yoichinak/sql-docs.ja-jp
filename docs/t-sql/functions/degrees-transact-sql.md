@@ -45,7 +45,7 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)の正確な型または概数の数値データのカテゴリを除く入力、**ビット**データ型。  
+ 真数型または概数型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** 型は除きます。
   
 ## <a name="return-code-values"></a>リターン コードの値  
  *numeric_expression*と同じ型を返します。  
@@ -68,7 +68,7 @@ The number of degrees in PI/2 radians is 90
 ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 
