@@ -46,19 +46,19 @@ FLOOR ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- 正確な型または概数の数値データ型カテゴリの式を除く、**ビット**データ型。  
+ **bit** 型を除く、真数型または概数型の式を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  *numeric_expression*と同じ型を返します。  
   
 ## <a name="examples"></a>使用例  
- この例では、正の数値、負の数値、および通貨値を使った `FLOOR` 関数を示しています。  
+ 次の例では、正の数値、負の数値、および通貨値を使った `FLOOR` 関数を示しています。  
   
 ```  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 結果は、計算値と同じデータ型の整数部分*numeric_expression*です。  
+ 結果は、*numeric_expression* と同じデータ型の、計算値の整数部分になります。  
   
 ```  
 ---------      ---------     -----------  
@@ -66,13 +66,13 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例は、数値、正の数値、負の値を表示し、値を`FLOOR`関数。  
+ 次の例では、正の数値、負の数値、および通貨値を使った `FLOOR` 関数を示しています。  
   
 ```  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 結果は、計算値と同じデータ型の整数部分*numeric_expression*です。  
+ 結果は、*numeric_expression* と同じデータ型の、計算値の整数部分になります。  
   
  ```
  -----   ---------    -----------  
@@ -81,7 +81,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
  ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 
