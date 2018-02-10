@@ -45,7 +45,7 @@ COS ( float_expression )
   
 ## <a name="arguments"></a>引数  
 *float_expression*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**です。
+**float** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
@@ -70,7 +70,7 @@ The COS of the angle is: -0.599465
 
 ## <a name="examples"></a>使用例
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]そして[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
 次の例では、指定した角度のコサインを返します。
@@ -88,7 +88,7 @@ cosCalc1  cosCalc2
 ```
   
 ## <a name="see-also"></a>参照
-[数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 
