@@ -1,5 +1,5 @@
 ---
-title: "正方形 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "SQUARE (Transact-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -45,13 +45,13 @@ SQUARE ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**または float 型に暗黙的に変換できる型です。  
+ **float** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)または暗黙的に float 型に変換できる式を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
 ## <a name="examples"></a>使用例  
- 次の例は、半径の円柱のボリュームを返して`1`インチ、高さは`5`(インチ)。  
+ 次の例では、半径が `1` インチで高さが `5` インチの円柱の体積を返します。  
   
 ```  
 DECLARE @h float, @r float;  
@@ -69,7 +69,7 @@ Cyl Vol
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例は、内の各値の 2 乗を返します、`volume`内の列、`containers`テーブル。  
+ 次の例は、`containers`テーブルの`volume`列の各値の 2 乗を返します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -96,7 +96,7 @@ Cube             575.04
 ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 
