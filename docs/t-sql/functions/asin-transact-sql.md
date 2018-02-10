@@ -107,10 +107,10 @@ SELECT ASIN(1.1472738) AS asinCalc;
 ```  
   
 ## <a name="see-also"></a>参照
-[CEILING &#40;TRANSACT-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[数学関数 &#40;TRANSACT-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-[SET ARITHIGNORE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
-[SET ARITHABORT &#40;TRANSACT-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
+[CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
+[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
+[SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
   
   
 
