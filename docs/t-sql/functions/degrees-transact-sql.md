@@ -1,5 +1,5 @@
 ---
-title: "度 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "DEGREES (Transact-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
