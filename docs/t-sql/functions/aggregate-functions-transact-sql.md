@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 
 集計関数は、値の集まりに対して計算を実行し、1 つの値を返します。 COUNT を除くその他の集計関数は NULL 値を無視します。 集計関数は、SELECT ステートメントの GROUP BY 句と共に使用されることが多いです。
   
-集計関数はすべて決定的です。 つまり集計関数は、特定の入力値を使用して呼び出されたときに、必ず同じ値を返します。 関数の決定性の詳細については、[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)を参照してください。[OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)は、GROUPING と GROUPING_ID を除くすべての集計関数の後に使用できます。
+集計関数はすべて決定的です。 つまり集計関数は、特定の入力値を使用して呼び出されたときに、必ず同じ値を返します。 関数の決定性の詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。[OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)は、GROUPING と GROUPING_ID を除くすべての集計関数の後に使用できます。
   
 集計関数を式として使用できるのは、次の箇所に限られます。
 -   SELECT ステートメントの選択リスト (サブクエリまたは外部クエリ)  
