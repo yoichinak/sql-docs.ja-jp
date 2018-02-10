@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-指定した数値式の絶対値 (正値) を返す数学関数です。 (`ABS`負の値を正の値を変更します。 `ABS`0 の影響を与えませんまたは正の値です)。
+指定した数値式の絶対値 (正値) を返す数学関数です。 (`ABS` は負の値を正の値を変更します。 `ABS` は 0 または正の値には影響を与えません)。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,7 +53,7 @@ ABS ( numeric_expression )
 *numeric_expression*と同じ型を返します。
   
 ## <a name="examples"></a>使用例  
-次の例を使用した結果、 `ABS` 3 つの異なる値に対して関数。
+次の例では、3 つの異なる値に対して `ABS` 関数を使用した結果を示します。
   
 ```sql
 SELECT ABS(-1.0), ABS(0.0), ABS(1.0);  
@@ -66,7 +66,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 1.0  .0   1.0  
 ```  
   
-`ABS`数値の絶対値が指定されたデータ型で表すことができる最大数より大きい場合、関数はオーバーフロー エラーを生成できます。 たとえば、`int`データ型の値のみ保持できる範囲の`-2,147,483,648`に`2,147,483,647`です。 符号付き整数の絶対値を計算`-2,147,483,648`絶対値がの正数の範囲を超えているので、オーバーフロー エラーが発生、`int`データ型。
+`ABS` 関数では、数値の絶対値が指定のデータ型で表現できる最大値を超えている場合、オーバーフロー エラーが返されることがあります。 たとえば、`int` データ型では `-2,147,483,648` ～ `2,147,483,647` の範囲の値のみを表現できますが、 符号付整数値 `-2,147,483,648` の絶対値を計算すると `int` データ型の正数の範囲を超えるので、オーバーフロー エラーが発生します。
   
 ```sql
 DECLARE @i int;  
