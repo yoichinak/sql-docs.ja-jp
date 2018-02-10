@@ -1,5 +1,5 @@
 ---
-title: "電源 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "POWER (Transact-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -43,13 +43,13 @@ POWER ( float_expression , y )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**または型に暗黙的に変換できる**float**です。  
+ **float** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)、または暗黙的に **float** 型に変換できる式を指定します。  
   
  *y*  
- のべき乗値を指定*float_expression*です。 *y*を除く、真数または概数数値の正確なデータ型カテゴリの式を指定できます、**ビット**データ型。  
+ *float_expression* のべき乗値を指定します。 *y* には、**bit** データ型を除く、真数または概数のデータ型カテゴリの式を指定できます。  
   
 ## <a name="return-types"></a>戻り値の型  
- 送信するときと同じ型を返します*float_expression*です。 たとえば場合、 **10 進**(2, 0) として送信された*float_expression*、結果が返されます**decimal**(2, 0) です。  
+ *float_expression* に提示された型と同じ型を返します。 たとえば、**decimal** (2, 0) が *float_expression* として提示された場合、返される結果は **decimal** (2, 0) になります。  
   
 ## <a name="examples"></a>使用例  
   
@@ -75,7 +75,7 @@ Result1                Result2
 ```  
   
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. POWER を使用してデータ型変換の結果を示す  
- 例を次にどのように*float_expression*予期しない結果を返す可能性のあるデータ型を保持します。  
+ 次の例は、予期しない結果を返す可能性のあるデータ型を *float_expression* で保持する方法を示しています。  
   
 ```  
 SELECT   
@@ -97,7 +97,7 @@ FloatResult            IntegerResult IntegerResult Decimal1Result Decimal2Result
 ```  
   
 ### <a name="c-using-power"></a>C. POWER を使用する  
- 次の例を返します`POWER`結果`2`です。  
+ 次の例では、`2` に対する `POWER` の結果を返します。  
   
 ```  
 DECLARE @value int, @counter int;  
@@ -140,8 +140,8 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: では、電源を使用して、数値のキューブを取得するには  
- 次の例を返します`POWER`結果`2.0`第 3 の電源をします。  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: POWER を使用して数値の 3 乗を返す  
+ 次の例では、 `2.0` の３乗の `POWER` の結果を返します。  
   
 ```  
 SELECT POWER(2.0, 3);  
@@ -155,11 +155,11 @@ SELECT POWER(2.0, 3);
 ```  
   
 ## <a name="see-also"></a>参照  
- [decimal および numeric 型 &#40;TRANSACT-SQL と #41 です。](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [int、bigint、smallint 型、および tinyint (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [money および smallmoney &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+ [decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [float 型と real 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [int、bigint、smallint、および tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [money および smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
 
