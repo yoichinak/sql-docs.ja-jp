@@ -69,7 +69,7 @@ The COT of the angle is: -0.040312
 ```  
   
 ## <a name="see-also"></a>参照
-[数学関数 &#40;TRANSACT-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 
