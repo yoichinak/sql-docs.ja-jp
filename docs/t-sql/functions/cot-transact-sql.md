@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-ラジアンで指定された、指定された角度の三角関数コタンジェントを返す数学関数**float**式。
+指定した角度の三角関数のコタンジェント値を、指定した **float** 式に基づいてラジアン単位で返す数学関数です。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,7 +45,7 @@ COT ( float_expression )
   
 ## <a name="arguments"></a>引数  
 *float_expression*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)型の**float**または型に暗黙的に変換できる**float**です。
+**float** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)または暗黙的に **float** 型に変換できる式を指定します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
@@ -69,7 +69,7 @@ The COT of the angle is: -0.040312
 ```  
   
 ## <a name="see-also"></a>参照
-[数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[数学関数 &#40;TRANSACT-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 
