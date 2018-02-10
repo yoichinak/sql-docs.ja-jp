@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  ABS、CEILING、DEGREES、FLOOR、POWER、RADIANS、SIGN などの算術関数は、入力値と同じデータ型の値を返します。 EXP、LOG、LOG10、SQUARE、SQRT などの三角関数やその他の関数は、その入力値を **float** 型にキャストし、**float** 型の値を返します。  
   
- RAND を除くすべての数学関数は決定的です。 つまり、特定の一連の入力値を使用して呼び出されるたびに、同じ結果を返します。 RAND は、シード パラメーターが指定されている場合にのみ決定的です。 関数の決定性の詳細については、[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)を参照してください。  
+ RAND を除くすべての数学関数は決定的です。 つまり、特定の一連の入力値を使用して呼び出されるたびに、同じ結果を返します。 RAND は、シード パラメーターが指定されている場合にのみ決定的です。 関数の決定性の詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
   [算術演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
