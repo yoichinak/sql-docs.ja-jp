@@ -54,11 +54,11 @@ ALL
 DISTINCT  
 値の出現回数にかかわらず、各値の一意なインスタンスだけに AVG を適用することを指定します。
   
-*式 (expression)*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)の正確な型または概数の数値データのカテゴリを除く入力、**ビット**データ型。 集計関数とサブクエリは使用できません。
+*expression*  
+真数型または概数型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** 型は除きます。 集計関数とサブクエリは使用できません。
   
-経由で**(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause*関数を適用するパーティションに FROM 句で生成される結果セットに分割します。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause*操作が実行される論理的順序を決定します。 *order_by_clause*が必要です。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause* **)**  
+*partition_by_clause*は FROM 句で生成される結果セットを関数が適用されるパーティションに分割します。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause*は操作が実行される論理的順序を決定します。 *order_by_clause*は必須です。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。 
   
 ## <a name="return-types"></a>戻り値の型
 戻り値の型は、の評価結果の種類によって決まります*式*です。
@@ -67,14 +67,14 @@ DISTINCT
 |---|---|
 |**tinyint**|**int**|  
 |**smallint**|**int**|  
-|**ssNoversion**|**int**|  
+|**int**|**int**|  
 |**bigint**|**bigint**|  
-|**10 進**型 (p, s)|**10 進数 (38、s)**で割った値**decimal (10, 0)**|  
+|**decimal**型 (p, s)|**decimal (38、s)** を **decimal (10, 0)** で割ったもの |  
 |**money**と**smallmoney**カテゴリ|**money**|  
-|**float**と**実際**カテゴリ|**float**|  
+|**float**と**real**カテゴリ|**float**|  
   
 ## <a name="remarks"></a>解説  
-データ型の場合*式*は、別名データ型、戻り値の型も別名データ型のです。 ただし、基本データ型の場合、別名データ型は、昇格させたから**tinyint**に**int**、戻り値は、昇格したデータ型と別名データ型ではありません。
+*expression* のデータ型が別名データ型の場合、戻り値の型も別名データ型になります。 ただし、**tinyint** から **int** への変換など、別名データ型の基本データ型が昇格する場合、戻り値は別名データ型ではなく昇格したデータ型になります。
   
 AVG () は、値セットの合計を NULL 以外の値の数で除算することによって、これらの値の平均を計算します。 合計が戻り値のデータ型の最大値を超える場合は、エラーが返されます。
   
@@ -83,7 +83,7 @@ AVG は、OVER 句や ORDER BY 句なしで使用される場合は決定的関�
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>A. SUM 関数と AVG 関数を使用して計算する  
-次の例では、休暇時間の平均および病気の合計休暇時間を計算の副社長[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]を使用します。 これらの集計関数は、それぞれ取得されたすべての行の値の集計値を 1 つ返します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
+次の例では、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の副社長が利用した休暇時間の平均および病気休暇時間の合計が計算されます。 これらの集計関数は、それぞれ取得されたすべての行の値の集計値を 1 つ返します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースを使います。
   
 ```sql
 SELECT AVG(VacationHours)AS 'Average vacation hours',   
@@ -103,7 +103,7 @@ Average vacation hours       Total sick leave hours
 ```
   
 ### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>B. GROUP BY 句を伴う SUM 関数と AVG 関数を使用する  
-各集計関数を `GROUP BY` 句と共に使用した場合、テーブル全体ではなく、グループごとに 1 つの値が返されます。 次の例は、販売区域ごとの集計の値を返し、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 このサマリーでは、各区域の販売員が受け取ったボーナスの平均額と、各区域ごとの今年度の売上累計額が一覧表示されます。
+各集計関数を `GROUP BY` 句と共に使用した場合、テーブル全体ではなく、グループごとに 1 つの値が返されます。 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースの販売区域ごとの集計の値を返します。 このサマリーでは、各区域の販売員が受け取ったボーナスの平均額と、各区域ごとの今年度の売上累計額が一覧表示されます。
   
 ```sql
 SELECT TerritoryID, AVG(Bonus)as 'Average bonus', SUM(SalesYTD) as 'YTD sales'  
@@ -133,7 +133,7 @@ NULL        0.00                  1252127.9471
 ```  
   
 ### <a name="c-using-avg-with-distinct"></a>C. DISTINCT を伴う AVG を使用する  
-次のステートメント内の製品の平均表示価格を返します、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 DISTINCT を指定すると、一意の値だけが計算で考慮されます。
+次のステートメントは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース内の製品の平均表示価格を返します。 DISTINCT を指定すると、一意の値だけが計算で考慮されます。
   
 ```sql
 SELECT AVG(DISTINCT ListPrice)  
@@ -167,7 +167,7 @@ FROM Production.Product;
 ```
   
 ### <a name="e-using-the-over-clause"></a>E. OVER 句を使用する  
-次の例に各区域の年間売り上げの移動平均を提供する、OVER 句と AVG 関数を使用して、`Sales.SalesPerson`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。 データがパーティション分割`TerritoryID`によって論理的に順序付けと`SalesYTD`です。 つまり、AVG 関数は年を基にして区域ごとに計算されます。 ことに注意して`TerritoryID`1 の場合、そこが 2005 年の 2 つの行を表す 2 つの販売員の売上その年です。 これら 2 行の平均売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。
+次の例では、OVER 句を指定した AVG 関数を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースの `Sales.SalesPerson` テーブルに各区域の年間売り上げの移動平均を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、AVG 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年については、その年の 2 人の営業担当者を表す 2 行があります。 これら 2 行の平均売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   
@@ -238,7 +238,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```  
   
 ## <a name="see-also"></a>参照
-[集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[句 &#40; 経由TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)
+[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
