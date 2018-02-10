@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-グループ内にある値のチェックサムを返します。 NULL 値は無視されます。 後に、 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)です。
+グループ内にある値のチェックサムを返します。 NULL 値は無視されます。 後に、 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)が続く場合があります。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,11 +51,11 @@ CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )
 DISTINCT  
 CHECKSUM_AGG で、一意な値のチェックサムを返します。
   
-*式 (expression)*  
+*expression*  
 整数[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは許可されません。
   
 ## <a name="return-types"></a>戻り値の型
-すべてのチェックサムを返します*式*値として**int**です。
+すべての *expression* 値のチェックサムが **int** 型で返されます。
   
 ## <a name="remarks"></a>解説  
 CHECKSUM_AGG は、テーブル内の変更を検出する場合に使用できます。
@@ -64,10 +64,10 @@ CHECKSUM_AGG は、テーブル内の変更を検出する場合に使用でき�
   
 いずれかの式の値を変更した場合は通常、そのリストのチェックサムも変わりますが、 チェックサムが変わらない場合もわずかですがあります。
   
-CHECKSUM_AGG には、他の集計関数とほぼ同じ機能があります。 詳細については、次を参照してください。[集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md).
+CHECKSUM_AGG には、他の集計関数とほぼ同じ機能があります。 詳細については、「[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
-次の例で`CHECKSUM_AGG`の変更を検出するために、`Quantity`の列、`ProductInventory`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
+次の例では、`CHECKSUM_AGG` を使って、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ProductInventory` テーブルにある `Quantity` 列の変更を検出します。
   
 ```sql
 --Get the checksum value before the column value is changed.  
@@ -101,7 +101,7 @@ FROM Production.ProductInventory;
 ```  
   
 ## <a name="see-also"></a>参照
-[チェックサム &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/checksum-transact-sql.md)  
-[句 &#40; 経由TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
