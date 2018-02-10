@@ -1,5 +1,5 @@
 ---
-title: "記号 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "SIGN (Transact-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ SIGN ( numeric_expression )
 
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)の正確な型または概数の数値データのカテゴリを除く入力、**ビット**データ型。  
+ **bit** 型を除く、真数型または概数型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
   
 |指定した式|戻り値の型|  
 |--------------------------|-----------------|  
 |**bigint**|**bigint**|  
-|**int、smallint、/tinyint**|**int**|  
-|**money または smallmoney**|**money**|  
-|**数値/10 進数**|**数値/10 進数**|  
+|**int/smallint/tinyint**|**int**|  
+|**money/smallmoney**|**money**|  
+|**numeric/decimal**|**numeric/decimal**|  
 |**その他の種類**|**float**|  
   
 ## <a name="examples"></a>使用例  
@@ -116,7 +116,7 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
 ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 
