@@ -1,5 +1,5 @@
 ---
-title: "Rand 関数 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "RAND (Transact-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  擬似乱数を返します**float** 0 ~ 1 の排他値。  
+  0 と 1 の間の範囲 (両端値は含みません) の **float** 型の擬似乱数を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ RAND ( [ seed ] )
   
 ## <a name="arguments"></a>引数  
  *シード*  
- 整数[式](../../t-sql/language-elements/expressions-transact-sql.md)(**tinyint**、 **smallint**、または**int**) シード値を提供します。 場合*シード*が指定されていない、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]シード値をランダムに割り当てます。 指定したシード値について、返される結果は常に同じです。  
+ シード値となる整数型の[式](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**、**smallint**、または **int**) です。 *seed* を指定しない場合は、SQL Server データベース エンジンによってシード値がランダムに割り当てられます。 指定したシード値について、返される結果は常に同じです。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
@@ -76,6 +76,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [数学関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
