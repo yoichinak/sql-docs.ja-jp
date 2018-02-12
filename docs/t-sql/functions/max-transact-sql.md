@@ -52,16 +52,16 @@ MAX ( [ ALL | DISTINCT ] expression )
  DISTINCT  
  重複する値は 1 つだけカウントします。 DISTINCT は MAX では意味がなく、ISO との互換性を保つためだけに指定可能になっています。  
   
- *式 (expression)*  
- 定数、列名、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 使用できる最大**数値**、**文字**、 **uniqueidentifier**、および**datetime**列は使用できません**ビット**列です。 集計関数とサブクエリは使用できません。  
+ *expression*  
+ 定数、列名、関数、および算術演算子、ビット演算子、文字列演算子の組み合わせを指定します。 MAX は **numeric** 型列、**character** 型列、**uniqueidentifier** 型列、および **datetime** 型列には使用できますが、**bit** 型列には使用できません。 集計関数とサブクエリは使用できません。  
   
  詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
- 経由で**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*関数を適用するパーティションに FROM 句で生成される結果セットに分割します。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause*操作が実行される論理的順序を決定します。 *order_by_clause*が必要です。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* **)**  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、演算が実行される論理的順序を指定します。 *order_by_clause* は必須です。 詳細については、「[OVER 句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
- 値を返しますと同じ*式*です。  
+ *expression* と同じ型の値を返します。  
   
 ## <a name="remarks"></a>解説  
  NULL 値はすべて無視されます。  
@@ -92,7 +92,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
- 次の例では、OVER 句と共に、MIN、MAX、AVG、および COUNT 関数をで部署ごとの集計値を指定する、`HumanResources.Department`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
+ 次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `HumanResources.Department` テーブルの部署ごとに集計値を入力します。  
   
 ```sql  
 SELECT DISTINCT Name  
@@ -135,15 +135,15 @@ Tool Design                   8.62                  29.8462               23.505
 ```  
   
 ### <a name="c-using-max-with-character-data"></a>C. 文字データの最大値を使用します。   
-次の例では、アルファベット、最後の名前として分類するデータベース名を返します。 この例では`WHERE database_id < 5`、システム データベースだけを検討します。  
+次の例では、アルファベットで最後の名前として並ぶデータベース名を返します。 この例ではシステム データベースだけを検討するために `WHERE database_id < 5` を使用します。  
 ```sql   
 SELECT MAX(name) FROM sys.databases WHERE database_id < 5;
 ```
-最後のシステム データベースは`tempdb`します。  
+最後のシステム データベースは`tempdb`です。  
   
 ## <a name="see-also"></a>参照  
- [集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [句 &#40; 経由TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 
