@@ -111,7 +111,7 @@ Distinct_Values   All_Values
 ```  
   
 ### <a name="c-using-stdevp-with-over"></a>C. OVER で STDEVP を使用します。  
- 次の例では、カレンダー年度の四半期ごとの販売ノルマの値の `STDEVP` を返します。 `ORDER BY` 句の `OVER` によって `STDEVP` が順序付けされ、`SELECT` ステートメントの `ORDER BY` によって結果セットが順序付けされることに注目してください。  
+ 次の例では、カレンダー年度の四半期ごとの販売ノルマの値の `STDEVP` を返します。 `OVER` 句の `ORDER BY` によって `STDEVP` が順序付けされ、`SELECT` ステートメントの `ORDER BY` によって結果セットが順序付けされることに注目してください。  
   
 ```  
 -- Uses AdventureWorks  
