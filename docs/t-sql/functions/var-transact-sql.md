@@ -80,7 +80,7 @@ VAR (expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-var"></a>A: VAR を使用します。  
+### <a name="a-using-var"></a>A: VAR を使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesPerson` テーブルにあるすべてのボーナス値の分散を返します。  
   
 ```  
@@ -91,7 +91,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-var"></a>B: VAR を使用します。  
+### <a name="b-using-var"></a>B: VAR を使用する  
  次の例は、 `dbo.FactSalesQuota` テーブルの販売ノルマの値の統計的変位を返します。 最初の列にすべての個別の値の分散が、 2 番目の列に重複値も含めてすべての値の分散が含まれています。  
   
 ```  
@@ -109,7 +109,7 @@ Distinct_Values   All_Values
 159180469909.18   158762853821.10
  ```  
   
-### <a name="c-using-var-with-over"></a>C. OVER で VAR を使用します。  
+### <a name="c-using-var-with-over"></a>C. OVER と共に VAR を使用する  
  次の例では、カレンダー年度の四半期ごとの販売ノルマの値の統計的変位を返します。 OVER 句内の ORDER BY で統計的変位を、 SELECT ステートメントの ORDER BY で結果セットを並べ替えることに注目してください。  
   
 ```  
