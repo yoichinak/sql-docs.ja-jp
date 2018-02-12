@@ -110,7 +110,7 @@ Distinct_Values   All_Values
  ```  
   
 ### <a name="c-using-stdev-with-over"></a>C. OVER で STDEV の使用  
- 次の例では、カレンダー年度の四半期ごとの販売ノルマの値の標準偏差を返します。 OVER 句内の ORDER BY は STDEV を並べ替え、SELECT ステートメントの ORDER BY は結果セットを並べ替えることに注意してください。  
+ 次の例では、カレンダー年度の四半期ごとの販売ノルマの値の標準偏差を返します。 `OVER` 句の `ORDER BY` によって `STDEVP` が順序付けされ、`SELECT` ステートメントの `ORDER BY` によって結果セットが順序付けされることに注目してください。  
   
 ```  
 -- Uses AdventureWorks  
