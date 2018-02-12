@@ -1,5 +1,5 @@
 ---
-title: "カウント (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "COUNT (Transact-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-グループ内のアイテムの数を返します。 同様に機能の数、 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md)関数。 2 つの関数の違いは、戻り値のデータ型だけです。 COUNT は常に返します、 **int**データ型の値。 COUNT_BIG は常に返します、 **bigint**データ型の値。
+グループ内のアイテム数を返します。 COUNT は [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 関数と同じように動作します。 COUNT_BIG と COUNT 関数の違いは、戻り値のデータ型だけです。 COUNT は常に **int** データ型の値を返します。 COUNT_BIG は常に **bigint** データ型の値を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -71,24 +71,24 @@ COUNT ( { expression | * } ) OVER ( [ <partition_by_clause> ] )
 DISTINCT  
 COUNT で、NULL でない一意な値の数を返します。
   
-*式 (expression)*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)任意の型を除く**テキスト**、**イメージ**、または**ntext**です。 集計関数とサブクエリは使用できません。
+*expression*  
+**text** 、**image**、**ntext** 以外のあらゆる型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。
   
 \*  
-すべての行をカウントし、テーブル内の行の総数を返します。 カウント (\*) はパラメーターはとらず、DISTINCT と一緒には使用できません。 カウント (\*) は必要ありません、*式*パラメーター、定義上、これは使用されないため、特定の列に関する情報。 COUNT(*) は重複値を除去しないで、指定されたテーブル内の行数を返します。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。
+すべての行を数えて、テーブル内の行の総数を返すことを指定します。 COUNT(\*) はパラメーターはとらず、DISTINCT と一緒には使用できません。 COUNT(\*) では、この関数の定義上、特定の列についての情報は使われないため、*expression* パラメーターは必要ありません。 COUNT(\*) は重複値を除去しないで、指定されたテーブル内の行数を返します。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。
   
-経由で**(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-*partition_by_clause*関数を適用するパーティションに FROM 句で生成される結果セットに分割します。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause*操作が実行される論理的順序を決定します。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
+*partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、演算が実行される論理的順序を指定します。 *order_by_clause* は必須です。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
 ## <a name="remarks"></a>解説  
-COUNT(*) はグループ内のアイテム数を返します。 これには NULL 値と重複値も含まれます。
+COUNT(\*) はグループ内のアイテム数を返します。 これには NULL 値と重複値も含まれます。
   
-カウント (すべて*式*) 評価*式*グループ内の各行に null 以外の値の数を返します。
+COUNT(ALL *expression*) はグループ内の各行に対して *expression* を評価し、非NULL 値の数を返します。
   
-COUNT (DISTINCT*式*) 評価*式*グループ内の行ごとに一意、非 null 値の数を返します。
+COUNT(DISTINCT *expression*) はグループ内の各行に対して *expression* を評価し、一意の非 NULL 値の数を返します。
   
 2^31-1 より大きい戻り値の場合、COUNT はエラーを生成します。 代わりに COUNT_BIG を使用してください。
   
@@ -133,7 +133,7 @@ GO
 ```
   
 ### <a name="c-using-count-with-other-aggregates"></a>C. COUNT(*) を他の集計関数と共に使用する  
-この例では、`COUNT(*)` を選択リスト内の他の集計関数と組み合わせて使用できることを示しています。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
+この例では、`COUNT(*)` を選択リスト内の他の集計関数と組み合わせて使用できることを示しています。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースを使用します。
   
 ```sql
 SELECT COUNT(*), AVG(Bonus)  
@@ -152,7 +152,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>D. OVER 句を使用する  
-次の例では、OVER 句と共に、MIN、MAX、AVG、COUNT 関数をで部署ごとの集計値を指定する、`HumanResources.Department`テーブルに、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
+次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `HumanResources.Department` テーブルの部署ごとに集計値を入力します。
   
 ```sql
 SELECT DISTINCT Name  
@@ -197,7 +197,7 @@ Tool Design                   8.62                  29.8462               23.505
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-count-and-distinct"></a>E. COUNT と DISTINCT を使用する  
-次の例では、特定の会社に勤務する従業員が保持できる別のタイトルの数が一覧表示します。
+次の例では、特定の会社に勤務する従業員が保持できる役職の数を一覧表示します。
   
 ```sql
 USE ssawPDW;  
@@ -214,7 +214,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="f-using-count"></a>F. COUNT(*) を使用する  
-次の例は、内の行の合計数を返します、`dbo.DimEmployee`テーブル。
+次の例は、`dbo.DimEmployee`テーブル内の行の総数を返します。
   
 ```sql
 USE ssawPDW;  
@@ -231,7 +231,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="g-using-count-with-other-aggregates"></a>G. COUNT(*) を他の集計関数と共に使用する  
-次の例では結合`COUNT(*)`選択リスト内の他の集計関数でします。 クエリは、500,000 ドルと平均の販売ノルマを超えて年間の販売ノルマと販売担当者の数を返します。
+次の例では、選択リスト内の他の集計関数と`COUNT(*)`を結合します。 クエリは、年間の販売ノルマが 500,000 ドルを超える販売担当者の数と平均の販売ノルマを返します。
   
 ```sql
 USE ssawPDW;  
@@ -251,7 +251,7 @@ TotalCount  Average Sales Quota
 ```
   
 ### <a name="h-using-count-with-having"></a>H. HAVING でカウントの使用  
-次の例では、HAVING 句を使用してカウントを使用して、15 個以上の従業員が会社の部門を返します。
+次の例では、HAVING 句と共に COUNT を使用して、15 人以上の従業員を持つ会社の部門を返します。
   
 ```sql
 USE ssawPDW;  
@@ -273,7 +273,7 @@ Production      179
 ```
   
 ### <a name="i-using-count-with-over"></a>I. OVER でカウントの使用  
-次の例では、OVER 句と共にカウントを使用して、指定された販売注文の各で含まれている製品の数を返します。
+次の例では、OVER 句と共に COUNT を使用して、指定された販売注文の各々に含まれている製品の数を返します。
   
 ```sql
 USE ssawPDW;  
@@ -294,9 +294,9 @@ ProductCount   SalesOrderID`
 ```
   
 ## <a name="see-also"></a>参照
-[集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[COUNT_BIG &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/count-big-transact-sql.md)  
-[句 &#40; 経由TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)
+[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
+[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
 
