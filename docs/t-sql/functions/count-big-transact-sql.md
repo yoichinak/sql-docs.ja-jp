@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-グループ内のアイテムの数を返します。 COUNT_BIG は COUNT 関数と同じように動作します。 2 つの関数の違いは、戻り値のデータ型だけです。 COUNT_BIG は常に返します、 **bigint**データ型の値。 COUNT は常に返します、 **int**データ型の値。
+グループ内のアイテムの数を返します。 COUNT_BIG は COUNT 関数と同じように動作します。 2 つの関数の違いは、戻り値のデータ型だけです。 COUNT_BIG は常に **bigint** データ型の値を返します。 COUNT は常に **int** データ型の値を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -66,11 +66,11 @@ ALL
 DISTINCT  
 COUNT_BIG で、NULL でない一意な値の数を返します。
   
-*式 (expression)*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)任意の型。 集計関数とサブクエリは使用できません。
+*expression*  
+任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 集計関数とサブクエリは使用できません。
   
 *\**  
-すべての行をカウントし、テーブル内の行の総数を返します。 COUNT_BIG (*\**) はパラメーターはとらず、DISTINCT と一緒には使用できません。 COUNT_BIG (*\**) は必要ありません、*式*パラメーター、定義上、これは使用されないため、特定の列に関する情報。 COUNT_BIG (*\**) の重複を除去しないで、指定されたテーブルの行の数を返します。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。
+すべての行をカウントし、テーブル内の行の総数を返します。 COUNT_BIG(*\**) はパラメーターをとりません。また、DISTINCT と共に使用することもできません。 COUNT_BIG(*\**) では、この関数の定義上、特定の列についての情報は使用されないため、*expression* パラメーターは必要ありません。 COUNT_BIG(*\**) では、指定されたテーブルの行数が重複行も含めて返されます。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。
   
 ALL  
 すべての値にこの集計関数を適用します。 ALL が既定値です。
@@ -78,31 +78,31 @@ ALL
 DISTINCT  
 値の出現回数にかかわらず、各値の一意なインスタンスだけに AVG を適用することを指定します。
   
-*式 (expression)*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)の正確な型または概数の数値データのカテゴリを除く入力、**ビット**データ型。 集計関数とサブクエリは使用できません。
+*expression*  
+**bit** データ型を除く、真数データ型または概数データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 集計関数とサブクエリは使用できません。
   
-経由で**(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
-*partition_by_clause*関数を適用するパーティションに FROM 句で生成される結果セットに分割します。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause*操作が実行される論理的順序を決定します。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
+*partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、演算が実行される論理的順序を指定します。 *order_by_clause* は必須です。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
 **bigint**
   
 ## <a name="remarks"></a>解説  
-COUNT_BIG(*) では、グループ内の項目数が返されます。 これには NULL 値と重複値も含まれます。
+COUNT_BIG(\*) では、グループ内の項目数が返されます。 これには NULL 値と重複値も含まれます。
   
-COUNT_BIG (すべて*式*) 評価*式*グループ内の各行に null 以外の値の数を返します。
+COUNT_BIG (ALL *expression*) はグループ内の各行に対して *expression* を評価し、非 NULL 値の数を返します。
   
-COUNT_BIG (DISTINCT*式*) 評価*式*グループ内の行ごとに一意、非 null 値の数を返します。
+COUNT_BIG (DISTINCT *expression*) はグループ内の各行に対して *expression* を評価し、一意の非 NULL 値の数を返します。
   
 COUNT_BIG は、OVER 句や ORDER BY 句なしで使用される場合は決定的関数です。 OVER 句や ORDER BY 句と共に使用される場合は、非決定的関数です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
-例については、次を参照してください。[カウント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/count-transact-sql.md).
+例については、「[COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)」を参照してください。
   
 ## <a name="see-also"></a>参照
-[集計関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[カウント &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/count-transact-sql.md)  
-[int、bigint、smallint 型、および tinyint (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
-[句 &#40; 経由TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)
+[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)  
+[int、bigint、smallint、および tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
