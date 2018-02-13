@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  同じ結果セットで始まる自己結合を使用せずに前の行からデータにアクセスする[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。 LAG によって、現在の行の前にある指定された物理的なオフセットの行にアクセスできます。 SELECT ステートメントでこの分析関数を使用して、現在の行の値と前の行の値を比較します。  
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の自己結合を使用せずに同じ結果セットの前の行からデータにアクセスします。 LAG によって、現在の行の前にある指定された物理的なオフセットの行にアクセスできます。 SELECT ステートメントでこの分析関数を使用して、現在の行の値と前の行の値を比較します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,19 +46,19 @@ LAG (scalar_expression [,offset] [,default])
   
 ## <a name="arguments"></a>引数  
  *scalar_expression*  
- 指定されたオフセットに基づいて返される値。 単一の (スカラー) 値を返す任意の型の式です。 *scalar_expression*分析関数にすることはできません。  
+ 指定されたオフセットに基づいて返される値。 単一の (スカラー) 値を返す任意の型の式です。 *scalar_expression* は分析関数にはなりません。  
   
- *オフセット*  
- 値を取得する現在の行から戻る行の数。 指定しない場合は、1 が既定値です。 *オフセット*列、サブクエリ、またはその他の正の整数に評価される式を指定できますかに暗黙的に変換できる**bigint**です。 *オフセット*負の値または分析関数にすることはできません。  
+ *offset*  
+ 値を取得する現在の行から戻る行の数。 指定しない場合は、1 が既定値です。 *offset* は、列、サブクエリ、または正の整数と評価されたり、暗黙的に **bigint** に変換される可能性があるその他の式です。 *offset* は、負の値または分析関数にはなりません。  
   
- *既定値*  
- 場合に返される値*scalar_expression*で*オフセット*は NULL です。 既定値を指定しない場合、NULL が返されます。 *既定*列、サブクエリ、またはその他の式を指定できますが、分析関数をすることはできません。 *既定*型と互換性のある必要がありますと*scalar_expression*です。  
+ *default*  
+ *offset* の *scalar_expression* が NULL の場合に返される値。 既定値を指定しない場合、NULL が返されます。 *default* には、列、サブクエリ、または式を指定できますが、分析関数は指定できません。 *default* には、*scalar_expression* の型との互換性が必要です。  
   
- 経由で**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*関数を適用するパーティションに FROM 句で生成される結果セットに分割します。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause*関数が適用される前に、データの順序を決定します。 場合*partition_by_clause*を指定すると、パーティション内のデータの順序が決まります。 *Order_by_clause*が必要です。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* **)**  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、関数を適用する前にデータの順序を決定します。 *partition_by_clause* を指定した場合、この引数によってパーティション内のデータの順序が決定されます。 *order_by_clause* は必須です。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
- 指定されたデータ型*scalar_expression*です。 場合は、NULL が返されます。 *scalar_expression*が null 許容または*既定*は NULL に設定します。  
+ 指定した *scalar_expression* のデータ型。 *scalar_expression* で NULL 値が許可されているか *default* が NULL に設定されていると、NULL が返されます。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  LAG は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
@@ -173,7 +173,7 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 ```  
   
 ## <a name="see-also"></a>参照  
- [潜在顧客と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/lead-transact-sql.md)  
+ [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 
