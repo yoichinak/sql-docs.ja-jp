@@ -30,7 +30,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---collationproperty-transact-sql"></a>照合順序関数、COLLATIONPROPERTY (TRANSACT-SQL)
+# <a name="collation-functions---collationproperty-transact-sql"></a>照合順序関数 - COLLATIONPROPERTY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] での指定された照合順序のプロパティを返します。
