@@ -33,9 +33,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  計算列の値の連続型分散に基づく百分位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 結果には値が挿入され、列内の特定の値と一致しない可能性があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の列値の連続型分散に基づく百分位数を計算します。 結果には値が挿入され、列内の特定の値と一致しない可能性があります。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,11 +49,11 @@ PERCENTILE_CONT ( numeric_literal )
  *numeric_literal*  
  計算する百分位数です。 値は 0.0 ～ 1.0 で指定してください。  
   
- グループ内で**(** ORDER BY *order_by_expression* [ **ASC** |DESC]**)**  
- 並べ替える数値の一覧を指定し、百分位数を計算します。 1 つだけ*order_by_expression*は許可されています。 式は、正確な数値型に評価される必要があります (**int**、 **bigint**、 **smallint**、 **tinyint**、**数値**、**ビット**、 **decimal**、 **smallmoney**、 **money**) または概数型 (**float**、**実際**)。 他のデータ型は許可されません。 既定の並べ替え順は昇順です。  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** |DESC]**)**  
+ 並べ替える数値の一覧を指定し、百分位数を計算します。 許可される *order_by_expression* は 1 つだけです。 式は、真数型 (**int**、**bigint**、**smallint**、**tinyint**、**numeric**、**bit**、**decimal**、**smallmoney**、**money**) または概数型 (**float**、**real**) に評価される必要があります。 他のデータ型は許可されません。 既定の並べ替え順は昇順です。  
   
- 経由で**(** \<partition_by_clause > **)**  
- FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md). \<ORDER BY 句 > と\<行または範囲句 > は PERCENTILE_CONT 関数で over 構文を指定することはできません。  
+ OVER **(** \<partition_by_clause > **)**  
+ FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。 OVER 構文の \<ORDER BY 句> と \<行または範囲句> は PERCENTILE_CONT 関数では指定できません。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float(53)**  
@@ -127,7 +127,7 @@ Shipping and Receiving 9.250000      9.0000
 ```  
   
 ## <a name="see-also"></a>参照  
- [PERCENTILE_DISC &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/percentile-disc-transact-sql.md)  
+ [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
   
 
