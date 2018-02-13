@@ -46,13 +46,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>引数  
 *non_Unicode_character_string_expression*  
-文字列は、[式](../../t-sql/language-elements/expressions-transact-sql.md)型の**char**、 **varchar**、または**varchar (max)**第 3 の SQL 照合順序で定義されています。 これらの照合順序の一覧については、「解説」を参照してください。
+第 3 の SQL 照合順序で定義された、**char**、**varchar**、または **varchar(max)** の型の文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 これらの照合順序の一覧については、「解説」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-TERTIARY_WEIGHTS を返します**varbinary**とき*non_Unicode_character_string_expression*は**char**または**varchar**、しを返します**varbinary (max)**とき*non_Unicode_character_string_expression*は**varchar (max)**です。
+TERTIARY_WEIGHTS は、*non_Unicode_character_string_expression* が **char** または **varchar** の場合、**varbinary** を返し、*non_Unicode_character_string_expression* が **varchar(max)** の場合、**varbinary(max)** を返します。
   
 ## <a name="remarks"></a>解説  
-TERTIARY_WEIGHTS ときに、NULL を返します*non_Unicode_character_string_expression* SQL 第 3 の照合順序が定義されていません。 次の表に、SQL の第 3 の照合順序を示します。
+TERTIARY_WEIGHTS は、*non_Unicode_character_string_expression* が SQL の第 3 の照合順序で定義されていない場合、NULL を返します。 次の表に、SQL の第 3 の照合順序を示します。
   
 |並べ替え順 ID|SQL 照合順序|  
 |---|---|
@@ -89,7 +89,7 @@ TERTIARY_WEIGHTS ときに、NULL を返します*non_Unicode_character_string_e
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-TERTIARY_WEIGHTS は、の値に定義されている計算列の定義で使用するもの、 **char**、 **varchar**、または**varchar (max)**列です。 計算の両方の列にインデックスを定義して、 **char**、 **varchar**、または**varchar (max)**列は、パフォーマンスを向上させることができる場合、 **char**、 **varchar**、または**varchar (max)**クエリの ORDER BY 句で列を指定します。
+TERTIARY_WEIGHTS は、**char**、**varchar**、または **varchar(max)** 列の値で定義される計算列を定義するのに使用するものです。 **char** 、**varchar**、または **varchar(max)** 列のいずれかと、計算列の両方でインデックスを定義すると、クエリの ORDER BY 句で **char**、**varchar**、または **varchar(max)** 列が指定されている場合、パフォーマンスが向上します。
   
 ## <a name="examples"></a>使用例  
 次の例では、`TERTIARY_WEIGHTS` 関数を `char` 列の値に適用するテーブルに計算列を作成します。
@@ -102,6 +102,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照
-[ORDER BY 句 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+[ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   
