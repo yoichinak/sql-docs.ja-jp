@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の行セット全体または行セットの別個のパーティション内で並べ替えられた値の特定の百分位数を計算します。 指定された百分位の値を*P*PERCENTILE_DISC は ORDER BY 句の式の値を並べ替えおよびよりも大きい、(並べ替え仕様は同じ) についての CUME_DIST の最小値を含む値を返しますまたは等しい*P*です。たとえば、PERCENTILE_DISC (0.5) は式の 50 番目の百分位数 (つまり、中央値) を計算します。 PERCENTILE_DISC は、列値の離散型分布に基づく百分位数を計算します。結果は列の特定の値と等しくなります。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,17 +45,17 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
 ```  
   
 ## <a name="arguments"></a>引数  
- *リテラル*  
+ *literal*  
  計算する百分位数です。 値は 0.0 ～ 1.0 で指定してください。  
   
- グループ内で**(** ORDER BY *order_by_expression* [ **ASC** |DESC]**)**  
- 並べ替えし、経由で、百分位数を計算する値の一覧を指定します。 1 つだけ*order_by_expression*は許可されています。 既定の並べ替え順は昇順です。 並べ替え操作に対して有効なデータ型のいずれかの値の一覧を指定できます。  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** |DESC]**)**  
+ 並べ替える数値の一覧を指定し、百分位数を計算します。 許可される *order_by_expression* は 1 つだけです。 既定の並べ替え順は昇順です。 並べ替え操作に対して有効なデータ型のいずれかの値の一覧を指定できます。  
   
- 経由で**(** \<partition_by_clause > **)**  
- FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md). \<ORDER BY 句 > と\<行または範囲句 > PERCENTILE_DISC 関数で指定することはできません。  
+ OVER **(** \<partition_by_clause > **)**  
+ FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。 \<ORDER BY clause> と \<rows or range clause> は PERCENTILE_DISC 関数では指定できません。  
   
 ## <a name="return-types"></a>戻り値の型  
- 戻り値の型によって決定されます、 *order_by_expression*型です。  
+ 戻り値の型は *order_by_expression* 型によって決められます。  
   
 ## <a name="compatibility-support"></a>互換性サポート  
  互換性レベル 110 以上では、WITHIN GROUP は予約されたキーワードです。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
@@ -126,7 +126,7 @@ Shipping and Receiving  9.250000     9.0000
 ```  
   
 ## <a name="see-also"></a>参照  
- [PERCENTILE_CONT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/percentile-cont-transact-sql.md)  
+ [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
   
   
 
