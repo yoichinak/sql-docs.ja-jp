@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="firstvalue-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  値の順序付きセットの最初の値を返します[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の順序付けられた値のセットにある最初の値を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,11 +49,11 @@ FIRST_VALUE ( [scalar_expression ] )
  *scalar_expression*  
  返される値。 *scalar_expression*列、サブクエリ、またはその他の任意の式を結果が 1 つの値を指定できます。 他の分析関数は指定できません。  
   
- 経由で**(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause*関数を適用するパーティションに FROM 句で生成される結果セットに分割します。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause*操作が実行される論理的順序を決定します。 *order_by_clause*が必要です。 *rows_range_clause*始点と終点を指定することによって、パーティション内の行をさらに制限します。 詳細については、次を参照してください。 [OVER 句と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、演算が実行される論理的順序を指定します。 *order_by_clause* は必須です。 *rows_range_clause* はさらに、開始点と終了点を指定してパーティション内の行を制限します。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
- 同じ型を*scalar_expression*です。  
+ *scalar_expression* と同じ型です。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  FIRST_VALUE は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
@@ -126,6 +126,6 @@ Accounts Receivable Specialist      Walton                    62            Poe
 ```  
   
 ## <a name="see-also"></a>参照  
- [句 &#40; 経由TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
