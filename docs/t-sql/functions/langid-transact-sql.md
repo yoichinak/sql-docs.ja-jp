@@ -33,7 +33,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;です。LANGID (TRANSACT-SQL)
+# <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在使用している言語のローカル言語識別子 (ID) を返します。  
@@ -50,10 +50,10 @@ ms.lasthandoff: 11/21/2017
  **smallint**  
   
 ## <a name="remarks"></a>解説  
- 言語 ID 番号を含めて、言語設定に関する情報を表示するには実行**sp_helplanguage**パラメーターを指定します。  
+ 言語 ID 番号を含めて、言語の設定に関する情報を表示するには、パラメーターを指定しないで **sp_helplanguage** を実行します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、現在のセッションの言語を設定`Italian`、しを使用して`@@LANGID`してイタリア語の ID を返します。  
+ この例では、現在のセッションで使用する言語を `Italian` に設定し、`@@LANGID` を使用してイタリア語の ID を返します。  
   
 ```  
 SET LANGUAGE 'Italian'  
@@ -71,7 +71,7 @@ Language ID
   
 ## <a name="see-also"></a>参照  
  [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [言語を設定する &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   
