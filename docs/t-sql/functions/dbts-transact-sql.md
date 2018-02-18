@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 @@DBTS関数は、トランザクション分離レベルの変更による影響ありません。
   
 ## <a name="examples"></a>使用例  
-次の例は、現在を返して**タイムスタンプ**から、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。
+次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの現在の **timestamp** を返します。
   
 ```sql
 USE AdventureWorks2012;  
@@ -61,9 +61,9 @@ SELECT @@DBTS;
 ```  
   
 ## <a name="see-also"></a>参照
-[構成関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/configuration-functions-transact-sql.md)  
-[カーソルの同時実行 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+[構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[カーソル同時実行 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   
