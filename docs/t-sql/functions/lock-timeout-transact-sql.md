@@ -46,12 +46,12 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
 ## <a name="remarks"></a>解説  
  SET LOCK_TIMEOUT を使用して、使用されないようにブロックされているリソースが使用できるようになるまでのステートメントの最大待ち時間を設定できます。 待ち時間が LOCK_TIMEOUT の設定を超える場合、ブロックされているステートメントは自動的に取り消され、エラー メッセージがアプリケーションに返されます。  
   
- @@LOCK_TIMEOUT SET LOCK_TIMEOUT が現在のセッションで実行されていない場合、値は-1 を返します。  
+ 現在のセッションで SET LOCK_TIMEOUT がまだ実行されていない場合、@@LOCK_TIMEOUT は値 -1 を返します。  
   
 ## <a name="examples"></a>使用例  
  この例では、LOCK_TIMEOUT 値が設定されていない場合の結果セットを表示します。  
@@ -61,7 +61,7 @@ SELECT @@LOCK_TIMEOUT AS [Lock Timeout];
 GO  
 ```  
   
- Here is the result set:  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 Lock Timeout  
@@ -69,7 +69,7 @@ Lock Timeout
 -1  
 ```  
   
- この例は、LOCK_TIMEOUT を 1,800 ミリ秒に設定し、を呼び出して@LOCK_TIMEOUT です。  
+ この例では、LOCK_TIMEOUT を 1,800 ミリ秒に設定し、@@LOCK_TIMEOUT を呼び出します。  
   
 ```  
 SET LOCK_TIMEOUT 1800;  
@@ -77,7 +77,7 @@ SELECT @@LOCK_TIMEOUT AS [Lock Timeout];
 GO  
 ```  
   
- Here is the result set:  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 Lock Timeout  
@@ -87,6 +87,6 @@ Lock Timeout
   
 ## <a name="see-also"></a>参照  
  [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [[SET LOCK_TIMEOUT] &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   
