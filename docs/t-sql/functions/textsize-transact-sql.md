@@ -33,10 +33,10 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;です。TEXTSIZE (TRANSACT-SQL)
+# <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在の値を返します、 [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md)オプション。  
+  [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md) オプションの現在の値を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,10 +47,10 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
 ## <a name="examples"></a>使用例  
- 次の例で`SELECT`を表示する、`@@TEXTSIZE`値を変更した後と前に、`SET``TEXTSIZE`ステートメントです。  
+ 次の例では、`SELECT` を使用して、`SET TEXTSIZE` ステートメントにより変更する前と変更した後の `@@TEXTSIZE` の値を表示します。  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  
@@ -73,6 +73,6 @@ Text Size
   
 ## <a name="see-also"></a>参照  
  [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [[SET textsize] &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/statements/set-textsize-transact-sql.md)  
+ [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)  
   
   
