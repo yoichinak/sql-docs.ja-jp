@@ -31,7 +31,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;です。REMSERVER (TRANSACT-SQL)
+# <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
@@ -52,10 +52,10 @@ ms.lasthandoff: 11/21/2017
  **nvarchar (128)**  
   
 ## <a name="remarks"></a>解説  
- @@REMSERVERプロシージャの実行元となるデータベース サーバーの名前を確認するストアド プロシージャを有効にします。  
+ @@REMSERVER は、プロシージャを実行するデータベース サーバーの名前をストアド プロシージャが調べることができるようにします。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、プロシージャ`usp_CheckServer`を返すリモート サーバーの名前。  
+ 次の例では、リモート サーバーの名前を返すプロシージャ `usp_CheckServer` を作成します。  
   
 ```  
 CREATE PROCEDURE usp_CheckServer  
@@ -63,7 +63,7 @@ AS
 SELECT @@REMSERVER;  
 ```  
   
- 次のストアド プロシージャは、ローカル サーバーで作成された`SEATTLE1`です。 ユーザーはリモート サーバーの `LONDON2` にログインし、`usp_CheckServer` を実行します。  
+ 次のストアド プロシージャは、ローカル サーバーの `SEATTLE1` 上に作成されます。 ユーザーはリモート サーバーの `LONDON2` にログインし、`usp_CheckServer` を実行します。  
   
 ```  
 EXEC SEATTLE1...usp_CheckServer;  
