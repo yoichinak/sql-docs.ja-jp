@@ -32,10 +32,10 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;です。バージョン - Transact SQL 構成関数
+# <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;VERSION - Transact SQL 構成関数
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  現在のインストールのシステムとビルドの情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  現在インストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステムとビルドの情報を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
  **nvarchar**  
   
 ## <a name="remarks"></a>解説  
- @@VERSION結果は 1 つの nvarchar 文字列として表示されます。 使用することができます、 [SERVERPROPERTY &#40;です。TRANSACT-SQL と&#41;です。](../../t-sql/functions/serverproperty-transact-sql.md)個々 のプロパティ値を取得します。  
+ @@VERSION の結果は 1 つの nvarchar 文字列として表示されます。 [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md) 関数を使用して、個々のプロパティ値を取得できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、次の情報が返されます。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A: の現在のバージョンを返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のバージョンを返す  
  次の例では、現在のインストールに関するバージョン情報を返します。  
   
 ```  
@@ -88,7 +88,7 @@ SELECT @@VERSION AS 'SQL Server Version';
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. 現在のバージョンを返す[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] の現在のバージョンを返す  
   
 ```  
 SELECT @@VERSION AS 'SQL Server PDW Version';  
