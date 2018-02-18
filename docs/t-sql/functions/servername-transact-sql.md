@@ -30,10 +30,10 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;です。サーバー名 (TRANSACT-SQL)
+# <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;サーバー名 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  実行されているローカル サーバーの名前を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているローカル サーバーの名前を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,20 +48,20 @@ ms.lasthandoff: 11/21/2017
  **nvarchar**  
   
 ## <a name="remarks"></a>解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップでは、インストール中に、コンピューター名に、サーバー名を設定します。 サーバーの名前を変更するには、使用**sp_addserver**、し再起動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+ サーバー名には、インストール時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムによってコンピューター名が設定されます。 サーバーの名前を変更するには、**sp_addserver** を使用し、その後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
   
- 複数のインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールされている、@@SERVERNAMEローカル サーバー名がセットアップ以降変更されていない場合、次のローカル サーバーの名前情報を返します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスがインストールされている状態で、ローカル サーバー名がセットアップ以降変更されていない場合は、@@SERVERNAME によって次のローカル サーバー名情報が返されます。  
   
-|Instance|サーバー情報|  
+|インスタンス|サーバー情報|  
 |--------------|------------------------|  
-|[既定のインスタンス]|'*servername*'|  
-|[名前付きインスタンス]|'*servername*\\*instancename*'|  
+|既定のインスタンス|'*servername*'|  
+|名前付きインスタンス|'*servername*\\*instancename*'|  
 |フェールオーバー クラスター インスタンス - 既定のインスタンス|'*virtualservername*'|  
 |フェールオーバー クラスター インスタンス - 名前付きインスタンス|'*virtualservername*\\*instancename*'|  
   
- @@SERVERNAME関数と、SERVERPROPERTY 関数の SERVERNAME プロパティのような形式で文字列を返す可能性があります、さまざまな情報を指定できます。 SERVERNAME プロパティの場合は、コンピューターのネットワーク名の変更を自動的にレポートします。  
+ @@SERVERNAME 関数が返す文字列と、SERVERPROPERTY 関数の SERVERNAME プロパティが返す文字列は、形式は似ていますが、その情報は異なる可能性があります。 SERVERNAME プロパティの場合は、コンピューターのネットワーク名の変更を自動的にレポートします。  
   
- これに対し、@@SERVERNAMEこのような変更を報告しません。 @@SERVERNAME使用してローカル サーバー名に加えられた変更を報告、 **sp_addserver**または**sp_dropserver**ストアド プロシージャです。  
+ これに対して、@@SERVERNAME はこのような変更をレポートしません。 @@SERVERNAME は、**sp_addserver** ストアド プロシージャまたは **sp_dropserver** ストアド プロシージャを使用して、ローカル サーバー名に加えられた変更をレポートします。  
   
 ## <a name="examples"></a>使用例  
  次に、`@@SERVERNAME` の使用例を示します。  
@@ -82,6 +82,6 @@ ACCTG
 ## <a name="see-also"></a>参照  
  [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
- [sp_addserver &#40;です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  
   
   
