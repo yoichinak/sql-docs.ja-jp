@@ -33,7 +33,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40maxconnections-transact-sql"></a>&#x40;&#x40;です。MAX_CONNECTIONS (TRANSACT-SQL)
+# <a name="x40x40maxconnections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで同時に確立できるユーザー接続の最大数を返します。 返される数値は必ずしも現在構成されている数値ではありません。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>解説  
  実際に可能なユーザー接続数は、インストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンと、アプリケーションおよびハードウェアの制限により異なります。  
   
- 再構成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続の数を使用して**sp_configure**です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で可能な接続数が少なくなるように再構成するには、**sp_configure** を使用します。  
   
 ## <a name="examples"></a>使用例  
  次の例ではのインスタンス上のユーザー接続の最大数を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この例では、接続数が少なくなるよう [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再構成していないことを前提としています。  
