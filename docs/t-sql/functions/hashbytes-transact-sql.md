@@ -46,20 +46,20 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>引数  
- **'**\<アルゴリズム >**'**  
- 入力のハッシュに使用するハッシュ アルゴリズムを指定します。 これは必須の引数で、既定値はありません。 単一引用符で囲む必要があります。 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SHA2_256、および SHA2_512 以外のすべてのアルゴリズムが使用されなくなりました。 (推奨しません)、古いアルゴリズムを使用して作業を続けますが、deprecation イベントが発生します。  
+ **'**\<algorithm>**'**  
+ 入力のハッシュに使用するハッシュ アルゴリズムを指定します。 これは必須の引数で、既定値はありません。 単一引用符で囲む必要があります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降で SHA2_256、および SHA2_512 以外のすべてのアルゴリズムが使用されなくなりました。 古いアルゴリズム(推奨しません)は引き続き動作しますが、deprecation イベントが発生します。  
   
  **@input**  
- ハッシュされるデータを含む変数を指定します。 **@input****varchar**、 **nvarchar**、または**varbinary**です。  
+ ハッシュされるデータを含む変数を指定します。**@input** のデータ型は、**varchar**、**nvarchar**、または **varbinary** です。  
   
- **'** *入力* **'**  
+ **'** *input* **'**  
  ハッシュする文字またはバイナリ文字列に評価される式を指定します。  
   
  出力はアルゴリズムの標準に準拠します。MD2、MD4、および MD5 の場合は 128 ビット (16 バイト)、SHA および SHA1 の場合は 160 ビット (20 バイト)、SHA2_256 の場合は 256 ビット (32 バイト)、SHA2_512 の場合は 512 ビット (64 バイト) です。  
   
-**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]経由[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用範囲**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]から[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]し、以前に使用できる入力値は 8,000 バイトに制限されます。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]およびそれ以前では、使用できる入力値は 8,000 バイトに制限されます。  
   
 ## <a name="return-value"></a>戻り値  
  **varbinary** (最大 8,000 バイト)  
@@ -67,7 +67,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-return-the-hash-of-a-variable"></a>A: が変数のハッシュを返す  
- 次の例を返します、`SHA1`のハッシュ、 **nvarchar**変数に格納されているデータ`@HashThis`です。  
+ 次の例では、変数 `@HashThis` に格納されている **nvarchar** 型のデータの `SHA1` ハッシュを返します。  
   
 ```  
 DECLARE @HashThis nvarchar(4000);  
@@ -77,7 +77,7 @@ SELECT HASHBYTES('SHA1', @HashThis);
 ```  
   
 ### <a name="b-return-the-hash-of-a-table-column"></a>B: は、テーブルの列のハッシュを返す  
- 次の例では、列の値の SHA1 ハッシュを返します`c1`表内の`Test1`します。  
+ 次の例では、`Test1` 表内の `c1` 列の値の SHA1 ハッシュを返します。  
   
 ```  
 CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
