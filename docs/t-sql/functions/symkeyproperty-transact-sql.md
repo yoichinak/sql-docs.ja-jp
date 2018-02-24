@@ -43,8 +43,8 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ```  
   
 ## <a name="arguments"></a>引数  
- *Key_id を指定*  
- データベース内の対称キーの Key_ID を指定します。 キー名しかわからない場合に Key_ID を調べるには、SYMKEY_ID を使用します。 *Key_ID*データ型は、 **int**です。  
+ *Key_ID*  
+ データベース内の対称キーの Key_ID を指定します。 キー名しかわからない場合に Key_ID を調べるには、SYMKEY_ID を使用します。 *Key_ID* のデータ型は **int**です。  
   
  **'**algorithm_desc**'**  
  出力が対称キーのアルゴリズムの説明を返すように指定します。 EKM モジュールから作成された対称キーに対してのみ使用できます。  
@@ -52,7 +52,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ## <a name="return-types"></a>戻り値の型  
  **sql_variant**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  対称キーに対する権限が必要です。呼び出し元で、対称キーに対する VIEW 権限が拒否されていないことも必要になります。  
   
 ## <a name="examples"></a>使用例  
@@ -64,13 +64,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ASYMKEY_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.symmetric_keys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [KEY_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/key-id-transact-sql.md)   
- [ASYMKEYPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+ [KEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/key-id-transact-sql.md)   
+ [ASYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
   
   
