@@ -42,14 +42,14 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 ```  
   
 ## <a name="arguments"></a>引数  
-*Key_id を指定*  
-データベース内の非対称キーの Key_ID を指定します。 キー名しかわからない場合に Key_ID を調べるには、ASYMKEY_ID を使用します。 *Key_ID*データ型は、 **int**です。
+*Key_id*  
+データベース内の非対称キーの Key_ID を指定します。 キー名しかわからない場合に Key_ID を調べるには、ASYMKEY_ID を使用します。 *Key_ID*のデータ型は **int**です。
   
 **'**algorithm_desc**'**  
 出力が非対称キーのアルゴリズムの説明を返すように指定します。 EKM モジュールから作成された非対称キーに対してのみ使用できます。
   
 **'**string_sid**'**  
-出力内の非対称キーの SID を返すように指定**nvarchar()**形式です。
+出力が非対称キーの SID を **nvarchar()** 形式で返すように指定します。
   
 **'**sid**'**  
 出力が非対称キーの SID をバイナリ形式で返すように指定します。
@@ -57,7 +57,7 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 ## <a name="return-types"></a>戻り値の型  
 **sql_variant**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 非対称キーに対する権限が必要です。呼び出し元で、非対称キーに対する VIEW 権限が拒否されていないことも必要になります。
   
 ## <a name="examples"></a>使用例  
@@ -73,14 +73,14 @@ GO
   
 ## <a name="see-also"></a>参照
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-[ALTER ASYMMETRIC KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
-[DROP ASYMMETRIC KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+[ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+[DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[sys.asymmetric_keys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEY_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)  
-[SYMKEYPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/symkeyproperty-transact-sql.md)
+[ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
+[SYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/symkeyproperty-transact-sql.md)
   
   
