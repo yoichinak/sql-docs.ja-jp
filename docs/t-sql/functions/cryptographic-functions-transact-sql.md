@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
-## <a name="symmetric-decryption-with-automatic-key-handling"></a>キーの処理を自動で対称復号化
+## <a name="symmetric-decryption-with-automatic-key-handling"></a>キーを自動的に処理する対称復号化
   
 |||  
 |-|-|  
@@ -78,8 +78,8 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|[CERTENCODED &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
+|[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
 ## <a name="see-also"></a>参照
 [関数](../../t-sql/functions/functions.md)  
