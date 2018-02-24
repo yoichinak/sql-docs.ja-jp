@@ -31,7 +31,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;です。FETCH_STATUS (TRANSACT-SQL)
+# <a name="x40x40fetchstatus-transact-sql"></a>@@FETCH_STATUS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   接続によって現在オープンされているカーソルに対して最後に実行した FETCH ステートメントの状態を返します。  
@@ -46,11 +46,11 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-type"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
 ## <a name="return-value"></a>戻り値  
   
-|戻り値|Description|  
+|戻り値|説明|  
 |------------------|-----------------|  
 |0|FETCH ステートメントは正常に実行されました。|  
 |-1|FETCH ステートメントが失敗したか、または行が結果セットに収まりません。|  
@@ -58,14 +58,14 @@ ms.lasthandoff: 11/21/2017
 |-9|カーソルがフェッチ操作を実行しません。|  
   
 ## <a name="remarks"></a>解説  
- @@FETCH_STATUS接続に、すべてのカーソルに対してグローバルなを使用して@FETCH_STATUS慎重にします。 FETCH ステートメントが実行された後に @ テスト@FETCH_STATUS他の FETCH ステートメントが別のカーソルに対して実行される前に行う必要があります。 値を @@FETCH_STATUSフェッチが接続で実行する前に、定義されていません。  
+ @@FETCH_STATUS は接続上のすべてのカーソルに対してグローバルな変数なので、@@FETCH_STATUS を使用する際は注意してください。FETCH ステートメントを実行した後、別のカーソルに対して他の FETCH ステートメントを実行する前に、@@FETCH_STATUS の値を調べる必要があります。接続時にフェッチが実行されるまで、@@FETCH_STATUS の値は未定義です。  
   
- たとえば、ユーザーがあるカーソルからの FETCH ステートメントを実行します。次に、別のカーソルからの結果を開いて処理するためのストアド プロシージャを呼び出します。 コントロールが返される場合、呼び出されたストアド プロシージャから@FETCH_STATUSストアド プロシージャを呼び出す前に実行された FETCH ステートメントではない、ストアド プロシージャで最後にフェッチが反映されます。  
+ たとえば、ユーザーがあるカーソルからの FETCH ステートメントを実行します。次に、別のカーソルからの結果を開いて処理するためのストアド プロシージャを呼び出します。呼び出したストアド プロシージャから制御が戻された時点で、@@FETCH_STATUS は、ストアド プロシージャを呼び出す前に実行した FETCH ステートメントではなく、ストアド プロシージャで最後に実行した FETCH ステートメントを反映します。  
   
- 特定のカーソルの最後のフェッチの状態を取得するクエリ、 **fetch_status**の列、 **sys.dm_exec_cursors**動的管理関数です。  
+ 特定のカーソルの最後のフェッチの状態を取得するには、動的管理関数 **sys.dm_exec_cursors** の **fetch_status** 列のクエリを実行します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`@@FETCH_STATUS` を使用して `WHILE` ループ内のカーソルの動作を制御します。  
+ この例では、`@@FETCH_STATUS` を使用して `WHILE` ループでのカーソルの利用状況を制御します。  
   
 ```  
 DECLARE Employee_Cursor CURSOR FOR  
@@ -84,6 +84,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [カーソル関数 &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
- [フェッチ &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   
