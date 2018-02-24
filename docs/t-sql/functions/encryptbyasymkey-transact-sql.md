@@ -53,7 +53,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
  非対称キーで暗号化するデータの文字列を指定します。  
   
  **@plaintext**  
- 非対称キーを使って暗号化されているデータを含む、**nvarchar** 型、**char** 型、**varchar** 型、**binary** 型、**varbinary** 型、または **nchar** 型の変数を指定します。  
+ 非対称キーを使って暗号化されているデータを含む、**nvarchar**、**char**、**varchar**、**binary**、**varbinary**、または **nchar** の変数を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varbinary** (最大サイズは 8,000 バイト)  
