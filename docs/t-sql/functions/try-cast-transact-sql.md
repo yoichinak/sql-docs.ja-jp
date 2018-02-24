@@ -43,24 +43,24 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- *式 (expression)*  
+ *expression*  
  キャストされる値。 任意の有効な式。  
   
  *data_type*  
- データ型をキャストする*式*です。  
+ *expression* をキャストするデータ型。  
   
  *length*  
  対象のデータ型の長さを指定する整数 (省略可能)。  
   
- 値の許容範囲の値によって決まります*data_type*です。  
+ 許容される値の範囲は、*data_type* の値によって決まります。  
   
 ## <a name="return-types"></a>戻り値の型  
  キャストが成功した場合は、指定したデータ型にキャストされた値を返します。それ以外の場合は null を返します。  
   
 ## <a name="remarks"></a>解説  
- **TRY_CAST**に渡される値を取得し、指定された変換しようとしています。 *data_type*です。 キャストが成功すると、 **TRY_CAST** 、指定された値を返します*data_type*以外の場合はエラーが発生する場合は null が返されます。 ただしかどうかは、明示的に許可されていない、変換を要求する**TRY_CAST**はエラーで失敗します。  
+ **TRY_CAST** は渡された値を使用して、指定された *data_type* への変換を試みます。 キャストが成功した場合、**TRY_CAST** は指定された *data_type* と同じ値を返します。エラーが発生した場合は null が返されます。 ただし、明示的に許可されない変換を要求すると、**TRY_CAST** はエラーが発生して失敗します。  
   
- **TRY_CAST**予約された新しいキーワードではありませんしはすべての互換性レベルで使用できます。 **TRY_CAST**と同じセマンティクスを持つ**TRY_CONVERT**をリモート サーバーに接続するときにします。  
+ **TRY_CAST** は予約された新しいキーワードではなく、すべての互換性レベルで使用可能です。 **TRY_CAST** がリモート サーバーに接続するときのセマンティクスは、**TRY_CONVERT** と同じです。  
   
 ## <a name="examples"></a>使用例  
   
@@ -119,7 +119,7 @@ Explicit conversion from data type int to xml is not allowed.
 ```  
   
 ### <a name="c-trycast-succeeds"></a>C. TRY_CAST が成功する  
- この例では、式が必要な形式にする必要がありますを示します。  
+ 次の例は、式を求められている形式にする必要があることを示しています。  
   
 ```  
 SET DATEFORMAT mdy;  
@@ -138,7 +138,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>参照  
- [TRY_CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/try-convert-transact-sql.md)   
+ [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
