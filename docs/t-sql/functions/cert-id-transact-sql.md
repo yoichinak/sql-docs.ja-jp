@@ -53,9 +53,9 @@ Cert_ID ( 'cert_name' )
  **int**  
   
 ## <a name="remarks"></a>解説  
-証明書の名前では表示、 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)カタログ ビューです。
+証明書名は [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) カタログ ビューで確認できます。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 証明書に対する権限が必要です。呼び出し元で、証明書に対する VIEW DEFINITION 権限が拒否されていないことも条件となります。
   
 ## <a name="examples"></a>使用例  
