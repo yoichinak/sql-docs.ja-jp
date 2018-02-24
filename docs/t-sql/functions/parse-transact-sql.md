@@ -1,5 +1,5 @@
 ---
-title: "解析 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "PARSE (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
