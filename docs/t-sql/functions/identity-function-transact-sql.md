@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identity-function-transact-sql"></a>IDENTITY (関数) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  INTO を伴う SELECT ステートメントでのみ使用される*テーブル*句に新しいテーブルに id 列を挿入します。 IDENTITY 関数は、CREATE TABLE と ALTER TABLE で使用される IDENTITY プロパティと似ていますが、同じものではありません。  
+  INTO *table* 句と共に SELECT ステートメントでのみ使用し、新しいテーブルに ID 列を追加します。IDENTITY 関数は、CREATE TABLE と ALTER TABLE で使用される IDENTITY プロパティと似ていますが、同じものではありません。  
   
 > [!NOTE]  
 >  複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
@@ -54,17 +54,17 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
  *data_type*  
  ID 列のデータ型を指定します。 有効なデータ型、id 列では、整数データ型カテゴリに、任意のデータ型を除く、**ビット**データ型、または**decimal**データ型。  
   
- *シード*  
- テーブル内の先頭行に割り当てる整数値を指定します。 以降の各行では、最後の ID 値と等しい次の id 値が割り当てられていると、*インクリメント*値。 どちらの場合*シード*も*インクリメント*を指定すると、どちらも、既定を 1 にします。  
+ *seed*  
+ テーブル内の先頭行に割り当てる整数値を指定します。それ以降の各行には、前の IDENTITY 値に *increment* 値を加えた次の ID 値が割り当てられます。*seed* と *increment* のいずれも指定しなかった場合は、両方とも既定値 1 が使用されます。  
   
- *増分値*  
- 整数値に追加するには、*シード*テーブル内の後続の行の値。  
+ *increment*  
+ テーブル内の連続する行に対して、*seed* の値に加える整数値です。  
   
  *column_name*  
  新しいテーブルに挿入する列の名前を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- 同じを返します*data_type*です。  
+ *data_type* と同じデータ型が返されます。  
   
 ## <a name="remarks"></a>解説  
  この関数ではテーブルに列が作成されるので、次のいずれかの方法で選択リストから列名を指定する必要があります。  
@@ -107,11 +107,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [選択@local_variable&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
- [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
+ [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
+ [IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
+ [SELECT @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
+ [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   
