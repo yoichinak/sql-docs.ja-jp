@@ -47,14 +47,14 @@ DATALENGTH ( expression )
 ```  
   
 ## <a name="arguments"></a>引数  
-*式 (expression)*  
-[式](../../t-sql/language-elements/expressions-transact-sql.md)任意のデータ型。
+*expression*  
+任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
   
 ## <a name="return-types"></a>戻り値の型
-**bigint**場合*式*は、 **varchar (max)**、 **nvarchar (max)**または**varbinary (max)**データ型です。それ以外の場合**int**です。
+*expression* のデータ型が **varchar(max)**、**nvarchar(max)**、または **varbinary(max)** の場合は **bigint** になります。それ以外の場合は **int** になります。
   
 ## <a name="remarks"></a>解説  
-DATALENGTH は特に効果的**varchar**、 **varbinary**、**テキスト**、**イメージ**、 **nvarchar**、および**ntext**データ型をこれらのデータ型は可変長のデータを格納できるためです。
+DATALENGTH は、可変長データを保存できる **varchar**、**varbinary**、**text**、**image**、**nvarchar**、および **ntext** などのデータ型にとって特に効果的です。
   
 NULL の DATALENGTH は NULL です。
   
@@ -62,7 +62,7 @@ NULL の DATALENGTH は NULL です。
 >  戻り値は、互換性レベルによって変わることがあります。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
-次の例の長さの検索、`Name`内の列、`Product`テーブル。
+次の例は、`Product` テーブルの `Name` 列の長さを返します。
   
 ```sql
 -- Uses AdventureWorks  
@@ -74,10 +74,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照
-[Len 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/len-transact-sql.md)  
+[LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 
