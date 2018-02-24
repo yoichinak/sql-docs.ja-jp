@@ -57,7 +57,7 @@ Key_GUID( 'Key_Name' )
   
  キーが一時キーの場合、キー名は番号記号 (#) で始める必要があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  一時キーは、そのキーが作成されたセッションでのみ使用できます。したがって、アクセスに必要な権限はありません。 一時的ではないキーにアクセスするには、呼び出し元がキーに関する権限を持っている必要があり、キーの VIEW 権限が拒否されていないことが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -69,7 +69,7 @@ SELECT Key_GUID('ABerglundKey1');
   
 ## <a name="see-also"></a>参照  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [sys.symmetric_keys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [sys.key_encryptions &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
   
   
