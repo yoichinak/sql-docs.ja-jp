@@ -712,6 +712,8 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
   
 ## <a name="see-also"></a>参照
 [データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
+[STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
 [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)
