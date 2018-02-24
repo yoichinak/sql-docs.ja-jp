@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  に関する基本データ型とその他の情報を返します、 **sql_variant**値。  
+  **sql_variant** 値の基本データ型およびその他の情報を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,27 +44,27 @@ SQL_VARIANT_PROPERTY ( expression , property )
 ```  
   
 ## <a name="arguments"></a>引数  
- *式 (expression)*  
- 型の式は、 **sql_variant**です。  
+ *expression*  
+ **sql_variant** 型の式です。  
   
- *プロパティ*  
- 名前を含む、 **sql_variant**情報を指定するプロパティです。 *プロパティ*は**varchar (**128**)**、次の値のいずれかを指定できます。  
+ *property*  
+ 名前を含む、 **sql_variant**情報を指定するプロパティです。 *property*は**varchar(**128**)**、次の値のいずれかを指定できます。  
   
-|値|Description|返される sql_variant の基本データ型|  
+|値|説明|返される sql_variant の基本データ型|  
 |-----------|-----------------|----------------------------------------|  
-|**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型など。<br /><br /> **bigint**<br /><br /> **[バイナリ]**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 無効な入力|  
-|**[精度]**|数値基本データ型の桁数です。<br /><br /> **datetime** 23 を =<br /><br /> **smalldatetime** 16 を =<br /><br /> **float** 53 を =<br /><br /> **real** 24 を =<br /><br /> **10 進**(p, s) と**数値**(p, s) = p<br /><br /> **money** 19 を =<br /><br /> **smallmoney** 10 を =<br /><br /> **bigint** 19 を =<br /><br /> **int** 10 を =<br /><br /> **smallint** = 5<br /><br /> **tinyint** 3 を =<br /><br /> **ビット**= 1<br /><br /> その他のすべてのデータ型 = 0|**int**<br /><br /> NULL = 無効な入力|  
-|**[スケール]**|数値基本データ型の小数点の右側の桁数です。<br /><br /> **10 進**(p, s) と**数値**(p, s) = s<br /><br /> **money**と**smallmoney** 4 を =<br /><br /> **datetime** 3 を =<br /><br /> その他のすべての型 = 0|**int**<br /><br /> NULL = 無効な入力|  
-|**TotalBytes**|メタデータと値のデータの両方を保持するのに必要なバイト数です。 この情報内のデータの最大サイズを調べるで役に立つ、 **sql_variant**列です。 値が 900 を超える場合は、インデックスの作成は失敗します。|**int**<br /><br /> NULL = 無効な入力|  
-|**照合順序**|特定の照合順序を表す**sql_variant**値。|**sysname**<br /><br /> NULL = 無効な入力|  
-|**MaxLength**|データの最大データ長 (バイト単位) です。 たとえば、 **MaxLength**の**nvarchar (**50**)** 100、 **MaxLength**の**int**は 4 です。|**int**<br /><br /> NULL = 無効な入力|  
+|**BaseType**|以下のような [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型です。<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 無効な入力|  
+|**Precision**|数値基本データ型の桁数です。<br /><br /> **datetime** = 23<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal**(p, s) と**numeric**(p, s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> その他のすべてのデータ型 = 0|**int**<br /><br /> NULL = 無効な入力|  
+|**Scale**|数値基本データ型の小数点の右側の桁数です。<br /><br /> **10 進**(p, s) と**数値**(p, s) = s<br /><br /> **money**と**smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> その他のすべての型 = 0|**int**<br /><br /> NULL = 無効な入力|  
+|**TotalBytes**|メタデータと値のデータの両方を保持するのに必要なバイト数です。この情報は、**sql_variant** 列内のデータの最大サイズをチェックする上で役に立ちます。値が 900 を超える場合は、インデックスを作成できません。|**int**<br /><br /> NULL = 無効な入力|  
+|**Collation**|特定の照合順序を表す**sql_variant**値。|**sysname**<br /><br /> NULL = 無効な入力|  
+|**MaxLength**|データの最大データ長 (バイト単位) です。たとえば、**nvarchar(**50**)** の **MaxLength** は 100 であり、**int** の **MaxLength** は 4 です。|**int**<br /><br /> NULL = 無効な入力|  
   
 ## <a name="return-types"></a>戻り値の型  
  **sql_variant**  
   
 ## <a name="examples"></a>使用例  
 ### <a name="a-using-a-sqlvariant-in-a-table"></a>A. テーブルで、sql_variant 型の使用  
- 次の例では取得`SQL_VARIANT_PROPERTY`については、`colA`値`46279.1`場所`colB`  =`1689`こと、`tableA`が`colA`型である`sql_variant`と`colB`.  
+ 次の例では、`colB` = `1689` の `colA` 値 `46279.1` に関する `SQL_VARIANT_PROPERTY` 情報を取得しています。`tableA` には `sql_variant` 型の `colA` と、`colB` が含まれているものとします。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -76,7 +76,7 @@ FROM      tableA
 WHERE      colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]これら 3 つの値の各ことに注意してください、 **sql_variant**です。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 値は 3 つとも **sql_variant** であることに留意してください。  
   
 ```  
 Base Type    Precision    Scale  
@@ -87,7 +87,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. 変数として、sql_variant 型の使用   
- 次の例では取得`SQL_VARIANT_PROPERTY`という名前の変数に関する情報@v1です。  
+ 次の例では @v1 という名前の変数に関する `SQL_VARIANT_PROPERTY` 情報を取得します。  
   
 ```sql    
 DECLARE @v1 sql_variant;  
