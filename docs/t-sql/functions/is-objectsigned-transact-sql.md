@@ -49,7 +49,7 @@ IS_OBJECTSIGNED (
  セキュリティ保護可能なクラスの型。  
   
  *@object_id*  
- テストされるオブジェクトの object_id。 *@object_id*型は、 **int**です。  
+ テストされるオブジェクトの object_id。 *@object_id* の型は **int** です。  
   
  *@class*  
  オブジェクトのクラス :  
@@ -58,30 +58,30 @@ IS_OBJECTSIGNED (
   
 -   'asymmetric key'  
   
- *@class***sysname**です。  
+ *@class* の型は **sysname** です。  
   
  *@thumbprint*  
- オブジェクトの SHA 拇印。 *@thumbprint*型は、 **varbinary (32)**です。  
+ オブジェクトの SHA サムプリント。 *@thumbprint* の型は **varbinary(32)** です。  
   
-## <a name="returned-types"></a>返された型  
+## <a name="returned-types"></a>戻り値の型  
  **int**  
   
 ## <a name="remarks"></a>解説  
  IS_OBJECTSIGNED は、次の値を返します。  
   
-|戻り値|Description|  
+|戻り値|説明|  
 |------------------|-----------------|  
 |NULL|オブジェクトが署名されていないか、オブジェクトが無効です。|  
 |0|オブジェクトは署名されていますが、署名が無効です。|  
 |1|オブジェクトは署名されています。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. データベースの拡張プロパティを表示する  
- 次の例をテスト spt_fallback_db テーブルの場合、**マスター**データベースは、スキーマ署名証明書で署名されました。  
+ 次の例では、**master** データベースの spt_fallback_db テーブルがスキーマ署名証明書によって署名されているかどうかをテストします。  
   
 ```  
 USE master;  
@@ -105,6 +105,6 @@ IS_OBJECTSIGNED(
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.fn_check_object_signatures &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+ [sys.fn_check_object_signatures &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   
