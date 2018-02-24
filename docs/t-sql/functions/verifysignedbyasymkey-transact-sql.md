@@ -55,8 +55,8 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  *clear_text*  
  検証するクリア テキスト データを指定します。  
   
- *署名*  
- 署名付きデータにアタッチされた署名を指定します。 *署名*は**varbinary**です。  
+ *signature*  
+ 署名付きデータにアタッチされた署名を指定します。 *signature*は**varbinary**です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -66,7 +66,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ## <a name="remarks"></a>解説  
  **VerifySignedByAsymKey**指定された非対称キーの公開キーを使用して、データの署名を復号化し、データの新しく計算された MD5 ハッシュを復号化された値を比較します。 値が一致すると、その署名が有効であることが確認されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  非対称キーに対する VIEW DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -85,7 +85,7 @@ RETURN;
 ```  
   
 ### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>B. 有効な署名が添付されたデータを含む結果セットを返す  
- 次の例は、内の行を返します`SignedData04`非対称キーで署名された後変更されていないデータが含まれている`WillisKey74`です。 この例では、関数`AsymKey_ID`をデータベースから非対称キーの ID を取得します。  
+ 次の例では、`SignedData04` 内の行で、非対称キー `WillisKey74` で署名された後に変更されていないデータを含む行が返されます。この例では、データベースから非対称キーの ID を取得するため関数 `AsymKey_ID` を呼び出します。  
   
 ```  
 SELECT Data   
@@ -97,8 +97,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ASYMKEY_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [SIGNBYASYMKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/signbyasymkey-transact-sql.md)   
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
