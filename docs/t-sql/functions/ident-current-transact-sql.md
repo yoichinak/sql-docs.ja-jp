@@ -56,14 +56,14 @@ IDENT_CURRENT( 'table_name' )
 ## <a name="exceptions"></a>例外  
  エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーは、ユーザーが所有するまたはをユーザーが許可されているアクセス許可のセキュリティ保護可能なメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_CURRENT など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーは、ユーザーが所有するまたはをユーザーが許可されているアクセス許可のセキュリティ保護可能なメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_CURRENT など) が NULL を返す可能性があります。 詳細については、「 [メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- IDENT_CURRENT がに似ていますが、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] id 関数 SCOPE_IDENTITY および @@IDENTITYです。 3 つの関数とも、最後に生成された ID 値を返します。 ただし、スコープとセッションが*最後*はこれらの各関数で定義されている異なります。  
+ IDENT_CURRENT は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の ID 関数 SCOPE_IDENTITY および @@IDENTITY に似ています。3 つの関数とも、最後に生成された ID 値を返します。ただし、各関数の中で、*最後*が定義されるスコープとセッションがそれぞれ異なります。  
   
 -   IDENT_CURRENT は、任意のセッションおよび任意のスコープ内の特定のテーブルに対して生成された最後の ID 値を返します。  
   
--   @@IDENTITYすべてのスコープ全体で任意のテーブルの現在のセッションで生成された最後の id 値を返します。  
+-   @@IDENTITYすべてのスコープ全体で任意のテーブルの現在のセッションで生成された最後の ID 値を返します。  
   
 -   SCOPE_IDENTITY は、現在のセッションと現在のスコープ内の任意のテーブルに対して生成された最後の ID 値を返します。  
   
@@ -76,7 +76,7 @@ IDENT_CURRENT( 'table_name' )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>A. 指定したテーブルに対して生成された最新の ID 値を返す  
- 次の例は、に対して生成された最後の id 値を返します、`Person.Address`テーブルに、`AdventureWorks2012`データベース。  
+ 次の例では、`AdventureWorks2012` データベースの `Person.Address` テーブルに対して生成された最新の ID 値を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -145,9 +145,9 @@ SELECT IDENT_CURRENT('t7');
 ## <a name="see-also"></a>参照  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ident-incr-transact-sql.md)   
- [IDENT_SEED &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ident-seed-transact-sql.md)   
- [式 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/expressions-transact-sql.md)   
- [システム関数 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
