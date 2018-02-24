@@ -54,10 +54,10 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
  データベース内の証明書の ID を指定します。 *Cert_ID*は**int**です。  
   
  *signed_data*  
- 型の変数は、 **nvarchar**、 **char**、 **varchar**、または**nchar**証明書で署名されているデータを格納します。  
+ 証明書を使用して署名されたデータを含む、**nvarchar**、**char**、**varchar**、または **nchar** 型の変数を指定します。  
   
- *署名*  
- 署名付きデータにアタッチされた署名を指定します。 *署名*は**varbinary**です。  
+ *signature*  
+ 署名付きデータにアタッチされた署名を指定します。 *signature*は**varbinary**です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -67,13 +67,13 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ## <a name="remarks"></a>解説  
  **VerifySignedBycert**指定された証明書の公開キーを使用して、データの署名を復号化し、データの新しく計算された MD5 ハッシュを復号化された値を比較します。 値が一致すると、その署名が有効であることが確認されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  証明書に対する VIEW DEFINITION 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. 署名付きデータが変更されていないことを確認する  
- 次の例をテストするかどうかの情報は、`Signed_Data`という証明書で署名された後で変更された`Shipping04`です。 署名は `DataSignature` に格納されています。 証明書、`Shipping04`に渡される`Cert_ID`データベースに証明書の ID が返されます。 場合`VerifySignedByCert`署名が正しいは、1 を返します。 `VerifySignedByCert` で 0 が返された場合、`Signed_Data` 内のデータは、`DataSignature` の生成に使用されたデータではありません。 この場合、いずれか`Signed_Data`が署名された後に変更されたまたは`Signed_Data`別の証明書で署名されました。  
+ 次の例では、`Signed_Data` 内の情報が、`Shipping04` という証明書を使用して署名された後に変更されているかどうかをテストします。署名は `DataSignature` に格納されています。証明書 `Shipping04` を `Cert_ID` に渡すと、データベース内の証明書の ID が返されます。`VerifySignedByCert` で 1 が返された場合、署名は正しいことになります。`VerifySignedByCert` で 0 が返された場合、`Signed_Data` 内のデータは、`DataSignature` の生成に使用されたデータではありません。この場合、`Signed_Data` は署名された後に変更されたか、別の証明書を使用して署名されています。  
   
 ```  
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-returning-only-records-that-have-a-valid-signature"></a>B. 有効な署名が含まれるレコードのみを返す  
- このクエリは、証明書を使用して署名された後に変更されていないレコードだけを返します`Shipping04`です。  
+ 次のクエリでは、証明書 `Shipping04` を使用して署名された後、変更されていないレコードだけを返します。  
   
 ```  
 SELECT Data FROM [AdventureWorks2012].[SignedData04]   
@@ -95,11 +95,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [CERT_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cert-id-transact-sql.md)   
- [SIGNBYCERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/signbycert-transact-sql.md)   
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
+ [SIGNBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/signbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [証明書 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
