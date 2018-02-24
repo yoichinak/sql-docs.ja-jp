@@ -49,17 +49,17 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>引数  
- *パスフレーズ*  
+ *passphrase*  
  対称キーを生成するパスフレーズを指定します。  
   
  @passphrase  
- 型の変数**nvarchar**、 **char**、 **varchar**、**バイナリ**、 **varbinary**、または**nchar**対称キーを生成するためのパスフレーズを含むです。  
+ 対象キーを生成するためのパスフレーズを含む、**nvarchar**、**char**、**varchar**、**binary**、**varbinary**、または **nchar** 型の変数を指定します。  
   
- *クリア テキスト*  
+ *cleartext*  
  暗号化するクリア テキストを指定します。  
   
  @cleartext  
- 型の変数**nvarchar**、 **char**、 **varchar**、**バイナリ**、 **varbinary**、または**nchar**クリア テキストです。 最大サイズは、8,000 バイトです。  
+ クリア テキストを含む、**nvarchar**、**char**、**varchar**、**binary**、**varbinary**、または **nchar** 型の変数を指定します。最大サイズは 8,000 バイトです。  
   
  *add_authenticator*  
  クリア テキストと共に認証子を暗号化するかどうかを指定します。 認証子を追加する場合は 1 を指定します。 **int**です。  
@@ -67,14 +67,14 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  クリア テキストと共にハッシュを暗号化するかどうかを指定します。  
   
- *認証子*  
+ *authenticator*  
  認証子の取得元となるデータを指定します。 **sysname**です。  
   
  @authenticator  
  認証子の取得元となるデータを含む変数を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズにします。  
+ **varbinary** (最大サイズは 8,000 バイト)  
   
 ## <a name="remarks"></a>解説  
  パス フレーズは空白を含むパスワードです。 パスフレーズを使用する利点は、比較的長い文字列を覚えるより、意味のある句やセンテンスを覚える方が簡単であるという点です。  
@@ -82,7 +82,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  この関数ではパスワードの複雑性はチェックされません。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、内のレコードを更新、`SalesCreditCard`テーブルし、列に格納されたクレジット_カード番号の値を暗号化`CardNumber_EncryptedbyPassphrase`、認証子として主キーを使用します。  
+ 次の例では、`SalesCreditCard` テーブルのレコードを更新し、認証子として主キーを使用して、列 `CardNumber_EncryptedbyPassphrase` に格納されるクレジット カードの番号を暗証化します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DECRYPTBYPASSPHRASE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+ [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
