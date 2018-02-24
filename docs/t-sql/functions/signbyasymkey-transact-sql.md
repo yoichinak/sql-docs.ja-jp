@@ -54,19 +54,19 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  現在のデータベース内の非対称キーの ID を指定します。 *Asym_Key_ID*は**int**です。  
   
  **@plaintext**  
- 型の変数は、 **nvarchar**、 **char**、 **varchar**、または**nchar**が非対称キーで署名されるデータを格納します。  
+ 非対称キーを使って署名するデータを含む、**nvarchar**、**char**、**varchar**、または **nchar** 型の変数を指定します。  
   
- *パスワード*  
- 秘密キーを保護するパスワードを指定します。 *パスワード*は**nvarchar (128)**です。  
+ *password*  
+ 秘密キーを保護するパスワードを指定します。 *password*は**nvarchar(128)**です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** (最大サイズ 8,000 バイト)  
   
 ## <a name="remarks"></a>解説  
  非対称キーに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、テーブル、 `SignedData04`、プレーン テキストとその署名を格納します。 非対称キーで署名された、テーブル内のレコードが次に挿入`PrimeKey`、パスワードを使用して復号化は最初`'pGFD4bb925DGvbd2439587y'`です。  
+ 次の例では、プレーン テキストとその署名を格納するテーブル `SignedData04` を作成し、次に、非対称キー `PrimeKey` を使用して署名したレコードをテーブルに挿入します。このキーは最初にパスワード `'pGFD4bb925DGvbd2439587y'` で暗号化解除されます。  
   
 ```  
 -- Create a table in which to store the data  
@@ -85,8 +85,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ASYMKEY_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [VERIFYSIGNEDBYASYMKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
