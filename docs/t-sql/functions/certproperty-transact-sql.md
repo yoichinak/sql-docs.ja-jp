@@ -50,7 +50,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>引数  
 *Cert_ID*  
-明書の ID を指定します。 *Cert_ID*は int です。
+証明書の ID を指定します。 *Cert_ID*は int です。
   
 *Expiry_Date*  
 証明書の有効期限日を指定します。
@@ -71,20 +71,20 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 証明書の SID を指定します。 これは、この証明書にマップされているログインまたはユーザーの SID でもあります。
   
 *String_SID*  
-証明書の SID を文字列で指定します。 これは、任意のログインまたは証明書にマップされたユーザーの SID。
+証明書の SID を文字列で指定します。 これは、この証明書にマップされているログインまたはユーザーの SID でもあります。
   
 ## <a name="return-types"></a>戻り値の型
 プロパティは単一引用符で囲んで指定する必要があります。
   
-戻り値の型は、関数の呼び出しで指定されたプロパティによって異なります。 すべての戻り値は、戻り値の型にラップされます**sql_variant**です。
--   *Expiry_Date*と*Start_Date*返す**datetime**です。  
--   *Cert_Serial_Number*、 *Issuer_Name*、*サブジェクト*、および*String_SID*返す**nvarchar**です。  
--   *SID*返します**varbinary**です。  
+戻り値の型は、関数の呼び出しで指定されたプロパティによって異なります。 すべての戻り値は、戻り値の型 **sql_variant** にラップされます。
+-   *Expiry_Date* および *Start_Date* では **datetime** 型が返されます。  
+-   *Cert_Serial_Number*、*Issuer_Name*、*Subject*、および *String_SID* では **nvarchar** 型が返されます。  
+-   *SID* では **varbinary** 型が返されます。  
   
 ## <a name="remarks"></a>解説  
-証明書に関する情報は、 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)カタログ ビューです。
+証明書に関する情報は、[sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) カタログ ビューで確認できます。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
 証明書に対する権限が必要です。呼び出し元で、証明書に対する VIEW DEFINITION 権限が拒否されていないことも条件となります。
   
 ## <a name="examples"></a>使用例  
@@ -108,10 +108,10 @@ GO
   
 ## <a name="see-also"></a>参照
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[ALTER CERTIFICATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-certificate-transact-sql.md)  
-[CERT_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cert-id-transact-sql.md) 
-[暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)
-[sys.certificates &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 
-[セキュリティ カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+[ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
+[CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+[暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
+[セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
   
   
