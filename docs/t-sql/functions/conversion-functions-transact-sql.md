@@ -31,10 +31,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[PARSE &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/parse-transact-sql.md)  
-[TRY_CAST &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/try-cast-transact-sql.md)  
-[TRY_CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/try-convert-transact-sql.md)  
-[TRY_PARSE と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/try-parse-transact-sql.md)
+[PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)  
+[TRY_CAST &#40;Transact-SQL&#41;](../../t-sql/functions/try-cast-transact-sql.md)  
+[TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)  
+[TRY_PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/try-parse-transact-sql.md)
   
 ## <a name="see-also"></a>参照
 [関数](../../t-sql/functions/functions.md)  
