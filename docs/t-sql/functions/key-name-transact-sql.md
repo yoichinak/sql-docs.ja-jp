@@ -43,22 +43,22 @@ KEY_NAME ( ciphertext | key_guid )
 ```  
   
 ## <a name="arguments"></a>引数  
- *暗号化テキスト*  
- 対称キーによって暗号化されたテキストを指定します。 *暗号化テキスト*は型です。 **varbinary (8000)**です。  
+ *ciphertext*  
+ 対称キーによって暗号化されたテキストを指定します。 *ciphertext* の型は **varbinary(8000)** です。  
   
  *key_guid*  
- 対称キーの GUID を指定します。 *key_guid*は型です。 **uniqueidentifier**です。  
+ 対称キーの GUID を指定します。 *key_guid* の型は **uniqueidentifier** です。  
   
-## <a name="returned-types"></a>返された型  
- **varchar (128)**  
+## <a name="returned-types"></a>戻り値の型  
+ **varchar(128)**  
   
-## <a name="permissions"></a>Permissions  
- 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]メタデータの可視性はセキュリティ保護可能なユーザーが所有しているかをユーザーが権限を許可されてに制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+## <a name="permissions"></a>権限  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、メタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. key_guid を使用して対称キーの名前を表示する  
- **マスター**データベースには、##ms_servicemasterkey## という名前の対称キーが含まれています。 次の例では、sys.symmetric_keys 動的管理ビューからそのキーの GUID を取得し、変数に割り当ててからその変数を KEY_NAME 関数に渡して、GUID に対応する名前を返す方法を示します。  
+ **master** データベースには、##MS_ServiceMasterKey## という名前の対称キーが含まれています。 次の例では、sys.symmetric_keys 動的管理ビューからそのキーの GUID を取得し、変数に割り当ててからその変数を KEY_NAME 関数に渡して、GUID に対応する名前を返す方法を示します。  
   
 ```  
 USE master;  
@@ -113,8 +113,8 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.symmetric_keys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ENCRYPTBYKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   
