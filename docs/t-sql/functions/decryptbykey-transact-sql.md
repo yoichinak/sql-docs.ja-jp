@@ -48,31 +48,31 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>引数  
- *暗号化テキスト*  
- キーで暗号化されたデータを指定します。 *暗号化テキスト*は**varbinary**です。  
+ *ciphertext*  
+ キーで暗号化されたデータを指定します。 *ciphertext*は**varbinary**です。  
   
  **@ciphertext**  
- 型の変数は、 **varbinary**キーで暗号化されたデータが含まれます。  
+ キーで暗号化されたデータを含む **varbinary** 型の変数を指定します。  
   
  *add_authenticator*  
  認証子がプレーン テキストと共に暗号化されているかどうかを示します。 この値は、データの暗号化時に EncryptByKey に渡された値と同じである必要があります。 *add_authenticator*は**int**です。  
   
- *認証子*  
- 認証子を生成する基のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *認証子*は**sysname**です。  
+ *authenticator*  
+ 認証子を生成する基のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *authenticator*は**sysname**です。  
   
  **@authenticator**  
  認証子の生成元のデータを含む変数を指定します。 EncryptByKey に渡された値と一致する必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** (最大サイズは 8,000 バイト)  
   
 ## <a name="remarks"></a>解説  
  DecryptByKey では対称キーが使用されます。 この対称キーはデータベースで開かれている必要があります。 複数のキーを同時に開いておくことができます。 暗号化テキストの暗号化解除をする直前にキーを開く必要はありません。  
   
  対称キーの暗号化と暗号化解除は比較的高速なので、データが大きい場合に適しています。  
   
-## <a name="permissions"></a>Permissions  
- 対称キーが現在のセッションで開かれている必要があります。 詳細については、次を参照してください。 [OPEN SYMMETRIC KEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+## <a name="permissions"></a>権限  
+ 対称キーが現在のセッションで開かれている必要があります。 詳細については、「[OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -118,7 +118,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ENCRYPTBYKEY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
