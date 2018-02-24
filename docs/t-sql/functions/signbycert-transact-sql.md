@@ -54,19 +54,19 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  データベースに含まれる証明書の ID を指定します。 *certificate_ID*は**int**です。  
   
  *@cleartext*  
- 型の変数は、 **nvarchar**、 **char**、 **varchar**、または**nchar**が署名されるデータを格納します。  
+ 署名するデータを含む、**nvarchar**、**char**、**varchar**、または **nchar** 型の変数を指定します。  
   
- **'** *パスワード* **'**  
- 証明書の秘密キーを暗号化する場合に使用したパスワードを指定します。 *パスワード*は**nvarchar (128)**です。  
+ **'** *password* **'**  
+ 証明書の秘密キーを暗号化する場合に使用したパスワードを指定します。 *password* は **nvarchar(128)** です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** (最大サイズ 8,000 バイト)  
   
 ## <a name="remarks"></a>解説  
  証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、テキストをサインイン`@SensitiveData`証明書で`ABerglundCert07`、暗号化解除パスワード"pGFD4bb925DGvbd2439587y"を持つ証明書。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
+ 次の例では、証明書 `ABerglundCert07` を使用して `@SensitiveData` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  
@@ -80,11 +80,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [VERIFYSIGNEDBYCERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
- [CERT_ID &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cert-id-transact-sql.md)   
+ [VERIFYSIGNEDBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [証明書 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
