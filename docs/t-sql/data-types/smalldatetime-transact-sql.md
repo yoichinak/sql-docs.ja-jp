@@ -39,14 +39,14 @@ ms.lasthandoff: 11/21/2017
 日付を時刻と組み合わせて定義します。 時刻は 24 時間制です。秒数は常にゼロ (:00) で、1 秒未満の秒を持ちません。
   
 > [!NOTE]  
->  使用して、**時間**、**日付**、 **datetime2**と**datetimeoffset**新しい作業のデータ型。 これらの型は、SQL 標準に準拠しています。 これらの型は、より高い移植性を持ちます。 **時間**、 **datetime2**と**datetimeoffset**提供し、有効桁数 (秒)。 **datetimeoffset**グローバルに配置されるアプリケーションのタイム ゾーンのサポートを提供します。  
+>  新しい作業項目に対しては、**time**、**date**、**datetime2**、および **datetimeoffset** データ型を使用します。 これらの型は、SQL 標準に準拠しています。 これらの型は、より高い移植性を持ちます。 **time** 、**datetime2**、および **datetimeoffset** は、秒に関してより高い有効桁数を提供します。 **datetimeoffset** は、グローバルに配置されるアプリケーション向けにタイム ゾーンのサポートを提供します。  
   
 ## <a name="smalldatetime-description"></a>smalldatetime の説明
   
 |||  
 |-|-|  
 |構文|**smalldatetime**|  
-|使用方法|宣言@MySmalldatetime **smalldatetime**<br /><br /> テーブル Table1 の作成 (Column1 **smalldatetime** )|  
+|使用方法|DECLARE @MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|適用なし|  
 |日付範囲|1900-01-01 ～ 2079-06-06<br /><br /> 1900 年 1 月 1 日～ 2079 年 6 月 6 日|  
 |時刻範囲|00:00:00 ～ 23:59:59<br /><br /> 2007-05-09 23:59:59 は次のように丸められます。<br /><br /> 2007-05-10 00:00:00|  
@@ -64,12 +64,12 @@ ms.lasthandoff: 11/21/2017
 **smalldatetime**は ANSI または ISO 8601 準拠していません。
   
 ## <a name="converting-date-and-time-data"></a>日付と時刻のデータを変換します。
-日付と時刻のデータ型に変換するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付や時刻として認識できないすべての値を拒否します。 CAST および CONVERT 関数の日付と時刻のデータの使用方法については、次を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md).
+data データ型と time データ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付や時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。
   
-### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>その他の日付と時刻型から smalldatetime への変換
-このセクションでは、どうなるかについて説明しますと、 **smalldatetime**データ型は他の日付と時刻のデータ型に変換します。
+### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>smalldatetime から他の日付/時刻データ型への変換
+このセクションでは、 **smalldatetime**データ型が他の日付と時刻のデータ型に変換されるとどうなるかについて説明します。
   
-変換の場合**日付**年、月、および日がコピーされます。 次のコードは、変換した結果を示しています、`smalldatetime`値を`date`値。
+**date** に変換するときは、年、月、および日がコピーされます。 次のコードは、`smalldatetime`値を`date`値に変換した結果を示しています。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -85,7 +85,7 @@ SELECT @smalldatetime AS '@smalldatetime', @date AS 'date';
 --(1 row(s) affected)  
 ```  
   
-ときに、変換を**time (n)**時間、分、および秒がコピーされます。 秒の小数部は 0 に設定されます。 次のコードは、変換した結果を示しています、`smalldatetime`値を`time(4)`値。
+**time(n)** に変換するときは、時、分、および秒がコピーされます。 秒の小数部は 0 に設定されます。 次のコードは、`smalldatetime`値を`time(4)`値に変換した結果を示しています。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -101,7 +101,7 @@ SELECT @smalldatetime AS '@smalldatetime', @time AS 'time';
 --(1 row(s) affected)  
 ```  
   
-ときに、変換を**datetime**、 **smalldatetime**値をコピー、 **datetime**値。 秒の小数部は 0 に設定されます。 次のコードは、変換した結果を示しています、`smalldatetime`値を`datetime`値。
+**datetime** に変換するときは、 **smalldatetime**値が **datetime**値にコピーされます。 秒の小数部は 0 に設定されます。 次のコードは、`smalldatetime`値を`datetime`値に変換した結果を示しています。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -117,7 +117,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-変換の場合**datetimeoffset (n)**、 **smalldatetime**値をコピー、 **datetimeoffset (n)**値。 秒の小数部は 0 に設定され、タイム ゾーン オフセットは +00:0 に設定されます。 次のコードは、変換した結果を示しています、`smalldatetime`値を`datetimeoffset(4)`値。
+**datetimeoffset(n)** に変換するときは、 **smalldatetime** 値が **datetimeoffset(n)** 値にコピーされます。 秒の小数部は 0 に設定され、タイム ゾーン オフセットは +00:0 に設定されます。 次のコードは、`smalldatetime`値を`datetimeoffset(4)`値に変換した結果を示しています。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -133,7 +133,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-変換の**datetime2 (n)**、 **smalldatetime**値をコピー、 **datetime2 (n)**値。 秒の小数部は 0 に設定されます。 次のコードは、変換した結果を示しています、`smalldatetime`値を`datetime2(4)`値。
+**datetime2(n)** に変換するときは、 **smalldatetime** 値が **datetime2(n)** 値にコピーされます。 秒の小数部は 0 に設定されます。 次のコードは、`smalldatetime`値を`datetime2(4)`値に変換した結果を示しています。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
