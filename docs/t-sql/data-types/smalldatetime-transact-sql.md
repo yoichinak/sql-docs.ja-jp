@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI および ISO 8601 への準拠  
 **smalldatetime**は ANSI または ISO 8601 準拠していません。
   
-## <a name="converting-date-and-time-data"></a>日付と時刻のデータを変換します。
+## <a name="converting-date-and-time-data"></a>日付と時刻のデータの変換
 data データ型と time データ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付や時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。
   
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>smalldatetime から他の日付/時刻データ型への変換
