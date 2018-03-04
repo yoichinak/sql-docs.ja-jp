@@ -43,12 +43,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返します、 **datetime2 (7)**いるコンピューターの日時を表す値のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているコンピューターの日付と時刻を含む **datetime2(7)** 値を返します。  
   
 > [!NOTE]  
 >  1 秒未満の有効桁数で比較すると、SYSDATETIME と SYSUTCDATETIME の方が GETDATE と GETUTCDATE よりも高い精度を得ることができます。 SYSDATETIMEOFFSET には、システムのタイム ゾーン オフセットが含まれます。 SYSDATETIME、SYSUTCDATETIME、および SYSDATETIMEOFFSET は、date 型と time 型の任意の変数に割り当てることができます。  
   
- すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型および関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,15 +62,15 @@ SYSDATETIME ( )
  **datetime2(7)**  
   
 ## <a name="remarks"></a>解説  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを参照できる SYSDATETIME を参照できる任意の場所、 **datetime2 (7)**式。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、**datetime2(7)** 式を参照できる場所であればどこでも、SYSDATETIME を参照できます。  
   
  SYSDATETIME は非決定的関数です。 この関数を列内で参照するビューと式には、インデックスを付けることができません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]GetSystemTimeAsFileTime() Windows API を使用して日付と時刻の値を取得します。 精度は、コンピューターのハードウェアとする Windows のバージョンによって異なります。 のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。 この API の精度は 100 ナノ秒で固定されます。 GetSystemTimeAdjustment() Windows API を使用して、精度を確認できます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、GetSystemTimeAsFileTime() Windows API を使用して日付と時刻の値を取得します。 精度は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューター ハードウェアおよび Windows のバージョンによって異なります。 この API の精度は 100 ナノ秒で固定されます。 精度は、GetSystemTimeAdjustment() Windows API を使用して確認できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、6 つを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付を返すには、現在の日付と時刻の時間を返すシステム関数またはその両方です。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
+ 次の例では、現在の日付と時刻を返す 6 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム関数を使用して、日付、時刻、またはその両方を取得しています。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
   
 ### <a name="a-getting-the-current-system-date-and-time"></a>A. 現在のシステム日付と時刻を取得する  
   
@@ -126,7 +126,7 @@ GETUTCDATE()       20:18:45.3470000
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-getting-the-current-system-date-and-time"></a>D: 現在のシステム日付と時刻を取得します。  
+### <a name="d-getting-the-current-system-date-and-time"></a>D: 現在のシステム日付と時刻を取得する  
   
 ```  
 SELECT SYSDATETIME();  
@@ -140,8 +140,8 @@ SELECT SYSDATETIME();
 ```  
   
 ## <a name="see-also"></a>参照  
- [CAST および CONVERT &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [日付および時刻データ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [日付および時刻データ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
 
