@@ -100,10 +100,10 @@ ms.lasthandoff: 11/21/2017
 ##  <a name="_datetime"></a>日付と時刻のデータを変換します。  
 data データ型と time データ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付や時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。
   
-### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>datetime の他の日付/時刻データ型への変換 
-このセクションでは、 **datetime**データ型が他の日付と時刻データ型に変換されるときの動作について説明します。  
+### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>他の日付/時刻データ型から datetime への変換 
+このセクションでは、 他の日付と時刻データ型が **datetime** データ型に変換されるときの動作について説明します。  
   
-**date** に変換するときは、年、月、日がコピーされます。 時刻部分は 00:00:00.000 に設定されます。 次のコードは、`date`値を`datetime`値に変換した結果を示しています。  
+**date** から変換される場合、年、月、日がコピーされます。 時刻部分は 00:00:00.000 に設定されます。 次のコードは、`date`値を`datetime`値に変換した結果を示しています。  
   
 ```sql
 DECLARE @date date = '12-21-16';  
@@ -117,7 +117,7 @@ SELECT @datetime AS '@datetime', @date AS '@date';
 --2016-12-21 00:00:00.000 2016-12-21  
 ```  
   
-**time(n)** に変換するときは、時刻部分がコピーされ、日付部分に '1900-01-01' が設定されます。 **time(n)** 値の有効桁数が 3 桁を超える場合、値に合わせて切り捨てられます。 次の例は、`time(4)` 値を `datetime` 値に変換した結果を示しています。  
+**time(n)** から変換される場合、時刻部分がコピーされ、日付部分に '1900-01-01' が設定されます。 **time(n)** 値の有効桁数が 3 桁を超える場合、値に合わせて切り捨てられます。 次の例は、`time(4)` 値を `datetime` 値に変換した結果を示しています。  
   
 ```sql
 DECLARE @time time(4) = '12:10:05.1237';  
@@ -131,7 +131,7 @@ SELECT @datetime AS '@datetime', @time AS '@time';
 --1900-01-01 12:10:05.123 12:10:05.1237  
 ```  
   
-**smalldatetime** に変換するときは、時と分がコピーされます。 秒と秒の小数部は 0 に設定されます。 次のコードは、`smalldatetime`値を`datetime`値に変換した結果を示しています。  
+**smalldatetime** から変換される場合、時と分がコピーされます。 秒と秒の小数部は 0 に設定されます。 次のコードは、`smalldatetime`値を`datetime`値に変換した結果を示しています。  
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '12-01-16 12:32';  
@@ -145,7 +145,7 @@ SELECT @datetime AS '@datetime', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.000 2016-12-01 12:32:00  
 ```  
   
-**datetimeoffset(n)** に変換するときは、日付部分と時刻部分がコピーされます。 タイム ゾーンは切り捨てられます。 **datetimeoffset(n)** 値の有効桁数が 3 桁を超える場合、値が切り捨てられます。 次の例は、`datetimeoffset(4)` 値を `datetime` 値に変換した結果を示しています。  
+**datetimeoffset(n)** から変換される場合、日付部分と時刻部分がコピーされます。 タイム ゾーンは切り捨てられます。 **datetimeoffset(n)** 値の有効桁数が 3 桁を超える場合、値が切り捨てられます。 次の例は、`datetimeoffset(4)` 値を `datetime` 値に変換した結果を示しています。  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1968-10-23 12:45:37.1234 +10:0';  
@@ -159,7 +159,7 @@ SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
 --1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237 +01:0   
 ```  
   
-**datetime2(n)** に変換するときは、日付と時刻がコピーされます。 **datetime2(n)** 値有効桁数が 3 桁を超える場合、値が切り捨てられます。 次の例は、`datetime2(4)` 値を `datetime` 値に変換した結果を示しています。  
+**datetime2(n)** から変換される場合、日付と時刻がコピーされます。 **datetime2(n)** 値の有効桁数が 3 桁を超える場合、値が切り捨てられます。 次の例は、`datetime2(4)` 値を `datetime` 値に変換した結果を示しています。  
   
 ```sql
 DECLARE @datetime2 datetime2(4) = '1968-10-23 12:45:37.1237';  
