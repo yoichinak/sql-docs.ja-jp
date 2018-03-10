@@ -41,9 +41,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  解釈するため、月、日、および年の日付部分の順序を設定**日付**、 **smalldatetime**、 **datetime**、 **datetime2**と**datetimeoffset**文字の文字列。  
+  **date** 、**smalldatetime**、**datetime**、**datetime2**、**offset** の各文字列を解釈する際の日付要素 (月、日、年) の順序を設定します。  
   
- すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型および関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,19 +54,19 @@ SET DATEFORMAT { format | @format_var }
 ```  
   
 ## <a name="arguments"></a>引数  
- *形式* | **@***format_var*  
- 日付要素の順序を指定します。 有効なパラメーターは**mdy**、 **dmy**、 **ymd**、 **ydm**、 **myd**、および**dym**. Unicode または Unicode に変換可能な 2 バイト文字セット (DBCS) を指定できます。 言語設定が英語の既定値は**mdy**です。 すべての既定の DATEFORMAT の言語サポートを参照してください[sp_helplanguage (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
+ *format* | **@***format_var*  
+ 日付要素の順序を指定します。 有効なパラメーターは**mdy**、 **dmy**、 **ymd**、 **ydm**、 **myd**、および**dym**. Unicode または Unicode に変換可能な 2 バイト文字セット (DBCS) を指定できます。 言語設定が英語の既定値は**mdy**です。 サポートされている全言語の既定の DATEFORMAT については、「[sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
- DATEFORMAT **ydm**はサポートされていません**日付**、 **datetime2**と**datetimeoffset**データ型。  
+ **ydm** の日付形式は、**date** 型、**datetime2** 型、および **datetimeoffset** 型ではサポートされていません。  
   
- 文字の文字列の解釈に DATEFORMAT の設定の効果が異なる可能性があります**datetime**と**smalldatetime**値の場合**日付**、 **datetime2**と**datetimeoffset**文字列の形式によっての値。 この設定は、文字列をデータベース格納用の日付値に変換する際の解釈に影響します。 データベースに格納された日付データ型の値 (ストレージ形式) の表示には影響しません。  
+ 文字列の形式によっては、DATEFORMAT 設定が文字列の解釈に与える影響が、**datetime** および **smalldatetime** 値の場合と、**date**、**datetime2**、および **datetimeoffset** 値の場合とで異なることがあります。 この設定は、文字列をデータベース格納用の日付値に変換する際の解釈に影響します。 データベースに格納された日付データ型の値 (ストレージ形式) の表示には影響しません。  
   
  ISO 8601 など、一部の文字列形式は、DATEFORMAT 設定とは無関係に解釈されます。  
   
  SET DATEFORMAT は、解析時ではなく実行時に設定されます。  
   
- SET DATEFORMAT オーバーライドの暗黙の日付の形式を指定[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)です。  
+ SET DATEFORMAT で設定される日付の形式は、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) で暗黙的に設定される日付の形式よりも優先されます。  
   
 ## <a name="permissions"></a>Permissions  
  ロール **public** のメンバーシップが必要です。  
