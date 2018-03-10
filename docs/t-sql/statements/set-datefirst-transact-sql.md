@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   週の最初の曜日を 1 ～ 7 の数値で設定します。  
   
- すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型および関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>引数  
- *数* | **@***number_var*  
+ *number* | **@***number_var*  
  週の最初の曜日を示す整数値を指定します。 値は次のいずれかを指定することができます。  
   
 |値|週の最初の曜日|  
@@ -71,10 +71,10 @@ SET DATEFIRST 7 ;
 |**4**|木曜日|  
 |**5**|金曜日|  
 |**6**|土曜日|  
-|**7** (既定値、u. s.既定値)|日曜日|  
+|**7** (既定値、U.S. English)|日曜日|  
   
 ## <a name="remarks"></a>解説  
- SET DATEFIRST の現在の設定を表示するを使用して、 [@@DATEFIRST ](../../t-sql/functions/datefirst-transact-sql.md)関数。  
+ SET DATEFIRST の現在の設定を確認するには、[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md) 関数を使用します。  
   
  SET DATEFIRST は、解析時ではなく実行時に設定されます。  
   
@@ -84,7 +84,7 @@ SET DATEFIRST 7 ;
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、日付の値の曜日を表示し、変更の効果を示しています、`DATEFIRST`設定します。  
+ 次の例では、日付値に対応する曜日を表示し、`DATEFIRST` の設定を変更した場合の影響を示しています。  
   
 ```  
 -- SET DATEFIRST to U.S. English default value of 7.  
