@@ -43,12 +43,12 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; です DATEFIRST (TRANSACT-SQL)。
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-セッションは、現在の値を返します[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)です。
+セッションにおける、[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) の現在の値を返します。
   
-すべての概要については[!INCLUDE[tsql](../../includes/tsql-md.md)]日付と時刻のデータ型および関数を参照してください[日付と時刻のデータ型および関数 &#40;TRANSACT-SQL と #41 です。](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型および関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -62,9 +62,9 @@ ms.lasthandoff: 11/21/2017
 **tinyint**
   
 ## <a name="remarks"></a>解説  
-SET DATEFIRST は、週の最初の曜日を指定します。 言語設定がは 7 の日曜日です。
+SET DATEFIRST は、週の最初の曜日を指定します。 既定値 は 7 の日曜日です。
   
-この言語設定は、文字列をデータベース格納用の日付値に変換する際の解釈のほか、データベースに格納される日付値の表示に影響します。 この設定は、日付データのストレージ形式には影響しません。 次の例では、最初に言語を `Italian` に設定します。 ステートメント`SELECT @@DATEFIRST;`返します`1`です。 言語に設定し、`us_english`です。 ステートメント`SELECT @@DATEFIRST;`返します`7`です。
+この言語設定は、文字列をデータベース格納用の日付値に変換する際の解釈のほか、データベースに格納される日付値の表示に影響します。 この設定は、日付データのストレージ形式には影響しません。 次の例では、最初に言語を `Italian` に設定します。 `SELECT @@DATEFIRST;` ステートメントからは `1` が返されます。 次に、言語を `us_english` に設定します。 `SELECT @@DATEFIRST;` ステートメントからは `7` が返されます。
   
 ```sql
 SET LANGUAGE Italian;  
@@ -77,7 +77,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="examples"></a>使用例  
-次の例を週の最初の日を設定する`5`(金曜)、現在の日付を前提としています`Today`, は土曜します。 `SELECT` ステートメントでは、`DATEFIRST` の値と現在の曜日を示す数値が返されます。
+次の例では、週の最初の曜日を `5` (金曜) に設定します。現在の曜日 `Today` は土曜と仮定します。 `SELECT` ステートメントでは、`DATEFIRST` の値と現在の曜日を示す数値が返されます。
   
 ```sql
 SET DATEFIRST 5;  
@@ -94,14 +94,14 @@ First Day         Today
 ```  
   
 ## <a name="example"></a>例
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]そして[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT @@DATEFIRST;  
 ```  
   
 ## <a name="see-also"></a>参照
-[構成関数 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/configuration-functions-transact-sql.md)
+[構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   
 
