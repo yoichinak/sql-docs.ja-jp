@@ -31,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-返します、 **datetime**指定した日付と時刻の値。
+指定された日付と時刻を表す **datetime** 値を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -42,32 +42,32 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 ```  
   
 ## <a name="arguments"></a>引数  
-*1 年*  
+*year*  
 年を指定する整数式。
   
-*月*  
+*month*  
 月を指定する整数式。
   
-*1 日*  
+*day*  
 日を指定する整数式。
   
-*1 時間*  
+*hour*  
 時間を指定する整数式。
   
-*1 分*  
+*minute*  
 分を指定する整数式。
   
 *seconds*  
 秒を指定する整数式。
   
-*(ミリ秒)*  
+*milliseconds*  
 ミリ秒を指定する整数式。
   
 ## <a name="return-types"></a>戻り値の型
 **datetime**
   
 ## <a name="remarks"></a>解説  
-**DATETIMEFROMPARTS**返しますが完全に初期化された**datetime**値。 引数が有効でない場合は、エラーが発生します。 必要な引数が null、null が返されます。
+**DATETIMEFROMPARTS** は、完全に初期化された **datetime** 値を返します。 引数が有効でない場合は、エラーが発生します。 必要な引数が NULL の場合は、NULL が返されます。
   
 この関数は、リモート処理は実行することのできる[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]サーバー上とします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のバージョンをインストールしているサーバーには、リモート処理が行われません。
   
@@ -88,7 +88,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>参照
-[datetime &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/datetime-transact-sql.md)
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)
   
   
 
