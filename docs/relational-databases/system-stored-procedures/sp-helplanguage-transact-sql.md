@@ -45,10 +45,10 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@language=** ] **'***言語***'**  
- 情報を表示する代替言語の名前です。 *言語*は**sysname**、既定値は NULL です。 場合*言語*が指定すると、指定した言語に関する情報が返されます。 言語が指定されていない場合のすべての言語に関する情報、 **sys.syslanguages**互換性ビューが返されます。  
+ [  **@language=** ] **'***language***'**  
+ 情報を表示する代替言語の名前です。 *language* のデータ型は **sysname** で、既定値は NULL です。 *language* を指定した場合は、指定した言語に関する情報が返されます。 指定しない場合は、**sys.syslanguages** 互換性ビューにあるすべての言語に関する情報が返されます。  
   
-## <a name="return-code-values"></a>リターン コードの値  
+## <a name="return-code-values"></a>戻り値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
@@ -58,22 +58,22 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**langid**|**smallint**|言語 ID 番号です。|  
 |**dateformat**|**nchar (3)**|日付の形式です。|  
 |**datefirst**|**tinyint**|週の最初の曜日。1 は月曜、2 は火曜のようになり、7 は日曜になります。|  
-|**アップグレード**|**int**|この言語を使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新アップグレード バージョンです。|  
+|**upgrade**|**int**|この言語を使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新アップグレード バージョンです。|  
 |**name**|**sysname**|言語名です。|  
-|**エイリアス**|**sysname**|言語の別名です。|  
-|**か月間**|**nvarchar (372)**|月の名前です。|  
+|**alias**|**sysname**|言語の別名です。|  
+|**months**|**nvarchar (372)**|月の名前です。|  
 |**shortmonths**|**nvarchar (132)**|月の短縮名です。|  
-|**日数**|**nvarchar(217)**|曜日です。|  
+|**days**|**nvarchar(217)**|曜日です。|  
 |**lcid**|**int**|この言語を使用する Windows のロケール ID です。|  
-|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージ グループ id。|  
+|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージ グループ ID です。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-information-about-a-single-language"></a>A. 特定の言語に関する情報を返す  
- 次の例には、代替言語に関する情報が表示されます。`French`です。  
+ 次の例では、代替言語 `French` に関する情報を表示します。  
   
 ```  
 sp_helplanguage French;  
@@ -87,9 +87,9 @@ sp_helplanguage;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジンのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
- [言語を設定する &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-language-transact-sql.md)   
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
