@@ -46,15 +46,15 @@ EOMONTH ( start_date [, month_to_add ] )
  月の最終日を返す日付を指定する日付の式。  
   
  *month_to_add*  
- 追加する月数を指定する省略可能な整数式*start_date*です。  
+ *start_date* に追加する月数を指定する省略可能な整数式。  
   
- この引数が指定されている場合、し**EOMONTH**に指定された月数を追加*start_date*、し、結果として得られる日付の月の最終日を返します。 この整数式を追加したことによって有効な日付範囲をオーバーフローすると、エラーが発生します。  
+ この引数が指定されると、**EOMONTH** は指定された月数を *start_date* に追加し、結果として生成された月の最終日を返します。 この整数式を追加したことによって有効な日付範囲をオーバーフローすると、エラーが発生します。  
   
 ## <a name="return-type"></a>戻り値の型  
  **date**  
   
 ## <a name="remarks"></a>解説  
- この関数は、リモート処理は実行[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]サーバー以上です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンのサーバーには、リモート処理は実行できません。  
+ この関数は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上のサーバーに対してリモート処理が可能です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンのサーバーには、リモート処理は実行できません。  
   
 ## <a name="examples"></a>使用例  
   
