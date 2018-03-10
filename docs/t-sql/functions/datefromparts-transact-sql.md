@@ -31,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-返します、**日付**指定した年、月、および日の値。
+指定された年、月、および日を表す **date** 値を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -42,25 +42,25 @@ DATEFROMPARTS ( year, month, day )
 ```  
   
 ## <a name="arguments"></a>引数  
-*1 年*  
+*year*  
 年を指定する整数式。
   
-*月*  
+*month*  
 1 ～ 12 の月を指定する整数式。
   
-*1 日*  
+*day*  
 日を指定する整数式。
   
 ## <a name="return-types"></a>戻り値の型
 **date**
   
 ## <a name="remarks"></a>解説  
-**DATEFROMPARTS**を返します、**日付**値を設定するのには、指定した年、月と日、日付部分と時間部分では、既定値に設定します。 引数が有効でない場合は、エラーが発生します。 必要な引数が NULL の場合は、NULL が返されます。
+**DATEFROMPARTS** は、日付部分が指定の年月日に設定され、時間部分が既定値に設定されている **date** の値を返します。 引数が有効でない場合は、エラーが発生します。 必要な引数が null の場合は、null が返されます。
   
-この関数は、リモート処理は実行することのできる[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]サーバー上とします。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンのサーバーには、リモート処理が行われません。
+この関数は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上のサーバーに対してリモート処理が可能です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンのサーバーには、リモート処理が行われません。
   
 ## <a name="examples"></a>使用例  
-次の例で、 **DATEFROMPARTS**関数。
+次の例では、**DATEFROMPARTS** 関数を示します。
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  
