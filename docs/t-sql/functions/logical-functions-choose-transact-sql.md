@@ -28,7 +28,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="logical-functions---choose-transact-sql"></a>論理関数のCHOOSE (TRANSACT-SQL)
+# <a name="logical-functions---choose-transact-sql"></a>論理関数 - CHOOSE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の値の一覧から指定されたインデックスにある項目を返します。  
