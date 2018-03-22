@@ -1,5 +1,5 @@
 ---
-title: "選択 (TRANSACT-SQL) |Microsoft ドキュメント"
+title: "CHOOSE (TRANSACT-SQL) |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="logical-functions---choose-transact-sql"></a>論理関数の選択 (TRANSACT-SQL)
+# <a name="logical-functions---choose-transact-sql"></a>論理関数のCHOOSE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  値のリストから指定したインデックス位置にある項目を返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の値の一覧から指定されたインデックスにある項目を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,10 +43,10 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- *インデックス*  
+ *index*  
  後に続く項目のリストへの 1 から始まるインデックスを表す整数式。  
   
- 指定したインデックス値が数値データ型を以外の値がかどうか**int**値は整数を暗黙的に変換し、します。 インデックス値が値の配列の境界を超えると、CHOOSE は NULL を返します。  
+ 入力されたインデックス値が **int** 以外の数値データ型である場合、暗黙的に値が整数に変換されます。 インデックス値が値の配列の境界を超えると、CHOOSE は NULL を返します。  
   
  *val_1... val_n*  
  任意のデータ型のコンマ区切り値のリスト。  
@@ -74,7 +74,7 @@ Developer
 (1 row(s) affected)  
 ```  
   
- 次の例の値に基づく単純な文字列を返します、`ProductCategoryID`列です。  
+ 次の例では、`ProductCategoryID` 列の値に基づく単純な文字列が返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -127,6 +127,6 @@ Sales Representative                               2007-07-01 Summer
 ```  
   
 ## <a name="see-also"></a>参照  
- [Iif 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
   
   
