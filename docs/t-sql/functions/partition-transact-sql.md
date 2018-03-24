@@ -51,21 +51,21 @@ ms.lasthandoff: 11/21/2017
  *partition_function_name*  
  パーティション分割列の値のセットが適用される、既存のパーティション関数の名前を指定します。  
   
- *式 (expression)*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)のデータ型の一致か、対応するパーティション分割列のデータ型に暗黙的に変換できる必要があります。 *式*に現在参加しているパーティション分割列の名前を指定できますも*partition_function_name*です。  
+ *expression*  
+ [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。このデータ型は、対応するパーティション分割列のデータ型と一致するか、パーティション分割列のデータ型に暗黙的に変換される必要があります。 *expression* には、現在 *partition_function_name* に参加しているパーティション分割列の名前を指定することもできます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
 ## <a name="remarks"></a>解説  
- $PARTITION 返します、 **int** 1 ~ パーティション関数のパーティションの数の値。  
+ $PARTITION では、**int** 型の値が返されます。1 以上、かつパーティション関数のパーティション数以下の値が返されます。  
   
  $PARTITION では、指定したパーティション関数を使用するパーティション テーブルやパーティション インデックスに値が存在しているかどうかに関係なく、有効な値に対してパーティション番号が返されます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>A. パーティション分割列の値のセットに対してパーティション番号を取得する  
- 次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数 `RangePF1` を作成します。 $PARTITION がであると判断する値`10`のパーティション分割列を表す`RangePF1`テーブルのパーティション 1 に配置するとします。  
+ 次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数 `RangePF1` を作成します。 $PARTITION は、`RangePF1` のパーティション分割列を表す値 `10` が、テーブルのパーティション 1 に配置されるかどうかを判定するために使用します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -78,9 +78,9 @@ GO
 ```  
   
 ### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>B. パーティション テーブルまたはパーティション インデックスについて、空でない各パーティション内の行数を取得する  
- 次の例は、各テーブルのパーティションで行の数を返します`TransactionHistory`データが含まれます。 `TransactionHistory`テーブルがパーティション関数を使用して`TransactionRangePF1`にパーティション分割されて、`TransactionDate`列です。  
+ 次の例では、データを含むテーブル `TransactionHistory` の各パーティション内の行数を返します。 `TransactionHistory` テーブルではパーティション関数 `TransactionRangePF1` が使用され、`TransactionDate` 列でパーティション分割されます。  
   
- この例を実行する、に対して PartitionAW.sql スクリプトを実行する必要があります最初、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]サンプル データベース。 詳細については、次を参照してください。 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)です。  
+ この例を実行するには、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースに対して最初に PartitionAW.sql スクリプトを実行する必要があります。 詳細については、「[PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  
