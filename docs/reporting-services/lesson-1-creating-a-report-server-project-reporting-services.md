@@ -41,7 +41,7 @@ ms.locfileid: "49383657"
 
    >**注**: **[ビジネス インテリジェンス]** または **[レポート サーバー プロジェクト]** オプションが表示されない場合、ビジネス インテリジェンス テンプレートを使用して SSDT を更新する必要があります。 「 [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。  
   
-5.  **[名前]** に「 **utorial**」と入力します。  
+5.  **[名前]** に「 **Tutorial**」と入力します。  
 
     既定では、新しいディレクトリの Visual Studio 2015\Projects フォルダーに作成されます。
     
