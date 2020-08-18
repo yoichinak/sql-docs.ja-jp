@@ -54,9 +54,9 @@ ms.locfileid: "87242342"
 
 | プラットフォーム | ONNX モデル形式 | RevoScale モデル形式 |
 |-|-|-|
-| SQL Server | いいえ | [はい] |
-| Azure SQL Managed Instance | ○ | はい |
-| Azure SQL データベース | いいえ | [はい] |
+| SQL Server | いいえ | はい |
+| Azure SQL Managed Instance | はい | はい |
+| Azure SQL データベース | いいえ | はい |
 | Azure SQL Edge | はい | いいえ |
 | Azure Synapse Analytics | はい | いいえ |
 
