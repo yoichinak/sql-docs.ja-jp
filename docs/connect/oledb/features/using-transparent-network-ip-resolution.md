@@ -30,7 +30,7 @@ ms.locfileid: "86006809"
 |TransparentNetworkIPResolution|MultiSubnetFailover|動作|
 |--------|--------|--------|
 |True|True|1|
-|正しい|誤り|0|
+|True|False|0|
 |False|True|1|
 |False|False|2|
 
