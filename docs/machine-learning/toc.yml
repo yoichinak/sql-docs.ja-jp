@@ -109,7 +109,7 @@
               href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
             - name: 2 - データの探索
               href: ../machine-learning/tutorials/python-taxi-classification-explore-data.md
-            - name: 3 - 機能エンジニアリング
+            - name: 3 - 特徴量エンジニアリング
               href: ../machine-learning/tutorials/python-taxi-classification-create-features.md
             - name: 4 - トレーニングおよびデプロイ
               href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
@@ -147,7 +147,7 @@
               href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
             - name: 2. データの探索
               href: ../machine-learning/tutorials/r-taxi-classification-explore-data.md
-            - name: 3. 機能エンジニアリング
+            - name: 3. 特徴量エンジニアリング
               href: ../machine-learning/tutorials/r-taxi-classification-create-features.md
             - name: 4. トレーニングおよびデプロイ
               href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
@@ -163,7 +163,7 @@
               href: ../machine-learning/tutorials/walkthrough-view-and-summarize-data-using-r.md
             - name: 3. グラフとプロット
               href: ../machine-learning/tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: 4. 機能エンジニアリング
+            - name: 4. 特徴量エンジニアリング
               href: ../machine-learning/tutorials/walkthrough-create-data-features.md
             - name: 5. モデルの構築と保存
               href: ../machine-learning/tutorials/walkthrough-build-and-save-the-model.md

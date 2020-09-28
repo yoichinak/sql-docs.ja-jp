@@ -38,7 +38,7 @@ ms.locfileid: "88173605"
 
 [第 2 回](r-taxi-classification-explore-data.md) では、サンプル データを確認し、いくつかのプロットを生成しました。
 
-[第 3 回](r-taxi-classification-create-features.md) では、Transact-SQL 関数を使用して生データから特徴を作成する方法を学習しました。 その後、その関数をストアド プロシージャから呼び出し、機能の値を含むテーブルを作成しました。
+[第 3 回](r-taxi-classification-create-features.md) では、Transact-SQL 関数を使用して生データから特徴を作成する方法を学習しました。 その後、その関数をストアド プロシージャから呼び出し、特徴量の値を含むテーブルを作成しました。
 
 [第 4 回](r-taxi-classification-train-model.md) では、モジュールを読み込み、必要な関数を呼び出し、SQL Server ストアド プロシージャを使用してモデルを作成し、トレーニングしました。
 
@@ -82,7 +82,7 @@ GO
 
 より一般的なシナリオは、バッチ モードで複数の観測の予測を生成することです。 この手順では、バッチ スコアリングのしくみを見てみましょう。
 
-1. 最初に、使用する入力データの小さなセットを取得します。 このクエリは、予測に必要な乗客数とその他の機能を利用し、乗車の "上位 10" 一覧を作成します。
+1. 最初に、使用する入力データの小さなセットを取得します。 このクエリは、予測に必要な乗客数とその他の特徴量を利用し、乗車の "上位 10" 一覧を作成します。
   
    ```sql
    SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance

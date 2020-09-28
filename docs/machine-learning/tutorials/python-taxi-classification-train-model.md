@@ -22,7 +22,7 @@ ms.locfileid: "88178559"
 
 全 5 回からなるこのチュートリアル シリーズの第 4 回では、Python パッケージの **scikit-learn** と **revoscalepy** を使用して、機械学習モデルをトレーニングする方法について説明します。 これらの Python ライブラリは、SQL Server 機械学習と共に、既にインストールされています。
 
-SQL Server ストアド プロシージャを使用してモデルを作成およびトレーニングするには、モジュールを読み込んでから、必要な関数を呼び出します。 このモデルには、このチュートリアル シリーズの過去のレッスンで作成したデータ機能が必要です。 最後に、トレーニング済みのモデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。
+SQL Server ストアド プロシージャを使用してモデルを作成およびトレーニングするには、モジュールを読み込んでから、必要な関数を呼び出します。 このモデルには、このチュートリアル シリーズの過去のレッスンで作成したデータの特徴量が必要です。 最後に、トレーニング済みのモデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。
 
 この記事では、次のことを行います。
 
@@ -34,7 +34,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
 
 [第 2 回](python-taxi-classification-explore-data.md) では、サンプル データを探索し、いくつかのプロットを生成しました。
 
-[第 3 回](python-taxi-classification-create-features.md) では、Transact-SQL 関数を使用して生データから特徴を作成する方法を学習しました。 その後、その関数をストアド プロシージャから呼び出し、機能の値を含むテーブルを作成しました。
+[第 3 回](python-taxi-classification-create-features.md) では、Transact-SQL 関数を使用して生データから特徴を作成する方法を学習しました。 その後、その関数をストアド プロシージャから呼び出し、特徴量の値を含むテーブルを作成しました。
 
 [第 5 回](python-taxi-classification-deploy-model.md) では、第 4 回でトレーニングして保存したモデルを運用化する方法について説明します。
 
@@ -134,7 +134,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy
    ```
 
-3. テーブル *nyc\_taxi_models* を開きます。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
+3. テーブル *nyc\_taxi_models* を開きます。 _model_ 列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 
    ```text
    SciKit_model
@@ -185,7 +185,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
    このストアド プロシージャは、モデル トレーニングの一環として、以下の手順を実行します。
 
    + SELECT クエリにより、カスタム スカラー関数 _fnCalculateDistance_ が適用され、乗車場所と降車場所間の直線距離が計算されます。 クエリの結果は、Python の既定の入力変数 `InputDataset` に格納されます。
-   + 二項変数 _tipped_ が*ラベル*または結果列として使用され、モデルは、_passenger_count_、_trip_distance_、_trip_time_in_secs_、および _direct_distance_ の機能列を使用して調整されます。
+   + 二項変数 _tipped_ が*ラベル*または結果列として使用され、モデルは、_passenger_count_、_trip_distance_、_trip_time_in_secs_、および _direct_distance_ の特徴量列を使用して調整されます。
    + トレーニング済みモデルはシリアル化され、Python 変数`logitObj`に格納されます。 T-SQL キーワードの OUTPUT を追加することにより、変数をストアド プロシージャの出力として追加できます。 次の手順では、この変数を使用して、モデルのバイナリコードをデータベース テーブル _nyc_taxi_models_ に挿入します。 このメカニズムにより、モデルの格納と再利用が容易になります。
 
 2. 以下のようにストアド プロシージャを実行し、トレーニングした **revoscalepy** モデルを、テーブル *nyc_taxi_models* に挿入します。
@@ -203,7 +203,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy
    ```
 
-3. テーブル *nyc_taxi_models*を開きます。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
+3. テーブル *nyc_taxi_models*を開きます。 _model_ 列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 
    ```text
    revoscalepy_model

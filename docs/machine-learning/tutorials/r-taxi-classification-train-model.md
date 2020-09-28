@@ -20,7 +20,7 @@ ms.locfileid: "88178439"
 # <a name="r-tutorial-train-and-save-model"></a>R チュートリアル:モデルのトレーニングと保存
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-全 5 回からなるこのチュートリアル シリーズの第 4 回では、R を使用して機械学習モデルをトレーニングする方法について説明します。前回のチュートリアルで作成したデータ機能を使用してモデルをトレーニングし、トレーニング済みのモデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。 この場合、R パッケージは [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]と共に既にインストールされているため、SQL からすべてを実行できます。
+全 5 回からなるこのチュートリアル シリーズの第 4 回では、R を使用して機械学習モデルをトレーニングする方法について説明します。前回のチュートリアルで作成したデータの特徴量を使用してモデルをトレーニングし、トレーニング済みのモデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。 この場合、R パッケージは [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]と共に既にインストールされているため、SQL からすべてを実行できます。
 
 この記事では、次のことを行います。
 
@@ -32,7 +32,7 @@ ms.locfileid: "88178439"
 
 [第 2 回](r-taxi-classification-explore-data.md) では、サンプル データを確認し、いくつかのプロットを生成しました。
 
-[第 3 回](r-taxi-classification-create-features.md) では、Transact-SQL 関数を使用して生データから特徴を作成する方法を学習しました。 その後、その関数をストアド プロシージャから呼び出し、機能の値を含むテーブルを作成しました。
+[第 3 回](r-taxi-classification-create-features.md) では、Transact-SQL 関数を使用して生データから特徴を作成する方法を学習しました。 その後、その関数をストアド プロシージャから呼び出し、特徴量の値を含むテーブルを作成しました。
 
 [第 5 回](r-taxi-classification-deploy-model.md) では、第 4 回でトレーニングして保存したモデルを運用化する方法について説明します。
 
@@ -79,7 +79,7 @@ T-SQL から R を呼び出すときは、システムストアドプロシー�
   
    + R スクリプトは、ロジスティック回帰モデルを作成するために、[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] に含まれる拡張 R 関数の 1 つである **rxLogit** 関数を呼び出します。
   
-     二項変数 _tipped_ が *ラベル* または結果列として使用され、モデルは、  _passenger_count_、 _trip_distance_、 _trip_time_in_secs_、および _direct_distance_の機能列を使用して調整されます。
+     二項変数 _tipped_ が *ラベル* または結果列として使用され、モデルは、  _passenger_count_、 _trip_distance_、 _trip_time_in_secs_、および _direct_distance_の特徴量列を使用して調整されます。
   
    + R 変数 `logitObj` に保存されたトレーニング済みのモデルはシリアル化され、出力パラメーターとして返されます。
 
@@ -103,7 +103,7 @@ T-SQL から R を呼び出すときは、システムストアドプロシー�
 
 3. ステートメントが完了したら、テーブル *nyc_taxi_models* を開きます。 データの処理とモデルの調整には、しばらく時間がかかる場合があります。
 
-   _[モデル]_ 列にシリアル化されたモデル、および _[名前]_ 列にモデル名 **RxTrainLogit_model** を含む、1 つの新しい行が追加されていることがわかります。
+   _model_ 列にシリアル化されたモデル、および _name_ 列にモデル名 **RxTrainLogit_model** を含む、1 つの新しい行が追加されていることがわかります。
 
    ```text
    model                        name
