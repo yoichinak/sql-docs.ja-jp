@@ -1,5 +1,5 @@
 ---
-description: " の各エディションとサポートされる機能[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]"
+description: "[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] の各エディションとサポートされる機能"
 title: SQL Server 2019 の各エディションとサポートされている機能 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -41,7 +41,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/15/2020
 ms.locfileid: "92257769"
 ---
-# <a name="editions-and-supported-features-of-sssqlv15-md"></a> の各エディションとサポートされる機能[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# <a name="editions-and-supported-features-of-sssqlv15-md"></a>[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] の各エディションとサポートされる機能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
@@ -145,11 +145,11 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS の高可用性
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|--------------------------------:|:-----:|
 |Server Core サポート<sup>1</sup>|はい|はい|はい|はい|はい|
 |ログ配布|はい|はい|はい|いいえ|いいえ|
-|データベース ミラーリング|はい|はい<sup>2</sup>|○<sup>3</sup>|○<sup>3</sup>|○<sup>3</sup>|
+|データベース ミラーリング|はい|はい<sup>2</sup>|はい<sup>3</sup>|はい<sup>3</sup>|はい<sup>3</sup>|
 |バックアップ圧縮|はい|はい|いいえ|いいえ|いいえ|
 |データベース スナップショット|はい|はい|はい|はい|はい|
 |Always On フェールオーバー クラスター インスタンス<sup>4</sup>|はい|はい|いいえ|いいえ|いいえ|
@@ -188,12 +188,12 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> RDBMS のスケーラビリティとパフォーマンス
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------:|:--------:|:------:|:-:|:-------------------------------:|:------:|
 |列ストア<sup>1</sup> <sup>2</sup>|はい|はい|はい|はい|はい|
 |クラスター化列ストア インデックス内のラージ オブジェクト バイナリ|はい|はい|はい|はい|はい|
 |オンライン非クラスター化列ストア インデックスの再構築|はい|いいえ|いいえ|いいえ|いいえ|
-|メモリ内データベース: インメモリ OLTP<sup>1</sup>|はい|はい|はい|○<sup>3</sup>|はい|
+|メモリ内データベース: インメモリ OLTP<sup>1</sup>|はい|はい|はい|はい<sup>3</sup>|はい|
 |メモリ内データベース: ハイブリッド バッファー プール|はい|はい|いいえ|いいえ|いいえ|
 |メモリ内データベース: メモリ最適化 tempdb メタデータ|はい|いいえ|いいえ|いいえ|いいえ|
 |メモリ内データベース: 永続メモリのサポート|はい|はい|はい|はい|はい|
@@ -246,15 +246,15 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="replication"></a><a name="Replication"></a> レプリケーション
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:---------:|:-------:|:--:|:--------------------------------:|:------:|
 |異種サブスクライバー|はい|はい|いいえ|いいえ|いいえ|
-|マージ レプリケーション|はい|はい|可<sup>1</sup>|可<sup>1</sup>|可<sup>1</sup>|
+|マージ レプリケーション|はい|はい|はい<sup>1</sup>|はい<sup>1</sup>|はい<sup>1</sup>|
 |Oracle パブリッシュ|はい|いいえ|いいえ|いいえ|いいえ|
 |ピア ツー ピア トランザクション レプリケーション|はい|いいえ|いいえ|いいえ|いいえ|
-|スナップショット レプリケーション|はい|はい|可<sup>1</sup>|可<sup>1</sup>|可<sup>1</sup>|
+|スナップショット レプリケーション|はい|はい|はい<sup>1</sup>|はい<sup>1</sup>|はい<sup>1</sup>|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 変更の追跡|はい|はい|はい|はい|はい|
-|トランザクション レプリケーション|はい|はい|可<sup>1</sup>|可<sup>1</sup>|可<sup>1</sup>|
+|トランザクション レプリケーション|はい|はい|はい<sup>1</sup>|はい<sup>1</sup>|はい<sup>1</sup>|
 |Azure へのトランザクション レプリケーション|はい|はい|いいえ|いいえ|いいえ|
 |トランザクション レプリケーションの更新可能サブスクリプション|はい|はい|いいえ|いいえ|いいえ|
 
@@ -271,7 +271,7 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 |SQL CMD (コマンド プロンプト ツール)|はい|はい|はい|はい|はい|
 |分散再生 - 管理ツール|はい|はい|はい|はい|いいえ|
 |分散再生 - クライアント|はい|はい|はい|いいえ|いいえ|
-|分散再生 - コントローラー|可<sup>1</sup>|はい<sup>2</sup>|はい<sup>2</sup>|いいえ|いいえ|
+|分散再生 - コントローラー|はい<sup>1</sup>|はい<sup>2</sup>|はい<sup>2</sup>|いいえ|いいえ|
 |SQL Profiler|はい|はい|いいえ<sup>3</sup>|いいえ<sup>3</sup>|いいえ<sup>3</sup>|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント|はい|はい|はい|いいえ|いいえ|
 |Microsoft System Center Operations Manager 管理パック|はい|はい|はい|いいえ|いいえ|
@@ -287,11 +287,11 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="rdbms-manageability"></a><a name="RDBMSM"></a> RDBMS の管理の容易性
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |ユーザー インスタンス|いいえ|いいえ|いいえ|はい|はい|
 |LocalDB|いいえ|いいえ|いいえ|はい|いいえ|
-|専用管理者接続|はい|はい|はい|可<sup>1</sup>|可<sup>1</sup>|
+|専用管理者接続|はい|はい|はい|はい<sup>1</sup>|はい<sup>1</sup>|
 |SysPrep のサポート <sup>2</sup>|はい|はい|はい|はい|はい|
 |PowerShell スクリプティングのサポート<sup>3</sup>|はい|はい|はい|はい|はい|
 |データ層アプリケーション コンポーネントの操作のサポート - 抽出、配置、アップグレード、削除|はい|はい|はい|はい|はい|
@@ -320,7 +320,7 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="development-tools"></a><a name="DevTools"></a> 開発ツール
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |Microsoft Visual Studio の統合|はい|はい|はい|はい|はい|
 |Intellisense (Transact-SQL および MDX)|はい|はい|はい|はい|はい|
@@ -329,14 +329,14 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="programmability"></a><a name="Programmability"></a> Programmability
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |基本的な R 統合<sup>1</sup>|はい|はい|はい|はい|いいえ|
 |高度な R 統合<sup>2</sup>|はい|いいえ|いいえ|いいえ|いいえ|
 |基本的な Python 統合|はい|はい|はい|はい|いいえ|
 |高度な Python 統合|はい|いいえ|いいえ|いいえ|いいえ|
 |Machine Learning Server (スタンドアロン)|はい|いいえ|いいえ|いいえ|いいえ|
-|PolyBase コンピューティング ノード|はい|○<sup>3</sup>|○<sup>3</sup>|○<sup>3</sup>|○<sup>3</sup> |
+|PolyBase コンピューティング ノード|はい|はい<sup>3</sup>|はい<sup>3</sup>|はい<sup>3</sup>|はい<sup>3</sup> |
 |PolyBase ヘッド ノード<sup>4</sup>|はい|はい|いいえ|いいえ|いいえ|
 |JSON|はい|はい|はい|はい|はい|
 |クエリ ストア|はい|はい|はい|はい|はい|
@@ -377,7 +377,7 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="data-warehouse"></a><a name="DW"></a> データ ウェアハウス
 
-|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |自動生成ステージングとデータ ウェアハウス スキーマ|はい|はい|いいえ|いいえ|いいえ|
 |変更データ キャプチャ|はい|はい|いいえ|いいえ|いいえ|
@@ -408,14 +408,14 @@ Developer Edition により、引き続き [[!INCLUDE[ssNoVersion](../includes/s
 
 ## <a name="additional-database-services"></a><a name="ADS"></a> その他のデータベース サービス
 
-|機能名|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能名|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|はい|はい|はい|はい|はい|
 |データベース メール|はい|はい|はい|いいえ|いいえ|
 
 ## <a name="other-components"></a><a name="Other"></a> その他のコンポーネント
 
-|機能名|Enterprise|Standard|Web|Express with<br/>Advanced Services|高速|
+|機能名|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|いいえ|いいえ|
 |StreamInsight HA|StreamInsight Premium Edition|いいえ|いいえ|いいえ|いいえ|
