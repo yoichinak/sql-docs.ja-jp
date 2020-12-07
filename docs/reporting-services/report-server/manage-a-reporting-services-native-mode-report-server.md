@@ -13,37 +13,37 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09eac58c362b4fd6c561fd3188d265d1bb39464
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 8e6fe5d4571ea8cd276da46f8c89688cd310da07
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547957"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935114"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーの管理
-  ここでは、Reporting Services 構成マネージャーを使用してネイティブ モードのレポート サーバー インスタンスを構成する手順について説明します。  
+  このセクションには、レポート サーバーの構成マネージャーを使用してネイティブ モードのレポート サーバー インスタンスを構成する手順が含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  このセクションのトピックは、必要な手順をより簡単に見つけることができるようにカテゴリ別に分類されています。 最初のセクションでは、ネイティブ モードのレポート サーバーの基本的な構成タスクに関するトピックについて紹介します。 2 番目のセクションでは、詳細な構成に関するトピックについて紹介します。 3 番目のセクションでは、SharePoint 統合モードで実行されるレポート サーバーの構成に関するトピックについて紹介します。  
   
 ### <a name="basic-configuration"></a>基本構成  
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [レポート サーバーの構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Reporting Services の構成ツールを開始するための手順を説明します。  
   
- [サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [サービス アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  レポート サーバー サービス用のアカウントとパスワードの情報を指定する方法について説明します。  
   
  [レポート サーバーのサービス プリンシパル名 (SPN) の登録](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
  Kerberos 認証を使用するネットワーク上でドメイン ユーザー アカウントで実行されるレポート サーバーの SPN を手動で登録する方法について説明します。  
   
- [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [URL の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  レポート サーバー Web サービスおよび Web ポータルへのアクセスに使用する 1 つ以上の URL の設定方法について説明します。  
   
- [ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
+ [ネイティブ モードのレポート サーバー データベースを作成する &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  レポート サーバー データベースを作成するための手順を説明します。 この手順は、Reporting Services のインストールの配置に必要です。  
   
 ### <a name="advanced-or-optional-configuration"></a>詳細な構成または省略可能な構成  
- [ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  レポート サーバー データベースを共有するための複数のレポート サーバーの構成手順を説明します。  
   
  [Reporting Services の電子メール配信](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   

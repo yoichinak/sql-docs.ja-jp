@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f4802ee3beb72e34ed2b85e8857ac69c61557018
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245649"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043710"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル:レポートへの KPI の追加 (レポート ビルダー)
 この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] チュートリアルでは、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに主要業績評価指標 (KPI) を追加します。  
@@ -23,7 +23,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 次の図に、ここで作成するレポートと同様のレポートを示します。  
   
-![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
+![レポート ビルダー KPI レポートのスクリーンショット。](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
 > このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
@@ -139,13 +139,13 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
       テーブルがデザイン画面に追加されます。 テーブルには 5 列 5 行が含まれています。 [行グループ] ウィンドウには 3 つの行グループが表示されます。SalesDate、Subcategory、Details です。 詳細データは、データセット クエリによって取得されるすべてのデータです。 [列グループ] ペインが空です。  
       
-      ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
+      ![行グループを示すスクリーンショット。](../reporting-services/media/report-builder-kpi-row-groups.png)
   
 12. **[実行]** をクリックして、レポートをプレビューします。  
   
 テーブルには、特定の日付に販売された製品ごとに製品名、販売数量、および売上合計が表示されます。 このデータがまず販売日でまとめられ、次にサブカテゴリでまとめられます。 
 
-![report-builder-kpi-basic-table](../reporting-services/media/report-builder-kpi-basic-table.png)
+![基本的なレポート ビルダー KPI テーブルを示すスクリーンショット。](../reporting-services/media/report-builder-kpi-basic-table.png)
     
 ### <a name="format-dates-and-currency"></a>日付と通貨の書式を設定する
 列の幅を広げ、日付と通貨の書式を設定してみましょう。
@@ -160,7 +160,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 
    地域設定が英語 (米国) の場合、既定のサンプル テキストは [$12,345.00] です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]**  >  **[サンプルの値]** の順にクリックします。
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![レポート ビルダーの [サンプルの値] オプションが選択されているスクリーンショット。](../reporting-services/media/report-builder-placeholder-value-button.png)
 
 5. (省略可) **[ホーム]** タブの **[数値]** グループで、 **[小数点表示桁下げ]** ボタンを 2 回クリックして、表示されるドルの値にセントの部分が含まれないようにします。
 
@@ -172,7 +172,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 
 12. **[実行]** をクリックして、レポートをプレビューします。  
  
-![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
+![書式設定された数値が含まれているレポート ビルダー KPI レポートのスクリーンショット。](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
 ## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3.背景色を使用して KPI を表示する  
 背景色を、レポートの実行時に評価される式に設定することができます。  
@@ -183,7 +183,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 
     **[テキスト ボックスのプロパティ]** を表示するには、セル内のテキストではなく、セルが選択されていることを確認します。 
     
-    ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
+    ![レポート ビルダーの [テキスト ボックスのプロパティ] オプションのスクリーンショット。](../reporting-services/media/report-builder-text-box-properties.png)
   
 2.  **[塗りつぶし]** タブで、 **[塗りつぶしの色]** の横にある **[fx]** ボタンをクリックし、 **[式の設定: BackgroundColor]** フィールドに次の式を入力します。  
   
@@ -197,7 +197,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 サブカテゴリの売上を表示する小計行のセルの背景色が、合計売上の値に応じて赤、黄、または緑になります。  
 
-![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
+![レポート ビルダー KPI レポートのスクリーンショット。特定のセルが各色で表示されています。](../reporting-services/media/report-builder-kpi-colors.png)
   
 ## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4.ゲージを使用して KPI を表示する  
 ゲージは、データセットの単一の値を表示します。 このチュートリアルでは、水平方向の線形ゲージを使用します。このゲージは、その形と単純さにより、テーブルのセルで使用してサイズが小さくなっても読み取りやすいからです。 詳しくは、「 [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)」をご覧ください。  
@@ -208,7 +208,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 2.  テーブル内の Sales 列の列ハンドルを右クリックし、 **[列の挿入]**  >  **[右]** の順にクリックします。 テーブルに新しい列が追加されます。  
 
-    ![report-builder-kpi-insert-column](../reporting-services/media/report-builder-kpi-insert-column.png)
+    ![レポート ビルダー KPI レポートに列を挿入する方法を示すスクリーンショット。](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  列見出しに「 **Linear KPI** 」と入力します。  
   
@@ -224,7 +224,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
     `Sales` フィールドをゲージにドロップすると、そのフィールドは、 **[値]** リストに移動し、組み込み Sum 関数を使用して集計されます。  
    
-    ![report-builder-kpi-drag-sales-field](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
+    ![Sales フィールドをレポート ビルダー KPI レポートにドラッグする方法を示すスクリーンショット。](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
    
 9. **[ゲージ データ]** ペインで、 **[LinearPointer1]** の横にある矢印  >  **[ポインターのプロパティ]** の順にクリックします。  
   
@@ -252,7 +252,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
     ゲージ内の緑色バーの幅が、KPI の値によって変わります。  
   
-![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
+![レポート ビルダー KPI レポートに追加された Linear KPI 列を示すスクリーンショット。](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5.インジケーターを使用して KPI を表示する  
 インジケーターは、データ値をひとめでわかるようにするための単純で小さなゲージです。 そのサイズと単純さのために、テーブルやマトリックスでよく使用されます。 詳細については、「[インジケーター (レポート ビルダーおよび SSRS)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
@@ -279,7 +279,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 9. **[値と状態]** タブの **[値]** ボックスで、 **[Sum (Sales)]** を選択します。 その他のオプションは変更しないでください。  
   
-    既定では、データ領域のデータが同期され、 **Tablix1**という値 (レポートのテーブル データ領域の名前) が **[同期スコープ]** ボックスに表示されます。  
+    既定では、データ領域のデータが同期され、 **Tablix1** という値 (レポートのテーブル データ領域の名前) が **[同期スコープ]** ボックスに表示されます。  
   
     このレポートでは、サブカテゴリの小計のセルに配置したインジケーターのスコープを変更して、SalesDate フィールドのデータが同期されるようにすることもできます。  
   
@@ -287,7 +287,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 
 11. **[実行]** をクリックして、レポートをプレビューします。  
 
-![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
+![レポート ビルダー KPI レポートに追加された Stoplight KPI 列を示すスクリーンショット。](../reporting-services/media/report-builder-kpi-stoplight.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6.レポート タイトルを追加する  
 レポート タイトルは、レポートの最上部に表示されます。 レポート ヘッダーがあれば、そこにレポート タイトルを配置します。レポート ヘッダーを使用しない場合は、レポート本文の一番上のテキスト ボックスに配置します。 このセクションでは、自動的にレポート本文の一番上に配置されるテキスト ボックスを使用します。  
@@ -298,9 +298,9 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「 **Product Sales KPIs**」と入力し、テキスト ボックスの外側をクリックします。  
+2.  「 **Product Sales KPIs** 」と入力し、テキスト ボックスの外側をクリックします。  
   
-3.  必要に応じて、 **Product Sales KPI**が含まれているテキスト ボックスを右クリックして **[テキスト ボックスのプロパティ]** をクリックし、[フォント] タブでフォントのスタイル、サイズ、および色を変更します。  
+3.  必要に応じて、 **Product Sales KPI** が含まれているテキスト ボックスを右クリックして **[テキスト ボックスのプロパティ]** をクリックし、[フォント] タブでフォントのスタイル、サイズ、および色を変更します。  
   
 4.  **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -317,7 +317,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
     "レポート サーバーに接続しています" というメッセージが表示されます。 接続が完了すると、レポート サーバー管理者がレポートの既定の場所として指定したレポート フォルダーのコンテンツが表示されます。  
   
-4.  **[名前]** に入力されている既定の名前を「 **Product Sales KPI**」に置き換えます。  
+4.  **[名前]** に入力されている既定の名前を「 **Product Sales KPI** 」に置き換えます。  
   
 5.  **[保存]** をクリックします。  
   
@@ -330,9 +330,9 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 > [!NOTE]  
-> レポート サーバーにアクセスできない場合は、 **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、コンピューターにレポートを保存してください。  
+> レポート サーバーにアクセスできない場合は、 **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、コンピューターにレポートを保存してください。  
   
-1.  **[名前]** に入力されている既定の名前を「 **Product Sales KPI**」に置き換えます。  
+1.  **[名前]** に入力されている既定の名前を「 **Product Sales KPI** 」に置き換えます。  
   
 2.  **[保存]** をクリックします。  
   

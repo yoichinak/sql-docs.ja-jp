@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17294f4e7f26b3402655e0033cddedeb7bc69a3c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fef66452820975107e06e20a4085978163d957d
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448458"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907099"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>モバイル レポートで Analysis Services の日付の書式設定を保持する
 レポート ビルダー内の共有データセットにメジャーを追加して、 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] データ ソースの日付のデータ型が [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]で保持されるようにします。
@@ -27,15 +27,15 @@ ms.locfileid: "79448458"
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>日付フィールドのデータ型を保持するためにメジャーを作成する
 
-1. 日付フィールドの値を保持するためのメジャーを作成し、式フィールドで日付の階層/レベルを選択し、 **.CurrentMember.MemberValue**を追加します。 次に例を示します。
+1. 日付フィールドの値を保持するためのメジャーを作成し、式フィールドで日付の階層/レベルを選択し、 **.CurrentMember.MemberValue** を追加します。 次に例を示します。
  
    [Internet Sales].[Ship Date].CurrentMember.MemberValue
    
-   ![ssas-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
+   ![[計算されるメンバー ビルダー] ダイアログ ボックスのスクリーンショット。[式] テキスト ボックスにコールアウトが付いています。](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
    
 2. 次に、左下の [計算されるメンバー] 一覧から、この計算されるメンバーをドラッグし、右側の列グリッドにドロップすると、その計算されるメンバーが一連の列に追加されます。  
 
-   ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
+   ![クエリ デザイナーのスクリーンショット。[計算されるメンバー] セクションにコールアウトが付いています。](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
 ### <a name="see-also"></a>関連項目
 

@@ -9,15 +9,14 @@ ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 144463853d677ee61e2d860caf975275dcd0a607
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 571943e82ca844339a03a2e2af92199c3df16601
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173443"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870449"
 ---
 # <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習を使用して顧客を分類するモデルを構築する
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "88173443"
 
 ## <a name="prerequisites"></a>前提条件
 
-* このチュートリアルのパート 3 は、[**パート 1** ](python-clustering-model.md)の前提条件を満たし、[**パート 2** ](python-clustering-model-prepare-data.md)の手順を完了していることを前提としています。
+* このチュートリアルのパート 3 は、[**パート 1**](python-clustering-model.md)の前提条件を満たし、[**パート 2**](python-clustering-model-prepare-data.md)の手順を完了していることを前提としています。
 
 ## <a name="define-the-number-of-clusters"></a>クラスターの数を定義する
 

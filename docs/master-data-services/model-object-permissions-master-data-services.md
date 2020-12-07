@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9d96811924faed2d48c58a3fcc516536e63d7385
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 79fcb613f985f363631b1ce26c75228bb7ab5862
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480322"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193624"
 ---
 # <a name="model-object-permissions-master-data-services"></a>モデル オブジェクト権限 (Master Data Services)
 
@@ -41,13 +41,12 @@ ms.locfileid: "89480322"
  一般に、 **すべての** 権限をモデル オブジェクトに割り当てた後、その下にあるオブジェクトに権限を明示的に割り当てる必要があります。  
   
 ## <a name="external-resources"></a>外部リソース  
- msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)」をご覧ください。  
+ msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](/archive/blogs/e7/improvements-to-autoplay)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [モデル権限 &#40;マスターデータサービス&#41;](../master-data-services/model-permissions-master-data-services.md)   
  [機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
  [階層メンバーの権限 &#40;マスターデータサービス&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
-  
   

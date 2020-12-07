@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14aeae01cecd283ae480b337543fa0e1c4fe8bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425614"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194559"
 ---
 # <a name="xml-source"></a>XML ソース
 
@@ -83,7 +83,7 @@ ms.locfileid: "88425614"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [XML 入力元のカスタム プロパティ](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88425614"
 |値|説明|  
 |-----------|-----------------|  
 |[XML ファイルの場所]|XML ファイルからデータを取得します。|  
-|[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](../integration-services-ssis-variables.md)|  
 |[変数からの XML データ]|変数から XML データを取得します。|  
   
  **[インライン スキーマを使用する]**  
@@ -174,4 +174,4 @@ ms.locfileid: "88425614"
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [XML ソースを使用してデータを抽出する](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+ [XML ソースを使用してデータを抽出する](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3328426a280f8e974ddaa8cbb99ea944e006553f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fa807b323adb198b65de4ac3fb38017120ad4ad
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350168"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194944"
 ---
 # <a name="select-objects-to-transfer"></a>[<転送するオブジェクト> の選択]
 
@@ -33,10 +33,9 @@ ms.locfileid: "88350168"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[ジョブ転送タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
- [[ログイン転送タスク エディター] &#40;[ログイン] ページ&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)   
- [[SQL Server オブジェクトの転送タスク エディター] &#40;[オブジェクト] ページ&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-objects-page.md)   
- [[Master ストアド プロシージャ転送タスク エディター] &#40;[ストアド プロシージャ] ページ&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [[エラー メッセージ転送タスク エディター] &#40;[メッセージ] ページ&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
-  
+ [[ジョブ転送タスク エディター] &#40;[全般] ページ&#41;](./transfer-jobs-task.md)   
+ [[ログイン転送タスク エディター] &#40;[ログイン] ページ&#41;](./transfer-logins-task.md)   
+ [[SQL Server オブジェクトの転送タスク エディター] &#40;[オブジェクト] ページ&#41;](./transfer-sql-server-objects-task.md)   
+ [[Master ストアド プロシージャ転送タスク エディター] &#40;[ストアド プロシージャ] ページ&#41;](./transfer-master-stored-procedures-task.md)   
+ [[エラー メッセージ転送タスク エディター] &#40;[メッセージ] ページ&#41;](./transfer-error-messages-task.md)  
   

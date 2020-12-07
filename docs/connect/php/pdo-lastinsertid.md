@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 004125e217b1e2bf79ef26dc9ebffae2877890b2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 854446b0a505dd2f8a2dc44c4f3eca70158e20be
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646732"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726803"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-データベースのテーブルに最後に挿入された行の識別子を返します。 このテーブルには、IDENTITY NOT NULL 列が必要です。 シーケンス名が指定されている場合、`lastInsertId` は、指定されたシーケンス名に対して最後に挿入されたシーケンス番号を返します (シーケンス番号の詳細については、[こちら](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)を参照してください)。
+データベースのテーブルに最後に挿入された行の識別子を返します。 このテーブルには、IDENTITY NOT NULL 列が必要です。 シーケンス名が指定されている場合、`lastInsertId` は、指定されたシーケンス名に対して最後に挿入されたシーケンス番号を返します (シーケンス番号の詳細については、[こちら](../../relational-databases/sequence-numbers/sequence-numbers.md)を参照してください)。
   
 ## <a name="syntax"></a>構文  
   
@@ -155,4 +155,3 @@ Last sequence number when a table name is supplied =
 [PDO クラス](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

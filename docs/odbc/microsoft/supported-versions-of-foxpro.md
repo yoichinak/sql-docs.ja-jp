@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e964b4a8627ed3190efd63bbbc908c2282b15fee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6884ae8c00f4aab4ca920cf619dc658a68bccc4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471484"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196917"
 ---
 # <a name="supported-versions-of-foxpro"></a>サポートされているバージョンの FoxPro
 Microsoft® Visual FoxPro® ODBC ドライバーを使用して、FoxPro テーブルに格納されているデータにアクセスできます。 次のバージョンの FoxPro データがサポートされています。  
@@ -39,4 +39,4 @@ Microsoft® Visual FoxPro® ODBC ドライバーを使用して、FoxPro テー�
   
  データソースに接続する方法の詳細については、「 [Visual FoxPro データソースの追加](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)」を参照してください。  
   
- ドライバーをダウンロードするには、 [Visual FOXPRO ODBC ドライバーのダウンロードサイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。
+ ドライバーをダウンロードするには、 [Visual FOXPRO ODBC ドライバーのダウンロードサイト](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10))を参照してください。

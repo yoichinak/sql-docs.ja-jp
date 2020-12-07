@@ -21,12 +21,12 @@ ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ec55904334a360d848e7cc9e661fa365b7968b3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ccce0c55e7c59cd72e004d6c7bd52fe03a1c4e1f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542715"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807350"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>スキーマカタログビュー-sys スキーマ
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89542715"
 |**schema_id**|**int**|スキーマの ID です。 データベース内で一意です。|  
 |**principal_id**|**int**|このスキーマを所有するプリンシパルの ID。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 データベーススキーマは、テーブル、ビュー、プロシージャ、関数など、オブジェクトの名前空間またはコンテナーとして機能します。これは、 **のカタログビュー** にあります。  
 
 各スキーマには所有者があります。 所有者はセキュリティ [プリンシパル](../../relational-databases/security/authentication-access/principals-database-engine.md)です。
@@ -55,8 +55,7 @@ ms.locfileid: "89542715"
 
 [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
 
-[スキーマカタログビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
+[スキーマカタログビュー &#40;Transact-sql&#41;](./catalog-views-transact-sql.md)   
 
 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
-  
   

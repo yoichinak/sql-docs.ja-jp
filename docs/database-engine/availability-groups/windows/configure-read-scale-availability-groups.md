@@ -2,19 +2,19 @@
 title: 可用性グループの読み取りスケールを構成する
 description: Windows で読み取りスケール ワークロードの SQL Server Always On 可用性グループを構成する方法について学習します。
 ms.custom: seodec18
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.reviewer: ''
 ms.date: 05/24/2018
 ms.topic: how-to
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 1eef940dd30ab0d5b9f987edf6f68c7d777c6a90
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: c5029f8f6e2200751d193172322d7d84934271ab
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111037"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584506"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 可用性グループの読み取りスケールを構成する
 
@@ -87,6 +87,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>次のステップ
 
-* [分散型可用性グループの構成](distributed-availability-groups-always-on-availability-groups.md)
+* [分散型可用性グループの構成](./distributed-availability-groups.md)
 * [可用性グループの詳細](overview-of-always-on-availability-groups-sql-server.md)
 * [強制手動フェールオーバーの実行](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

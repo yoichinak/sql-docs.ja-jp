@@ -2,19 +2,19 @@
 title: iSCSI FCI ストレージの構成 - SQL Server on Linux
 description: SQL Server on Linux 用の iSCSI を使用してフェールオーバー クラスター インスタンス (FCI) を構成する方法について説明します。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: abe2613d421e07107c6ce81b18f5f9f83c8fe66d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b929bd76f77f021fbc1821811beb7e86be8edd2e
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897307"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235674"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの構成 - iSCSI - SQL Server on Linux
 
@@ -47,7 +47,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
-    ![7-setiscsinetwork][6]
+    ![iface コマンドとコマンドへの応答のスクリーンショット。][6]
  
 2.  `/var/lib/iscsi/ifaces/iSCSIIfaceName` を編集します。 次の値が完全に入力されていることを確認します。
 
@@ -58,7 +58,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
 
     次の例を参照してください。
 
-    ![iSCSITargetSettings][2]
+    ![ファイルが完全に入力された状態のファイルのスクリーンショット。][2]
 
 3.  iSCSI ターゲットを検索します。
 
@@ -68,7 +68,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
 
      \<iSCSINetName> はネットワークの一意/フレンドリ名、\<TargetIPAddress> は iSCSI ターゲットの IP アドレス、\<TargetPort> はiSCSI ターゲットのポートです。 
 
-    ![iSCSITargetResults][3]
+    ![discovery コマンドとコマンドへの応答のスクリーンショット。][3]
 
  
 4.  ターゲットにログインします
@@ -95,7 +95,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
-    ![30-iSCSIattachedDisks][7]
+    ![grep コマンドと接続された SCSI ディスクを示すコマンドへの応答のスクリーンショット。][7]
 
 7.  iSCSI ディスク上に物理ボリュームを作成します。
 
@@ -197,7 +197,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
         ls /var/opt/mssql/data
         ```
     
-        ![45-CopyMove][8]
+        ![ls コマンドとコマンドへの応答のスクリーンショット。][8]
 
    * 「`exit`」と入力して、ルート ユーザーに切り替えます。
 
@@ -321,7 +321,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
 
    *    テストするには、そのフォルダーにデータベースを作成します。 以下に示す例では、sqlcmd を使用してデータベースを作成し、コンテキストをそれに切り替え、ファイルが OS レベルで存在することを確認した後、一時的な場所を削除します。 SSMS を使用できます。
   
-        ![50-ExampleCreateSSMS][9]
+        ![sqlcmd コマンドとコマンドへの応答のスクリーンショット。][9]
 
    *    共有のマウントを解除します 
 
@@ -355,7 +355,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
 
     \<ListOfVGsNotUsedByPacemaker> は、FCI によって使用されない、手順 20 の出力からのボリューム グループの一覧です。 それぞれを引用符で囲み、コンマで区切ります。 次に例を示します。
 
-    ![55-ListOfVGs][11]
+    ![volume_list 値の例を示すスクリーンショット。][11]
 
 17. Linux が起動すると、ファイル システムがマウントされます。 Pacemaker だけが iSCSI ディスクをマウントできるようにするために、ルート ファイルシステムのイメージをリビルドします。 
 

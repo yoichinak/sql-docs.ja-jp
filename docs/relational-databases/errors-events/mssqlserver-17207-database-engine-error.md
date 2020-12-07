@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: a7938f28af84596f620246d3d70ad491cb22828c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1c0face9315a38d4748cffef71e135401102dd0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456454"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869465"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 ```
 
 ## <a name="cause"></a>原因
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用する前には、そのデータベースを起動する必要があります。 データベースの起動プロセスでは、データベースおよびデータベース ファイルを表すさまざまなデータ構造が初期化され、データベースに属するすべてのファイルが開かれ、最後にデータベースの復旧が実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースに属するファイルを開くために、[CreateFile](https://docs.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea) Windows API 関数が使用されます。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用する前には、そのデータベースを起動する必要があります。 データベースの起動プロセスでは、データベースおよびデータベース ファイルを表すさまざまなデータ構造が初期化され、データベースに属するすべてのファイルが開かれ、最後にデータベースの復旧が実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースに属するファイルを開くために、[CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) Windows API 関数が使用されます。
  
 メッセージ 17207 (および 17204) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動プロセス中にデータベース ファイルを開こうとしたときにエラーが発生したことを示します。
  
@@ -83,7 +83,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 1. ```Access is Denied``` オペレーティング システム エラー = 5 を取得している場合は、次の方法を検討してください。
    -  エクスプローラーでファイルのプロパティを参照して、ファイルに設定されているアクセス許可を確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows グループを使用して、さまざまなファイル リソースに Access Control をプロビジョニングします。 適切なグループ (SQLServerMSSQLUser$ComputerName$MSSQLSERVER や SQLServerMSSQLUser$ComputerName$InstanceName などの名前) に、エラー メッセージで言及されているデータベース ファイルに対して必要なアクセス許可が付与されていることを確認します。 詳細については、「[データベース エンジン アクセスのファイル システム権限の構成](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014)」を参照してください。 Windows グループに、実際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントまたはサービス SID が含まれていることを確認します。
    -  現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの実行に使用されているユーザー アカウントを確認します。 Windows タスク マネージャーを使用して、この情報を取得できます。 実行可能ファイル "sqlservr.exe" の "ユーザー名" の値を探します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを最近変更した場合は、SQL Server 構成マネージャー ユーティリティを使用してこの操作を実行する方法がサポートされています。 これについて詳しくは、「[SQL Server 構成マネージャー](../sql-server-configuration-manager.md)」をご覧ください。 
-   -  操作の種類 (サーバー起動中にデータベースを開く、データベースのアタッチ、データベースの復元など) によっては、偽装とデータベース ファイルへのアクセスに使用されるアカウントが異なる場合があります。 トピック「[データ ファイルとログ ファイルのセキュリティ保護](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)」を確認して、どの操作によってどのアクセス許可が、どのアカウントに設定されるかを理解してください。 Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) などのツールを使用して、SQL Server インスタンスのサービス開始アカウント (またはサービス SID)、または偽装されたアカウントのセキュリティ コンテキストにおいて、ファイルへのアクセスが行われているかどうかを把握します。
+   -  操作の種類 (サーバー起動中にデータベースを開く、データベースのアタッチ、データベースの復元など) によっては、偽装とデータベース ファイルへのアクセスに使用されるアカウントが異なる場合があります。 トピック「[データ ファイルとログ ファイルのセキュリティ保護](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105))」を確認して、どの操作によってどのアクセス許可が、どのアカウントに設定されるかを理解してください。 Windows SysInternals [Process Monitor](/sysinternals/downloads/procmon) などのツールを使用して、SQL Server インスタンスのサービス開始アカウント (またはサービス SID)、または偽装されたアカウントのセキュリティ コンテキストにおいて、ファイルへのアクセスが行われているかどうかを把握します。
 
       SQL Server によって、ALTER DATABASE または CREATE DATABASE 操作を実行するログインのユーザー資格情報が偽装されている場合は、Process Monitor ツールに次の情報が表示されます (一例)。
 
@@ -115,7 +115,6 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこれらの場所にあるデータベース ファイルへのアクセスを試行する前に、ディスクまたはネットワークの場所 (iSCSI ドライブなど) が使用可能であることを確認してください。 必要に応じて、クラスター アドミニストレーターまたはサービス コントロール マネージャーで必要な依存関係を作成します。
 
 1. `The process cannot access the file because it is being used by another process` オペレーティング システム エラー = 32 が表示された場合:
-   - Windows Sysinternals の[プロセス エクスプローラー](https://docs.microsoft.com/sysinternals/downloads/process-explorer)や[ハンドル](https://docs.microsoft.com/sysinternals/downloads/handle)を使用して、別のプロセスまたはサービスがこのデータベース ファイルに対して排他的ロックを取得しているかどうかを確認します。
+   - Windows Sysinternals の[プロセス エクスプローラー](/sysinternals/downloads/process-explorer)や[ハンドル](/sysinternals/downloads/handle)を使用して、別のプロセスまたはサービスがこのデータベース ファイルに対して排他的ロックを取得しているかどうかを確認します。
    - プロセスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ファイルにアクセスしていれば、それを停止します。 一般的な例としては、ウイルス対策プログラムがあります (次の[サポート技術情報の記事](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)を参照してください)。
    - クラスター環境で、以前に所有していたノードの sqlservr.exe プロセスによって、データベース ファイルへのハンドルが実際に解放されていることを確認します。 通常、このような状況は起こりませんが、クラスターまたは I/O パスが正しく構成されていない場合に、このような問題が発生する可能性があります。
-  

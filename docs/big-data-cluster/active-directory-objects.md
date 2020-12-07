@@ -1,20 +1,20 @@
 ---
 title: Active Directory オブジェクト
 titleSuffix: SQL Server Big Data Cluster
-description: Active Directory ドメインでの SQL Server ビッグ データ クラスターの展開について学習します。
-author: mihaelablendea
-ms.author: mihaelab
+description: SQL Server ビッグ データ クラスター用に作成された Active Directory オブジェクトについて説明します。
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
-ms.topic: conceptual
+ms.date: 09/30/2020
+ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e4f8736beeac2e92d25092c60c3fe7e60127ea94
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: fcd045c07e7300478e811b2bbc4b9a0f5dfaab52
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942744"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892452"
 ---
 # <a name="auto-generated-active-directory-objects"></a>自動的に生成される Active Directory のオブジェクト
 
@@ -467,6 +467,6 @@ LDAP を使用してユーザーを検索するため、grafana および hadoop
 
 ## <a name="next-steps"></a>次のステップ
 
-[Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](deploy-active-directory.md)
+[Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](active-directory-deploy.md)
 
 [同じ Active Directory ドメインに複数の [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](active-directory-deployment-background.md)

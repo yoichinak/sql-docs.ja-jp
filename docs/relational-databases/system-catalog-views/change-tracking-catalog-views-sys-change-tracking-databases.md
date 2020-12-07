@@ -1,6 +1,6 @@
 ---
-description: Change Tracking カタログビュー-sys. change_tracking_databases
-title: change_tracking_databases (Transact-sql) |Microsoft Docs
+description: カタログビューの Change Tracking-sys.change_tracking_databases
+title: sys.change_tracking_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 653588e0fca8593305e70634029a54832264e8b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 05421e215b41fcf0f1be93b189873c3f0d2aa51c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545154"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810368"
 ---
-# <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Change Tracking カタログビュー-sys. change_tracking_databases
+# <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>カタログビューの Change Tracking-sys.change_tracking_databases
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   変更の追跡が有効なデータベースごとに 1 行のデータを返します。  
@@ -46,7 +46,6 @@ ms.locfileid: "89545154"
  sys.change_tracking_databases には、sys.databases に行われるのと同じ権限チェックが行われます。 sys.change_tracking_databases の呼び出し元がデータベースの所有者でない場合、対応する行を表示するには、少なくとも、ALTER ANY DATABASE または VIEW ANY DATABASE のサーバー レベルの権限か、master データベースまたは現在のデータベースの CREATE DATABASE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [Change Tracking カタログビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Change Tracking カタログビュー &#40;Transact-sql&#41;](./catalog-views-transact-sql.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
   

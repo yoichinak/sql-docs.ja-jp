@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5da061dba0641ad1de853323831583df57ad6cbe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88479641"
 ---
 # <a name="lower-transact-sql"></a>LOWER (Transact-SQL)
@@ -48,7 +48,7 @@ LOWER ( character_expression )
 
 ## <a name="arguments"></a>引数
  *character_expression*  
- 文字データまたはバイナリ データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* には定数、変数、または列を指定できます。 *character_expression* に暗黙的に変換できるデータ型である必要があります **varchar**です。 それ以外の場合は、[CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) を指定して明示的に *character_expression* を変換します。  
+ 文字データまたはバイナリ データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* には定数、変数、または列を指定できます。 *character_expression* に暗黙的に変換できるデータ型である必要があります **varchar** です。 それ以外の場合は、[CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) を指定して明示的に *character_expression* を変換します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varchar** または **nvarchar**  

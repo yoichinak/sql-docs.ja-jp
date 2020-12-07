@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2c87da38fb2f13c0c79dfc777b52e19139db584c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dfcf7804455ecb3b16a29a8cab2f61d91df6b1f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431134"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726353"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +37,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="remarks"></a>解説  
  **Clusterdistance**関数は、入力したケースと、その入力ケースの確率が最も高いクラスターとの距離を返します。  
   
- K がクラスター化されている場合、いずれのケースも1つのクラスターに属することができますが、メンバーシップの重みは1.0 であるため、クラスターの距離は常に0になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 階層の値を取得するには、マイニングモデルコンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION を照会または参照します。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)」を参照してください。  
+ K がクラスター化されている場合、いずれのケースも1つのクラスターに属することができますが、メンバーシップの重みは1.0 であるため、クラスターの距離は常に0になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 階層の値を取得するには、マイニングモデルコンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION を照会または参照します。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)」を参照してください。  
   
  既定の EM クラスタリング方法の場合、クラスター内のすべてのポイントは同じように見なされます。したがって、設計上、クラスターの重心はありません。 特定のケースと特定のクラスター *N*の間の**clusterdistance**の値は、次のように計算されます。  
   
@@ -76,7 +76,7 @@ NATURAL PREDICTION JOIN
   
  結果の例:  
   
-|Expression|  
+|式|  
 |----------------|  
 |0.0477390930705145|  
   
@@ -129,6 +129,5 @@ NATURAL PREDICTION JOIN
  [DMX&#41;のクラスター &#40;](../dmx/cluster-dmx.md)   
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
- [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
-  
+ [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   

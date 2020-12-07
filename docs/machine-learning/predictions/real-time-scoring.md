@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 89e7a3e15f389de8fc696247197c9f678955ed73
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: e6809a66ce7f5fd425ce9bfeb2b1fea919c4dfaa
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009348"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956933"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server"></a>SQL Server での sp_rxPredict を使用したリアルタイム スコアリング
 [!INCLUDE[sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "90009348"
 
 + このモデルは、サポートされる **rx** アルゴリズムのいずれかを使用して、事前にトレーニングされている必要があります。 R の場合、`sp_rxPredict` によるリアルタイムのスコアリングは、[RevoScaleR および Microsoft Ml でサポートされているアルゴリズム](#bkmk_rt_supported_algos)で動作します。 Python については、[revoscalepy および microsoftml でサポートされているアルゴリズム](#bkmk_py_supported_algos)を参照してください。
 
-+ モデルのシリアル化には、R の場合は [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)、Python の場合は [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) を使用します。 これらのシリアル化関数は、高速スコアリングをサポートするように最適化されています。
++ モデルのシリアル化には、R の場合は [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel)、Python の場合は [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) を使用します。 これらのシリアル化関数は、高速スコアリングをサポートするように最適化されています。
 
 + 呼び出し元のデータベース エンジン インスタンスにモデルを保存します。 このインスタンスには、R または Python のランタイム拡張機能を含める必要はありません。
 
 > [!Note]
-> 現在、リアルタイム スコアリングは、数行から数百行までの範囲の、より小さなデータセットに対する高速予測向けに最適化されています。 大きなデータセットでは、[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) を使用する方が高速になる場合があります。
+> 現在、リアルタイム スコアリングは、数行から数百行までの範囲の、より小さなデータセットに対する高速予測向けに最適化されています。 大きなデータセットでは、[rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) を使用する方が高速になる場合があります。
 
 <a name ="bkmk_enableRtScoring"></a> 
 
@@ -98,29 +98,29 @@ ms.locfileid: "90009348"
 
 + revoscalepy モデル
 
-  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
-  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
-  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
-  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
-  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
+  + [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
+  + [rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
+  + [rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
+  + [rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
+  + [rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
   
   \* でマークされたモデルは、PREDICT 関数を使用したネイティブ スコアリングもサポートします。
 
 + microsoftml モデル
 
-  + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
-  + [rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
-  + [rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
-  + [rx_neural_net](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
-  + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
+  + [rx_fast_trees](/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
+  + [rx_fast_forest](/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
+  + [rx_logistic_regression](/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
+  + [rx_oneclass_svm](/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
+  + [rx_neural_net](/machine-learning-server/python-reference/microsoftml/rx-neural-network)
+  + [rx_fast_linear](/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
 + Microsoftml によって提供される変換
 
-  + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text)
-  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
-  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
+  + [featurize_text](/machine-learning-server/python-reference/microsoftml/featurize-text)
+  + [concat](/machine-learning-server/python-reference/microsoftml/concat)
+  + [categorical](/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical_hash](/machine-learning-server/python-reference/microsoftml/categorical-hash)
 
 <a name="bkmk_rt_supported_algos"></a>
 
@@ -128,30 +128,30 @@ ms.locfileid: "90009348"
 
 + RevoScaleR モデル
 
-  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
-  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
-  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
-  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
+  + [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) \*
+  + [rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](/machine-learning-server/r-reference/revoscaler/rxdtree) \*
+  + [rxdForest](/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
   \* でマークされたモデルは、PREDICT 関数を使用したネイティブ スコアリングもサポートします。
 
 + MicrosoftML モデル
 
-  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + MicrosoftML によって提供される変換
 
-  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](/machine-learning-server/r-reference/microsoftml/concat)
+  + [categorical](/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### <a name="unsupported-model-types"></a>サポートされていないモデルの種類
 
@@ -167,7 +167,7 @@ ms.locfileid: "90009348"
 
 ### <a name="step-1-prepare-and-save-the-model"></a>手順 1. モデルを構築して保存する
 
-sp\_rxPredict に必要なバイナリ形式は、PREDICT 関数を使用するために必要な形式と同じです。 そのため、R コードで、[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) への呼び出しを含め、この例のように `realtimeScoringOnly = TRUE` を指定してください。
+sp\_rxPredict に必要なバイナリ形式は、PREDICT 関数を使用するために必要な形式と同じです。 そのため、R コードで、[rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel) への呼び出しを含め、この例のように `realtimeScoringOnly = TRUE` を指定してください。
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -195,7 +195,7 @@ EXEC sp_rxPredict
 >
 > そのため、リアルタイム スコアリングに使用する前に、入力データでサポートされていない型をフィルターで除外することが必要になる場合があります。
 >
-> 対応する SQL 型の詳細については、「[SQL と CLR 型のマッピング](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)」または「[CLR パラメーター データのマッピング](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)」を参照してください。
+> 対応する SQL 型の詳細については、「[SQL と CLR 型のマッピング](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)」または「[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

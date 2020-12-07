@@ -3,22 +3,22 @@ title: Azure Data Studio を使用して Azure SQL Edge をデプロイする
 description: Azure Data Studio で Azure SQL Edge インスタンスをデプロイする方法
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: seodec18
+ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: eab4881c53ce26790a78a7da69a4bd48731fecfa
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 74901a5360e4b9badcc7569211bfaea90d2b94a3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990005"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725223"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>Azure Data Studio を使用して Azure SQL Edge をデプロイする (プレビュー)
 
-[Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview) は、IoT および Azure IoT Edge のデプロイ向けに最適化されたリレーショナル データベース エンジンです。 これは、IoT のアプリケーションおよびソリューションに向けて、パフォーマンスの高いデータ ストレージと処理レイヤーを作成する機能を提供します。 この記事では、Azure Data Studio を使用して Azure SQL Edge インスタンスをデプロイする方法と、デプロイ ウィザードでサポートされているデプロイ シナリオを示します。  
+[Azure SQL Edge](/azure/azure-sql-edge/overview) は、IoT および Azure IoT Edge のデプロイ向けに最適化されたリレーショナル データベース エンジンです。 これは、IoT のアプリケーションおよびソリューションに向けて、パフォーマンスの高いデータ ストレージと処理レイヤーを作成する機能を提供します。 この記事では、Azure Data Studio を使用して Azure SQL Edge インスタンスをデプロイする方法と、デプロイ ウィザードでサポートされているデプロイ シナリオを示します。  
 
 Azure Data Studio のデプロイ ウィザードでは、次のシナリオがサポートされています。
 
@@ -76,11 +76,11 @@ Azure SQL Edge デプロイ ウィザードでは、Azure IoT ハブに接続さ
 
 ## <a name="multiple-devices-of-an-azure-iot-hub"></a>Azure IoT Hub の複数のデバイス
 
-既存の IoT ハブと接続されているデバイスがある場合は、リソース グループ、IoT ハブ名、およびデバイスを選択するための[ターゲット条件](https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring#target-condition)に基づいて、デバイスに Azure SQL Edge をデプロイしすることができます。
+既存の IoT ハブと接続されているデバイスがある場合は、リソース グループ、IoT ハブ名、およびデバイスを選択するための[ターゲット条件](/azure/iot-edge/module-deployment-monitoring#target-condition)に基づいて、デバイスに Azure SQL Edge をデプロイしすることができます。
 デプロイ ウィザードで指定された IP アドレスを利用して、ノートブックの下部にクイック接続リンクが生成されます。
 
 必要に応じて、dacpac ファイルをフォルダーに圧縮し、プロセスの一部として新しい Azure SQL Edge インスタンスにデプロイすることができます。  dacpac ファイルが指定されている場合は、同じリソース グループ内に Azure Blob Storage アカウントが作成されます。
 
 ## <a name="next-steps"></a>次のステップ
 
-- [Azure SQL Edge についてさらに学習する](https://docs.microsoft.com/azure/azure-sql-edge/)
+- [Azure SQL Edge についてさらに学習する](/azure/azure-sql-edge/)

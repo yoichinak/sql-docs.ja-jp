@@ -12,12 +12,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ee5476020cfcece9bf9168bc048f3a0f3d34b635
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19a5132bd78b3cc1cca48be193b34126a9f83c3e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475364"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036897"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "88475364"
 |列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|テーブルのオブジェクト ID。 「 [Sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。<br /><br /> **object_id** は、このビューのキーです。||  
-|状態|**nvarchar(40)**|このテーブルのレプリケートされたテーブルのキャッシュ状態です。|' NotReady '、' Ready '|  
+|state|**nvarchar(40)**|このテーブルのレプリケートされたテーブルのキャッシュ状態です。|' NotReady '、' Ready '|  
   
 ## <a name="example"></a>例
-この例では、sys. pdw_replicated_table_cache_state をテーブルと結合して、レプリケートされたテーブルキャッシュのテーブル名と状態を取得します。
+この例では、sys.pdw_replicated_table_cache_state を sys. tables と結合して、レプリケートされたテーブルキャッシュのテーブル名と状態を取得します。
 
 ```sql
 SELECT t.[name], p.[object_id], p.[state]
@@ -41,5 +41,5 @@ SELECT t.[name], p.[object_id], p.[state]
 
 
 ## <a name="next-steps"></a>次の手順  
- SQL Data Warehouse と並列データウェアハウスのすべてのカタログビューの一覧については、「 [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)」を参照してください。   
+ Azure Synapse Analytics と Parallel Data Warehouse のすべてのカタログビューの一覧については、「 [Azure Synapse analytics と並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)」を参照してください。   
   

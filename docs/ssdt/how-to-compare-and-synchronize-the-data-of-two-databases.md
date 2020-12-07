@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: e246374476c3dff300aaf6c53ee3c6e8a1896db5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519042"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987978"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>方法:2 つのデータベースのデータを比較および同期する
 
@@ -83,7 +83,7 @@ ms.locfileid: "85519042"
   
     プレースホルダー (*sServerName*、*sDatabaseName*、*sUserName*、*sPassword*、*sDisplayName*、*tServerName*、*tDatabaseName*、*tUserName*、*tPassword*、*tDisplayName*) をソース データベースとターゲット データベースの値に置き換えます。  
   
-    ソースおよびターゲットを指定しない場合は、 **[新しいデータの比較]** ダイアログ ボックスが表示されます。 Sql.NewDataComparison コマンドのパラメーターについて詳しくは、[Visual Studio Team System のデータベース機能のオートメーション コマンド リファレンス](https://msdn.microsoft.com/library/dd470565.aspx)に関するページをご覧ください。  
+    ソースおよびターゲットを指定しない場合は、 **[新しいデータの比較]** ダイアログ ボックスが表示されます。 Sql.NewDataComparison コマンドのパラメーターについて詳しくは、[Visual Studio Team System のデータベース機能のオートメーション コマンド リファレンス](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100))に関するページをご覧ください。  
   
     指定したソース データベースとターゲット データベースのデータが比較されます。 結果が [データ比較] セッションに表示されます。 結果の表示方法またはデータの同期方法について詳しくは、「[データの差異の表示](#ViewDifferences)」および「[データベース データの同期](#Synchronize)」をご覧ください。  
   
@@ -168,4 +168,3 @@ ms.locfileid: "85519042"
   
 ## <a name="see-also"></a>参照  
 [1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)  
-  

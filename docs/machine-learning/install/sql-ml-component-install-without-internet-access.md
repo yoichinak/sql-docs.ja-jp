@@ -1,23 +1,25 @@
 ---
-title: インターネットへのアクセスなしでのインストール
-description: ネットワーク ファイアウォールの背後に隔離されたコンピューターに SQL Server Machine Learning R および Python をインストールします。
+title: インターネットにアクセスしないオフラインでのインストール
+description: ネットワーク ファイアウォールの背後に隔離されたコンピューター上に Python および R を備えた SQL Server Machine Learning Services をオフラインでインストールします。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 10/01/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487645"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636161"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>インターネットにアクセスできないコンピューターに SQL Server Machine Learning R および Python をインストールする
+# <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>インターネットに接続されていないコンピューター上に SQL Server Machine Learning (R および Python) をインストールする
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+この記事では、ネットワーク ファイアウォールの背後に隔離されたインターネットに接続されていないコンピューターに SQL Server Machine Learning Services をオフラインでインストールする方法について説明します。
 
 既定では、インストーラーは Microsoft ダウンロード サイトに接続して、SQL Server 上での機械学習に必要なコンポーネントおよび更新されたコンポーネントを取得します。 ファイアウォールの制約によって、インストーラーがこれらのサイトにアクセスできない場合は、インターネットに接続されたデバイスを使ってファイルをダウンロードし、オフラインのサーバーにファイルを転送してから、セットアップを実行できます。
 

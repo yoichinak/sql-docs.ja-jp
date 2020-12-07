@@ -4,12 +4,12 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: 737fd01c117c03a234d19fa47e1fb11c3153b07d
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: 757b5ea7bb1b6f387593365ff8abcc5061658dea
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80501658"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96477256"
 ---
-**適用対象:** ![○](media/yes-icon.png)SQL Server 2014 ![○](media/yes-icon.png)Azure SQL Database ![X](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![X](media/no-icon.png)Parallel Data Warehouse 
+**適用対象:** :::image type="icon" source="media/yes-icon.png":::SQL Server 2014 :::image type="icon" source="media/yes-icon.png":::Azure SQL Database :::image type="icon" source="media/no-icon.png":::Azure Synapse Analytics :::image type="icon" source="media/no-icon.png":::Parallel Data Warehouse 
 

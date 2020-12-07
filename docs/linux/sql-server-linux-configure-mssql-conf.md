@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 2e21b8f811af5887147ddb71b211e3a876b728d2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b30229e584cce79d73018aa0540c9bdaf328830d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180013"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115705"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf ツールを使用して SQL Server on Linux を構成する
 
@@ -178,7 +178,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
    sudo systemctl restart mssql-server
    ```
 
-詳細については、[SQL Server on Linux に関するカスタマー フィードバック](sql-server-linux-customer-feedback.md)および [SQL Server のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)に関するページを参照してください。
+詳細については、[SQL Server on Linux に関するカスタマー フィードバック](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md)および [SQL Server のプライバシーに関する声明](../sql-server/sql-server-privacy.md)に関するページを参照してください。
 
 ## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> 既定のデータまたはログのディレクトリの場所を変更する
 
@@ -476,7 +476,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-詳細については、[SQL Server on Linux に関するカスタマー フィードバック](sql-server-linux-customer-feedback.md)に関するページを参照してください。
+詳細については、[SQL Server on Linux に関するカスタマー フィードバック](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md)に関するページを参照してください。
 
 ## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> SQL Server のロケールを変更する
 
@@ -728,7 +728,7 @@ sudo cat /var/opt/mssql/mssql.conf
 
 ## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> mssql.conf format
 
-次の **/var/opt/mssql/mssql.conf** ファイルは、各設定の例を示しています。 この形式を使用すると、必要に応じて **mssql.conf** ファイルに手動で変更を加えることができます。 ファイルを手動で変更する場合は、変更を適用する前に SQL Server を再起動する必要があります。 Docker で **mssql** ファイルを使用するには、Docker が[データを保持](sql-server-linux-configure-docker.md)している必要があります。 まず、完全な **mssql.conf** ファイルをホスト ディレクトリに追加してから、コンテナーを実行します。 この例は[カスタマー フィードバック](sql-server-linux-customer-feedback.md)に含まれています。
+次の **/var/opt/mssql/mssql.conf** ファイルは、各設定の例を示しています。 この形式を使用すると、必要に応じて **mssql.conf** ファイルに手動で変更を加えることができます。 ファイルを手動で変更する場合は、変更を適用する前に SQL Server を再起動する必要があります。 Docker で **mssql** ファイルを使用するには、Docker が[データを保持](./sql-server-linux-docker-container-deployment.md)している必要があります。 まず、完全な **mssql.conf** ファイルをホスト ディレクトリに追加してから、コンテナーを実行します。 この例は[カスタマー フィードバック](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md)に含まれています。
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

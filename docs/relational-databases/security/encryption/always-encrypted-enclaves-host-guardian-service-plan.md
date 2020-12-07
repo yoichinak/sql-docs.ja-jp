@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411384"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869160"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>ホスト ガーディアン サービスの構成証明の計画
 
@@ -42,7 +42,7 @@ HGS の設定では、HGS サーバー、フェールオーバー クラスタ�
 ### <a name="high-availability"></a>高可用性
 
 HGS 機能では、フェールオーバー クラスターが自動的にインストールおよび構成されます。
-運用環境では、高可用性を実現するために HGS サーバーを 3 台使用することをお勧めします。 クラスター クォーラムの決定方法と、外部監視付きの 2 つのノード クラスターを含む代替の構成の詳細については、[フェールオーバー クラスターのドキュメント](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum)を参照してください。
+運用環境では、高可用性を実現するために HGS サーバーを 3 台使用することをお勧めします。 クラスター クォーラムの決定方法と、外部監視付きの 2 つのノード クラスターを含む代替の構成の詳細については、[フェールオーバー クラスターのドキュメント](/windows-server/failover-clustering/manage-cluster-quorum)を参照してください。
 
 HGS ノード間に共有記憶域は必要ありません。 構成証明データベースのコピーは各 HGS サーバーに格納され、クラスター サービスによってネットワーク経由で自動的にレプリケートされます。
 
@@ -67,7 +67,7 @@ HGS では、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] �
 一般に、次の推奨事項があります。
 
 - **物理的な運用サーバー**の場合は、提供される追加の保証に TPM 構成証明を使用することをお勧めします。
-- **仮想運用サーバー**の場合は、ほとんどの仮想マシンに仮想 TPM とセキュア ブートがないため、ホスト キー構成証明をお勧めします。 [オンプレミスのシールドされた VM](https://aka.ms/shieldedvms) のようなセキュリティが強化された VM を使用している場合は、TPM モードの使用を選択できます。 すべての仮想化されたデプロイでは、構成証明プロセスで、VM 環境のみが分析され、VM の下の仮想化プラットフォームは分析されません。
+- **仮想運用サーバー**の場合は、ほとんどの仮想マシンに仮想 TPM とセキュア ブートがないため、ホスト キー構成証明をお勧めします。 [オンプレミスのシールドされた VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) のようなセキュリティが強化された VM を使用している場合は、TPM モードの使用を選択できます。 すべての仮想化されたデプロイでは、構成証明プロセスで、VM 環境のみが分析され、VM の下の仮想化プラットフォームは分析されません。
 - **開発/テスト シナリオ**の場合は、設定が簡単なため、ホスト キー構成証明をお勧めします。
 
 ### <a name="trust-model"></a>信頼モデル
@@ -114,7 +114,7 @@ HGS は、暗号化と暗号化の解除を必要とするアクション数が�
 
 ### <a name="ssnoversion-md-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターの前提条件
 
-[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] を実行しているコンピューターは、[SQL Server のインストール要件](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)と [Hyper-V ハードウェア要件](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)の両方を満たしている必要があります。
+[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] を実行しているコンピューターは、[SQL Server のインストール要件](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)と [Hyper-V ハードウェア要件](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)の両方を満たしている必要があります。
 
 これらの要件の内容は次のとおりです。
 
@@ -124,7 +124,7 @@ HGS は、暗号化と暗号化の解除を必要とするアクション数が�
   - Extended Page Tables を備えた Intel VT-x。
   - Rapid Virtualization Indexing を備えた AMD-V。
   - VM で [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] を実行する場合、ハイパーバイザーおよび物理 CPU には入れ子になった仮想化機能が用意されている必要があります。 VM で VBS エンクレーブを実行する場合の保証については、「[信頼モデル](#trust-model)」セクションを参照してください。
-    - Hyper-V 2016 以降では、VM プロセッサ上で[入れ子にされた仮想化拡張機能](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)を有効にします。
+    - Hyper-V 2016 以降では、VM プロセッサ上で[入れ子にされた仮想化拡張機能](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)を有効にします。
     - Azure では、入れ子になった仮想化をサポートする VM サイズを選択します。 すべての v3 シリーズ VM は、Dv3 や Ev3 などの入れ子になった仮想化をサポートしています。 [入れ子対応の Azure VM の作成](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)に関するページを参照してください。
     - VMWare vSphere 6.7 以降では、[VMware のドキュメント](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)の説明に従って、仮想化ベースのセキュリティによる VM のサポートを有効にします。
     - 他のハイパーバイザーおよびパブリック クラウドでは、VBS エンクレーブが設定された Always Encrypted を有効にする入れ子になった仮想化機能がサポートされている場合もあります。 互換性と構成手順については、仮想化ソリューションのドキュメントを確認してください。

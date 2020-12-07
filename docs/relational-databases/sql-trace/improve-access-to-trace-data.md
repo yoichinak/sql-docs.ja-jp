@@ -16,10 +16,10 @@ ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f2c85d7c440f32aee7b6b6fb76019fdb2eef2c2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88324881"
 ---
 # <a name="improve-access-to-trace-data"></a>トレース データへのアクセスを向上させる

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38fe4c1a8b627b5a45e30254f8eeac62f4452ad
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916269"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988138"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt ユーティリティ (SSRS)
   重要なレポート サーバー データを不正アクセスから保護するための対称キーを、抽出、復元、作成、および削除します。 また、このユーティリティは、レポート サーバー インスタンスをスケール アウト配置に追加する場合にも使用されます。 *レポート サーバーのスケール アウト配置* とは、複数のレポート サーバー インスタンスが 1 つのレポート サーバー データベースを共有する状態を表しています。  
@@ -129,7 +129,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### <a name="deleting-encryption-keys-and-encrypted-content"></a>暗号化キーおよび暗号化された内容の削除  
- 次の例では、レポート サーバーに格納されたすべての暗号化キーを削除します。 インストール環境がレポート サーバーのスケール アウト配置になっている場合は、この配置に含まれているすべてのレポート サーバー インスタンスに対する暗号化キーが削除されます。 また、暗号化キーを削除すると、レポート サーバー データベースにある既存の暗号化された値はすべて削除されます。 暗号化されたコンテンツの詳細については、「[暗号化されたレポート サーバー データの格納 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)」を参照してください。  
+ 次の例では、レポート サーバーに格納されたすべての暗号化キーを削除します。 インストール環境がレポート サーバーのスケール アウト配置になっている場合は、この配置に含まれているすべてのレポート サーバー インスタンスに対する暗号化キーが削除されます。 また、暗号化キーを削除すると、レポート サーバー データベースにある既存の暗号化された値はすべて削除されます。 暗号化されたコンテンツの詳細については、[暗号化されたレポート サーバー データの格納 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md) に関する記事を参照してください。  
   
 ```  
 rskeymgmt -d  
@@ -171,12 +171,11 @@ rskeymgmt -r <installationID>
   
  セットアップや初期化の際に定義されるキーのセットを管理するには、 **rskeymgmt** ユーティリティを使用します。 このユーティリティは、リモート プロシージャ呼び出し (RPC) エンドポイントを介して、ローカルのレポート サーバー Windows サービスに接続されます。 このユーティリティが動作するには、レポート サーバー Windows サービスが実行されている必要があります。  
   
- 暗号化キーの詳細については、「[暗号化キーの構成と管理 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」および「[レポート サーバーの初期化 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
+ 暗号化キーの詳細については、[暗号化キーの構成と管理 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)、および[レポート サーバーの初期化 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md) に関する各記事を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [スケールアウト配置 - Reporting Services のネイティブ モード (構成マネージャー)](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
+ [スケールアウト配置 - Reporting Services のネイティブ モード (構成マネージャー)](/previous-versions/sql/sql-server-2016/ms181357(v=sql.130))   
  [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
+ [暗号化キーの構成と管理 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58e6e75f520bcd966cf2b1ae8e2edbc0f7a568f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afccf7296d27331d7b76ba5e4978faca2126060f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484423"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194674"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>データ ソースにデータ品質ルールを適用する
 
@@ -31,8 +31,7 @@ ms.locfileid: "88484423"
   
 1.  パッケージを作成します。  
   
-2.  DQS クレンジング変換を追加し、構成します。 詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)」を参照してください。  
+2.  DQS クレンジング変換を追加し、構成します。 詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](./dqs-cleansing-transformation.md)」を参照してください。  
   
 3.  データ ソースに DQS クレンジング変換を接続します。  
-  
   

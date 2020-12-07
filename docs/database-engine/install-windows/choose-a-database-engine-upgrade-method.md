@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f3f9aef2003676c90d049a894a03c816225def3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8f29fb060b68d55733eb20c02119325577764991
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244077"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126014"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -35,7 +35,7 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
 >  また、アップグレード計画の一環として、Azure SQL Database のアップグレードや SQL Server 環境の仮想化を考慮する場合もあります。 これらの記事はここでは範囲外ですが、いくつかのリンクを示します。
 >   - [Azure Virtual Machines における SQL Server の概要](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
 >   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
->   - [Azure で SQL Server オプションを選択する](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
+>   - [Azure で SQL Server オプションを選択する](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview)  
   
 ## <a name="upgrade-in-place"></a>インプレース アップグレード  
  このアプローチでは、SQL Server セットアップ プログラムは、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ビットを新しい [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ビットで置き換えて、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールをアップグレードし、次に各システム データベースとユーザー データベースをアップグレードします。  インプレース アップグレード アプローチは最も簡単ですが、ある程度のダウンタイムを必要とし、フォールバックが必要な場合にフォールバックに時間がかかるため、すべてのシナリオでサポートされるわけではありません。 インプレース アップグレードがサポートされるシナリオとサポートされないシナリオの詳細については、「 [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)」を参照してください。  
@@ -81,7 +81,7 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
  ユーザー データベースの移行後、多様な方法 (サーバー名の変更、DNS エントリの使用、接続文字列の変更など) のいずれかを使用して、新しいユーザーを新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに指示します。  新規インストール アプローチは、インプレース アップグレードと比較して、リスクとダウンタイムを減らし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレードと同時のハードウェアとオペレーティング システムのアップグレードを容易にします。  
   
 > [!NOTE]  
->  既に高可用性 (HA) ソリューションを設置しているなど、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが複数ある環境の場合は、「 [ローリング アップグレード](#rolling-upgrade)」に進みます。 高可用性ソリューションを設定していない場合は、 [データベース ミラーリング](../database-mirroring/setting-up-database-mirroring-sql-server.md) を一時的に構成して、ダウンタイムを最小にして、このアップグレードを容易にするか、またはこの機会を利用して、永続的な HA ソリューションとして、 [Always On 可用性グループ](https://msdn.microsoft.com/library/hh510260.aspx) を構成することを考慮できます。  
+>  既に高可用性 (HA) ソリューションを設置しているなど、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが複数ある環境の場合は、「 [ローリング アップグレード](#rolling-upgrade)」に進みます。 高可用性ソリューションを設定していない場合は、 [データベース ミラーリング](../database-mirroring/setting-up-database-mirroring-sql-server.md) を一時的に構成して、ダウンタイムを最小にして、このアップグレードを容易にするか、またはこの機会を利用して、永続的な HA ソリューションとして、 [Always On 可用性グループ](../availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md) を構成することを考慮できます。  
   
  たとえば、このアプローチは、次をアップグレードする場合に使用できます。  
   
@@ -89,7 +89,7 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
 -   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 以降は x86 インストールをサポートしていないため、SQL Server の x86 インストール。   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新しいハードウェアや新しいバージョンのオペレーティング システムへ。    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。   
--   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 以降は SQL Server 2005 のインプレース アップグレードをサポートしていないため、SQL Server 2005。 詳細については、「[SQL Server 2005 からアップグレードしますか?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)」を参照してください。
+-   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 以降は SQL Server 2005 のインプレース アップグレードをサポートしていないため、SQL Server 2005。 詳細については、「[SQL Server 2005 からアップグレードしますか?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)」を参照してください。
 
   
 新規インストール アップグレードに必要な手順は、アタッチされたストレージを使用するか、または SAN ストレージを使用するかどうかによってやや異なります。  
@@ -114,4 +114,4 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
   
 ## <a name="next-steps"></a>次のステップ
  [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
- [データベース エンジンのアップグレードの完了](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
+ [データベース エンジンのアップグレードの完了](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)

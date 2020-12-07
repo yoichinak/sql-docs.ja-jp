@@ -1,1 +1,0 @@
-**適用対象:**![x](media/no.png)SQL Server 2016![○](media/yes.png)SQL Server 2017![○](media/yes.png)Power BI レポート サーバー

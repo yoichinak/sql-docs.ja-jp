@@ -15,11 +15,11 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e1f2398e59fb7a0fee48f2d4c4e4a171c6044ca7
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807085"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127427"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "87807085"
   
 -   実際のクエリ要求数が **max worker threads** に設定されている値を超える場合があります。その場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってワーカー スレッドがプールされ、次に使用可能なワーカー スレッドで要求を処理できるようになります。 ワーカー スレッドはアクティブな要求にのみ割り当てられ、要求が処理されると解放されます。 これは、要求が行われたユーザー セッション/接続が開いたままになっている場合でも発生します。 
 
--   **max worker threads** サーバー構成オプションでは、エンジン内部で生成できる全スレッドに制限はありません。 レイジーライター、チェックポイント、ログ ライター、Service Broker、ロック マネージャーなどのタスクに必要なシステム スレッドは、この制限の外部で生成されます。 可用性グループは、**ワーカー スレッドの制限**内で一部のワーカー スレッドを使用しますが、システム スレッドも使用します (「[可用性グループによるスレッドの使用](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage)」を参照してください)。構成されているスレッドの数を超えた場合は、次のクエリによって、追加のスレッドを生成したシステム タスクに関する情報を確認できます。  
+-   **max worker threads** サーバー構成オプションでは、エンジン内部で生成できる全スレッドに制限はありません。 レイジーライター、チェックポイント、ログ ライター、Service Broker、ロック マネージャーなどのタスクに必要なシステム スレッドは、この制限の外部で生成されます。 可用性グループは、**ワーカー スレッドの制限** 内で一部のワーカー スレッドを使用しますが、システム スレッドも使用します (「[可用性グループによるスレッドの使用](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage)」を参照してください)。構成されているスレッドの数を超えた場合は、次のクエリによって、追加のスレッドを生成したシステム タスクに関する情報を確認できます。  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -67,7 +67,7 @@ ms.locfileid: "87807085"
   
 -   スレッド プールは、多数のクライアントがサーバーに接続する場合のパフォーマンスの最適化に役立ちます。 通常、クエリ要求ごとに個別のオペレーティング システム スレッドが作成されます。 ただし、サーバーへの接続が数百にもなる場合、クエリ要求ごとに 1 つのスレッドを使用すると大量のシステム リソースが消費されることがあります。 **max worker threads** オプションを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってワーカー スレッド プールが作成され多数のクエリ要求を処理できるようになります。その結果、パフォーマンスが向上します。  
   
--   次の表では、CPU、コンピューターのアーキテクチャ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのさまざまな組み合わせに対して、自動的に構成されるワーカー スレッドの最大数 (値を 0 に設定した場合) を示します。"***既定の最大ワーカー数* + ((* 論理 CPU 数* - 4) **CPU あたりのワーカー数*)**" という式が使用されています。  
+-   次の表では、CPU、コンピューターのアーキテクチャ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのさまざまな組み合わせに対して、自動的に構成されるワーカー スレッドの最大数 (値を 0 に設定した場合) を示します。"**_既定の最大ワーカー数_ + ((* 論理 CPU 数* - 4) **CPU あたりのワーカー数*)**" という式が使用されています。  
   
     |CPU の数|32 ビット コンピューター ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前)|64 ビット コンピューター ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以前)|64 ビット コンピューター ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)|   
     |------------|------------|------------|------------|  

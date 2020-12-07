@@ -23,12 +23,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f72bc6a3a67f73fc7ab44e94514f7db7b6a905a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f69f4ac410c3a625fce65b560af4b0611c1bca4c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478764"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91497236"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE ステートメント - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -44,7 +44,6 @@ ms.locfileid: "88478764"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 RESTORE FILELISTONLY   
 FROM <backup_device>   
 [ WITH   
@@ -75,7 +74,6 @@ FROM <backup_device>
    | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
-  
 ```  
 
 > [!NOTE] 
@@ -124,7 +122,7 @@ FROM <backup_device>
 ## <a name="examples"></a>例  
  次の例は、`AdventureWorksBackups` というバックアップ デバイスから情報を返します。 この例では `FILE` オプションを使用して、デバイスで 2 番目のバックアップ セットを指定しています。  
   
-```  
+```sql  
 RESTORE FILELISTONLY FROM AdventureWorksBackups   
    WITH FILE=2;  
 GO  

@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0cc6131719ffc3c683c06c720e0056a625d1f520
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd2f7210ed0c585088d979d9eb52600078869d20
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492153"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037349"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 このトピックでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブの所有権を他のユーザーに再割り当てする方法について説明します。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88492153"
   
 2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  クエリ ウィンドウで、 [sp_manage_jobs_by_login (Transact-SQL)](https://msdn.microsoft.com/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) システム ストアド プロシージャを使用する次のステートメントを入力します。 次の例では、 `danw` からのすべてのジョブを `françoisa`に再割り当てします。  
+3.  クエリ ウィンドウで、 [sp_manage_jobs_by_login (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql.md) システム ストアド プロシージャを使用する次のステートメントを入力します。 次の例では、 `danw` からのすべてのジョブを `françoisa`に再割り当てします。  
   
     ```  
     USE msdb ;  
@@ -98,4 +98,3 @@ ms.locfileid: "88492153"
 ## <a name="see-also"></a>参照  
 [ジョブの実装](../../ssms/agent/implement-jobs.md)  
 [ジョブの作成](../../ssms/agent/create-jobs.md)  
-  

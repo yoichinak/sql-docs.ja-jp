@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa84b420b4100e74a9e57047f1bfbbd386fa5fa6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 266db3efac0fb737ccb36900ef3b27f24c8c8888
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435311"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081681"
 ---
 # <a name="understanding-data-type-conversions"></a>データ型変換について
 
@@ -28,7 +28,7 @@ Java プログラミング言語のデータ型を [!INCLUDE[ssNoVersion](../../
 
 次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に基づいて、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの get\<Type>() メソッド用の JDBC ドライバーの変換マップ、および [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの get\<Type> メソッドでサポートされている変換を示しています。
 
-![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
+![JDBC から SQL Server 型への変換のマトリックス](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
 JDBC ドライバーの getter メソッドでサポートされている変換には、次の 3 つのカテゴリがあります。
 

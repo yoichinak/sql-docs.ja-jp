@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c705c0ea22b7fcd4a92c94493035764864d1a3f6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259335"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935179"
 ---
-# <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
+# <a name="about-url-reservations-and-registration--report-server-configuration-manager"></a>URL の予約と登録について (レポート サーバーの構成マネージャー)
   Reporting Services アプリケーションの URL は、HTTP.SYS の URL 予約として定義されます。 URL 予約は、Web アプリケーションへの URL エンドポイントの構文を定義します。 レポート サーバー上でアプリケーションを構成する際には、レポート サーバー Web サービスと Web ポータルの両方に対して URL 予約を定義します。 セットアップまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL を構成すると、自動的に URL 予約が作成されます。  
   
 -   セットアップでは、既定値を使用して URL 予約が作成されます。 セットアップで既定の構成をインストールすると、2 つの URL が予約されます: レポート サーバー Web サービス用に 1 つと、Web ポータル用に 1 つです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用すると、URL をさらに追加したり、セットアップによって作成された既定の URL を変更したりできます。  
@@ -105,6 +105,7 @@ ms.locfileid: "76259335"
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]と [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 以降には、誤ってプログラムが高度な特権で実行されるリスクを最小限に抑える新しいセキュリティ機能が含まれています。 これらのオペレーティング システムでローカル管理を有効にするには、追加の手順が必要です。 詳細については、「 [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL 予約の構文 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+
   

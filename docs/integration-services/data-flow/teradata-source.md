@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484484"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127952"
 ---
 # <a name="connect-to-the-teradata-source"></a>Teradata ソースに接続する
 
@@ -29,9 +29,9 @@ Teradata ソースでは、次を使用して Teradata データベースから�
 
 ## <a name="troubleshoot-the-teradata-source"></a>Teradata ソースのトラブルシューティング
 
-Teradata ソースから Teradata Parallel Transporter (TPT) API への呼び出しをログに記録できます。 これを行うには、パッケージのログ記録を有効にし、パッケージ レベルで**診断**イベントを選択します。
+Teradata ソースから Teradata Parallel Transporter (TPT) API への呼び出しをログに記録できます。 これを行うには、パッケージのログ記録を有効にし、パッケージ レベルで **診断** イベントを選択します。
 
-Teradata ソースから Teradata ODBC ドライバーへの Open Database Connectivity (ODBC) の呼び出しをログに記録するには、ODBC ドライバー マネージャーのトレースを有効にします。 詳細については、[ODBC データ ソース アドミニストレーターを使用して ODBC トレースを生成する方法](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options)に関するページを参照してください。
+Teradata ソースから Teradata ODBC ドライバーへの Open Database Connectivity (ODBC) の呼び出しをログに記録するには、ODBC ドライバー マネージャーのトレースを有効にします。 詳細については、[ODBC データ ソース アドミニストレーターを使用して ODBC トレースを生成する方法](../../odbc/admin/setting-tracing-options.md)に関するページを参照してください。
 
 ## <a name="parallelism"></a>Parallelism
 
@@ -46,7 +46,7 @@ Teradata ソースでは、並列処理がサポートされているため、�
 |AccessMode|Integer (列挙)|データベースへのアクセスに使用するモード。 指定できる値は、 *[テーブル名]* と *[SQL コマンド]* です。 既定値は *Table Name* です。|
 |BlockSize|Integer|クライアントにデータを返すときに使用されるブロック サイズ (バイト単位)。 既定値は 1048576 (1 MB) です。 最小値は 256 バイトです。 最大値は 16775168 バイトです。<br> このプロパティは、**[詳細エディター]** ペインにあります。|
 |BufferMaxSize|Integer|GetBuffer 関数によって返されるデータ バッファーの最大サイズの合計。 このサイズは、行ヘッダー、実際のデータ行、バッファー トレーラーなど、少なくとも 1 行のデータを保持するのに十分な大きさである必要があります。 データ バッファーの既定の最大合計サイズは 16775552 バイトです。 <br>詳細については、「[Export data from a Teradata database by using GetBuffer](https://docs.teradata.com/reader/TvVKKmxaBAoyETJZD8zz_g/oaxiwNJmnCa6UctY4k498w)」 (GetBuffer を使用して Teradata データベースからデータをエクスポートする) を参照してください。|
-|BufferMode|ブール型|既定値は *True*です。 PutBuffer 機能が使用されている場合、値は *True* にする必要があります。 このプロパティは、**[詳細エディター]** ペインにあります。|
+|BufferMode|ブール型|既定値は *True* です。 PutBuffer 機能が使用されている場合、値は *True* にする必要があります。 このプロパティは、**[詳細エディター]** ペインにあります。|
 |DataEncryption|ブール型|既定値は *False* です。 値が *True* の場合は、完全セキュリティ暗号化が使用されます。|
 |DefaultCodePage|Integer|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 このプロパティは、**[詳細エディター]** ペインにあります。|
 |DetailedTracingLevel|Integer (列挙)|詳細トレースに対して、次のいずれかのオプションを選択します。 <br> *Off*:詳細ログは記録されません。 <br> *General*:ドライバー固有のアクティビティの一般的なトレースがログに記録されます。 <br> *CLI*:CLIv2 に関連するアクティビティのトレースがログに記録されます。 <br> *Notify Method*:通知機能に関連するアクティビティのトレースがログに記録されます。 <br> *Common Library*: opcommon ライブラリ アクティビティのトレースがログに記録されます。 <br> *[すべて]* : 上記のすべてのアクティビティのトレースがログに記録されます。 <br> 詳細トレース ログ ファイルは、`DetailedTracingFile` プロパティで定義されています。 <br> オプションが *Off* になっていない場合は、`DetailedTracingFile` プロパティを設定する必要があります。 このプロパティは、**[詳細エディター]** ペインにあります。|

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 93c36fbfc42ac35d973068d551ecf61ed30791fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5199f22e5e72e68be3b1a76769fb8bd3a9518413
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178240"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956603"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services で Python 開発用のデータ サイエンス クライアントを設定する
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 [Machine Learning Services (データベース内) インストール](../install/sql-machine-learning-services-windows-install.md)に Python オプションを含めると、SQL Server 2017 以降で Python 統合を使用できます。 
 
-SQL Server 用の Python ソリューションを開発して展開するには、Microsoft の [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) およびその他の Python ライブラリを開発ワークステーションにインストールします。 リモート SQL Server インスタンス上にもある、revoscalepy ライブラリでは、両方のシステム間の計算要求を調整します。 
+SQL Server 用の Python ソリューションを開発して展開するには、Microsoft の [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) およびその他の Python ライブラリを開発ワークステーションにインストールします。 リモート SQL Server インスタンス上にもある、revoscalepy ライブラリでは、両方のシステム間の計算要求を調整します。 
 
 この記事では、機械学習と Python 統合で有効になっているリモート SQL Server を操作できるように、Python 開発ワークステーションを構成する方法を学習します。 この記事の手順を完了すると、Python ライブラリは SQL Server のものと同じになります。 また、ローカル Python セッションから SQL Server のリモート Python セッションに計算をプッシュする方法がわかります。
 
@@ -37,7 +37,7 @@ SQL Server 用の Python ソリューションを開発して展開するには�
 
 ## <a name="commonly-used-tools"></a>一般的に使用されるツール
 
-SQL を初めて使用する Python 開発者であるか、Python とデータベース内分析を初めて利用する SQL 開発者であるかに関係なく、データベース内分析の機能をすべて実行するには、Python 開発ツールと T-SQL クエリ エディター ([SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) など) の両方が必要になります。
+SQL を初めて使用する Python 開発者であるか、Python とデータベース内分析を初めて利用する SQL 開発者であるかに関係なく、データベース内分析の機能をすべて実行するには、Python 開発ツールと T-SQL クエリ エディター ([SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) など) の両方が必要になります。
 
 Python の開発では、Jupyter Notebook を使用できます。これは SQL Server によってインストールされる Anaconda ディストリビューションにバンドルされています。 この記事では、Jupyter Notebook を起動して、SQL Server で Python コードをローカルおよびリモートで実行できるようにする方法について説明します。
 
@@ -47,7 +47,7 @@ SSMS は個別にダウンロードします。これは、Python コードが�
 
 ローカル ワークステーションには、Python 3.5.2 ディストリビューションを使用する基本の Anaconda 4.2.0 を含む、SQL Server のものと同じバージョンの Python パッケージと、Microsoft 固有のパッケージが必要です。
 
-インストール スクリプトによって、3 つの Microsoft 固有のライブラリが Python クライアントに追加されます。 このスクリプトでは、データ ソース オブジェクトと計算コンテキストを定義するために使用される [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) がインストールされます。 機械学習アルゴリズムを提供する [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) がインストールされます。 [azureml](https://docs.microsoft.com/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) パッケージもインストールされますが、スタンドアロン (インスタンスではない) Machine Learning Server コンテキストに関連付けられている操作化タスクに適用され、データベース内分析での使用が制限される場合があります。
+インストール スクリプトによって、3 つの Microsoft 固有のライブラリが Python クライアントに追加されます。 このスクリプトでは、データ ソース オブジェクトと計算コンテキストを定義するために使用される [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) がインストールされます。 機械学習アルゴリズムを提供する [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) がインストールされます。 [azureml](/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) パッケージもインストールされますが、スタンドアロン (インスタンスではない) Machine Learning Server コンテキストに関連付けられている操作化タスクに適用され、データベース内分析での使用が制限される場合があります。
 
 1. インストール スクリプトをダウンロードします。
 
@@ -110,7 +110,7 @@ Anaconda には Jupyter Notebook が含まれています。 次の手順とし�
 
 4. 「`print(revoscalepy.__version__)`」と入力して実行すると、バージョン情報が返されます。 9\.2.1 または 9.3.0 が表示されるはずです。 これらのバージョンのいずれかを、[サーバーの revoscalepy](../package-management/r-package-information.md) で使用できます。
 
-4. より複雑な一連のステートメントを入力します。 この例では、ローカル データ セットで [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) を使用して、概要の統計情報を生成します。 その他の関数では、サンプル データの場所を取得し、ローカルの .xdf ファイルのデータ ソース オブジェクトを作成します。
+4. より複雑な一連のステートメントを入力します。 この例では、ローカル データ セットで [rx_summary](/machine-learning-server/python-reference/revoscalepy/rx-summary) を使用して、概要の統計情報を生成します。 その他の関数では、サンプル データの場所を取得し、ローカルの .xdf ファイルのデータ ソース オブジェクトを作成します。
 
    ```python
    import os
@@ -228,7 +228,7 @@ def send_this_func_to_sql():
 
 ### <a name="send-the-function-to-sql-server"></a>関数を SQL Server に送信する
 
-この例では、リモート計算コンテキストを作成してから、[rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) を使用して SQL Server に関数の実行を送信します。 **rx_exec** 関数は、計算コンテキストが引数として受け入れられるため、便利です。 リモートで実行するすべての関数には、計算コンテキスト引数が必要です。 [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) などの一部の関数では、この引数が直接サポートされます。 そうでない演算では、**rx_exec** を使用して、リモート計算コンテキストでコードを提供できます。
+この例では、リモート計算コンテキストを作成してから、[rx_exec](/machine-learning-server/python-reference/revoscalepy/rx-exec) を使用して SQL Server に関数の実行を送信します。 **rx_exec** 関数は、計算コンテキストが引数として受け入れられるため、便利です。 リモートで実行するすべての関数には、計算コンテキスト引数が必要です。 [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) などの一部の関数では、この引数が直接サポートされます。 そうでない演算では、**rx_exec** を使用して、リモート計算コンテキストでコードを提供できます。
 
 この例では、SQL Server から Jupyter Notebook に生データを転送する必要はありませんでした。 すべての計算は Iris データベース内で行われ、イメージ ファイルのみがクライアントに返されます。
 
@@ -289,7 +289,7 @@ C:\Program Files\Microsoft\PyForMLS (または Python クライアント ライ�
 | **インタープリター パス** | C:\Program Files\Microsoft\PyForMLS\python.exe |
 | **ウィンドウ インタープリター** | C:\Program Files\Microsoft\PyForMLS\pythonw.exe |
 
-Python 環境の構成のヘルプについては、[Visual Studio での Python 環境の管理](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio)に関するページを参照してください。
+Python 環境の構成のヘルプについては、[Visual Studio での Python 環境の管理](/visualstudio/python/managing-python-environments-in-visual-studio)に関するページを参照してください。
 
 ### <a name="pycharm"></a>PyCharm
 
@@ -303,7 +303,7 @@ PyCharm で、インタープリターを、Machine Learning Server によって
 
 ## <a name="next-steps"></a>次のステップ
 
-これで、ツールが準備でき、SQL Server への接続が機能することを確認できたので、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) を使用して Python のクイックスタートを実行し、スキルを向上させることができます。
+これで、ツールが準備でき、SQL Server への接続が機能することを確認できたので、[SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) を使用して Python のクイックスタートを実行し、スキルを向上させることができます。
 
 > [!div class="nextstepaction"]
 > [クイック スタート: SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](../tutorials/quickstart-python-create-script.md)

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 196678dbb5c91e6c5acbaf2fda0b6a65f9ac369e
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cad44bde76e3915aeb5f99d8eeb415d89b02359e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442369"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127582"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>フェールオーバー クラスター インスタンスのアップグレード 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "87442369"
   
  ダウンタイムでのこのプロセス結果は、1 回のフェールオーバー時間、および全フェールオーバー クラスター アップグレード時のデータベース アップグレード スクリプトの実行時間に限定されます。  
   
- アップグレード プロセス中にクラスター ノードのフェールオーバーの動作を制御するには、コマンド プロンプトでアップグレード操作を実行して、/FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用します。 詳細については、「 [コマンド プロンプトからの SQL Server のインストール](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。  
+ アップグレード プロセス中にクラスター ノードのフェールオーバーの動作を制御するには、コマンド プロンプトでアップグレード操作を実行して、/FAILOVERCLUSTERROLLOWNERSHIP パラメーターを使用します。 詳細については、「 [コマンド プロンプトからの SQL Server のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」を参照してください。  
 
  ## <a name="upgrade-with-installation-media"></a>インストール メディアを使用したアップグレード 
   
@@ -83,7 +83,7 @@ ms.locfileid: "87442369"
   
 7.  [インスタンスの選択] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にアップグレードする [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスを指定します。 **[次へ]** をクリックして次に進みます。  
   
-8.  [機能の選択] ページでは、アップグレードする機能があらかじめ選択されています。 機能名を選択すると、右側のペインに各コンポーネント グループの説明が表示されます。 アップグレードする機能は変更できず、アップグレード操作中に機能を追加することもできないことに注意してください。 アップグレード操作の完了後に、アップグレードされた [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] のインスタンスに機能を追加するには、「 [SQL Server 2016 のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)」を参照してください。  
+8.  [機能の選択] ページでは、アップグレードする機能があらかじめ選択されています。 機能名を選択すると、右側のペインに各コンポーネント グループの説明が表示されます。 アップグレードする機能は変更できず、アップグレード操作中に機能を追加することもできないことに注意してください。 アップグレード操作の完了後に、アップグレードされた [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] のインスタンスに機能を追加するには、「 [SQL Server 2016 のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)」を参照してください。  
   
      選択した機能の必須コンポーネントが、右側のペインに表示されます。 SQL Server セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。 時間を節約するには、各ノードにこれらの必須コンポーネントを事前にインストールしておく必要があります。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "87442369"
   
 10. [必要なディスク領域] ページでは、指定した機能に必要なディスク領域が計算され、セットアップを実行中のコンピューター上の空き領域と比較されます。  
   
-11. [フルテキスト検索アップグレード] ページで、アップグレードするデータベースのアップグレード オプションを指定します。 詳細については、「 [フルテキスト検索アップグレード オプション](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)」。  
+11. [フルテキスト検索アップグレード] ページで、アップグレードするデータベースのアップグレード オプションを指定します。 詳細については、「 [フルテキスト検索アップグレード オプション](../../../database-engine/install-windows/install-sql-server.md)」。  
   
 12. **[エラー レポート]** ページで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] に送信する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の機能向上に役立つ情報を指定します。 既定では、エラー レポートのオプションは有効になっています。  
   
@@ -140,8 +140,7 @@ ms.locfileid: "87442369"
   
 -   [データベース互換性モードの変更とクエリ ストアの使用](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [SQL Server 2016 の新機能を利用する](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [SQL Server 2016 の新機能を利用する](../../what-s-new-in-sql-server-2017.md)  
   
 
-  
   

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449818"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193857"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
 
@@ -61,7 +61,7 @@ ms.locfileid: "88449818"
 ### <a name="configurations"></a>構成  
  構成とは、パッケージが実行されるときの、パッケージおよびそのタスク、コンテナー、変数、およびイベント ハンドラーのプロパティを定義する、プロパティと値の組み合わせのことです。 構成を使用すると、パッケージを変更しなくてもプロパティを更新できます。 パッケージが実行されると、構成情報が読み込まれ、プロパティの値が更新されます。 たとえば、構成を使用して接続の接続文字列を更新できます。  
   
- パッケージを別のコンピューターにインストールすると、パッケージと共に構成が保存され、配置されます。 パッケージのインストールの際、別の環境でパッケージがサポートされるように、構成の値を更新できます。 詳細については、「 [パッケージ構成を作成する](../integration-services/packages/create-package-configurations.md)」を参照してください。  
+ パッケージを別のコンピューターにインストールすると、パッケージと共に構成が保存され、配置されます。 パッケージのインストールの際、別の環境でパッケージがサポートされるように、構成の値を更新できます。 詳細については、「 [パッケージ構成を作成する](./packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
 ### <a name="logging-and-log-providers"></a>ログ記録とログ プロバイダー  
  ログとは、パッケージの実行時に収集される、パッケージに関する情報の集まりのことです。 たとえば、ログにはパッケージの実行開始時刻と終了時刻を記録できます。 ログ プロバイダーとは、パッケージとそのコンテナーおよびタスクが実行時の情報を記録するために使用する、記録先の種類と形式を定義するものです。 ログはパッケージに関連付けられますが、パッケージ内のタスクとコンテナーの情報は、任意のパッケージ ログに記録できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、ログ記録用の各種のログ プロバイダーが組み込まれています。 たとえば [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびテキスト ファイル用のログ プロバイダーが含まれます。 また、カスタム ログ プロバイダーを作成してログ記録用に使用することもできます。 詳細については、「[Integration Services (SSIS) のログ記録](../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
@@ -117,5 +117,4 @@ ms.locfileid: "88449818"
 -   [SQL Server データ ツールでのパッケージの作成](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   開発者ガイドの「[プログラムによるパッケージの作成](../integration-services/building-packages-programmatically/building-packages-programmatically.md)」を参照してください。 
-  
   

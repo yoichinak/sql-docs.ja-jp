@@ -4,16 +4,16 @@ description: この記事では、SQL Server on Linux の実行に関するパ�
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/16/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1b2a4f55908f249d9f574d392dea26932648e58d
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: ddeb5d106de872b507c88a199050cfc883a63a4c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989915"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005687"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン
 
@@ -85,10 +85,10 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>仮想アドレス空間のカーネル設定
 
-**vm.max_map_count** の既定の設定 (65536) は、SQL Server のインストールに十分な大きさではない可能性があります。 このような理由から、SQL Server 展開については **vm.max_map_count** 値を 262144 に変更します。これらのカーネル パラメーターをさらに調整する場合、「[調整された mssql プロファイルを使用した Linux 設定の提案](#proposed-linux-settings-using-a-tuned-mssql-profile)」セクションを参照してください。 vm.max_map_count の最大値は 2147483647 です。
+**vm.max_map_count** の既定の設定 (65536) は、SQL Server のインストールに十分な大きさではない可能性があります。 このような理由から、SQL Server デプロイについては **vm.max_map_count** 値を少なくとも 262144 に変更します。これらのカーネル パラメーターをさらに調整する場合、「[調整された mssql プロファイルを使用した Linux 設定の提案](#proposed-linux-settings-using-a-tuned-mssql-profile)」セクションを参照してください。 vm.max_map_count の最大値は 2147483647 です。
 
 ```bash
-sysctl -w vm.max_map_count=262144
+sysctl -w vm.max_map_count=1600000
 ```
 
 ### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>調整された mssql プロファイルを使用した Linux 設定の提案
@@ -113,7 +113,7 @@ vm.dirty_expire_centisecs = 500
 vm.dirty_writeback_centisecs = 100
 vm.transparent_hugepages=always
 # For multi-instance SQL deployments, use
-# vm.transparent_hugepages=madvice
+# vm.transparent_hugepages=madvise
 vm.max_map_count=1600000
 net.core.rmem_default = 262144
 net.core.rmem_max = 4194304

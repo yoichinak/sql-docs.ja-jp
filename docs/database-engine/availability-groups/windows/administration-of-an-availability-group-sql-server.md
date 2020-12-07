@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Availability Groups [SQL Server], managing
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 9445cf487917fd23a2189731b4177794b2d27c5c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f82ca3cd976a13cfc9badf17f8dac02cbec83d1a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116188"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584854"
 ---
 # <a name="administration-of-an-availability-group"></a>可用性グループの管理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -105,8 +105,8 @@ ms.locfileid: "91116188"
   
 -   **ブログ:**  
   
-     [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)    
-[CSS SQL Server エンジニアのブログ](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)    
+[CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)  
   
 -   **ビデオ:**  
   
@@ -132,4 +132,3 @@ ms.locfileid: "91116188"
  [Always On 可用性グループの Transact-SQL ステートメントの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Always On 可用性グループ用の PowerShell コマンドレットの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
-   

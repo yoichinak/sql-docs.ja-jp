@@ -14,19 +14,19 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a27332a7948c535b768f6507aad81ca72bbcbb26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455984"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867998"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>SQL Server Native Client OLE DB データソースの列挙 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルでは、列挙子オブジェクトを使用して、使用可能なデータ ソースを一覧表示する方法を示します。  
   
- SQLOLEDB 列挙子に表示されるデータソースを一覧表示するために、コンシューマーは [isourcesrowset を:: GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) メソッドを呼び出します。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
+ SQLOLEDB 列挙子に表示されるデータソースを一覧表示するために、コンシューマーは [isourcesrowset を:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) メソッドを呼び出します。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
   
  使用しているネットワーク ライブラリに応じて、適切なドメインでデータ ソースが検索されます。 名前付きパイプの場合は、クライアントがログオンしたドメインになります。 AppleTalk の場合は、既定のゾーンになります。 SPX/IPX の場合は、バインダリ内にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの一覧になります。 Banyan VINES の場合は、ローカル ネットワークにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールになります。 マルチプロトコルと TCP/IP ソケットはサポートされません。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88455984"
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB データ ソースを列挙するには  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195098"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809659"
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 制約の作成
 
@@ -32,7 +32,7 @@ ms.locfileid: "89195098"
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して UNIQUE 制約を作成し、主キー以外の特定の列に重複した値が入力されないようにします。 UNIQUE 制約を作成すると、対応する一意なインデックスが自動的に作成されます。  
   
 > [!NOTE]    
-> Azure Synapse Analytics での一意制約の詳細については、[Azure Synapse Analytics の主キー、外部キー、一意キー](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints)に関するページを参照してください。
+> Azure Synapse Analytics での一意制約の詳細については、[Azure Synapse Analytics の主キー、外部キー、一意キー](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints)に関するページを参照してください。
   
  **このトピックの内容**  
   
@@ -128,4 +128,4 @@ ms.locfileid: "89195098"
   
      詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」、および「[table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)」を参照してください。  
   
-###  <a name="TsqlExample"></a>  
+###  <a name="TsqlExample"></a>

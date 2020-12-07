@@ -12,12 +12,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcaae9b53ace5a79e3e1e2c5ccc3e0dc2449306c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 08a3bbf542911c31681f72c74ed783cf6ae79d99
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545201"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439524"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>メモリ使用量の監視とトラブルシューティング
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -140,11 +140,11 @@ ms.locfileid: "89545201"
   
 3.  コンテキスト メニューで、 **[レポート]**  -> **Standard [レポート]**  ->  **[メモリ最適化オブジェクトによるメモリ使用量]** の順にクリックします。  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
+ ![[レポート] > [標準レポート] > [メモリ最適化オブジェクトによるメモリ使用量] が選択されているオブジェクト エクスプローラーを示すスクリーンショット](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
  このレポートは、上で作成したデータベースによるメモリ消費を示します。  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
+ ![メモリ最適化オブジェクトによるメモリ使用量の合計に関するレポートのスクリーンショット。](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> DMV の使用  
  メモリ最適化テーブル、インデックス、システム オブジェクト、およびランタイム構造によって消費されるメモリを監視するために、いくつかの DMV を使用できます。  

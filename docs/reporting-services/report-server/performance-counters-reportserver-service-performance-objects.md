@@ -12,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: fe50faeeb134ca9162f5de25b6c775d3b6eea829
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545524"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986970"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>パフォーマンス カウンター - ReportServer サービス、パフォーマンス オブジェクト
   このトピックでは、 **の配置に含まれる** ReportServer:Service **および** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
@@ -25,7 +25,7 @@ ms.locfileid: "84545524"
 > [!NOTE]  
 >  このパフォーマンス オブジェクトを使用して、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置全体ではなく、現在のサーバーに適用されます。  
   
- パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
+ パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  このトピックの内容:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84545524"
   
  次の表は、 **ReportServer:Service** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
- ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します  
+ ![PowerShell 関連コンテンツ](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -77,7 +77,7 @@ ms.locfileid: "84545524"
 ##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint モードのレポート サーバー)  
  **ReportServerSharePoint:Service** パフォーマンス オブジェクトは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で追加されました。  
   
- ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します  
+ ![PowerShell 関連コンテンツ](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -90,7 +90,7 @@ ms.locfileid: "84545524"
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
- ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName "ReportServerSharePoint:Service" のパフォーマンス カウンターの一覧を返します。  
+ ![PowerShell 関連コンテンツ](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName "ReportServerSharePoint:Service" のパフォーマンス カウンターの一覧を返します。  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -100,5 +100,4 @@ ms.locfileid: "84545524"
  [レポート サーバーのパフォーマンスの監視](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター (ネイティブ モード)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター (SharePoint モード)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
-  
   

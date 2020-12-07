@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0c01d66062747788bd9bf05ca8cf06e8e5088a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 933f79938c641ff1efd6a4143a788888c9362608
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430764"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192712"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC 入力元のカスタム プロパティ
 
@@ -43,6 +43,5 @@ ms.locfileid: "88430764"
   
 ## <a name="see-also"></a>関連項目  
  [ODBC ソース](../../integration-services/data-flow/odbc-source.md)   
- [ODBC ソース エディター ([接続マネージャー] ページ)](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
-  
+ [ODBC ソース エディター ([接続マネージャー] ページ)](./odbc-source.md)  
   

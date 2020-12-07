@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67efc6d07c437288c96a954c2b6d748282102e29
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: afbf987cdebb4239d96d2c1cd4fcf87301093d76
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629171"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081751"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>サンプル アプリケーション (PDO_SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ AdventureWorks Product Reviews サンプル アプリケーションを実行す
 -   [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがアタッチされた SQL Server 2005 または SQL Server 2008 がローカル コンピューターにインストールされていること。  
 -   Web ブラウザーがインストールされていること。  
   
-## <a name="demonstrates"></a>対象  
+## <a name="adventureworks-example"></a>AdventureWorks の例  
 AdventureWorks Product Reviews サンプル アプリケーションでは、以下のデモンストレーションを行います。  
   
 -   Windows 認証を使用して SQL Server への接続を開く方法。  
@@ -46,8 +46,7 @@ AdventureWorks Product Reviews サンプル アプリケーションでは、以
 -   データを取得する方法。  
 -   エラーをチェックする方法。  
   
-## <a name="example"></a>例  
-AdventureWorks Product Reviews サンプル アプリケーションは、ユーザーが入力した文字列が名前に含まれる製品の情報をデータベースから返します。 返された製品の一覧から、ユーザーはレビューを表示し、画像を表示し、画像をアップロードし、選択した製品のレビューを書くことができます。  
+この例では、ユーザーが入力した文字列が名前に含まれる製品の情報をデータベースから返します。 返された製品の一覧から、ユーザーはレビューを表示し、画像を表示し、画像をアップロードし、選択した製品のレビューを書くことができます。  
   
 adventureworks_demo_pdo.php という名前のファイルに次のコードを追加します。  
   
@@ -452,7 +451,7 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="lob-example"></a>LOB の例  
 photo.php スクリプトは、指定された **ProductID**の製品の写真を返します。 このスクリプトは、adventureworks_demo.php スクリプトから呼び出されます。  
   
 photo_pdo.php という名前のファイルに次のコードを追加します。  

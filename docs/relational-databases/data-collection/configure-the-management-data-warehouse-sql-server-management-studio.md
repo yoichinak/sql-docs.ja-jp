@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6dc0705d65cf77dc0aa1f334fee2d78d2ca2e400
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733874"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193438"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>管理データ ウェアハウスの構成 (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85733874"
  このページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サーバーと管理データ ウェアハウスを選択します。 管理データ ウェアハウスは、収集したデータを格納するリレーショナル データベースです。  
   
 > [!NOTE]  
->  サーバー上に管理データ ウェアハウスを作成するには、適切なレベルのアクセス許可を持っている必要があります。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。 また、管理データ ウェアハウス ロール用のログインを作成するための、適切なレベルのアクセス許可も必要です。  
+>  サーバー上に管理データ ウェアハウスを作成するには、適切なレベルのアクセス許可を持っている必要があります。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)」を参照してください。 また、管理データ ウェアハウス ロール用のログインを作成するための、適切なレベルのアクセス許可も必要です。  
   
  **サーバー名**  
  管理データ ウェアハウスをホストするサーバーの名前を指定します。  
@@ -139,5 +139,4 @@ ms.locfileid: "85733874"
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
  [データ コレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)  
-  
   

@@ -20,18 +20,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7ae7ebd74df736f2f9d8356971244f09cfb9544
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1f0b5fb8d88feb32a0543bc6edcbdf892587abf
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497590"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035035"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>スケジュールの作成とジョブへのアタッチ
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュール設定とは、ユーザーの操作なしでジョブの実行が開始される条件を定義することです。 ジョブのスケジュールを設定して自動的に実行するには、ジョブの新しいスケジュールを作成するか、既存のスケジュールをジョブにアタッチします。  
   
@@ -99,4 +99,3 @@ CPU アイドル条件は、特定の時間にわたり、CPU 使用率が一定
 ## <a name="see-also"></a>参照  
 [sp_help_jobschedule](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)  
 [sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
-  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f076f67c09d28ff4725587e3470d56e81b1c9aef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c7e51f31643e61d5847395a92dae50c7ee5eaeb
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883820"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524007"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>マージ レプリケーションの競合の詳細 - 論理レコードの解決
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85883820"
  アーティクルに対して競合の追跡と競合解決のレベルを指定するには、[マージ レプリケーションのオプションの変更](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)に関する記事を参照してください。  
   
 ## <a name="conflict-detection"></a>競合検出  
- 論理レコードの競合検出方法は、 **column_tracking** と **logical_record_level_conflict_detection**の 2 つのアーティクル プロパティによって決定されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンでは、論理レコード レベルの検出もサポートしています。  
+ 論理レコードの競合検出方法は、 **column_tracking** と **logical_record_level_conflict_detection** の 2 つのアーティクル プロパティによって決定されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンでは、論理レコード レベルの検出もサポートしています。  
   
  **logical_record_level_conflict_detection** アーティクル プロパティは TRUE または FALSE のいずれかに設定できます。 この値はトップ レベルの親アーティクルに対してのみ設定してください。子アーティクルでは無視されます。 この値が FALSE の場合、マージ レプリケーションは以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のように、アーティクルの **column_tracking** プロパティの値のみに基づいて、競合を検出します。 この値が TRUE の場合、マージ レプリケーションはアーティクルの **column_tracking** プロパティを無視し、論理レコードのどこかで変更が行われた場合に競合を検出します。 たとえば、次のシナリオについて考えてみます。  
   
  ![値を持つ 3 つのテーブルの論理レコード](../../../relational-databases/replication/merge/media/logical-records-05.gif "値を持つ 3 つのテーブルの論理レコード")  
   
- **Customers**、 **Orders**、または **OrderItems** テーブルの Customer2 論理レコードに対して 2 人のユーザーが値を変更した場合に競合が検出されます。 この例では、UPDATE ステートメントにより変更が行われていますが、INSERT または DELETE ステートメントによる変更でも競合が検出されることがあります。  
+ **Customers** 、 **Orders** 、または **OrderItems** テーブルの Customer2 論理レコードに対して 2 人のユーザーが値を変更した場合に競合が検出されます。 この例では、UPDATE ステートメントにより変更が行われていますが、INSERT または DELETE ステートメントによる変更でも競合が検出されることがあります。  
   
 ## <a name="conflict-resolution"></a>競合解決  
  既定では、マージ レプリケーションは優先度に基づくロジックを使用して競合を解決します。 2 つのサブスクライバー データベースで競合する変更が行われた場合、サブスクリプションの優先度が高いサブスクライバー側の変更が優先されます。優先度が同じである場合は、パブリッシャーに先に到達した変更が優先されます。 行レベルおよび列レベルの検出では、優先度の低い行は常に優先される行全体で上書きされます。  
@@ -76,7 +76,7 @@ ms.locfileid: "85883820"
   
  競合は論理レコード レベルで解決されるため、レプリケーション処理中にパブリッシャー側で行われた変更が優先され、サブスクライバー テーブルの変更を置換します。  
   
- ![関連する行に対する変更を示す一連のテーブル](../../../relational-databases/replication/merge/media/logical-records-06.gif "関連する行に対する変更を示す一連のテーブル")  
+ ![関連する行に対する変更を示す 1 つ目の一連のテーブル。](../../../relational-databases/replication/merge/media/logical-records-06.gif "関連する行に対する変更を示す一連のテーブル")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>行レベルの検出、論理レコード レベルの解決  
  この例では、パブリケーションは次のように構成されています。  
@@ -91,7 +91,7 @@ ms.locfileid: "85883820"
   
  競合は論理レコード レベルで解決されるため、同期中にパブリッシャー側で行われた変更が優先され、サブスクライバー テーブルの変更を置換します。  
   
- ![関連する行に対する変更を示す一連のテーブル](../../../relational-databases/replication/merge/media/logical-records-07.gif "関連する行に対する変更を示す一連のテーブル")  
+ ![関連する行に対する変更を示す 2 つ目の一連のテーブル。](../../../relational-databases/replication/merge/media/logical-records-07.gif "関連する行に対する変更を示す一連のテーブル")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>論理レコード レベルの検出、論理レコード レベルの解決  
  この例では、パブリケーションは次のように構成されています。  
@@ -100,11 +100,11 @@ ms.locfileid: "85883820"
   
 -   **logical_record_level_conflict_resolution** は TRUE  
   
- パブリッシャーとサブスクライバーは同じデータセットから開始します。 パブリッシャーは **customers** テーブルの **custcol1** 列を変更します。 サブスクライバーは **orders** テーブルの **ordercol1** 列を変更します。 同じ行または列に対する変更はありませんが、 **custid**=1 の同じ論理レコードが変更されているため、この変更は論理レコード レベルでは競合として検出されます。  
+ パブリッシャーとサブスクライバーは同じデータセットから開始します。 パブリッシャーは **customers** テーブルの **custcol1** 列を変更します。 サブスクライバーは **orders** テーブルの **ordercol1** 列を変更します。 同じ行または列に対する変更はありませんが、 **custid** =1 の同じ論理レコードが変更されているため、この変更は論理レコード レベルでは競合として検出されます。  
   
  競合は論理レコード レベルでも解決されるため、同期中にパブリッシャー側で行われた変更が優先され、サブスクライバー テーブルの変更を置換します。  
   
- ![関連する行に対する変更を示す一連のテーブル](../../../relational-databases/replication/merge/media/logical-records-08.gif "関連する行に対する変更を示す一連のテーブル")  
+ ![関連する行に対する変更を示す 3 つ目の一連のテーブル。](../../../relational-databases/replication/merge/media/logical-records-08.gif "関連する行に対する変更を示す一連のテーブル")  
   
 ## <a name="see-also"></a>参照  
  [論理レコードによる関連行への変更のグループ化](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

@@ -23,12 +23,12 @@ ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23d7ea90f1bd30500ae568a8833ec88244a1e4a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44884bdfe8b5981ade28508a016e8e3f3b78bfb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496983"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193252"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,16 +39,18 @@ ms.locfileid: "88496983"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 CLOSE MASTER KEY  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
  引数はありません。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  このステートメントでは、OPEN MASTER KEY によって実行される操作の逆が実行されます。 CLOSE MASTER KEY は、データベース マスター キーが、現在のセッションで OPEN MASTER KEY ステートメントを使って開かれたときにのみ成功します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -56,7 +58,7 @@ CLOSE MASTER KEY
   
 ## <a name="examples"></a>例  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CLOSE MASTER KEY;  
 GO  
@@ -64,7 +66,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-```  
+```sql  
 USE master;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
 GO   

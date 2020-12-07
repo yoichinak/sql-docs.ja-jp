@@ -13,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 813f838e1eae555d28f51a4f799864cc2b2dce15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bf7994b1b7091bb95800ab1d8e3034f4bafef76
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479785"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037745"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -34,6 +34,9 @@ Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースの記憶�
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="remarks"></a>解説
 
 `DBCC SHOWRESULTCACHESPACEUSED` コマンドは、パラメーターがなく、このコマンドを実行したデータベースで使用されるスペースが返されます。
@@ -54,7 +57,7 @@ VIEW SERVER STATE 権限が必要です。
 ## <a name="see-also"></a>参照
 
 [結果セットのキャッシュを使用したパフォーマンスのチューニング](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
-[ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
-[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
-[SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>
-[DBCC DROPRESULTSETCACHE  &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)
+[ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../statements/alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)</br>
+[ALTER DATABASE &#40;Transact-SQL&#41;](../statements/alter-database-transact-sql.md?view=azure-sqldw-latest)</br>
+[SET RESULT SET CACHING &#40;Transact-SQL&#41;](../statements/set-result-set-caching-transact-sql.md)</br>
+[DBCC DROPRESULTSETCACHE  &#40;Transact-SQL&#41;](./dbcc-dropresultsetcache-transact-sql.md)

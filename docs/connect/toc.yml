@@ -38,20 +38,75 @@
           href: ../connect/ado-net/enable-eventsource-tracing.md
         - name: AppContext スイッチ
           href: ../connect/ado-net/appcontext-switches.md
+        - name: トラブルシューティング ガイド
+          href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
         - name: 追加情報の検索
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: ADO.NET のデータ型のマッピング
+      href: ../connect/ado-net/data-type-mappings-ado-net.md
+      items:
+        - name: SQL Server データ型のマッピング
+          href: ../connect/ado-net/sql-server-data-type-mappings.md
+        - name: 浮動小数点数
+          href: ../connect/ado-net/floating-point-numbers.md
+    - name: ADO.NET でのデータの取得および変更
+      href: ../connect/ado-net/retrieving-modifying-data.md
+      items:
+        - name: データ ソースへの接続
+          href: ../connect/ado-net/connecting-to-data-source.md
+          items:
+            - name: 接続の確立
+              href: ../connect/ado-net/establishing-connection.md
+            - name: 接続イベント
+              href: ../connect/ado-net/connection-events.md
+        - name: 接続文字列
+          href: ../connect/ado-net/connection-strings.md
+          items:
+            - name: 接続文字列ビルダー
+              href: ../connect/ado-net/connection-string-builders.md
+            - name: 接続文字列と構成ファイル
+              href: ../connect/ado-net/connection-strings-and-configuration-files.md
+            - name: 接続文字列の構文
+              href: ../connect/ado-net/connection-string-syntax.md
+            - name: 接続情報の保護
+              href: ../connect/ado-net/protecting-connection-information.md
+        - name: 接続のプール
+          href: ../connect/ado-net/connection-pooling.md
+          items:
+            - name: SQL Server の接続プール (ADO.NET)
+              href: ../connect/ado-net/sql-server-connection-pooling.md
+        - name: コマンドおよびパラメーター
+          href: ../connect/ado-net/commands-parameters.md
+          items:
+            - name: コマンドの実行
+              href: ../connect/ado-net/execute-command.md
+            - name: パラメーターの構成
+              href: ../connect/ado-net/configure-parameters.md
+            - name: CommandBuilder でのコマンドの生成
+              href: ../connect/ado-net/generate-commands-with-commandbuilders.md
+            - name: データベースからの単一の値の取得
+              href: ../connect/ado-net/obtain-single-value-from-database.md
+            - name: コマンドを使用したデータ変更
+              href: ../connect/ado-net/use-commands-to-modify-data.md
+              items:
+                - name: データ ソースのデータの更新
+                  href: ../connect/ado-net/update-data-inside-data-source.md
+                - name: カタログ操作の実行
+                  href: ../connect/ado-net/perform-catalog-operations.md
     - name: SQL Server と ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
         - name: SQL Server のセキュリティ
           href: ../connect/ado-net/sql/sql-server-security.md
           items:
-            - name: SQL Server での認証
+            - name: 認証
               href: ../connect/ado-net/sql/authentication-sql-server.md
-            - name: SQL Server におけるアプリケーション セキュリティのシナリオ
+            - name: Azure Active Directory 認証
+              href: ../connect/ado-net/sql/azure-active-directory-authentication.md
+            - name: アプリケーション セキュリティ シナリオ
               href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
               items:
-                - name: SQL Server での安全な動的 SQL の作成
+                - name: 安全な動的 SQL の作成
                   href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
             - name: SQL Server Express のセキュリティ
               href: ../connect/ado-net/sql/sql-server-express-security.md
@@ -5124,6 +5179,8 @@
           href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
         - name: Azure Active Directory の使用
           href: ../connect/oledb/features/using-azure-active-directory.md
+        - name: データ分類の使用
+          href: ../connect/oledb/features/using-data-classification.md
         - name: データベース ミラーリングの使用
           href: ../connect/oledb/features/using-database-mirroring.md
         - name: 検証を伴わない暗号化の使用
@@ -5394,6 +5451,12 @@
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
                 - name: 'ISSCommandWithParameters::SetParameterProperties'
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
+                - name: ISSDataClassification
+                  items:
+                    - name: ISSDataClassification
+                      href: oledb/ole-db-interfaces/issdataclassification-ole-db.md
+                    - name: 'ISSDataClassification::GetSensitivityClassification'
+                      href: oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md
             - name: 方法
               href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
               items:
@@ -5987,8 +6050,6 @@
               href: ../ado/guide/data/handling-errors-in-vbscript.md
             - name: Visual C++ でエラーを処理する
               href: ../ado/guide/data/handling-errors-in-visual-c.md
-            - name: Visual J++ でエラーを処理する
-              href: ../ado/guide/data/handline-errors-in-visual-j.md
             - name: JScript でエラーを処理する
               href: ../ado/guide/data/handling-errors-in-jscript.md
         - name: エラーの予測
@@ -6011,8 +6072,6 @@
               href: ../ado/guide/data/ado-event-instantiation-visual-basic.md
             - name: "ADO イベントのインスタンス化: Visual\_C++"
               href: ../ado/guide/data/ado-event-instantiation-visual-c.md
-            - name: 'ADO イベントのインスタンス化: Visual J++'
-              href: ../ado/guide/data/ado-event-instantiation-visual-j.md
             - name: 'ADO イベントのインスタンス化: [VBScript]'
               href: ../ado/guide/data/ado-event-instantiation-vbscript.md
             - name: 'ADO イベントのインスタンス化: JScript'

@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e507c40fba6755a0a7a82e3047b2b9b44cbc66d
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: e50c5c3f239900ab1c477f1c9d49507b3b4a43e8
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84012660"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935342"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)
   テキスト ボックスは、データ領域内のレポート アイテムまたは個々のセルであり、テキスト、計算フィールド、データベース内のフィールドへのポインター、またはこの 3 つのアイテムの組み合わせが格納されます。 フォントと色の組み合わせ、太字や斜体のスタイルの追加、整列配置やぶら下げインデントなどの段落スタイルの使用が可能です。 また、テキスト ボックス全体の書式を設定することも、テキスト ボックス内の特定のテキスト、数値、式、またはフィールドの書式を設定することも可能です。  
@@ -44,7 +44,7 @@ ms.locfileid: "84012660"
   
 -   **レポート データ** ペインからテキスト ボックスにフィールドをドラッグしてドロップします。 レポート本文のその他の場所に式をドラッグした場合は、プレースホルダーを含んだ新しいテキスト ボックスが作成されます。 このプレースホルダーの値は、ドロップされたフィールドに対応するフィールド式になります。  
   
--   テキスト ボックス内で右クリックし、 **[プレースホルダーの挿入]** を選択します。 **[プレースホルダーのプロパティ]** ダイアログ ボックスで、プレースホルダーの値として式を指定できます。 詳細については、「 [[全般] ([プレースホルダーのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)」をご覧ください。  
+-   テキスト ボックス内で右クリックし、 **[プレースホルダーの挿入]** を選択します。 **[プレースホルダーのプロパティ]** ダイアログ ボックスで、プレースホルダーの値として式を指定できます。 詳細については、「 [[全般] ([プレースホルダーのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)](./text-boxes-report-builder-and-ssrs.md)」をご覧ください。  
   
 -   任意の単純型または複合型の式をテキスト ボックスに入力します。 たとえば、テキスト ボックスに「 **Name: [Name]** 」と入力すると、式 **を表すプレースホルダーとして** [Name] `=Fields!Name.Value`というテキストが表示されます。  
   
@@ -74,8 +74,7 @@ ms.locfileid: "84012660"
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [ゲージのスケールの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [[プレースホルダーのプロパティ] ダイアログ ボックス、[全般] &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [[プレースホルダーのプロパティ] ダイアログ ボックス、[全般] &#40;レポート ビルダーおよび SSRS&#41;](./text-boxes-report-builder-and-ssrs.md)   
  [Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [テキスト ボックス (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0dc98efb298d06682b29c53c05b14e014ad8361a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f0aa604a88902dc8bfba522556f11b267fa1e184
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111253"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92037165"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (データベース エンジン)
 
@@ -46,7 +46,7 @@ SqlInt16 GetLevel ( )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>戻り値の型  
-**SQL Server の戻り値の型: smallint **
+**SQL Server の戻り値の型: smallint**
   
 **CLR の戻り値の型: SqlInt16**
   
@@ -94,7 +94,6 @@ this.GetLevel()
 ```  
   
 ## <a name="see-also"></a>参照
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  

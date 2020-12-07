@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e34be2d218041a4c8994bf0bea5579942f444ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b19a591448da6e14c6275462ba6cb5ae595092a0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430984"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197216"
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
 
@@ -46,12 +46,12 @@ ms.locfileid: "88430984"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="property-settings"></a>プロパティの設定  
  プロセス実行タスクがカスタム アプリケーションを実行するとき、アプリケーションには、次のいずれかまたは両方の方法で入力が提供されます。  
   
--   **StandardInputVariable** プロパティの設定で指定された変数。 変数の詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
+-   **StandardInputVariable** プロパティの設定で指定された変数。 変数の詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../integration-services-ssis-variables.md)」を参照してください。  
   
 -   **Arguments** プロパティの設定で指定された引数。 たとえば文書を Word で開く場合、引数で .doc ファイルの名前を指定できます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88430984"
   
  プロセス実行タスクの各種プロパティを設定する際にも、式を使用できます。  
   
- **StandardInputVariable** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、アプリケーションから **Console.ReadLine** メソッドを呼び出して、入力を読み取ります。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリの「[Console.ReadLine メソッド](https://go.microsoft.com/fwlink/?LinkId=129201)」トピックを参照してください。  
+ **StandardInputVariable** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、アプリケーションから **Console.ReadLine** メソッドを呼び出して、入力を読み取ります。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリの「[Console.ReadLine メソッド](/dotnet/api/system.console.readline)」トピックを参照してください。  
   
  **Arguments** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、次のいずれかの手順を実行して、引数を取得します。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88430984"
   
 -   Microsoft Visual C# を使用してアプリケーションを作成する場合は、**Main** メソッドを使用します。  
   
-     詳細については、『C# プログラミング ガイド』の「 [コマンド ライン引数 (C# プログラミング ガイド)](https://go.microsoft.com/fwlink/?LinkId=129406)」を参照してください。  
+     詳細については、『C# プログラミング ガイド』の「 [コマンド ライン引数 (C# プログラミング ガイド)](/dotnet/csharp/programming-guide/main-and-command-args/command-line-arguments)」を参照してください。  
   
  プロセス実行タスクには、 **StandardOutputVariable** プロパティおよび **StandardErrorVariable** プロパティがあります。それぞれ、アプリケーションの標準出力とエラー出力を取り込むための変数を指定できます。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88430984"
  **[StandardInputVariable]**  
  プロセスが入力する変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [変数の追加](../integration-services-ssis-variables.md)  
   
  **[StandardOutputVariable]**  
  プロセスの出力をキャプチャする変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
@@ -145,5 +145,4 @@ ms.locfileid: "88430984"
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

@@ -24,14 +24,14 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79fb6976eb128e31965290df302a222bcf55177e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b0e264f1111ffc924466fdbb658b3f1e278d3f3a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728530"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130517"
 ---
 # <a name="backup-devices-sql-server"></a>バックアップ デバイス (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -102,7 +102,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **注:** 既定の場所は、 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** の **BackupDirectory**レジストリ キーに格納されます。  
+> **注:** 既定の場所は、 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** の **BackupDirectory** レジストリ キーに格納されます。  
   
    
 ###  <a name="back-up-to-a-network-share-file"></a><a name="NetworkShare"></a> ネットワーク共有ファイルにバックアップする  
@@ -117,7 +117,7 @@ GO
     > **重要:** ネットワーク経由でデータをバックアップすると、ネットワーク エラーの影響を受ける場合があります。そのため、リモート ディスクを使用する際はバックアップ操作を終了後に検証することをお勧めします。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)」をご覧ください。  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>UNC (汎用名前付け規則) 名を指定する  
- バックアップ コマンドや復元コマンドでネットワーク共有を指定するには、ファイルの完全修飾 UNC (汎用名前付け規則) 名をバックアップ デバイスに使用します。 UNC 名の形式は、 **\\\\** _Systemname_ **\\** _ShareName_ **\\** _Path_ **\\** _FileName_です。  
+ バックアップ コマンドや復元コマンドでネットワーク共有を指定するには、ファイルの完全修飾 UNC (汎用名前付け規則) 名をバックアップ デバイスに使用します。 UNC 名の形式は、 **\\\\** _Systemname_ **\\** _ShareName_ **\\** _Path_ **\\** _FileName_ です。  
   
  次に例を示します。  
   
@@ -134,7 +134,7 @@ GO
    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データをテープにバックアップするには、テープ ドライブが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムでサポートされている必要があります。 また、特定のテープ ドライブでは、ドライブの製造元で推奨されているテープのみを使用することをお勧めします。 テープ ドライブのインストール方法の詳細については、Windows オペレーティング システムのマニュアルを参照してください。  
   
- テープ ドライブを使用する場合、バックアップ操作は 1 つのテープがいっぱいになると、別のテープで続行できます。 各テープには、メディア ヘッダーが含まれています。 最初に使用されるメディアは *先頭テープ*といいます。 その後の各テープは *後続テープ* と呼ばれ、前のテープより 1 つ大きいメディア シーケンス番号が付けられます。 たとえば、4 つのテープ デバイスに関連付けられているメディア セットには、少なくとも 4 つの先頭テープ (およびデータベースが収まらない場合は 4 組の後続テープ) が含まれます。 バックアップ セットを追加する場合は、その組に最終テープをセットする必要があります。 最終テープがセットされていない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、セットされているテープの終わりまでスキャンし、テープを変更するように要求します。 その時点で、最終テープをセットします。  
+ テープ ドライブを使用する場合、バックアップ操作は 1 つのテープがいっぱいになると、別のテープで続行できます。 各テープには、メディア ヘッダーが含まれています。 最初に使用されるメディアは *先頭テープ* といいます。 その後の各テープは *後続テープ* と呼ばれ、前のテープより 1 つ大きいメディア シーケンス番号が付けられます。 たとえば、4 つのテープ デバイスに関連付けられているメディア セットには、少なくとも 4 つの先頭テープ (およびデータベースが収まらない場合は 4 組の後続テープ) が含まれます。 バックアップ セットを追加する場合は、その組に最終テープをセットする必要があります。 最終テープがセットされていない場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、セットされているテープの終わりまでスキャンし、テープを変更するように要求します。 その時点で、最終テープをセットします。  
   
  テープ バックアップ デバイスは、次の点を除いて、ディスク デバイスと同じように使用します。  
   

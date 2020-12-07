@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0d2e9cd5f22c0aea8b44c0e7db527be893c732f8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116654"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
@@ -50,7 +50,7 @@ OBJECTPROPERTYEX ( id , property )
  現在のデータベース内のオブジェクトの ID を表す式を指定します。 *id* のデータ型は **int** で、現在のデータベース コンテキストでのスキーマ スコープ オブジェクトであることが前提となっています。  
   
  *property*  
- ID で指定したオブジェクトについて、返される情報を含む式を指定します。戻り値の型は **sql_variant**です。 次の表に、各プロパティ値に対する基本のデータ型を示します。  
+ ID で指定したオブジェクトについて、返される情報を含む式を指定します。戻り値の型は **sql_variant** です。 次の表に、各プロパティ値に対する基本のデータ型を示します。  
   
 > [!NOTE]  
 >  *property* が有効なプロパティ名でない場合、*id* が有効なオブジェクト ID でない場合、*id* が指定した *property* でサポートされていないオブジェクトの種類であった場合、または呼び出し側にオブジェクトのメタデータを表示する権限がない場合は、特に指定のない限り、NULL が返されます。  

@@ -15,12 +15,12 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: aa659269808555f37a570963d82119d1360d1ef4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 76197097f2e0fc6961c06d7413a8d4f3acb88780
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463207"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038035"
 ---
 # <a name="generating-reports-oracletosql"></a>レポートの生成 (OracleToSQL)
 コマンドを使用して実行される特定のアクティビティのレポートは、SSMA コンソールのオブジェクトツリーレベルで生成されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "88463207"
   
     Reports vis vis コマンドは次のとおりです。  
   
-    |法. いいえ。|コマンド|レポート タイトル|  
+    |法. いいえ。|command|レポート タイトル|  
     |-|-|-|  
     |1|生成-評価-レポート|AssessmentReport &lt; n &gt;XML|  
     |2|変換-スキーマ|SchemaConversionReport &lt; n &gt;XML|  
@@ -140,5 +140,4 @@ ms.locfileid: "88463207"
 -   失敗-スクリプト  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソールの実行 (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[SSMA コンソールの実行 (Oracle)](./executing-the-ssma-console-oracletosql.md)  

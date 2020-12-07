@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4bf7faa22088fd00c646a5760923e7e6a64a9eac
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024452"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124240"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,12 +68,12 @@ ALTER ROLE role_name
 
 ## <a name="arguments"></a>引数
  *role_name*  
- **適用対象: **  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  変更するデータベース ロールを指定します。  
   
  ADD MEMBER *database_principal*  
- **適用対象: **  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  データベース ロールのメンバーシップにデータベース プリンシパルを追加することを指定します。  
   
@@ -82,7 +82,7 @@ ALTER ROLE role_name
 -   *database_principal* には固定データベース ロールまたはサーバー プリンシパルは指定できません。  
   
 DROP MEMBER *database_principal*  
- **適用対象: **  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  データベース ロールのメンバーシップからデータベース プリンシパルを削除することを指定します。  
   
@@ -91,7 +91,7 @@ DROP MEMBER *database_principal*
 -   *database_principal* には固定データベース ロールまたはサーバー プリンシパルは指定できません。  
   
 WITH NAME = *new_name*  
- **適用対象: **  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  ユーザー定義データベース ロールの名前を変更することを指定します。 データベース内に存在しない新しい名前を指定してください。  
   
@@ -121,7 +121,7 @@ WITH NAME = *new_name*
 ## <a name="examples"></a>例  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. データベース ロールの名前の変更  
- **適用対象: **  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  次の例では、ロール `buyers` の名前を `purchasing` に変更します。   この例では、[AdventureWorks](https://msftdbprodsamples.codeplex.com/) サンプル データベースで実行できます。
   
@@ -130,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. ロール メンバーの追加または削除  
- **適用対象: **  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  この例では、`Sales` という名前のデータベース ロールを作成します。 メンバーシップに Barry という名前のデータベース ユーザーを追加してから、メンバー Barry を削除する方法を示します。   この例では、[AdventureWorks](https://msftdbprodsamples.codeplex.com/) サンプル データベースで実行できます。
   

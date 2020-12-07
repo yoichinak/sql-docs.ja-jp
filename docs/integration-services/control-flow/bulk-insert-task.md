@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1fc520e8c1f9044b86bea23ae226d14de4a3088e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b395bda0eb9c5eaa8ff5bf34fa7ed1f8bf18df8f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431064"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726003"
 ---
 # <a name="bulk-insert-task"></a>一括挿入タスク
 
@@ -101,7 +101,7 @@ ms.locfileid: "88431064"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>プログラムによる一括挿入タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
@@ -109,13 +109,13 @@ ms.locfileid: "88431064"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
 -   support.microsoft.com の技術記事: [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](https://go.microsoft.com/fwlink/?LinkId=233693)  
   
--   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=233700)  
+-   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))  
   
 -   simple-talk.com の技術記事: [SQL Server Integration Services を使用してデータの一括読み込みを行う](https://go.microsoft.com/fwlink/?LinkId=233701)  
   
@@ -217,4 +217,3 @@ ms.locfileid: "88431064"
   
 > [!NOTE]  
 >  一括読み込み操作でインポートできない行は、1 つのエラーとしてカウントされます。  
-  

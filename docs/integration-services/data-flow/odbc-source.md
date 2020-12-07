@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392118"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194775"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
 
@@ -51,7 +51,7 @@ ms.locfileid: "88392118"
   
 -   標準出力データ列。  
   
- ODBC 入力元は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)」を参照してください。  
+ ODBC 入力元は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](./odbc-destination.md)」を参照してください。  
   
 ## <a name="data-type-support"></a>データ型のサポート  
  ODBC 入力元でサポートされるデータ型については、「Connector for Open Database Connectivity (ODBC)」を参照してください。  
@@ -195,5 +195,4 @@ ms.locfileid: "88392118"
   
 #### <a name="redirect-flow"></a>[フローのリダイレクト]  
  エラーまたは切り捨てが ODBC 入力元のエラー出力に送られる原因となった行。  
-  
   

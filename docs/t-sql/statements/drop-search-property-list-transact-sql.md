@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16183df11f450e0bcef6425f7ad20a514971ad8f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: de8f55242f3727eb1491b9a89e9bf7d349cef860
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540624"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131110"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "89540624"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP SEARCH PROPERTY LIST property_list_name  
 ;  
 ```  
@@ -49,7 +48,7 @@ DROP SEARCH PROPERTY LIST property_list_name
   
  既存のプロパティ リストの名前を表示するには、次のように [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) カタログ ビューを使用します。  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
@@ -77,7 +76,7 @@ SELECT name FROM sys.registered_search_property_lists;
 ## <a name="examples"></a>例  
  次の例では、`JobCandidateProperties` プロパティ リストを `AdventureWorks2012` データベースから削除します。  
   
-```  
+```sql  
 DROP SEARCH PROPERTY LIST JobCandidateProperties;  
 GO  
 ```  

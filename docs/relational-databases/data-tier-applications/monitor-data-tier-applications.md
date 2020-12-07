@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d485d827f94c3ed9fe8e30fa48fd978aca6971a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad3aeaa27bba3594489a70d4f98492596fd0d747
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456534"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195054"
 ---
 # <a name="monitor-data-tier-applications"></a>データ層アプリケーションの監視
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "88456534"
  SSMS **オブジェクト エクスプローラー** では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが SQL Server ユーティリティに管理されているかどうかにかかわらず、インスタンスに配置された各 DAC についての基本的な構成情報が表示されます。 また、データベースの監視と同じ手順で、配置された DAC に関連付けられたデータベースを監視することもできます。  
   
 ## <a name="using-the-sql-server-utility"></a>SQL Server ユーティリティの使用  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー**の **[配置済みのデータ層アプリケーション]** 詳細ページにダッシュボードが表示されます。このダッシュボードに [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに配置済みのすべての DAC に関するリソース使用状況が報告されます。 詳細ページの上部ペインには、配置済みの各 DAC が視覚インジケーターと共に表示されます。視覚インジケーターは、CPU およびファイル リソースの使用状況が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのために定義されたポリシーに適合しているかどうかを示します。 リスト ビュー内の任意の DAC を選択すると、さらに詳細な情報がページの下部ペインにあるタブに表示されます。 詳細ページに示される情報の詳細については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)」を参照してください。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー**の **[配置済みのデータ層アプリケーション]** 詳細ページにダッシュボードが表示されます。このダッシュボードに [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに配置済みのすべての DAC に関するリソース使用状況が報告されます。 詳細ページの上部ペインには、配置済みの各 DAC が視覚インジケーターと共に表示されます。視覚インジケーターは、CPU およびファイル リソースの使用状況が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのために定義されたポリシーに適合しているかどうかを示します。 リスト ビュー内の任意の DAC を選択すると、さらに詳細な情報がページの下部ペインにあるタブに表示されます。 詳細ページに示される情報の詳細については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130))」を参照してください。  
   
  **[配置済みのデータ層アプリケーション]** の詳細ページを使用すると、ハードウェア リソースを十分に活用していない DAC や、ハードウェア リソースに負荷を生じている DAC を迅速に特定でき、問題に対処するための計画を立てることができます。 現在のハードウェア リソースを十分に活用していない DAC が複数ある場合には、1 台のサーバーに統合して、一部のサーバーを別の用途のために解放することもできます。 現在のサーバー上のリソースに負荷を生じている DAC がある場合は、その DAC を規模の大きいサーバーに移動することも、現在のサーバーにリソースを追加することもできます。  
   
- リソース使用率の制限の最小値と最大値は、アプリケーション監視ポリシーによって定義されます。このポリシーは、 **[ユーティリティ管理]** 詳細ページで定義されます。 データベース管理者は、所属する組織で規定されている制限値に適合するようポリシーを調整できます。 たとえば、ある企業では DAC の最大 CPU 使用率を 75% に設定し、別の企業では 80% に設定する場合もあります。 アプリケーション監視ポリシーの設定の詳細については、「[ユーティリティの管理 &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)」を参照してください。  
+ リソース使用率の制限の最小値と最大値は、アプリケーション監視ポリシーによって定義されます。このポリシーは、 **[ユーティリティ管理]** 詳細ページで定義されます。 データベース管理者は、所属する組織で規定されている制限値に適合するようポリシーを調整できます。 たとえば、ある企業では DAC の最大 CPU 使用率を 75% に設定し、別の企業では 80% に設定する場合もあります。 アプリケーション監視ポリシーの設定の詳細については、「[ユーティリティの管理 &#40;SQL Server ユーティリティ&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))」を参照してください。  
   
  **[配置済みのデータ層アプリケーション]** 詳細ページを表示するには  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88456534"
 ## <a name="using-the-dac-system-views-and-tables"></a>DAC のシステム ビューとシステム テーブルの使用  
  msdb.dbo.sysdac_history_internal システム テーブルは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス上で実行されるすべての DAC 管理アクションの成功または失敗を記録します。 このテーブルには、各アクションの発生時刻とアクションを開始したログインが記録されます。 詳細については、「[sysdac_history_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-history-internal.md)」を参照してください。  
   
- DAC システム ビューは、基本的なカタログ情報を報告します。 詳細については、「[データ層アプリケーションのビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)」を参照してください。  
+ DAC システム ビューは、基本的なカタログ情報を報告します。 詳細については、「[データ層アプリケーションのビュー &#40;Transact-SQL&#41;](../system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)」を参照してください。  
   
 ## <a name="monitoring-dac-databases"></a>DAC データベースの監視  
  DAC が正常に配置されると、DAC に含まれるデータベースは、他のデータベースと同様に動作します。 データベースに関するパフォーマンス、ログ、イベント、およびリソース使用状況は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の標準的なテクニックとツールを使用して監視できます。  
@@ -76,5 +76,4 @@ ms.locfileid: "88456534"
 ## <a name="see-also"></a>参照  
  [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [データ層アプリケーションの配置](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
-  
   

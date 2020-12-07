@@ -17,12 +17,12 @@ ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 5e70db23f7fb2e07855228204a8c1318c9eb0a2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afe40ef4863965905dedd825ee04bdb8a0e3e4d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479992"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038677"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>多対多リレーションシップの割り当て (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,13 +40,12 @@ ms.locfileid: "88479992"
   
 4.  2 つのテーブルの各主キー列を交差テーブルにコピーします。 他の列も、他のテーブルに追加するのと同様に交差テーブルに追加できます。  
   
-5.  交差テーブルで、他の 2 つのテーブルの主キーをすべて含めて主キーを設定します。 詳細については、[主キーの作成方法](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214)に関する記事を参照してください。  
+5.  交差テーブルで、他の 2 つのテーブルの主キーをすべて含めて主キーを設定します。 詳細については、[主キーの作成方法](../../relational-databases/tables/create-primary-keys.md)に関する記事を参照してください。  
   
-6.  2 つの各主テーブルと交差テーブルとの間に一対多リレーションシップを定義します。 交差テーブルは、作成するリレーションシップの "多" 側に配置します。 詳細については、[テーブル間のリレーションシップの作成](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)に関する記事を参照してください。  
+6.  2 つの各主テーブルと交差テーブルとの間に一対多リレーションシップを定義します。 交差テーブルは、作成するリレーションシップの "多" 側に配置します。 詳細については、[テーブル間のリレーションシップの作成](../../relational-databases/tables/create-foreign-key-relationships.md)に関する記事を参照してください。  
   
     > [!NOTE]  
     > データベース ダイアグラムで交差テーブルを作成しても、関連テーブルから交差テーブルにデータは挿入されません。 テーブルにデータを挿入する方法については、「[方法 : 複製挿入クエリを作成する (Visual Database Tools)](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [データベース ダイアグラムの使用 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-  

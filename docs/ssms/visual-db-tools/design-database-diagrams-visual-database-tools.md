@@ -19,12 +19,12 @@ ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 062c72f0a57807c42d03ec3b40c5ef04a24c2586
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b813ed75abfe3577ad7dc90accc7837d36024bd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417788"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038925"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>データベース ダイアグラムのデザイン (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88417788"
   
 テーブルを変更し、まだ保存していない場合は、保存されていない変更があることを示すアスタリスク (*) がテーブル名の最後に表示されます。 変更したテーブルおよびダイアグラムの保存については、「 [データベース ダイアグラムの使用 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**行セレクター** 行セレクターをクリックすると、テーブルの中のデータベース列を選択できます。 列がテーブルの主キーに含まれる場合は、行セレクターに鍵の記号が表示されます。 主キーについては、「[キーの使用](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)」を参照してください。  
+**行セレクター** 行セレクターをクリックすると、テーブルの中のデータベース列を選択できます。 列がテーブルの主キーに含まれる場合は、行セレクターに鍵の記号が表示されます。 主キーについては、「[キーの使用](../../relational-databases/tables/primary-and-foreign-key-constraints.md)」を参照してください。  
   
 **プロパティ列** プロパティ列は、テーブルの特定のビューにだけ表示されます。 テーブルは、5 種類のいずれのビューでも表示できるので、ダイアグラムのサイズとレイアウトを管理するときの参考になります。  
   
@@ -73,4 +73,3 @@ ms.locfileid: "88417788"
 [データベース ダイアグラムの使用 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [データベース ダイアグラムでのテーブルの使用 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
 [ダイアグラムのレイアウトの操作 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
-  

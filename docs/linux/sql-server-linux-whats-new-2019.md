@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9610ca6f434f78d332eb85fbf4ed71a4d477946a
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: d0cd1e6c7af5fd4d2f8742e88b4b8853645fe5a7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442896"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115450"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux の新機能
 
@@ -42,7 +42,7 @@ SQL Server 2019 on Linux では、次の更新が行われています。
 | Linux での PolyBase | 非 Hadoop コネクタ向けに Linux に [PolyBase をインストール](../relational-databases/polybase/polybase-linux-setup.md)します。<br/><br/>[PolyBase 型のマッピング](../relational-databases/polybase/polybase-type-mapping.md) |
 | 変更データ キャプチャ (CDC) のサポート | SQL Server 2019 では、変更データ キャプチャ (CDC) が Linux でサポートされるようになりました。 |
 | Microsoft Container Registry | [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] など、Microsoft の新しい公式コンテナー イメージのために Docker Hub が取り替えられます。 |
-| ルート以外のコンテナー | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、既定でルート以外のユーザーとして [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] を起動することで、より安全なコンテナーを作成できるようになりました。 詳細については、「[非ルート ユーザーとして SQL Server コンテナーを作成して実行する](sql-server-linux-configure-docker.md#buildnonrootcontainer)」を参照してください。 |
+| ルート以外のコンテナー | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、既定でルート以外のユーザーとして [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] を起動することで、より安全なコンテナーを作成できるようになりました。 詳細については、「[非ルート ユーザーとして SQL Server コンテナーを作成して実行する](./sql-server-linux-docker-container-security.md#buildnonrootcontainer)」を参照してください。 |
 
 ## <a name="next-steps"></a>次のステップ
 

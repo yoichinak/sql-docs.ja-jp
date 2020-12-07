@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e5bfae7baa757b2655e63470be427ea46bebed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bd7f2478a08b00d1eb970b80ca3e5fb9f168d21
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457439"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196470"
 ---
 # <a name="cdc-source"></a>CDC ソース
 
@@ -36,7 +36,7 @@ ms.locfileid: "88457439"
   
  CDC ソースは、次の構成を使用します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースにアクセスするための、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 接続マネージャー。 CDC ソース接続を構成する方法の詳細については、「 [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースにアクセスするための、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 接続マネージャー。 CDC ソース接続を構成する方法の詳細については、「 [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;]()」を参照してください。  
   
 -   CDC のために有効にされたテーブル。  
   
@@ -105,11 +105,11 @@ use <cdc-enabled-database-name>
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+-   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;]()  
   
--   [[CDC ソース エディター] &#40;[列] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [[CDC ソース エディター] &#40;[列] ページ&#41;]()  
   
--   [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [CDC ソース エディター &#40;[エラー出力] ページ&#41;]()  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
   
@@ -251,5 +251,4 @@ use <cdc-enabled-database-name>
 ## <a name="related-content"></a>関連コンテンツ  
   
 -   mattmasson.com のブログ「 [CDC ソースの処理モード](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)」  
-  
   

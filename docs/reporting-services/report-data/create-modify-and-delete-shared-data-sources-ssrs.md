@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 027ff3184e38b1d1848c6a42d2387cd9a8677dc3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 287347c10600b0038cf3489a0c8df8fae8a00661
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812287"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934696"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
   共有データ ソースは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーで実行される複数のレポート、モデル、およびデータ ドリブン サブスクリプションから参照できる一連のデータ ソース接続プロパティの集まりです。  共有データ ソースを使用することで、時間の経過に伴って変更されることの多いデータ ソースのプロパティを容易に管理できます。 ユーザーのアカウントまたはパスワードが変更された場合や、データベースを別のサーバーに移動した場合は、接続情報を 1 か所で更新できます。  
@@ -97,7 +97,7 @@ ms.locfileid: "85812287"
   
     -   データ ソースで資格情報を使用しない場合 (ファイル システムからアクセス可能な XML ファイルをデータ ソースとして使用する場合など) は、 **[資格情報は必要ありません]** をクリックします。 この資格情報オプションは、使用するデータ ソースで妥当と考えられる場合にのみ指定してください。 認証を必要とするデータ ソースに対してこのオプションを選択した場合、接続エラーが発生します。 このオプションを選択する場合は、ユーザーの資格情報を利用できない場合に、レポート サーバーが他のコンピューターに接続して、データまたはファイルを取得できるように、必ず自動実行アカウントを構成してください。  
   
-         資格情報の構成の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。 自動実行アカウントについては、「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
+         資格情報の構成の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。 自動実行アカウントの詳細については、「[自動実行アカウントの構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
 9. データ ソース構成を検証するには、 **[接続テスト]** をクリックします。  
   

@@ -7,27 +7,26 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1c2860efa5b47d3f6b6209f152e7085094fabaf3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b525a2cd2a5450aec3df9a7d3157bc4aff05735f
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178969"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870117"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL (CREATE EXTERNAL LIBRARY) を使用して SQL Server に R パッケージをインストールする
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 この記事では、機械学習が有効になっている SQL Server のインスタンスに、新しい Python パッケージをインストールする方法について説明します。 複数のアプローチから選択できます。 R に慣れていないサーバー管理者については、T-SQL を使用することをお勧めします。
 
-[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) ステートメントを使用すると、R または Python コードを直接実行せずに、パッケージまたはパッケージ セットを、インスタンスまたは特定のデータベースに追加できます。 ただし、この方法を使用するには、パッケージの準備と追加のデータベース権限が必要です。
+[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) ステートメントを使用すると、R または Python コードを直接実行せずに、パッケージまたはパッケージ セットを、インスタンスまたは特定のデータベースに追加できます。 ただし、この方法を使用するには、パッケージの準備と追加のデータベース権限が必要です。
 
 + すべてのパッケージが、インターネットからオンデマンドでダウンロードするのではなく、ローカルの zip 形式ファイルとして使用できる必要があります。
 
 + すべての依存関係が名前とバージョンで特定され、ZIP ファイルに含まれている必要があります。 ダウンストリーム パッケージの依存関係を含め、必要なパッケージが使用できない場合、ステートメントは失敗します。 
 
-+ 自分が **db_owner** であるか、データベース ロールに CREATE EXTERNAL LIBRARY 権限がある必要があります。 詳細については、「[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)」を参照してください。
++ 自分が **db_owner** であるか、データベース ロールに CREATE EXTERNAL LIBRARY 権限がある必要があります。 詳細については、「[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)」を参照してください。
 
 ## <a name="download-packages-in-archive-format"></a>アーカイブ形式でパッケージをダウンロードする
 
@@ -68,4 +67,4 @@ EXEC sp_execute_external_script
 ## <a name="see-also"></a>関連項目
 
 + [R パッケージ情報の取得](r-package-information.md)
-+ [R のチュートリアル](../tutorials/sql-server-r-tutorials.md)
++ [R のチュートリアル](../tutorials/r-tutorials.md)

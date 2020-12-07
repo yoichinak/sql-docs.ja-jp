@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f9091e7ef4115d2809c629cedda524a947b695e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 81ed1647780a2d755abeeb73ed8139ccf0660fbc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920318"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987468"
 ---
 # <a name="report-designer-f1-help"></a>レポート デザイナーの F1 ヘルプ
   このセクションでは、[!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート デザイナー ウィザード、ビュー、およびダイアログ ボックスの F1 ヘルプについて説明します。 ダイアログ ボックスの使用中は、F1 キーを押すか、ダイアログ ボックスに表示される [ヘルプ] をクリックすることで、F1 ヘルプを開くことができます。  
   
 ## <a name="see-also"></a>参照  
-+ [SQL Server Data Tools - Business Intelligence for Visual Studio のインストール](https://msdn.microsoft.com/library/68ed2924-9104-4c79-974f-0e87212ec2e1)
++ [SQL Server Data Tools - Business Intelligence for Visual Studio のインストール](/previous-versions/sql/)
 + [機能リファレンス (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)
 + [Reporting Services レポート (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md) 
    
-  
   

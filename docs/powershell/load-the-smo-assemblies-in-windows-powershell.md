@@ -1,50 +1,46 @@
 ---
-title: Windows PowerShell への SMO アセンブリの読み込み | Microsoft Docs
-description: SQL Server PowerShell プロバイダーを使用しない Windows PowerShell スクリプトに SQL Server 管理オブジェクト (SMO) アセンブリを読み込む方法について学習します。
-ms.custom: ''
-ms.date: 03/14/2017
+title: Windows PowerShell への SMO アセンブリの読み込み
+description: SQL Server PowerShell プロバイダーを使用しない Windows PowerShell スクリプトに SQL Server 管理オブジェクト (SMO) アセンブリを読み込む方法について説明します。
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 673e94da44cbdd46a8873468b4421a1a8ea4e037
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 0879219da144a234f89de7434630cbf3d15c01bb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714230"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005389"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Windows PowerShell への SMO アセンブリの読み込み
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この記事では、SQL Server PowerShell プロバイダーを使用しない Windows PowerShell スクリプトに SQL Server 管理オブジェクト (SMO) アセンブリを読み込む方法について説明します。  
-  
-> [!NOTE]
-> SQL Server PowerShell モジュールには **SqlServer** と **SQLPS** の 2 つがあります。 **SQLPS** モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。 **SqlServer** モジュールには **SQLPS** のコマンドレットの更新バージョンだけでなく、最新の SQL 機能をサポートする新しいコマンドレットも含まれています。  
-> SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれて*いました*が、SSMS の 16.x バージョンのみです。 PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを PowerShell ギャラリーからインストールする必要があります。
-> **SqlServer** モジュールをインストールする場合は、「[SQL Server PowerShell のインストール](download-sql-server-ps-module.md)」を参照してください。
 
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 SMO アセンブリを読み込むための推奨メカニズムは、**SqlServer** モジュールを読み込むことです。 モジュールに含まれている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、自動的に SMO アセンブリを読み込み、PowerShell スクリプトでの SMO オブジェクトの実用性を拡張する機能も実装します。
-  
+
 ただし、次の 2 つの場合については、直接 SMO アセンブリを読み込む必要があります。  
-  
--   スクリプトが、プロバイダーを参照する最初のコマンドまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スナップインのコマンドレットより先に SMO オブジェクトを参照する場合。  
-  
--   プロバイダーやコマンドレットを使用しない別の言語 (C#、Visual Basic など) から SMO コードを移植する場合。  
-  
-## <a name="example-loading-the-sql-server-management-objects"></a>例:SQL Server 管理オブジェクトの読み込み  
- SMO アセンブリを読み込むコードを次に示します。  
-  
-```  
-#  
+
+- スクリプトが、プロバイダーを参照する最初のコマンドまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スナップインのコマンドレットより先に SMO オブジェクトを参照する場合。  
+
+- プロバイダーまたはコマンドレットを使用しない別の言語 (C#、Visual Basic など) から SMO コードを移植する場合。  
+
+## <a name="example-loading-the-sql-server-management-objects"></a>例:SQL Server 管理オブジェクトの読み込み
+
+SMO アセンブリを読み込むコードを次に示します。  
+
+```powershell
 # Loads the SQL Server Management Objects (SMO)  
-#  
-  
-$ErrorActionPreference = "Stop"  
+
+$ErrorActionPreference = "Stop"
   
 $sqlpsreg="HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
   
@@ -58,7 +54,7 @@ else
     $sqlpsPath = [System.IO.Path]::GetDirectoryName($item.Path)  
 }  
   
-$assemblylist =   
+$assemblylist =
 "Microsoft.SqlServer.Management.Common",  
 "Microsoft.SqlServer.Smo",  
 "Microsoft.SqlServer.Dmf ",  
@@ -88,11 +84,10 @@ foreach ($asm in $assemblylist)
   
 Push-Location  
 cd $sqlpsPath  
-update-FormatData -prependpath SQLProvider.Format.ps1xml   
+update-FormatData -prependpath SQLProvider.Format.ps1xml
 Pop-Location  
-```  
-  
-## <a name="see-also"></a>参照  
- [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  
+```
+
+## <a name="see-also"></a>参照
+
+- [SQL Server PowerShell](sql-server-powershell.md)

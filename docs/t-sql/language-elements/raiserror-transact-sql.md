@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4c2ec582a2900986906ee127ad48462dcb43c58
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 1696a1fdcf2e27b8c13b24cbc5ae5b7a43cb1eec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227229"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196826"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -141,7 +141,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  次の例に示すように、エラーに関連付けられた重大度の値を返すには -1 を指定できます。  
   
-```  
+```sql  
 RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');  
 ```  
   
@@ -186,7 +186,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  通常、最初の引数が最初の変換指定を置き換え、2 番目の引数が 2 番目の変換指定を置き換えるというように、連続する引数が連続する変換指定を置き換えます。 たとえば、次の `RAISERROR` ステートメントは、最初の引数 `N'number'` で最初の変換指定 `%s` を置き換え、2 番目の引数 `5` で 2 番目の変換指定 `%d.` を置き換えます。  
   
-```  
+```sql  
 RAISERROR (N'This is message %s %d.', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -200,7 +200,7 @@ GO
   
  たとえば、次の `RAISERROR` ステートメントはどちらも同じ文字列を返します。 一方のステートメントでは引数リストで width と precision の値を指定し、もう一方のステートメントでは変換指定でこれらを指定しています。  
   
-```  
+```sql  
 RAISERROR (N'<\<%*.*s>>', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -225,7 +225,7 @@ GO
 > [!NOTE]  
 >  RAISERROR では、1 から 127 までの状態番号のエラーだけが生成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では状態番号 0 のエラーが発生する場合があるため、ERROR_STATE によって返されるエラーの状態番号は、RAISERROR の state パラメーターの値として渡す前に確認することをお勧めします。  
   
-```  
+```sql  
 BEGIN TRY  
     -- RAISERROR with severity 11-19 will cause execution to   
     -- jump to the CATCH block.  
@@ -257,7 +257,7 @@ END CATCH;
 ### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. sys.messages 内でアドホック メッセージを作成する  
  次の例では、sys.messages カタログ ビューに格納されているメッセージが生成される方法を示します。 メッセージは、`sp_addmessage` システム ストアド プロシージャを使用して、メッセージ番号 `50005` として sys.messages カタログ ビューに追加されています。  
   
-```  
+```sql  
 sp_addmessage @msgnum = 50005,  
               @severity = 10,  
               @msgtext = N'<\<%7.3s>>';  
@@ -275,7 +275,7 @@ GO
 ### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>C. ローカル変数を使用してメッセージ テキストを指定する  
  次のコード例では、ローカル変数を使用して、`RAISERROR` ステートメントのメッセージ テキストを指定する方法を示します。  
   
-```  
+```sql  
 DECLARE @StringVariable NVARCHAR(50);  
 SET @StringVariable = N'<\<%7.3s>>';  
   

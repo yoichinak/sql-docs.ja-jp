@@ -12,12 +12,12 @@ helpviewer_keywords:
 - user-defined functions [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 47b35cd2dfee25b1ab2d9a8e9c2810749f59a80e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 859627b82b450014b7b68b93abf75d6dbe9ddbd7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860294"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727087"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>ユーザー定義関数の実行とリターン コードの処理 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860294"
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
  1 つ目の ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するストアド プロシージャを作成します。  
@@ -369,5 +369,4 @@ go
   
 ## <a name="see-also"></a>参照  
  [結果を処理する方法に関するトピック &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

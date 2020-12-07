@@ -13,12 +13,12 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 318ba0af0be327cbe938fd9498dcbce9e418650d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385808"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125259"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>データベース メールを使用するように SQL Server エージェント メールを構成する
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88385808"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
   > [!NOTE]
-  > Managed Instance 上の SQL エージェントは常に、データベース メールを使用するように構成されます。そのため、このコンテンツはマネージド インスタンスには該当しません。 Managed Instance では、SQL エージェントとデータベース メールをバインドする目的でプロファイルを用意する必要があります。このプロファイルの名前は **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** という名前にする必要があります。 
+  > Managed Instance 上の SQL エージェントは常に、データベース メールを使用するように構成されます。そのため、このコンテンツはマネージド インスタンスには該当しません。 Managed Instance では、SQL エージェントとデータベース メールをバインドする目的でプロファイルを用意する必要があります。このプロファイルの名前は **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** という名前にする必要があります。 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
@@ -81,5 +81,4 @@ ms.locfileid: "88385808"
 -   [オペレーター](../../ssms/agent/operators.md)  
   
      オペレーターとは、電子通知を受け取ることのできる人またはグループの別名です。  
-  
   

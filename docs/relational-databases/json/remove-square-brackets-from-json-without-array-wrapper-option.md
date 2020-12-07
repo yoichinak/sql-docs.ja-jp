@@ -14,10 +14,10 @@ ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f4580a7c3a566ba14f5cf20e177760751a451791
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490909"
 ---
 # <a name="remove-square-brackets-from-json---without_array_wrapper-option"></a>WITHOUT_ARRAY_WRAPPER オプションを使用して JSON から角かっこを削除する
@@ -37,7 +37,7 @@ SELECT 2015 as year, 12 as month, 15 as day
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
 
- **WITHOUT_ARRAY_WRAPPER** オプションを使用した**結果**  
+ **WITHOUT_ARRAY_WRAPPER** オプションを使用した **結果**  
   
 ```json  
 {
@@ -47,7 +47,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **WITHOUT_ARRAY_WRAPPER** オプションを使わない**結果** (既定)  
+ **WITHOUT_ARRAY_WRAPPER** オプションを使わない **結果** (既定)  
   
 ```json  
 [{
@@ -69,7 +69,7 @@ ORDER BY ModifiedDate
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
   
- **WITHOUT_ARRAY_WRAPPER** オプションを使用した**結果**  
+ **WITHOUT_ARRAY_WRAPPER** オプションを使用した **結果**  
   
 ```json  
 {
@@ -87,7 +87,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **WITHOUT_ARRAY_WRAPPER** オプションを使わない**結果** (既定)  
+ **WITHOUT_ARRAY_WRAPPER** オプションを使わない **結果** (既定)  
   
 ```json  
 [{

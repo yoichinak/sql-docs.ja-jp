@@ -25,12 +25,12 @@ ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 624910a714816d93d892991591674a076858aa4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8769671a5f769fcf7c7d6af1eff00406355ce33
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88308399"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380542"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88308399"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SYSUTCDATETIME ( )  
 ```  
 
@@ -69,7 +69,7 @@ SYSUTCDATETIME ( )
 ### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>A. 日付および時刻の関数から返される形式を表示する  
  次の例では、日付と時刻関数から返されるさまざまな形式を示します。  
   
-```  
+```sql
 SELECT SYSDATETIME() AS [SYSDATETIME()]  
     ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
     ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
@@ -92,7 +92,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### <a name="b-converting-date-and-time-to-date"></a>B. 日付と時刻を日付に変換する  
  次の例では、日付と時刻の値を `date` に変換する方法を示します。  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -115,7 +115,7 @@ SELECT CONVERT (date, SYSDATETIME())
 ### <a name="c-converting-date-and-time-values-to-time"></a>C. 日付と時刻の値を時刻に変換する  
  次の例では、日付と時刻の値を `time` に変換する方法を示します。  
   
- ```
+ ```sql
 DECLARE @DATETIME DATETIME = GetDate();
 DECLARE @TIME TIME
 SELECT @TIME = CONVERT(time, @DATETIME)

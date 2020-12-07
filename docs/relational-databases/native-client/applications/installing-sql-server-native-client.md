@@ -22,11 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 310fe1e7c2c42de405459becbde88334caf12dd5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0537a9fc955cdd27a243ec020199122260db2890
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005738"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384836"
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client のインストール
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "86005738"
  
  SQL Server 2016 Native Client がありません。 詳細については、「 [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md)」を参照してください。 
  
-また、SQL Server 2012 Feature Pack web ページから sqlncli.msi を取得することもできます。 最新バージョンの SQL Server Native Client をダウンロードするには、 [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/confirmation.aspx?id=29065)」を参照してください。 SQL Server 2012 より前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client もコンピューターにインストールされている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 11.0 は以前のバージョンとサイドバイサイドでインストールされます。  
+また、SQL Server 2012 Feature Pack web ページから sqlncli.msi を取得することもできます。 最新バージョンの SQL Server Native Client をダウンロードするには、 [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041)」を参照してください。 SQL Server 2012 より前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client もコンピューターにインストールされている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 11.0 は以前のバージョンとサイドバイサイドでインストールされます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client のファイル (sqlncli11.dll、sqlnclir11.rll、および s11ch_sqlncli.chm) は、次の場所にインストールされます。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "86005738"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client をインストールの一部としてインストールすることに加えて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sqlncli.msi という再配布可能なインストールプログラムもあります。これは、の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストールディスクにあり `%CD%\Setup\` ます。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、sqlncli.msi を使用して配布できます。 アプリケーションを配置する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client をインストールする必要があります。 チェイナーとブートストラップのテクノロジを使用すると、ユーザーが 1 回のインストール手順に従うだけで複数のパッケージをまとめてインストールできるようになります。 詳細については、「[Visual Studio 2005 用のカスタム ブートストラップ パッケージの作成](https://go.microsoft.com/fwlink/?LinkId=115667)」および「[カスタムの必須コンポーネントの追加](https://go.microsoft.com/fwlink/?LinkId=115668)」をご覧ください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、sqlncli.msi を使用して配布できます。 アプリケーションを配置する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client をインストールする必要があります。 チェイナーとブートストラップのテクノロジを使用すると、ユーザーが 1 回のインストール手順に従うだけで複数のパッケージをまとめてインストールできるようになります。 詳細については、「[Visual Studio 2005 用のカスタム ブートストラップ パッケージの作成](/previous-versions/aa730839(v=vs.80))」および「[カスタムの必須コンポーネントの追加](/visualstudio/deployment/creating-bootstrapper-packages)」をご覧ください。  
   
  x64 バージョンと Itanium バージョンの sqlncli.msi では、32 ビット バージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client もインストールされます。 アプリケーションが、開発時に使用したものとは異なるプラットフォームを対象としている場合、Microsoft ダウンロード センターから x64、Itanium、および x86 用のバージョンの sqlncli.msi をダウンロードできます。  
   
@@ -71,6 +72,5 @@ ms.locfileid: "86005738"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client を使用したアプリケーションの構築](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [インストール方法に関するトピック](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [インストール方法に関するトピック](/previous-versions/sql/)  
   

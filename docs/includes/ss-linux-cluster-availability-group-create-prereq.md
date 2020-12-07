@@ -166,6 +166,4 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 >[!IMPORTANT]
 >SQL Server 2017 リリースのデータベース ミラーリング エンドポイントでサポートされる唯一の認証方法は `CERTIFICATE` です。 `WINDOWS` オプションは今後のリリースで有効になる予定です。
 
-詳細については、「[データベース ミラーリング エンドポイント (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx)」を参照してください。
-
-
+詳細については、「[データベース ミラーリング エンドポイント (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)」を参照してください。

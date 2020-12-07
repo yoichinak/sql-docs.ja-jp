@@ -15,12 +15,12 @@ helpviewer_keywords:
 - InsertRow method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c48064ea8b75206d593f674335470ec6ae737dc
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 5a631a9385b323b3b8b8ac0d276ff9eb2d560ef3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860102"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726956"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ HRESULT InsertRow(
  一括コピーの行データを定義するアクセサーのハンドルを指定します。 参照されるアクセサーは行アクセサーで、データ値を保持するコンシューマー所有のメモリをバインドします。  
   
  *pData*[in]  
- データ値を保持するコンシューマー所有のメモリへのポインターを指定します。 詳細については、「[DBBINDING 構造体](https://go.microsoft.com/fwlink/?LinkId=65955)」を参照してください。  
+ データ値を保持するコンシューマー所有のメモリへのポインターを指定します。 詳細については、「[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
@@ -76,5 +76,4 @@ HRESULT InsertRow(
   
 ## <a name="see-also"></a>参照  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
-  
   

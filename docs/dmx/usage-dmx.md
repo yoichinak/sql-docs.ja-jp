@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e9108fc9bc53361a15d144f1f11afa62f9d5a97
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394858"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726049"
 ---
 # <a name="usage-dmx"></a>使用法 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "88394858"
   
  **Predict**型として指定された列は、入力列と出力列の両方として使用されます。 **Predictonly**として指定された列は、出力列としてのみ使用されます。 特定のアルゴリズムでは、列の予測を異なる方法で扱うことができます。  
   
- でサポートされる列の使用法の種類の詳細につい [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ては、「 [マイニングモデル列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」を参照してください。  
+ でサポートされる列の使用法の種類の詳細につい [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ては、「 [マイニングモデル列](/analysis-services/data-mining/mining-model-columns)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   
  [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -50,5 +50,4 @@ ms.locfileid: "88394858"
  [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

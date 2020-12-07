@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bcead6ebe4064dc43e97d0c0aa9d74920f69bbb8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539582"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809328"
 ---
 # <a name="sysservers-transact-sql"></a>sys. servers (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89539582"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|リンクサーバーのローカル ID。|  
 |**name**|**sysname**|**Server_id** = 0 の場合、返される値はサーバー名です。<br /><br /> **Server_id** > 0 の場合、返される値はリンクサーバーのローカル名になります。|  
-|**梱包**|**sysname**|リンクサーバーの製品名。 値 "SQL Server" は、の別のインスタンスを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|**product**|**sysname**|リンクサーバーの製品名。 値 "SQL Server" は、の別のインスタンスを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**provider**|**sysname**|リンク サーバー接続用の OLE DB プロバイダー名です。<br /><br />以降では [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 、値 "SQLNCLI" は既定で [Microsoft OLE DB Driver for SQL SERVER (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) にマップされます。 以前のバージョンでは、値 "SQLNCLI" は [SQL Server Native Client OLE DB プロバイダー (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md)にマップされていました。|  
 |**data_source**|**nvarchar (4000)**|データソース接続プロパティを OLE DB します。|  
 |**location**|**nvarchar (4000)**|OLE DB 場所接続プロパティです。 None の場合は NULL です。|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539582"
 |**is_nonsql_subscriber**|**bit**|サーバーは SQL Server 以外のレプリケーション サブスクライバーです。|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|1の場合、リモートストアドプロシージャを呼び出すと分散トランザクションが開始され、トランザクションは MS DTC に参加します。 詳細については、「 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)からデータにアクセスする方法について説明します。|  
 |**modify_date**|**datetime**|サーバー情報が前回変更された日付です。|  
-|**is_rda_server**|**bit**|**適用対象:** 以降 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />サーバーはリモートデータアーカイブの有効化 (stretch 対応) です。 詳細については、「 [Enable Stretch Database on the server](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)」を参照してください。|
+|**is_rda_server**|**bit**|**適用対象:** 以降 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />サーバーはリモートデータアーカイブの有効化 (stretch 対応) です。 詳細については、「 [Enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。|
   
 ## <a name="permissions"></a>アクセス許可  
  **Provider_string**の値は、呼び出し元が ALTER ANY LINKED SERVER 権限を持っていない限り、常に NULL になります。  
@@ -80,4 +80,3 @@ ms.locfileid: "89539582"
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
- 

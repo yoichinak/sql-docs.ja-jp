@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 393d9d10fd882f1dedfbaac012b2dbd0ec200a3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bffd325b4c940302ebcc4fef67c17f5f76c03a00
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450017"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724664"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>ナレッジ ベースへのナレッジの追加
 
@@ -44,14 +44,14 @@ ms.locfileid: "88450017"
   
 -   ドキュメント化された詳細情報については、「 [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md)」を参照してください。  
   
--   ナレッジ検出の実行方法を示すビデオについては、 [ここ](https://msdn.microsoft.com/sqlserver/hh323825.aspx)をクリックしてください。  
+-   ナレッジ検出の実行方法を示すビデオについては、 [ここ](../sql-server/index.yml)をクリックしてください。  
   
 ##  <a name="manage-data-values-in-a-domain"></a><a name="ManageDomain"></a> ドメイン内のデータ値を管理する  
  DQS では、コンピューター支援型のナレッジ検出アクティビティで生成されたメタデータを対話的に変更および拡張することができます。 これはドメイン管理アクティビティで行います。ドメイン管理アクティビティでは、特定のデータ値に変更を適用することができます。  
   
 -   ドキュメント化された詳細情報については、「 [Change Domain Values](../data-quality-services/change-domain-values.md)」を参照してください。  
   
--   ドメイン管理の実行方法を示すビデオについては、 [ここ](https://msdn.microsoft.com/sqlserver/hh323825.aspx)をクリックしてください。 このビデオでは、ナレッジ検出ウィザードの [ドメイン値の管理] ページでドメイン値を変更します。 この手順は、ドメイン管理アクティビティの [ドメイン値] ページでも行うことができます。  
+-   ドメイン管理の実行方法を示すビデオについては、 [ここ](../sql-server/index.yml)をクリックしてください。 このビデオでは、ナレッジ検出ウィザードの [ドメイン値の管理] ページでドメイン値を変更します。 この手順は、ドメイン管理アクティビティの [ドメイン値] ページでも行うことができます。  
   
 ##  <a name="import-knowledge-from-a-dqs-file"></a><a name="DQSFile"></a> Dqs ファイルからのナレッジのインポート  
  .dqs データ ファイルから既存のナレッジ ベースにドメインをインポートしたり、.dqs から新しいナレッジ ベースにナレッジ ベース全体をインポートしたりできます。 これを行うには、まず既存のドメインまたはナレッジ ベースを .dqs ファイルにエクスポートする必要があります。 ドメインを含む .dqs ファイルには、ドメインのすべてのデータが格納されています。ナレッジ ベースを含む .dqs ファイルには、ドメインや照合ポリシーを含むナレッジ ベースのすべての情報が格納されています。  
@@ -72,5 +72,4 @@ ms.locfileid: "88450017"
  DQS には、DQS データと呼ばれる構築済みのナレッジ ベースが同梱されています。このナレッジ ベースには、米国の会社および住所データのドメインが含まれています。 このナレッジ ベースを使用すると、新しいナレッジ ベースを作成することなく、プロジェクトをすばやく開始できます。 DQS データ ナレッジ ベースは読み取り専用ですが、データ スチュワードはこれに基づいて新しいナレッジ ベースを作成できます。  
   
 -   ドキュメント化された詳細情報については、「 [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md)」を参照してください。  
-  
   

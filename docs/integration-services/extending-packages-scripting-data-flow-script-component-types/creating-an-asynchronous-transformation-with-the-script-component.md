@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05d28638ebb8981c0ccce4e6bb38ab7179565d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d271139edbde0f1c67467b6fe880f916fb6c5142
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495617"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122994"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>スクリプト コンポーネントによる非同期変換の作成
 
@@ -53,7 +53,7 @@ ms.locfileid: "88495617"
   
  **[スクリプト変換エディター]** の **[入力列]** ページには、データ フローの上流コンポーネントの出力で使用できる列が一覧表示されます。 変換する列、またはそのまま出力する列を選択します。 変換するすべての列の適切な場所に、読み取り/書き込みのマークを付けます。  
   
- **[スクリプト変換エディター]** の **[入力列]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力列] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)」を参照してください。  
+ **[スクリプト変換エディター]** の **[入力列]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力列] ページ&#41;](../data-flow/transformations/script-component.md)」を参照してください。  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>入力、出力、および出力列の設定  
  変換コンポーネントには、1 つ以上の出力を設定できます。  
@@ -70,7 +70,7 @@ ms.locfileid: "88495617"
   
 -   追加情報を格納するために列を追加する場合があります。 その場合、追加した列にデータを格納するには、独自のコードを記述する必要があります。 標準エラー出力の動作の再現については、「[スクリプト コンポーネントに対するエラー出力のシミュレート](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)」を参照してください。  
   
- **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)」を参照してください。  
+ **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../data-flow/transformations/script-component.md)」を参照してください。  
   
 ### <a name="adding-variables"></a>変数の追加  
  値をスクリプト内で使用する既存の変数がある場合は、 [スクリプト変換エディター] の [スクリプト] ページで、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドに追加できます。  
@@ -79,7 +79,7 @@ ms.locfileid: "88495617"
   
  スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
   
- **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)」を参照してください。  
+ **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../data-flow/transformations/script-component.md)」を参照してください。  
   
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>コード デザイン モードでの非同期変換コンポーネントのスクリプト作成  
  コンポーネントのメタデータをすべて構成した後、カスタム スクリプトを記述できます。 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開いて、カスタム スクリプトを追加できます。 使用するスクリプト言語は、 **[スクリプト]** ページの **[ScriptLanguage]** プロパティで、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic と [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# のどちらをスクリプト言語として選択したかによって決まります。  
@@ -238,5 +238,4 @@ public class ScriptMain:
  [同期変換と非同期変換について](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [スクリプト コンポーネントによる同期変換の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [非同期出力型のカスタム変換コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
-  
   

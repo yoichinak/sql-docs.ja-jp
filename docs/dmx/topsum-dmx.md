@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2406141d9ffe5846e4dd26e75d471391992d1490
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc9127339e23443ea76c8f68820a96261991556c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395188"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726082"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
  **TopSum**関数は、各行の引数の評価値に基づいて、順位の降順で最上位行を返し \<rank expression> ます。これは、値の合計が、引数で指定された指定された合計値以上であることを \<rank expression> 示し \<sum> ます。 **TopSum** は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
   
 ## <a name="examples"></a>例  
- 次の例では、「 [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
+ 次の例では、「 [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  TopPercent の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
  結果の例:  
   
@@ -103,5 +103,4 @@ NATURAL PREDICTION JOIN
  [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
  [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX&#41;&#40;TopPercent ](../dmx/toppercent-dmx.md)  
-  
   

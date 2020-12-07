@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: c73439c6fd7015bcd6bbae61d4164348331deb17
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279338"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866596"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server とデータベースの暗号化キー (データベース エンジン)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "86279338"
 >  上記のキーすべてにアクセスできなくなると、それらのキーで保護されているオブジェクト、接続、およびデータにもアクセスできなくなります。 ここで示したリンクの説明に従ってサービス マスター キーを復元するか、または元の暗号化システムに戻ってアクセスを復旧します。 アクセスを復旧するための "抜け道" はありません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [サービス マスター キー](../../../relational-databases/security/encryption/service-master-key.md)  
+ [サービス マスター キー]()  
  サービス マスター キーとその推奨事項について簡単に説明します。  
   
  [拡張キー管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -105,5 +105,4 @@ ms.locfileid: "86279338"
  [暗号化キーの削除と再作成  &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
-  
   

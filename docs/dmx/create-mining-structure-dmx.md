@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab738433380302e0f3d8bc70113aa2a8d13f7ac8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414028"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726283"
 ---
 # <a name="create-mining-structure-dmx"></a>マイニング構造の作成 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,7 +35,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>引数  
- *structure*  
+ *データ*  
  構造の一意の名前です。  
   
  *列定義の一覧*  
@@ -65,7 +65,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ## <a name="remarks"></a>解説  
  マイニング構造を定義するには、列リストを指定し、必要に応じて列間の階層リレーションシップを指定して、さらに必要に応じてマイニング構造をトレーニング データセットとテスト データセットにパーティション分割します。  
   
- オプションの SESSION キーワードは、その構造が、現在のセッションの間しか使用できない一時的な構造であることを示します。 セッションが終了すると、構造と、その構造に基づくすべてのモデルが削除されます。 一時的なマイニング構造およびモデルを作成するには、まずデータベースプロパティ AllowSessionMiningModels を設定する必要があります。 詳細については、「 [データ マイニング プロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
+ オプションの SESSION キーワードは、その構造が、現在のセッションの間しか使用できない一時的な構造であることを示します。 セッションが終了すると、構造と、その構造に基づくすべてのモデルが削除されます。 一時的なマイニング構造およびモデルを作成するには、まずデータベースプロパティ AllowSessionMiningModels を設定する必要があります。 詳細については、「 [データ マイニング プロパティ](/analysis-services/server-properties/data-mining-properties)」を参照してください。  
   
 ## <a name="column-definition-list"></a>列定義の一覧  
  列定義リストに各列の次の情報を含めることによって、マイニング構造を定義します。  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  構造列の定義に使用できるデータ型、コンテンツの種類、列の分布、およびモデリングフラグの一覧については、次のトピックを参照してください。  
   
--   [データ型 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [データ型 (データ マイニング)](/analysis-services/data-mining/data-types-data-mining)  
   
--   [コンテンツの種類 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [コンテンツの種類 (データ マイニング)](/analysis-services/data-mining/content-types-data-mining)  
   
--   [列の分布 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [列の分布 (データ マイニング)](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [モデリング フラグ (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [モデリング フラグ (データ マイニング)](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  列には複数のモデリング フラグ値を定義できます。 ただし、1つの列に対して使用できるコンテンツの種類は1つとデータ型は1つだけです。  
   
@@ -113,7 +113,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  値の階層を示します。 関連する列のターゲットには、入れ子になったテーブルのキー列、ケース行の個別値列、または関連する TO 句を持つ別の列 (より深い階層を示す) を指定できます。  
   
 ## <a name="holdout-parameters"></a>提示パラメーター  
- 提示されたパラメーターを指定する場合は、構造データのパーティションを作成します。 予約に指定した量はテスト用に予約されており、残りのデータはトレーニングに使用されます。 既定では、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用してマイニング構造を作成する場合、30% のテスト データと 70% のトレーニング データを含む、提示されたパーティションが作成されます。 詳しくは、「 [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)」をご覧ください。  
+ 提示されたパラメーターを指定する場合は、構造データのパーティションを作成します。 予約に指定した量はテスト用に予約されており、残りのデータはトレーニングに使用されます。 既定では、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用してマイニング構造を作成する場合、30% のテスト データと 70% のトレーニング データを含む、提示されたパーティションが作成されます。 詳しくは、「 [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets)」をご覧ください。  
   
  データマイニング拡張機能 (DMX) を使用してマイニング構造を作成する場合は、提示されたパーティションを作成するように手動で指定する必要があります。  
   
@@ -182,5 +182,4 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

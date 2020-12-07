@@ -19,14 +19,14 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5fafee4f77a665f9409f5b7b6d1a4359765ed3ba
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880446"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127510"
 ---
 # <a name="network-protocols-and-network-libraries"></a>ネットワーク プロトコルとネットワーク ライブラリ
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "85880446"
 -   [ローカル エリア接続のプロパティ] で、 **[インターネット プロトコル (TCP/IP) のプロパティ]** ダイアログ ボックスを使用して、 **[Microsoft ネットワーク用ファイルとプリンター共有]** と **[Microsoft ネットワーク用クライアント]** を削除します。  
   
 ## <a name="endpoints"></a>エンドポイント  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続に関して新しい概念が導入されました。接続は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]*エンドポイント*によりサーバー エンドで表されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] エンドポイントに対して、権限の許可、取り消し、および拒否が行われます。 既定では、sysadmin グループのメンバーまたはエンドポイント所有者によって拒否または取り消しが行われない限り、エンドポイントへアクセスする権限はすべてのユーザーにあります。 GRANT、REVOKE、および DENY ENDPOINT 構文では、管理者がエンドポイントのカタログ ビューから取得する必要があるエンドポイント ID を使用します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続に関して新しい概念が導入されました。接続は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]*エンドポイント* によりサーバー エンドで表されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] エンドポイントに対して、権限の許可、取り消し、および拒否が行われます。 既定では、sysadmin グループのメンバーまたはエンドポイント所有者によって拒否または取り消しが行われない限り、エンドポイントへアクセスする権限はすべてのユーザーにあります。 GRANT、REVOKE、および DENY ENDPOINT 構文では、管理者がエンドポイントのカタログ ビューから取得する必要があるエンドポイント ID を使用します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行すると、専用管理者接続のエンドポイントに加えて、サポートされるすべてのネットワーク プロトコルの [!INCLUDE[tsql](../../includes/tsql-md.md)] エンドポイントが作成されます。  
   

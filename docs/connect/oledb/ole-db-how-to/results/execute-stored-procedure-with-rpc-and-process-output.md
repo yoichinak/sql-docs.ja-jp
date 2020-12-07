@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b9e62ebb5b8060c3b19e06d4e0af71981a63660c
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 27acbce6e1c8a93878c0f7d803264c568d9e46b9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860300"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727100"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>RPC と処理の出力でのストアド プロシージャの実行
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860300"
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドが複数の結果を返す場合は、**IMultipleResults::GetResult** が DB_S_NORESULT を返すとき、または **IMultipleResults** インターフェイスが完全に解放されるとき、いずれか早いほうの時点で、出力パラメーター データを使用できるようになります。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>リターン コードと出力パラメーターを処理するには  
   
@@ -399,5 +399,4 @@ GO
   
 ## <a name="see-also"></a>参照  
  [結果を処理する方法に関するトピック &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

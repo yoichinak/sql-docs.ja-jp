@@ -12,24 +12,24 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 857823bf01c537842a3d18e23c003d38ac6b68d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2bf769680bfc19180b03cf30235e6abbc8dd77b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765025"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867954"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Always Encrypted と .NET Framework Data Provider for SQL Server を使用する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-この記事では、[Always Encrypted](always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) と [.NET Framework Data Provider for SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx) を使用して、.NET アプリケーションを開発する方法について説明します。
+この記事では、[Always Encrypted](always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) と [.NET Framework Data Provider for SQL Server](/dotnet/framework/data/adonet/sql/) を使用して、.NET アプリケーションを開発する方法について説明します。
 
 Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 .NET Framework Data Provider for SQL Server など、Always Encrypted が有効のドライバーは、クライアント アプリケーション内の機密データを透過的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳しくは、「[Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)」および「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用してアプリケーションを開発する](always-encrypted-enclaves-client-development.md)」をご覧ください。
 
 ## <a name="prerequisites"></a>前提条件
 
 - データベースで Always Encrypted を構成します。 この処理には、Always Encrypted キーのプロビジョニング、および選択したデータベース列の暗号化の設定が含まれます。 Always Encrypted が構成されたデータベースがまだない場合は、「[Always Encrypted の作業の開始](always-encrypted-database-engine.md#getting-started-with-always-encrypted)」の手順に従います。
-- 開発用コンピューターに .NET Framework バージョン 4.6.1 以降がインストールされていることを確認します。 詳細については、「 [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx)」を参照してください。 また、開発環境内でターゲットの .NET Framework バージョンとして .NET Framework バージョン 4.6 以降が構成されていることも確認する必要があります。 Visual Studio を使用している場合は、「[方法: .NET Framework のバージョンをターゲットにする](https://msdn.microsoft.com/library/bb398202.aspx)」を参照してください。 
+- 開発用コンピューターに .NET Framework バージョン 4.6.1 以降がインストールされていることを確認します。 詳細については、「 [.NET Framework 4.6](/dotnet/framework/)」を参照してください。 また、開発環境内でターゲットの .NET Framework バージョンとして .NET Framework バージョン 4.6 以降が構成されていることも確認する必要があります。 Visual Studio を使用している場合は、「[方法: .NET Framework のバージョンをターゲットにする](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。 
 
 > [!NOTE]
 > .NET Framework の特定のバージョンでは、Always Encrypted のサポート レベルが異なります。 詳細については、以下の「Always Encrypted API リファレンス」セクションを参照してください。
@@ -57,7 +57,7 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 
 Always Encrypted は、個々のクエリに対しても有効にすることができます。 以下の「 **Always Encrypted のパフォーマンスの影響を制御する** 」セクションを参照してください。
 暗号化または暗号化解除を正常に行うには、Always Encrypted を有効にするだけでは不十分です。 次のことを確認する必要もあります。
-- アプリケーションが、データベース内の Always Encrypted キーに関するメタデータへのアクセスに必要な *VIEW ANY COLUMN MASTER KEY DEFINITION* および *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* データベース権限を持っている。 詳細については、「Always Encrypted (データベース エンジン)」の「 [Permissions (権限)](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7)」セクションを参照してください。
+- アプリケーションが、データベース内の Always Encrypted キーに関するメタデータへのアクセスに必要な *VIEW ANY COLUMN MASTER KEY DEFINITION* および *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* データベース権限を持っている。 詳細については、「Always Encrypted (データベース エンジン)」の「 [Permissions (権限)](./always-encrypted-database-engine.md#database-permissions)」セクションを参照してください。
 - アプリケーションが、列暗号化キーを保護する列マスター キーにアクセスでき、クエリされたデータベース列を暗号化する。
 
 ## <a name="enabling-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする
@@ -78,7 +78,7 @@ Always Encrypted は、個々のクエリに対しても有効にすることが
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>暗号化された列のデータを取得および変更する
 
-アプリケーション クエリに対して Always Encrypted を有効にすると、標準の ADO.NET API (「 [ADO.NET でのデータの取得および変更](https://msdn.microsoft.com/library/ms254937(v=vs.110).aspx)」を参照)、または [.NET Framework Data Provider for SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx) API ( [System.Data.SqlClient 名前空間](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)で定義) を使用して、暗号化されたデータベース列のデータを取得または変更することができます。 NET Framework Data Provider for SQL Server は、アプリケーションが必要なデータベース権限を持っており、列マスター キーにアクセスできると仮定して、暗号化された列をターゲットとするすべてのクエリ パラメーターを暗号化し、暗号化された列から取得されたデータを暗号化解除します。これにより、データベース スキーマ内の列用に設定された SQL Server データ型に対応する、.NET 型のプレーンテキスト値を返します。
+アプリケーション クエリに対して Always Encrypted を有効にすると、標準の ADO.NET API (「 [ADO.NET でのデータの取得および変更](/dotnet/framework/data/adonet/retrieving-and-modifying-data)」を参照)、または [.NET Framework Data Provider for SQL Server](/dotnet/framework/data/adonet/sql/) API ( [System.Data.SqlClient 名前空間](/dotnet/api/system.data.sqlclient)で定義) を使用して、暗号化されたデータベース列のデータを取得または変更することができます。 NET Framework Data Provider for SQL Server は、アプリケーションが必要なデータベース権限を持っており、列マスター キーにアクセスできると仮定して、暗号化された列をターゲットとするすべてのクエリ パラメーターを暗号化し、暗号化された列から取得されたデータを暗号化解除します。これにより、データベース スキーマ内の列用に設定された SQL Server データ型に対応する、.NET 型のプレーンテキスト値を返します。
 Always Encrypted が有効でない場合、暗号化された列をターゲットとするパラメーターを含むクエリは失敗します。 暗号化された列をターゲットとするパラメーターがクエリにない場合、クエリでは、暗号化された列からデータを取得できます。 ただし、.NET Framework Data Provider for SQL Server では、暗号化された列から取得された値の暗号化解除は試みられず、アプリケーションは、暗号化されたバイナリ データを (バイト配列として) 受け取ります。
 
 次の表は、Always Encrypted が有効かどうかに応じたクエリの動作をまとめたものです。
@@ -111,9 +111,9 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 この例では、Patients テーブルに列を挿入します。 次のことを考慮してください。
 - このサンプル コードの暗号化に固有のものは何もありません。 .NET Framework Data Provider for SQL Server は、暗号化された列をターゲットとする *paramSSN* および *paramBirthdate* パラメーターを自動的に検出し、暗号化します。 これにより、アプリケーションに対して暗号化が透過的に実行されます。 
-- 暗号化された列を含め、データベース列に挿入された値は、 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) オブジェクトとして渡されます。 **SqlParameter** の使用は、暗号化されていない列に値を送信する場合は省略可能ですが (ただし、SQL インジェクションを防ぐのに役立つので、強くお勧めします)、暗号化された列をターゲットとする値に対しては必須です。 SSN 列または BirthDate 列に挿入された値が、クエリ ステートメントに埋め込まれているリテラルとして渡された場合、クエリは失敗します。これは、.NET Framework Data Provider for SQL Server が、暗号化されたターゲットの列の値を決定できず、値を暗号化できないためです。 その結果、サーバーはこれらの値を、暗号化された列と互換性がないと見なして拒否します。
+- 暗号化された列を含め、データベース列に挿入された値は、 [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) オブジェクトとして渡されます。 **SqlParameter** の使用は、暗号化されていない列に値を送信する場合は省略可能ですが (ただし、SQL インジェクションを防ぐのに役立つので、強くお勧めします)、暗号化された列をターゲットとする値に対しては必須です。 SSN 列または BirthDate 列に挿入された値が、クエリ ステートメントに埋め込まれているリテラルとして渡された場合、クエリは失敗します。これは、.NET Framework Data Provider for SQL Server が、暗号化されたターゲットの列の値を決定できず、値を暗号化できないためです。 その結果、サーバーはこれらの値を、暗号化された列と互換性がないと見なして拒否します。
 - SSN 列をターゲットとするパラメーターのデータ型は、ANSI (非 Unicode) 文字列に設定され、char/varchar SQL Server データ型にマップされます。 パラメーターの型が Unicode 文字列 (String) に設定された場合、これらは nchar/nvarchar にマップされ、クエリは失敗します。これは、暗号化された nchar/nvarchar 値から暗号化された char/varchar 値への変換が、Always Encrypted でサポートされていないためです。 データ型のマッピングについては、「 [SQL Server データ型のマッピング](/dotnet/framework/data/adonet/sql-server-data-type-mappings) 」を参照してください。
-- BirthDate 列に挿入されるパラメーターのデータ型は、 [SqlParameter.DbType プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)の使用時に適用される SQL Server データ型への .NET 型の暗黙的なマッピングに依存することなく、 [SqlParameter.SqlDbType プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx)を使用してターゲット SQL Server データ型に明示的に設定されます。 既定では、 [DateTime 構造体](https://msdn.microsoft.com/library/system.datetime.aspx) は datetime の SQL Server データ型にマップされます。 BirthDate 列のデータ型は日付であり、暗号化された datetime 値から暗号化された date 値の変換は Always Encrypted でサポートされていないので、既定のマッピングを使用するとエラーになります。 
+- BirthDate 列に挿入されるパラメーターのデータ型は、 [SqlParameter.DbType プロパティ](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype)の使用時に適用される SQL Server データ型への .NET 型の暗黙的なマッピングに依存することなく、 [SqlParameter.SqlDbType プロパティ](/dotnet/api/system.data.sqlclient.sqlparameter.dbtype)を使用してターゲット SQL Server データ型に明示的に設定されます。 既定では、 [DateTime 構造体](/dotnet/api/system.datetime) は datetime の SQL Server データ型にマップされます。 BirthDate 列のデータ型は日付であり、暗号化された datetime 値から暗号化された date 値の変換は Always Encrypted でサポートされていないので、既定のマッピングを使用するとエラーになります。 
 
 ```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
@@ -255,7 +255,7 @@ System.Data.SqlClient.SqlException (0x80131904): Operand type clash: varchar is 
 ```
 
 このようなエラーを防ぐには、次のことを確認してください。
-- Always Encrypted が、暗号化された列をターゲットとするアプリケーション クエリに対して有効になっている (接続文字列で、または特定のクエリの [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) オブジェクトで)。
+- Always Encrypted が、暗号化された列をターゲットとするアプリケーション クエリに対して有効になっている (接続文字列で、または特定のクエリの [SqlCommand](/dotnet/api/system.data.sqlclient.sqlcommand) オブジェクトで)。
 - SqlParameter を使用して、暗号化された列をターゲットとするデータを送信すること。 次の例は、SqlParameter オブジェクト内のリテラルを渡す代わりに、暗号化された列 (SSN) でリテラル/定数によって不正なフィルター処理を行うクエリを示しています。 
 
 
@@ -271,7 +271,7 @@ cmd.ExecuteNonQuery();
 
 パラメーター値を暗号化するか、クエリ結果内のデータを暗号化解除するために、.NET Framework Data Provider for SQL Server は、ターゲット列に対して構成された列暗号化キーを取得する必要があります。 列暗号化キーは、データベースのメタデータに暗号化された形式で格納されています。 各列暗号化キーには、列暗号化キーの暗号化に使用された対応する列マスター キーが含まれます。 データベースのメタデータには、列マスター キーは格納されず、特定の列マスター キーとキー ストア内のキーの場所を含むキー ストアに関する情報のみが含まれます。
 
-列暗号化キーのプレーンテキスト値を取得するために、.NET Framework Data Provider for SQL Server は、まず列暗号化キーとその対応する列マスター キーの両方に関するメタデータを取得してから、メタデータ内の情報を使用して、列マスター キーを含むキー ストアと交信するとともに、暗号化された列暗号化キーを暗号化解除します。 .NET Framework Data Provider for SQL Server は、[SqlColumnEncryptionKeyStoreProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)から派生したクラスのインスタンスである列マスター キー ストア プロバイダーを使用して、キー ストアと交信します。
+列暗号化キーのプレーンテキスト値を取得するために、.NET Framework Data Provider for SQL Server は、まず列暗号化キーとその対応する列マスター キーの両方に関するメタデータを取得してから、メタデータ内の情報を使用して、列マスター キーを含むキー ストアと交信するとともに、暗号化された列暗号化キーを暗号化解除します。 .NET Framework Data Provider for SQL Server は、[SqlColumnEncryptionKeyStoreProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider)から派生したクラスのインスタンスである列マスター キー ストア プロバイダーを使用して、キー ストアと交信します。
 
 
 列暗号化キーを取得するプロセスは次のとおりです。
@@ -298,8 +298,8 @@ cmd.ExecuteNonQuery();
 | クラス | 説明 | プロバイダー (検索) 名 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider クラス| Windows 証明書ストアのプロバイダー。 | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注:** このプロバイダーは、.NET Framework 4.6.1 以降のバージョンで利用可能です。 |[Microsoft Cryptography API:Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx) をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。  | MSSQL_CNG_STORE|
-| [SqlColumnEncryptionCspProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**注:** このプロバイダーは、.NET Framework 4.6.1 以降のバージョンで利用可能です。| [Microsoft Cryptography API (CAPI)](https://msdn.microsoft.com/library/aa266944.aspx)をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。| MSSQL_CSP_PROVIDER |
+|[SqlColumnEncryptionCngProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider) <br><br>**注:** このプロバイダーは、.NET Framework 4.6.1 以降のバージョンで利用可能です。 |[Microsoft Cryptography API:Next Generation (CNG) API](/windows/win32/seccng/cng-portal) をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。  | MSSQL_CNG_STORE|
+| [SqlColumnEncryptionCspProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncspprovider)<br><br>**注:** このプロバイダーは、.NET Framework 4.6.1 以降のバージョンで利用可能です。| [Microsoft Cryptography API (CAPI)](/previous-versions/visualstudio/aa266944(v=vs.60))をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。| MSSQL_CSP_PROVIDER |
   
 これらのプロバイダーを使用しするために、アプリケーション コードを変更する必要はありませんが、次のことに注意してください。
 
@@ -308,11 +308,11 @@ cmd.ExecuteNonQuery();
 
 ### <a name="using-azure-key-vault-provider"></a>Azure Key Vault プロバイダーを使用する
 
-Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 .NET Framework Data Provider for SQL Server には、Azure Key Vault の組み込み列マスター キー ストア プロバイダーは含まれませんが、アプリケーションと容易に統合できる Nuget パッケージとして使用できます。 詳細については、「 [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault (Always Encrypted - データ暗号化によって SQL データベースの機密データを保護し、Azure Key Vault に暗号化キーを格納する)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)」を参照してください。
+Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 .NET Framework Data Provider for SQL Server には、Azure Key Vault の組み込み列マスター キー ストア プロバイダーは含まれませんが、アプリケーションと容易に統合できる Nuget パッケージとして使用できます。 詳細については、「 [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault (Always Encrypted - データ暗号化によって SQL データベースの機密データを保護し、Azure Key Vault に暗号化キーを格納する)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)」を参照してください。
 
 ### <a name="implementing-a-custom-column-master-key-store-provider"></a>カスタム列マスター キー ストア プロバイダーを実装する
 
-既存のプロバイダーでサポートされていないキー ストアに列マスター キーを格納する場合は、 [SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) を拡張し、 [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders.aspx) メソッドを使用してプロバイダーを登録して、カスタム プロバイダーを実装できます。
+既存のプロバイダーでサポートされていないキー ストアに列マスター キーを格納する場合は、 [SqlColumnEncryptionCngProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider) を拡張し、 [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders) メソッドを使用してプロバイダーを登録して、カスタム プロバイダーを実装できます。
 
 
 ```cs
@@ -347,7 +347,7 @@ public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
 
 .NET Framework Data Provider for SQL Server は、暗号化された列にアクセスする際に、列暗号化キーを暗号化解除するための適切な列マスター キー ストア プロバイダーを透過的に検索して呼び出します。 一般的に、通常のアプリケーション コードは列マスター キー ストア プロバイダーを直接呼び出しません。 ただし、プロバイダーを明示的にインスタンス化して呼び出し、プログラムを使用して Always Encrypted キーをプロビジョニングおよび管理することができます。これにより、(たとえば、一部の列マスター キーの回転として) 暗号化された列暗号化キーを生成したり、列暗号化キーを暗号化解除することができます。 詳しくは、「[Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)」をご覧ください。
 カスタム キー ストア プロバイダーを使用する場合に限り、独自のキー管理ツールの実装が必要になることがあります。 組み込みのプロバイダーが存在するキー ストア、または Azure Key Vault に格納されたキーを使用する場合は、SQL Server Management Studio や PowerShell などの既存のツールを使用してキーを管理およびプロビジョニングすることができます。
-次の例は、列暗号化キーを生成し、 [SqlColumnEncryptionCertificateStoreProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx) を使用して証明書でキーを暗号化する方法を示しています。
+次の例は、列暗号化キーを生成し、 [SqlColumnEncryptionCertificateStoreProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) を使用して証明書でキーを暗号化する方法を示しています。
 
 
 ```cs
@@ -392,7 +392,7 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 
 ### <a name="query-metadata-caching"></a>クエリ メタデータ キャッシュ
 
-.NET Framework 4.6.2 以降では、.NET Framework Data Provider for SQL Server はクエリ ステートメントごとに **sys.sp_describe_parameter_encryption** の結果をキャッシュします。 したがって、同じクエリ ステートメントが複数回実行される場合、ドライバーは **sys.sp_describe_parameter_encryption** を 1 回だけ呼び出します。 クエリ ステートメントの暗号化メタデータ キャッシュにより、データベースからメタデータをフェッチする場合のパフォーマンス コストが大幅に削減されます。 キャッシュは既定で有効になっています。 [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx)を false に設定して、パラメーター メタデータ キャッシュを無効にできますが、以下に示すようなまれなケースを除き、無効にすることはお勧めできません。
+.NET Framework 4.6.2 以降では、.NET Framework Data Provider for SQL Server はクエリ ステートメントごとに **sys.sp_describe_parameter_encryption** の結果をキャッシュします。 したがって、同じクエリ ステートメントが複数回実行される場合、ドライバーは **sys.sp_describe_parameter_encryption** を 1 回だけ呼び出します。 クエリ ステートメントの暗号化メタデータ キャッシュにより、データベースからメタデータをフェッチする場合のパフォーマンス コストが大幅に削減されます。 キャッシュは既定で有効になっています。 [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled プロパティ](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled)を false に設定して、パラメーター メタデータ キャッシュを無効にできますが、以下に示すようなまれなケースを除き、無効にすることはお勧めできません。
 
 データベースに s1 および s2 という 2 つの異なるスキーマがあるとします。 各スキーマには、ｔ という同じ名前のテーブルが含まれています。 s1.t と s2.t の各テーブルの定義は同じですが、暗号化関連のプロパティは異なります。つまり、s1.t の c という名前の列は暗号化されませんが、s2.t では暗号化されます。 データベースには u1 および u2 という 2 人のユーザーが存在します。 u1 ユーザーの既定のスキーマは s1 です。 u2 の既定のスキーマは s2 です。 .NET アプリケーションはデータベースへの 2 つの接続を開きます。一方の接続で u1 ユーザーの権限を借用し、もう一方の接続で u2 ユーザーの権限を借用します。 アプリケーションは、ユーザー u1 の接続経由で c 列をターゲットとするパラメーターを含むクエリを送信します (クエリではスキーマが指定されないため、既定のユーザーのスキーマが想定されます)。 次に、アプリケーションは、u2 ユーザーの接続経由で同じクエリを送信します。 クエリ メタデータ キャッシュが有効な場合は、最初のクエリの後に、キャッシュに、c 列 (クエリ パラメーターのターゲット) が暗号化されていないことを示すメタデータが取り込まれます。 2 番目のクエリのクエリ ステートメントが同じであるため、キャッシュに格納されている情報が使用されます。 その結果、ドライバーは、パラメーターを暗号化せずにクエリを送信し (ターゲット列 s2.t.c は暗号化対象であるため、この動作は正しくありません)、サーバーにパラメーターのプレーン テキスト値がリークされます。 サーバーはその非互換性を検出し、ドライバーに強制的にキャッシュを更新させるため、アプリケーションはパラメーター値が正しく暗号化されたクエリを透過的に再送します。 このような場合は、キャッシュを無効にして、サーバーへの機微な値のリークを防ぐ必要があります。 
 
@@ -406,7 +406,7 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 > [!NOTE]
 > クエリ レベルで Always Encrypted を設定すると、パラメーター暗号化メタデータ キャッシュを実装する、.NET 4.6.2 以降のバージョンにおけるパフォーマンスの利点が限られてしまいます。
 
-個々のクエリの Always Encrypｔed 動作を制御するには、 [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) および [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)のこのコンストラクターを使用する必要があります。 有用なガイドラインを次に示します。
+個々のクエリの Always Encrypｔed 動作を制御するには、 [SqlCommand](/dotnet/api/system.data.sqlclient.sqlcommand) および [SqlCommandColumnEncryptionSetting](/dotnet/api/system.data.sqlclient.sqlcommandcolumnencryptionsetting)のこのコンストラクターを使用する必要があります。 有用なガイドラインを次に示します。
 - クライアントがデータベース接続を介して送信するほとんどのクエリが、暗号化された列をアクセスする場合:
     - **Column Encryption Setting** 接続文字列キーワードを *[有効]* に設定します。
     - 暗号化された列にアクセスしない個々のクエリに対して、 **SqlCommandColumnEncryptionSetting.Disabled** を設定します。 これにより、sys.sp_describe_parameter_encryption の呼び出しと、結果セット内の値を暗号化解除しようとする試みの両方が無効になります。
@@ -457,7 +457,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 > [!NOTE]
 > .NET Framework 4.6 および 4.6.1 では、キャッシュ内の列暗号化キーのエントリは削除されません。 つまり、暗号化された特定の列暗号化キーでは、ドライバーはアプリケーションの有効期間中に 1 回だけキー ストアと交信します。
 
-.NET Framework 4.6.2 以降では、セキュリティ上の理由から構成可能な有効期間後にキャッシュ エントリが削除されます。 既定の有効期間の値は 2 時間です。 アプリケーションで列暗号化キーをプレーンテキストでキャッシュできる期間について、より厳密なセキュリティ要件がある場合は、 [SqlConnection.ColumnEncryptionKeyCacheTtl プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl.aspx)を使用して変更できます。 
+.NET Framework 4.6.2 以降では、セキュリティ上の理由から構成可能な有効期間後にキャッシュ エントリが削除されます。 既定の有効期間の値は 2 時間です。 アプリケーションで列暗号化キーをプレーンテキストでキャッシュできる期間について、より厳密なセキュリティ要件がある場合は、 [SqlConnection.ColumnEncryptionKeyCacheTtl プロパティ](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl)を使用して変更できます。 
 
 
 ## <a name="enabling-additional-protection-for-a-compromised-sql-server"></a>侵害された SQL Server の追加保護を有効にする
@@ -468,7 +468,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 .NET Framework Data Provider for SQL Server は、SQL Server にパラメーター化されたクエリを送信する前に、 [sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)を呼び出して、SQL Server にクエリ ステートメントを分析し、暗号化する必要があるクエリのパラメーターに関する情報を提供するよう要求します。 実際にはデータベースの列が暗号化されているにもかかわらず、侵害された SQL Server インスタンスは、パラメーターが暗号化された列をターゲットとしていないことを示すメタデータを送信して、.NET Framework Data Provider for SQL Server を誤解させる可能性があります。 その結果、.NET Framework Data Provider for SQL Server は、パラメーターの値を暗号化せずに、侵害された SQL Server インスタンスにプレーンテキストとして値を送信するようになります。
 
-このような攻撃を防ぐために、アプリケーションはパラメーターの [SqlParameter.ForceColumnEncryption プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.forcecolumnencryption.aspx) を true に設定することができます。 これにより、.NET Framework Data Provider for SQL Server は、サーバーから受信したメタデータにパラメーターを暗号化する必要がないと示されている場合に、例外をスローするようになります。
+このような攻撃を防ぐために、アプリケーションはパラメーターの [SqlParameter.ForceColumnEncryption プロパティ](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption) を true に設定することができます。 これにより、.NET Framework Data Provider for SQL Server は、サーバーから受信したメタデータにパラメーターを暗号化する必要がないと示されている場合に、例外をスローするようになります。
 
 **SqlParameter.ForceColumnEncryption プロパティ**の使用はセキュリティの向上に役立ちますが、クライアント アプリケーションに対する暗号化の透明度が損なわれます。 データベース スキーマを更新して暗号化された列のセットを変更する場合は、アプリケーションの変更も必要になることがあります。
 
@@ -500,7 +500,7 @@ SqlDataReader reader = cmd.ExecuteReader();
 
 SQL Server が返す、暗号化された列をターゲットとするクエリ パラメーターと暗号化列から取得された結果に関する暗号化メタデータには、キー ストアとキー ストア内のキーの場所を識別する列マスター キーのキー パスが示されます。 SQL Server インスタンスは、侵害された場合、攻撃者によって制御される場所に .NET Framework Data Provider for SQL Server を誘導するキー パスを送信する可能性があります。 これにより、アプリケーションの認証を必要とするキー ストアの場合、キー ストアの資格情報がリークされる可能性があります。 
 
-このような攻撃を防ぐために、アプリケーションは、 [SqlConnection.ColumnEncryptionTrustedMasterKeyPaths プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths.aspx)を使用して、特定のサーバーに対して信頼されたキー パスの一覧を指定することができます。 .NET Framework Data Provider for SQL Server は、信頼されたキー パス一覧にないキー パスを受信した場合、例外をスローします。 
+このような攻撃を防ぐために、アプリケーションは、 [SqlConnection.ColumnEncryptionTrustedMasterKeyPaths プロパティ](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)を使用して、特定のサーバーに対して信頼されたキー パスの一覧を指定することができます。 .NET Framework Data Provider for SQL Server は、信頼されたキー パス一覧にないキー パスを受信した場合、例外をスローします。 
 
 信頼されたキー パスを設定すると、アプリケーションのセキュリティが向上しますが、列マスター キーのローテーション (列マスター キー パスの変更) のたびに、アプリケーションのコードや構成を変更する必要があります。 
 
@@ -527,7 +527,7 @@ SqlBulkCopy を使用して、データの暗号化解除を行うことなく�
 
 - ターゲット テーブルの暗号化構成が、ソース テーブルの構成と同じであることを確認します。 具体的には、両方のテーブルで同じ列が暗号化されており、同じ暗号化タイプおよび同じ暗号化キーを使用してこれらの列が暗号化されている必要があります。 注: いずれかのターゲット列が、対応するソース列と異なる方法で暗号化されている場合、コピー操作の後でターゲット テーブル内のデータを暗号化解除することはできません。 データは破損します。
 - Always Encrypted を有効にせずに、ソース テーブルとターゲット テーブルへの両方のデータベース接続を構成します。 
-- AllowEncryptedValueModifications オプションを設定します (「 [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx)」を参照)。 注:データベースが破損する可能性があるので、AllowEncryptedValueModifications を指定する際には注意が必要です。これは、データが実際に暗号化されているかどうか、またはターゲット列と同じ暗号化のタイプ、アルゴリズム、およびキーを使用して正しく暗号化されているかどうかを、.NET Framework Data Provider for SQL Server がチェックしないためです。
+- AllowEncryptedValueModifications オプションを設定します (「 [SqlBulkCopyOptions](/dotnet/api/system.data.sqlclient.sqlbulkcopyoptions)」を参照)。 注:データベースが破損する可能性があるので、AllowEncryptedValueModifications を指定する際には注意が必要です。これは、データが実際に暗号化されているかどうか、またはターゲット列と同じ暗号化のタイプ、アルゴリズム、およびキーを使用して正しく暗号化されているかどうかを、.NET Framework Data Provider for SQL Server がチェックしないためです。
 
 .NET Framework 4.6.1 以降のバージョンでは、AllowEncryptedValueModifications オプションを使用できます。
 
@@ -558,7 +558,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="always-encrypted-api-reference"></a>Always Encrypted API リファレンス
 
-**名前空間:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
+**名前空間:** [System.Data.SqlClient](/dotnet/api/system.data.sqlclient)
 
 **アセンブリ:** System.Data (System.Data.dll)
 
@@ -567,41 +567,24 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 |名前|説明|導入された .NET バージョン
 |:---|:---|:---
-|[SqlColumnEncryptionCertificateStoreProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Windows 証明書ストアのキー ストア プロバイダー。|  4.6
-|[SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Microsoft Cryptography API:Next Generation (CNG) のキー ストア プロバイダー。|  4.6.1
-|[SqlColumnEncryptionCspProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)|Microsoft CAPI ベースの暗号化サービス プロバイダー (CSP) のキー ストア プロバイダー。|4.6.1  
-|[SqlColumnEncryptionKeyStoreProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)|キー ストア プロバイダーの基本クラス。|  4.6
-|[SqlCommandColumnEncryptionSetting 列挙体](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)|データベース接続の暗号化と暗号化解除を有効にするための設定。|4.6  
-|[SqlConnectionColumnEncryptionSetting 列挙体](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnectioncolumnencryptionsetting.aspx)|個々のクエリの Always Encrypted の動作を制御するための設定。|4.6  
-| [SqlConnectionStringBuilder.ColumnEncryptionSetting プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting.aspx)|接続文字列で、Always Encrypted を取得して設定します。|4.6|
-| [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) | 暗号化クエリ メタデータ キャッシュの有効化と無効化を行います。 | 4.6.2
-| [SqlConnection.ColumnEncryptionKeyCacheTtl プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl.aspx) | 列暗号化キー キャッシュ内のエントリの有効期間の取得と設定を行います。 | 4.6.2
-|[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths.aspx)|データベース サーバーの信頼されたキー パスの一覧を設定できます。 アプリケーション クエリの処理中に、一覧にないキー パスをドライバーが受け取った場合、クエリは失敗します。 このプロパティは、セキュリティが侵害され、偽のキー パスを提供し、キー ストアの資格情報漏洩につながるおそれがある SQL Server を含めたセキュリティ攻撃に対して、セキュリティ保護をさらに強化します。|  4.6
-|[SqlConnection.RegisterColumnEncryptionKeyStoreProviders メソッド](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders.aspx)|カスタム キー ストア プロバイダーを登録できます。 これは、キー ストア プロバイダー名をキー ストア プロバイダー実装にマップするディクショナリです。|  4.6
+|[SqlColumnEncryptionCertificateStoreProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider)|Windows 証明書ストアのキー ストア プロバイダー。|  4.6
+|[SqlColumnEncryptionCngProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)|Microsoft Cryptography API:Next Generation (CNG) のキー ストア プロバイダー。|  4.6.1
+|[SqlColumnEncryptionCspProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncspprovider)|Microsoft CAPI ベースの暗号化サービス プロバイダー (CSP) のキー ストア プロバイダー。|4.6.1  
+|[SqlColumnEncryptionKeyStoreProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider)|キー ストア プロバイダーの基本クラス。|  4.6
+|[SqlCommandColumnEncryptionSetting 列挙体](/dotnet/api/system.data.sqlclient.sqlcommandcolumnencryptionsetting)|データベース接続の暗号化と暗号化解除を有効にするための設定。|4.6  
+|[SqlConnectionColumnEncryptionSetting 列挙体](/dotnet/api/system.data.sqlclient.sqlconnectioncolumnencryptionsetting)|個々のクエリの Always Encrypted の動作を制御するための設定。|4.6  
+| [SqlConnectionStringBuilder.ColumnEncryptionSetting プロパティ](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting)|接続文字列で、Always Encrypted を取得して設定します。|4.6|
+| [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled プロパティ](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled) | 暗号化クエリ メタデータ キャッシュの有効化と無効化を行います。 | 4.6.2
+| [SqlConnection.ColumnEncryptionKeyCacheTtl プロパティ](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl) | 列暗号化キー キャッシュ内のエントリの有効期間の取得と設定を行います。 | 4.6.2
+|[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths プロパティ](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|データベース サーバーの信頼されたキー パスの一覧を設定できます。 アプリケーション クエリの処理中に、一覧にないキー パスをドライバーが受け取った場合、クエリは失敗します。 このプロパティは、セキュリティが侵害され、偽のキー パスを提供し、キー ストアの資格情報漏洩につながるおそれがある SQL Server を含めたセキュリティ攻撃に対して、セキュリティ保護をさらに強化します。|  4.6
+|[SqlConnection.RegisterColumnEncryptionKeyStoreProviders メソッド](/dotnet/api/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|カスタム キー ストア プロバイダーを登録できます。 これは、キー ストア プロバイダー名をキー ストア プロバイダー実装にマップするディクショナリです。|  4.6
 |[SqlCommand コンストラクター (String、SqlConnection、SqlTransaction、SqlCommandColumnEncryptionSetting)](https://msdn.microsoft.com/library/dn956511\(v=vs.110\).aspx)|個々のクエリの Always Encrypted の動作を制御できます。|  4.6
-|[SqlParameter.ForceColumnEncryption プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.forcecolumnencryption.aspx)|パラメーターの暗号化を強制的に適用します。 パラメーターの暗号化が不要であることが SQL Server からドライバーに通知された場合、このパラメーターを使用するクエリは失敗します。 攻撃を受けた SQL Server がクライアントに不正な暗号化メタデータを提供すると、データ漏えいが引き起こされる可能性がありますが、このプロパティは、そのようなセキュリティ攻撃に対する保護を強化します。|4.6  
-|新しい [接続文字列](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx) キーワード: `Column Encryption Setting=enabled`|接続に対して Always Encrypted 機能を有効または無効にします。| 4.6 
+|[SqlParameter.ForceColumnEncryption プロパティ](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption)|パラメーターの暗号化を強制的に適用します。 パラメーターの暗号化が不要であることが SQL Server からドライバーに通知された場合、このパラメーターを使用するクエリは失敗します。 攻撃を受けた SQL Server がクライアントに不正な暗号化メタデータを提供すると、データ漏えいが引き起こされる可能性がありますが、このプロパティは、そのようなセキュリティ攻撃に対する保護を強化します。|4.6  
+|新しい [接続文字列](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) キーワード: `Column Encryption Setting=enabled`|接続に対して Always Encrypted 機能を有効または無効にします。| 4.6 
   
 
 ## <a name="see-also"></a>参照
 
 - [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted 関連のブログ](https://docs.microsoft.com/archive/blogs/sqlsecurity/getting-started-with-always-encrypted)
-- [SQL Database のチュートリアル:Always Encrypted で機密データを保護する](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [Always Encrypted 関連のブログ](/archive/blogs/sqlsecurity/getting-started-with-always-encrypted)
+- [SQL Database のチュートリアル:Always Encrypted で機密データを保護する](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

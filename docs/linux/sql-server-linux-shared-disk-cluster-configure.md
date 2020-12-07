@@ -2,20 +2,20 @@
 title: FCI の構成 - SQL Server on Linux (RHEL)
 description: SQL Server 用の Red Hat Enterprise Linux (RHEL) でフェールオーバー クラスター インスタンス (FCI) を構成する方法について説明します。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: f468697c165eefca98e5d5d7492b9a3d5eab25e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4bce576b200ab797a272a573deab38628c05ef18
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897274"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785182"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux (RHEL)
 

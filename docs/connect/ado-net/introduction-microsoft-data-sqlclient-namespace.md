@@ -1,7 +1,7 @@
 ---
 title: Microsoft.Data.SqlClient 名前空間の概要
-description: Microsoft.Data.SqlClient 名前空間の概要ページ。
-ms.date: 06/23/2019
+description: Microsoft.Data.SqlClient 名前空間と .NET アプリケーション向け SQL に接続する方法としてそれが推奨される理由について説明します。
+ms.date: 11/19/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,17 +9,232 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.reviewer: v-kaywon
-ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.reviewer: v-jizho2
+ms.openlocfilehash: f522b856e759ec9821b5cc549ce3f801951b7283
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334583"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011832"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 名前空間の概要
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+
+## <a name="release-notes-for-microsoftdatasqlclient-21"></a>Microsoft.Data.SqlClient 2.1 のリリース ノート
+
+リリース ノートは、GitHub リポジトリの [2.1 リリース ノート](https://github.com/dotnet/SqlClient/tree/master/release-notes/2.1)でも入手できます。
+
+### <a name="new-features"></a>新機能
+
+### <a name="cross-platform-support-for-always-encrypted"></a>Always Encrypted でのクロスプラットフォームのサポート
+Microsoft.Data.SqlClient v2.1 での拡張により、次のプラットフォームで Always Encrypted がサポートされるようになります。
+
+| Always Encrypted のサポート | セキュリティで保護されたエンクレーブを使用する Always Encrypted のサポート  | [対象とする Framework] | Microsoft.Data.SqlClient のバージョン | オペレーティング システム |
+|:--|:--|:--|:--:|:--:|
+| はい | はい | .NET Framework 4.6+ | 1.1.0 以降 | Windows |
+| はい | はい | .NET Core 2.1 以降 | 2.1.0 以降<sup>1</sup> | Windows、Linux、macOS |
+| はい | いいえ<sup>2</sup> | .NET Standard 2.0 | 2.1.0 以降 | Windows、Linux、macOS |
+| はい | はい | .NET Standard 2.1 以降 | 2.1.0 以降 | Windows、Linux、macOS |
+
+> [!NOTE]
+> <sup>1</sup> v2.1 より前のバージョンの Microsoft.Data.SqlClient では、Always Encrypted は Windows でのみサポートされています。
+> <sup>2</sup> セキュリティで保護されたエンクレーブを使用する Always Encrypted は、.NET Standard 2.0 ではサポートされていません。
+
+### <a name="azure-active-directory-device-code-flow-authentication"></a>Azure Active Directory でのデバイス コード フロー認証
+Microsoft.Data.SqlClient v2.1 では、MSAL.NET での "デバイス コード フロー" 認証がサポートされています。
+リファレンス ドキュメント:[OAuth 2.0 デバイス許可付与フロー](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code)に関するページ
+
+接続文字列の例:
+
+`Server=<server>.database.windows.net; Authentication=Active Directory Device Code Flow; Database=Northwind;`
+
+次の API を使用すると、デバイス コード フローのコールバック メカニズムをカスタマイズできます。
+
+```csharp
+public class ActiveDirectoryAuthenticationProvider
+{
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void SetDeviceCodeFlowCallback(Func<DeviceCodeResult, Task> deviceCodeFlowCallbackMethod)
+}
+```
+
+### <a name="azure-active-directory-managed-identity-authentication"></a>Azure Active Directory マネージド ID 認証
+[マネージド ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) を使用する Azure Active Directory 認証のサポートが、Microsoft.Data.SqlClient v2.1 で導入されています。
+
+次の認証モード キーワードがサポートされています。
+- Active Directory Managed Identity
+- Active Directory MSI (クロス MS SQL ドライバーの互換性の場合)
+
+接続文字列の例:
+
+```cs
+// For System Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory MSI; Initial Catalog={db};"
+
+// For System Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory Managed Identity; Initial Catalog={db};"
+
+// For User Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory MSI; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+
+// For User Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory Managed Identity; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+```
+
+### <a name="azure-active-directory-interactive-authentication-enhancements"></a>Azure Active Directory 対話型認証の機能強化
+Microsoft.Data.SqlClient v2.1 で追加された次の API を使用すると、"Active Directory 対話型" 認証のエクスペリエンスをカスタマイズできます。
+
+```csharp
+public class ActiveDirectoryAuthenticationProvider
+{
+    // For .NET Framework targeted applications only
+    public void SetIWin32WindowFunc(Func<IWin32Window> iWin32WindowFunc);
+
+    // For .NET Standard targeted applications only
+    public void SetParentActivityOrWindowFunc(Func<object> parentActivityOrWindowFunc);
+
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken, Task<Uri>> acquireAuthorizationCodeAsyncCallback);
+
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void ClearUserTokenCache();
+}
+```
+
+### <a name="sqlclientauthenticationproviders-configuration-section"></a>`SqlClientAuthenticationProviders` 構成セクション
+Microsoft.Data.SqlClient v2.1 には、新しい構成セクション `SqlClientAuthenticationProviders` が導入されています (既存の `SqlAuthenticationProviders` の複製)。 既存の構成セクション `SqlAuthenticationProviders` は、適切な型が定義されているときの下位互換性のために引き続きサポートされます。
+
+新しいセクションを使用すると、アプリケーション構成ファイルに、System.Data.SqlClient 用の SqlAuthenticationProviders セクションと、Microsoft.Data.SqlClient 用の SqlClientAuthenticationProviders セクションの両方を含めることができます。
+
+
+### <a name="azure-active-directory-authentication-using-an-application-client-id"></a>アプリケーション クライアント ID を使用する Azure Active Directory 認証
+Microsoft.Data.SqlClient v2.1 には、ユーザー定義のアプリケーション クライアント ID を Microsoft 認証ライブラリに渡すためのサポートが導入されています。 アプリケーション クライアント ID は、Azure Active Directory で認証を行うときに使用されます。
+
+次の新しい API が導入されています。
+
+1. 新しいコンストラクターが ActiveDirectoryAuthenticationProvider に導入されました。\
+_[すべての .NET プラットフォーム (.NET Framework、.NET Core、.NET Standard) に適用されます]_
+
+```csharp
+public ActiveDirectoryAuthenticationProvider(string applicationClientId)
+```
+
+用途:
+```csharp
+string APP_CLIENT_ID = "<GUID>";
+SqlAuthenticationProvider customAuthProvider = new ActiveDirectoryAuthenticationProvider(APP_CLIENT_ID);
+SqlAuthenticationProvider.SetProvider(SqlAuthenticationMethod.ActiveDirectoryInteractive, customAuthProvider);
+
+using (SqlConnection sqlConnection = new SqlConnection("<connection_string>")
+{
+    sqlConnection.Open();
+}
+```
+
+2. `SqlAuthenticationProviderConfigurationSection` と `SqlClientAuthenticationProviderConfigurationSection` に新しい構成プロパティが導入されました。\
+_[.NET Framework と .NET Core に適用されます]_
+
+```csharp
+internal class SqlAuthenticationProviderConfigurationSection : ConfigurationSection
+{
+    ...
+    [ConfigurationProperty("applicationClientId", IsRequired = false)]
+    public string ApplicationClientId => this["applicationClientId"] as string;
+}
+
+// Inheritance
+internal class SqlClientAuthenticationProviderConfigurationSection : SqlAuthenticationProviderConfigurationSection
+{ ... }
+```
+
+用途:
+```xml
+<configuration>
+    <configSections>
+        <section name="SqlClientAuthenticationProviders"
+                         type="Microsoft.Data.SqlClient.SqlClientAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
+    </configSections>
+    <SqlClientAuthenticationProviders applicationClientId ="<GUID>" />
+</configuration>
+
+<!--or-->
+
+<configuration>
+    <configSections>
+        <section name="SqlAuthenticationProviders"
+                         type="Microsoft.Data.SqlClient.SqlAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
+    </configSections>
+    <SqlAuthenticationProviders applicationClientId ="<GUID>" />
+</configuration>
+```
+
+### <a name="data-classification-v2-support"></a>データ分類 v2 のサポート
+Microsoft.Data.SqlClient v2.1 には、データ分類の "秘密度ランク" 情報のサポートが導入されています。 次の新しい API を使用できるようになりました。
+
+```csharp
+public class SensitivityClassification
+{
+    public SensitivityRank SensitivityRank;
+}
+
+public class SensitivityProperty
+{
+    public SensitivityRank SensitivityRank;
+}
+
+public enum SensitivityRank
+{
+    NOT_DEFINED = -1,
+    NONE = 0,
+    LOW = 10,
+    MEDIUM = 20,
+    HIGH = 30,
+    CRITICAL = 40
+}
+```
+
+### <a name="server-process-id-for-an-active-sqlconnection"></a>アクティブな `SqlConnection` のサーバー プロセス ID
+Microsoft.Data.SqlClient v2.1 には、アクティブな接続での新しい `SqlConnection` プロパティ `ServerProcessId` が導入されています。
+
+```csharp
+public class SqlConnection
+{
+    // Returns the server process Id (SPID) of the active connection.
+    public int ServerProcessId;
+}
+```
+
+### <a name="trace-logging-support-in-native-sni"></a>ネイティブ SNI でのトレース ログのサポート
+Microsoft.Data.SqlClient v2.1 では、SNI.dll でイベントのトレースを使用できるように、既存の `SqlClientEventSource` の実装が拡張されています。 イベントは、Xperf などのツールを使用してキャプチャする必要があります。
+
+トレースを有効にするには、次に示すように `SqlClientEventSource` にコマンドを送信します。
+
+```csharp
+// Enables trace events:
+EventSource.SendCommand(eventSource, (EventCommand)8192, null);
+
+// Enables flow events:
+EventSource.SendCommand(eventSource, (EventCommand)16384, null);
+
+// Enables both trace and flow events:
+EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
+```
+
+
+### <a name="command-timeout-connection-string-property"></a>"Command Timeout" 接続文字列プロパティ
+Microsoft.Data.SqlClient v2.1 で導入された "Command Timeout" 接続文字列プロパティを使用すると、既定の 30 秒をオーバーライドできます。 個々のコマンドのタイムアウトは、SqlCommand の `CommandTimeout` プロパティを使用してオーバーライドできます。
+
+接続文字列の例:
+
+`"Server={serverURL}; Initial Catalog={db}; Integrated Security=true; Command Timeout=60"`
+
+### <a name="removal-of-symbols-from-native-sni"></a>ネイティブ SNI からのシンボルの削除
+Microsoft.Data.SqlClient v2.1 では、[v2.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI/2.0.0) で導入されたシンボルが、[Microsoft.Data.SqlClient.SNI.runtime](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime) NuGet の [v2.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime/2.1.1) 以降から削除されます。 パブリック シンボルにアクセスする必要がある BinSkim などのツールのために、パブリック シンボルが Microsoft シンボル サーバーに発行されるようになります。
+
+### <a name="source-linking-of-microsoftdatasqlclient-symbols"></a>Microsoft.Data.SqlClient のシンボルのソース リンク
+Microsoft.Data.SqlClient v2.1 以降、ソース コードをダウンロードする必要のない、強化されたデバッグ エクスペリエンスのため、Microsoft.Data.SqlClient のシンボルが Microsoft シンボル サーバーにソース リンクされて発行されます。
+
 
 ## <a name="release-notes-for-microsoftdatasqlclient-20"></a>Microsoft.Data.SqlClient 2.0 のリリース ノート
 
@@ -45,7 +260,7 @@ ms.locfileid: "85334583"
 
 #### <a name="dns-failure-resiliency"></a>DNS エラーの回復性
 
-この機能をサポートする SQL Server エンドポイントへの接続が成功するたびに、ドライバーによって IP アドレスがキャッシュされます。 接続試行中に DNS 解決エラーが発生した場合、ドライバーによって、そのサーバーのキャッシュされた IP アドレス (存在する場合) を使用した接続の確立が試みられます。 
+この機能をサポートする SQL Server エンドポイントへの接続が成功するたびに、ドライバーによって IP アドレスがキャッシュされます。 接続試行中に DNS 解決エラーが発生した場合、ドライバーによって、そのサーバーのキャッシュされた IP アドレス (存在する場合) を使用した接続の確立が試みられます。
 
 #### <a name="eventsource-tracing"></a>EventSource の追跡
 
@@ -67,7 +282,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWind
 
 ドライバーで使用できるスイッチの完全な一覧については、「[SqlClient の AppContext スイッチ](appcontext-switches.md)」を参照してください。
 
-#### <a name="enabling-decimal-truncation-behavior"></a>小数点の切り捨て動作の有効化 
+#### <a name="enabling-decimal-truncation-behavior"></a>小数点の切り捨て動作の有効化
 
 小数点以下のデータ スケールは、ドライバーによって、既定では SQL Server で行われるように丸められます。 下位互換性を維持するために、AppContext スイッチ **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** を **true** に設定できます。
 
@@ -77,7 +292,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### <a name="new-connection-string-property-synonyms"></a>新しい接続文字列プロパティのシノニム
 
-次の既存の接続文字列プロパティに対して新しいシノニムが追加されました。これにより、複数の単語を使用しているプロパティのスペースあけの混乱を回避できます。 古いプロパティ名は下位互換性のために引き続きサポートされますが、[SqlConnectionStringBuilder](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder) から接続文字列をフェッチすると、新しい接続文字列プロパティが含まれるようになります。
+次の既存の接続文字列プロパティに対して新しいシノニムが追加されました。これにより、複数の単語を使用しているプロパティのスペースあけの混乱を回避できます。 古いプロパティ名は下位互換性のために引き続きサポートされますが、[SqlConnectionStringBuilder](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder) から接続文字列をフェッチすると、新しい接続文字列プロパティが含まれるようになります。
 
 |既存の接続文字列プロパティ|新しいシノニム|
 |-----------------------------------|-----------|
@@ -92,7 +307,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### <a name="sqlbulkcopy-rowscopied-property"></a>SqlBulkCopy RowsCopied プロパティ
 
-RowsCopied プロパティを使用すると、実行中の一括コピー操作で処理された行の数に読み取り専用でアクセスできます。 この値は、必ずしもターゲット テーブルに追加された行の最終的な数と同じになるとは限りません。 
+RowsCopied プロパティを使用すると、実行中の一括コピー操作で処理された行の数に読み取り専用でアクセスできます。 この値は、必ずしもターゲット テーブルに追加された行の最終的な数と同じになるとは限りません。
 
 #### <a name="connection-open-overrides"></a>接続オープンのオーバーライド
 
@@ -206,19 +421,19 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>UTF-8 のサポート
 
-UTF-8 のサポートでは、アプリケーション コードを変更する必要はありません。 これらの SqlClient の変更によって、サーバーで UTF-8 がサポートされ、基になる列の照合順序が UTF-8 である場合に、クライアントとサーバーの間の通信が最適化されます。 [SQL Server 2019 プレビューの新機能](../../sql-server/what-s-new-in-sql-server-ver15.md)の UTF-8 のセクションを参照してください。
+UTF-8 のサポートで、アプリケーション コードを変更する必要はありません。 これらの SqlClient の変更によって、サーバーで UTF-8 がサポートされ、基になる列の照合順序が UTF-8 である場合に、クライアントとサーバーの間の通信が最適化されます。 [SQL Server 2019 の新機能](../../sql-server/what-s-new-in-sql-server-ver15.md)の UTF-8 のセクションを参照してください。
 
 ### <a name="always-encrypted-with-enclaves"></a>エンクレーブを使用する Always Encrypted
 
-一般に、.NET Framework で System.Data.SqlClient **および組み込み列マスター キー ストア プロバイダー**を使用する既存のドキュメントも .NET Core で動作するようになりました。
+一般に、.NET Framework で System.Data.SqlClient **および組み込み列マスター キー ストア プロバイダー** を使用する既存のドキュメントも .NET Core で動作するようになりました。
 
  [Always Encrypted と .NET Framework Data Provider を使用して開発する](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
- [Always Encrypted:Windows 証明書ストアで機密データを保護し、暗号化キーを格納する](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+ [Always Encrypted:Windows 証明書ストアで機密データを保護し、暗号化キーを格納する](/azure/sql-database/sql-database-always-encrypted)
 
 ### <a name="authentication"></a>認証
 
-_[認証]_ 接続文字列オプションを使用して、さまざまな認証モードを指定できます。 詳細については、[SqlAuthenticationMethod のドキュメント](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)を参照してください。
+_[認証]_ 接続文字列オプションを使用して、さまざまな認証モードを指定できます。 詳細については、[SqlAuthenticationMethod のドキュメント](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2&preserve-view=true)を参照してください。
 
 > [!NOTE]
 > Azure Key Vault プロバイダーなどのカスタム キー ストア プロバイダーは、Microsoft.Data.SqlClient をサポートするように更新する必要があります。 同様に、エンクレーブ プロバイダーも Microsoft.Data.SqlClient をサポートするように更新する必要があります。

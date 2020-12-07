@@ -19,19 +19,20 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 828963dabc79c53c831efd3c2acac797d109555d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f8148fa7d0a648bd7ad34ee766ff2a4488dceb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763555"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115740"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>バックアップと復元によるデータベースのコピー
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンを使用して作成したユーザー データベースのバックアップを復元して、新しいデータベースを作成できます。 ただし、以前のバージョンの **を使用して作成された**master **、** model **、および** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で復元することはできません。 また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のバックアップを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で復元することもできません。  
   
->**重要:** SQL Server 2016 では、以前のバージョンとは異なる既定パスが使用されます。 そのため、以前のバージョンの既定の場所で作成されたデータベースのバックアップを復元するには、MOVE オプションを使用する必要があります。 新しい既定パスの詳細については、「 [SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。 データベース ファイルの移動の詳細については、このトピックの「データベース ファイルの移動」を参照してください。  
+> [!IMPORTANT]
+> SQL Server 2016 では、以前のバージョンとは異なる既定パスが使用されます。 そのため、以前のバージョンの既定の場所で作成されたデータベースのバックアップを復元するには、MOVE オプションを使用する必要があります。 新しい既定パスの詳細については、「 [SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。 データベース ファイルの移動の詳細については、このトピックの「データベース ファイルの移動」を参照してください。  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>バックアップと復元を使用してデータベースをコピーする一般的な手順  
  バックアップと復元を使用して他の SQL Server インスタンスにデータベースをコピーするとき、SQL Server を実行するコピー元とコピー先のコンピューターのプラットフォームは問いません。  

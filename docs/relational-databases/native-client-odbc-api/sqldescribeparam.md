@@ -15,12 +15,12 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ea15c94c0fa4231be4d34c486c4aaf139f083fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20463fcf61f5d9842f4e5a84814970c57d4712f3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428304"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809272"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428304"
   
  で始まるデータベースエンジンの機能強化により [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、SQLDescribeParam は、予期される結果についてより正確な説明を取得できます。 これらのより正確な結果は、以前のバージョンので SQLDescribeParam によって返された値とは異なる場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「[メタデータの検出](../../relational-databases/native-client/features/metadata-discovery.md)」を参照してください。  
   
- また [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 *parametersizeptr* は、 [ODBC 仕様](https://go.microsoft.com/fwlink/?LinkId=207044)で定義されている、対応するパラメーターマーカーの列または式のサイズ (文字数) の定義に合わせて値を返すようになりました。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、 *Parametersizeptr* は、型の **SQL_DESC_OCTET_LENGTH** の対応する値、または型の SQLBindParameter に指定された関係のない列のサイズの値になる可能性があります。この値は無視する必要があります (**SQL_INTEGER**など)。  
+ また [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 *parametersizeptr* は、 [ODBC 仕様](../../odbc/reference/appendixes/column-size.md)で定義されている、対応するパラメーターマーカーの列または式のサイズ (文字数) の定義に合わせて値を返すようになりました。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、 *Parametersizeptr* は、型の **SQL_DESC_OCTET_LENGTH** の対応する値、または型の SQLBindParameter に指定された関係のない列のサイズの値になる可能性があります。この値は無視する必要があります (**SQL_INTEGER**など)。  
   
  ドライバーは、次の状況での SQLDescribeParam の呼び出しをサポートしていません。  
   
@@ -91,7 +91,6 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  **SQLDescribeParam** は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「 [大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLDescribeParam 関数](https://go.microsoft.com/fwlink/?LinkId=59339)   
+ [SQLDescribeParam 関数](../../odbc/reference/syntax/sqldescribeparam-function.md)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

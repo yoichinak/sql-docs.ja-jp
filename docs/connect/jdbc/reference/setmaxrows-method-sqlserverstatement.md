@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 544eb34b40bc81afbed34809f3348c5649c3d0be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ec693120859dc49d162252f9b0ec768d69365e0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431764"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725433"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>setMaxRows メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,10 +50,9 @@ public final void setMaxRows(int max)
   
  setMaxRows メソッドが呼び出されると、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ではアプリケーションのクエリの実行時に SET ROWCOUNT SQL ステートメントが実行されます。 これにより、そのクエリによって返される行の数だけでなく、そのクエリで実行されるすべての [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントによって影響を受ける行の最大数も JDBC ドライバーによって制限されます。 アプリケーションで最上位の [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトに対してのみ制限を設定する必要がある場合は、setMaxRows メソッドではなく、SELECT TOP N SQL 構文をクエリで使用してください。  
   
- SET ROWCOUNT SQL ステートメントの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「[SET ROWCOUNT (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=139522)」を参照してください。  
+ SET ROWCOUNT SQL ステートメントの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「[SET ROWCOUNT (Transact-SQL)](../../../t-sql/statements/set-rowcount-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement クラス](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
-  
   

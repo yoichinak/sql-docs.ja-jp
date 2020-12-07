@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454568"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933766"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS の暗号化キー - 暗号化キーのバックアップと復元
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88454568"
   
  次のいずれかが行われた場合、暗号化キーのバックアップ コピーを復元する必要があります。  
   
--   レポート サーバー Windows サービスのアカウント名の変更またはパスワードの再設定。 Reporting Services 構成マネージャーを使用する際に、サービス アカウント名の変更操作の一部としてキーをバックアップします。  
+-   レポート サーバー Windows サービスのアカウント名の変更またはパスワードの再設定。 レポート サーバー構成マネージャーを使用する場合は、サービス アカウント名の変更操作の一環として、キーをバックアップします。  
   
     > [!NOTE]
     > パスワードの再設定はパスワードの変更とは異なります。 パスワードを再設定するには、ドメイン コントローラーでアカウント情報を上書きする権限が必要です。 パスワードの再設定は、ユーザーが特定のパスワードを忘れた場合、または知らない場合に、システム管理者が行います。 パスワードの再設定にのみ、対称キーの復元が必要となります。 アカウント パスワードの定期的な変更には、対称キーの再設定は必要ありません。  
@@ -47,7 +47,7 @@ ms.locfileid: "88454568"
 
  対称キーのバックアップは、指定するファイルにキーを書き込み、指定したパスワードを使用してそのキーにスクランブルをかける処理です。 対称キーが暗号化されていない状態で格納されることはないので、ディスクに格納する際は、キーを暗号化するためのパスワードを指定する必要があります。 ファイルの作成後、セキュリティで保護された場所にファイルを保存します。ファイルのロックを解除するために使用する **パスワードを覚えておく** 必要があります。 対称キーをバックアップするために、次のツールを使用できます。  
   
- **ネイティブ モード:** Reporting Services 構成マネージャーか **rskeymgmt** ユーティリティのどちらか。  
+ **ネイティブ モード:** レポート サーバー構成マネージャー、または **rskeymgmt** ユーティリティのいずれか。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ ms.locfileid: "88454568"
 
 ::: moniker-end
   
-##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 暗号化キーのバックアップ - Reporting Services 構成マネージャー (ネイティブ モード)  
+##  <a name="back-up-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 暗号化キーのバックアップ - レポート サーバー構成マネージャー (ネイティブ モード)  
   
 1.  レポート サーバーの構成マネージャーを起動して、構成するレポート サーバー インスタンスに接続します。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "88454568"
   
 -   以前格納した対称キー データ (以前の配置から既にレポート サーバー データベースにあったキー情報など) は削除されます。  
   
- 暗号化キーを復元するには、暗号化キーのコピーがファイルにある必要があります。 また、格納したコピーのロックを解除するパスワードを知っている必要もあります。 キーおよびパスワードがある場合、Reporting Services 構成ツールまたは **rskeymgmt** ユーティリティを実行して、キーを復元できます。 対称キーは、レポート サーバー データベースに現在格納されている暗号化されたデータをロックおよびロック解除するキーと同じものである必要があります。 有効ではないコピーを復元すると、レポート サーバーは、レポート サーバー データベースに現在格納されている暗号化されたデータにアクセスできません。 暗号化されたデータにアクセスできず、有効なキーを復元できない場合、すべての暗号化された値を削除する必要が生じることがあります。 なんらかの理由で暗号化キーを復元できない場合 (バックアップ コピーがない場合など)、既存のキーおよび暗号化されたコンテンツを削除する必要があります。 詳細については、「[暗号化キーの削除と再作成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)」を参照してください。 対称キーの作成の詳細については、「[レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
+ 暗号化キーを復元するには、暗号化キーのコピーがファイルにある必要があります。 また、格納したコピーのロックを解除するパスワードを知っている必要もあります。 キーおよびパスワードがある場合、Reporting Services 構成ツールまたは **rskeymgmt** ユーティリティを実行して、キーを復元できます。 対称キーは、レポート サーバー データベースに現在格納されている暗号化されたデータをロックおよびロック解除するキーと同じものである必要があります。 有効ではないコピーを復元すると、レポート サーバーは、レポート サーバー データベースに現在格納されている暗号化されたデータにアクセスできません。 暗号化されたデータにアクセスできず、有効なキーを復元できない場合、すべての暗号化された値を削除する必要が生じることがあります。 なんらかの理由で暗号化キーを復元できない場合 (バックアップ コピーがない場合など)、既存のキーおよび暗号化されたコンテンツを削除する必要があります。 詳細については、「[暗号化キーの削除と再作成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)」を参照してください。 対称キーの作成に関する詳細については、[レポート サーバーの初期化 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md) に関する記事を参照してください。  
   
-###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> 暗号化キーの復元 - Reporting Services 構成マネージャー (ネイティブ モード)  
+###  <a name="restore-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> 暗号化キーの復元 - レポート サーバー構成マネージャー (ネイティブ モード)  
   
-1.  Reporting Services 構成マネージャーを起動して、構成するレポート サーバー インスタンスに接続します。  
+1.  レポート サーバーの構成マネージャーを起動して、構成するレポート サーバー インスタンスに接続します。  
   
 2.  [暗号化キー] ページで、 **[復元]** をクリックします。  
   
@@ -112,6 +112,6 @@ ms.locfileid: "88454568"
     ```  
   
 ## <a name="see-also"></a>参照  
- [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [暗号化キーの構成と管理 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

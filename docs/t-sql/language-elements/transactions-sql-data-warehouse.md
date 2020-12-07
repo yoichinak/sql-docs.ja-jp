@@ -13,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227476"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92038896"
 ---
 # <a name="transactions-azure-synapse-analytics"></a>トランザクション (Azure Synapse Analytics)
 
@@ -80,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  ステートメントの実行時エラー以外のエラーによりトランザクションを正常に完了できない場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] によってトランザクションが自動的にロールバックされ、そのトランザクションで保持されていたすべてのリソースが解放されます。 たとえば、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のインスタンスへのクライアントのネットワーク接続が切断された場合、またはクライアントがアプリケーションからログオフした場合、ネットワークからインスタンスにこの切断が通知されると、その接続に対する未処理のトランザクションがすべてロールバックされます。  
   
- バッチでステートメントの実行時エラーが発生した場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は **ON** に設定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** と一致する動作をし、トランザクション全体がロールバックされます。 **XACT_ABORT** 設定の詳細については、「[SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)」を参照してください。  
+ バッチでステートメントの実行時エラーが発生した場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は **ON** に設定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** と一致する動作をし、トランザクション全体がロールバックされます。 **XACT_ABORT** 設定の詳細については、「[SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md)」を参照してください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  セッションで実行できるトランザクション数は一度に 1 つのみです。セーブ ポイントと入れ子になったトランザクションはサポートされません。  
@@ -94,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  COMMIT ステートメントを発行した後は、データの変更がデータベースの永続的な部分になるので、トランザクションをロールバックできなくなります。  
   
- [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) と [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) のコマンドは、明示的なトランザクション内で使用することができません。  
+ [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) と [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) のコマンドは、明示的なトランザクション内で使用することができません。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] にはトランザクションの共有メカニズムはありません。 これは、ある時点で、システム内のどのトランザクションでも、作業を実行できるのは 1 つのセッションのみであることを示します。  
   
@@ -150,5 +150,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

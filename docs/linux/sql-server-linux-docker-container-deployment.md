@@ -12,12 +12,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 228c5a9f468ad7f82f6ca9c291a532466a5441df
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 380fa9b4cb6941b438d0308be38956659862ce50
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511593"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115463"
 ---
 # <a name="deploy-and-connect-to-sql-server-docker-containers"></a>SQL Server Docker コンテナーをデプロイして接続する
 
@@ -60,7 +60,7 @@ SQL 接続をサポートする外部の Linux、Windows、macOS ツールから
 
 - [Azure Data Studio](../azure-data-studio/quickstart-sql-server.md)
 - [sqlcmd](sql-server-linux-setup-tools.md)
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [Windows の SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 
 次の例では、**sqlcmd** を使用して、Docker コンテナー内で実行されている SQL Server に接続します。 接続文字列内の IP アドレスは、コンテナーを実行しているホスト マシンの IP アドレスです。

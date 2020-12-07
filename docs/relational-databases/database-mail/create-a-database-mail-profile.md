@@ -16,15 +16,15 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3ee012fe4bcd7fa1cd98c51f537035fc6148938
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461151"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125244"
 ---
 # <a name="create-a-database-mail-profile"></a>データベース メール プロファイルの作成
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  **データベース メール構成ウィザード**または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベース メールのパブリック プロファイルとプライベート プロファイルを作成します。 メール プロファイルの詳細については、「 [データベース メール プロファイル](database-mail-configuration-objects.md)」をご覧ください。
+  **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベース メールのパブリック プロファイルとプライベート プロファイルを作成します。 メール プロファイルの詳細については、「 [データベース メール プロファイル](database-mail-configuration-objects.md)」をご覧ください。
   
 -   **作業を開始する準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
   

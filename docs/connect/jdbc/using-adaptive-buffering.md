@@ -1,6 +1,6 @@
 ---
-description: アダプティブ バッファリングの使用
-title: アダプティブ バッファリングの使用 | Microsoft Docs
+title: アダプティブ バッファリングの使用
+description: Microsoft JDBC Driver for SQL Server を使用して大きな値のデータを取得するとき、アダプティブ バッファリングを使用し、サーバー カーソルのオーバーヘッドをなくす方法について説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 720baad5c144148fae222bc19bb268aa9adae463
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f0e31c679ab1c85e5bbee9f3e66336c20e86521
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487946"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603393"
 ---
 # <a name="using-adaptive-buffering"></a>アダプティブ バッファリングの使用
 

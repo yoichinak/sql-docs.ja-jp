@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 623c423b50d589ce9e7964b436cba604dcb3203d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1918d6cac049fd863426ce320ab774067c350ea5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449836"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92678930"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) プロジェクトとソリューション
 
@@ -40,7 +40,7 @@ ms.locfileid: "88449836"
  プロジェクトはソリューション内に保存されます。 最初にソリューションを作成し、次に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトをそのソリューションに追加できます。 既存のソリューションがない場合、最初にプロジェクトを作成したときに [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] は自動的にソリューションを作成します。 1 つのソリューションにさまざまな種類の複数のプロジェクトを含めることができます。  
   
 > [!TIP]  
->  既定では、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で新しいプロジェクトを作成すると、そのソリューションは**ソリューション エクスプローラー** ペインに表示されません。 既定の動作を変更するには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスで、 **[プロジェクトおよびソリューション]** を展開し、 **[全般]** をクリックします。 **[全般]** ページで、 **[常にソリューションを表示]** を選択します。  
+>  既定では、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で新しいプロジェクトを作成すると、そのソリューションは **ソリューション エクスプローラー** ペインに表示されません。 既定の動作を変更するには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスで、 **[プロジェクトおよびソリューション]** を展開し、 **[全般]** をクリックします。 **[全般]** ページで、 **[常にソリューションを表示]** を選択します。  
 
 ## <a name="solutions-contain-projects"></a>プロジェクトを格納するソリューション  
  ソリューションとは、エンド ツー エンドのビジネス ソリューションを開発するときに使用するプロジェクトを、グループ化して管理するコンテナーのことです。 ソリューションを使用すると、複数のプロジェクトを 1 単位として処理し、ビジネス ソリューションに役立つ 1 つ以上の関連プロジェクトをまとめることができます。  
@@ -65,7 +65,7 @@ ms.locfileid: "88449836"
 ## <a name="folders-in-integration-services-projects"></a>Integration Services プロジェクトのフォルダー  
  次の図は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] での [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクト内のフォルダーを示しています。  
   
-![ssis-solution-explorer.png](media/ssis-solution-explorer.png)
+![プロジェクト内のフォルダーを示すソリューション エクスプローラーのスクリーン ショット。](media/ssis-solution-explorer.png)
   
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに表示されるフォルダーについて説明します。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "88449836"
   
      **[Integration Services プロジェクト]** テンプレートでは、空のパッケージを 1 つ含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトが作成されます。
 
-  ![ssis-ssdt-new-project.png](media/ssis-ssdt-new-project.png)
+  ![[Integration Services プロジェクト‐ ビジネス インテリジェンス] テンプレートが強調表示された [新しいプロジェクト] ダイアログ ボックスのスクリーンショット。](media/ssis-ssdt-new-project.png)
   
 4.  (省略可) プロジェクトの名前と場所を変更します。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "88449836"
   
     > **注:** 選択したソース管理プラグインを表示、変更したり、ソース管理の環境を構成するには、**[ツール]** メニューの **[オプション]** をクリックし、**[ソース管理]** ノードを展開します。  
   
-8.  **[OK]** をクリックしてソリューションを**ソリューション エクスプローラー**に追加し、プロジェクトをソリューションに追加します。  
+8.  **[OK]** をクリックしてソリューションを **ソリューション エクスプローラー** に追加し、プロジェクトをソリューションに追加します。  
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>プロジェクトのインポート ウィザードで既存のプロジェクトをインポートする
   
@@ -140,7 +140,7 @@ ms.locfileid: "88449836"
   
 9. **.ispac** ファイルからインポートする場合は、ファイル名を含むパスを **[パス]** テキスト ボックスに入力します。 **[参照]** をクリックして、ソリューションを格納するフォルダーに移動し、 **[ファイル名]** ボックスにファイル名を入力して、 **[開く]** をクリックします。  
   
-     **Integration Services カタログ**からインポートする場合は、データベース インスタンス名を **[サーバー名]** ボックスに入力するか、または **[参照]** をクリックしてカタログを含むデータベース インスタンスを選択します。  
+     **Integration Services カタログ** からインポートする場合は、データベース インスタンス名を **[サーバー名]** ボックスに入力するか、または **[参照]** をクリックしてカタログを含むデータベース インスタンスを選択します。  
   
      **[パス]** ボックスの横にある **[参照]** をクリックし、カタログのフォルダーを展開して、インポートするプロジェクトを選択し、 **[OK]** をクリックします。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "88449836"
   
 2.  **[既存プロジェクトの追加]** ダイアログ ボックスで、追加するプロジェクトを選択して、**[開く]** をクリックします。  
   
-3.  選択したプロジェクトが、**ソリューション エクスプローラー**のソリューション フォルダーに追加されます。  
+3.  選択したプロジェクトが、**ソリューション エクスプローラー** のソリューション フォルダーに追加されます。  
   
 ## <a name="remove-a-project-from-a-solution"></a>ソリューションからプロジェクトを削除する
  プロジェクトをソリューションから削除できるのは、そのソリューションが [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で表示されている場合のみです。 ソリューションが表示されていれば、1 つのプロジェクト以外はすべて削除できます。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、残りのプロジェクトが 1 つのみになった時点でソリューション フォルダーが表示されなくなるので、最後の 1 つのプロジェクトは削除できません。  

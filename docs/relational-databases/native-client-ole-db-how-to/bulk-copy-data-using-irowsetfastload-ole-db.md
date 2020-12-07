@@ -17,12 +17,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a2586a6f3a741f81cb30756006c5a2b4ae84b02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 053d9c0b9dd2a6c3e06eb55540fbde5e655759f1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448495"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869215"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>SQL Server Native Client での IRowsetFastLoad (OLE DB) を使用した一括データコピー
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88448495"
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>SQL Server テーブルにデータを一括コピーするには  
   
@@ -432,5 +432,4 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'IRFLTable')
      DROP TABLE IRFLTable  
 GO  
 ```  
-  
   

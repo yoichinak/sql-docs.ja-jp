@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b24e6085e255e6e6a66d499b6c23e4cba91cf7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0994268d1e6ba95e7f4f3bc1bbe3875ec4f57358
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392548"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92197186"
 ---
 # <a name="maintenance-cleanup-task"></a>メンテナンス クリーンアップ タスク
 
@@ -47,10 +47,9 @@ ms.locfileid: "88392548"
 -   [[メンテナンス クリーンアップ タスク] (メンテナンス プラン)](../../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

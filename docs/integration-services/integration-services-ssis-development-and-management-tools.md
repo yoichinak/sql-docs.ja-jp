@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a84ff3b6f655ee0c0e797f7cfcda541ee6e964c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa32eb175339d3fa02afdf41e0c90471a7ef8ee5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449854"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193884"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Integration Services (SSIS) の開発と管理ツール
 
@@ -52,7 +52,7 @@ ms.locfileid: "88449854"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の msdb データベース、[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムに、パッケージのコピーを保存します。  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の詳細については、「 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686.aspx)」を参照してください。  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の詳細については、「 [SQL Server Data Tools](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103))」を参照してください。  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを利用して、パッケージの管理、実行中のパッケージの監視、および [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの影響とデータ系列の決定を行います。  
@@ -65,4 +65,4 @@ ms.locfileid: "88449854"
   
 -   パッケージ実行ユーティリティを実行して、 **dtexec** コマンド プロンプト ユーティリティ (dtexec.exe) の実行時に使用するコマンド ラインを生成します。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の msdb データベース、[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムのパッケージをインポートおよびエクスポートします。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の msdb データベース、[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムのパッケージをインポートおよびエクスポートします。

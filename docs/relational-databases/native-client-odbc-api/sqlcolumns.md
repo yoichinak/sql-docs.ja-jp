@@ -15,12 +15,12 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cfa5203d9be4b89d94173abc000c6fdb1d76d07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f44f2e1c9754096ae08bc64298815a8849f92478
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428314"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810598"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88428314"
   
  **Sqlcolumns** は、静的サーバーカーソルで実行できます。 更新可能なカーソル (動的カーソルまたはキーセットカーソル) で **Sqlcolumns** を実行しようとすると、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 *CatalogName*パラメーターに2つの部分で構成される名前を使用して、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。 *Linked_Server_Name Catalog_Name*。  
+ > Native Client ODBC ドライバーでは、 *CatalogName*パラメーターの2部構成の名前 ( *Linked_Server_Name*) を受け入れることによって、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。  
   
  ODBC 2 の場合。*x* アプリケーションでは、 *tablename*でワイルドカードを使用していません。 **sqlcolumns** は、名前が *tablename* に一致し、現在のユーザーが所有しているテーブルに関する情報を返します。 現在のユーザーが *tablename* パラメーターと一致する名前を持つテーブルを所有していない場合、 **sqlcolumns** は、テーブル名が *tablename* パラメーターと一致する他のユーザーが所有しているテーブルに関する情報を返します。 ODBC 2 の場合。*x* アプリケーションワイルドカードを使用する **sqlcolumns** は、名前が *TableName*に一致するすべてのテーブルを返します。 ODBC 3 の場合。*x* Applications **sqlcolumns** は、所有者に関係なく名前が *TableName* に一致するすべてのテーブル、またはワイルドカードを使用するかどうかを返します。  
   
@@ -92,7 +92,6 @@ ms.locfileid: "88428314"
  ODBC でのスパース列の詳細については、「 [スパース列のサポート &#40;odbc&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLColumns 関数](https://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns 関数](../../odbc/reference/syntax/sqlcolumns-function.md)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

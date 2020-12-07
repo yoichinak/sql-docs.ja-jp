@@ -15,12 +15,12 @@ ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebd1aec656b0ba13e8c2ba31a7c03d77f1f8d89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de139744d0c14668d0d7e67ada36be1142721762
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88325566"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869235"
 ---
 # <a name="transferring-data"></a>データの転送
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88325566"
   
  データベース スキーマ内のオブジェクトは、生成されたスクリプトをターゲット サーバー上で実行することで転送されます。 <xref:Microsoft.SqlServer.Management.Smo.Table> データは、動的に作成された DTS パッケージによって転送されます。  
   
- オブジェクトは、 <xref:Microsoft.SqlServer.Management.Smo.Transfer> [SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy.aspx) API を使用してデータを転送します。 また、データ転送を実行するために使用されるメソッドおよびプロパティは、<xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトではなく <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトに存在します。 インスタンス クラスからユーティリティ クラスに機能を移動することは、タスクのコードが必要時にのみ読み込まれることを意味するので、軽量化されたオブジェクト モデルに適合する概念です。  
+ オブジェクトは、 <xref:Microsoft.SqlServer.Management.Smo.Transfer> [SQLBulkCopy](/dotnet/api/system.data.sqlclient.sqlbulkcopy) API を使用してデータを転送します。 また、データ転送を実行するために使用されるメソッドおよびプロパティは、<xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトではなく <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトに存在します。 インスタンス クラスからユーティリティ クラスに機能を移動することは、タスクのコードが必要時にのみ読み込まれることを意味するので、軽量化されたオブジェクト モデルに適合する概念です。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのバージョンより前の <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> を持つ対象データベースへのデータ転送はサポートしていません。  
   
@@ -126,5 +126,4 @@ $xfr.CopySchema = $true
 #Script the transfer. Alternatively perform immediate data transfer with TransferData method.  
 $xfr.ScriptTransfer()  
 ```  
-  
   

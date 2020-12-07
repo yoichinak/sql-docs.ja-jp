@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4e8680d0f122d2b89c199172866a40dd55981a00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0513878f65513e57a6e26bb52d8101ba6c5d672c
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493078"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570959"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-sql)
 
@@ -46,11 +46,11 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>引数
 
-`[ @rolename = ] 'role'` 現在のデータベースで定義されているアプリケーションロールの名前を指定します。 *role* の型は **sysname**で、既定値はありません。 *ロール* は現在のデータベースに存在している必要があります。  
+`[ @rolename = ] 'role'` 現在のデータベースで定義されているアプリケーションロールの名前を指定します。 *role* の型は **sysname** で、既定値はありません。 *ロール* は現在のデータベースに存在している必要があります。  
   
-`[ @password = ] { encrypt N'password' }` アプリケーションロールをアクティブ化するために必要なパスワードを指定します。 *パスワード* は **sysname**,、既定値はありません。 ODBC **encrypt**関数を使用すると、*パスワード*を難読化できます。 **Encrypt**関数を使用する場合は、最初の引用符の前に**N**を配置することで、パスワードを Unicode 文字列に変換する必要があります。  
+`[ @password = ] { encrypt N'password' }` アプリケーションロールをアクティブ化するために必要なパスワードを指定します。 *パスワード* は **sysname** ,、既定値はありません。 ODBC **encrypt** 関数を使用すると、 *パスワード* を難読化できます。 **Encrypt** 関数を使用する場合は、最初の引用符の前に **N** を配置することで、パスワードを Unicode 文字列に変換する必要があります。  
   
- [暗号化] オプションは、 **SqlClient**を使用している接続ではサポートされていません。  
+ [暗号化] オプションは、 **SqlClient** を使用している接続ではサポートされていません。  
   
 > [!IMPORTANT]  
 > ODBC **encrypt** 関数では、暗号化は提供されません。 ネットワーク経由で転送されるパスワードを保護するために、この機能に依存しないでください。 この情報がネットワーク経由で送信される場合は、TLS または IPSec を使用します。
@@ -63,7 +63,7 @@ sp_setapprole [ @rolename = ] 'role',
   
 `[ @fCreateCookie = ] true | false` クッキーを作成するかどうかを指定します。 **true** は、暗黙的に1に変換されます。 **false** は暗黙的に0に変換されます。  
   
-`[ @cookie = ] @cookie OUTPUT` クッキーを格納する出力パラメーターを指定します。 クッキーは、 ** \@ fCreateCookie**の値が**true**の場合にのみ生成されます。 **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` クッキーを格納する出力パラメーターを指定します。 クッキーは、 **\@ fCreateCookie** の値が **true** の場合にのみ生成されます。 **varbinary(8000)**  
   
 > [!NOTE]  
 > **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 アプリケーションは、今後のリリースでクッキーの戻り値のサイズが増加した場合にアプリケーションが引き続き正常に動作するように、 **varbinary (8000)** を引き続き予約する必要があります。
@@ -72,19 +72,19 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
- **Sp_setapprole**を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか**sp_unsetapprole**を実行するまで、ロールはアクティブのままになります。 **sp_setapprole** は、直接のステートメントによってのみ実行でき [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 **sp_setapprole** は、別のストアドプロシージャ内、またはユーザー定義のトランザクション内では実行できません。  
+ **Sp_setapprole** を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか **sp_unsetapprole** を実行するまで、ロールはアクティブのままになります。 **sp_setapprole** は、直接の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、アドホックレベル、およびユーザー定義のトランザクション内ではなく、アドホックレベルでのみ実行できます。  
   
  アプリケーションロールの概要については、「 [アプリケーションロール](../../relational-databases/security/authentication-access/application-roles.md)」を参照してください。  
   
 > [!IMPORTANT]  
 > ネットワーク経由で転送されるときにアプリケーションロールのパスワードを保護するには、アプリケーションロールを有効にするときに、常に暗号化された接続を使用する必要があります。
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC の**encrypt**オプションは、 **SqlClient**ではサポートされていません。 資格情報を格納する必要がある場合は、Crypto API 関数を使用して暗号化します。 パラメーターの *パスワード* は、一方向のハッシュとして格納されます。 以前のバージョンのとの互換性を維持するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_addapprole**によってパスワードの複雑さのポリシーは適用されません。 パスワードの複雑さのポリシーを適用するには、[ [アプリケーションロールの作成](../../t-sql/statements/create-application-role-transact-sql.md)] を使用します。  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC の **encrypt** オプションは、 **SqlClient** ではサポートされていません。 資格情報を格納する必要がある場合は、Crypto API 関数を使用して暗号化します。 パラメーターの *パスワード* は、一方向のハッシュとして格納されます。 以前のバージョンのとの互換性を維持するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_addapprole** によってパスワードの複雑さのポリシーは適用されません。 パスワードの複雑さのポリシーを適用するには、[ [アプリケーションロールの作成](../../t-sql/statements/create-application-role-transact-sql.md)] を使用します。  
   
 ## <a name="permissions"></a>アクセス許可
 
-**Public**のメンバーシップと、ロールのパスワードに関する知識が必要です。  
+**Public** のメンバーシップと、ロールのパスワードに関する知識が必要です。  
   
 ## <a name="examples"></a>例  
   
@@ -119,4 +119,8 @@ GO
 
 ## <a name="see-also"></a>参照
 
- Sql&#41;[セキュリティストアドプロシージャ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)を[&#40;するシステムストアドプロシージャ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)TRANSACT-SQL&#41;[CREATE application ROLE &#40;](../../t-sql/statements/create-application-role-transact-sql.md) transact-sql&#41;[DROP Application role](../../t-sql/statements/drop-application-role-transact-sql.md) &#40;transact-sql&#41;sp_unsetapprole &#40;[transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)を &#40;ます。
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [sp_unsetapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)

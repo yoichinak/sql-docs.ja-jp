@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9e869aa4f5f5056ef29968b6ad0d7446b0849a25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d39e58c6dd4fa648d8d4118414925777eb3535b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417048"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92038319"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88417048"
   
  最大距離の制限により、バッファーを構築する際の柔軟性が最大限に高まります。  
   
- 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents * 1.E-7) です。tolerance は distance \* .001 になります。 エクステントの詳細は、「[geography データ型メソッド リファレンス](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)」を参照してください。  
+ 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents * 1.E-7) です。tolerance は distance \* .001 になります。 エクステントの詳細は、「[geography データ型メソッド リファレンス](./stequals-geography-data-type.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
  次の例では、`LineString``geography` インスタンスを作成します。 次に、`STBuffer()` を使用して、インスタンスから 1 m 以内にある領域を返します。  
@@ -79,5 +79,4 @@ SELECT @g.STBuffer(1).ToString();
 ## <a name="see-also"></a>参照  
  [BufferWithTolerance &#40;geography データ型&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
   

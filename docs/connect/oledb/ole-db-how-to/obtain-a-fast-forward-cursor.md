@@ -12,12 +12,12 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a6b5aec6440a666413a06e1c7307a6d8c83aaaac
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: de4b4d600e6b83d1c2eede7ed7ef3d5970b6ac74
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860338"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727103"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>FAST_FORWARD カーソルの取得
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860338"
  完全なサンプル コードには、行セット プロパティを設定して FAST_FORWARD カーソルを取得する方法が示されています。 プロパティを設定した後、SELECT ステートメントを実行し、**AdventureWorks** データベースの **Purchasing.Vendor** テーブルから **Name** 列を取得して表示します。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>FAST_FORWARD カーソルを取得するには  
   
@@ -409,5 +409,4 @@ void Cleanup() {
    OleUninitialize();  
 }  
 ```  
-  
   

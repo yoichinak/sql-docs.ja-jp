@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0eb92cb3370343345a487b16852ec05dddf338a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 617f7b5132f6df2cd8acd02579512b880ece4ff2
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495293"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243645"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (SSISDB データベース)
 
@@ -38,8 +38,10 @@ ms.locfileid: "88495293"
 |last_validation_time|**datatimeoffset(7)**|前回の検証操作の時刻。|  
   
 ## <a name="remarks"></a>解説  
- このビューは、カタログの各環境参照の行を表示します。  
+- このビューは、カタログの各環境参照の行を表示します。  
   
+- プロジェクトでは、相対または絶対環境参照を使用できます。 相対参照は、名前によって環境を参照し、プロジェクトと同じフォルダーに格納されている必要があります。 絶対参照の場合、名前とフォルダーによって環境を参照します。プロジェクトとは異なるフォルダーに格納されている環境を参照する場合があります。 プロジェクトでは複数の環境を参照できます。  
+
 ## <a name="permissions"></a>アクセス許可  
  このビューには、次の権限のいずれかが必要です。  
   
@@ -51,8 +53,4 @@ ms.locfileid: "88495293"
   
 > [!NOTE]  
 >  プロジェクトの READ 権限がある場合は、そのプロジェクトに関連付けられたすべてのパッケージおよび環境の READ 権限もあります。 行レベルのセキュリティが適用されるため、表示する権限がある行のみが表示されます。  
-  
-## <a name="remarks"></a>解説  
- プロジェクトでは、相対または絶対環境参照を使用できます。 相対参照は、名前によって環境を参照し、プロジェクトと同じフォルダーに格納されている必要があります。 絶対参照の場合、名前とフォルダーによって環境を参照します。プロジェクトとは異なるフォルダーに格納されている環境を参照する場合があります。 プロジェクトでは複数の環境を参照できます。  
-  
   

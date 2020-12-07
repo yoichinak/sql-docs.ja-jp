@@ -17,12 +17,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 18b5f2e898638823e20aa237d9bbbc43bb025967
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88321dc6030b76869c55039f04dea39728342751
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720599"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868119"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>ディストリビューターとパブリッシャーのプロパティの表示および変更
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -176,7 +176,7 @@ ms.locfileid: "85720599"
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> メソッドを呼び出します。 新しいパスワード値を *password* パラメーターに渡します。  
   
     > [!IMPORTANT]  
-    >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+    >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](/previous-versions/aa719848(v=vs.71)) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
   
 6.  (省略可) このディストリビューターを使用している各リモート パブリッシャーでパスワードを変更するには、次の手順に従います。  
   
@@ -208,5 +208,4 @@ ms.locfileid: "85720599"
  [ディストリビューターおよびパブリッシャーの情報スクリプト](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [パブリッシャーの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)  
-  
   

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c3306032f1ee69b99a2b7fd3c080003a93644ac3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bbda2ed08797343b328cf5764a5e73dc9b418e3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457014"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195846"
 ---
 # <a name="ssis-designer"></a>SSIS デザイナー
 
@@ -93,7 +93,7 @@ ms.locfileid: "88457014"
 ### <a name="event-handlers-tab"></a>[イベント ハンドラー] タブ  
  パッケージ内にイベントを構築するには、 **[イベント ハンドラー]** タブのデザイン画面を使用します。 **[イベント ハンドラー]** タブで、イベント ハンドラーを作成するパッケージまたはパッケージ オブジェクトを選択し、次にイベント ハンドラーに関連付けるイベントを選択します。 イベント ハンドラーには制御フローと、オプションでデータ フローが含まれます。  
   
- 詳細については、「 [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)」を参照してください。  
+ 詳細については、「 [Add an Event Handler to a Package](./integration-services-ssis-event-handlers.md)」を参照してください。  
   
 ### <a name="package-explorer-tab"></a>[パッケージ エクスプローラー] タブ  
  パッケージは、タスク、接続マネージャー、変数、その他の要素が多数含まれていて複雑な場合があります。 パッケージをエクスプローラー ビューで表示すると、パッケージ要素の全一覧を確認できます。  
@@ -108,7 +108,7 @@ ms.locfileid: "88457014"
 #### <a name="connection-managers-area"></a>[接続マネージャー] 領域  
  パッケージで使用する接続マネージャーを追加および変更するには、 **[接続マネージャー]** 領域を使用します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、テキスト ファイル、OLE DB データベース、.NET プロバイダーなど、さまざまなデータ ソースに接続するための接続マネージャーがあります。  
   
- 詳細については、「[Integration Services (SSIS) の接続](../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)」を参照してください。  
+ 詳細については、「[Integration Services (SSIS) の接続](../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](./connection-manager/integration-services-ssis-connections.md)」を参照してください。  
  
 ## <a name="control-flow-tab"></a>[制御フロー] タブ
 **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの制御フローを構築できます。  
@@ -191,5 +191,4 @@ ms.locfileid: "88457014"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のユーザー インターフェイス](../integration-services/integration-services-user-interface.md)  
-  
   

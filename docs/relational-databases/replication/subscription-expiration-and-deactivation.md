@@ -23,15 +23,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 64fb9d21457558d2d0f3373b926f426808b9105d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423406"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>サブスクリプションの有効期限と非アクティブ化
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  サブスクリプションは、指定した *保有期間*内に同期されなかった場合、非アクティブ化されるか、期限切れにされる可能性があります。 行われる処理は、レプリケーションの種類と保有期間が過ぎているかどうかによって異なります。  
+  サブスクリプションは、指定した *保有期間* 内に同期されなかった場合、非アクティブ化されるか、期限切れにされる可能性があります。 行われる処理は、レプリケーションの種類と保有期間が過ぎているかどうかによって異なります。  
   
  保有期間を設定する場合は、「[サブスクリプションの有効期限の設定](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)」、「[トランザクション パブリケーションのディストリビューションの保有期間の設定 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md)」および「[パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)」を参照してください。  
   

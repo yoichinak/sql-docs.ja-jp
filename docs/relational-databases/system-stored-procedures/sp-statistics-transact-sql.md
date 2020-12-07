@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e4b24a8b2a825c5754d7cd1ec3f1c9594896eed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4b22227de702e787f183a7ec15e3b26d685fd6cb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551242"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005953"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89551242"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_statistics [ @table_name = ] 'table_name'    
      [ , [ @table_owner = ] 'owner' ]   
@@ -45,7 +45,9 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @is_unique = ] 'is_unique' ]  
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="arguments"></a>引数  
 `[ @table_name = ] 'table_name'` カタログ情報を返すために使用するテーブルを指定します。 *table_name* は **sysname**であり、既定値はありません。 ワイルドカードのパターンマッチングはサポートされていません。  
   
@@ -79,7 +81,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|インデックス内での列の位置。|  
 |**COLUMN_NAME**|**sysname**|返される **TABLE_NAME** の各列の列名。 この列は常に値が返されます。|  
 |**COLLATION**|**char(1)**|照合順序で使用されている並べ替え順。 次の値をとります。<br /><br /> A = 昇順<br /><br /> D = 降順<br /><br /> NULL = 適用なし|  
-|**基数**|**int**|テーブルの行数またはインデックス内の一意の値。|  
+|**CARDINALITY**|**int**|テーブルの行数またはインデックス内の一意の値。|  
 |**トピック**|**int**|インデックスまたはテーブルを格納するページ数。|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では値は返されません。|  
   
@@ -93,7 +95,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  ハッシュ化インデックス型は、完全一致検索または範囲検索を受け付けますが、パターン照合検索ではインデックスは使用されません。  
   
- **sp_statistics** は、ODBC の **sqlstatistics** に相当します。 返される結果は、 **NON_UNIQUE**、 **種類**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および **SEQ_IN_INDEX**順に並べ替えられます。 詳細については、 [ODBC API リファレンス](https://go.microsoft.com/fwlink/?LinkId=68323)を参照してください。  
+ **sp_statistics** は、ODBC の **sqlstatistics** に相当します。 返される結果は、 **NON_UNIQUE**、 **種類**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および **SEQ_IN_INDEX**順に並べ替えられます。 詳細については、 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-reference.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
@@ -111,5 +113,3 @@ EXEC sp_statistics DimEmployee;
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
-  
-

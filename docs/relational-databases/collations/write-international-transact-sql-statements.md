@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465525"
 ---
 # <a name="write-international-transact-sql-statements"></a>国際化に対応した Transact-SQL ステートメントの記述
@@ -32,7 +32,7 @@ ms.locfileid: "88465525"
 
 -   [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、次のいずれかを使用します。
     -   **char**、**varchar**、**varchar(max)** の各データ型では [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 対応の照合順序が使用され、データは UTF-8 を使用してエンコードされます。
-    -   **nchar**、**nvarchar**、**nvarchar(max)** の各データ型では[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 対応の照合順序が使用され、データは UTF-16 を使用してエンコードされます。 SC 以外の照合順序を使用すると、データは UCS-2 を使用してエンコードされます。      
+    -   **nchar**、**nvarchar**、**nvarchar(max)** の各データ型では [補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 対応の照合順序が使用され、データは UTF-16 を使用してエンコードされます。 SC 以外の照合順序を使用すると、データは UCS-2 を使用してエンコードされます。      
 
     これによりコード ページ変換の問題を回避できます。 他の考慮事項については、「[UTF-8 と UTF-16 でのストレージの相違点](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)」をご覧ください。  
 

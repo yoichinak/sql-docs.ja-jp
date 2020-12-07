@@ -1,6 +1,6 @@
 ---
-description: dm_os_host_info (Transact-sql)
-title: dm_os_host_info (Transact-sql) |Microsoft Docs
+description: sys.dm_os_host_info (Transact-sql)
+title: sys.dm_os_host_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97d313e91fdd719a7ff33728bf3183980f564910
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e2c6e374061a847e168421b30971469ff60e4348
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550229"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834084"
 ---
-# <a name="sysdm_os_host_info-transact-sql"></a>dm_os_host_info (Transact-sql)
+# <a name="sysdm_os_host_info-transact-sql"></a>sys.dm_os_host_info (Transact-sql)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 オペレーティングシステムのバージョン情報を表示する1行を返します。  
@@ -38,11 +38,11 @@ ms.locfileid: "89550229"
 |**host_distribution** |**nvarchar (256)** |オペレーティングシステムの説明。 |
 |**host_release**|**nvarchar (256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティングシステムのリリース (バージョン番号)。 値と説明の一覧については、「 [オペレーティングシステムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)」を参照してください。 <br> Linux の場合、は空の文字列を返します。 |  
 |**host_service_pack_level**|**nvarchar (256)**|Windows オペレーティングシステムの Service pack のレベル。 <br> Linux の場合、は空の文字列を返します。 |  
-|**host_sku**|**int**|Windows 株価保持ユニット (SKU) ID。 SKU Id と説明の一覧については、「 [Getproductinfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)」を参照してください。 NULL 値が許可されます。 <br> Linux の場合、は NULL を返します。 |  
-|**os_language_version**|**int**|オペレーティングシステムの Windows ロケール識別子 (LCID)。 LCID 値と説明の一覧については、「 [Microsoft によって割り当てられたロケール id](https://go.microsoft.com/fwlink/?LinkId=208080)」を参照してください。 null にすることはできません。|  
+|**host_sku**|**int**|Windows 株価保持ユニット (SKU) ID。 SKU Id と説明の一覧については、「 [Getproductinfo 関数](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo)」を参照してください。 NULL 値が許可されます。 <br> Linux の場合、は NULL を返します。 |  
+|**os_language_version**|**int**|オペレーティングシステムの Windows ロケール識別子 (LCID)。 LCID 値と説明の一覧については、「 [Microsoft によって割り当てられたロケール id](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)」を参照してください。 null にすることはできません。|  
 
-## <a name="remarks"></a>解説  
-このビューは、Windows と Linux を区別するために列を追加する dm_os_windows_info に似てい[ます。](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)
+## <a name="remarks"></a>注釈  
+このビューは、Windows と Linux を区別するために列を追加する [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)に似ています。
   
 ## <a name="security"></a>セキュリティ  
   
@@ -54,7 +54,7 @@ ms.locfileid: "89550229"
 
   
 ## <a name="examples"></a>例  
- 次の例では、 **dm_os_host_info** ビューからすべての列を返します。  
+ 次の例では、 **sys.dm_os_host_info** ビューからすべての列を返します。  
   
 ```  
 SELECT host_platform, host_distribution, host_release, 
@@ -77,6 +77,4 @@ Linux での結果セットの例を次に示します。
   
 ## <a name="see-also"></a>参照  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [dm_os_windows_info (Transact-sql)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
- 
-
+ [sys.dm_os_windows_info (Transact-sql)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  

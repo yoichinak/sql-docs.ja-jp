@@ -12,12 +12,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fbaf3147eaa9cf8c68e0d0b8b3ee0510c6b4ef7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 76eb3c73bf93b3cc8f037f96737f491c5d473173
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540827"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130866"
 ---
 # <a name="temporal-tables"></a>テンポラル テーブル
 
@@ -35,7 +35,7 @@ SQL Server 2016 では、現時点の正しいデータのみではなく、テ�
   - [メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
   - [テンポラル テーブルの使用シナリオ](../../relational-databases/tables/temporal-table-usage-scenarios.md)
 
-  - [Azure SQL Database のテンポラル テーブルの概要](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)
+  - [Azure SQL Database のテンポラル テーブルの概要](/azure/azure-sql/temporal-tables)
 
 - **例:**
 
@@ -79,7 +79,7 @@ SQL Server 2016 では、現時点の正しいデータのみではなく、テ�
 
 現行テーブルには、各行の現在の値が含まれています。 履歴テーブルには、存在する場合、各行のそれぞれの以前の値と、それが有効であった期間の開始時間と終了時間が含まれています。
 
-![テンポラルのしくみ](../../relational-databases/tables/media/temporal-howworks.PNG "テンポラルのしくみ")
+![テンポラル テーブルのしくみを示す図。](../../relational-databases/tables/media/temporal-howworks.PNG "テンポラルのしくみ")
 
 次に、Employee 情報が仮定の HR データベースにあるシナリオの簡単な例を示します。
 
@@ -99,7 +99,7 @@ CREATE TABLE dbo.Employee
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 ```
 
-- **INSERTS:** システムにより、**INSERT** では、**SysStartTime** 列には、システム クロックに基づく現在のトランザクションの開始時間 (UTC タイム ゾーン) の値が設定され、**SysEndTime** 列には、最大値の 9999-12-31 の値が割り当てられます。 これは行をオープンとマークします。
+- **INSERTS:** システムにより、**INSERT** では、**SysStartTime** 列 (**ValidFrom** など) には、システム クロックに基づく現在のトランザクションの開始時間 (UTC タイム ゾーン) の値が設定され、**SysEndTime** 列 (**ValidTo** など) には、最大値の 9999-12-31 の値が割り当てられます。 これは行をオープンとマークします。
 - **UPDATES:** システムにより、**UPDATE** では、行の前の値が履歴テーブルに保存され、**SysEndTime** 列には、システム クロックに基づく現在のトランザクションの開始時間 (UTC タイム ゾーン) の値が設定されます。 これは行をクローズドとマークし、行が有効であった期間が記録されます。 現行テーブルでは、行は新しい値で更新され、システムにより **SysStartTime** 列には、システム クロックに基づくトランザクションの開始時間 (UTC タイム ゾーン) の値が設定されます。 現行テーブル内の **SysEndTime** 列の更新された行の値は、最大値の 9999-12-31 のままです。
 - **DELETES:** システムにより、**DELETE** では、行の前の値が履歴テーブルに保存され、**SysEndTime** 列には、システム クロックに基づく現在のトランザクションの開始時間 (UTC タイム ゾーン) の値が設定されます。 これは行をクローズドとマークし、前の行が有効であった期間が記録されます。 現行テーブルでは、その行は削除されます。 現行テーブルに対するクエリでは、この行は返されません。 履歴データを処理するクエリのみで、クローズドの行のデータが返されます。
 - **MERGE:** **MERGE** では、**MERGE** ステートメントでアクションとして指定されている内容に応じて、まさに最大 3 つのステートメント (**INSERT**、**UPDATE**、または **DELETE**、あるいはこれらすべて) が実行されたかのような動作になります。
@@ -111,7 +111,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 
 **SELECT** ステートメントの **FROM** _\<table\>_ 句には、現行および履歴テーブルのデータに対してクエリを実行する新しい **FOR SYSTEM_TIME** 句が導入されました。これには、テンポラル専用のサブ句が 5 つあります。 この新しい **SELECT** ステートメントの構文は、1 つのテーブルで直接サポートされており、複数の結合を介して、また複数のテンポラル テーブル上のビューを介して反映されます。
 
-![テンポラルのクエリ](../../relational-databases/tables/media/temporal-querying.PNG "テンポラルのクエリ")
+![テンポラルのクエリのしくみを示す図。](../../relational-databases/tables/media/temporal-querying.PNG "テンポラルのクエリ")
 
 次のクエリでは、少なくとも 2014 年の 1 月 1 日から 2015 年 1 月 1 日 (上限の境界を含む) の間にアクティブであった、EmployeeID が 1000 の従業員行の行バージョンが検索されます。
 

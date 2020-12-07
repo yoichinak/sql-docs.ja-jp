@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d0a851a8f2374740f9a6cfe9d1ae6db5f2ee113e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373168"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987248"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL ドキュメントのバージョン管理システム
 
@@ -159,17 +159,17 @@ Web アドレスが `https://docs.microsoft.com/sql/` で始まっている記�
 
 - _2012 以前:_ &nbsp; バージョン管理システムは、SQL Server 2012 以前のバージョンでは使用されません。
     - 特別なモニカー **SQL Server - older** では、ほとんどすべての記事が非表示になります。 まれに例外として、以前のバージョンのお客様がかつて必要としたことがある記事が表示されます。
-    - [SQL Server の以前のバージョン、2012 - 2005](../toc/previous-versions-sql-server.md)
+    - [SQL Server の以前のバージョン、2012 - 2005](./previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; バージョン管理システムは、SQL Server 2014 では半分実装されています。 バージョン管理コントロールで SQL Server 2014 を選択することができ、動作します。 ただし、内部的には、2008 のファイルが 2008 専用であるのと同じように、2014 のファイルは 2014 のみを対象としています。
-    - [SQL Server 2014 オフライン ドキュメント](/sql/sql-server/sql-server-offline-documentation)
+    - [SQL Server 2014 オフライン ドキュメント](./sql-server-offline-documentation.md)
 
 - _2016 以降:_ &nbsp; バージョン管理システムは、SQL Server バージョン 2016 以降のバージョンでは完全に実装されています。
-    - [SQL Server 2016 以降のドキュメントへようこそ](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
+    - [SQL Server 2016 以降のドキュメントへようこそ](./index.yml?preserve-view=true&view=sql-server-2016)
     - [SQL Server 2016 オフライン ドキュメント](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>関連項目
 
-[SQL Server の以前のバージョン、2014 - 2005](../toc/previous-versions-sql-server.md)  
+[SQL Server の以前のバージョン、2014 - 2005](./previous-versions-sql-server.md)  
 [SQL Server ドキュメント ナビゲーション ガイド](sql-docs-navigation-guide.md)  
-[SQL Server のドキュメントに投稿する方法](sql-server-docs-contribute.md)  
+[SQL Server のドキュメントに投稿する方法](sql-server-docs-contribute.md)

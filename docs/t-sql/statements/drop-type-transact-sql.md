@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12ad4564a7d1f72ec257872372b67b69754392ef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 26fb837dc28b0ac7b2845a64eab800512e508b7b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541254"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131063"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、型を削除します。  
   
@@ -70,7 +70,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ## <a name="examples"></a>例  
  次の例では、`ssn` という名前の型が現在のデータベースに既に作成されていることを前提としています。  
   
-```  
+```sql  
 DROP TYPE ssn ;  
 ```  
   

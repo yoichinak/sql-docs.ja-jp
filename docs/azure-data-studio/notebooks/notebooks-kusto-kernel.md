@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: ab2f062e6dd712e7f001556bb60c10c9ea4fad83
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942734"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725126"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Kusto (KQL) ノートブックの作成と実行 (プレビュー)
 
-この記事では、Azure Data Explorer クラスターに接続する [Kusto (KQL) 拡張機能](../extensions/kusto-extension.md)を使用して、[Azure Data Studio ノートブック](../notebooks-guidance.md)を作成して実行する方法について説明します。
+この記事では、Azure Data Explorer クラスターに接続する [Kusto (KQL) 拡張機能](../extensions/kusto-extension.md)を使用して、[Azure Data Studio ノートブック](./notebooks-guidance.md)を作成して実行する方法について説明します。
 
 Kusto (KQL) 拡張機能を使用すると、カーネル オプションを **Kusto** に変更できます。
 
@@ -28,7 +28,7 @@ Kusto (KQL) 拡張機能を使用すると、カーネル オプションを **K
 
 Azure サブスクリプションをお持ちでない場合は、開始する前に[無料の Azure アカウント](https://azure.microsoft.com/free/)を作成してください。
 
-- [接続可能なデータベースを備えた Azure Data Explorer クラスター](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal)。
+- [接続可能なデータベースを備えた Azure Data Explorer クラスター](/azure/data-explorer/create-cluster-database-portal)。
 - [Azure Data Studio](../download-azure-data-studio.md)
 - [Azure Data Studio 用の Kusto (KQL) 拡張機能](../extensions/kusto-extension.md)。
 
@@ -38,13 +38,13 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
 
 1. Azure Data Studio で、Azure Data Explorer クラスターに接続します。
 
-2. **[接続]** ペインに移動し、 **[サーバー]** ウィンドウで [Kusto データベース] を右クリックして、 *[新しいノートブック]* を選択します。
+2. **[接続]** ペインに移動し、 **[サーバー]** ウィンドウで [Kusto データベース] を右クリックして、 *[新しいノートブック]* を選択します。 または、 **[ファイル]**  >  **[新しいノートブック]** に移動します。
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="ノートブックを開く":::
 
 3. **[カーネル]** として、 *[Kusto]* を選択します。 **[アタッチ先]** メニューがクラスター名とデータベースに設定されていることを確認します。 この記事では、サンプル データベース データを備えた help.kusto.windows.net クラスターを使用します。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="[カーネル] と [アタッチ先] を設定する":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="ノートブックを開く":::
 
 ノートブックを保存するには、 **[ファイル]** メニューで **[保存]** または **[名前を付けて保存...]** コマンドを使用します。
 
@@ -56,14 +56,14 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
 
 1. ノートブック ツール バーから **[アタッチ先]** メニューを選択し、 **[接続の変更]** を選択します。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="接続の変更":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="ノートブックを開く":::
 
    > [!Note]
    > データベースの値を確実に入力します。 Kusto ノートブックで、データベースを指定する必要があります。
 
 2. これで最近使用した接続サーバーを選択するか、新しい接続の詳細を入力して接続できます。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="別のクラスターを選択する":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="ノートブックを開く":::
 
    > [!Note]
    > クラスター名は、`https://` を含めずに指定してください。
@@ -76,7 +76,7 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
 
 1. ツールバーの **[+Code]** コマンドを選択して、新しいコード セルを追加します。
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto カーネル コード ブロック":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="ノートブックを開く":::
 
 2. 次の例をコピーしてセルに貼り付け、 **[セルの実行]** を選択します。 この例では、特定のイベントの種類について StormEvents データに対してクエリを実行します。
 
@@ -85,7 +85,7 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="セルの実行":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="ノートブックを開く":::
 
 ## <a name="save-the-result-or-show-chart"></a>結果を保存する、またはグラフを表示する
 
@@ -102,13 +102,22 @@ Azure サブスクリプションをお持ちでない場合は、開始する�
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="結果を保存する":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="ノートブックを開く":::
+
+## <a name="known-issues"></a>既知の問題
+
+| 詳細 | 回避策 |
+|---------|------------|
+| [クエリ結果には、列ヘッダーのみが表示されます](https://github.com/microsoft/azuredatastudio/issues/12565)。 | 該当なし |
+
+製品チームにフィードバックを提供するために、[機能の要求](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=)を提出できます。  
+製品チームにフィードバックを提供するために、[バグ](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=)を提出できます。
 
 ## <a name="next-steps"></a>次のステップ
 
 ノートブックについてさらに学習します:
 
 - [Azure Data Studio 用の Kusto (KQL) 拡張機能](../extensions/kusto-extension.md)
-- [Azure Data Studio でノートブックを使用する方法](../notebooks-guidance.md)
-- [Python ノートブックを作成して実行する](../notebooks-tutorial-python-kernel.md)
-- [SQL Server ノートブックを作成して実行する](../notebooks-tutorial-sql-kernel.md)
+- [Azure Data Studio でノートブックを使用する方法](./notebooks-guidance.md)
+- [Python ノートブックを作成して実行する](./notebooks-python-kernel.md)
+- [SQL Server ノートブックを作成して実行する](./notebooks-sql-kernel.md)

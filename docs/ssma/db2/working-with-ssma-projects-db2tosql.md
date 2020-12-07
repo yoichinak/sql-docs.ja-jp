@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2454ec9d594977a89ddf867645bc7e2d8fe26e57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f56387f8081ce14c68d355327c2829bf6e33c8cc
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454154"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869480"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA プロジェクトの使用 (DB2ToSQL)
 DB2 データベースをに移行するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、最初に SSMA プロジェクトを作成します。 プロジェクトは、次の情報を含むファイルです。  
@@ -28,7 +28,7 @@ DB2 データベースをに移行するには [!INCLUDE[ssNoVersion](../../incl
   
 -   プロジェクト設定。  
   
-プロジェクトを開くと、そのプロジェクトは DB2 およびから切断され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これにより、オフラインで作業できるようになります。 への再接続の詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、「 [SQL Server &#40;DB2eToSQL&#41;への接続 ](../../ssma/db2/connecting-to-sql-server-db2etosql.md)」を参照してください。  
+プロジェクトを開くと、そのプロジェクトは DB2 およびから切断され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これにより、オフラインで作業できるようになります。 への再接続の詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、「 [SQL Server &#40;DB2ToSQL&#41;への接続 ](../../ssma/db2/connecting-to-sql-server-db2tosql.md)」を参照してください。  
   
 ## <a name="reviewing-default-project-settings"></a>既定のプロジェクト設定の確認  
 SSMA には、データベースオブジェクトの変換と読み込み、データの移行、SSMA と DB2 およびの同期を行うための設定がいくつか含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前に、設定を確認する必要があります。 必要に応じて、すべての新しいプロジェクトで使用される既定の設定を変更できます。  
@@ -116,10 +116,9 @@ DB2 データベースからにデータを移行するには [!INCLUDE[ssNoVers
 3.  に再接続するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、[ **ファイル** ] メニューの [ **再接続**] をクリックして SQL Server します。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順は、 [DB2 データベースに接続](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)することです。  
+移行プロセスの次の手順は、 [DB2 データベースに接続](./connecting-to-db2-database-db2tosql.md)することです。  
   
 ## <a name="see-also"></a>参照  
 [DB2 データベースを SQL Server &#40;DB2ToSQL&#41;に移行する ](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [DB2 データベースへの接続 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
-[SQL Server &#40;DB2eToSQL&#41;に接続しています ](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
-  
+[SQL Server &#40;DB2ToSQL&#41;に接続しています ](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  

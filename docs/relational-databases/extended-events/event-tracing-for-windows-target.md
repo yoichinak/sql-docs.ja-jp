@@ -15,12 +15,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a20924d617f3c0333d548a3134f2bfc211dab7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28658f7f420976efe51d84a86123fe037965ab48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733687"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868012"
 ---
 # <a name="event-tracing-for-windows-target"></a>Event Tracing for Windows ターゲット
 
@@ -28,9 +28,9 @@ ms.locfileid: "85733687"
 
   Event Tracing for Windows (ETW) をターゲットとして使用する前に、ETW を活用するための知識を身に付けておくことをお勧めします。 ETW トレースは、拡張イベントと組み合わせて使用されるか、拡張イベントのイベント コンシューマーとして使用されます。 ETW の背景情報については、次の外部リンクを参照してください。  
   
--   [Windows イベント](https://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows イベント](/windows/win32/events/windows-events)  
   
--   [ETW によりデバッグおよびパフォーマンス調整を改善する](https://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [ETW によりデバッグおよびパフォーマンス調整を改善する](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)  
   
  ETW ターゲットは、多くのセッションに追加できますが、シングルトン ターゲットです。 多くのセッションでイベントが発生した場合、イベントは、イベントの発生ごとに 1 回、ETW ターゲットのみに反映されます。 拡張イベント エンジンは、プロセスあたり 1 つのインスタンスに制限されます。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85733687"
     > [!IMPORTANT]  
     >  最初のセッションの開始後にファイル パスを変更することはできません。  
   
--   マネージド オブジェクト フォーマット (MOF) ファイルは *\<your install path>* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](https://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。
+-   マネージド オブジェクト フォーマット (MOF) ファイルは *\<your install path>* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](/windows/win32/wmisdk/managed-object-format--mof-)」を参照してください。
 
 <!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->
@@ -99,5 +99,4 @@ ADD TARGET package0.etw_classic_sync_target
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  
-  
   

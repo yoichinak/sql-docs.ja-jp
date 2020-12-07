@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPControl method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4529bd4535b64702272796d72a8183fd1cf4438c
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: dfb42fe378d428dbe272bb135492ab93c6eb619c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861992"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081831"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ HRESULT BCPControl(
 |BCP_OPTION_ABORT|既に実行中の一括コピー操作を停止します。 別のスレッドから *eOption* 引数に BCP_OPTION_ABORT を指定して **BCPControl** メソッドを呼び出し、実行中の一括コピー操作を停止できます。 *iValue* 引数は無視されます。|  
 |BCP_OPTION_BATCH|バッチごとの行数を指定します。 既定値は 0 です。これは、データを抽出するときはテーブル内のすべての行が抽出されることを示し、データを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にコピーするときはユーザー データ ファイル内のすべての行がコピーされることを示します。 BCP_OPTION_BATCH に 1 未満の値を指定すると、既定値にリセットされます。|  
 |BCP_OPTION_DELAYREADFMT|ブール値を設定します。true に設定した場合、[IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) により実行時に読み取りが行われます。 false (既定値) の場合、IBCPSession::BCPReadFmt により直ちにフォーマット ファイルの読み取りが行われます。 **BCP_OPTION_DELAYREADFMT** が true のとき、IBCPSession::BCPColumns か IBCPSession::BCPColFmt を呼び出すと、シーケンス エラーが発生します。<br /><br /> `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` および IBCPSession::BCPWriteFmt を呼び出した後に `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` を呼び出した場合にもシーケンス エラーが発生します。<br /><br /> 詳細については、「[メタデータの検出](../../oledb/features/metadata-discovery.md)」を参照してください。|  
-|BCP_OPTION_FILECP|*iValue* 引数には、データ ファイルのコード ページ番号が含まれます。 1252 や 850 などのコード ページ番号を指定するか、次のいずれかの値を指定できます。<br /><br /> BCP_FILECP_ACP を指定すると、ファイル内のデータには、クライアントの Microsoft Windows&#xAE; コード ページが使用されます。<br /><br /> BCP_FILECP_OEMCP を指定すると、ファイル内のデータには、クライアントの OEM コード ページ (既定) が使用されます。<br /><br /> BCP_FILECP_RAW を指定すると、ファイル内のデータには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のコード ページが使用されます。|  
+|BCP_OPTION_FILECP|*iValue* 引数には、データ ファイルのコード ページ番号が含まれます。 1252 や 850 などのコード ページ番号を指定するか、次のいずれかの値を指定できます。<br /><br /> BCP_FILECP_ACP を指定すると、ファイル内のデータには、クライアントの Microsoft Windows コード ページが使用されます。<br /><br /> BCP_FILECP_OEMCP を指定すると、ファイル内のデータには、クライアントの OEM コード ページ (既定) が使用されます。<br /><br /> BCP_FILECP_RAW を指定すると、ファイル内のデータには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のコード ページが使用されます。|  
 |BCP_OPTION_FILEFMT|データ ファイル形式のバージョン番号を指定します。 80 ([!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])、または 110 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) を指定できます。 110 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。  たとえば、[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] サーバーのテキスト列から取得したデータを、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のサーバーの **varchar(max)** 列にインポートするには、80 を指定する必要があります。 同様に、データを **varchar(max)** 列からエクスポートするときに 80 を指定すると、データは、テキスト列が [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 形式で保存されるのと同じように保存されるので、[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] サーバーのテキスト列にインポートできます。|  
 |BCP_OPTION_FIRST|ファイルまたはテーブルにコピーするデータの先頭行を指定します。 既定値は 1 です。1 未満の値を指定すると、このオプションは既定値にリセットされます。|  
 |BCP_OPTION_FIRSTEX|BCP out 操作の場合は、データ ファイルにコピーするための、データベース テーブルの最初の行を指定します。<br /><br /> BCP in 操作の場合は、データベース テーブルにコピーするための、データ ファイルの最初の行を指定します。<br /><br /> *iValue* パラメーターには、その値を含む 64 ビット符号付き整数のアドレスを指定する必要があります。 BCPFIRSTEX に渡すことができる最大値は 2^63-1 です。|  
@@ -77,7 +77,7 @@ HRESULT BCPControl(
  メソッドが成功しました。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) インターフェイスを使用してください。  
+ プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) インターフェイスを使用してください。  
   
  E_UNEXPECTED  
  メソッドの呼び出しが予期されませんでした。 たとえば、この関数が呼び出される前に、[IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドが呼び出されなかった場合などです。  
@@ -88,5 +88,4 @@ HRESULT BCPControl(
 ## <a name="see-also"></a>参照  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [一括コピー操作の実行](../../oledb/features/performing-bulk-copy-operations.md)  
-  
   

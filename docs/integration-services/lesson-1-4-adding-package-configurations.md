@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 052bb905c78839c644a5436da568667b6665b432
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1e2b55f3c61308d4f3dba30ac1c9b079031e01d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477208"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193814"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>レッスン 1-4 - パッケージ構成の追加
 
@@ -139,6 +139,6 @@ DataTransferConfig.dtsConfig と LoadXMLData.dtsConfig の 2 つの構成ファ�
 [手順 5:更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="see-also"></a>参照  
-[[パッケージ構成]](../integration-services/packages/package-configurations.md)  
-[パッケージ構成を作成する](../integration-services/packages/create-package-configurations.md)  
-[パッケージで使用されるファイルへのアクセス](../integration-services/security/security-overview-integration-services.md#files)  
+[[パッケージ構成]](./packages/legacy-package-deployment-ssis.md)  
+[パッケージ構成を作成する](./packages/legacy-package-deployment-ssis.md)  
+[パッケージで使用されるファイルへのアクセス](../integration-services/security/security-overview-integration-services.md#files)

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3632f0e69cbf451d5361aa30c55f92bb0945fb6f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f0672cc39573904b6e09f4a117c9c8094e4db3df
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114608"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120933"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC の強制クォーラムによる災害復旧 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -120,9 +120,8 @@ ms.locfileid: "91114608"
   
 -   [フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog フェールオーバー クラスター コマンドレット](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
   
 ## <a name="see-also"></a>参照  
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
-  
   

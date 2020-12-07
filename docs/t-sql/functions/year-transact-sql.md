@@ -25,16 +25,16 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3f8ad5bd4d39b0fc55fad2dd68b43552bf15ab8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422586"
 ---
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  指定された*日付*の年を表す整数を返します。  
+  指定された *日付* の年を表す整数を返します。  
   
  すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
@@ -58,7 +58,7 @@ YEAR ( date )
 ## <a name="return-value"></a>戻り値  
  YEAR は [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**year**、*date*) と同じ値を返します。  
   
- *日付*には、時刻部分のみが含まれる、戻り値は基準年を 1900 年にです。  
+ *日付* には、時刻部分のみが含まれる、戻り値は基準年を 1900 年にです。  
   
 ## <a name="examples"></a>例  
  次のステートメントでは、`2010` が返されます。 これは年の数値です。  

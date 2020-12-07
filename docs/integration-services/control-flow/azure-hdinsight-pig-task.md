@@ -15,11 +15,11 @@ ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a7e5d57d54bc54cf6e905d66bf7d6687c737e070
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484661"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123630"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig Task
 
@@ -28,7 +28,7 @@ ms.locfileid: "88484661"
 
 Azure HDInsight クラスターで Pig スクリプトを実行するには、 **Azure HDInsight Pig Task** を使用します。
      
-**Azure HDInsight Pig Task**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックします。すると、次の **[Azure HDInsight Pig Task Editor]** (Azure HDInsight Pig Task エディター) ダイアログ ボックスが表示されます。  
+**Azure HDInsight Pig Task** を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックします。すると、次の **[Azure HDInsight Pig Task Editor]** (Azure HDInsight Pig Task エディター) ダイアログ ボックスが表示されます。  
   
 **Azure HDInsight Pig Task** は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
   

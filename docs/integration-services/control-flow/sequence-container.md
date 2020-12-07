@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82e34adab1dc0f732f96d5e248b98ff8fc7186c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7951c07be9159162c31572933a17e7af27fcc951
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425894"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92192832"
 ---
 # <a name="sequence-container"></a>シーケンス コンテナー
 
@@ -58,11 +58,10 @@ ms.locfileid: "88425894"
  プログラムによってこれらのプロパティを設定する方法の詳細については、開発者ガイドの **T:Microsoft.SqlServer.Dts.Runtime.Sequence** クラスのドキュメントを参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でコンポーネントのプロパティを設定する方法については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でコンポーネントのプロパティを設定する方法については、「 [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [既定の優先順位制約を使用してタスクとコンテナーを連結する](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
+ [既定の優先順位制約を使用してタスクとコンテナーを連結する](./precedence-constraints.md)   
  [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)  
-  
   

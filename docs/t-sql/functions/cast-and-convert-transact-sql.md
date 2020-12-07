@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 858e479346231fdce6b41e402b0fd7e606a76bbd
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.openlocfilehash: 1472a8d7117fb45fc7f9d4adb04f690ed9662ea2
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570612"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412671"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 *data_type*  
-対象のデータ型です。 **xml**、**bigint**、**sql_variant** が含まれます。 別名データ型は使用できません。
+対象のデータ型です。 **xml** 、 **bigint** 、 **sql_variant** が含まれます。 別名データ型は使用できません。
   
 *length*  
 データ型でユーザー指定の長さが許可されるとき、ターゲット データ型の長さを指定する任意の整数。 既定値は 30 です。
@@ -78,14 +78,14 @@ CONVERT 関数で *expression* を変換する方法を指定する整数式で�
 *data_type* に変換された *expression* を返します。
   
 ## <a name="date-and-time-styles"></a>日付および時刻のスタイル  
-date または time データ型の *expression* の場合、*style* には次の表に示すいずれかの値を指定できます。 その他の値は 0 として処理されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、date 型と time 型を **datetimeoffset** に変換するときにサポートされるスタイルは、0 または 1 のみです。 他のすべての変換スタイルでは 9809 が返されます。
+date または time データ型の *expression* の場合、 *style* には次の表に示すいずれかの値を指定できます。 その他の値は 0 として処理されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、date 型と time 型を **datetimeoffset** に変換するときにサポートされるスタイルは、0 または 1 のみです。 他のすべての変換スタイルでは 9809 が返されます。
   
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クウェート アルゴリズムを使用して、アラビア スタイルで、日付の書式をサポートします。
   
 |2 桁の年 (yy) (<sup>1</sup>)|4 桁の年 (yyyy)|Standard|入力/出力 (<sup>3</sup>)|  
 |---|---|--|---|
-|-|**0** または **100** (<sup>1、</sup><sup>2</sup>)|datetime および smalldatetime の既定値|mon dd yyyy hh:miAM (または PM)|  
+|-|**0** または **100** ( <sup>1、</sup><sup>2</sup>)|datetime および smalldatetime の既定値|mon dd yyyy hh:miAM (または PM)|  
 |**1**|**101**|米国|  1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
 |**2**|**102**|ANSI|  2 = yy.mm.dd<br /> 102 = yyyy.mm.dd|  
 |**3**|**103**|イギリス/フランス|  3 = dd/mm/yy<br /> 103 = dd/mm/yyyy|  
@@ -94,24 +94,24 @@ date または time データ型の *expression* の場合、*style* には次�
 |**6**|**106** <sup>(1)</sup>|-|  6 = dd mon yy<br /> 106 = dd mon yyyy|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mon dd, yy<br /> 107 = Mon dd, yyyy|  
 |**8** または **24**|**108**|-|hh:mi:ss|  
-|-|**9** または **109** (<sup>1、</sup><sup>2</sup>)|既定値 + ミリ秒|mon dd yyyy hh:mi:ss:mmmAM (または PM)|  
-|"**10**"|**110**|米国| 10 = mm-dd-yy<br /> 110 = mm-dd-yyyy|  
+|-|**9** または **109** ( <sup>1、</sup><sup>2</sup>)|既定値 + ミリ秒|mon dd yyyy hh:mi:ss:mmmAM (または PM)|  
+|" **10** "|**110**|米国| 10 = mm-dd-yy<br /> 110 = mm-dd-yyyy|  
 |**11**|**111**|日本| 11 = yy/mm/dd<br /> 111 = yyyy/mm/dd|  
 |**12**|**112**|ISO| 12 = yymmdd<br /> 112 = yyyymmdd|  
-|-|**13** または **113** (<sup>1、</sup><sup>2</sup>)|ヨーロッパの既定値 + ミリ秒|dd mon yyyy hh:mi:ss:mmm (24h)|  
+|-|**13** または **113** ( <sup>1、</sup><sup>2</sup>)|ヨーロッパの既定値 + ミリ秒|dd mon yyyy hh:mi:ss:mmm (24h)|  
 |**14**|**114**|-|hh:mi:ss:mmm (24h)|  
-|-|**20** または **120** (<sup>2</sup>)|ODBC 標準|yyyy-mm-dd hh:mi:ss (24h)|  
-|-|**21** または **25** または **121** (<sup>2</sup>)|time、date、datetime2、および datetimeoffset の ODBC 標準 (ミリ秒を含む) の既定値|yyyy-mm-dd hh:mi:ss.mmm (24h)|  
+|-|**20** または **120** ( <sup>2</sup>)|ODBC 標準|yyyy-mm-dd hh:mi:ss (24h)|  
+|-|**21** または **25** または **121** ( <sup>2</sup>)|time、date、datetime2、および datetimeoffset の ODBC 標準 (ミリ秒を含む) の既定値|yyyy-mm-dd hh:mi:ss.mmm (24h)|  
 |**22**|-|米国| mm/dd/yy hh:mi:ss AM (または PM)|
 |-|**23**|ISO8601|yyyy-mm-dd|
-|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (スペースなし)<br /><br /> **注:** ミリ秒 (mmm) の値が 0 の場合、ミリ秒を表す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20"' と表示されます。| 
-|-|**127**(<sup>6、7</sup>)|ISO 8601 (タイム ゾーン Z)|yyyy-mm-ddThh:mi:ss.mmmZ (スペースなし)<br /><br /> **注:** ミリ秒 (mmm) の値が 0 の場合、ミリ秒を示す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20" と表示されます。|  
-|-|**130** (<sup>1、</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> このスタイルでは、**mon** は月の正式名に関する複数トークンの Hijri (イスラム暦) ユニコード表現を表します。 この値は、SSMS の既定の米国用インストールでは正しく表示されません。|  
-|-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
+|-|**126** ( <sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (スペースなし)<br /><br /> **注:** ミリ秒 (mmm) の値が 0 の場合、ミリ秒を表す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20"' と表示されます。| 
+|-|**127** ( <sup>6、7</sup>)|ISO 8601 (タイム ゾーン Z)|yyyy-MM-ddThh:mm:ss.fffZ (スペースなし)<br /><br /> **注:** ミリ秒 (mmm) の値が 0 の場合、ミリ秒を示す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20" と表示されます。|  
+|-|**130** ( <sup>1、</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> このスタイルでは、 **mon** は月の正式名に関する複数トークンの Hijri (イスラム暦) ユニコード表現を表します。 この値は、SSMS の既定の米国用インストールでは正しく表示されません。|  
+|-|**131** ( <sup>2</sup>)|Hijri (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
   
 <sup>1</sup> これらのスタイル値で返される結果は非決定的です。 この場合は、すべての (yy) (2 桁の年) スタイルと、(yyyy) (4 桁の年) スタイルのサブセットが対象となります。
   
-<sup>2</sup> 既定値 (**0** または **100**、**9** または **109**、**13** または **113**、**20** または **120**、**23**、および **21** または **25** または **121**) は常に 4 桁の年 (yyyy) を返します。
+<sup>2</sup> 既定値 ( **0** または **100** 、 **9** または **109** 、 **13** または **113** 、 **20** または **120** 、 **23** 、および **21** または **25** または **121** ) は常に 4 桁の年 (yyyy) を返します。
 
 <sup>3</sup>**datetime** に変換する場合は入力になり、文字データに変換する場合は出力になります。
 
@@ -122,7 +122,7 @@ date または time データ型の *expression* の場合、*style* には次�
 > [!IMPORTANT]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定では、2 桁の年は、終了年 2049 年を基準に解釈されます。 つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は 2 桁の年 49 を 2049 年と解釈し、2 桁の年 50 を 1950 年と解釈します。 クライアント アプリケーションの中には、Automation オブジェクトに基づくものなど、2030 年を終了年とするものも多くあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される基準年を変更するための 2 桁年基準構成オプションが用意されています。 これにより、日付の一貫性のある処理を行うことができます。 年は 4 桁で指定することをお勧めします。
 
-<sup>6</sup> 文字データを **datetime** または **smalldatetime** 型にキャストする場合のみサポートされます。 日付部分または時刻部分のみを表す文字データを、**datetime** または **smalldatetime** データ型にキャストするとき、時刻部分が指定されていないと 00:00:00.000 に設定され、日付部分が指定されていないと 1900-01-01 に設定されます。
+<sup>6</sup> 文字データを **datetime** または **smalldatetime** 型にキャストする場合のみサポートされます。 日付部分または時刻部分のみを表す文字データを、 **datetime** または **smalldatetime** データ型にキャストするとき、時刻部分が指定されていないと 00:00:00.000 に設定され、日付部分が指定されていないと 1900-01-01 に設定されます。
   
 <sup>7</sup> タイム ゾーン インジケーター **Z** は省略可能です。これを使用すると、タイム ゾーン情報が含まれる XML の **datetime** 値から、タイム ゾーン情報が含まれない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 値へのマップが容易になります。 Z は、タイム ゾーン UTC-0 を示します。 \+ または - 方向の HH:MM オフセットは、他のタイム ゾーンを示します。 (例: `2006-12-12T23:45:12-08:00`)。
   
@@ -131,7 +131,7 @@ date または time データ型の *expression* の場合、*style* には次�
 時刻を含むスタイルを使って文字データから **datetimeoffset** に変換すると、タイム ゾーン オフセットが結果に追加されます。
   
 ## <a name="float-and-real-styles"></a>float 型スタイルと real 型スタイル
-*expression* が **float** 型または **real** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
+*expression* が **float** 型または **real** 型の場合、 *style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
 |値|出力|  
 |---|---|
@@ -142,7 +142,7 @@ date または time データ型の *expression* の場合、*style* には次�
 |**126、128、129**|レガシのために含まれていますが、将来のリリースではこれらの値は非推奨になる可能性があります。|  
   
 ## <a name="money-and-smallmoney-styles"></a>money 型スタイルと smallmoney 型スタイル
-*expression* が **money** 型または **smallmoney** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
+*expression* が **money** 型または **smallmoney** 型の場合、 *style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
 |値|出力|  
 |---|---|
@@ -152,25 +152,25 @@ date または time データ型の *expression* の場合、*style* には次�
 |**126**|char(n) または varchar(n) に変換する場合はスタイル 2 に相当します。|  
   
 ## <a name="xml-styles"></a>xml スタイル
-*expression* が **xml** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
+*expression* が **xml** 型の場合、 *style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
 |値|出力|  
 |---|---|
 |**0** (既定値)|既定の解析動作を使用します。つまり、余分な空白を破棄し、内部の DTD サブセットを許可しません。<br /><br />**注:** **xml** データ型への変換では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での余分な空白は XML 1.0 とは別の方法で処理されます。 詳細については、「[XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」を参照してください。|  
-|**1**|余分な空白を保持します。 このスタイル設定は、**xml:space="preserve"** の動作と一致するように、既定の **xml:space** の処理を設定します。|  
-|**2**|限定的な内部 DTD サブセット処理を有効にします。<br /><br /> 有効な場合、サーバーでは内部 DTD サブセットで提供される情報を次のように使用して、検証を行わない解析操作を実行できます。<br /><br />   - 属性の既定値が適用されます<br />   - 内部エンティティの参照が解決および展開されます<br />   - DTD コンテンツ モデルの構文の正確さが確認されます<br /><br /> パーサーでは外部 DTD サブセットが無視されます。 また、XML 宣言を評価して、**standalone** 属性に **yes** または **no** の値が設定されているかどうかも確認しません。 代わりに、XML インスタンスをスタンドアロン ドキュメントとして解析します。|  
+|**1**|余分な空白を保持します。 このスタイル設定は、 **xml:space="preserve"** の動作と一致するように、既定の **xml:space** の処理を設定します。|  
+|**2**|限定的な内部 DTD サブセット処理を有効にします。<br /><br /> 有効な場合、サーバーでは内部 DTD サブセットで提供される情報を次のように使用して、検証を行わない解析操作を実行できます。<br /><br />   - 属性の既定値が適用されます<br />   - 内部エンティティの参照が解決および展開されます<br />   - DTD コンテンツ モデルの構文の正確さが確認されます<br /><br /> パーサーでは外部 DTD サブセットが無視されます。 また、XML 宣言を評価して、 **standalone** 属性に **yes** または **no** の値が設定されているかどうかも確認しません。 代わりに、XML インスタンスをスタンドアロン ドキュメントとして解析します。|  
 |**3**|余分な空白を保持し、限定的な内部 DTD サブセット処理を有効にします。|  
   
 ## <a name="binary-styles"></a>バイナリ スタイル
-*expression* が **binary(n)** 、**char(n)** 、**varbinary(n)** 、または **varchar(n)** の場合、*style* は次の表に示すいずれかの値になります。 表に記載されていないスタイル値の場合は、エラーが返されます。
+*expression* が **binary(n)** 、 **char(n)** 、 **varbinary(n)** 、または **varchar(n)** の場合、 *style* は次の表に示すいずれかの値になります。 表に記載されていないスタイル値の場合は、エラーが返されます。
   
 |値|出力|  
 |---|---|
 |**0** (既定値)|ASCII 文字をバイナリ バイトに変換するか、バイナリ バイトを ASCII 文字に変換します。 各文字またはバイトは 1:1 で変換されます。<br /><br /> バイナリの *data_type* の場合は、文字 0x が結果の左側に追加されます。|  
-|**1**、**2**|バイナリの *data_type* の場合は、式は文字式であることが必要です。 *expression* は**偶数**桁の 16 進数 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f) である必要があります。 *style* が 1 に設定されている場合、式の最初の 2 文字は 0x である必要があります。 式に奇数桁の文字が含まれているか、いずれかの文字が使用できない場合は、エラーが発生します。<br /><br /> 変換された式の長さが *data_type* の長さを超える場合、結果の右側が切り捨てられます。<br /><br /> 固定長の *data_type* が変換された結果より長い場合は、結果の右側に 0 が追加されます。<br /><br /> *data_type* が文字型の場合は、バイナリ式である必要があります。 各バイナリ文字は、2 桁の 16 進数の英数文字に変換されます。 変換された式の長さが *data_type* の長さを超える場合、右側が切り捨てられます。<br /><br /> *data_type* が固定サイズの文字型で、変換された結果の長さが *data_type* の長さよりも短い場合、変換された式の右側に空白が追加され、偶数桁の 16 進数が維持されます。<br /><br /> *style* が 2 の場合、変換された結果の左側に文字 0x が追加されます。|  
+|**1** 、 **2**|バイナリの *data_type* の場合は、式は文字式であることが必要です。 *expression* は **偶数** 桁の 16 進数 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f) である必要があります。 *style* が 1 に設定されている場合、式の最初の 2 文字は 0x である必要があります。 式に奇数桁の文字が含まれているか、いずれかの文字が使用できない場合は、エラーが発生します。<br /><br /> 変換された式の長さが *data_type* の長さを超える場合、結果の右側が切り捨てられます。<br /><br /> 固定長の *data_type* が変換された結果より長い場合は、結果の右側に 0 が追加されます。<br /><br /> *data_type* が文字型の場合は、バイナリ式である必要があります。 各バイナリ文字は、2 桁の 16 進数の英数文字に変換されます。 変換された式の長さが *data_type* の長さを超える場合、右側が切り捨てられます。<br /><br /> *data_type* が固定サイズの文字型で、変換された結果の長さが *data_type* の長さよりも短い場合、変換された式の右側に空白が追加され、偶数桁の 16 進数が維持されます。<br /><br /> *style* が 2 の場合、変換された結果の左側に文字 0x が追加されます。|  
   
 ## <a name="implicit-conversions"></a>暗黙的な変換
-暗黙的な変換では、CAST 関数または CONVERT 関数を指定する必要はありません。 明示的な変換では、CAST 関数または CONVERT 関数を指定する必要があります。 次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムで提供されるデータ型に対して許可されるすべての明示的および暗黙的なデータ型変換を示しています。 **bigint**、**sql_variant**、**xml** が含まれます。 代入時に **sql_variant** データ型からの暗黙的な変換は行われませんが、**sql_variant** への暗黙的な変換は行われます。
+暗黙的な変換では、CAST 関数または CONVERT 関数を指定する必要はありません。 明示的な変換では、CAST 関数または CONVERT 関数を指定する必要があります。 次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムで提供されるデータ型に対して許可されるすべての明示的および暗黙的なデータ型変換を示しています。 **bigint** 、 **sql_variant** 、 **xml** が含まれます。 代入時に **sql_variant** データ型からの暗黙的な変換は行われませんが、 **sql_variant** への暗黙的な変換は行われます。
   
 > [!TIP]  
 > このグラフは、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=35834)で PNG ファイルとしてダウンロードできます。  
@@ -186,26 +186,26 @@ date または time データ型の *expression* の場合、*style* には次�
 > [!TIP]
 > [変換でデータ型の優先順位の影響](#precedence-example)については、このセクションの後半で実際の例を確認できます。
 
-**datetimeoffset** と、**char**、**nchar**、**nvarchar**、および **varchar** の各文字型との間で変換を行う場合、変換後のタイム ゾーン オフセットの部分は、HH と MM の両方が常に 2 桁である必要があります。 たとえば、-08:00 などです。
+**datetimeoffset** と、 **char** 、 **nchar** 、 **nvarchar** 、および **varchar** の各文字型との間で変換を行う場合、変換後のタイム ゾーン オフセットの部分は、HH と MM の両方が常に 2 桁である必要があります。 たとえば、-08:00 などです。
   
 > [!NOTE]   
-> Unicode データでは常に偶数のバイト数が使用されるので、**binary** 型または **varbinary** 型と、Unicode がサポートするデータ型との間でデータを変換する場合は注意してください。 たとえば、次のような変換を行うと、16 進数の 41 は返されません。 16 進数の値 4100 が返されます。`SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)` 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 
+> Unicode データでは常に偶数のバイト数が使用されるので、 **binary** 型または **varbinary** 型と、Unicode がサポートするデータ型との間でデータを変換する場合は注意してください。 たとえば、次のような変換を行うと、16 進数の 41 は返されません。 16 進数の値 4100 が返されます。`SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)` 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 
   
 ## <a name="large-value-data-types"></a>大きな値のデータ型
-大きな値のデータ型では、それより小さな値のデータ型、つまり **nvarchar**、**varbinary**、および **varchar** 型と同様の明示的および暗黙的な変換動作が行われます。 ただし、次のガイドラインを考慮してください。
--   **image** 型から **varbinary(max)** 型への変換およびその逆の変換は暗黙的な変換であり、**text** 型と **varchar(max)** 型の間、および **ntext** 型と **nvarchar(max)** 型の間の変換も暗黙的な変換です。  
--   **varchar(max)** 型のような大きな値のデータ型から、**varchar** 型のような小さな値のデータ型への変換は暗黙的な変換ですが、大きな値のサイズが、小さなデータ型で指定された長さを超えると、切り捨てが発生します。  
--   **nvarchar**、**varbinary**、または **varchar** 型から対応する大きな値のデータ型への変換は、暗黙的に行われます。  
+大きな値のデータ型では、それより小さな値のデータ型、つまり **nvarchar** 、 **varbinary** 、および **varchar** 型と同様の明示的および暗黙的な変換動作が行われます。 ただし、次のガイドラインを考慮してください。
+-   **image** 型から **varbinary(max)** 型への変換およびその逆の変換は暗黙的な変換であり、 **text** 型と **varchar(max)** 型の間、および **ntext** 型と **nvarchar(max)** 型の間の変換も暗黙的な変換です。  
+-   **varchar(max)** 型のような大きな値のデータ型から、 **varchar** 型のような小さな値のデータ型への変換は暗黙的な変換ですが、大きな値のサイズが、小さなデータ型で指定された長さを超えると、切り捨てが発生します。  
+-   **nvarchar** 、 **varbinary** 、または **varchar** 型から対応する大きな値のデータ型への変換は、暗黙的に行われます。  
 -   **sql_variant** 型から大きな値のデータ型への変換は明示的な変換です。  
--   大きな値のデータ型は、**sql_variant** 型へは変換できません。  
+-   大きな値のデータ型は、 **sql_variant** 型へは変換できません。  
   
-**xml** データ型からの変換について詳しくは、「[XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」をご覧ください。
+**xml** データ型からの変換について詳しくは、「 [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」をご覧ください。
   
 ## <a name="xml-data-type"></a>xml データ型。
-明示的か暗黙的かにかかわらず、**xml** データ型を文字列またはバイナリのデータ型にキャストするとき、**xml** データ型の内容は、定義されている一連のルールに基づいてシリアル化されます。 これらの規則については、「[XML データのシリアル化の定義](../../relational-databases/xml/define-the-serialization-of-xml-data.md)」を参照してください。 他のデータ型から **xml** データ型への変換については、「[XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」をご覧ください。
+明示的か暗黙的かにかかわらず、 **xml** データ型を文字列またはバイナリのデータ型にキャストするとき、 **xml** データ型の内容は、定義されている一連のルールに基づいてシリアル化されます。 これらの規則については、「[XML データのシリアル化の定義](../../relational-databases/xml/define-the-serialization-of-xml-data.md)」を参照してください。 他のデータ型から **xml** データ型への変換については、「 [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」をご覧ください。
   
 ## <a name="text-and-image-data-types"></a>text および image データ型
-**text** および **image** データ型では、データ型の自動変換はサポートされていません。 **text** データは文字データに、**image** データは **binary** または **varbinary** 型に明示的に変換できますが、最大の長さは 8,000 バイトに制限されます。 文字を含む文字式を **int** 型に変換するなど、不適切な変換が試行された場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラー メッセージが返されます。
+**text** および **image** データ型では、データ型の自動変換はサポートされていません。 **text** データは文字データに、 **image** データは **binary** または **varbinary** 型に明示的に変換できますが、最大の長さは 8,000 バイトに制限されます。 文字を含む文字式を **int** 型に変換するなど、不適切な変換が試行された場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラー メッセージが返されます。
   
 ## <a name="output-collation"></a>出力の照合順序  
 CAST または CONVERT 関数が文字列を入出力する場合、出力では入力と同じ照合順序および照合順序ラベルが使用されます。 入力が文字列ではない場合、出力ではデータベースの既定の照合順序、および強制可能な既定照合順序の照合順序ラベルが使用されます。 詳細については、「[照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)」を参照してください。
@@ -215,15 +215,15 @@ CAST または CONVERT 関数が文字列を入出力する場合、出力では
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
 ## <a name="truncating-and-rounding-results"></a>切り捨てと丸め処理の結果
-文字式またはバイナリ式 (**binary**、**char**、**nchar**、**nvarchar**、**varbinary**、または **varchar**) を異なるデータ型の式に変換するとき、変換操作により、出力データが切り捨てられたり、出力データの一部だけ表示されたり、エラーが返されたりする場合があります。 このようなことは、結果が小さすぎて表示できない場合に発生します。 **binary**、**char**、**nchar**、**nvarchar**、**varbinary**、および **varchar** 型への変換では、次の表に示す変換を除き、切り捨てが行われます。
+文字式またはバイナリ式 ( **binary** 、 **char** 、 **nchar** 、 **nvarchar** 、 **varbinary** 、または **varchar** ) を異なるデータ型の式に変換するとき、変換操作により、出力データが切り捨てられたり、出力データの一部だけ表示されたり、エラーが返されたりする場合があります。 このようなことは、結果が小さすぎて表示できない場合に発生します。 **binary** 、 **char** 、 **nchar** 、 **nvarchar** 、 **varbinary** 、および **varchar** 型への変換では、次の表に示す変換を除き、切り捨てが行われます。
   
 |変換前のデータ型|変換後のデータ型|結果|  
 |---|---|---|
-|**int**、**smallint**、または **tinyint**|**char**|*|  
+|**int** 、 **smallint** 、または **tinyint**|**char**|*|  
 ||**varchar**|*|  
 ||**nchar**|E|  
 ||**nvarchar**|E|  
-|**money**、**smallmoney**、**numeric**、**decimal**、**float**、または **real**|**char**|E|  
+|**money** 、 **smallmoney** 、 **numeric** 、 **decimal** 、 **float** 、または **real**|**char**|E|  
 ||**varchar**|E|  
 ||**nchar**|E|  
 ||**nvarchar**|E|  
@@ -241,7 +241,7 @@ SELECT CONVERT(DECIMAL(10,5), CONVERT(VARBINARY(20), @myval));
 ```  
   
 > [!WARNING]  
-> **binary** 型の値を作成し、これを数値データ型に変換することは避けてください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**decimal** または **numeric** データ型の **binary** 型への変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン間で同じになることは保証されていません。  
+> **binary** 型の値を作成し、これを数値データ型に変換することは避けてください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **decimal** または **numeric** データ型の **binary** 型への変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン間で同じになることは保証されていません。  
   
 次の例では、短すぎて表示できない結果式を示します。
   
@@ -301,7 +301,7 @@ SELECT  CAST(10.6496 AS INT) as trunc1,
   
 `SELECT CAST(10.3496847 AS money);`
   
-数値ではない **char**、**nchar**、**nvarchar**、**varchar** データを、**decimal**、**float**、**int**、**numeric** に変換すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はエラー メッセージを返します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、空の文字列 (" ") を **numeric** または **decimal** に変換してもエラーが返されます。
+数値ではない **char** 、 **nchar** 、 **nvarchar** 、 **varchar** データを、 **decimal** 、 **float** 、 **int** 、 **numeric** に変換すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はエラー メッセージを返します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、空の文字列 (" ") を **numeric** または **decimal** に変換してもエラーが返されます。
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>一部の datetime 変換が非決定的である
 
@@ -319,7 +319,7 @@ SELECT  CAST(10.6496 AS INT) as trunc1,
 詳細については、「[リテラル日付文字列を DATE 値に非決定論的に変換する](../data-types/nondeterministic-convert-date-literals.md)」を参照してください。
 
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、補助文字 (SC) の照合順序を使用した場合は、**nchar** または **nvarchar** 型から **nchar** または **nvarchar** 型への CAST 操作を実行すると、サロゲート ペア内では切り捨てられません。 代わりに、補助文字の前で切り捨てが行われます。 たとえば次のコード フラグメントでは、`@x` で `'ab'` だけが保持されます。 補助文字を保持するための十分な領域がありません。
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、補助文字 (SC) の照合順序を使用した場合は、 **nchar** または **nvarchar** 型から **nchar** または **nvarchar** 型への CAST 操作を実行すると、サロゲート ペア内では切り捨てられません。 代わりに、補助文字の前で切り捨てが行われます。 たとえば次のコード フラグメントでは、`@x` で `'ab'` だけが保持されます。 補助文字を保持するための十分な領域がありません。
   
 ```sql
 DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);  
@@ -329,9 +329,9 @@ SELECT CAST (@x AS NVARCHAR(3));
 SC の照合順序を使用する場合、`CONVERT` の動作は `CAST` の動作と似たものとなります。 詳細については、「照合順序と Unicode のサポート」の「[補助文字](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters)」セクションを参照してください。
   
 ## <a name="compatibility-support"></a>互換性サポート
-以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**time** および **datetime2** データ型に対する CAST および CONVERT 操作の既定のスタイルは、いずれかの型が計算列の式で使用されている場合を除き、121 です。 計算列の場合、既定のスタイルは 0 です。 この動作は、計算列が作成されるとき、自動パラメーター化を含むクエリで使用されるとき、または制約の定義で使用されるときに、計算列に影響を与えます。
+以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **time** および **datetime2** データ型に対する CAST および CONVERT 操作の既定のスタイルは、いずれかの型が計算列の式で使用されている場合を除き、121 です。 計算列の場合、既定のスタイルは 0 です。 この動作は、計算列が作成されるとき、自動パラメーター化を含むクエリで使用されるとき、または制約の定義で使用されるときに、計算列に影響を与えます。
   
-[互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) 110 以上では、**time** および **datetime2** データ型に対する CAST および CONVERT 操作は、既定のスタイルとして常に 121 になります。 クエリが古い動作に依存する場合は、110 より小さい互換性レベルを使用するか、または影響を受けるクエリで 0 スタイルを明示的に指定してください。
+[互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) 110 以上では、 **time** および **datetime2** データ型に対する CAST および CONVERT 操作は、既定のスタイルとして常に 121 になります。 クエリが古い動作に依存する場合は、110 より小さい互換性レベルを使用するか、または影響を受けるクエリで 0 スタイルを明示的に指定してください。
 
 |[互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)値|CAST と CONVERT の既定のスタイル<sup>1</sup>|計算列の既定のスタイル|  
 |------------|------------|------------|
@@ -807,7 +807,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 ```  
   
 ### <a name="n-using-cast-with-the-like-clause"></a>北 CAST を LIKE 句と共に使用する  
-この例では、**money** 列 `ListPrice` を **int** 型に変換して、次に LIKE 句と共に使用できるよう **char(20)** 列に変換します。 この例では、`AdventureWorksDW2016` データベースを使用します。  
+この例では、 **money** 列 `ListPrice` を **int** 型に変換して、次に LIKE 句と共に使用できるよう **char(20)** 列に変換します。 この例では、`AdventureWorksDW2016` データベースを使用します。  
   
 ```sql
 SELECT EnglishProductName AS Name, ListPrice  

@@ -13,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 089d8f5a3c39cd29e04a342e19c29bfbafc7b712
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d3339525dbf67ee6dd1a4e4ae3b75215dd2c05d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404078"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91868068"
 ---
 # <a name="install-and-configure-semantic-search"></a>セマンティック検索のインストールと構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,9 +78,9 @@ GO
   
  **2.セマンティック言語統計データベースをアタッチします。**
    
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用するか、[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) を **FOR ATTACH** 構文で呼び出して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータベースをアタッチします。 詳細については、「[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)」を参照してください。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用するか、[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) を **FOR ATTACH** 構文で呼び出して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータベースをアタッチします。 詳細については、「[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)」を参照してください。  
   
- 既定では、データベースの名前が **semanticsdb**になります。 データベースをアタッチする際、必要に応じて、別の名前を付けてください。 この名前は、後続の手順でデータベースを登録する際に必要になります。  
+ 既定では、データベースの名前が **semanticsdb** になります。 データベースをアタッチする際、必要に応じて、別の名前を付けてください。 この名前は、後続の手順でデータベースを登録する際に必要になります。  
   
 ```sql  
 CREATE DATABASE semanticsdb  
@@ -146,5 +146,4 @@ GO
   
 ###  <a name="install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a> Microsoft Office およびその他の Microsoft ドキュメントの種類の最新のフィルターをインストールする  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の最新のワード ブレーカーとステマーがインストールされますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office ドキュメントおよびその他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ドキュメントの種類の最新のフィルターはインストールされません。 これらのフィルターは、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office およびその他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アプリケーションで作成されたドキュメントのインデックスを作成するために必要です。 最新のフィルターをダウンロードするには、「 [Microsoft Office 2010 フィルター パック](https://www.microsoft.com/download/details.aspx?id=17062)」を参照してください。 (Office 2013 または Office 2016 用のフィルター パック リリースはありません)。
-  
   

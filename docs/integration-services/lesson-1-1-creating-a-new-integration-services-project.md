@@ -12,10 +12,10 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 575353cd2cf770ed42d439fd31647ccaef3e01bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449754"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>レッスン 1-1:新しい Integration Services プロジェクトを作成する
@@ -47,9 +47,9 @@ ms.locfileid: "88449754"
   
 6.  **[OK]** を選択します。  
   
-    既定では、**Package.dtsx** という名前の空のパッケージが作成され、**SSIS パッケージ**の下のプロジェクトに追加されます。  
+    既定では、**Package.dtsx** という名前の空のパッケージが作成され、**SSIS パッケージ** の下のプロジェクトに追加されます。  
   
-7.  **ソリューション エクスプローラー**で **[Package.dtsx]** を右クリックし、**[名前の変更]** を選択して、既定のパッケージ名を **Lesson 1.dtsx** に変更します。  
+7.  **ソリューション エクスプローラー** で **[Package.dtsx]** を右クリックし、**[名前の変更]** を選択して、既定のパッケージ名を **Lesson 1.dtsx** に変更します。  
   
 ## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 2:フラット ファイル接続マネージャーの追加と構成](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  

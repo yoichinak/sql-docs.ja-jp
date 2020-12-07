@@ -1,27 +1,27 @@
 ---
 title: Azure Resource Explorer を使用して Azure SQL リソースを調べる
 description: Azure Resource Explorer を使用して、Azure SQL Server、Azure SQL Database、Azure SQL Managed Instance を調査し、管理する方法について学習します。
-ms.custom: seodec18
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
+ms.topic: how-to
 author: yanancai
 ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
-ms.topic: quickstart
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dab8425871d32641e696cc3fee2d92a45b7bdf3b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 7107c1489521f733eb685887e6c1bcc543a2c147
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746102"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987853"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Azure Resource Explorer を使用して Azure SQL リソースを調査および管理する
 
 このドキュメントでは、[!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] の Azure Resource Explorer を使用して、Azure SQL Server、Azure SQL Database、Azure SQL Managed Instance のリソースを調査し、管理する方法について学習します。
 
 >[!NOTE]
->Azure Resource Explorer は SQL Server 2019 でサポートされています。 その後、[拡張機能マネージャー](extensions.md)または **[ファイル]**  >  **[Install Package from VSIX Package]\(VSIX パッケージからパッケージをインストールする\)** を使用して、拡張機能をインストールできます。
+>Azure Resource Explorer は SQL Server 2019 でサポートされています。 その後、[拡張機能マネージャー](./extensions/add-extensions.md)または **[ファイル]**  >  **[Install Package from VSIX Package]\(VSIX パッケージからパッケージをインストールする\)** を使用して、拡張機能をインストールできます。
 
 ## <a name="connect-to-azure"></a>Azure に接続する
 
@@ -101,4 +101,4 @@ Azure Resource Explorer では、クエリおよび管理のために SQL Server
 ## <a name="next-steps"></a>次のステップ
 
 - [[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] を使用した Azure SQL データベースに対する接続およびクエリ](quickstart-sql-database.md)
-- [[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] を使用した Azure SQL Data Warehouse のデータに対する接続およびクエリ](quickstart-sql-dw.md)
+- [[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] を使用した Azure Synapse Analytics のデータに対する接続およびクエリ](quickstart-sql-dw.md)

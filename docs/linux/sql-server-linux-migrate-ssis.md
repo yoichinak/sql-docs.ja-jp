@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e513f6783e827617a8c0cc4a1fa0ea4644dcb6e7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088872"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115845"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>SSIS で Linux 上のデータの抽出、変換、読み込みを行う
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088872"
 
 この記事では、Linux で SQL Server Integration Services (SSIS) パッケージを実行する方法について説明します。 SSIS では、複数のソースやフォーマットからデータを抽出し、データを変換し、クレンジングし、データを複数の宛先に読み込むことで複雑なデータ統合問題を解決します。 
 
-Linux で実行されている SSIS パッケージは、Windows オンプレミス、クラウド、Linux、または Docker で実行されている Microsoft SQL Server に接続できます。 Azure SQL Database、Azure SQL Data Warehouse、ODBC データ ソース、フラット ファイル、その他のデータ ソース (ADO.NET ソース、XML ファイル、OData サービス) にも接続できます。
+Linux で実行されている SSIS パッケージは、Windows オンプレミス、クラウド、Linux、または Docker で実行されている Microsoft SQL Server に接続できます。 Azure SQL Database、Azure Synapse Analytics、ODBC データ ソース、フラット ファイル、その他のデータ ソース (ADO.NET ソース、XML ファイル、OData サービス) にも接続できます。
 
 SSIS の機能に関する詳細は、「[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)」を参照してください。
 
@@ -94,7 +94,7 @@ Linux の SSIS の詳細については、次のブログ投稿を参照して�
 
 ## <a name="more-info-about-ssis"></a>SSIS に関する詳細情報
 
-Microsoft SQL Server Integration Services (SSIS) は、データ ウェアハウスの ETL (抽出、変換、読み込み) パッケージなど、パフォーマンスの高いデータ統合ソリューションを構築するためのプラットフォームです。 詳細については、「 [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services)」を参照してください。
+Microsoft SQL Server Integration Services (SSIS) は、データ ウェアハウスの ETL (抽出、変換、読み込み) パッケージなど、パフォーマンスの高いデータ統合ソリューションを構築するためのプラットフォームです。 詳細については、「 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)」を参照してください。
 
 SSIS には次の機能があります。
 - Windows でパッケージをビルドし、デバッグするためのグラフィカル ツールとウィザード

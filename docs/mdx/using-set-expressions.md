@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddcdee57bd708bc8eb4c3c07d8e86a70705e01e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491386"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193468"
 ---
 # <a name="using-set-expressions"></a>セット式の使用
 
@@ -58,9 +58,8 @@ ms.locfileid: "88491386"
   
  このセットは 3 つの組で構成されており、それぞれの組には、Product ディメンションの Product Categories 階層のメンバーと Date ディメンションの Calendar 階層のメンバーへの、2 つの明示的な参照が含まれています。  
   
- セットを返す関数の例については、「 [MDX&#41;&#40;メンバー、組、およびセットの操作 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)」を参照してください。  
+ セットを返す関数の例については、「 [MDX&#41;&#40;メンバー、組、およびセットの操作 ](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [MDX &#40;式&#41;](../mdx/expressions-mdx.md)  
-  
   

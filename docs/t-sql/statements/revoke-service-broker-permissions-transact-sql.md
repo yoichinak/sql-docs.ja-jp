@@ -23,10 +23,10 @@ ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2d018e710bb272d9daa9eda7099d201b80ea3c1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88357118"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE (Service Broker の権限の取り消し) (Transact-SQL)
@@ -106,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  AS *revoking_principal*  
- このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 *revoking_principal*には、次のいずれかを指定することができます。  
+ このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 *revoking_principal* には、次のいずれかを指定することができます。  
   
 -   データベース ユーザー  
   

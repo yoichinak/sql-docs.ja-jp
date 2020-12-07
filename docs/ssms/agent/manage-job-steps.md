@@ -26,18 +26,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ddcd4cde0412590e051a1d2f34ebce10435b2e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: efaef467cc332d0d398849693b52718c789b96d4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480311"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038246"
 ---
 # <a name="manage-job-steps"></a>ジョブ ステップの管理
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 ジョブ ステップは、ジョブがデータベースまたはサーバーで行う処理です。 すべてのジョブには、最低 1 つのジョブ ステップを含める必要があります。 ジョブ ステップには次のような種類があります。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88480311"
   
 各ジョブ ステップは特定のセキュリティ コンテキストで実行されます。 ジョブ ステップがプロキシを指定している場合、このジョブ ステップは指定されたプロキシの資格情報のセキュリティ コンテキストで実行されます。 ジョブ ステップがプロキシを指定していない場合、このジョブ ステップは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのコンテキストで実行されます。 プロキシを明示的に指定せずにジョブを作成できるのは、sysadmin 固定サーバー ロールのメンバーのみです。  
   
-ジョブ ステップは特定の [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows ユーザーのコンテキストで実行されるので、ユーザーには、ジョブ ステップの実行に必要なアクセス許可と構成が必要です。 たとえば、ドライブ文字または汎用名前付け規則 (UNC) パスを必要とするようなジョブを作成した場合、タスクのテスト時にはジョブ ステップを作成者の Windows ユーザー アカウントで実行していることがあります。 ところが、このジョブ ステップの Windows ユーザーにも、このジョブ ステップを実行するためのアクセス許可、ドライブ文字構成、指定ドライブへのアクセスが必要になります。 そうでなければ、このジョブ ステップは失敗します。 この問題を回避するには、各ジョブ ステップのプロキシに、ジョブ ステップで実行するタスクに対して必要なアクセス許可が設定されていることを確認してください。 詳細については、「 [セキュリティと保護 (データベース エンジン)](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)」を参照してください。  
+ジョブ ステップは特定の [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows ユーザーのコンテキストで実行されるので、ユーザーには、ジョブ ステップの実行に必要なアクセス許可と構成が必要です。 たとえば、ドライブ文字または汎用名前付け規則 (UNC) パスを必要とするようなジョブを作成した場合、タスクのテスト時にはジョブ ステップを作成者の Windows ユーザー アカウントで実行していることがあります。 ところが、このジョブ ステップの Windows ユーザーにも、このジョブ ステップを実行するためのアクセス許可、ドライブ文字構成、指定ドライブへのアクセスが必要になります。 そうでなければ、このジョブ ステップは失敗します。 この問題を回避するには、各ジョブ ステップのプロキシに、ジョブ ステップで実行するタスクに対して必要なアクセス許可が設定されていることを確認してください。 詳細については、「 [セキュリティと保護 (データベース エンジン)](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)」を参照してください。  
   
 ## <a name="job-step-logs"></a>ジョブ ステップのログ  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、オペレーティング システム ファイルまたは msdb データベースの sysjobstepslogs テーブルに、一部のジョブ ステップからの出力を書き込むことができます。 両方の出力先に出力を書き込めるジョブ ステップの種類は次のとおりです。  
@@ -96,7 +96,7 @@ ms.locfileid: "88480311"
   
 必要に応じて、ジョブ ステップのコマンドとして既存の [!INCLUDE[tsql](../../includes/tsql-md.md)] ファイルを開くことができます。  
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシを使用しません。 このジョブ ステップはジョブ ステップの所有者として実行されるか、ジョブ ステップの所有者が sysadmin 固定サーバー ロールのメンバーの場合には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントとして実行されます。 sysadmin 固定サーバー ロールのメンバーは、sp_add_jobstep ストアド プロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *パラメーターを使用して、別のユーザーのコンテキストで* ジョブ ステップが実行されるように指定することもできます。 詳細については、「 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)」を参照してください。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシを使用しません。 このジョブ ステップはジョブ ステップの所有者として実行されるか、ジョブ ステップの所有者が sysadmin 固定サーバー ロールのメンバーの場合には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントとして実行されます。 sysadmin 固定サーバー ロールのメンバーは、sp_add_jobstep ストアド プロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *パラメーターを使用して、別のユーザーのコンテキストで* ジョブ ステップが実行されるように指定することもできます。 詳細については、「 [sp_add_jobstep (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 > 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップに、複数のバッチを含めることができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップには埋め込み GO コマンドを含めることができます。  
@@ -108,7 +108,7 @@ PowerShell スクリプト ジョブ ステップを作成するときには、�
   
 -   開く対象の既存の PowerShell スクリプト ファイル。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの PowerShell サブシステムは、PowerShell セッションを開いて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell スナップインを読み込みます。ジョブ ステップ コマンドとして使用される PowerShell スクリプトでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットを参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell スナップインを使用した PowerShell スクリプトの作成の詳細については、「 [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの PowerShell サブシステムは、PowerShell セッションを開いて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell スナップインを読み込みます。ジョブ ステップ コマンドとして使用される PowerShell スクリプトでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットを参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell スナップインを使用した PowerShell スクリプトの作成の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」を参照してください。  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX スクリプティング ジョブ ステップ  
   
@@ -172,7 +172,7 @@ Set oServer = nothing
   
 -   実行するステートメントを入力します。 このステートメントでは、多次元式 (MDX) クエリを使用する必要があります。  
   
-MDX の詳細については、「 [MDX ステートメントの基礎 (MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)」を参照してください。  
+MDX の詳細については、「 [MDX ステートメントの基礎 (MDX)](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services?viewFallbackFrom=sql-server-ver15)」を参照してください。  
   
 ## <a name="integration-services-packages"></a>Integration Services パッケージ  
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ジョブ ステップを作成するには、次の操作を行う必要があります。  
@@ -216,7 +216,6 @@ SSIS カタログにパッケージを配置し、 **[SSIS カタログ]** を�
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップのログを削除する方法について説明します。|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>参照  
-[sysjobstepslogs (Transact-SQL)](https://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
+[sysjobstepslogs (Transact-SQL)](../../relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql.md)  
 [ジョブの作成](../../ssms/agent/create-jobs.md)  
-[sp_add_job (Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
-  
+[sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  

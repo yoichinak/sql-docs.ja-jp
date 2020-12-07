@@ -16,12 +16,12 @@ ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fce39417b78aa5fea5a5423893ad8a4ca8cb1977
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6456e91ae6747e561d467774da86ad9697bd510
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394098"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123506"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>SQL Server エージェント ジョブの実行タスク
 
@@ -46,6 +46,5 @@ ms.locfileid: "88394098"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

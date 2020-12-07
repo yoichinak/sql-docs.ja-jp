@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: c965bc4bd9c6b235d192db58c82fac41f4f8b532
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 2977f25e09d3d634d479abd8371d010206edea90
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137049"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725169"
 ---
 # <a name="manage-packages-in-database-with-machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio の Machine Learning 拡張機能を使用してデータベース内のパッケージを管理する (プレビュー)
 
@@ -122,5 +122,5 @@ Machine Learning 拡張機能を使用して、R パッケージをインスト�
 - [Azure Data Studio の Machine Learning 拡張機能](machine-learning-extension.md)
 - [予測を行う](machine-learning-extension-predictions.md)
 - [モデルのインポートまたは表示](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio のノートブック](../notebooks-guidance.md)
+- [Azure Data Studio のノートブック](../notebooks/notebooks-guidance.md)
 - [SQL の機械学習のドキュメント](../../machine-learning/index.yml)

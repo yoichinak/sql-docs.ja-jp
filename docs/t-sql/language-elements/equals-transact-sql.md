@@ -22,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3923bc7a36387e3ccef353f43aafcbaea2600658
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422516"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196576"
 ---
 # <a name="-equals-transact-sql"></a>= (等しい) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422516"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 expression = expression  
 ```  
   
@@ -51,7 +51,7 @@ expression = expression
 ## <a name="result-types"></a>戻り値の型  
  ブール型  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  NULL 式を使用して比較した場合、結果は `ANSI_NULLS` の設定に応じて以下のように異なります。  
   
 -   `ANSI_NULLS` が ON に設定されている場合、NULL は不明な値であり、別の NULL を含む、他の値と比較できないという ANSI 規則に従って、NULL との比較結果が UNKNOWN となります。  
@@ -68,13 +68,12 @@ expression = expression
 ### <a name="a-using--in-a-simple-query"></a>A. 簡単なクエリで = を使用する  
  次の例では、等号演算子を使用して、`HumanResources.Department` テーブル内の `GroupName` 列の値が "Manufacturing" という単語と等しいすべての行を返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE GroupName = 'Manufacturing';  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -93,7 +92,7 @@ DepartmentID Name
 ### <a name="b-comparing-null-and-non-null-values"></a>B. NULL 値と NULL 以外の値を比較する  
  次の例では、`=` (等号) 比較演算子と `<>` (不等号) 比較演算子を使用して、テーブル内の `NULL` 値と NULL 以外の値を比較します。 例は `IS NULL` が `SET ANSI_NULLS` 設定に影響されないことも示しています。  
   
-```  
+```sql  
 -- Create table t1 and insert 3 rows.  
 CREATE TABLE dbo.t1 (a INT NULL);  
 INSERT INTO dbo.t1 VALUES (NULL),(0),(1);  
@@ -158,7 +157,6 @@ GO
   
 -- Drop table t1.  
 DROP TABLE dbo.t1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae44534ae51f0bc49ca687ce73a17f9486bc1b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23a9a1594c31bda040a22ad3914af8b8e7d3603f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395728"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726085"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  ただし、TopCount を使用する必要がある場合もあります。 たとえば、DMX は、サブ select ステートメントの **TOP** 修飾子をサポートしていません。 また、 [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) 関数は、 **TOP**の追加をサポートしていません。  
   
 ## <a name="examples"></a>例  
- 次の例は、「 [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成したアソシエーションモデルに対する予測クエリです。 クエリは同じ結果を返しますが、最初の例では TopCount を使用し、2番目の例では Predict 関数を使用します。  
+ 次の例は、「 [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」で作成したアソシエーションモデルに対する予測クエリです。 クエリは同じ結果を返しますが、最初の例では TopCount を使用し、2番目の例では Predict 関数を使用します。  
   
  TopCount の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
   
@@ -55,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
  結果の例:  
   
@@ -117,5 +117,4 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  [DMX&#41;&#40;下数 ](../dmx/bottomcount-dmx.md)   
  [DMX&#41;&#40;TopPercent ](../dmx/toppercent-dmx.md)   
  [DMX&#41;&#40;TopSum ](../dmx/topsum-dmx.md)  
-  
   

@@ -39,12 +39,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8bde11240927cc7f20581c1f9a9fd7655b38f19
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 56eaaeb3dfc90ee9de1f5ee769417eb75c232e4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115932"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035815"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ UPDATE
 ```  
   
 ```syntaxsql 
--- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
+-- Syntax for Azure Synapse Analysis
 
 [ WITH <common_table_expression> [ ,...n ] ]
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
@@ -785,7 +785,7 @@ GO
 ```  
   
 ###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> リモート テーブルの行を更新する  
- このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルの行を更新する方法を示します。  
+ このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../functions/opendatasource-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルの行を更新する方法を示します。  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. リンク サーバーを使用してリモート テーブルのデータを更新する  
  次の例では、リモート サーバー上のテーブルを更新します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 server.catalog.schema.object という形式の 4 部構成のオブジェクト名の一部として、リンク サーバー名 `MyLinkedServer` を指定します。 `@datasrc` には有効なサーバー名を指定する必要があります。  
@@ -1190,9 +1190,8 @@ GO
  [カーソル &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](../functions/text-and-image-functions-textptr-transact-sql.md)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
  [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)    
- [1 バイト文字セットとマルチバイト文字セット](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
- 
+ [1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  

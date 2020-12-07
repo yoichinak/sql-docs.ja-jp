@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: cdb11607fe7424c8c1159ba767e6f8292361065f
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288290"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793759"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server で R を使用して SSIS および SSRS ワークフローを作成する
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "89288290"
 
 次の例は、この URL (`https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`) で Jimmy Wong によって作成された、現在は提供終了となった MSDN ブログ投稿を基にしています。
 
-この例では、SSIS を使用してタスクを自動化する方法を示します。 SQL Server Management Studio を使用して R を埋め込んだストアド プロシージャを作成した後、それらのストアド プロシージャを、SSIS パッケージの [T-SQL タスクの実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)から実行します。
+この例では、SSIS を使用してタスクを自動化する方法を示します。 SQL Server Management Studio を使用して R を埋め込んだストアド プロシージャを作成した後、それらのストアド プロシージャを、SSIS パッケージの [T-SQL タスクの実行](../../integration-services/control-flow/execute-t-sql-statement-task.md)から実行します。
 
-この例を実行するには、Management Studio、SSIS、SSIS デザイナー、パッケージ デザイン、および T-SQL について理解している必要があります。 SSIS パッケージでは、トレーニング データをテーブルに挿入、データをモデル化し、データをスコアリングして予測の出力を取得する、3 つの [T-SQL タスクの実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)を使用します。
+この例を実行するには、Management Studio、SSIS、SSIS デザイナー、パッケージ デザイン、および T-SQL について理解している必要があります。 SSIS パッケージでは、トレーニング データをテーブルに挿入、データをモデル化し、データをスコアリングして予測の出力を取得する、3 つの [T-SQL タスクの実行](../../integration-services/control-flow/execute-t-sql-statement-task.md)を使用します。
 
 ### <a name="load-training-data"></a>トレーニング データの読み込み
 
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-SSIS デザイナーで、先ほど定義したストアド プロシージャを実行する [SQL タスクの実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)を作成します。 **SQLStatement** のスクリプトは、既存のデータを削除し、挿入するデータを指定してから、ストアド プロシージャを呼び出してデータを提供します。
+SSIS デザイナーで、先ほど定義したストアド プロシージャを実行する [SQL タスクの実行](../../integration-services/control-flow/execute-sql-task.md)を作成します。 **SQLStatement** のスクリプトは、既存のデータを削除し、挿入するデータを指定してから、ストアド プロシージャを呼び出してデータを提供します。
 
 ```T-SQL
 truncate table ssis_iris;
@@ -108,7 +108,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) を使用して線形モデルを生成する、ストアド プロシージャを作成します。 RevoScaleR と revoscalepy のライブラリは、SQL Server 上の R および Python セッションで自動的に使用できるため、ライブラリをインポートする必要はありません。
+[rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) を使用して線形モデルを生成する、ストアド プロシージャを作成します。 RevoScaleR と revoscalepy のライブラリは、SQL Server 上の R および Python セッションで自動的に使用できるため、ライブラリをインポートする必要はありません。
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-SSIS デザイナーで [SQL タスクの実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)を作成して、**generate_iris_rx_model** ストアド プロシージャを実行します。 モデルはシリアル化され、ssis_iris_models テーブルに保存されます。 **SQLStatement** のスクリプトは次のとおりです。
+SSIS デザイナーで [SQL タスクの実行](../../integration-services/control-flow/execute-sql-task.md)を作成して、 **generate_iris_rx_model** ストアド プロシージャを実行します。 モデルはシリアル化され、ssis_iris_models テーブルに保存されます。 **SQLStatement** のスクリプトは次のとおりです。
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 これで、トレーニング データを読み込み、モデルを生成するコードが完成しました。残りの手順は、モデルを使用して予測を生成することだけです。 
 
-これを行うには、SQL クエリに R スクリプトを配置し、ssis_iris_model で [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) 組み込み R 関数をトリガーします。 このタスクは **predict_species_length** と名付けられたストアド プロシージャによって実現されます。
+これを行うには、SQL クエリに R スクリプトを配置し、ssis_iris_model で [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 組み込み R 関数をトリガーします。 このタスクは **predict_species_length** と名付けられたストアド プロシージャによって実現されます。
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-SSIS デザイナーで、**predict_species_length** ストアド プロシージャを実行する [SQL タスクの実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)を作成し、予測される花弁長を生成します。
+SSIS デザイナーで、 **predict_species_length** ストアド プロシージャを実行する [SQL タスクの実行](../../integration-services/control-flow/execute-sql-task.md)を作成し、予測される花弁長を生成します。
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

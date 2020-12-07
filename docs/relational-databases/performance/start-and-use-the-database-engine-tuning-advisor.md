@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1f13fc030209957910284132b42c89a52b01ff31
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042827"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890751"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "90042827"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio のクエリ エディターからデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]スクリプト ファイルを開きます。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)」を参照してください。  
+1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]スクリプト ファイルを開きます。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)」を参照してください。  
   
 2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト内のクエリを選択するか、スクリプト全体を選択します。選択範囲を右クリックし、 **[データベース エンジン チューニング アドバイザーでのクエリの分析]** をクリックします。 データベース エンジン チューニング アドバイザー GUI が表示され、そのスクリプトが XML ファイル ワークロードとしてインポートされます。 セッション名とチューニング オプションを指定して、選択した [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを自分のワークロードとしてチューニングできます。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "90042827"
   
 ###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Transact-SQL スクリプトのワークロードを作成するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でクエリ エディターを起動します。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)」を参照してください。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でクエリ エディターを起動します。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)」を参照してください。  
   
 2.  クエリ エディターに [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを入力します。 このスクリプトには、チューニングする 1 つ以上のデータベースに対して実行する一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが含まれている必要があります。  
   
@@ -519,4 +519,3 @@ database_name.owner_name.table_name
  [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [dta ユーティリティ](../../tools/dta/dta-utility.md)    
  [チュートリアル:データベース エンジン チューニング アドバイザー](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
-  

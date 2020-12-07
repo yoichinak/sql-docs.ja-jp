@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 701476b8e1cea1f84d7fdbf970a345311d686cfd
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: b6cef1fb9b92df92cba00ea9e9aa8c9591e887a6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860066"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727232"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 構造体
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860066"
 
   msoledbsql.h で定義されている **SSVARIANT** 構造体は、OLE DB Driver for SQL Server の DBTYPE_SQLVARIANT 値に対応します。  
   
- **SSVARIANT** は、識別共用体です。 vt メンバーの値に応じて、コンシューマーは読み取るメンバーを決めることができます。 vt 値は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に対応します。 したがって、**SSVARIANT** 構造体には、任意の SQL Server 型を格納できます。 標準の OLE DB 型のデータ構造体の詳細については、「[型インジケーター](https://go.microsoft.com/fwlink/?LinkId=122171)」を参照してください。  
+ **SSVARIANT** は、識別共用体です。 vt メンバーの値に応じて、コンシューマーは読み取るメンバーを決めることができます。 vt 値は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型に対応します。 したがって、**SSVARIANT** 構造体には、任意の SQL Server 型を格納できます。 標準の OLE DB 型のデータ構造体の詳細については、「[型インジケーター](/previous-versions/windows/desktop/ms711251(v=vs.85))」を参照してください。  
   
 ## <a name="remarks"></a>解説  
  DataTypeCompat==80 の場合、いくつかの **SSVARIANT** サブタイプが文字列になります。 たとえば、次の vt 値は **SSVARIANT** では VT_SS_WVARSTRING として表されます。  
@@ -87,7 +87,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 - クライアント コンピューターのコード ページが、データベース照合順序のコード ページと一致しない。
 - 挿入するクライアント バッファーに、クライアントのコード ページでエンコードされた非 ASCII ナロー文字列文字が含まれている。
 - 次のいずれかの条件に該当する。
-  - `sql_variant` 列に対応するパラメーターを記述する `DBPARAMBINDINFO` 構造の `pwszDataSourceType` フィールドが、`L"DBTYPE_SQLVARIANT"`、`L"DBTYPE_VARIANT"`、または `L"sql_variant"` に設定されている。 詳細については、次の情報を参照してください。「[ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85))」。
+  - `sql_variant` 列に対応するパラメーターを記述する `DBPARAMBINDINFO` 構造の `pwszDataSourceType` フィールドが、`L"DBTYPE_SQLVARIANT"`、`L"DBTYPE_VARIANT"`、または `L"sql_variant"` に設定されている。 詳細については、次の情報を参照してください。「[ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85))」。
 
     *or*
   - 挿入に使用されるパラメーター化された SQL クエリが準備されている。
@@ -153,5 +153,4 @@ UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <Fi
 
 ## <a name="see-also"></a>参照  
  [データ型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
-  
   

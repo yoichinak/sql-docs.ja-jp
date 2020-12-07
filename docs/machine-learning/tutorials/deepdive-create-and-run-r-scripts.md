@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: db549cf5b3ee7620806c1b87713211d5eb201c90
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d8b04d384d7ee5f846197ff3465b9c0914ca94c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178864"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196316"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R での概要統計情報の計算 (SQL Server および RevoScaleR チュートリアル)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 5 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 5 です。
 
 このチュートリアルでは、前のチュートリアルで作成した確立したデータ ソースとコンピューティング コンテキストを使用して、高性能な R スクリプトを実行します。 このチュートリアルでは、次のタスクのために、ローカルとリモートのサーバー コンピューティング コンテキストを使用します。
 
@@ -46,13 +46,13 @@ R コードをリモートで実行する前に、リモート コンピュー�
     rxSetComputeContext(sqlCompute)
     ```
 
-2. [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) 関数を呼び出し、式やデータ ソースなど、必須の引数を渡し、結果を変数 `sumOut` に代入します。
+2. [rxSummary](/machine-learning-server/r-reference/revoscaler/rxsummary) 関数を呼び出し、式やデータ ソースなど、必須の引数を渡し、結果を変数 `sumOut` に代入します。
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 言語はさまざまな概要関数を提供しますが、**RevoScaleR** の **rxSummary** は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を含む、さまざまなリモート コンピューティング コンテキストでの実行をサポートします。 同様の関数に関する詳細については、[RevoScaleR を使用したデータの概要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)を参照してください。
+    R 言語はさまざまな概要関数を提供しますが、**RevoScaleR** の **rxSummary** は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を含む、さまざまなリモート コンピューティング コンテキストでの実行をサポートします。 同様の関数に関する詳細については、[RevoScaleR を使用したデータの概要](/machine-learning-server/r/how-to-revoscaler-data-summaries)を参照してください。
   
 3. SumOut の内容をコンソールに印刷します。
   

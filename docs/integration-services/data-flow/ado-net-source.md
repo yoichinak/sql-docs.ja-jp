@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94a94ba7bcd71510f82769ebb1517caef7e5a0fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b10ca4ddff49785c1b5b6e33d7510985fd801c85
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425854"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194864"
 ---
 # <a name="ado-net-source"></a>ADO NET ソース
 
@@ -36,12 +36,12 @@ ms.locfileid: "88425854"
 
   ADO NET ソースは .NET プロバイダーのデータを呼び出し、そのデータをデータ フローで使用できるようにします。  
   
- ADO NET ソースを使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] に接続できます。 OLE DB を使用した [!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続はサポートされていません。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の詳細については、「[一般的な制限事項とガイドライン (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)」を参照してください。  
+ ADO NET ソースを使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] に接続できます。 OLE DB を使用した [!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続はサポートされていません。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の詳細については、「[一般的な制限事項とガイドライン (Azure SQL Database)](/previous-versions/azure/ee336245(v=azure.100))」を参照してください。  
   
 ## <a name="data-type-support"></a>データ型のサポート  
  ソースは、特定の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型にマップされないデータ型を DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型に変換します。 この変換はデータ型が **System.Object**である場合でも行われます。  
   
- DT_NTEXT データ型から DT_WSTR データ型に、または DT_WSTR データ型から DT_NTEXT データ型に変更できます。 データ型を変更するには、ADO NET ソースの **[詳細エディター]** ダイアログ ボックスで **DataType** プロパティを設定します。 詳細については、「 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」(共通プロパティ) を参照してください。  
+ DT_NTEXT データ型から DT_WSTR データ型に、または DT_WSTR データ型から DT_NTEXT データ型に変更できます。 データ型を変更するには、ADO NET ソースの **[詳細エディター]** ダイアログ ボックスで **DataType** プロパティを設定します。 詳細については、「 [Common Properties](./set-the-properties-of-a-data-flow-component.md)」(共通プロパティ) を参照してください。  
   
  ADO NET ソースの後にデータ変換の変換を使用することによって、DT_NTEXT データ型を DT_BYTES データ型または DT_STR データ型に変換することもできます。 詳細については、「 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)」を参照してください。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "88425854"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [ADO NET カスタム プロパティ](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -207,5 +207,4 @@ ms.locfileid: "88425854"
  [DataReader 変換先](../../integration-services/data-flow/datareader-destination.md)   
  [ADO NET 変換先](../../integration-services/data-flow/ado-net-destination.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  
   

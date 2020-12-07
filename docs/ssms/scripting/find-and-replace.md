@@ -14,12 +14,12 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f8fda553ed7056a27906b36cf52a01becc7cfb
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: b788a7f0996eaf8b6321caf9418d660deb08ac9c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901300"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039066"
 ---
 # <a name="find-and-replace"></a>[検索と置換]
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,10 +91,10 @@ ms.locfileid: "88901300"
  **[検索する文字列]** ボックスまたは **[置換後の文字列]** ボックスに入力された特殊文字を解釈する方法を指定します。 オプションは **[ワイルドカード]** と **[正規表現]** です。  
   
  **Regular Expressions**  
- 検索するテキストのパターンを定義する、特殊な表記です。 一覧については、「 [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)」を参照してください。  
+ 検索するテキストのパターンを定義する、特殊な表記です。 一覧については、「 [正規表現によるテキストの検索](./search-text-with-regular-expressions.md)」を参照してください。  
   
  **ワイルドカード**  
- アスタリスク (`*`) や疑問符 (`?`) などの特殊文字は、1 つまたは複数の文字を表します。 一覧については、「 [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
+ アスタリスク (`*`) や疑問符 (`?`) などの特殊文字は、1 つまたは複数の文字を表します。 一覧については、「 [ワイルドカードを使用したテキスト検索](./search-text-with-wildcards.md)」を参照してください。  
   
  **[次を検索]**  
  **[検索する文字列]** ボックス内のテキストの検索を開始します。  
@@ -124,4 +124,4 @@ ms.locfileid: "88901300"
  このツール バー タブを使用すると、ダイアログ ボックスが **[フォルダーを指定して置換]** ダイアログ ボックスに変わります。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

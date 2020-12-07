@@ -16,14 +16,14 @@ helpviewer_keywords:
 - cluster maintenance [SQL Server]
 - removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: db5dbec0733140f39abe377513ff23bc7dd7b880
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5c65c099af7ffc6346aaf0e73a26c5ee7e16f7ce
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117040"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121307"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>フェールオーバー クラスター インスタンスでのノードの追加または削除 (セットアップ)
 
@@ -68,7 +68,7 @@ ms.locfileid: "91117040"
   
 8.  [クラスター ノードの構成] ページで、ドロップダウン ボックスを使用して、このセットアップ操作で変更する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの名前を指定します。  
   
-9. [サーバーの構成 - サービス アカウント] ページで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 フェールオーバー クラスター インスタンスのインストールでは、アクティブ ノードに指定された設定に基づいて、アカウント名とスタートアップの種類に関する情報がこのページにあらかじめ設定されます。 各アカウントのパスワードを入力する必要があります。 詳細については、「 [サーバー構成 - サービス アカウント](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 」および「 [Windows サービス アカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
+9. [サーバーの構成 - サービス アカウント] ページで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 フェールオーバー クラスター インスタンスのインストールでは、アクティブ ノードに指定された設定に基づいて、アカウント名とスタートアップの種類に関する情報がこのページにあらかじめ設定されます。 各アカウントのパスワードを入力する必要があります。 詳細については、「 [サーバー構成 - サービス アカウント](../../../database-engine/install-windows/install-sql-server.md) 」および「 [Windows サービス アカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
      **セキュリティに関する注意:** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -108,5 +108,4 @@ ms.locfileid: "91117040"
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

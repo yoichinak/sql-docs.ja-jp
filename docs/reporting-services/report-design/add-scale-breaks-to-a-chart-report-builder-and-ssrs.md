@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf77e72c4b8ac84d57668ebcf960ed8b926ba6e
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: c83ef4812dbd28da971877cf90b1b4e8406af272
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462336"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935248"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>グラフへのスケール区切りの追加 (レポート ビルダーおよび SSRS)
 
@@ -50,6 +50,6 @@ ms.locfileid: "84462336"
 
 [グラフ](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [グラフの書式設定](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[[軸のプロパティ] ダイアログ ボックス、[軸のオプション]](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[[軸のプロパティ] ダイアログ ボックス、[軸のオプション]](/previous-versions/sql/)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

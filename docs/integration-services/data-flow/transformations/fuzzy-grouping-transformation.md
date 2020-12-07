@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348448"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195957"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
 
@@ -44,7 +44,7 @@ ms.locfileid: "88348448"
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
   
 > [!NOTE]  
->  パフォーマンスやメモリの制限など、あいまいグループ化変換に関する詳細については、ホワイト ペーパー「 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)」(SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化) をご覧ください。  
+>  パフォーマンスやメモリの制限など、あいまいグループ化変換に関する詳細については、ホワイト ペーパー「 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))」(SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化) をご覧ください。  
   
  あいまいグループ化変換では、変換アルゴリズムの処理に必要な一時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルを作成するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続が必要になります。 接続時には、データベース内にテーブルを作成する権限を持つユーザーの解決が必要です。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "88348448"
   
 -   **_key_in**。各行を一意に識別する列です。  
   
--   **_key_out**。重複行のグループを識別する列です。 **_key_out** 列は、正規データ行の **_key_in** 列の値を含みます。 **_key_out** の値が同じ行は、同じグループに属します。 グループの **_key_out**値は、正規データ行の **_key_in** の値に対応します。  
+-   **_key_out**。重複行のグループを識別する列です。 **_key_out** 列は、正規データ行の **_key_in** 列の値を含みます。 **_key_out** の値が同じ行は、同じグループに属します。 グループの **_key_out** 値は、正規データ行の **_key_in** の値に対応します。  
   
 -   **_score**。入力行と正規行との類似性を示す、0 ～ 1 の値です。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88348448"
  この変換は 1 つの入力と 1 つの出力をとります。 エラー出力はサポートされていません。  
   
 ## <a name="row-comparison"></a>行の比較  
- あいまいグループ化変換を構成するときに、変換入力内の行の比較に使用する比較アルゴリズムを指定できます。 Exhaustive プロパティを **true**に設定した場合は、入力内のすべての行が入力内の他のすべての行と比較されます。 この比較アルゴリズムを使用すると、より正確な結果が生成されますが、入力の行の数が少ない場合を除けば、処理により多くの時間がかかるようになります。 パフォーマンス上の問題を回避するため、パッケージの開発中は、Exhaustive プロパティを **True** のみに設定することをお勧めします。  
+ あいまいグループ化変換を構成するときに、変換入力内の行の比較に使用する比較アルゴリズムを指定できます。 Exhaustive プロパティを **true** に設定した場合は、入力内のすべての行が入力内の他のすべての行と比較されます。 この比較アルゴリズムを使用すると、より正確な結果が生成されますが、入力の行の数が少ない場合を除けば、処理により多くの時間がかかるようになります。 パフォーマンス上の問題を回避するため、パッケージの開発中は、Exhaustive プロパティを **True** のみに設定することをお勧めします。  
   
 ## <a name="temporary-tables-and-indexes"></a>一時テーブルおよびインデックス  
  実行時、あいまいグループ化変換は、テーブルやインデックスなどの一時オブジェクトを接続先の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに作成します。この一時オブジェクトのサイズは、かなり大きくなる可能性があります。 テーブルおよびインデックスのサイズは、変換入力内の行の数およびあいまいグループ化変換によって作成されたトークンの数に比例します。  
@@ -91,7 +91,7 @@ ms.locfileid: "88348448"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -184,5 +184,4 @@ ms.locfileid: "88348448"
 ## <a name="see-also"></a>関連項目  
  [あいまい参照変換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

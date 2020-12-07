@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 69db57924486ea2cf1e02c76f78a2ed75a559fd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c99a1d737e2b3d5c928f1b555915a14443b30584
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484490"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123447"
 ---
 # <a name="aggregate-transformation"></a>集計変換
 
@@ -107,11 +107,11 @@ ms.locfileid: "88484490"
   
  集計変換は非同期です。つまり、行ごとにデータを使用またはパブリッシュしません。 集計変換は行セット全体を使用してグループ化と集計を実行し、その結果をパブリッシュします。  
   
- この変換では列をパススルーすることはなく、変換によりパブリッシュされるデータ用に、新しい列がデータ フロー内に作成されます。 集計関数が適用される入力列、または変換がグループ化用に使用する入力列のみが、変換出力にコピーされます。 たとえば、集計変換入力に、 **CountryRegion**、 **City**、および **Population**という 3 つの列があるものとします。 集計変換は、 **CountryRegion** 列によりグループ化を行い、 関数を **Population** 列に適用します。 したがって、出力には **City** 列は含まれません。  
+ この変換では列をパススルーすることはなく、変換によりパブリッシュされるデータ用に、新しい列がデータ フロー内に作成されます。 集計関数が適用される入力列、または変換がグループ化用に使用する入力列のみが、変換出力にコピーされます。 たとえば、集計変換入力に、 **CountryRegion**、 **City**、および **Population** という 3 つの列があるものとします。 集計変換は、 **CountryRegion** 列によりグループ化を行い、 関数を **Population** 列に適用します。 したがって、出力には **City** 列は含まれません。  
   
  また、複数の出力を集計変換に追加し、各集計を別々の出力に送ることもできます。 たとえば、集計変換が Sum および Average 関数を適用する場合に、各集計をそれぞれ別の出力に送ることができます。  
   
- 1 つの入力列に複数の集計を適用できます。 たとえば、 **Sales**という名前の入力列の合計値と平均値を計算する場合に、Sum および Average 関数の両方を **Sales** 列に適用するように、集計変換を構成できます。  
+ 1 つの入力列に複数の集計を適用できます。 たとえば、 **Sales** という名前の入力列の合計値と平均値を計算する場合に、Sum および Average 関数の両方を **Sales** 列に適用するように、集計変換を構成できます。  
   
  集計変換は、1 つの入力と 1 つ以上の出力をとります。 エラー出力はサポートされていません。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88484490"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -244,5 +244,4 @@ ms.locfileid: "88484490"
 ## <a name="see-also"></a>参照  
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

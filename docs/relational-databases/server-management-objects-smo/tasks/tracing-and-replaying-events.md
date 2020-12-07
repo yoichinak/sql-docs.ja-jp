@@ -17,12 +17,12 @@ ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32a6cbd5bbd20f4e80acfecdcba7099531aa947d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a483cbdf9fdeb7e60992ddfb044239a6d495f432
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464934"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868603"
 ---
 # <a name="tracing-and-replaying-events"></a>イベントのトレースおよび再生
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -57,9 +57,8 @@ ms.locfileid: "88464934"
   
  SMO トレース オブジェクトは、Microsoft.SQLServer.ConnectionInfo.dll ファイルへの参照が必要となる <xref:Microsoft.SqlServer.Management.Trace> 名前空間に存在します。  
   
- **Trace**オブジェクトと**Replay**オブジェクトには、のインスタンスとの接続を確立するための[serverconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> オブジェクトが必要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] です。 [Serverconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトは、Microsoft.SQLServer.ConnectionInfo.dll ファイルへの参照を必要とする、 [Microsoft の SqlServer](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common)名前空間に存在します。  
+ **Trace**オブジェクトと**Replay**オブジェクトには、のインスタンスとの接続を確立するための[serverconnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120)) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> オブジェクトが必要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] です。 [Serverconnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120))オブジェクトは、Microsoft.SQLServer.ConnectionInfo.dll ファイルへの参照を必要とする、 [Microsoft の SqlServer](/previous-versions/sql/sql-server-2014/ms212673(v=sql.120))名前空間に存在します。  
   
 > [!NOTE]  
 >  **トレース**オブジェクトと**再生**オブジェクトは、64ビットプラットフォームではサポートされていません。  
-  
   

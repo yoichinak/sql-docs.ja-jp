@@ -16,12 +16,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494199"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235633"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -55,7 +55,7 @@ CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![個人-友人-テーブル](../../relational-databases/graphs/media/person-friends-tables.png "Person ノードと友人のエッジテーブル")  
+![ノードとエッジを示す図はテーブルとして格納されます。](../../relational-databases/graphs/media/person-friends-tables.png "Person ノードと友人のエッジテーブル")  
 ノードとエッジはテーブルとして格納されます。  
 
 ### <a name="query-language-extensions"></a>クエリ言語の拡張機能  
@@ -89,7 +89,7 @@ Merge DML で match を使用する方法の詳細については、 [Merge ス�
 ## <a name="shortest-path"></a>最短パス
 [SHORTEST_PATH](./sql-graph-shortest-path.md)関数は、グラフ内の2つのノード間、または特定のノードからグラフ内の他のすべてのノードまでの最短パスを検索します。 最短パスを使用して、グラフ内で推移的なクロージャまたは任意の長さのトラバーサルを見つけることもできます。 
 
- ## <a name="next-steps"></a>次の手順  
+ ## <a name="next-steps"></a>次のステップ  
 [SQL グラフデータベース-アーキテクチャ](./sql-graph-architecture.md)の読み取り
    
 

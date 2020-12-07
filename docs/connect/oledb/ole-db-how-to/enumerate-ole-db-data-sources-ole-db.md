@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b165f5ceb5e8f08539cb48473a6f3d701623f6a
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 327a4ca587a577bdca3fe8f42748998f29060146
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861384"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727153"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB データ ソースの列挙 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88861384"
 
   このサンプルでは、列挙子オブジェクトを使用して、使用可能なデータ ソースを一覧表示する方法を示します。  
   
- コンシューマーは、MSOLEDBSQL 列挙子にデータ ソースを表示するために、[ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) メソッドを呼び出します。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
+ コンシューマーは、MSOLEDBSQL 列挙子にデータ ソースを表示するために、[ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) メソッドを呼び出します。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
   
  使用しているネットワーク ライブラリに応じて、適切なドメインでデータ ソースが検索されます。 名前付きパイプの場合は、クライアントがログオンしたドメインになります。 AppleTalk の場合は、既定のゾーンになります。 SPX/IPX の場合は、バインダリ内にある [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールの一覧になります。 Banyan VINES の場合は、ローカル ネットワークにある [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールになります。 マルチプロトコルと TCP/IP ソケットはサポートされません。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88861384"
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB データ ソースを列挙するには  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

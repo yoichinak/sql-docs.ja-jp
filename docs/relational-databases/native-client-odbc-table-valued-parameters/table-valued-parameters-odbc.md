@@ -1,6 +1,6 @@
 ---
 description: テーブル値パラメーター (ODBC)
-title: テーブル値パラメーター (ODBC) |Microsoft Docs
+title: Table-Valued パラメーター (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f263b0ade88e21f79182f2667714de2e1a105155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b82ec830d04f89fd4a166a999673a6182429a66
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420506"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867860"
 ---
 # <a name="table-valued-parameters-odbc"></a>テーブル値パラメーター (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC のテーブル値パラメーターのサポートにより、クライアント アプリケーションは、1 回の呼び出しで複数の行をサーバーに送信することで、パラメーター化されたデータをサーバーに効率的に送信できます。  
   
- サーバー上のテーブル値パラメーターの詳細については、「 [テーブル値パラメーターの使用 &#40;データベースエンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
+ サーバー上のテーブル値パラメーターの詳細については、「 [データベースエンジン&#41;&#40;Table-Valued パラメーターの使用 ](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
   
  ODBC でテーブル値パラメーターをサーバーに送信するには、次の 2 つの方法があります。  
   
@@ -77,12 +77,8 @@ ms.locfileid: "88420506"
   
  [ODBC テーブル値パラメーター API の概要](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  テーブル値パラメーターをサポートする、ODBC 関数の一覧を示します。  
-  
- [ODBC テーブル値パラメーターのプログラミング例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
- 一般的なタスクの実行方法について説明します。  
-  
+
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [テーブル値パラメーター &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
-  
   

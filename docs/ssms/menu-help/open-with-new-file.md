@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e619e457bf538a0a8c75e0615e45ca52567ea43a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7bd83a9a7526466d1a7798ab9ef3d71647d4fd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491949"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037673"
 ---
 # <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] ([新しいファイル])
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,4 +44,4 @@ ms.locfileid: "88491949"
 > **[このファイルを開くのに使用するプログラムを選択してください]** のプログラムの一覧で、選択したファイルの種類の既定のエディターの名前には、 **(既定)** が末尾に付加されます。  
   
 ## <a name="see-also"></a>参照  
-[ファイル拡張子をコード エディターに関連付ける](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[ファイル拡張子をコード エディターに関連付ける](../scripting/associate-file-extensions-to-a-code-editor.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 023926ff67c85dcf8d95499b8281853bf7b3b1f3
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 7651d01bef5b17981c0e4c93c450f26e7970524d
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860003"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081921"
 ---
 # <a name="information-in-error-interfaces"></a>エラー インターフェイス内の情報
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88860003"
 |メンバー関数|説明|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|エラーに関する基本情報を ERRORINFO 構造体に設定します。 ERRORINFO 構造体には、エラーの HRESULT 戻り値およびエラーが適用されるプロバイダーとインターフェイスを特定するメンバーが含まれます。|  
-|**GetCustomErrorObject**|**ISQLErrorInfo** インターフェイスと [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) インターフェイスの参照を返します。|  
+|**GetCustomErrorObject**|**ISQLErrorInfo** インターフェイスと [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md) インターフェイスの参照を返します。|  
 |**GetErrorInfo**|**IErrorInfo** インターフェイスの参照を返します。|  
 |**GetErrorParameters**|OLE DB Driver for SQL Server では、**GetErrorParameters** 経由でコンシューマーにパラメーターを返すことはありません。|  
 |**GetRecordCount**|使用できるエラー レコードの数を返します。|  
@@ -60,5 +60,4 @@ ms.locfileid: "88860003"
   
 ## <a name="see-also"></a>参照  
  [エラー](../../oledb/ole-db-errors/errors.md)  
-  
   

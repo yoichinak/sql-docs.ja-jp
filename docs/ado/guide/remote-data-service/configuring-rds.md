@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d6d3ecb018ff89409a1543af827e045f75557ab
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d7b1e2652f43a094429f5eb7ce7489006e52f752
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978313"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724823"
 ---
 # <a name="configuring-rds"></a>RDS の構成
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
  RDS を効率的に実装するには、使用できるさまざまな構成について理解している必要があります。 ここでは、RDS の実装におけるセキュリティとスケーラビリティに関する重要な情報について説明します。 RDS を使用するようにコンピューターを構成する方法については、次のトピックを参照してください。  
   

@@ -12,12 +12,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51124af267834ace5940af750a1f28c0c888709a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b63ebe7f73561408e464d73b29101c42ac111480
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538042"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867301"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し
 
@@ -102,7 +102,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 
 1. メモリ最適化データ ファイル グループが含まれるサンプル データベースを作成します。 メモリ最適化データ ファイルグループが含まれるデータベースを作成する方法については、「 [メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)」を参照してください。
 
-2. データベースを参照する PrepExecSample という ODBC データ ソースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーを使用します。 また、サンプルを変更して [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)を使用できます。
+2. データベースを参照する PrepExecSample という ODBC データ ソースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーを使用します。 また、サンプルを変更して [Microsoft ODBC Driver for SQL Server](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)を使用できます。
 
 3. サンプル データベースに [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト (下記) を実行します。
 
@@ -433,4 +433,4 @@ int _tmain() {
 ```
 
 ## <a name="see-also"></a>参照
-[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[ネイティブ コンパイル ストアド プロシージャ](./a-guide-to-query-processing-for-memory-optimized-tables.md)

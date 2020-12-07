@@ -3,24 +3,24 @@ title: キーマップ拡張機能の作成
 description: このチュートリアルでは、カスタム機能を Azure Data Studio に追加するキーマップ拡張機能を作成する方法について説明します。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: b1e1b5fb4d21e153133e76ff612f54c8153e0772
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111659"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364079"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Azure Data Studio キーマップ拡張機能を作成する
 
 このチュートリアルでは、新しい Azure Data Studio 拡張機能を作成する方法について説明します。 この拡張機能では、使い慣れた SSMS キーバインドが Azure Data Studio で作成されます。
 
-このチュートリアルでは、次の方法を学習します。
+この記事では、次の方法について説明します。
 > [!div class="checklist"]
 > - 拡張機能プロジェクトを作成する
 > - 拡張機能ジェネレーターをインストールする
@@ -41,7 +41,7 @@ Azure Data Studio は Visual Studio Code と同じフレームワーク上に構
 
 ## <a name="install-the-extension-generator"></a>拡張機能ジェネレーターをインストールする
 
-拡張機能作成のプロセスを簡単にするため、Yeoman を利用して[拡張機能ジェネレーター](https://code.visualstudio.com/docs/extensions/yocode)を構築しました。 これをインストールするには、コマンド プロンプトから次を実行します。
+拡張機能作成のプロセスを簡単にするため、Yeoman を利用して[拡張機能ジェネレーター](https://code.visualstudio.com/docs/extensions/yocode)を構築しました。 これをインストールするには、コマンド プロンプトで次のコードを実行します。
 
 ```console
 `npm install -g yo generator-azuredatastudio`
@@ -85,7 +85,7 @@ Azure Data Studio は Visual Studio Code と同じフレームワーク上に構
 
 **手順 2:拡張機能にショートカットを追加する**
 
-拡張機能にショートカットを追加するには、(拡張機能で) *package.json* ファイルを開き、`contributes` セクションを次で置換します。
+拡張機能にショートカットを追加するには、(拡張機能の) *package.json* ファイルを開き、`contributes` セクションを次のコードに置換します。
 
 ```json
 "contributes": {
@@ -158,7 +158,7 @@ Azure Data Studio Debug 拡張機能を、確実に Visual Studio Code にイン
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>拡張機能をマーケットプレースに公開する
 
-Azure Data Studio 拡張機能マーケットプレースはまだ完全には実装されておらず、現行のプロセスは、拡張機能 VSIX をどこか (GitHub リリース ページなど) でホストし、その後、PR を送信し、[この JSON ファイル](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)を自分の拡張機能情報で更新するというものです。
+Azure Data Studio 拡張機能マーケットプレースはまだ完成していません。現行のプロセスでは、拡張機能 VSIX をどこか (GitHub リリース ページなど) でホストしてから、[こちらの JSON ファイル](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)をご自分の拡張機能情報で更新する PR を送信します。
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -174,7 +174,7 @@ Azure Data Studio 拡張機能マーケットプレースはまだ完全には�
 
 読了後、Azure Data Studio の拡張機能を自分でも作るべく奮起していただけたら幸いです。 Dashboard Insights (SQL Server に対して実行される美麗なグラフ)、さまざまな SQL 固有 API、Visual Studio Code から継承された大量の既存の拡張ポイント セットをサポートしています。
 
-アイデアはあるが、どこから始めたらいいのかわからない場合、チーム宛に問題提起またはツイートしてください ([azuredatastudio](https://twitter.com/azuredatastudio))。
+アイデアはあるが、どのように始めたらいいのかわからない場合は、お問い合わせいただくか、チーム宛てにツイートしてください ([azuredatastudio](https://twitter.com/azuredatastudio))。
 
 [Visual Studio Code 拡張ガイド](https://code.visualstudio.com/docs/extensions/overview)では、既存の API やパターンがすべて取り上げられているので、いつでも参考にできます。
 

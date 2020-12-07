@@ -8,12 +8,12 @@ description: ブランド パッケージを使用した、ビジネスに対す
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2079a44a4b9f3977ae09f83685efa122e9467a96
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888127"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907210"
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 
@@ -85,7 +85,7 @@ metadata.xml ファイルにより、ブランド パッケージの名前を設
 "primaryContrast":"#ffffff"   
 ```
 
-処理された出力では、LESS 変数の **\@primaryButtonBg** が検索され、**primary** と呼ばれる json プロパティにマッピングされていることが確認されます (この例では、#009900)。 その後、適切な CSS が出力されます。  
+処理された出力では、LESS 変数の **\@primaryButtonBg** が検索され、 **primary** と呼ばれる json プロパティにマッピングされていることが確認されます (この例では、#009900)。 その後、適切な CSS が出力されます。  
 
 ```css
     .btn-primary {   
@@ -98,8 +98,8 @@ metadata.xml ファイルにより、ブランド パッケージの名前を設
   
 Reporting Services の colors.json ファイルには 2 つのメイン カテゴリがあり、アイテムがグループ化されています。  
   
-- **インターフェイス**: Reporting Services の Web ポータルに固有の項目が含まれます。  
-- **テーマ**: 作成したモバイル レポートに固有の項目が含まれます。  
+- **インターフェイス** : Reporting Services の Web ポータルに固有の項目が含まれます。  
+- **テーマ** : 作成したモバイル レポートに固有の項目が含まれます。  
   
 インターフェイス セクションは、以下のグループに分類されます。  
   
@@ -116,7 +116,7 @@ Reporting Services の colors.json ファイルには 2 つのメイン カテ�
 
 Mobile Report Publisher で初めてサーバーに接続するとき、それにブランド パッケージが配置されている場合、そのテーマが利用可能テーマに追加されます。アプリの右上のメニューから利用できます。  
   
-![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+![[カラー パレットの選択] ダイアログボックスのスクリーンショット。](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 その後、作成したあらゆるモバイル レポートにこのテーマを利用できます。テーマを配置した同じサーバーでなくても構いません。   
   
@@ -134,11 +134,11 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
   
 2.  **[サイトの設定]** を選択します。  
   
-    ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
+    ![[サイトの設定] オプションにコールアウトが付けられた [設定] ドロップダウン リストのスクリーンショット。](../reporting-services/media/ssrsgearmenu.png)  
   
 3.  **[ブランド]** を選択します。  
   
-    ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
+    ![[ブランド] オプションが選択された [サイトの設定] ページのスクリーンショット。](../reporting-services/media/ssrsbranding.png) 
   
 **[現在インストールされているブランド パッケージ]** には、アップロードされているパッケージの名前が表示されるか、何も表示されません。  
   
@@ -150,7 +150,7 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
     type="UniversalBrand"  
     version="2.0.2"  
     name="Multicolored example brand"  

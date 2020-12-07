@@ -23,12 +23,12 @@ ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fdec32c3c5b23da531b78100e41cf426f357cbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d6246c3b8318ae2596dfd1f4240692be7941e49
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468293"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175948"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 
@@ -65,7 +65,7 @@ ms.locfileid: "88468293"
   
 |アルファベット|説明|  
 |------------------|-----------------|  
-|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**ydm** は、現在の言語における月の正式名または省略形を表します。 コンマは省略可能であり、大文字と小文字は無視されます。<br /><br /> こうしたあいまいさを排除するため、4 桁の西暦を使用してください。<br /><br /> 日を省略したときは、その月の 1 日が指定されます。|  
+|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**ydm** は、現在の言語における月の正式名または省略形を表します。 コンマは省略可能であり、大文字と小文字は無視されます。<br /><br /> こうしたあいまいさを排除するため、4 桁の西暦を使用してください。<br /><br /> 日を省略したときは、その月の 1 日が指定されます。|  
   
 |ISO 8601|説明|  
 |--------------|----------------|  

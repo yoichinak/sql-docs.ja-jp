@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 1216af7664fbe49d1db8b3093a23b263c895b557
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 388de3ceb28e4ff8a1e361bf4730c5262bb79544
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888032"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584031"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>可用性グループ リスナーの削除 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "85888032"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
@@ -98,5 +98,4 @@ ms.locfileid: "85888032"
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
   

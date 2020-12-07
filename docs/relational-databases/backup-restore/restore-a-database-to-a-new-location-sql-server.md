@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 89abaf77c605574ef05a88a7cc18a09c0840a9c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 19ff3852dad4b98b739bfc058ba7a532af932ee1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717993"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125572"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>データベースを新しい場所に復元する (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "85717993"
   
 2.  **[データベース]** を右クリックし、 **[データベースの復元]** をクリックします。 **[データベースの復元]** ダイアログ ボックスが表示されます。  
   
-3.  **[全般]** ページの **復元元**のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
+3.  **[全般]** ページの **復元元** のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
     -   **[データベース]**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "85717993"
   
          **メモ** この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。  
   
-4.  **復元先のセクション**の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
+4.  **復元先のセクション** の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
   
 5.  **[復元先]** ボックスで、既定値の **[最後に作成されたバックアップ]** のままにするか、 **[タイムライン]** をクリックして、 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスし、具体的にどの時点で復旧アクションを停止するかを手動で選択します。 特定の時点を指定する方法の詳細については、「 [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md) 」を参照してください。  
   
@@ -159,12 +159,12 @@ ms.locfileid: "85717993"
   詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」の「バックアップ セットの指定」を参照してください。  
   
   MOVE **'** _logical_file_name_in_backup_ **'** TO **'** _operating_system_file_name_ **'** [ **,** ...*n* ]  
-  *logical_file_name_in_backup* で指定されるデータまたはログ ファイルが、 *operating_system_file_name*で指定される位置に復元されることを指定します。 バックアップ セットから新しい位置に復元する論理ファイルごとに、MOVE ステートメントを指定してください。  
+  *logical_file_name_in_backup* で指定されるデータまたはログ ファイルが、 *operating_system_file_name* で指定される位置に復元されることを指定します。 バックアップ セットから新しい位置に復元する論理ファイルごとに、MOVE ステートメントを指定してください。  
   
   |オプション|説明|  
   |------------|-----------------|  
   |*logical_file_name_in_backup*|バックアップ セット内のデータまたはログ ファイルの論理名を指定します。 バックアップ セット内のデータ ファイルまたはログ ファイルの論理ファイル名は、バックアップ セットが作成されたときのデータベース内における論理名と同じです。<br /><br /> <br /><br /> 注:バックアップ セットに含まれる論理ファイルの一覧を取得するには、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) を使用します。|  
-  |*operating_system_file_name*|*logical_file_name_in_backup*で指定したファイルの新しい場所を指定します。 ファイルはこの場所に復元されます。<br /><br /> 必要に応じて、 *operating_system_file_name* に復元するファイルの新しいファイル名を指定します。 これは、同じサーバー インスタンスで既存のデータベースのコピーを作成する場合に必要です。|  
+  |*operating_system_file_name*|*logical_file_name_in_backup* で指定したファイルの新しい場所を指定します。 ファイルはこの場所に復元されます。<br /><br /> 必要に応じて、 *operating_system_file_name* に復元するファイルの新しいファイル名を指定します。 これは、同じサーバー インスタンスで既存のデータベースのコピーを作成する場合に必要です。|  
   |*n*|追加の MOVE ステートメントを指定できることを示すプレースホルダーです。|  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  

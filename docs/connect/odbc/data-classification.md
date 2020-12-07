@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: d2f33c6b753b227bf8c6d7aed2c66dd7a09d8433
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4c7664c35d4c98ebcf8f8ae4a57d2948a83624c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466874"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081521"
 ---
 # <a name="data-classification"></a>データ分類
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88466874"
 ## <a name="overview"></a>概要
 機密データを管理するために、SQL Server と Azure SQL Server では、クライアント アプリケーションがさまざまな種類の機密データ (健康、財務など) をデータ保護ポリシーに沿って処理できるようにする、機密度メタデータをデータベース列に提供する機能が導入されました。
 
-分類を列に割り当てる方法の詳細については、「[SQL データの検出と分類](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017)」を参照してください。
+分類を列に割り当てる方法の詳細については、「[SQL データの検出と分類](../../relational-databases/security/sql-data-discovery-and-classification.md)」を参照してください。
 
 Microsoft ODBC Driver 17.2 では、このメタデータを、SQL_CA_SS_DATA_CLASSIFICATION フィールド識別子を使用して SQLGetDescField を介して取得できます。
 
@@ -264,4 +264,3 @@ ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER
 ```
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
-

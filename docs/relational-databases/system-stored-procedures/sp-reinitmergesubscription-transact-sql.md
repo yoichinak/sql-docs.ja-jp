@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1a924af8d72239e3d185e27c491ecd48d9f38ad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc1d2d3dc8b9763d19410b2a9773fb7766d22140
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547429"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364745"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,32 +41,35 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値は **all**です。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname** ,、既定値は **all** です。  
   
-`[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* は **sysname**,、既定値は **all**です。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* は **sysname** ,、既定値は **all** です。  
   
-`[ @subscriber_db = ] 'subscriber_db'` サブスクライバーデータベースの名前を指定します。 *subscriber_db* は **sysname**で、既定値は **all**です。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクライバーデータベースの名前を指定します。 *subscriber_db* は **sysname** で、既定値は **all** です。  
   
-`[ @upload_first = ] 'upload_first'` サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうかを指定します。 *upload_first* は **nvarchar (5)**,、既定値は FALSE です。 **True**の場合、サブスクリプションが再初期化される前に変更がアップロードされます。 **False**の場合、変更はアップロードされません。  
+`[ @upload_first = ] 'upload_first'` サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうかを指定します。 *upload_first* は **nvarchar (5)** ,、既定値は FALSE です。 **True** の場合、サブスクリプションが再初期化される前に変更がアップロードされます。 **False** の場合、変更はアップロードされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **sp_reinitmergesubscription** は、マージレプリケーションで使用します。  
   
  **sp_reinitmergesubscription** は、マージサブスクリプションを再初期化するためにパブリッシャーから呼び出すことができます。 スナップショットエージェントも再実行することをお勧めします。  
   
  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例  
+
+### <a name="a-reinitialize-the-push-subscription-and-lose-pending-changes"></a>A. プッシュサブスクリプションを再初期化して保留中の変更を破棄する
+
  [!code-sql[HowTo#sp_reinitmergepushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_1.sql)]  
   
-## <a name="example"></a>例  
+### <a name="b-reinitialize-the-push-subscription-and-upload-pending-changes"></a>B. プッシュサブスクリプションを再初期化し、保留中の変更をアップロードします
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_reinitmergesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_reinitmergesubscription** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   

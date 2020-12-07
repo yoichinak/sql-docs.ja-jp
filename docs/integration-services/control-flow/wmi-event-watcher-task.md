@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5187cdcfcb6ffc66ed2985123256ebf3943163a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d40281b9c233b55b41cfc8fc18040fb3e6c4d927
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495909"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195977"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI イベント監視タスク
 
@@ -102,7 +102,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-wmi-event-watcher-task"></a>プログラムによる WMI イベント監視タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
@@ -133,7 +133,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
  **[WMIConnectionName]**  
  WMI 接続マネージャーを一覧から選択するか、[\<**New WMI Connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 接続マネージャー エディター](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+ **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 接続マネージャー エディター](../connection-manager/wmi-connection-manager.md)  
   
  **[WQLQuerySourceType]**  
  タスクで実行する WQL クエリのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -172,11 +172,10 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
  **[WQLQuerySource]**  
  一覧でファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../connection-manager/file-connection-manager.md)  
   
 #### <a name="wqlquerysource--variable"></a>[WQLQuerySource] = [変数]  
  **[WQLQuerySource]**  
  一覧で変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
-  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  

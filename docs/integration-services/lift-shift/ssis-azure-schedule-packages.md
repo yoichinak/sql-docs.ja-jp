@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989975"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195174"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure でデプロイされている SQL Server Integration Services (SSIS) パッケージの実行スケジュールを設定する
 
@@ -44,13 +44,13 @@ SQL Server Management Studio (SSMS) では、SSIS カタログ データベー�
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> SQL Database エラスティック ジョブを使用してパッケージをスケジュールする
 
-SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
+SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
 
 ### <a name="prerequisites"></a>前提条件
 
 エラスティック ジョブを使用して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されている SSIS パッケージをスケジュール設定するには、事前に次の作業を行う必要があります。
 
-1.  Elastic Database ジョブ コンポーネントをインストールして構成します。 詳細については、「[Elastic Database ジョブのインストールの概要](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)」を参照してください。
+1.  Elastic Database ジョブ コンポーネントをインストールして構成します。 詳細については、「[Elastic Database ジョブのインストールの概要](/azure/sql-database/sql-database-elastic-jobs-service-installation)」を参照してください。
 
 2. ジョブで SSIS カタログ データベースにコマンドを送信するために使用できるデータベース スコープの資格情報を作成します。 詳細については、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」 (データベース スコープの資格情報を作成する (Transact-SQL)) を参照してください。
 
@@ -166,17 +166,17 @@ SSIS パッケージを実行する Azure Data Factory パイプラインの実�
 
 Data Factory パイプラインをスケジュールするには、次のトリガーの 1 つを使用します。
 
-- [スケジュール トリガー](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+- [スケジュール トリガー](/azure/data-factory/how-to-create-schedule-trigger)
 
-- [タンブリング ウィンドウ トリガー](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+- [タンブリング ウィンドウ トリガー](/azure/data-factory/how-to-create-tumbling-window-trigger)
 
-- [イベントベース トリガー](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+- [イベントベース トリガー](/azure/data-factory/how-to-create-event-trigger)
 
 Data Factory パイプラインの一部として SSIS パッケージを実行するには、次のアクティビティのいずれかを使用します。
 
-- [SSIS パッケージの実行アクティビティ](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
+- [SSIS パッケージの実行アクティビティ](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
-- [ストアド プロシージャ アクティビティ](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+- [ストアド プロシージャ アクティビティ](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>次のステップ
 

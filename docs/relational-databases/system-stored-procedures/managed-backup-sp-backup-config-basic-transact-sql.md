@@ -1,6 +1,6 @@
 ---
 description: managed_backup.sp_backup_config_basic (TRANSACT-SQL)
-title: managed_backup。 sp_backup_config_basic (Transact-sql) |Microsoft Docs
+title: managed_backup managed_backup.sp_backup_config_basic (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d738a7cf10801366abaebe4ef7857475cd2aad5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550004"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753736"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89550004"
   特定の [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] データベースまたはのインスタンスの基本設定を構成し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 > [!NOTE]  
->  このプロシージャは、基本的なマネージバックアップ構成を作成するために独自に呼び出すことができます。 ただし、高度な機能またはカスタムスケジュールを追加する予定の場合は、まず managed_backup を使用してこれらの設定を構成します [。 sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) および managed_backup sp_backup_config_schedule この手順でマネージバックアップを有効にする前に、transact-sql &#40;を&#41;[し ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) ます。  
+>  このプロシージャは、基本的なマネージバックアップ構成を作成するために独自に呼び出すことができます。 ただし、高度な機能またはカスタムスケジュールを追加する予定がある場合は、この手順でマネージバックアップを有効にする前に、 [sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) と [managed_backup &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) を使用してこれらの設定を構成します。  
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  特定のデータベースでマネージバックアップを有効にするためのデータベース名。  
   
  @container_url  
- バックアップの場所を示す URL。 @credential_nameが NULL の場合、この url は Azure Storage の blob コンテナーへの shared access signature (SAS) url であり、バックアップは新しいバックアップを使用して blob の機能をブロックします。 詳細については、「 [SAS につい](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)て」を参照してください。 を指定した場合 @credential_name 、これはストレージアカウントの URL であり、バックアップでは、非推奨のバックアップページ blob の機能が使用されます。  
+ バックアップの場所を示す URL。 @credential_nameが NULL の場合、この url は Azure Storage の blob コンテナーへの shared access signature (SAS) url であり、バックアップは新しいバックアップを使用して blob の機能をブロックします。 詳細については、「 [SAS につい](/azure/storage/common/storage-sas-overview)て」を参照してください。 を指定した場合 @credential_name 、これはストレージアカウントの URL であり、バックアップでは、非推奨のバックアップページ blob の機能が使用されます。  
   
 > [!NOTE]  
 >  現時点では、このパラメーターでは SAS URL のみがサポートされています。  
@@ -110,7 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [managed_backup sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup managed_backup.sp_backup_config_advanced &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
-  
   

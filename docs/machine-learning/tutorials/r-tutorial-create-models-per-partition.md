@@ -9,19 +9,19 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85ab092eb606fcc6896fa6a084a2cef0e5f018df
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec0323d35c05c34de763fbdece37546f7c8252df
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179730"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193663"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル:SQL Server 上の R でパーティション ベースのモデルを作成する
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 SQL Server 2019 でのパーティション ベースのモデリングは、パーティション分割されたデータでモデルを作成してトレーニングする機能です。 地理的地域、日付と時刻、年齢、性別など、特定の分類体系に自然に分割される層化データの場合、モデル化、トレーニング、スコアリングのすべてでそのまま残るパーティションにこれらの操作を行う機能を使用して、データ セット全体に対してスクリプトを実行できます。 
 
-パーティション ベースのモデリングを有効にするには、[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) で次の 2 つの新しいパラメーターを使用します。
+パーティション ベースのモデリングを有効にするには、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) で次の 2 つの新しいパラメーターを使用します。
 
 + **input_data_1_partition_by_columns** では、パーティション分割に使用する列を指定します。
 + **input_data_1_order_by_columns** では、並べ替えに使用する列を指定します。 
@@ -39,7 +39,7 @@ SQL Server 2019 でのパーティション ベースのモデリングは、パ
 
 + 十分なシステム リソース。 データ セットは大きく、トレーニング操作ではリソースが大量に消費されます。 可能であれば、少なくとも 8 GB の RAM を搭載したシステムを使用します。 または、使用するデータ セットを小さくして、リソースの制約を回避することもできます。 データ セットを減らす手順は文中で説明されています。 
 
-+ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)など、T-SQL クエリを実行するためのツール。
++ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)など、T-SQL クエリを実行するためのツール。
 
 + [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)。ローカル環境のデータベース エンジン インスタンスに[ダウンロードして復元](demo-data-nyctaxi-in-sql.md)することができます。 ファイル サイズは約 90 MB です。
 
@@ -105,7 +105,7 @@ GO
 
 このチュートリアルでは、R スクリプトをストアド プロシージャにラップします。 このステップでは、R を使用して入力データセットを作成し、チップの結果を予測するための分類モデルを構築して、データベースにモデルを格納する、ストアド プロシージャを作成します。
 
-このスクリプトで使用されるパラメーター入力の中から、**input_data_1_partition_by_columns** と **input_data_1_order_by_columns** を調べます。 これらのパラメーターは、パーティション分割されたモデリングを実行するメカニズムであることを思い出してください。 パラメーターは、すべてのパーティションに対して 1 回実行される外部スクリプトでパーティションを処理するために、[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) に入力として渡されます。 
+このスクリプトで使用されるパラメーター入力の中から、**input_data_1_partition_by_columns** と **input_data_1_order_by_columns** を調べます。 これらのパラメーターは、パーティション分割されたモデリングを実行するメカニズムであることを思い出してください。 パラメーターは、すべてのパーティションに対して 1 回実行される外部スクリプトでパーティションを処理するために、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に入力として渡されます。 
 
 このストアド プロシージャでは、完了までの時間を短縮するため[並列処理を使用](#parallel)します。
 
@@ -169,7 +169,7 @@ GO
 
 ### <a name="parallel-execution"></a>並列実行
 
-[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) の入力に、並列処理を有効にするために使用される `@parallel=1` が含まれていることに注意してください。 以前のリリースとは異なり、SQL Server 2019 では、`@parallel=1` を設定すると、クエリ オプティマイザーに対してより強力なヒントが提供されるため、並列実行の結果がいっそうよくなります。
+[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) の入力に、並列処理を有効にするために使用される `@parallel=1` が含まれていることに注意してください。 以前のリリースとは異なり、SQL Server 2019 では、`@parallel=1` を設定すると、クエリ オプティマイザーに対してより強力なヒントが提供されるため、並列実行の結果がいっそうよくなります。
 
 既定では、クエリ オプティマイザーは、256 行を超えるテーブルでは `@parallel=1` で動作する傾向がありますが、このスクリプトで示されているように、`@parallel=1` を設定することによって明示的に処理できます。
 
@@ -336,8 +336,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>次のステップ
 
-このチュートリアルでは、[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) を使用して、パーティション分割されたデータに対する操作を繰り返しました。 ストアド プロシージャでの外部スクリプトの呼び出しと RevoScaleR 関数の使用の詳細については、次のチュートリアルを参照してください。
+このチュートリアルでは、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、パーティション分割されたデータに対する操作を繰り返しました。 ストアド プロシージャでの外部スクリプトの呼び出しと RevoScaleR 関数の使用の詳細については、次のチュートリアルを参照してください。
 
 > [!div class="nextstepaction"]
 > [R と SQL Server のチュートリアル](walkthrough-data-science-end-to-end-walkthrough.md)
-

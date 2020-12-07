@@ -14,10 +14,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c7799b5d2f5f541b6713821dccbec820697371ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88348948"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
@@ -140,7 +140,7 @@ ms.locfileid: "88348948"
 |名前|String|データ フロー コンポーネントの名前。|  
 |PipelineVersion|Integer|コンポーネントを実行するように設計されたデータ フロー タスクのバージョン。|  
 |UsesDispositions|ブール型|コンポーネントにエラー出力があるかどうかを示します。|  
-|[ValidateExternalMetadata]|Boolean|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は **True**です。|  
+|[ValidateExternalMetadata]|Boolean|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は **True** です。|  
 |Version|Integer|コンポーネントのバージョン。|  
   
 ###  <a name="input-properties"></a><a name="inputs"></a> 入力プロパティ  
@@ -153,7 +153,7 @@ ms.locfileid: "88348948"
 |説明|String|入力の説明。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
-|HasSideEffects|ブール型|コンポーネントが下流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true**の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
+|HasSideEffects|ブール型|コンポーネントが下流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true** の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
 |id|Integer|入力を一意に識別する値。|  
 |[IdentificationString]|String|入力を識別する文字列。|  
 |IsSorted|ブール型|入力のデータを並べ替えるかどうかを示します。|  
@@ -199,11 +199,11 @@ ms.locfileid: "88348948"
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
 |ExclusionGroup|Integer|相互排他的な出力のグループを識別する値。|  
-|HasSideEffects|ブール型|コンポーネントが上流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true**の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
+|HasSideEffects|ブール型|コンポーネントが上流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true** の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
 |id|Integer|出力を一意に識別する値。|  
 |[IdentificationString]|String|出力を識別する文字列。|  
 |IsErrorOut|ブール型|出力がエラー出力かどうかを示します。|  
-|IsSorted|ブール型|出力を並べ替えるかどうかを示します。 既定値は **False**です。<br /><br /> **\*\* 重要 \*\*** **IsSorted** プロパティの値を **True** に設定しても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
+|IsSorted|ブール型|出力を並べ替えるかどうかを示します。 既定値は **False** です。<br /><br /> **\*\* 重要 \*\*** **IsSorted** プロパティの値を **True** に設定しても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
 |名前|String|出力の名前。|  
 |SynchronousInputID|Integer|出力に同期する入力の ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
@@ -218,7 +218,7 @@ ms.locfileid: "88348948"
 |ComparisonFlags|Integer|文字データ型を持つ列の比較を示すフラグの組。 詳しくは、「 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)」をご覧ください。|  
 |説明|String|出力列を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row** 既定値は **Fail component**です。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row** 既定値は **Fail component** です。|  
 |ExternalMetadataColumnID|Integer|出力列に割り当てられた外部メタデータ列の ID。|  
 |id|Integer|出力列を一意に識別する値。|  
 |[IdentificationString]|String|出力列を識別する文字列。|  
@@ -227,7 +227,7 @@ ms.locfileid: "88348948"
 |名前|String|出力列の名前。|  
 |SortKeyPosition|Integer|列を並べ替えるかどうか、並べ替える場合はその並べ替え順、および複数の列の並べ替えの順序を示す値。 値 **0** は、その列が並べ替えられないことを示します。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
 |SpecialFlags|Integer|出力列の特殊なフラグを含む値。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row** 既定値は **Fail component**です。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row** 既定値は **Fail component** です。|  
   
  出力列には、データ型プロパティの組も含まれています。  
   

@@ -4,22 +4,48 @@ description: 各リリースの SQL Server Migration Assistant (SSMA) for Oracle
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: d7bcff5c96935dee5b696b0fa828cf3ba33eb56e
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862403"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036018"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle の新機能 (OracleToSQL)
 
 この記事では、各リリースでの Oracle の変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+SSMA for Oracle の v 8.15 リリースには、いくつかのユーザー補助機能の強化に加えて、次の変更が含まれています。
+
+* `%type`属性と属性の完全な型指定を使用する設定を追加します `%rowtype`
+* 改良評価レポートを最新のブラウザーで動作させる
+* Azure AD 認証にデータベースによって提供される権限を使用する
+* ファイルから読み込まれたステートメントの名前付けを改善する
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+SSMA for Oracle のリリースには、障碍のある方にとってアクセシビリティを向上させるために、次のような変更が加えられています。
+
+* ソース/ターゲットサーバーの完全なバージョンをプロジェクトのメタデータに格納します (プロジェクトのアップグレードが必要)
+* 可能な場合は、オブジェクト検出に DBA データ辞書を使用する
+* 複数のパーサーの問題 ( `PIVOT` / `UNPIVOT` 、 `MERGE` 、代替引用符) を修正します。
+* `INSERTING` / `DELETING` / `UPDATING` トリガー内の特殊な関数の変換の修正
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+SSMA for Oracle の v 8.13 リリースには、次の変更が含まれています。
+
+* `SQLCODE` `SQLERRM` ローカルプロシージャでのおよび特別な関数の変換を修正します。
+* プロシージャと関数の呼び出しを変換するときに、暗黙的な型キャストを検討します。
+* 接続の問題のトラブルシューティングに役立つソース接続文字列のログ記録の向上
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -56,7 +82,7 @@ SSMA for Oracle の v1.0 リリースには、次の変更が含まれていま�
 * 基本 `ALTER TRIGGER` / `ALTER INDEX` DDL (有効/無効など) のサポートを追加します。
 * 組み込み関数名に一致する列の変換の改善
 * 列に対してフィルター選択された一意のインデックスを生成する `NULL`
-* Azure SQL Data Warehouse の変数宣言の変換の改善
+* Azure Synapse Analytics の変数宣言変換の機能強化
 * プロジェクト名に特殊文字が含まれている問題の修正
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
@@ -68,7 +94,7 @@ SSMA for Oracle の v1.0 リリースには次のものが含まれます。
 * 分析句の変換の改善 `OVER PARTITION`
 * 分析関数の新しい変換 `LEAD`
 * サブクエリのファクタリング句の新しい変換
-* `REPLICATE`Azure SQL Data Warehouse の新しいディストリビューションオプション
+* `REPLICATE`Azure Synapse Analytics の新しいディストリビューションオプション
 * 変換のパフォーマンスをさらに向上させるための新しい Oracle 構文パーサー
 
 ## <a name="ssma-v87"></a>SSMA v 8.7
@@ -78,20 +104,20 @@ SSMA for Oracle のバージョン8.7 リリースでは、グラフィカルユ
 さらに、SSMA for Oracle では、[オブジェクトの選択] ダイアログボックスで、有効状態に基づいてオブジェクトをフィルター処理できます。
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v86"></a>SSMA v 8.6
 
 ユーザビリティとパフォーマンスの向上を目的とした一連の修正に加えて、SSMA for Oracle のリリースは、ユーザーが変換されたコードで SSMA 拡張プロパティを省略できるようにする設定を追加することによって強化されています。
 
-Ssma for Oracle でこの設定を利用するには、[**ツール**] [プロジェクト] [設定] [全般変換] の順に移動し、[その  >  **Project Settings**  >  **General**  >  **Conversion****他**] の [**拡張プロパティを省略**する] 設定の値を **[はい]** に更新します。
+Ssma for Oracle でこの設定を利用するには、[ **ツール** ] [プロジェクト] [設定] [全般変換] の順に移動し、[その  >  **Project Settings**  >  **General**  >  **Conversion****他** ] の [ **拡張プロパティを省略** する] 設定の値を **[はい]** に更新します。
 
 ![拡張プロパティの設定を省略する](../oracle/media/ssma-omit-extended-properties.png)
 
 さらに、SSMA for Oracle では、句の解析が改善されました `XMLTABLE` 。
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v85"></a>SSMA v1.0
 
@@ -109,7 +135,7 @@ SSMA for Oracle の v2.0 リリースは、SQL server での JSON 機能の Azur
 * .NET からバージョン19.5.0 への Oracle Data Provider の更新。
 
 > [!IMPORTANT]
-> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
@@ -159,7 +185,7 @@ SSMA for Oracle の v2.0 リリースは、品質と変換のメトリックを�
 
 SSMA for Oracle の v2.0 リリースは、品質と変換メトリックの向上を目的とした修正プログラムによって強化されています。 このリリースには、次の新機能も用意されています。
 
-* ターゲットとしての**AZURE SQL Managed Instance**のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
+* ターゲットとしての **AZURE SQL Managed Instance** のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
 
   ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
@@ -170,7 +196,7 @@ SSMA for Oracle の v2.0 リリースは、品質と変換メトリックの向�
 
   テスト担当者やサーバー側のデータ移行を含む一部の機能は、Azure SQL Managed Instance を対象とする場合はサポートされていません。 詳細については、[こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)を参照してください。
 
-* 変換後の**修正アドバイザー**。 詳細について[は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
+* 変換後の **修正アドバイザー** 。 詳細について [は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
 
 * データベース/スキーマの事前選択。
 
@@ -206,8 +232,8 @@ SSMA for Oracle の v1.0 リリースには、次の変更が含まれていま�
 * のサポート:
   * 句の行式 `IN` 。
   * 暗黙的な型キャストです。
-  * `UID`Azure SQL Database の変換。
-* [**プロジェクトの設定**] で強調表示されている型マッピングを変更します。
+  * `UID` Azure SQL Database の変換。
+* [ **プロジェクトの設定** ] で強調表示されている型マッピングを変更します。
 * ユーザーがテレメトリを無効にする機能。
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
@@ -217,7 +243,7 @@ SSMA for Oracle のバージョン7.7 リリースには、次の変更が含ま
 * SSMA for Oracle は、品質と変換のメトリックを向上させる対象の修正によって強化されています。
 * 一般的な要求に基づいて、SSMA for Oracle の32ビットバージョンが返されます。 以前の実装と比較して (v2.0 より前)、インストーラーパッケージは2つありますが、サイドバイサイドでインストールすることはできません。 そのため、使用している接続コンポーネントに基づいて、最適なバージョンを選択する必要があります。 可能であれば、常に64ビットバージョンを使用することをお勧めします。
 * SQL Server 2017 のサポートが、Linux でサポートされている Oracle 拡張パック (新しいリモートインストールオプション) で公式になりました。 テスト担当者とサーバー側のデータ移行機能はサポートされていないため、Linux にインストールされている場合は拡張パックの機能が制限されていることに注意してください。
-* Ssma for Oracle では、具体化されたビューを通常のテーブルとして移行できます ([**プロジェクト設定**の同期] の設定で構成でき  ->  **Synchronization**  ->  ます)。具体化された**ビューのバッキングテーブルを検出**します。
+* Ssma for Oracle では、具体化されたビューを通常のテーブルとして移行できます ([ **プロジェクト設定** の同期] の設定で構成でき  ->  **Synchronization**  ->  ます)。具体化された **ビューのバッキングテーブルを検出** します。
 
 ## <a name="ssma-v76"></a>SSMA v1.0
 
@@ -234,7 +260,7 @@ SSMA for Oracle の version 7.5 リリースには、次の変更が含まれて
 
 SSMA for Oracle の v2.0 リリースには、次の変更が含まれています。
 
-* SSMA for Oracle では、移行のターゲットプラットフォームとして Azure SQL Data Warehouse がサポートされるようになりました。
+* SSMA for Oracle では、移行のターゲットプラットフォームとして Azure Synapse Analytics がサポートされるようになりました。
 
   ![[新しいプロジェクト] ウィンドウ](../media/new-project.png)
   * では、次の図に示すように、データウェアハウスのストレージオプションがサポートされています。
@@ -244,7 +270,7 @@ SSMA for Oracle の v2.0 リリースには、次の変更が含まれていま�
 
   ![データウェアハウスのデータ分散](../media/data-distribution_red.png)
 
-* [**クエリタイムアウト**] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
+* [ **クエリタイムアウト** ] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
 
   ![クエリタイムアウトオプション](../media/query-timeout_red.png)
 
@@ -266,7 +292,7 @@ SSMA for Oracle の version 7.3 リリースには、次の変更が含まれて
   * カスタム変換を実行するために SSMA で使用できるライブラリ。
     * SSMA によって以前に処理されなかったカスタム構文変換と変換を処理できるコードを作成できるようになりました。
       * カスタムコンバーターを構築する方法については、このブログの投稿を参照してください。 [SQL Server Migration Assistant の変換機能が拡張](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)されます。
-      * この[ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)から、変換用のサンプルプロジェクトをダウンロードします。
+      * この [ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)から、変換用のサンプルプロジェクトをダウンロードします。
 
 ## <a name="ssma-v72"></a>SSMA v 7.2
 
@@ -380,7 +406,7 @@ SSMA for Oracle の2011年4月のリリースには、次の変更が含まれ�
 * `Simple`およびログ復旧モデルを使用したデータ移行のパフォーマンスの向上 `Bulk` 。
 * 以前のバージョンの SSMA (v1.0 および v1.1) で作成されたプロジェクトの旧バージョンとの互換性のためのサポートを追加しました。
 * Ssma for Oracle v1.0 製品を旧バージョンの SSMA (v2.0 および v1.1) とサイドバイサイド (SxS) でインストールする機能が追加されました。
-* ユーザー定義型 (サブタイプ、 `VARRAY` 、 `NESTED TABLE` 、オブジェクトテーブル、オブジェクトビューを含む) とその使用状況を、特別なエラーメッセージを含む PL/SQL ブロックで報告するためのサポートが追加されました。
+* User-Defined の種類 (サブタイプ、 `VARRAY` 、 `NESTED TABLE` 、オブジェクトテーブル、オブジェクトビューを含む) とその使用状況を、特別なエラーメッセージを含む PL/SQL ブロックで報告するためのサポートが追加されました。
 
 ## <a name="july-2010"></a>2010 年 7 月
 
@@ -388,7 +414,7 @@ SSMA for Oracle の2010年7月のリリースには、次のものが追加さ�
 
 * SQL Server 2008 R2 への移行のサポート。
 * コマンドライン実行用の新しい SSMA コンソールアプリケーション。
-* サーバー側とクライアント側の両方のデータ移行エンジンを使用したデータ移行のサポート。
+* Server-Side と Client-Side の両方のデータ移行エンジンを使用したデータ移行のサポート。
 * データ移行での "カスタム SELECT" ステートメントのサポート。
 * Oracle 11g R2 からの移行のサポート。
 
@@ -403,10 +429,10 @@ SSMA for Oracle の2008年6月のリリースには、次の変更が含まれ�
   * コレクションとレコードの変換を変更し、フィールドごとに個別の変数を使用してリリースされた単純なケースでレコードを変換できるようになりました。
   * レコードとコレクションの実装の機能強化。
   * ウィンドウ集計関数が追加されました。
-  * `ROLLUP`/`CUBE`句が追加されました。
+  * `ROLLUP`/`CUBE` 句が追加されました。
   * の機能強化 `NEXTVAL` / `CURVAL` 。
   * `SET`句、グループ化セット、およびグループ化 ID の列グループが追加されました。
-  * `MERGE`ステートメントが追加されました。
+  * `MERGE` ステートメントが追加されました。
   * 新しい datetime 型をサポートし、CLR データ型としてレコードとコレクションを変換しました。
 * テスト担当者の新機能が追加されました。 テーブルは、テスト担当者を使用してオブジェクトとしてテストできるようになりました。テストケース内の複数のテスト可能なオブジェクトの呼び出し順序を変更できます。また、ユーザーは、レコードとコレクションを含むプロシージャと関数をパラメーターと戻り値としてテストできます
   

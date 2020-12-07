@@ -5,18 +5,18 @@ description: この 4 部構成のチュートリアル シリーズのパート
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0be451ea14a6eec98872b3c21b16c5065d02f85f
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a4a12d71818ad4b900a7959904c47cb0baad4357
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178733"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870313"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>チュートリアル:SQL 機械学習を使用して R で予測モデルをトレーニングするためのデータを準備する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]

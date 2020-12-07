@@ -1,6 +1,6 @@
 ---
-description: dm_exec_dms_workers (Transact-sql)
-title: dm_exec_dms_workers (Transact-sql) |Microsoft Docs
+description: sys.dm_exec_dms_workers (Transact-sql)
+title: sys.dm_exec_dms_workers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -23,14 +23,14 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c14c26591e16c423564acafd9aeb33be6940002f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5942abbdd1710a058ec725e88d96f99c9ba21e37
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548552"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834094"
 ---
-# <a name="sysdm_exec_dms_workers-transact-sql"></a>dm_exec_dms_workers (Transact-sql)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-sql)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   DMS ステップを完了するすべてのワーカーに関する情報を保持します。  
@@ -39,12 +39,12 @@ ms.locfileid: "89548552"
   
 |列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|この DMS ワーカーが含まれているクエリ。 request_id、step_index、および dms_step_index は、このビューのキーを形成します。||  
-|step_index|`int`|この DMS ワーカーが含まれているクエリステップ。|「 [Transact-sql&#41;&#40;dm_exec_distributed_request_steps ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)のステップインデックス」を参照してください。|  
-|dms_step_index|`int`|このワーカーが実行されている DMS プランのステップ。|「 [Dm_exec_dms_workers (transact-sql)」を](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)参照してください。|  
-|compute_node_id|`int`|ワーカーが実行されているノード。|「 [Sys. dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)」を参照してください。|  
+|execution_id|`nvarchar(32)`|この DMS ワーカーが含まれているクエリ。 <br /><br /> execution_id、step_index、および dms_step_index は、このビューのキーを形成します。||  
+|step_index|`int`|この DMS ワーカーが含まれているクエリステップ。|[Transact-sql&#41;&#40;sys.dm_exec_distributed_request_steps](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)のステップインデックスを参照してください。|  
+|dms_step_index|`int`|このワーカーが実行されている DMS プランのステップ。|「 [Sys.dm_exec_dms_workers (transact-sql)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md) 」を参照してください。|  
+|compute_node_id|`int`|ワーカーが実行されているノード。|「 [Sys.dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)」を参照してください。|  
 |distribution_id|`int`|||  
-|型|`nvarcha(32)`|||  
+|type|`nvarchar(32)`|このエントリが表す DMS ワーカースレッドの種類。|' DIRECT_CONVERTER '、' DIRECT_READER '、' FILE_READER '、' HASH_CONVERTER '、' HASH_READER '、' ROUNDROBIN_CONVERTER '、' EXPORT_READER '、' EXTERNAL_READER '、' EXTERNAL_WRITER '、' PARALLEL_COPY_READER '、' REJECT_WRITER '、' WRITER '|  
 |status|`nvarchar(32)`|この手順の状態|' Pending '、' Running '、' Complete '、' Failed '、' UndoFailed '、' PendingCancel '、' 取り消し済み '、' 元に戻す '、' Aborted '|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
@@ -60,12 +60,11 @@ ms.locfileid: "89548552"
 |error_id|`nvarchar(36)`|||  
 |source_info|`nvarchar(4000)`|||  
 |destination_info|`nvarchar(4000)`|||  
-|コマンドを使用します|`nvarchar(4000)`|||
+|command|`nvarchar(4000)`|||
 |compute_pool_id|`int`|プールの一意の識別子。|
 
 ## <a name="see-also"></a>参照  
- [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [動的管理ビューを使用した PolyBase のトラブルシューティング](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;データベース関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

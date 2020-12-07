@@ -16,12 +16,12 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 702b6058e09a49528f96184d8591a0b6c97b3f86
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 2eac0da805a1d5e75ddb1c358bd54b0195f0bf0d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862084"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727243"
 ---
 # <a name="initialization-and-authorization-properties"></a>初期化プロパティと承認プロパティ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88862084"
 |プロパティ ID|説明|  
 |-----------------|-----------------|  
 |SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|型: VT_BSTR<br /><br /> R/W:読み取り/書き込み<br /><br /> 既定値はVT_EMPTY<br /><br /> 説明:Azure Active Directory に対する認証に使用するアクセス トークン。 <br/><br/>**注:** このプロパティを指定し、`UID`、`PWD`、`Trusted_Connection`、または `Authentication` 接続文字列キーワードまたはそれに対応するプロパティ/キーワードも指定すると、エラーになります。|
-|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|型: VT_BSTR<br /><br /> R/W:読み取り/書き込み<br /><br /> 既定値はVT_EMPTY<br /><br /> 説明:使用される SQL または Active Directory 認証を指定します。 有効な値は次のとおりです。<br/><ul><li>`(not set)`:他のキーワードによって決定される認証モード。</li><li>`(empty string)`:以前に設定した認証モードの設定を解除します。</li><li>`ActiveDirectoryPassword:` Azure Active Directory の ID によるユーザー ID とパスワードの認証。</li><li>`ActiveDirectoryIntegrated:` Azure Active Directory の ID による統合認証。</li><br/>**注:** `ActiveDirectoryIntegrated` キーワードは、SQL Server に対する Windows 認証でも使用できます。 これは、`Integrated Security` (または `Trusted_Connection`) 認証キーワードに代わるものです。 `Integrated Security` (または `Trusted_Connection`) キーワードまたはそれに対応するプロパティを使用するアプリケーションで、`Authentication` キーワード (またはそれに対応するプロパティ) の値を `ActiveDirectoryIntegrated` に設定して、新しい暗号化および証明書の検証の動作を有効にすることを**お勧め**します。<br/><br/><li>`ActiveDirectoryInteractive:` Azure Active Directory の ID による対話型認証。 この方法では、Azure Multi-Factor Authentication (MFA) がサポートされます。 </li><li>`ActiveDirectoryMSI:` [マネージド ID (MSI)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) の認証。 ユーザー割り当て ID の場合、ユーザー ID はユーザー ID のオブジェクト ID に設定する必要があります。</li><li>`SqlPassword:` ユーザー ID とパスワードを使用した認証。</li><br/>**注:** `SQL Server` 認証を使用するアプリケーションで、`Authentication` キーワード (またはそれに対応するプロパティ) の値を `SqlPassword` に設定して、[新しい暗号化および証明書の検証の動作](../features/using-azure-active-directory.md#encryption-and-certificate-validation)を有効にすることを**お勧め**します。</ul>|
+|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|型: VT_BSTR<br /><br /> R/W:読み取り/書き込み<br /><br /> 既定値はVT_EMPTY<br /><br /> 説明:使用される SQL または Active Directory 認証を指定します。 有効な値は次のとおりです。<br/><ul><li>`(not set)`:他のキーワードによって決定される認証モード。</li><li>`(empty string)`:以前に設定した認証モードの設定を解除します。</li><li>`ActiveDirectoryPassword:` Azure Active Directory の ID によるユーザー ID とパスワードの認証。</li><li>`ActiveDirectoryIntegrated:` Azure Active Directory の ID による統合認証。</li><br/>**注:** `ActiveDirectoryIntegrated` キーワードは、SQL Server に対する Windows 認証でも使用できます。 これは、`Integrated Security` (または `Trusted_Connection`) 認証キーワードに代わるものです。 `Integrated Security` (または `Trusted_Connection`) キーワードまたはそれに対応するプロパティを使用するアプリケーションで、`Authentication` キーワード (またはそれに対応するプロパティ) の値を `ActiveDirectoryIntegrated` に設定して、新しい暗号化および証明書の検証の動作を有効にすることを**お勧め**します。<br/><br/><li>`ActiveDirectoryInteractive:` Azure Active Directory の ID による対話型認証。 この方法では、Azure Multi-Factor Authentication (MFA) がサポートされます。 </li><li>`ActiveDirectoryMSI:` [マネージド ID (MSI)](/azure/active-directory/managed-identities-azure-resources/overview) の認証。 ユーザー割り当て ID の場合、ユーザー ID はユーザー ID のオブジェクト ID に設定する必要があります。</li><li>`SqlPassword:` ユーザー ID とパスワードを使用した認証。</li><br/>**注:** `SQL Server` 認証を使用するアプリケーションで、`Authentication` キーワード (またはそれに対応するプロパティ) の値を `SqlPassword` に設定して、[新しい暗号化および証明書の検証の動作](../features/using-azure-active-directory.md#encryption-and-certificate-validation)を有効にすることを**お勧め**します。</ul>|
 |SSPROP_AUTH_OLD_PASSWORD|型: VT_BSTR<br /><br /> R/W:Write<br /><br /> 既定値はVT_EMPTY<br /><br /> 説明:現在のパスワードまたは期限切れのパスワード。 詳細については、「[プログラムによるパスワードの変更](../../oledb/features/changing-passwords-programmatically.md)」を参照してください。|  
 |SSPROP_INIT_APPNAME|型: VT_BSTR<br /><br /> R/W:読み取り/書き込み<br /><br /> 説明:クライアント アプリケーション名。|  
 |SSPROP_INIT_AUTOTRANSLATE|型: VT_BOOL<br /><br /> R/W:読み取り/書き込み<br /><br /> 既定値はVARIANT_TRUE<br /><br /> 説明:OEM/ANSI 文字の変換。<br /><br /> VARIANT_TRUE:OLE DB Driver for SQL Server は、クライアントとサーバーの間で送信される ANSI 文字列の変換に Unicode を使用することで、クライアントとサーバーのコード ページ間で拡張文字を照合するときに生じる問題を最小限に抑えます。<br /><br /> クライアントの DBTYPE_STR データを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **char** 型、**varchar** 型、または **text** 型の変数、パラメーター、列のインスタンスに送信する場合、クライアントの ANSI コード ページ (ACP) に基づいて文字が Unicode に変換され、その後で、サーバーの ACP に基づいて Unicode から文字に変換されます。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **char** 型、**varchar** 型、または **text** 型のデータをクライアントの DBTYPE_STR 変数に送信する場合は、サーバーの ACP に基づいて文字が Unicode に変換され、その後で、クライアントの ACP に基づいて Unicode から文字に変換されます。<br /><br /> この変換は、OLE DB Driver for SQL Server によってクライアントで行われます。 そのため、サーバーで使用しているものと同じ ACP がクライアントでも使用可能になっている必要があります。<br /><br /> 次の設定は、送受信時の変換に影響しません。<br /><br /> サーバーの **char** 型、**varchar** 型、または **text** 型に送信される、Unicode の DBTYPE_WSTR クライアント データ。<br /><br /> クライアントの Unicode の DBTYPE_WSTR 変数に送信される、**char** 型、**varchar** 型、または **text** 型のサーバー データ。<br /><br /> サーバーの Unicode の **nchar** 型、**nvarchar** 型、または **ntext** 型に送信される、ANSI DBTYPE_STR クライアント データ。<br /><br /> クライアントの ANSI DBTYPE_STR 変数に送信される、Unicode の **char** 型、**varchar** 型、または **text** 型のサーバー データ。<br /><br /> VARIANT_FALSE:OLE DB Driver for SQL Server は、文字の変換を行いません。<br /><br /> OLE DB Driver for SQL Server では、サーバーの **char** 型、**varchar** 型、または **text** 型の変数、パラメーター、列のいずれかに送信される、クライアントの ANSI 文字の DBTYPE_STR データは変換されません。 また、サーバーからクライアントの DBTYPE_STR 変数に送信される、**char** 型、**varchar** 型、**text** 型のデータも変換されません。<br /><br /> クライアントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが使用する ACP が異なる場合、拡張文字の解釈が正しく行われない場合があります。|  
@@ -97,5 +97,4 @@ Server=MyServer;UID=MyUserName;
   
 ## <a name="see-also"></a>参照  
  [データ ソース オブジェクト &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
-  
   

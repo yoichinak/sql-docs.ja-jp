@@ -28,11 +28,11 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 1c4563a10433d4cbead089da026d086f9c021ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422866"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126287"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -193,7 +193,7 @@ DBCC CHECKTABLE コマンドの終了後、メッセージが [!INCLUDE[ssNoVers
 |5|不明なエラーが発生し、DBCC コマンドが終了しました。|    
     
 ## <a name="error-reporting"></a>[エラー報告]    
-DBCC CHECKTABLE により破損エラーが検出されるたびに、ミニ ダンプ ファイル (`SQLDUMP*nnnn*.txt`) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の LOG ディレクトリに生成されます。 *機能の使用状況*データ収集と*エラー報告*機能が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して有効になっている場合、ダンプ ファイルは自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] に転送されます。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
+DBCC CHECKTABLE により破損エラーが検出されるたびに、ミニ ダンプ ファイル (`SQLDUMP*nnnn*.txt`) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の LOG ディレクトリに生成されます。 *機能の使用状況* データ収集と *エラー報告* 機能が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して有効になっている場合、ダンプ ファイルは自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] に転送されます。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
 このダンプ ファイルには、DBCC CHECKTABLE コマンドの結果と追加の診断出力が含まれます。 また、制限付きの随意アクセス制御リスト (DACL) が割り当てられます。 アクセスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと sysadmin ロールのメンバーに制限されます。 既定では、sysadmin ロールには、Windows の builtin \administrators グループとローカルの管理者のグループのすべてのメンバーが含まれています。 データ収集プロセスが失敗しても、DBCC コマンドは失敗しません。
     
 ## <a name="resolving-errors"></a>エラーの解決    

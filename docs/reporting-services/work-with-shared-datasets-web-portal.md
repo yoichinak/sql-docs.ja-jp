@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 695b6d02494430b134ce46ac14d802443b41046b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243603"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243791"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>共有データセットの操作 - Web ポータル
 
@@ -32,7 +32,7 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 2.  **[データセット]** を選択します。  
   
-    ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
+    ![[新規] ドロップダウン リストを示すスクリーンショット。[データセット] オプションが選択されています。](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  レポート ビルダーが起動されるか、またはレポート ビルダーをダウンロードするように求められます。  
   
@@ -51,17 +51,17 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 1.  管理するデータセットの省略記号 **[...]** を選択します。  
   
-    ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
+    ![データセットに対して省略記号オプションを選択しているユーザーを示すスクリーンショット。](../reporting-services/media/ssrsdataset-ellipse.png)  
   
 2.  **[管理]** を選択すると、編集画面に移動します。  
   
-    ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
+    ![省略記号オプションが選択され、[管理] オプションが選択されていること示すスクリーンショット。](../reporting-services/media/ssrsdataset-manage.png)  
   
 ## <a name="properties"></a>Properties
   
 プロパティ画面では、データセットの **[名前]** と **[説明]** を変更できます。 また、 **[削除]** 、 **[移動]** 、 **[レポート ビルダーでの編集]** 、 **[ダウンロード]** 、 **[置換]** を選択することもできます。  
   
-![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
+![[Company Sales の編集] ダイアログ ボックスの [プロパティ] 画面を示すスクリーンショット。](../reporting-services/media/ssrsdataset-properties.png)  
   
 ## <a name="caching"></a>キャッシュ
   
@@ -71,17 +71,17 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 2.  **[このレポートのコピーをキャッシュし、使用できるときはそれを使用する]** は、データの一時的なコピーをキャッシュに格納し、このデータセットを使用するアイテムで使用します。 再度データセット クエリを実行することなくデータがキャッシュから返されるので、通常はキャッシュによってパフォーマンスが向上します。  
   
-![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
+![[Company Sales の編集] ダイアログ ボックスの [キャッシュ] 画面を示すスクリーンショット。[常に最新データを使用して、このレポートを実行する] オプションが選択されています。](../reporting-services/media/ssrsdataset-caching1.png)  
   
 **[このレポートのコピーをキャッシュし、使用できるときはそれを使用する]** を選択すると、さらにいくつかのオプションが表示されます。  
   
-![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
+![[Company Sales の編集] ダイアログ ボックスの [キャッシュ] 画面を示すスクリーンショット。[このレポートのコピーをキャッシュし、使用できるときはそれを使用する] オプションが選択されています。](../reporting-services/media/ssrsdataset-caching2.png)  
   
 ### <a name="cache-expiration"></a>キャッシュの有効期限  
   
 一定の時間が経過したら共有データセットのキャッシュを期限切れにするか、またはスケジュールに従って行うかを制御できます。 共有スケジュールを使用できます。  
   
-![ssRSDataset-Caching3](../reporting-services/media/ssrsdataset-caching3.png)  
+![[スケジュールに従ってキャッシュの有効期限が切れる] オプションが選択されていることを示すスクリーンショット。](../reporting-services/media/ssrsdataset-caching3.png)  
   
 > [!NOTE]
 > 有効期限を設定しても、キャッシュは更新されません。 キャッシュ更新計画がない場合、データはデータセットの次の実行時に更新されます。  
@@ -98,7 +98,7 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 完了したら、 **[キャッシュ更新計画の作成]** を選択します。  
   
-![ssRSDataset-Caching4](../reporting-services/media/ssrsdataset-caching4.png)  
+![[キャッシュ更新計画の作成] オプションが表示されている [Company Sales の編集] ダイアログ ボックスのスクリーンショット。](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
 > キャッシュ更新計画を作成するには、SQL Server エージェントが動作している必要があります。  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2496345f217f61f3729a6bf657a882e045cc130b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a2b82bede4fd6c04bd1d72f24b9cdb2a0e6fe34
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349998"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727598"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク
 
@@ -45,9 +45,9 @@ ms.locfileid: "88349998"
 ## <a name="ddl-statements"></a>DDL ステートメント  
  DDL ステートメントは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) のステートメントとして表され、XML for Analysis (XMLA) コマンドで構成されます。  
   
--   ASSL は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス、それに含まれるデータベースやデータベース オブジェクトの定義、および記述に使用されます。 詳細については、「[Analysis Services スクリプト言語 (XMLA 用 ASSL)](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)」を参照してください。  
+-   ASSL は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス、それに含まれるデータベースやデータベース オブジェクトの定義、および記述に使用されます。 詳細については、「[Analysis Services スクリプト言語 (XMLA 用 ASSL)](/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)」を参照してください。  
   
--   XMLA は、Create、Alter、Process などのアクション コマンドを、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに送信する場合に使用されるコマンド言語です。 詳細については、「[XML for Analysis (XMLA) リファレンス](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference)」を参照してください。  
+-   XMLA は、Create、Alter、Process などのアクション コマンドを、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに送信する場合に使用されるコマンド言語です。 詳細については、「[XML for Analysis (XMLA) リファレンス](/analysis-services/xmla/xml-for-analysis-xmla-reference)」を参照してください。  
   
  DDL コードが別のファイルに格納されている場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクはファイル接続マネージャーを使用して、そのファイルのパスを指定します。 詳しくは「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)」をご覧ください。  
   
@@ -229,7 +229,7 @@ ms.locfileid: "88349998"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックをクリックしてください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-execute-ddl-task"></a>プログラムによる Analysis Services DDL 実行タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
@@ -284,4 +284,3 @@ ms.locfileid: "88349998"
  一覧で変数を選択するか、[\<**New variable...**>] をクリックし、 **[変数の追加]** ダイアログ ボックスを使用して、新しい接続を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)  
-  

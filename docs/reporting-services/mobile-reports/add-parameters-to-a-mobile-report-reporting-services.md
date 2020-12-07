@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41895890a5528a1ddac90a4c9f9eea05d80fac93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36bf305d4685f18e1c6df9129716ae9de84d4f84
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448293"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907290"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>モバイル レポートにパラメーターを追加する | Reporting Services
 パラメーターを備えた [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートを作成し、レポートのフィルター処理を可能にすることができます。 パラメーターを備えたレポートは、[ソース レポートからのドリルスルー](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)の対象にすることもできます。 
@@ -49,11 +49,11 @@ ms.locfileid: "79448293"
      
 8. **[プレビュー]** を選択して、レポートがどのように表示されるかを確認します。 このレポートの選択リストでは Category パラメーターを使用しています。
 
-   ![sql-server-mobile-report-publisher-Selection-List-View-No-Selection](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
+   ![選択リスト 1 にコールアウトが付けられたレポートのプレビューのスクリーンショット。](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
    
 9. 選択リストの値を選択すると、レポートはフィルターされ、その値 (この例では Accessories) が表示されます。
 
-   ![sql-server-mobile-report-publisher-Selection-List-Category-Selected](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
+   ![選択リスト 1 にコールアウトが付けられ、[アクセサリ] オプションが選択されたレポートのプレビューのスクリーンショット。](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
   
 ### <a name="see-also"></a>関連項目  
 -  [特定のクエリ文字列パラメーターを使用してモバイル レポートを開く](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)

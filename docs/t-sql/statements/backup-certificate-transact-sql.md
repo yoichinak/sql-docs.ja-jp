@@ -29,12 +29,12 @@ ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
-ms.openlocfilehash: 1944728a05db49a194b2c1f070695fd16ee095d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06776d309042483f879dd3d31d9f6bae62119037
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479011"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124174"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -71,6 +71,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
         ENCRYPTION BY PASSWORD ='encryption_password'   
       )   
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

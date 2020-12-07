@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bc939e8aa055a2a36216a6c94fd032e561cbabf5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bd1f2214820a1795ae8d279c88a0d86c2ca5843
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484005"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194014"
 ---
 # <a name="drilldownlevel-mdx"></a>ドリルダウンレベル (MDX)
 
@@ -42,7 +42,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  (省略可能)。 計算されるメンバーがドリルダウン レベルに存在する場合にそれらを含めるかどうかを示すフラグです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **ドリルダウンレベル**関数は、指定されたセットに含まれるメンバーに基づいて、階層の順序で子メンバーのセットを返します。 順序は、指定されたセット内の元のメンバーの間で保持されます。ただし、関数の結果セットに含まれるすべての子メンバーは、その親メンバーの直下に含まれます。  
   
  複数レベルの階層データ構造を指定した場合は、ドリルダウンするレベルを明示的に選択できます。 レベルを指定するには、相互に排他的な2つの方法があります。 1つ目の方法は、レベルを返す MDX 式を使用して **level_expression** 引数を設定することです。別の方法として、数値でレベルを指定する数値式を使用して、 **インデックス** 引数を指定することもできます。  
@@ -53,7 +53,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  レベル式もインデックス値も指定されていない場合、関数は、指定されたセット内で参照されている最初のディメンションの最下位レベルにあるメンバーの子だけを取得することによって、階層の順序でセットを構築します。  
   
- XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「 [サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
+ XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「 [サポートされる Xmla プロパティ &#40;xmla&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
 ## <a name="examples"></a>例  
  SSMS の MDX クエリウィンドウでは、Adventure Works キューブを使用して、次の例を試すことができます。  
@@ -119,5 +119,4 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

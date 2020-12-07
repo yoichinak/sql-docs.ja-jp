@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: abcdda5a396451508df78610eeb4f7bc417484d5
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448396"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907350"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>特定のクエリ文字列パラメーターを使用してモバイル レポートを開く | Reporting Services
 パラメーターを含む [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートと、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] のデータ ソースがある場合、レポート URL にクエリ文字列パラメーターを追加して、指定した値を自動的に付けて開くようにすることができます。 
@@ -24,11 +24,11 @@ ms.locfileid: "79448396"
 
 2. タブのテーブルの下部で、データセットの名前と必要なフィールド名を検索します。 
     
-    ![mobile-report-publisher-parameter-data-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
+    ![モバイル レポートの発行者パラメーター データ ビューのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
     
 2.  URL の構文は、データ ソースによって異なります。 
 
-     **SQL Server Analysis Services のデータ ソースの場合**:次の形式で、クエリ文字列パラメーターを含む URL を作成します。
+     **SQL Server Analysis Services のデータ ソースの場合** :次の形式で、クエリ文字列パラメーターを含む URL を作成します。
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.<field-name>=<parameter-value>`
 
@@ -36,7 +36,7 @@ ms.locfileid: "79448396"
     
     `https://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.category=Clothing` 
     
-     **SQL Server のデータ ソースの場合**:クエリ文字列パラメーターはほとんど同様ですが、フィールド名の前に \@ 記号を付けます。
+     **SQL Server のデータ ソースの場合** :クエリ文字列パラメーターはほとんど同様ですが、フィールド名の前に \@ 記号を付けます。
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.@<field-name>=<parameter-value>`
 
@@ -47,7 +47,7 @@ ms.locfileid: "79448396"
     
 3.  この URL を使用すると、サーバーでレポートが開き、指定したパラメーター値で自動的にフィルター処理されます。
 
-    ![mobile-report-publisher-parameter-web-portal-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
+    ![URL とこのテキスト "?TimeChartLoD.@category=Clothing" を囲む枠を指す矢印がある、モバイル レポートの発行者パラメーターの Web ポータル ビューのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
 
 ### <a name="see-also"></a>関連項目
 

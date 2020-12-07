@@ -14,12 +14,12 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dda5e49aa6f51382beb390ae48a544565e2703d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: baa0397320f725f401099c00e9887069b5ec6cd1
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418926"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891922"
 ---
 # <a name="views"></a>Views
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88418926"
  パーティション ビューでは、1 台以上のサーバーに分散された一連のメンバー テーブルからの、行方向にパーティション分割されたデータが結合されます。 これにより、データが 1 つのテーブルからのデータのように表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の同じインスタンスのメンバー テーブルを結合するビューは、ローカル パーティション ビューです。  
   
  システム ビュー  
- システム ビューは、カタログ メタデータを公開します。 システム ビューを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの情報や、インスタンスで定義されているオブジェクトの情報を返すことができます。 たとえば、sys.databases カタログ ビューに対してクエリを実行し、インスタンスで使用可能なユーザー定義データベースについての情報を返すことができます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)」を参照してください。  
+ システム ビューは、カタログ メタデータを公開します。 システム ビューを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの情報や、インスタンスで定義されているオブジェクトの情報を返すことができます。 たとえば、sys.databases カタログ ビューに対してクエリを実行し、インスタンスで使用可能なユーザー定義データベースについての情報を返すことができます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)」を参照してください。  
   
 ## <a name="common-view-tasks"></a>ビューの一般的なタスク  
  次の表に、ビューの作成や変更に関連する一般的なタスクへのリンクを示します。  
@@ -57,5 +57,4 @@ ms.locfileid: "88418926"
 ## <a name="see-also"></a>参照  
  [XML 列でのビューの作成](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
-  
   

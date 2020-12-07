@@ -1,6 +1,6 @@
 ---
-description: dm_db_index_usage_stats (Transact-sql)
-title: dm_db_index_usage_stats (Transact-sql) |Microsoft Docs
+description: sys.dm_db_index_usage_stats (Transact-sql)
+title: sys.dm_db_index_usage_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b61a4f897aeebdc50d4ae173488b1fbbc6e8a72c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 772d4ec17e2dd2a5789f324f4ce26cbb219a1aa7
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548932"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96128782"
 ---
-# <a name="sysdm_db_index_usage_stats-transact-sql"></a>dm_db_index_usage_stats (Transact-sql)
+# <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   さまざまな種類のインデックス操作の数と、各種の操作が前回実行された時刻を返します。  
@@ -36,10 +36,10 @@ ms.locfileid: "89548932"
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
   
 > [!NOTE]  
->  **dm_db_index_usage_stats** は、メモリ最適化インデックスに関する情報を返しません。 メモリ最適化インデックスの使用の詳細については、「 [dm_db_xtp_index_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)」を参照してください。  
+>  **sys.dm_db_index_usage_stats** は、メモリ最適化インデックスまたは空間インデックスに関する情報を返しません。 メモリ最適化インデックスの使用の詳細については、「 [sys.dm_db_xtp_index_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
->  またはからこのビューを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_db_index_usage_stats**を使用します。  
+>  またはからこのビューを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **sys.dm_pdw_nodes_db_index_usage_stats** を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -73,11 +73,11 @@ ms.locfileid: "89548932"
   
  インデックスを使用しているときは、そのインデックスにまだ行が存在しない場合に、行が **sys.dm_db_index_usage_stats** に追加されます。 行が追加されるときに、カウンターが 0 に初期設定されます。  
   
- 、、またはへのアップグレード中に、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] dm_db_index_usage_stats のエントリが削除されます。 以降で [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は、エントリは以前と同じように保持され [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ます。  
+ 、、またはへのアップグレード中に、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sys.dm_db_index_usage_stats のエントリが削除されます。 以降で [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は、エントリは以前と同じように保持され [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。  
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理** 者または **Azure Active Directory 管理者** アカウントが必要です。  
   
 ## <a name="see-also"></a>参照  
 

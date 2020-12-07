@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], configuring
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 2dc2905860a41b0be1ad284c1d3e58f9434d7e0e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1095825bef135237d1341f2eb4f4c46cab9d69bc
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888067"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583988"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ レプリカの削除 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "85888067"
   
      *group_name* は可用性グループの名前、 *instance_name* はセカンダリ レプリカがあるサーバー インスタンスです。  
   
-     次の例では、セカンダリ レプリカを *MyAG* 可用性グループから削除しています。 対象のセカンダリ レプリカは、 *COMPUTER02* という名前のコンピューターの *HADR_INSTANCE*という名前のサーバー インスタンスにあります。  
+     次の例では、セカンダリ レプリカを *MyAG* 可用性グループから削除しています。 対象のセカンダリ レプリカは、 *COMPUTER02* という名前のコンピューターの *HADR_INSTANCE* という名前のサーバー インスタンスにあります。  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  
@@ -90,11 +90,11 @@ ms.locfileid: "85888067"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
--   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="follow-up-after-removing-a-secondary-replica"></a><a name="PostBestPractices"></a> 補足情報: セカンダリ レプリカの削除後  
  現在使用できないレプリカを指定した場合、そのレプリカがオンラインに戻ったとき、可用性グループに属していないことが検出されます。  
@@ -105,5 +105,4 @@ ms.locfileid: "85888067"
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [可用性グループの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
-  
   

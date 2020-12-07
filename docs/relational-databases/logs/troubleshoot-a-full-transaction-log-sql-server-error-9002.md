@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9eb0bd04dc50aac286b72983ee4b3d196f04c60c
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006547"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175910"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86006547"
  
  特定の条件でログの切り捨てができなくなっている原因を見つけるには、**sys.database** カタログ ビューの **log_reuse_wait** 列と **log_reuse_wait_desc** 列を使用します。 詳細については、「[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」を参照してください。 ログの切り捨てが遅れる要因については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
-> **重要!!**  
+> [!IMPORTANT]  
 >  データベースの復旧中に 9002 エラーが発生した場合、問題を解決した後で [ALTER DATABASE *database_name* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントを使用してデータベースを復旧します。  
   
  満杯になったトランザクション ログのその他の対処法には、以下があります。  
@@ -61,8 +61,8 @@ ms.locfileid: "86006547"
   
  **トランザクション ログのバックアップを作成するには**  
   
-> **重要**  
->  データベースが破損している場合、「[ログ末尾のバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)」を参照してください。  
+> [!IMPORTANT]  
+> データベースが破損している場合、「[ログ末尾のバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)」を参照してください。  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -74,7 +74,8 @@ ms.locfileid: "86006547"
 ### <a name="move-the-log-file-to-a-different-disk"></a>別のディスクへのログ ファイルの移動  
  現在ログ ファイルが保存されているドライブでディスク領域を十分に解放できない場合は、十分な空き領域がある別のドライブにファイルを移動することを検討してください。  
   
-> **重要!!** ログ ファイルは、圧縮されたファイル システムには配置しないでください。  
+> [!IMPORTANT]
+> ログ ファイルは、圧縮されたファイル システムには配置しないでください。  
   
  **ログ ファイルの移動**  
   
@@ -91,7 +92,8 @@ ms.locfileid: "86006547"
   
 -   ALTER DATABASE ステートメントを使用して自動拡張を有効にし、FILEGROWTH オプションに 0 以外の拡張増分値を設定します。  
   
-> **注:** いずれの場合も、現在のサイズ制限に達している場合は、MAXSIZE 値を増やします。  
+> [!NOTE]
+> いずれの場合も、現在のサイズ制限に達している場合は、MAXSIZE 値を増やします。  
   
 ### <a name="add-a-log-file-on-a-different-disk"></a>別のディスクへのログ ファイルの追加  
  ALTER DATABASE <database_name> ADD LOG FILE ステートメントを使用して、十分な領域がある別のディスク上のデータベースに新しいログ ファイルを追加します。  

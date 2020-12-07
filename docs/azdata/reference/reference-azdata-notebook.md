@@ -9,18 +9,18 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dc3021cfe40259fdbcff7fab00ef6a7e80e4a2ad
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 4a0e171861d01d7a3afe7904905d373aa5e57639
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914413"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678732"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
-`azdata` への適用
+[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] への適用
 
-以下の記事では、**azdata** ツールの **sql** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
+以下の記事では、 **azdata** ツールの **sql** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、 [azdata リファレンス](reference-azdata.md)に関するページを参照してください。
 
 ## <a name="commands"></a>コマンド
 
@@ -112,7 +112,7 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 
 ## <a name="next-steps"></a>次のステップ
 
-他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 
+他の **azdata** コマンドの詳細については、 [azdata リファレンス](reference-azdata.md)に関するページを参照してください。 
 
-**azdata** ツールをインストールする方法の詳細については、「[azdata のインストール](..\install\deploy-install-azdata.md)」を参照してください。
+**azdata** ツールをインストールする方法の詳細については、「 [azdata のインストール](..\install\deploy-install-azdata.md)」を参照してください。
 

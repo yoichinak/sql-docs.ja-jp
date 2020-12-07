@@ -13,14 +13,14 @@ helpviewer_keywords:
 - virtual servers [SQL Server], failover clustering
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6144c7ef647f9108f9ac6619d971696b643e7648
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9e49231237c7a62bb67adcbc72f0bee19d5fb26c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115750"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127654"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server のフェールオーバー クラスター インスタンスの名前変更
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "91115750"
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービス:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスに対する以下の追加操作を検証および実行します。  
   
--   SQL エージェントがイベントの転送用に構成されている場合は、レジストリ設定を修正します。 詳細については、[イベントの転送先サーバーの指定 &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12) を参照してください。  
+-   SQL エージェントがイベントの転送用に構成されている場合は、レジストリ設定を修正します。 詳細については、[イベントの転送先サーバーの指定 &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md) を参照してください。  
   
 -   コンピューター/クラスターのネットワーク名が変更されている場合は、マスター サーバー (MSX) とターゲット サーバー (TSX) のインスタンス名を修正します。 詳細については、次のトピックを参照してください。  
   
@@ -84,5 +84,4 @@ ms.locfileid: "91115750"
   
 ## <a name="see-also"></a>参照  
  [SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
-  
   

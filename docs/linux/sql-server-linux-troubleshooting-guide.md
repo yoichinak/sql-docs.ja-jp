@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088754"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115802"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux のトラブルシューティング
 
@@ -42,11 +42,11 @@ Linux SQL Server に接続するのが困難な場合は、いくつかの点を
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > この手法の 1 つの例外は、Azure VM に関するものです。 Azure VM の場合は、[Azure portal で VM のパブリック IP アドレスを検索](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)します。
+   > この手法の 1 つの例外は、Azure VM に関するものです。 Azure VM の場合は、[Azure portal で VM のパブリック IP アドレスを検索](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)します。
 
 - 該当する場合は、ファイアウォールで SQL Server ポート (既定値は 1433) が開かれていることを確認します。
 
-- Azure VM の場合は、[既定の SQL Server ポートに対するネットワーク セキュリティ グループ規則](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)があることを確認します。
+- Azure VM の場合は、[既定の SQL Server ポートに対するネットワーク セキュリティ グループ規則](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)があることを確認します。
 
 - ユーザー名とパスワードで、入力ミス、余分なスペース、または大文字と小文字の間違いがないことを確認します。
 
@@ -90,7 +90,7 @@ Linux SQL Server に接続するのが困難な場合は、いくつかの点を
    ```
 
 > [!TIP]
-> Docker のトラブルシューティングのヒントについては、[SQL Server Docker コンテナーのトラブルシューティング](sql-server-linux-configure-docker.md#troubleshooting)に関する記事を参照してください。
+> Docker のトラブルシューティングのヒントについては、[SQL Server Docker コンテナーのトラブルシューティング](./sql-server-linux-docker-container-troubleshooting.md)に関する記事を参照してください。
 
 ## <a name="access-the-log-files"></a>ログ ファイルにアクセスする
    
@@ -109,7 +109,7 @@ Linux と Docker の両方のインストールにおいて、SQL Server エン�
    ```
 ## <a name="extended-events"></a>拡張イベント
 
-拡張イベントのクエリは、SQL コマンドを使用して実行できます。  拡張イベントの詳細については、[こちら](https://technet.microsoft.com/library/bb630282.aspx)を参照してください。
+拡張イベントのクエリは、SQL コマンドを使用して実行できます。  拡張イベントの詳細については、[こちら](../relational-databases/extended-events/extended-events.md)を参照してください。
 
 ## <a name="crash-dumps"></a>クラッシュ ダンプ 
 
@@ -197,7 +197,7 @@ SQLCMD を使用してシングル ユーザー モードで SQL Server を起�
 
 - [クエリ ストア](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [システム動的管理ビュー (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [SQL Server Management Studio のパフォーマンス ダッシュボード](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+- [SQL Server Management Studio のパフォーマンス ダッシュボード](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## <a name="common-issues"></a>一般的な問題
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e2d2fdefb8684a95c8c80376e0bb353125b911ab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6d34e2db139a4b38f073f693d3828f9d403c660
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642834"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809929"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM と SQL Server のその他の機能との互換性
 
@@ -72,7 +72,7 @@ ms.locfileid: "85642834"
  パブリッシャーで FILESTREAM 属性が有効になっている **varbinary(max)** 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、[sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) または [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の @schema_option パラメーターを使用します。 FILESTREAM 属性を持たない **varbinary(max)** 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にデータをレプリケートする場合以外は、FILESTREAM 属性をレプリケートすることをお勧めします。 指定するスキーマ オプションに関係なく、FILESTREAM 列を含むテーブルを [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サブスクライバーにレプリケートすることはサポートされていません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートできるデータ値の大きさは、最大 256 MB に制限されています。 詳細については、「 [最大容量仕様](https://go.microsoft.com/fwlink/?LinkId=103810)」を参照してください。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートできるデータ値の大きさは、最大 256 MB に制限されています。 詳細については、「 [最大容量仕様](../../sql-server/maximum-capacity-specifications-for-sql-server.md)」を参照してください。  
   
 ### <a name="considerations-for-transactional-replication"></a>トランザクション レプリケーションに関する注意点  
  トランザクション レプリケーション用にパブリッシュされるテーブルで FILESTREAM 列を使用する場合は、次のことに注意してください。  
@@ -124,5 +124,4 @@ ms.locfileid: "85642834"
   
 ## <a name="see-also"></a>参照  
  [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-  
   

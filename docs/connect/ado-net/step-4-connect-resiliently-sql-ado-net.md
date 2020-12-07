@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: d2a300ce4565d9eb6104dd73c89a7b30b7aa1e8e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391767"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725535"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>手順 4:ADO.NET で SQL に弾性的に接続する
 
@@ -41,7 +41,7 @@ ms.locfileid: "86391767"
   
 プログラムでは、一時的なエラーと永続的なエラーを区別する必要があります。 一時的なエラーとは、一時的なネットワークの問題など、短期間で解消する可能性のあるエラー状態です。  永続的なエラーの例として、プログラムにターゲット データベース名のスペルミスが含まれており (この場合は、"そのようなデータベースは見つかりません" というエラーがいつまでも表示されます)、短期間で解消される見込みがない場合が考えられます。  
   
-一時的な障害として分類されるエラー番号の一覧は、[SQL Database クライアント アプリケーションのエラー メッセージ](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)に関するページに記載されています。  
+一時的な障害として分類されるエラー番号の一覧は、[SQL Database クライアント アプリケーションのエラー メッセージ](/azure/sql-database/sql-database-develop-error-messages/)に関するページに記載されています。  
   
 ## <a name="step-2-create-and-run-sample-application"></a>手順 2:サンプル アプリケーションを作成して実行する  
   
@@ -319,4 +319,4 @@ ERROR: Unable to access the database!
   
 ## <a name="next-steps"></a>次のステップ  
   
-他のベスト プラクティスおよびデザイン ガイドラインを調べるには、[SQL Database への接続: リンク、ベスト プラクティスおよびデザイン ガイドライン](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)に関するページを参照してください。  
+他のベスト プラクティスおよびデザイン ガイドラインを調べるには、[SQL Database への接続: リンク、ベスト プラクティスおよびデザイン ガイドライン](/azure/azure-sql/database/develop-overview)に関するページを参照してください。

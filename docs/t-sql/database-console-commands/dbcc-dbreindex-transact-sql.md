@@ -24,11 +24,11 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: fc18c47d87ada5b60cb57aba79e1063ce1f38c3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417648"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119641"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88417648"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用してください。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,7 +56,7 @@ DBCC DBREINDEX
 
 ## <a name="arguments"></a>引数
  *table_name*  
- 再構築するよう指定したインデックスが含まれているテーブルの名前です。 テーブル名は[識別子](../../relational-databases/databases/database-identifiers.md)*の規則に従っている必要があります。*  
+ 再構築するよう指定したインデックスが含まれているテーブルの名前です。 テーブル名は [識別子](../../relational-databases/databases/database-identifiers.md)*の規則に従っている必要があります。*  
   
  *index_name*  
  再構築するインデックスの名前です。 インデックス名は、識別子の規則に従っている必要があります。 *index_name* が指定されている場合、*table_name* を指定する必要があります。 *index_name* を指定しない場合、または " " である場合は、テーブルのすべてのインデックスが再構築されます。  

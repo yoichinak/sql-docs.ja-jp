@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 70e448c9d47dbffd4bc37e7b4dfd6e96bf0de9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8e5d887195e27f706ef995ff92e32aa41b9149
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353558"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726196"
 ---
 # <a name="functions-dmx"></a>関数 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,7 +49,7 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>ストアド プロシージャ  
  共通言語ランタイム プログラミング言語を使用して、DMX の機能を拡張するストアド プロシージャを作成できます。 たとえば、回帰ツリーマイニングモデルは、回帰式を記述する A、B などの係数を返しますが、モデルは + Bx = y などの式自体を返しません。 ただし、データ マイニング モデル オブジェクトを使用して、コンテンツ スキーマを操作し、出力として回帰式を返すストアド プロシージャは記述できます。 したがって、DMX ステートメントは、クエリ結果の一部として回帰式の一覧を返すことができます。  
   
- **詳細については、「** [多次元モデルアセンブリ管理](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)」を参照してください。  
+ **詳細については、「** [多次元モデルアセンブリ管理](/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -61,5 +61,4 @@ FROM [TM_Decision_Tree].CONTENT
  [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

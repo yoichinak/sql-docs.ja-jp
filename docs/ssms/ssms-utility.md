@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/24/2020
-ms.openlocfilehash: 5688b402cf4b7dafae7812e4e86985a48626da23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cc43babe2ae064731f293a0dc96219aaeced5a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417888"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036006"
 ---
 # <a name="ssms-utility"></a>SSMS ユーティリティ
 
@@ -30,7 +30,7 @@ ms.locfileid: "88417888"
 
 **SSMS** ユーティリティが [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。 指定すると、 **Ssms** はサーバーへの接続を確立し、クエリ、スクリプト、ファイル、プロジェクト、ソリューションを開きます。
 
-クエリ、プロジェクト、またはソリューションを含んだファイルを指定できます。 接続情報が指定され、ファイルの種類とサーバーの種類が対応している場合、クエリを含んだファイルは自動的にサーバーに接続されます。 たとえば、.sql ファイルならば、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の SQL クエリ エディター ウィンドウが開き、.mdx ファイルならば [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の MDX クエリ エディター ウィンドウが開きます。 **SQL Server のソリューションと SQL Server のプロジェクト**は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で開きます。 
+クエリ、プロジェクト、またはソリューションを含んだファイルを指定できます。 接続情報が指定され、ファイルの種類とサーバーの種類が対応している場合、クエリを含んだファイルは自動的にサーバーに接続されます。 たとえば、.sql ファイルならば、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の SQL クエリ エディター ウィンドウが開き、.mdx ファイルならば [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の MDX クエリ エディター ウィンドウが開きます。 **SQL Server のソリューションと SQL Server のプロジェクト**は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で開きます。
 
 > [!NOTE]
 > **Ssms** ユーティリティはクエリを実行しません。 コマンド ラインからクエリを実行するには、 **sqlcmd** ユーティリティを使用します。 
@@ -62,7 +62,10 @@ Ssms
 
 [ **-U** _username_] "SQL 認証" を使用して接続するときのユーザー名
 
-[ **-P** _password_] "SQL 認証" を使用して接続するときのパスワード
+> [!Note]
+> **-P** は、SSMS バージョン 18.0 で削除されました。
+>
+> 対処法:UI を使用してサーバーに接続して、パスワードの保存を試みます。
 
 **[-E]** Windows 認証を使用した接続
 
@@ -91,40 +94,40 @@ Ssms
 
 次のスクリプトは、既定の設定でコマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。
 
-```
+```console
   Ssms
 ```
 
 次のスクリプトでは、"*Active Directory - 統合*" を使用してコマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。
 
-```
+```console
 Ssms.exe -S servername.database.windows.net -G
 ```
 
 次のスクリプトは、コマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。接続には Windows 認証を使用し、サーバー `ACCTG and the database AdventureWorks2012,` に対して設定されているコード エディターを使用します。また、スプラッシュ スクリーンは表示されません。
 
-```
+```console
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash
 ```
 
 次のスクリプトは、コマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、MonthEndQuery スクリプトを開きます。
 
-```
+```console
 Ssms "C:\Documents and Settings\username\My Documents\SQL Server Management Studio Projects\FinanceScripts\FinanceScripts\MonthEndQuery.sql"
 ```
 
 次のスクリプトは、コマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、 `developer`という名前のコンピューター上にある NewReportsProject プロジェクトを開きます。
 
-```
+```console
 Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 ```
 
 次のスクリプトは、コマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、MonthlyReports ソリューションを開きます。 
 
-```
+```console
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 ```
 
 ## <a name="see-also"></a>参照
 
-[SQL Server Management Studio の使用 [SQL Server]](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)
+[SQL Server Management Studio の使用 [SQL Server]](./sql-server-management-studio-ssms.md)

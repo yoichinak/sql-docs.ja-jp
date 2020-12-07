@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 375387ca85b13572014d206cf7a37ed3fc19d907
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4e68ffa14bfe98bc55e5424abe0dbdac944950a1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394567"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933706"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>レポート サーバー Windows サービス (MSSQLServer) 107
     
@@ -49,8 +49,10 @@ ms.locfileid: "87394567"
 ## <a name="internal-only"></a>内部使用のみ  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+
+ [レポート サーバー サービス アカウントの構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+
  [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

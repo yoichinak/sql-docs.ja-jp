@@ -12,19 +12,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3507ddef287a9f543b56ecb2e18c5a252260ccb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7210c3f59647dccb2c9c07c0f0fb7cfd25d8fe6
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418138"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037865"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーの変更
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更する方法について説明します。  
 
@@ -76,7 +76,7 @@ ms.locfileid: "88418138"
     GO  
     ```  
   
-詳細については、「 [sp_delete_jobserver (Transact-SQL)](https://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8)」を参照してください。  
+詳細については、「 [sp_delete_jobserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)」を参照してください。  
   
 #### <a name="to-associate-a-target-server-with-the-current-sql-server-agent-master-job"></a>現在の SQL Server エージェントのマスター ジョブにターゲット サーバーを関連付けるには  
   
@@ -99,5 +99,4 @@ ms.locfileid: "88418138"
     GO  
     ```  
   
-詳細については、「 [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)」を参照してください。  
-  
+詳細については、「 [sp_add_jobserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)」を参照してください。  

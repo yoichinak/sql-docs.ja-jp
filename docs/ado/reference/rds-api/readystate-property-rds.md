@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a7e27abfa2464f84e130d789db93a3d7606df21
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cdc3f2109d1938d7388454dcd1054deba341ed44
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981483"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724333"
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
 [DataControl](./datacontrol-object-rds.md)オブジェクトが[レコードセット](../ado-api/recordset-object-ado.md)オブジェクトにデータを取得する際の進行状況を示します。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  次のいずれかの値を設定または返します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|現在のクエリは実行中で、行はフェッチされていません。 **DataControl**オブジェクトの**レコードセット**は使用できません。|  
 |**adcReadyStateInteractive**|現在のクエリによって取得された行の初期セットは、 **DataControl** オブジェクトの **レコードセット** に格納されており、使用することができます。 残りの行はまだフェッチされています。|  

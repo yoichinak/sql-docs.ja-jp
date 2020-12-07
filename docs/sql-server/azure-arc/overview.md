@@ -5,15 +5,16 @@ description: Azure Arc 対応 SQL Server を使用して SQL Server のインス
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59cbdd31d32014d54240b4c20937918aaa2c0770
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.custom: references_regions
+ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90943015"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987988"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc 対応 SQL Server (プレビュー)
 
@@ -25,7 +26,7 @@ SQL Server は、Connected Machine エージェントを介して Azure Arc に�
 
 Azure Arc 対応 SQL Server のパブリック プレビューでは、Microsoft Monitoring Agent (MMA) サーバーの拡張機能をインストールし、データ収集とレポートのために Azure Log Analytics ワークスペースに接続する必要がある一連のソリューションをサポートしています。 これらのソリューションには、Azure Security Center と Azure Sentinel を使用した高度なデータ セキュリティと、オンデマンド SQL Assessment 機能を使用した SQL 環境の正常性チェックが含まれます。
 
-次の図は、仮想環境を使用した Azure Arc 対応 SQL Server のアーキテクチャを示しています。
+次の図は、Azure Arc 対応 SQL Server のアーキテクチャを示しています。
 
 ![パブリック プレビューのアーキテクチャ](media/overview/pubic-preview-architecture.png)
 
@@ -37,19 +38,18 @@ Azure Arc 対応 SQL Server は、Windows または Linux オペレーティン�
 
 - Windows Server 2012 R2 以降
 - Ubuntu 16.04 および 18.04 (x64)
-- CentOS Linux 7 (x64)
+- Red Hat Enterprise Linux (RHEL) 7 (x64) 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 ### <a name="required-permissions"></a>必要なアクセス許可
 
 SQL Server インスタンスとホスティングを Azure Arc に接続するには、次の操作を実行する特権のあるアカウントが必要です。
-   * Microsoft.AzureData/sqlServerInstances/write
-   * Microsoft.AzureData/sqlServerInstances/read
+   * Microsoft.AzureData/*
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-セキュリティを最適化するために、最小限のアクセス許可が登録されているカスタム ロールを Azure で作成することをお勧めします。 これらのアクセス許可を持つカスタム ロールを Azure で作成する方法については、[カスタム ロールの概要](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview)に関するページを参照してください。 ロールの割り当てを追加するには、「[Azure portal を使用して Azure ロールの割り当てを追加または削除する](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal)」、または [Azure RBAC と Azure CLI を使用したロールの割り当ての追加または削除](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli)に関するページを参照してください。
+セキュリティを最適化するために、最小限のアクセス許可が登録されているカスタム ロールを Azure で作成することをお勧めします。 これらのアクセス許可を持つカスタム ロールを Azure で作成する方法については、[カスタム ロールの概要](/azure/active-directory/users-groups-roles/roles-custom-overview)に関するページを参照してください。 ロールの割り当てを追加するには、「[Azure portal を使用して Azure ロールの割り当てを追加または削除する](/azure/role-based-access-control/role-assignments-portal)」、または [Azure RBAC と Azure CLI を使用したロールの割り当ての追加または削除](/azure/role-based-access-control/role-assignments-cli)に関するページを参照してください。
 
 ### <a name="azure-subscription-and-service-limits"></a>Azure サブスクリプションとサービスの制限
 

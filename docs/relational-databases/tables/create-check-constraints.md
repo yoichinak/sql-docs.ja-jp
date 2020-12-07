@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419046"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128765"
 ---
 # <a name="create-check-constraints"></a>CHECK 制約の作成
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88419046"
   
 #### <a name="to-create-a-new-check-constraint"></a>新しい CHECK 制約を作成するには  
   
-1.  **オブジェクト エクスプローラー**で、CHECK 制約を追加するテーブルを展開し、 **[制約]** を右クリックして、 **[新しい制約]** をクリックします。  
+1.  **オブジェクト エクスプローラー** で、CHECK 制約を追加するテーブルを展開し、 **[制約]** を右クリックして、 **[新しい制約]** をクリックします。  
   
 2.  **[CHECK 制約]** ダイアログ ボックスで、**[式]** フィールドをクリックして、省略記号 **[...]** をクリックします。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "88419046"
   
 6.  **テーブル デザイナー** のカテゴリでは、制約が適用されるタイミングを設定できます。  
   
-    |**次のように**変更します。|**[はい] を選択するフィールド:**|  
+    |**次のように** 変更します。|**[はい] を選択するフィールド:**|  
     |-------------|---------------------------------------------|  
     |制約を作成する前に既に存在していたデータで制約をテストする|**[作成または有効化するときに既存データを確認]**|  
     |このテーブルでレプリケーション操作が発生するたびに制約を適用する|**[レプリケーションに対して適用]**|  
@@ -90,7 +90,7 @@ ms.locfileid: "88419046"
   
 #### <a name="to-create-a-new-check-constraint"></a>新しい CHECK 制約を作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

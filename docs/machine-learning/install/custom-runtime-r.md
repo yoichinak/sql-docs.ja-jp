@@ -5,22 +5,22 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a147dc29131e8764b723bc981567faae9593f369
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 2b058fe7aa723eddcdcf97158d19a053bf2b062b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136985"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870053"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>SQL Server 用の R カスタム ランタイムをインストールする
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-この記事では、SQL Server で R スクリプトを実行するためのカスタム ランタイムをインストールする方法について説明します。 R 用のカスタム ランタイムは、次のシナリオで使用できます。
+この記事では、SQL Server で R スクリプトを実行するためのカスタム ランタイムをインストールする方法について説明します。 カスタム ランタイムによって、外部コードを実行するための機能拡張フレームワーク上に構築された言語拡張テクノロジが使用されます。 R 用のカスタム ランタイムは、次のシナリオで使用できます。
 
 + 機能拡張フレームワークを使用する SQL Server のインストール。
 
@@ -37,7 +37,7 @@ R カスタム ランタイムをインストールする前に、次のもの�
 
 + [Windows 用 SQL Server 2019 (累積的な更新プログラム 3 以降)](../../database-engine/install-windows/install-sql-server.md)。
 
-+ [機能拡張フレームワークのある Windows への SQL Server 言語拡張機能](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)。
++ [機能拡張フレームワークのある Windows への SQL Server 言語拡張機能](../../language-extensions/install/windows-java.md)。
 
 + [R バージョン 3.3 以降](https://cran.r-project.org/)。
 
@@ -71,7 +71,7 @@ R カスタム ランタイムをインストールする前に、次のもの�
     + データベース エンジン サービス
     + Machine Learning Services および言語の拡張
 
-1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
+1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。
 
 ## <a name="install-r"></a>R のインストール
 
@@ -137,7 +137,7 @@ setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
 
 インスタンス名を `MSSQLLAUNCHPAD` に追加します (`MSSQLLAUNCHPAD$INSTANCENAME`)。 この例では、`INSTANCENAME` は既定のインスタンス `MSSQLSERVER` です。
 
-1. **SQL Server Launchpad サービスのユーザー名**にアクセス許可を付与します
+1. **SQL Server Launchpad サービスのユーザー名** にアクセス許可を付与します
 
     ```cmd
     icacls "%R_HOME%" /grant "NT Service\MSSQLLAUNCHPAD$MSSQLSERVER":(OI)(CI)RX /T
@@ -164,7 +164,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="download-r-language-extension"></a>R 言語拡張機能をダウンロードする
 
-R 言語拡張機能 [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143953) が含まれる zip ファイルをダウンロードします。
+[Windows 用 R 言語拡張機能が含まれている zip ファイル](https://github.com/microsoft/sql-server-language-extensions/releases)をダウンロードします。 運用環境ではリリース バージョンを使用することをお勧めします。 開発またはテストではデバッグ バージョンを使用します。エラーを調査するための詳細なログ情報が提供されるためです。
 
 ## <a name="register-external-language"></a>外部言語を登録する
 
@@ -196,7 +196,7 @@ R カスタム ランタイムをインストールする前に、次のもの�
 + [Linux 用 SQL Server 2019 (累積的な更新プログラム 3 以降)](../../linux/sql-server-linux-setup.md)。
 SQL Server on Linux をインストールする前に、Microsoft リポジトリを構成する必要があります。 詳細については、[リポジトリの構成](../../linux/sql-server-linux-change-repo.md)に関するページを参照してください。
 
-+ [機能拡張フレームワークのある Linux への SQL Server 言語拡張機能](../../linux/sql-server-linux-setup-language-extensions.md)。
++ [機能拡張フレームワークのある Linux への SQL Server 言語拡張機能](../../linux/sql-server-linux-setup-language-extensions-java.md)。
 
 + [R バージョン 3.3 以降](https://cran.r-project.org/)。
 
@@ -233,7 +233,7 @@ sudo zypper install mssql-server-extensibility
 ## <a name="install-r"></a>R のインストール
 
 >[!NOTE]
->SQL Machine Learning Services の場合、R は `/opt/microsoft/ropen/3.5.2/lib64/R` に既にインストールされています。 このパスを R_HOME として引き続き使用する場合は、次の手順にスキップして **Rcpp をインストール**してください。 
+>SQL Machine Learning Services の場合、R は `/opt/microsoft/ropen/3.5.2/lib64/R` に既にインストールされています。 このパスを R_HOME として引き続き使用する場合は、次の手順にスキップして **Rcpp をインストール** してください。 
 
 R の別のランタイムを使用する場合は、新しいバージョンのインストールを続ける前に、まず `microsoft-r-open-mro` を削除する必要があります。 Ubuntu の例:
 
@@ -343,7 +343,7 @@ sudo systemctl restart mssql-launchpadd
 
 ## <a name="download-r-language-extension"></a>R 言語拡張機能をダウンロードする
 
-R 言語拡張機能 [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143954) が含まれる zip ファイルをダウンロードします。
+[Linux 用 R 言語拡張機能が含まれている zip ファイル](https://github.com/microsoft/sql-server-language-extensions/releases)をダウンロードします。 運用環境ではリリース バージョンを使用することをお勧めします。 開発またはテストではデバッグ バージョンを使用します。エラーを調査するための詳細なログ情報が提供されるためです。
 
 ## <a name="register-external-language"></a>外部言語を登録する
 

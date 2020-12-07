@@ -23,12 +23,12 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05be8467516ff84c45268357eb6ab743d5599a05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645113"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810299"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>システム ストアド プロシージャ (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "88645113"
   
 |カテゴリ|説明|  
 |--------------|-----------------|  
-|[アクティブ Geo レプリケーションのストアドプロシージャ](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Azure SQL Database でアクティブな Geo レプリケーションの構成を管理するために、を管理するために使用されます|  
+|[アクティブ Geo レプリケーションのストアドプロシージャ]()|Azure SQL Database でアクティブな Geo レプリケーションの構成を管理するために、を管理するために使用されます|  
 |[カタログ ストアド プロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|ODBC データ辞書関数を実装し、ODBC アプリケーションを基になるシステムテーブルへの変更から分離するために使用されます。|  
 |[変更データ キャプチャ ストアド プロシージャ](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|変更データキャプチャオブジェクトの有効化、無効化、またはレポートに使用されます。|  
 |[カーソル ストアド プロシージャ](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|カーソル変数の機能を実装するために使用されます。|  
@@ -49,7 +49,7 @@ ms.locfileid: "88645113"
 |[Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|のインスタンス内から電子メール操作を実行するために使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |[データベース メンテナンス プラン ストアド プロシージャ](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|データベースのパフォーマンスの管理に必要な基本のメンテナンス タスクを設定する場合に使用します。|  
 |[分散クエリ ストアド プロシージャ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|分散クエリを実装および管理するために使用します。|  
-|[Filestream および FileTable ストアドプロシージャ &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|FILESTREAM 機能および FileTable 機能の構成と管理に使用します。|  
+|[Filestream および FileTable ストアドプロシージャ &#40;Transact-sql&#41;](./filestream-and-filetable-sp-filestream-force-garbage-collection.md)|FILESTREAM 機能および FileTable 機能の構成と管理に使用します。|  
 |[ファイアウォールルールのストアドプロシージャ &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Azure SQL Database ファイアウォールを構成するために使用します。|  
 |[フルテキスト検索ストアド プロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|フルテキストインデックスの実装とクエリに使用されます。|  
 |[汎用拡張ストアド プロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|さまざまなメンテナンス作業のために、のインスタンスから外部プログラムへのインターフェイスを提供するために使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
@@ -57,16 +57,16 @@ ms.locfileid: "88645113"
 |[管理データ ウェアハウスのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|管理データウェアハウスを構成するために使用します。|  
 |[OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|標準バッチ内で使用する標準オートメーションオブジェクトを有効にするために使用され [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。|  
 |[ポリシー ベースの管理ストアド プロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|ポリシー ベースの管理に使用します。|  
-|[PolyBase ストアド プロシージャ](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|PolyBase スケールアウトグループのコンピューターを追加または削除します。|  
+|[PolyBase ストアド プロシージャ](./polybase-stored-procedures-sp-polybase-join-group.md)|PolyBase スケールアウトグループのコンピューターを追加または削除します。|  
 |[クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|パフォーマンスを調整するために使用します。|  
 |[レプリケーションストアドプロシージャ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|レプリケーションを管理するために使用します。|  
 |[セキュリティ ストアド プロシージャ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|セキュリティを管理するために使用されます。|  
-|[スナップショットバックアップストアドプロシージャ](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|FILE_SNAPSHOT バックアップをすべてのスナップショットと共に削除したり、個々のバックアップファイルスナップショットを削除したりする場合に使用します。|  
-|[空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|空間インデックスのインデックス作成のパフォーマンスを分析し、改善するために使用されます。|  
+|[スナップショットバックアップストアドプロシージャ](./snapshot-backup-sp-delete-backup.md)|FILE_SNAPSHOT バックアップをすべてのスナップショットと共に削除したり、個々のバックアップファイルスナップショットを削除したりする場合に使用します。|  
+|[空間インデックスストアドプロシージャ](./spatial-index-stored-procedures-arguments-and-properties.md)|空間インデックスのインデックス作成のパフォーマンスを分析し、改善するために使用されます。|  
 |[SQL Server エージェント ストアド プロシージャ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で、パフォーマンスと利用状況の監視に使用します。|  
 |[SQL Server Profiler ストアド プロシージャ](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|スケジュールされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクティビティとイベントドリブンアクティビティを管理するためにエージェントによって使用されます。|  
 |[ストアドプロシージャの Stretch Database](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Stretch データベースを管理するために使用します。|  
-|[テンポラルテーブルストアドプロシージャ](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|テンポラルテーブルに使用する|  
+|[テンポラルテーブルストアドプロシージャ](./spatial-index-stored-procedures-arguments-and-properties.md)|テンポラルテーブルに使用する|  
 |[XML ストアド プロシージャ](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|XML テキストの管理に使用します。|  
   
 > [!NOTE]  
@@ -751,5 +751,4 @@ ms.locfileid: "88645113"
  [ストアドプロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ストアド プロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
-  
   

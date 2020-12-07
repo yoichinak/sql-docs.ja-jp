@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 641edbb3db15387543645fcab7a375b2985a01d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 58cc5fc2f06419293b58fa6a38d6d75a8f750897
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463430"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987888"
 ---
 # <a name="generating-reports-mysqltosql"></a>レポートの生成 (MySQLToSQL)
 コマンドを使用して実行される特定のアクティビティのレポートは、SSMA コンソールのオブジェクトツリーレベルで生成されます。  
@@ -140,6 +140,5 @@ ms.locfileid: "88463430"
   
 -   失敗-スクリプト  
   
-## <a name="see-also"></a>関連項目  
-[SSMA コンソールの実行 (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+## <a name="see-also"></a>参照  
+[SSMA コンソールの実行 (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

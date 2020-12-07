@@ -1,6 +1,6 @@
 ---
-description: availability_groups (Transact-sql)
-title: availability_groups (Transact-sql) |Microsoft Docs
+description: sys.availability_groups (Transact-sql)
+title: sys.availability_groups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d68c407a7a9e34cf5362f34e749f414a99130bd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: eabda9900b854037eca713ac343e04e930eea1e2
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537516"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810199"
 ---
-# <a name="sysavailability_groups-transact-sql"></a>availability_groups (Transact-sql)
+# <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL Server のローカル インスタンスが可用性レプリカをホストしている各可用性グループの行を返します。 各行には、可用性グループ メタデータのキャッシュされたコピーが含まれます。  
@@ -47,7 +47,7 @@ ms.locfileid: "89537516"
 |**basic_features**|**bit**|これが基本的な可用性グループかどうかを指定します。 詳細については、「[基本的な可用性グループ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。|  
 |**dtc_support**|**bit**|この可用性グループに対して DTC サポートが有効になっているかどうかを指定します。 **CREATE AVAILABILITY GROUP**の**DTC_SUPPORT**オプションは、この設定を制御します。|  
 |**db_failover**|**bit**|可用性グループがデータベースの正常性状態のフェールオーバーをサポートするかどうかを指定します。 **CREATE AVAILABILITY GROUP**の**DB_FAILOVER**オプションは、この設定を制御します。|  
-|**is_distributed**|**bit**|分散型可用性グループかどうかを指定します。 詳細については、「[Distributed Availability Groups &#40;Always On Availability Groups&#41; (分散型可用性グループ (Always On 可用性グループ))](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)」を参照してください。|
+|**is_distributed**|**bit**|分散型可用性グループかどうかを指定します。 詳細については、「[Distributed Availability Groups &#40;Always On Availability Groups&#41; (分散型可用性グループ (Always On 可用性グループ))](../../database-engine/availability-groups/windows/distributed-availability-groups.md)」を参照してください。|
 |**cluster_type**|**tinyint**|0: Windows Server フェールオーバークラスター <br/><br/>1: 外部クラスター (たとえば、Linux Pacemaker)<br/><br/>2: なし|
 |**cluster_type_desc**|**nvarchar(60)**|クラスターの種類の説明テキスト|
 |**required_synchronized_secondaries_to_commit**|**int**| コミットが完了するまで同期済みの状態になる必要があるセカンダリレプリカの数|
@@ -57,7 +57,7 @@ ms.locfileid: "89537516"
 ## <a name="failure-condition-level--values"></a>エラー条件レベルの値  
  次の表では、 **failure_condition_level** 列に対して考えられるエラー状態のレベルについて説明します。  
   
-|[値]|エラー条件|  
+|Value|エラー条件|  
 |-----------|-----------------------|  
 |1|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> <br /><br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスがダウンしています。<br /><br /> -サーバーインスタンスから ACK を受信しないため、WSFC フェールオーバークラスターに接続するための可用性グループのリースが期限切れになります。 詳細については、「[How It Works:SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)」 (動作方法: SQL Server Always On のリース タイムアウト) を参照してください。|  
 |2|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> <br /><br /> -のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスターに接続しておらず、可用性グループのユーザー指定の **health_check_timeout** しきい値を超えています。<br /><br /> -可用性レプリカがエラー状態になっています。|  
@@ -75,5 +75,4 @@ ms.locfileid: "89537516"
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Transact-sql&#41;&#40;可用性グループの監視 ](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
-  
   

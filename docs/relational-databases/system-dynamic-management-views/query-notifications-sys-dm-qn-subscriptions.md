@@ -1,6 +1,6 @@
 ---
-description: クエリ通知-sys. dm_qn_subscriptions
-title: dm_qn_subscriptions (Transact-sql) |Microsoft Docs
+description: クエリ通知-sys.dm_qn_subscriptions
+title: sys.dm_qn_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 197d3fd3ab4108c898c9377bbeed2f0e16e83d76
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542391"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834477"
 ---
-# <a name="query-notifications---sysdm_qn_subscriptions"></a>クエリ通知-sys. dm_qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>クエリ通知-sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーのアクティブ クエリ通知サブスクリプションに関する情報を返します。 このビューは、サーバーまたは指定したデータベース内のアクティブなサブスクリプションを確認したり、指定したサーバー プリンシパルを確認する際に使用できます。  
@@ -43,22 +43,22 @@ ms.locfileid: "89542391"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|終了|オン|種類|  
+|ソース|宛先|オン|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多対一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多対一|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  状態コードが 0 の場合は、未定義の状態であることを示します。  
   
  次のステータスコードは、変更のためにサブスクリプションが発生したことを示しています。  
   
-|コード|マイナーステータス|Info|  
+|コード|マイナーステータス|［情報］|  
 |----------|------------------|----------|  
 |65798|データが変更されたため、サブスクリプションが起動しました|挿入によってトリガーされたサブスクリプション|  
 |65799|データが変更されたため、サブスクリプションが起動しました|削除|  
 |65800|データが変更されたため、サブスクリプションが起動しました|更新|  
-|65801|データが変更されたため、サブスクリプションが起動しました|マージする|  
+|65801|データが変更されたため、サブスクリプションが起動しました|Merge|  
 |65802|データが変更されたため、サブスクリプションが起動しました|テーブルを切り捨てる|  
 |66048|タイムアウトが発生したため、サブスクリプションが起動しました|未定義の情報モード|  
 |66315|オブジェクトが変更されたため、サブスクリプションが起動しました|オブジェクトまたはユーザーが削除されました|  
@@ -70,7 +70,7 @@ ms.locfileid: "89542391"
   
  次のステータスコードは、サブスクリプションを作成できなかったことを示しています。  
   
-|コード|マイナーステータス|Info|  
+|コード|マイナーステータス|［情報］|  
 |----------|------------------|----------|  
 |132609|ステートメントがサポートされていないため、サブスクリプションを作成できませんでした|クエリが複雑すぎます|  
 |132610|ステートメントがサポートされていないため、サブスクリプションを作成できませんでした|サブスクリプションの無効なステートメント|  
@@ -81,7 +81,7 @@ ms.locfileid: "89542391"
   
  次の状態コードは内部で使用され、check kill モードおよび init モードとして分類されます。  
   
-|コード|マイナーステータス|Info|  
+|コード|マイナーステータス|［情報］|  
 |----------|------------------|----------|  
 |198656|内部使用: check kill モードおよび init モード|未定義の情報モード|  
 |198928|サブスクリプションが破棄されました|Db がアタッチされたため、サブスクリプションが起動しました|  
@@ -133,7 +133,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [クエリ通知関連の動的管理ビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [クエリ通知関連の動的管理ビュー &#40;Transact-sql&#41;](./system-dynamic-management-views.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
-  
   

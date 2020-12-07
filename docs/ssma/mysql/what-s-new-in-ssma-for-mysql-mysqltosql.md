@@ -4,22 +4,41 @@ description: リリースごとに SQL Server Migration Assistant (SSMA) for MyS
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: efd716c1e41597e276c4b33bb19122d70b91dd03
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863468"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036038"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL の新機能 (MySqlToSql)
 
 この記事では、各リリースでの MySQL 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+SSMA for MySQL の v 8.15 リリースには、いくつかのユーザー補助機能の強化に加えて、次の変更が含まれています。
+
+* 改良評価レポートを最新のブラウザーで動作させる
+* Azure AD 認証にデータベースによって提供される権限を使用する
+* ファイルから読み込まれたステートメントの名前付けを改善する
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+障碍のある方にとってアクセシビリティを向上させるために、いくつかの機能強化に加えて、SSMA for MySQL のリリースでは、プロジェクトのメタデータに完全なソース/ターゲットサーバーバージョンが格納されるため、プロジェクトのアップグレードが必要になりました。
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+SSMA for MySQL の v 8.13 リリースには、次の変更が含まれています。
+
+* プロシージャと関数の呼び出しを変換するときに、暗黙的な型キャストを検討します。
+* 接続の問題のトラブルシューティングに役立つソース接続文字列のログ記録の向上
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -58,25 +77,25 @@ SSMA for MySQL のバージョン8.7 リリースでは、グラフィカルユ�
 さらに、SSMA for MySQL では、 `LIMIT` AZURE SQL を対象とする場合に句の変換が提供されるようになりました。
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v86"></a>SSMA v 8.6
 
 ユーザビリティとパフォーマンスを向上させるために設計された一連の修正に加えて、SSMA for MySQL のリリースは、ユーザーが変換されたコードで SSMA の拡張プロパティを省略できるようにする設定を追加することによって強化されています。
 
-Ssma for MySQL でこの設定を利用するには、[**ツール**] [プロジェクト] [  >  **設定**]  >  **[全般**  >  **変換**] に移動し、[その**他**] の [**拡張プロパティを省略**する] 設定の値を **[はい]** に更新します。
+Ssma for MySQL でこの設定を利用するには、[ **ツール** ] [プロジェクト] [  >  **設定** ]  >  **[全般**  >  **変換** ] に移動し、[その **他** ] の [ **拡張プロパティを省略** する] 設定の値を **[はい]** に更新します。
 
 ![拡張プロパティの設定を省略する](../mysql/media/ssma-omit-extended-properties.png)
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v85"></a>SSMA v1.0
 
 SSMA for MySQL の v2.0 リリースは、SQL server での JSON 機能の Azure Active Directory 認証と基本的なサポートに加えて、ユーザビリティとパフォーマンスを向上させるように設計された一連の修正をサポートするように強化されています。
 
 > [!IMPORTANT]
-> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
@@ -114,11 +133,11 @@ SSMA for MySQL の v2.0 リリースは、品質と変換のメトリックを�
 
 SSMA for MySQL の v2.0 リリースは、品質と変換メトリックの向上を目的とした修正を対象として強化されています。 このリリースには、次の新機能も用意されています。
 
-* ターゲットとしての**AZURE SQL Managed Instance**のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
+* ターゲットとしての **AZURE SQL Managed Instance** のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
 
   ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
-* 変換後の**修正アドバイザー**。 詳細について[は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
+* 変換後の **修正アドバイザー** 。 詳細について [は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
 
 * データベース/スキーマの事前選択。
 
@@ -170,7 +189,7 @@ SSMA for MySQL のバージョン7.5 リリースは、障碍のある方にと�
 
 SSMA for MySQL の v2.0 リリースには、次の変更が含まれています。
 
-* [**クエリタイムアウト**] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
+* [ **クエリタイムアウト** ] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
 
     ![クエリタイムアウトオプション](../media/query-timeout_red.png)
 * お客様からのフィードバックに基づいて、品質と換算のメトリックが修正されました。
@@ -191,7 +210,7 @@ SSMA for MySQL の version 7.3 リリースには、次の変更が含まれて�
   * カスタム変換を実行するために SSMA で使用できるライブラリ。
     * SSMA によって以前に処理されなかったカスタム構文変換と変換を処理できるコードを作成できるようになりました。
       * カスタムコンバーターを構築する方法については、このブログの投稿を参照してください。 [SQL Server Migration Assistant の変換機能が拡張](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)されます。
-      * この[ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)から、変換用のサンプルプロジェクトをダウンロードします。
+      * この [ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)から、変換用のサンプルプロジェクトをダウンロードします。
 
 ## <a name="ssma-v72"></a>SSMA v 7.2
 
@@ -304,14 +323,14 @@ SSMA for MySQL の2010年7月のリリースには、次の機能が含まれて
   
 **5. データ移行の機能強化:**  
   
-* サーバー側とクライアント側の両方のデータ移行エンジンを使用したデータ移行のサポート
+* Server-Side と Client-Side の両方のデータ移行エンジンを使用したデータ移行のサポート
 * 空間データ移行のサポート
 * テーブルのデータ移行のためのカスタム SQL
   
 **6. SSMA for MySQL コンソール:**  
   
 * SSMA for MySQL のサポートコンソール機能  
-* スクリプトレベルのインターフェイスのサポート  
+* Script-Level インターフェイスのサポート  
   
 ## <a name="january-2010"></a>2010年1月
 

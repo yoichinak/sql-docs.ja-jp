@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f447368d92d3e19d6733c0c1f026298202a8c7a9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 30869fbd4c9a57c068b56d638495cce76ac23789
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518822"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988696"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>方法:空の SQL Server の単体テストを作成する
 
@@ -96,10 +96,9 @@ SQL Server の単体テストを作成するには、次の 2 つの方法があ
 -   スクリプトの結果を確認するためのテスト条件またはその他のアサート ステートメントを追加します。  
   
 > [!NOTE]  
-> 結果不確定のテスト条件は、すべてのテストに追加される既定の条件です。 このテスト条件は、テストの検証が実装されていないことを示すために含まれています。 このテスト条件は、他のテスト条件を追加した後に、テストから削除します。 詳細については、「[Add Test Conditions to Database Unit Tests](https://msdn.microsoft.com/library/aa833242(VS.100).aspx)」(データベース単体テストにテスト条件を追加する方法) を参照してください。  
+> 結果不確定のテスト条件は、すべてのテストに追加される既定の条件です。 このテスト条件は、テストの検証が実装されていないことを示すために含まれています。 このテスト条件は、他のテスト条件を追加した後に、テストから削除します。 詳細については、「[Add Test Conditions to Database Unit Tests](/previous-versions/visualstudio/visual-studio-2010/aa833242(v=vs.100))」(データベース単体テストにテスト条件を追加する方法) を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [方法:  SQL Server の単体テストを実行する](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[単体テストの作成](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
-  
+[単体テストの作成](/previous-versions/visualstudio/visual-studio-2008/ms182523(v=vs.90))  

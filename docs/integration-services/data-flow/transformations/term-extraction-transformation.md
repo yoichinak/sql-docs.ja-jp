@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05e63dfc96f14db84feefe92165a952fb4207fd8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67bb55d536c34d8312694d366594819b0f87e595
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425704"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195926"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
 
@@ -181,7 +181,7 @@ ms.locfileid: "88425704"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "88425704"
  抽出されたそれぞれの用語のスコアを格納する出力列の名前を指定します。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
+ [[エラー出力の構成]](../error-handling-in-data.md) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>[用語抽出変換エディター] ([除外] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[除外]** タブを使用すると、除外テーブルへの接続を設定し、除外用語が含まれている列を指定できます。  
@@ -223,7 +223,7 @@ ms.locfileid: "88425704"
  除外用語が含まれているテーブルまたはビューの列を選択します。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
+ [[エラー出力の構成]](../error-handling-in-data.md) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>[用語抽出変換エディター] ([詳細設定] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、頻度、長さ、語または句の抽出の有無など、抽出に関するプロパティを指定できます。  
@@ -254,9 +254,8 @@ ms.locfileid: "88425704"
  抽出で大文字と小文字を区別するかどうかを指定します。 既定値は **False**です。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
+ [[エラー出力の構成]](../error-handling-in-data.md) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../../integration-services/integration-services-error-and-message-reference.md)   
- [用語参照変換](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
-
+ [用語参照変換](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)

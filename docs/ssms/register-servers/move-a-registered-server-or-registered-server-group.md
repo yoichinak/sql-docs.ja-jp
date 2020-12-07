@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 386b9f506e86f294aa4fefaf6f859763443f6c04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d433b5816919642b0d7b25b580f4314a949cf0c2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491785"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036922"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>登録済みサーバーまたは登録済みサーバー グループの移動
 
@@ -38,8 +38,8 @@ ms.locfileid: "88491785"
   
 2. **[サーバー登録の移動]** ダイアログ ボックスでサーバー グループの一覧を展開し、サーバーまたはサーバー グループを表示するノードをクリックし、 **[OK]** をクリックします。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[サーバーの登録](../../tools/sql-server-management-studio/register-servers.md)
+[サーバーの登録](./register-servers.md)
 
-[サーバー グループの作成または編集 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)
+[サーバー グループの作成または編集 &#40;SQL Server Management Studio&#41;](./create-or-edit-a-server-group-sql-server-management-studio.md)

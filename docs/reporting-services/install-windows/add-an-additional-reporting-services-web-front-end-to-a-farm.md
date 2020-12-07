@@ -9,12 +9,12 @@ ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dc2b1eaee352b34333be5a166168161194e1f03d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09aa986c6f943b204cc037b452fe831bc0e8757e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418628"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891412"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>ファームへの Reporting Services Web フロントエンドの追加
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードには、アプリケーション サーバーと Web フロントエンド (WFE) サーバーに必要なコンポーネントが含まれています。 このトピックでは、WFE サーバーに必要な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのインストールに焦点を当てます。これらのコンポーネントには、サブスクリプション、データ警告、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] など、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]機能で使用されるアプリケーション ページが含まれます。 WFE に必要な主要な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールは、SharePoint 2016 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをインストールすることです。  
@@ -48,14 +48,14 @@ ms.locfileid: "88418628"
   
 |手順|説明とリンク|  
 |----------|--------------------------|  
-|SharePoint サーバーをファームに追加します。|別の Reporting Services アプリケーションをデプロイするには、SharePoint をインストールする必要があります。<br/><br/>SharePoint 2013 の場合は、 [SharePoint Server 2013 での SharePoint サーバーのファームへの追加](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)に関する記事を参照してください。<br/><br/>SharePoint 2016 の場合は、 [SharePoint Server 2016 での SharePoint サーバーのファームへの追加](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)に関する記事を参照してください。|  
+|SharePoint サーバーをファームに追加します。|別の Reporting Services アプリケーションをデプロイするには、SharePoint をインストールする必要があります。<br/><br/>SharePoint 2013 の場合は、 [SharePoint Server 2013 での SharePoint サーバーのファームへの追加](/SharePoint/install/add-web-or-application-server-to-the-farm)に関する記事を参照してください。<br/><br/>SharePoint 2016 の場合は、 [SharePoint Server 2016 での SharePoint サーバーのファームへの追加](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)に関する記事を参照してください。|  
 |SharePoint 2016 製品用 SQL Server Reporting Services アドインをインストールします。|アドインをインストールするには、いくつかの方法があります。 次の手順では、SQL Server セットアップ ウィザードを使用します。 アドインのインストール方法の詳細については、「 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。<br /><br /> 1) SQL Server のインストールを実行します。<br /><br /> 2) **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]** を選択します。<br /><br /> 3) **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。<br /><br /> 4) 次のいくつかのページで **[次へ]** をクリックし、セットアップ オプションを完了します。<br /><br/>[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールについて詳しくは、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」をご覧ください。|  
 |新しいサーバーが稼働することを確認します。|1) SharePoint サーバーの全体管理で、 **[システム設定]** の **[このファームのサーバーの管理]** をクリックします。<br /><br /> 2) 新しいサーバーが一覧に含まれていることを確認します。|  
 |NLB ソリューションを更新します。|該当する場合は、ハードウェアまたはソフトウェア NLB 環境を更新し、新しいサーバーを環境に含めます。|  
 
 ## <a name="next-steps"></a>次のステップ
 
-[SharePoint Server 2016 での SharePoint サーバーのファームへの追加](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[SharePoint Server 2013 での SharePoint サーバーのファームへの追加](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[SharePoint Server 2016 での SharePoint サーバーのファームへの追加](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+[SharePoint Server 2013 での SharePoint サーバーのファームへの追加](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

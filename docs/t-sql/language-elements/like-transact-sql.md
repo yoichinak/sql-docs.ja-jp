@@ -32,12 +32,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41702e9236ba7e3a7f065363998ff27e41aa5c64
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 1c7c0a80475989e4fde3e77090239577f9d57c68
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227508"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92187768"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +95,7 @@ match_expression [ NOT ] LIKE pattern
 ```sql
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE FindEmployee @EmpLName char(20)  
+CREATE PROCEDURE FindEmployee @EmpLName CHAR(20)  
 AS  
 SELECT @EmpLName = RTRIM(@EmpLName) + '%';  
 SELECT p.FirstName, p.LastName, a.City  
@@ -113,7 +113,7 @@ GO
 ```sql
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
+CREATE PROCEDURE FindEmployee @EmpLName VARCHAR(20)  
 AS  
 SELECT @EmpLName = RTRIM(@EmpLName) + '%';  
 SELECT p.FirstName, p.LastName, a.City  
@@ -126,7 +126,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
-FirstName      LastName            City
+FirstName      LastName            City
 ----------     -------------------- --------------- 
 Angela         Barbariol            Snohomish
 David          Barber               Snohomish
@@ -140,21 +140,21 @@ David          Barber               Snohomish
   
 ```sql  
 -- ASCII pattern matching with char column  
-CREATE TABLE t (col1 char(30));  
+CREATE TABLE t (col1 CHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   
 WHERE col1 LIKE '% King';   -- returns 1 row  
   
 -- Unicode pattern matching with nchar column  
-CREATE TABLE t (col1 nchar(30));  
+CREATE TABLE t (col1 NCHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   
 WHERE col1 LIKE '% King';   -- no rows returned  
   
 -- Unicode pattern matching with nchar column and RTRIM  
-CREATE TABLE t (col1 nchar (30));  
+CREATE TABLE t (col1 NCHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   
@@ -223,7 +223,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
- FirstName             LastName             Phone
+ FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
  Shelby                Cook                 415-555-0121  
@@ -257,7 +257,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
 ```
-FirstName              LastName            Phone
+FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
 Gail                  Butler               1 (11) 500 555-0191  
@@ -267,7 +267,7 @@ Gail                  Griffin              450-555-0171
 Gail                  Moore                155-555-0169  
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
-(8 row(s) affected)  
+(8 row(s) affected)  
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. ESCAPE 句を使用する  

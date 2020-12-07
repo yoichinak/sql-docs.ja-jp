@@ -16,12 +16,12 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 162790e2f0c025a1f28ad60e982d2f0cdb2b1095
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 817395eca7ed1fd5f9a0ae9f01c3059c17deffef
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901626"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036376"
 ---
 # <a name="search-documents-using-results-lists"></a>結果一覧を使用してドキュメントを検索する方法
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,9 +65,8 @@ ms.locfileid: "88901626"
  既定では、[検索結果 1] ウィンドウに置換情報が表示されます。 置換項目を確認するには、[検索結果 1] ウィンドウ内の各項目をダブルクリックします。  
   
 ## <a name="see-also"></a>参照  
- [検索と置換](../../relational-databases/scripting/search-and-replace.md)   
- [ドキュメントの対話形式の検索](../../relational-databases/scripting/search-documents-interactively.md)   
- [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [検索と置換](./search-and-replace.md)   
+ [ドキュメントの対話形式の検索](./search-documents-interactively.md)   
+ [ワイルドカードを使用したテキスト検索](./search-text-with-wildcards.md)   
+ [正規表現によるテキストの検索](./search-text-with-regular-expressions.md)  
   

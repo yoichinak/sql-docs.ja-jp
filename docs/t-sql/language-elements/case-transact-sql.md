@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be188a87a06a91467a16862ea0a0d572e4f71b93
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: e3662722ae800aa078fe5ba58567d2c55efbb613
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227409"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187647"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 
@@ -51,12 +51,13 @@ ms.locfileid: "91227409"
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
-Simple CASE expression:   
+--Simple CASE expression:   
 CASE input_expression   
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
 END   
-Searched CASE expression:  
+
+--Searched CASE expression:  
 CASE  
      WHEN Boolean_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
@@ -197,7 +198,7 @@ SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
-         ELSE CountryRegionName END; 
+         ELSE CountryRegionName END;  
 ```  
   
 ### <a name="d-using-case-in-an-update-statement"></a>D. UPDATE ステートメントで CASE を使用する  
@@ -215,13 +216,13 @@ SET VacationHours =
     )  
 OUTPUT Deleted.BusinessEntityID, Deleted.VacationHours AS BeforeValue,   
        Inserted.VacationHours AS AfterValue  
-WHERE SalariedFlag = 0;  
+WHERE SalariedFlag = 0;   
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. SET ステートメントで CASE を使用する  
  次の例では、テーブル値関数 `dbo.GetContactInfo` の SET ステートメントで CASE 式を使用しています。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースでは、人に関連するデータはすべて `Person.Person` テーブルに格納されています。 たとえば、従業員、仕入先の代表者、消費者などはすべて人に関連するデータとして扱われます。 この関数は、指定された `BusinessEntityID` の氏名と連絡先タイプを返します。`ContactType` 列に表示される値は、SET ステートメント内の CASE 式により、`Employee`、`Vendor`、または `Customer` のどのテーブルに `BusinessEntityID` 列が含まれているかに基づいて決定されます。  
   
-```sql   
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID INT)  
@@ -287,13 +288,13 @@ SELECT BusinessEntityID, FirstName, LastName, ContactType
 FROM dbo.GetContactInformation(2200);  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, ContactType  
-FROM dbo.GetContactInformation(5);
+FROM dbo.GetContactInformation(5);  
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. HAVING 句で CASE を使用する  
  次の例では、HAVING 句で CASE 式を使用して、SELECT ステートメントで返される行を制限しています。 このステートメントは、`HumanResources.Employee` テーブル内の各役職の最も高い時給を返します。 HAVING 句では、最も高い時給が男性の場合には 40 ドル、女性の場合には 42 ドルを超えている役職のみが返されるように制限しています。  
   
-```sql  
+```sql 
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, MAX(ph1.Rate)AS MaximumRate  
@@ -306,7 +307,7 @@ HAVING (MAX(CASE WHEN Gender = 'M'
      OR MAX(CASE WHEN Gender  = 'F'   
         THEN ph1.Rate    
         ELSE NULL END) > 42.00)  
-ORDER BY MaximumRate DESC; 
+ORDER BY MaximumRate DESC;  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -333,7 +334,7 @@ ORDER BY ProductKey;
 ### <a name="h-using-case-in-an-update-statement"></a>H. UPDATE ステートメントで CASE を使用する  
  次の例では、UPDATE ステートメントで CASE 式を使用して、`SalariedFlag` が 0 に設定されている従業員の `VacationHours` 列の値を決定しています。 `VacationHours` の値を 10 時間差し引くと値がマイナスになる場合は `VacationHours` の値を 40 時間増やします。それ以外の場合は、`VacationHours` の値を 20 時間増やします。  
   
-```sql  
+```sql 
 -- Uses AdventureWorks   
   
 UPDATE dbo.DimEmployee  

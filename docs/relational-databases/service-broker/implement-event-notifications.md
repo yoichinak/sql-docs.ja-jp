@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f70601ac1b686576f643e511873e0dfb860ec771
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91eef4cfd2a1097b7879c507cbccb0b3d3a7e909
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447974"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679003"
 ---
 # <a name="implement-event-notifications"></a>イベント通知の実装
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +38,12 @@ https://schemas.microsoft.com/SQL/Notifications/PostEventNotification
   
  イベント通知を受け取る対象サービスは、この既存のコントラクトに従う必要があります。  
   
- **通知先サービスを作成するには**:  
+ **通知先サービスを作成するには** :  
   
 1.  メッセージを受信するキューを作成します。  
   
     > [!NOTE]  
-    >  キューでは、 `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`で定義されているメッセージ型が受信されます。  
+    >  キューでは、 `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`で定義されているメッセージ型が受信されます。  
   
 2.  このキューにイベント通知コントラクトを参照するサービスを作成します。  
   
@@ -60,7 +60,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

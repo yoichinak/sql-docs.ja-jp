@@ -34,10 +34,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8cd51d8b728fd12bfcab2a853c6bf3a8a2b7c214
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116294"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
@@ -66,9 +66,9 @@ expression IS [ NOT ] NULL
  **Boolean**  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- *式*の値が NULL の場合、IS NULL では TRUE が返されます。それ以外の場合は FALSE が返されます。  
+ *式* の値が NULL の場合、IS NULL では TRUE が返されます。それ以外の場合は FALSE が返されます。  
   
- *式*の値が NULL の場合、IS NOT NULL では FALSE が返されます。それ以外の場合は TRUE が返されます。  
+ *式* の値が NULL の場合、IS NOT NULL では FALSE が返されます。それ以外の場合は TRUE が返されます。  
   
 ## <a name="remarks"></a>解説  
  式が NULL かどうかを判定するには、= や != などの比較演算子の代わりに、IS NULL または IS NOT NULL を使用してください。 比較演算子では、引数のいずれかまたは両方が NULL の場合、UNKNOWN が返されます。  

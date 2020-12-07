@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a360def7656fb270267372d5b226b68d30aeaf57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 29560d1622d239b2327da0907b49b95d10ae3541
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438474"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725543"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>java.sql.Time の値をサーバーに送信する方法の構成
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88438474"
   
  **Smalldatetime** 値を使用するときに**datetime**データ型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を使用する場合は、 **sendTimeAsDatetime**接続プロパティを**true**に設定する必要があります。 java.sql.Time 値を操作するときに **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を使用する場合は、**sendTimeAsDatetime** 接続プロパティを **false** に設定する必要があります。  
   
- 日付と時刻の両方を格納できるパラメーターに java.sql.Time 値を送信した場合、java.sql.Time 値の送信方法によって、既定の日付は異なる点に注意してください。**datetime** 値として送信された場合は 1/1/1970 に、**time** 値として送信された場合は 1/1/1900 になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータを送信する際のデータ変換の詳細については、「[日時データの使用](https://go.microsoft.com/fwlink/?LinkID=145211)」を参照してください。  
+ 日付と時刻の両方を格納できるパラメーターに java.sql.Time 値を送信した場合、java.sql.Time 値の送信方法によって、既定の日付は異なる点に注意してください。**datetime** 値として送信された場合は 1/1/1970 に、**time** 値として送信された場合は 1/1/1900 になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータを送信する際のデータ変換の詳細については、「[日時データの使用](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105))」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0 では、**sendTimeAsDatetime** は既定で true となります。 今後のリリースでは、**sendTimeAsDatetime** 接続プロパティの既定値が false になる予定です。  
   
@@ -64,5 +64,4 @@ ms.locfileid: "88438474"
   
 ## <a name="see-also"></a>関連項目
  [JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
-  
   

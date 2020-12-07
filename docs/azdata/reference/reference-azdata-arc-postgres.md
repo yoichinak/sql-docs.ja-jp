@@ -9,16 +9,16 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cbc1fba757f83a54cbddfd591edd5026afc619fc
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: f49f698f16bcbf9ff297221f721443cdcf7a71df
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942886"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358720"
 ---
 # <a name="azdata-arc-postgres"></a>azdata arc postgres
 
-`azdata` への適用
+[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] への適用
 
 以下の記事では、**azdata** ツールの **sql** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
 

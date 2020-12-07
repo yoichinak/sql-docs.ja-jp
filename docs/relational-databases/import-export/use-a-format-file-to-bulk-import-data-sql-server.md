@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 83a024997910e16b67e66244edcd9cc34c6751a7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: b893b6dc0c3ad11225d1144f757f206fcf5500d5
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442525"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678972"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "87442525"
 ## <a name="before-you-begin"></a>開始する前に
 * Unicode 文字データ ファイルを操作するフォーマット ファイルの場合、すべての入力フィールドが Unicode テキスト文字列 (つまり、固定サイズの Unicode 文字列または終端文字が指定された Unicode 文字列) でなければなりません。
 * [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) データを一括エクスポートまたは一括インポートする場合、フォーマット ファイルのデータ型には次のいずれかを使用します。
-  * SQLCHAR または SQLVARYCHAR (データは、クライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)
+  * SQLCHAR または SQLVARCHAR (データは、クライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)
   * SQLNCHAR または SQLNVARCHAR (データは Unicode として送信されます)
-  * SQLBINARY または SQLVARYBIN (データは変換なしで送られます)
-* Azure SQL Database と Azure SQL Data Warehouse は、 [bcp](../../tools/bcp-utility.md)のみをサポートします。  追加情報については、次を参照してください。
-  * [Azure SQL Data Warehouse にデータを読み込む](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [SQL Server から Azure SQL Data Warehouse にデータを読み込む (フラット ファイル)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
-  * [データを移行する](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
+  * SQLBINARY または SQLVARBIN (データは変換なしで送られます)
+* Azure SQL Database と Azure Synapse Analytics では、[bcp](../../tools/bcp-utility.md) のみサポートされます。  追加情報については、次を参照してください。
+  * [Azure Synapse Analytics にデータを読み込む](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [SQL Server から Azure Synapse Analytics にデータを読み込む (フラット ファイル)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [データを移行する](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>テスト条件の例
 このトピックのフォーマット ファイルの例は、以下に定義されたテーブルとデータ ファイルに基づいています。
@@ -142,8 +142,8 @@ XML フォーマット ファイルの `D:\BCP\myFirstImport.xml` は次のよ�
  </RECORD>
  <ROW>
   <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARCHAR"/>
+  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARCHAR"/>
   <COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
  </ROW>
 </BCPFORMAT>
@@ -263,4 +263,3 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
  [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   [データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-  

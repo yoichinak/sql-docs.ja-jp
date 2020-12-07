@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46f76ceeba699f614e19b494785c42591ab5299a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b474931aad2958a4ddba3bccb20773e7f36fd0e7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549986"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753824"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89549986"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では、ほとんどの SQL Server エージェント機能は現在サポートされていません。 詳細については [、「AZURE sql Managed Instance t-sql の相違 SQL Server 点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 」を参照してください。
+  > 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 ## <a name="syntax"></a>構文  
   
@@ -69,7 +69,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type` ジョブがいつ実行されるかを示す値。 *frequency_type* は **int**,、既定値は **0**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
@@ -81,7 +81,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_interval = ] frequency_interval` ジョブが実行された日。 *frequency_interval* は **int**で、既定値は0です。次の表に示すように、 *frequency_type* の値に依存します。  
   
-|[値]|効果|  
+|値|結果|  
 |-----------|------------|  
 |**1** (1 回)|*frequency_interval* は使用されていません。|  
 |**4** (毎日)|*Frequency_interval*日ごと。|  
@@ -93,7 +93,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_type = ] frequency_subday_type`*Frequency_subday_interval*の単位を指定します。 *frequency_subday_type* は **int**,、既定値はありませんは、次のいずれかの値を指定します。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定された時間|  
 |**0x4**|分|  
@@ -105,10 +105,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* は **int**,、既定値はありませんは、次のいずれかの値を指定します。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|Third|  
 |**8**|4 番目|  
 |**16**|Last (最後へ)|  
@@ -141,7 +141,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  ジョブスケジュールをジョブとは別に管理できるようになりました。 ジョブにスケジュールを追加するには、 **sp_add_schedule** を使用してスケジュールを作成し、 **sp_attach_schedule** してスケジュールをジョブにアタッチします。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -173,5 +173,4 @@ EXEC msdb.dbo.sp_add_jobschedule
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

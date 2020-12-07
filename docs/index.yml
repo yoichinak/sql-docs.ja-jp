@@ -6,12 +6,12 @@ metadata:
   title: Microsoft SQL ドキュメント | Microsoft Docs
   description: 'SQL Server と Azure SQL を使用し、オンプレミスとクラウドの両方で、お使いのデータベースのニーズを管理する方法について説明します。 (クイック リンク: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: 5d6fffc9d875b0581e2358f86cd5e612df5adec9
-  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+  ms.openlocfilehash: 2aceef5d8f718cc0720727e32a53b1986ef16c1a
+  ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/22/2020
-  ms.locfileid: "90916412"
+  ms.lasthandoff: 12/01/2020
+  ms.locfileid: "96443060"
 highlightedContent:
   items:
   - title: SQL Server 2019 をお試しください
@@ -45,9 +45,9 @@ productDirectory:
     - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
       text: Azure SQL Managed Instance
     - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
-      text: Azure SQL Edge (プレビュー)
-    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-      text: Azure Synapse Analytics (SQL DW)
+      text: Azure SQL Edge
+    - url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
+      text: Azure Synapse Analytics
   - title: Linux 上の SQL Server
     imageSrc: media/index/linux.svg
     links:
@@ -176,8 +176,8 @@ additionalContent:
         url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
       - text: Polybase によるデータ仮想化
         url: relational-databases/polybase/polybase-guide.md
-      - text: Azure Synapse Analytics (SQL DW)
-        url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      - text: Azure Synapse Analytics
+        url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
       - text: Microsoft Analytics Platform System
         url: analytics-platform-system/index.md
       - text: SQL Server Machine Learning Services (R と Python)

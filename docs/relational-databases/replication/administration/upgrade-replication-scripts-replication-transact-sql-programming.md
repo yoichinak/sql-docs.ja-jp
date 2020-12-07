@@ -21,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b08199f3cbc0d0ae87b5902600188908dac6615d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923445"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364696"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>レプリケーション スクリプトのアップグレード (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -112,12 +112,15 @@ ms.locfileid: "86923445"
   
     -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) を実行します。 `@subscriber`、`@subscriber_db`、`@publication` を指定し、マージ エージェントをディストリビューターで実行するときの Windows 資格情報を `@job_name` および `@job_password` で指定して、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [プッシュ サブスクリプションの作成](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例  
+
+### <a name="a-sql-server-2000-script-to-create-a-transactional-publication"></a>A. トランザクションパブリケーションを作成する SQL Server 2000 スクリプト
+
  次に、Product テーブルに関するトランザクション パブリケーションを作成する [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] スクリプトの例を示します。 このパブリケーションでは、フェールオーバーとしてキュー更新を使用する即時更新がサポートされます。 読みやすくするために、既定のパラメーターは削除されています。  
   
  [!code-sql[HowTo#sp_createtranpub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_1.sql)]  
   
-## <a name="example"></a>例  
+### <a name="b-sql-server-2005-and-later-script-to-create-a-transactional-publication"></a>B. トランザクション パブリケーションを作成する SQL Server 2005 以降のスクリプト
  次に、トランザクション パブリケーションを作成する古いスクリプトをアップグレードする例を示します。これは [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンで正常に実行されます。 このパブリケーションでは、フェールオーバーとしてキュー更新を使用する即時更新がサポートされます。 新しいパラメーターの既定値は、明示的に宣言されています。  
   
 > [!NOTE]  
@@ -125,12 +128,12 @@ ms.locfileid: "86923445"
   
  [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_2.sql)]  
   
-## <a name="example"></a>例  
+### <a name="c-sql-server-2000-script-to-create-a-merge-publication"></a>C. マージ パブリケーションを作成する SQL Server 2000 スクリプト
  次に、Customers テーブルに関するマージ パブリケーションを作成する [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] スクリプトの例を示します。 読みやすくするために、既定のパラメーターは削除されています。  
   
  [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_3.sql)]  
   
-## <a name="example"></a>例  
+### <a name="d-sql-server-2005-and-later-script-to-create-a-merge-publication"></a>D. マージ パブリケーションを作成する SQL Server 2005 以降のスクリプト
  次に、マージ パブリケーションを作成する古いスクリプトの例を示します。アップグレードすることにより、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンで正常に実行されます。 新しいパラメーターの既定値は、明示的に宣言されています。  
   
 > [!NOTE]  
@@ -138,12 +141,12 @@ ms.locfileid: "86923445"
   
  [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_4.sql)]  
   
-## <a name="example"></a>例  
+### <a name="e-sql-server-2000-script-to-create-a-push-subscription-to-a-transactional-publication"></a>E. トランザクション パブリケーションへのプッシュ サブスクリプションを作成する SQL Server 2000 スクリプト
  次に、トランザクション パブリケーションへのプッシュ サブスクリプションを作成する [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] スクリプトの例を示します。 読みやすくするために、既定のパラメーターは削除されています。  
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_5.sql)]  
   
-## <a name="example"></a>例  
+### <a name="f-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-transactional-publication"></a>F. トランザクション パブリケーションへのプッシュ サブスクリプションを作成する SQL Server 2005 以降のスクリプト
  次に、トランザクション パブリケーションへのプッシュ サブスクリプションを作成する古いスクリプトの例を示します。アップグレードすることにより、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンで正常に実行されます。 新しいパラメーターの既定値は、明示的に宣言されています。  
   
 > [!NOTE]  
@@ -151,12 +154,12 @@ ms.locfileid: "86923445"
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_6.sql)]  
   
-## <a name="example"></a>例  
+### <a name="g-sql-server-2000-script-to-create-a-push-subscription-to-a-merge-publication"></a>G. マージ パブリケーションへのプッシュ サブスクリプションを作成する SQL Server 2000 スクリプト
  次に、マージ パブリケーションへのプッシュ サブスクリプションを作成する [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] スクリプトの例を示します。 読みやすくするために、既定のパラメーターは削除されています。  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>例  
+### <a name="h-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-merge-publication"></a>H. マージ パブリケーションへのプッシュ サブスクリプションを作成する SQL Server 2005 以降のスクリプト
  次に、マージ パブリケーションへのプッシュ サブスクリプションを作成する古いスクリプトの例を示します。アップグレードすることにより、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンで正常に実行されます。 新しいパラメーターの既定値は、明示的に宣言されています。  
   
 > [!NOTE]  
@@ -164,12 +167,12 @@ ms.locfileid: "86923445"
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_8.sql)]  
   
-## <a name="example"></a>例  
+### <a name="i-sql-server-2000-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>I. トランザクション パブリケーションへのプル サブスクリプションを作成する SQL Server 2000 スクリプト
  次に、トランザクション パブリケーションへのプル サブスクリプションを作成する [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] スクリプトの例を示します。 読みやすくするために、既定のパラメーターは削除されています。  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>例  
+### <a name="j-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>J. トランザクション パブリケーションへのプル サブスクリプションを作成する SQL Server 2005 以降のスクリプト
  次に、トランザクション パブリケーションへのプル サブスクリプションを作成する古いスクリプトの例を示します。アップグレードすることにより、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンで正常に実行されます。 新しいパラメーターの既定値は、明示的に宣言されています。  
   
 > [!NOTE]  
@@ -177,12 +180,12 @@ ms.locfileid: "86923445"
   
  [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_9.sql)]  
   
-## <a name="example"></a>例  
+### <a name="k-sql-server-2000-script-to-create-a-pull-subscription-to-a-merge-publication"></a>K. マージ パブリケーションへのプル サブスクリプションを作成する SQL Server 2000 スクリプト
  次に、マージ パブリケーションへのプル サブスクリプションを作成する [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] スクリプトの例を示します。 読みやすくするために、既定のパラメーターは削除されています。  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_10.sql)]  
   
-## <a name="example"></a>例  
+### <a name="l-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-merge-publication"></a>L. マージ パブリケーションへのプル サブスクリプションを作成する SQL Server 2005 以降のスクリプト
  次に、マージ パブリケーションへのプル サブスクリプションを作成する古いスクリプトの例を示します。アップグレードすることにより、 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンで正常に実行されます。 新しいパラメーターの既定値は、明示的に宣言されています。  
   
 > [!NOTE]  

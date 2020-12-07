@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 62334a277bc169350af4db1c2961595178e733a6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634830"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081761"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>方法:Windows 認証を使用した接続
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ Windows 認証を使用して SQL Server に接続する場合は、次の点を
   
 Windows 認証を使用できない場合、「[方法: SQL Server 認証を使用して接続する](how-to-connect-using-sql-server-authentication.md)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="sqlsrv-example"></a>SQLSRV の例  
 次の例では、Windows 認証で [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の SQLSRV ドライバーを使用して、SQL Server のローカル インスタンスに接続します。 接続が確立すると、サーバーに対して、データベースにアクセスしているユーザーのログインが照会されます。  
   
 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
@@ -81,7 +81,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="pdo_sqlsrv-example"></a>PDO_SQLSRV の例  
 次の例では、PDO_SQLSRV ドライバーを使用して前のサンプルと同じタスクを実行します。  
   
 ```  

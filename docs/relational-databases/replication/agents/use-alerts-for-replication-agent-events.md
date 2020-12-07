@@ -23,12 +23,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d0fbec0a8ff1bcd6416ab0c24166a5bf5559cb8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc93e307fb7e9b7afab3717d32dd4be58a1ec818
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428044"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892152"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>レプリケーション エージェント イベントに対する警告の使用
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88428044"
 |20578|**レプリケーション: エージェントのカスタム シャットダウン**|||  
 |22815|**ピア ツー ピア競合検出の警告**|ピア ツー ピア ノードで変更を適用しようとしたときにディストリビューション エージェントで競合が検出されました。|はい|  
   
- これらの警告に加え、レプリケーション モニターでは、ステータスおよびパフォーマンスに関連する一連の警告を使用できます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警告システムを使用して、他のレプリケーション イベントの警告を定義することもできます。 詳細については、「[ユーザー定義イベントの作成](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)」を参照してください。  
+ これらの警告に加え、レプリケーション モニターでは、ステータスおよびパフォーマンスに関連する一連の警告を使用できます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警告システムを使用して、他のレプリケーション イベントの警告を定義することもできます。 詳細については、「[ユーザー定義イベントの作成](../../../ssms/agent/create-a-user-defined-event.md)」を参照してください。  
   
  **定義済みのレプリケーションの警告を構成するには**  
   
@@ -93,5 +93,4 @@ deallocate hc
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [監視 (レプリケーション)](../../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
   

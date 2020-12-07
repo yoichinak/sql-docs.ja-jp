@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 14b146fb2420fb85be4a3ce10ac460302480a319
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "86913180"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>データの変更をトランザクション アーティクルに反映する方法の設定
@@ -119,11 +119,11 @@ ms.locfileid: "86913180"
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **\@publication**、 **\@article**、および **\@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定します。さらに、 **\@schema_option** にビットマスク **0x02** (カスタム ストアド プロシージャの自動生成を有効にする) を指定し、次のいずれかのパラメーターを指定します。  
   
-    -   **\@ins_cmd** - **CALL sp_MSins_* article_name* ** を指定します。ここで、***article_name*** は **\@article** に指定した値です。  
+    -   **\@ins_cmd** - **CALL sp_MSins_* article_name*** の値を指定します。ここで、**_article_name_ *_ は _* \@article** に指定された値です。  
   
-    -   **\@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** を指定します。ここで、***article_name*** は **\@article** に指定した値です。  
+    -   **\@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** の値を指定します。ここで、**_article_name_ *_ は _* \@article** に指定された値です。  
   
-    -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、または **MCALL sp_MSupd_* article_name*** を指定します。ここで、***article_name*** は **\@article** に指定した値です。  
+    -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、または **MCALL sp_MSupd_* article_name*** の値を指定します。ここで、**_article_name_ *_ は _* \@article** に指定された値です。  
   
     > [!NOTE]  
     >  上記コマンド パラメーターのそれぞれについて、レプリケーションによって生成されるストアド プロシージャに独自の名前を指定できます。  
@@ -139,11 +139,11 @@ ms.locfileid: "86913180"
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **\@publication**、 **\@article**、および **\@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定します。さらに、 **\@schema_option** にビットマスク **0x02** (カスタム ストアド プロシージャの自動生成を有効にする) を指定し、次のいずれかのパラメーターを指定します。  
   
-    -   **\@ins_cmd** - **CALL sp_MSins_* article_name* ** を指定します。ここで、***article_name*** は **\@article** に指定した値です。  
+    -   **\@ins_cmd** - **CALL sp_MSins_* article_name*** の値を指定します。ここで、**_article_name_ *_ は _* \@article** に指定された値です。  
   
-    -   **\@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** を指定します。ここで、***article_name*** は **\@article** に指定した値です。  
+    -   **\@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** の値を指定します。ここで、**_article_name_ *_ は _* \@article** に指定された値です。  
   
-    -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name* **、**CALL sp_MSupd_* article_name* **、**XCALL sp_MSupd_* article_name* **、**MCALL sp_MSupd_* article_name* ** を指定します。ここで、***article_name*** は **\@article** に指定した値です。  
+    -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、*MCALL sp_MSupd_* article_name*** の値を指定します。ここで、**_article_name_ *_ は _* \@article** に指定された値です。  
   
     > [!NOTE]  
     >  上記コマンド パラメーターのそれぞれについて、レプリケーションによって生成されるストアド プロシージャに独自の名前を指定できます。  

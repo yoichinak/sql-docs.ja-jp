@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 521bc0dd4a454472586c18f108a42e4393498323
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72529ac177ddd069ca7e8412da375db45fe958e2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457566"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127378"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server データ ツールでのパッケージの作成
 
@@ -48,9 +48,9 @@ ms.locfileid: "88457566"
   
      [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードは、簡単なインポートまたはエクスポートに使用できる完成したパッケージを作成します。 このウィザードでは、インポートまたはエクスポートをすぐに実行できるように、接続、変換元、および変換先が構成され、必要なすべてのデータ変換が追加されます。 パッケージを後で再び実行したり [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]でパッケージを改良、強化するために、パッケージを保存することもできます。 ただし、パッケージを保存する場合は、パッケージを変更したり、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] でパッケージを実行したりする前に、既存の [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]プロジェクトにパッケージを追加しておく必要があります。  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] デザイナーを使用して [!INCLUDE[ssIS](../includes/ssis-md.md)] で作成したパッケージは、ファイル システムに保存されます。 パッケージを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] またはパッケージ ストアに保存するには、パッケージのコピーを保存する必要があります。 詳細については、「 [パッケージのコピーを保存する](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)」を参照してください。  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] デザイナーを使用して [!INCLUDE[ssIS](../includes/ssis-md.md)] で作成したパッケージは、ファイル システムに保存されます。 パッケージを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] またはパッケージ ストアに保存するには、パッケージのコピーを保存する必要があります。 詳細については、「 [パッケージのコピーを保存する](./save-packages.md)」を参照してください。  
 
- 既定のパッケージ テンプレートを使用して基本的なパッケージを作成する方法のデモ ビデオについては、「 [基本パッケージの作成 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=131023)」を参照してください。  
+ 既定のパッケージ テンプレートを使用して基本的なパッケージを作成する方法のデモ ビデオについては、「 [基本パッケージの作成 (SQL Server ビデオ)](/previous-versions/sql/sql-server-2008/cc952921(v=sql.100))」を参照してください。  
 
 ## <a name="get-sql-server-data-tools"></a>SQL Server Data Tools を取得する
 SQL Server Data Tools (SSDT) をインストールするには、「 [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。
@@ -77,5 +77,4 @@ SQL Server Data Tools (SSDT) をインストールするには、「 [SQL Server
      ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
   
  SQL Server 2016、SQL Server 2014 または SQL Server 2012 を対象とするパッケージを実行、作成、および管理できます。  
-  
   

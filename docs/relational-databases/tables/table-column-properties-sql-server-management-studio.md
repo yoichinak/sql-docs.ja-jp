@@ -16,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ddf8c0360de470d5640ed650c4b8339061c41b4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463824"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91810488"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>テーブル列のプロパティ (SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88463824"
  選択した列のデータ型を明確に決定できるかどうかが表示されます   
   
  **[DTS パブリッシュ済み]**  
- 列が SSIS によりパブリッシュされているかどうかが表示されます ([データ変換サービスは非推奨](https://msdn.microsoft.com/library/cc707786(v=sql.130).aspx#Anchor_0))。 
+ 列が SSIS によりパブリッシュされているかどうかが表示されます ([データ変換サービスは非推奨](/previous-versions/sql/sql-server-2008-r2/cc707786(v=sql.105)))。 
   
  **[フルテキストの指定]**  
  フルテキスト インデックスに関する情報を表示します。 このプロパティの値は、 **[フルテキスト インデックス化されている]** 子プロパティの値であり、この列にフルテキスト インデックスが付けられているかどうかを示します。  
@@ -93,7 +93,7 @@ ms.locfileid: "88463824"
   
 -   **[フルテキスト インデックス化されている]** この列にフルテキスト インデックスが付けられているかどうかを示します。 この列のデータ型がフルテキスト検索に対応している場合、およびこの列が属するテーブルにフルテキスト インデックスが指定されている場合にのみ、このプロパティを **[はい]** に設定できます。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、値を選択します。  
   
--   **[フルテキスト型列]** この列のフルテキスト インデックスが設定されている列の名前を示します。 この列の **[データ型]** プロパティが **[image]** または **[varbinary]** の場合は、このプロパティを設定する必要があります。 このプロパティで指定される列は、 **[n]char、[n]varchar** 、または **xml**型である必要があります。このプロパティのドロップダウン リストには、これらの 3 種類のいずれかのデータ型を持つ列のみが表示されます。 このプロパティで指定された列の行は、フルテキスト検索ができる列の行と一致するドキュメントの種類を示します。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。  
+-   **[フルテキスト型列]** この列のフルテキスト インデックスが設定されている列の名前を示します。 この列の **[データ型]** プロパティが **[image]** または **[varbinary]** の場合は、このプロパティを設定する必要があります。 このプロパティで指定される列は、 **[n]char、[n]varchar** 、または **xml** 型である必要があります。このプロパティのドロップダウン リストには、これらの 3 種類のいずれかのデータ型を持つ列のみが表示されます。 このプロパティで指定された列の行は、フルテキスト検索ができる列の行と一致するドキュメントの種類を示します。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。  
   
 -   **[言語]** 列にインデックスを付けるために使用するワード ブレーカーの言語を示します。 プロパティに格納される値は、実際はワード ブレーカーのロケール識別子です。 ワード ブレーカーおよび LCID の詳細については、「ワード ブレーカーとステミング機能」を参照してください。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。  
   
@@ -137,5 +137,4 @@ ms.locfileid: "88463824"
   
 > [!NOTE]  
 >  **(max)** のデータ型の長さは行ごとに異なります。 **sp_help** を実行すると、 **(max)** 列の長さとして (-1) が返されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、列のサイズとして -1 が表示されます。  
-  
   

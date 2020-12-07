@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548479"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834254"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -48,10 +48,10 @@ ms.locfileid: "89548479"
 |last_commit|**datetimeoffset**|最後のトランザクションがデータベースにコミットされた時刻。 プライマリデータベースで取得された場合は、プライマリデータベースの最後のコミット時刻を示します。 セカンダリデータベースで取得された場合は、セカンダリデータベースの最後のコミット時刻を示します。 レプリケーションリンクのプライマリがダウンしたときにセカンダリデータベースで取得された場合は、セカンダリがどの時点でキャッチされたかを示します。|
   
 > [!NOTE]  
->  セカンダリデータベース (セクション 4.2) を削除してレプリケーション関係を終了すると、そのデータベースの行が **dm_geo_replication_link_status** ビューに表示されなくなります。  
+>  セカンダリデータベース (セクション 4.2) を削除することによってレプリケーション関係が終了した場合、[ **sys.dm_geo_replication_link_status** ] ビューにそのデータベースの行が表示されなくなります。  
   
 ## <a name="permissions"></a>アクセス許可  
- View_database_state のアクセス許可を持つすべてのアカウントは、 **dm_geo_replication_link_status**に対してクエリを実行できます。  
+ View_database_state のアクセス許可を持つアカウントは、 **sys.dm_geo_replication_link_status**を照会できます。  
   
 ## <a name="example"></a>例  
  セカンダリデータベースのレプリケーションラグと最後のレプリケーション時刻を表示します。  
@@ -66,8 +66,7 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
-  

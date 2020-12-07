@@ -11,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b20a6e33c308115c9f8d9b5334ea0ec31035116
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475522"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869044"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Always Encrypted を使用したデータベースのバックアップと復元 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88475522"
 
 データベースのバックアップと復元を行う方法の詳細については、以下を参照してください。
 - [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
-- [データベースをマネージド インスタンスに復元する](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
+- [データベースをマネージド インスタンスに復元する](/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>次の手順
 - [SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する](always-encrypted-query-columns-ssms.md)

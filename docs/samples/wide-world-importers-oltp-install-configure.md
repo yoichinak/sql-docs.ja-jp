@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 9868b414d627c7ea98504120432c0c3a662d463b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87824067"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956553"
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "87824067"
 
 ## <a name="prerequisites"></a>前提条件
 
-- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 このサンプルの完全なバージョンについては、SQL Server Evaluation/Developer/Enterprise Edition を使用してください。
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 このサンプルの完全なバージョンについては、SQL Server Evaluation/Developer/Enterprise Edition を使用してください。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 最良の結果を得るには、2016年6月リリース以降を使用します。
 
 ## <a name="download"></a>ダウンロード
@@ -46,32 +46,32 @@ SQL Server または Azure SQL Database のエディションに対応するサ�
 バックアップを SQL Server インスタンスに復元するには、Management Studio を使用できます。
 
 1. SQL Server Management Studio を開き、ターゲットの SQL Server インスタンスに接続します。
-2. [**データベース**] ノードを右クリックし、[**データベースの復元**] を選択します。
+2. [ **データベース** ] ノードを右クリックし、[ **データベースの復元**] を選択します。
 3. [**デバイス**] を選択し、[.. **.** ] ボタンをクリックします。
-4. ダイアログで [**バックアップデバイスの選択**] をクリックし、[**追加**] をクリックして、サーバーのファイルシステム内のデータベースバックアップに移動し、バックアップを選択します。 **[OK]** をクリックします。
-5. 必要に応じて、[**ファイル**] ウィンドウでデータファイルとログファイルのターゲットの場所を変更します。 データファイルとログファイルは別のドライブに配置することをお勧めします。
+4. ダイアログで [ **バックアップデバイスの選択**] をクリックし、[ **追加**] をクリックして、サーバーのファイルシステム内のデータベースバックアップに移動し、バックアップを選択します。 **[OK]** をクリックします。
+5. 必要に応じて、[ **ファイル** ] ウィンドウでデータファイルとログファイルのターゲットの場所を変更します。 データファイルとログファイルは別のドライブに配置することをお勧めします。
 6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了すると、SQL Server インスタンスにデータベース WideWorldImporters がインストールされます。
 
 ### <a name="azure-sql-database"></a>Azure SQL データベース
 
 Bacpac を新しい SQL Database にインポートするには、Management Studio を使用できます。
 
-1. optionalまだ Azure に SQL Server がない場合は、 [Azure portal](https://portal.azure.com/)に移動し、新しい SQL Database を作成します。 データベースを作成するプロセスでは、サーバーを作成します。 サーバーをメモしておきます。
-   - [このチュートリアル](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)を参照して、データベースを数分で作成してください
+1. optionalまだ Azure に SQL Server がない場合は、 [Azure portal](https://portal.azure.com/) に移動し、新しい SQL Database を作成します。 データベースを作成するプロセスでは、サーバーを作成します。 サーバーをメモしておきます。
+   - [このチュートリアル](/azure/azure-sql/database/single-database-create-quickstart)を参照して、データベースを数分で作成してください
 2. SQL Server Management Studio を開き、Azure のサーバーに接続します。
-3. [**データベース**] ノードを右クリックし、[**データ層アプリケーションのインポート**] をクリックします。
-4. [**インポートの設定**] で、[**ローカルディスクからインポート**する] を選択し、ファイルシステムからサンプルデータベースの bacpac を選択します。
-5. [**データベースの設定**] で、データベース名を*WideWorldImporters*に変更し、使用するターゲットエディションとサービス目標を選択します。
-6. [**次へ** **] をクリックして、** 展開を開始します。 P1 の完了までに数分かかります。 価格レベルを低くする必要がある場合は、新しい P1 データベースにインポートし、価格レベルを目的のレベルに変更することをお勧めします。
+3. [ **データベース** ] ノードを右クリックし、[ **Data-Tier アプリケーションのインポート**] を選択します。
+4. [ **インポートの設定** ] で、[ **ローカルディスクからインポート** する] を選択し、ファイルシステムからサンプルデータベースの bacpac を選択します。
+5. [ **データベースの設定** ] で、データベース名を *WideWorldImporters* に変更し、使用するターゲットエディションとサービス目標を選択します。
+6. [ **次へ** **] をクリックして、** 展開を開始します。 P1 の完了までに数分かかります。 価格レベルを低くする必要がある場合は、新しい P1 データベースにインポートし、価格レベルを目的のレベルに変更することをお勧めします。
 
 ## <a name="configuration"></a>構成
 
 ### <a name="full-text-indexing"></a>フルテキスト インデックス作成
 
-サンプルデータベースでは、フルテキストインデックスを使用できます。 ただし、この機能は既定では SQL Server と共にインストールされません。 SQL Server セットアップ中に選択する必要があります (Azure SQL Database では既定で有効になっています)。 そのため、インストール後の手順が必要です。
+サンプルデータベースでは、Full-Text インデックス作成を使用できます。 ただし、この機能は既定では SQL Server と共にインストールされません。 SQL Server セットアップ中に選択する必要があります (Azure SQL Database では既定で有効になっています)。 そのため、インストール後の手順が必要です。
 
 1. SQL Server Management Studio で、WideWorldImporters データベースに接続し、新しいクエリウィンドウを開きます。
-2. 次の T-sql コマンドを実行して、データベースでフルテキストインデックスの使用を有効にします。`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. 次の T-sql コマンドを実行して、データベースでの Full-Text インデックスの使用を有効にします。  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
@@ -90,9 +90,8 @@ Azure SQL Database では、 [Azure portal](https://portal.azure.com/)によっ�
 
 適用対象: Azure SQL Database
 
-行レベルのセキュリティは、WideWorldImporters の bacpac ダウンロードでは既定で有効になっていません。 データベースで行レベルのセキュリティを有効にするには、次のストアドプロシージャを実行します。
+WideWorldImporters の bacpac ダウンロードでは、Row-Level セキュリティは既定では有効になっていません。 データベースで Row-Level セキュリティを有効にするには、次のストアドプロシージャを実行します。
 
 ```sql
 EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 ```
-

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4154b9194c1c4a0160a7ac118f9e8aca59a9de2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 12d7db7b49c15954240843b13d750ea1d64503f3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895417"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584917"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 可用性グループ内のレプリカに対するクライアント接続の種類
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "85895417"
  クライアント接続要求を処理する可用性グループ リスナーの詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」をご参照ください。  
   
 ### <a name="example-connection-access-configuration"></a>接続のアクセス構成の例  
- 可用性レプリカの接続アクセスの構成内容がそれぞれ異なっている場合、可用性グループがフェールオーバーした後でクライアント接続のサポートが変わる可能性があります。 たとえば、リモートの非同期コミット セカンダリ レプリカでレポートが実行された可用性グループについて考えてみましょう。 この可用性グループのデータベースのすべての読み取り専用アプリケーションで、 **アプリケーションの目的** 接続プロパティが **ReadOnly**に設定されているため、すべての読み取り専用接続が読み取りを目的とした接続です。  
+ 可用性レプリカの接続アクセスの構成内容がそれぞれ異なっている場合、可用性グループがフェールオーバーした後でクライアント接続のサポートが変わる可能性があります。 たとえば、リモートの非同期コミット セカンダリ レプリカでレポートが実行された可用性グループについて考えてみましょう。 この可用性グループのデータベースのすべての読み取り専用アプリケーションで、 **アプリケーションの目的** 接続プロパティが **ReadOnly** に設定されているため、すべての読み取り専用接続が読み取りを目的とした接続です。  
   
  この例の可用性グループには、メインのコンピューティング センターにある 2 つの同期コミット レプリカと、サテライト サイトにある 2 つの非同期コミット レプリカが含まれています。 プライマリ ロールに対しては、すべてのレプリカに読み取り/書き込みアクセスが構成され、どのような状況でもプライマリ レプリカへの読み取りを目的とした接続ができないようになっています。 同期コミットのセカンダリ ロールでは、既定の接続アクセス構成 ("なし") が使用されるため、セカンダリ ロールではすべてのクライアント接続が禁止されます。  一方、非同期コミット レプリカは、セカンダリ ロールでの読み取り目的の接続を許可するように構成されています。 次の表に、この例の構成をまとめます。  
   
@@ -107,13 +107,12 @@ ms.locfileid: "85895417"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [統計](../../../relational-databases/statistics/statistics.md)  
-  
   

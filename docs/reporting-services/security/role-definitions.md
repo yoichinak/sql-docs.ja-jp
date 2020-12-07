@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 985ba6df5091c13ab4b91c7f2ba95b4c1484a584
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8dbfe6d890c84bee9a66141971a554c410d47dd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498055"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987389"
 ---
 # <a name="role-definitions"></a>ロールの定義
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、"*ロールの定義*" は、ユーザーがレポート サーバー上で実行できる操作を定義する、一連の名前付きタスクです。 ロールの定義によって、レポート サーバーがセキュリティを強制的に適用する際に使用するルールが提供されます。 ユーザーがレポートのパブリッシュなどのタスクを試行すると、レポート サーバーでは、ユーザーのロールの割り当てを確認し、そのタスクがロールの定義に含まれているかどうかを判別します。 該当するタスクがロールの定義に含まれている場合、要求が送信されます。  
@@ -46,7 +46,7 @@ ms.locfileid: "88498055"
   
  ロールの定義を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用します。 詳細については、「 [ロールを作成、削除、または変更する &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)」を参照してください。  
   
- ロールの定義を作成した後、その定義を使用するには、ロールの割り当てで定義を選択します。 詳細については、「 [レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)」を参照してください。  
+ ロールの定義を作成した後、その定義を使用するには、ロールの割り当てで定義を選択します。 詳細については、「 [レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](./grant-user-access-to-a-report-server.md)」を参照してください。  
   
 ## <a name="customize-or-delete-a-role-definition"></a>ロールの定義のカスタマイズと削除  
  定義済みロールは、変更したりカスタム ロールに置き換えたりできます。 ロールを変更するには、ロールの定義でタスクを追加または削除します。 ただし、ロールの名前を変更することはできません。 変更を行うと、そのロールの定義を含むすべてのロールの割り当てにすぐに適用されます。  
@@ -57,8 +57,7 @@ ms.locfileid: "88498055"
  [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](./grant-user-access-to-a-report-server.md)   
  [ロールの割り当てを変更または削除する &#40;レポート マネージャー&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
-  
   

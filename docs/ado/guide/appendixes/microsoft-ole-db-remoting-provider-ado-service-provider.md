@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 860d151bb0071db6086629c8893795cadd47b821
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6a4e4fcec5217a9a9475f11d3a386c7436892ea6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990993"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724873"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB リモート処理プロバイダーの概要
 Microsoft OLE DB リモート処理プロバイダーを使用すると、クライアントコンピューターのローカルユーザーは、リモートコンピューター上のデータプロバイダーを呼び出すことができます。 リモートコンピューターのローカルユーザーの場合と同様に、リモートコンピューターのデータプロバイダーパラメーターを指定します。 次に、リモートコンピューターにアクセスするためにリモート処理プロバイダーによって使用されるパラメーターを指定します。 これにより、ローカルユーザーと同じようにリモートコンピューターにアクセスできます。
 
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、  [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。
 
 ## <a name="provider-keyword"></a>Provider キーワード
  OLE DB リモート処理プロバイダーを呼び出すには、接続文字列に次のキーワードと値を指定します。 (プロバイダー名の空白部分に注意してください)。
@@ -38,7 +38,7 @@ Microsoft OLE DB リモート処理プロバイダーを使用すると、クラ
 ## <a name="additional-keywords"></a>その他のキーワード
  このサービスプロバイダーが呼び出されると、次の追加のキーワードが関連します。
 
-|キーワード|説明|
+|Keyword|説明|
 |-------------|-----------------|
 |**データ ソース**|リモートデータソースの名前を指定します。 これは、処理のために OLE DB リモート処理プロバイダーに渡されます。<br /><br /> このキーワードは、RDS に相当し [ます。DataControl](../../reference/rds-api/datacontrol-object-rds.md) オブジェクトの [Connect](../../reference/rds-api/connect-property-rds.md) プロパティ。|
 
@@ -50,7 +50,7 @@ Microsoft OLE DB リモート処理プロバイダーを使用すると、クラ
 |**DFMode**|DataFactory モードを示します。 サーバー上の [DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) オブジェクトの目的のバージョンを指定する文字列です。 **DataFactory**の特定のバージョンを要求する接続を開く前に、このプロパティを設定します。 要求されたバージョンを使用できない場合は、前のバージョンを使用しようとします。 前のバージョンがない場合は、エラーが発生します。 **DFMode**が使用可能なバージョンよりも小さい場合は、エラーが発生します。 このプロパティは、接続が確立された後に読み取り専用になります。<br /><br /> には、次の有効な文字列値のいずれかを指定できます。<br /><br /> -"25"-バージョン 2.5 (既定)<br />-"21"-バージョン2.1<br />-"20"-バージョン2.0<br />-"15"-バージョン1.5|
 |**コマンドのプロパティ**|MS リモートプロバイダーによってサーバーに送信されるコマンド (行セット) プロパティの文字列に追加される値を示します。 この文字列の既定値は vt_empty です。|
 |**現在の DFMode**|サーバー上の **DataFactory** の実際のバージョン番号を示します。 **DFMode**プロパティで要求されたバージョンが受け入れられたかどうかを確認するには、このプロパティをオンにします。<br /><br /> 次の有効な長整数値のいずれかを指定できます。<br /><br /> -25-バージョン 2.5 (既定)<br />-21-バージョン2.1<br />-20-バージョン2.0<br />-15-バージョン1.5<br /><br /> **Msremote**プロバイダーの使用時に接続文字列に "DFMode = 20;" を追加すると、データを更新するときのサーバーのパフォーマンスが向上します。 この設定では、サーバー上の **DataFactory** オブジェクトは、より少ないリソースを消費するモードを使用します。 ただし、次の機能はこの構成では使用できません。<br /><br /> -パラメーター化クエリの使用。<br />- **Execute** メソッドを呼び出す前に、パラメーターまたは列の情報を取得します。<br />- **Transact update** を **True**に設定します。<br />-行の状態を取得しています。<br />-再 **同期** メソッドを呼び出しています。<br />- **更新プログラム** の再同期プロパティを使用して (明示的または自動で) 更新します。<br />- **コマンド** または **レコードセット** のプロパティを設定します。<br />- **Adcmdtabledirect**を使用します。|
-|**Handler**|[RDSServer](../../reference/rds-api/datafactory-object-rdsserver.md)の機能を拡張するサーバー側のカスタマイズプログラム (またはハンドラー) の名前、およびハンドラーで使用されるすべてのパラメーターをコンマ (",") で区切って指定します。 **文字列**値。|
+|**Handler**|[RDSServer](../../reference/rds-api/datafactory-object-rdsserver.md)の機能を拡張するサーバー側のカスタマイズプログラム (またはハンドラー) の名前、およびハンドラーで使用されるすべてのパラメーターをコンマ (",") で区切って指定します。 **文字列**値です。|
 |**インターネットタイムアウト**|サーバーとの間での要求の移動を待機する最大時間 (ミリ秒単位) を示します。 (既定値は5分です)。|
 |**リモートプロバイダー**|リモートサーバーで使用されるデータプロバイダーの名前を示します。|
 |**リモートサーバー**|この接続で使用されるサーバー名と通信プロトコルを示します。 このプロパティは、RDS に相当し [ます。DataContro](../../reference/rds-api/datacontrol-object-rds.md) Object [サーバー](../../reference/rds-api/server-property-rds.md) プロパティ。|

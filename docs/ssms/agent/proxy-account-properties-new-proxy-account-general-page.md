@@ -14,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e466d75990589513ce09e071dd17d55d2fd512c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a70ba36150771ef90f3cfc9461c018c212da4c73
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468586"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037303"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>[プロキシ アカウントのプロパティ] - [新しいプロキシ アカウント] ([全般] ページ)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントのプロパティを表示したり変更したりできます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "88468586"
 プロキシの資格情報の名前を入力します。  
   
 > [!NOTE]  
-> 指定する資格情報名は、既存の資格情報の名前である必要があります。 資格情報を作成する方法の詳細については、[プロキシを作成する方法](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)に関するページを参照してください  
+> 指定する資格情報名は、既存の資格情報の名前である必要があります。 資格情報を作成する方法の詳細については、[プロキシを作成する方法](../../relational-databases/security/authentication-access/create-a-credential.md)に関するページを参照してください  
   
 **...**  
 **[資格情報の選択]** ダイアログを起動します。  
@@ -53,4 +53,3 @@ ms.locfileid: "88468586"
   
 ## <a name="see-also"></a>参照  
 [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
-  

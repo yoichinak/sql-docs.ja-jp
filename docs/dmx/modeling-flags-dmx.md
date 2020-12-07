@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52b28158c59e12886f8058883c65654b23ece9e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 968b1c10f8eb054f6527253bd358e97eaa396637
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466546"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727723"
 ---
 # <a name="modeling-flags-dmx"></a>モデリング フラグ (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88466546"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、次のモデリングフラグがサポートされています。  
   
- **NULL 以外**  
+ **NOT NULL**  
  属性列の値に null 値を含めることはできません。 モデルの学習プロセス中に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がこの属性列に NULL 値を検出した場合、エラーが発生します。 このフラグは、マイニング構造列に対して定義されています。  
   
  **リグレッサー**  
@@ -49,10 +49,10 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
   
  マイニングモデル列でのモデリングフラグを指定する構文の例については、「 [ALTER マイニング STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)」を参照してください。  
   
- マイニングモデル列の操作の詳細については、「 [マイニングモデル列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」を参照してください。  
+ マイニングモデル列の操作の詳細については、「 [マイニングモデル列](/analysis-services/data-mining/mining-model-columns)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   
  [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -62,5 +62,4 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

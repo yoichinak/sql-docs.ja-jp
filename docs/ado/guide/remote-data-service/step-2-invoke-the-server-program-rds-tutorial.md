@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4771957c1895f6ac861d04f63a43e32a77e3d931
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a9238fa208a5ce415986fee05045dc7ea34e0d67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977593"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723003"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>手順 2:サーバー プログラムを呼び出す (RDS チュートリアル)
 クライアント *プロキシ*でメソッドを呼び出すと、サーバー上の実際のプログラムによってメソッドが実行されます。 この手順では、サーバーでクエリを実行します。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
  **パート A** このチュートリアルで RDSServer を使用して [い](../../reference/rds-api/datafactory-object-rdsserver.md) ない場合、この手順を実行する最も便利な方法は、RDS を使用することです。 [DataControl](../../reference/rds-api/datacontrol-object-rds.md) オブジェクト。 **RDS。DataControl**は、プロキシを作成する前の手順を結合します。この手順では、クエリを発行します。  
   

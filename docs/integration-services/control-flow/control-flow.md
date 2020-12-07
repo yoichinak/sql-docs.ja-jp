@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ee2ebd23e6be8b78eee221b3e55485633b38786
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457576"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724556"
 ---
 # <a name="control-flow"></a>制御フロー
 
@@ -62,7 +62,7 @@ ms.locfileid: "88457576"
   
 -   接続マネージャーを追加します。  
   
-     多くのタスクではデータ ソースに接続する必要があるため、タスクに必要な接続マネージャーをパッケージに追加する必要があります。 使用する列挙子の型に応じて、Foreach ループ コンテナーにも接続マネージャーが必要となる場合があります。 接続マネージャーは、制御フローをアイテム別に作成するときに追加できます。または、制御フローの作成を開始する前に追加することもできます。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)」を参照してください。  
+     多くのタスクではデータ ソースに接続する必要があるため、タスクに必要な接続マネージャーをパッケージに追加する必要があります。 使用する列挙子の型に応じて、Foreach ループ コンテナーにも接続マネージャーが必要となる場合があります。 接続マネージャーは、制御フローをアイテム別に作成するときに追加できます。または、制御フローの作成を開始する前に追加することもできます。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」および「[接続マネージャーを作成する](../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
  また、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、デザイン画面を管理したり、制御フローを自己文書化するための、多数のデザイン時機能も含まれています。  
   
@@ -70,8 +70,7 @@ ms.locfileid: "88457576"
   
 -   [制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [コンポーネントのグループ化とグループの解除](../../integration-services/group-or-ungroup-components.md)  
-  
   

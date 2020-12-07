@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5795e27e7ff97de361161d4f703d8691b3c8405e
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91227196"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -83,7 +83,7 @@ SELECT ステートメントでは、必ず ORDER BY 句と TOP 句を使用し�
 下位互換性のため、SELECT ステートメントではかっこは省略可能です。 SELECT ステートメントの TOP では常にかっこを使用することをお勧めします。 そうすることで、かっこが必要な INSERT、UPDATE、MERGE、DELETE ステートメントとの一貫性を保つことができます。 
   
 ## <a name="interoperability"></a>相互運用性  
-TOP 式は、トリガーによって実行される可能性があるステートメントには影響しません。 トリガーによって**挿入**および**削除**されたテーブルからは、INSERT、UPDATE、MERGE、または DELETE ステートメントによって実際に影響を受けた行のみが返されます。 たとえば、TOP 句が含まれる INSERT ステートメントの結果として INSERT TRIGGER が起動されるような場合です。  
+TOP 式は、トリガーによって実行される可能性があるステートメントには影響しません。 トリガーによって **挿入** および **削除** されたテーブルからは、INSERT、UPDATE、MERGE、または DELETE ステートメントによって実際に影響を受けた行のみが返されます。 たとえば、TOP 句が含まれる INSERT ステートメントの結果として INSERT TRIGGER が起動されるような場合です。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ビューを使用した行の更新が可能です。 ビュー定義に TOP 句を含めることができるので、更新のために行が TOP 式の要件を満たさなくなると、特定の行がビューに表示されなくなる場合があります。  
   

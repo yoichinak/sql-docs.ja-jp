@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: e320408fd569cbf747c9f9ada68f51dd2bea8a41
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 968bcd1560fd4fd24dddfaf45cfe606518235b60
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714330"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081891"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 
@@ -23,13 +23,19 @@ ms.locfileid: "88714330"
 
 **[SQL Server PowerShell のインストール](download-sql-server-ps-module.md)**
 
-SQL Server PowerShell モジュールには **SqlServer** と **SQLPS** の 2 つがあります。 **SQLPS** モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。 **SqlServer** モジュールには **SQLPS** のコマンドレットの更新バージョンだけでなく、最新の SQL 機能をサポートする新しいコマンドレットも含まれています。  
+SQL Server PowerShell モジュールには、 **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** と **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)** の 2 つがあります。
 
-SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれていましたが、SSMS の 16.x バージョンのみです。
+**SqlServer** モジュールは、使用する現在の PowerShell モジュールです。
 
-PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを PowerShell ギャラリーからインストールする必要があります。
+**SQLPS** モジュールは、(後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。
 
-**SqlServer** モジュールをインストールする場合は、「[SQL Server PowerShell のインストール](download-sql-server-ps-module.md)」を参照してください。
+**SqlServer** モジュールには、**SQLPS** のコマンドレットの更新バージョンに加え、最新の SQL 機能をサポートする新しいコマンドレットが含まれています。
+
+[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) には前のバージョンの **SqlServer** モジュールが含まれて "*いました*" が、それは SSMS の 16.x バージョンのみでした。
+
+SSMS 17.0 以降で PowerShell を使用するには、**SqlServer** モジュールを [PowerShell ギャラリー](https://www.powershellgallery.com/packages/SqlServer)からインストールします。
+
+[Azure Data Studio で PowerShell](../azure-data-studio/extensions/powershell-extension.md) を使用することもできます。
 
 **モジュールが SQLPS から SqlServer に変更された理由**
 
@@ -47,7 +53,7 @@ SQLPS モジュールが同じコンピューターにインストールされ�
 
 **SqlServer** モジュールには、次のものが付属しています。
 
-- [PowerShell プロバイダー](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_providers)。これにより、ファイル システム パスと同様の簡単なナビゲーション メカニズムを使用できるようになります。 ファイル システム パスと同様に、ドライブが SQL Server 管理オブジェクト モデルに関連付けられ、ノードがオブジェクト モデルのクラスに基づくパスを構築できます。 その後、 **cd** や **dir** などのなじみのあるコマンドを使用して、コマンド プロンプト ウィンドウでフォルダーを操作するのと同様の方法でパスを操作できます。 **ren** や **del**などの他のコマンドを使用すると、パスのノードで操作を実行できます。
+- [PowerShell プロバイダー](/powershell/module/microsoft.powershell.core/about/about_providers)。これにより、ファイル システム パスと同様の簡単なナビゲーション メカニズムを使用できるようになります。 ファイル システム パスと同様に、ドライブが SQL Server 管理オブジェクト モデルに関連付けられ、ノードがオブジェクト モデルのクラスに基づくパスを構築できます。 その後、 **cd** や **dir** などのなじみのあるコマンドを使用して、コマンド プロンプト ウィンドウでフォルダーを操作するのと同様の方法でパスを操作できます。 **ren** や **del**などの他のコマンドを使用すると、パスのノードで操作を実行できます。
 
 - Transact-SQL または XQuery ステートメントを含む **sqlcmd** コマンドレットの実行などの操作をサポートする、コマンドレットのセット。  
 
@@ -55,13 +61,13 @@ SQLPS モジュールが同じコンピューターにインストールされ�
 
 ## <a name="sql-server-versions"></a>SQL Server のバージョン
 
-SQL PowerShell コマンドレットは Azure SQL Database、Azure SQL Data Warehouse、すべての[サポートされる SQL Server 製品](https://support.microsoft.com/lifecycle/search/1044)のインスタンスを管理するために使用できます。
+SQL PowerShell コマンドレットは、Azure SQL Database、Azure Synapse Analytics、およびすべての[サポートされる SQL Server 製品](https://support.microsoft.com/lifecycle/search/1044)のインスタンスを管理するために使用できます。
 
 ## <a name="sql-server-identifiers-that-contain-characters-not-supported-in-powershell-paths"></a>PowerShell パスではサポートされない文字を含んだ SQL Server 識別子
 
 **Encode-Sqlname** コマンドレットと **Decode-Sqlname** コマンドレットでは、PowerShell パスではサポートされていない文字を含んだ SQL Server 識別子を指定できます。 詳細については、「 [PowerShell での SQL Server 識別子](sql-server-identifiers-in-powershell.md)」を参照してください。
 
-**Convert-UrnToPath** コマンドレットを使用して、Database Engine オブジェクトの Unique Resource Name を SQL Server PowerShell プロバイダーのパスに変換します。 詳細については、「 [URN から SQL Server プロバイダー パスへの変換](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)」を参照してください。
+**Convert-UrnToPath** コマンドレットを使用して、Database Engine オブジェクトの Unique Resource Name を SQL Server PowerShell プロバイダーのパスに変換します。 詳細については、「 [URN から SQL Server プロバイダー パスへの変換](/powershell/module/sqlserver/Convert-UrnToPath)」を参照してください。
   
 ## <a name="query-expressions-and-unique-resource-names"></a>クエリ式および Unique Resource Name  
 
@@ -80,9 +86,11 @@ Import-Module -Name SqlServer
 
 ## <a name="cmdlet-reference"></a>コマンドレット リファレンス
 
-- [SqlServer のコマンドレット](https://docs.microsoft.com/powershell/module/sqlserver)
-- [SQLPS のコマンドレット](https://docs.microsoft.com/powershell/module/sqlps)
+- [SqlServer のコマンドレット](/powershell/module/sqlserver)
+- [SQLPS のコマンドレット](/powershell/module/sqlps)
 
 ## <a name="next-steps"></a>次のステップ
 
-[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)
+- [SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)
+- [SQL Server PowerShell コマンドレット](/powershell/module/sqlserver)
+- [Azure Data Studio で PowerShell を使用する](../azure-data-studio/extensions/powershell-extension.md)

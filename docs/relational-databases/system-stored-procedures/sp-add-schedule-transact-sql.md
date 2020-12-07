@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3255e54b961effa6581875a332dc6651b7e1dce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ee456f7be6d59ded32a67908d69bf59028e931c6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542010"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753838"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type` ジョブがいつ実行されるかを示す値です。 *freq_type* は **int**,、既定値は **0**,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
@@ -69,7 +69,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|月単位|  
 |**32**|毎月 ( *freq_interval*を基準)|  
 |**64**|SQL エージェントサービスの開始時に実行する|  
-|**128**|コンピューターがアイドル状態のときに実行する ( [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)ではサポートされていません) |  
+|**128**|コンピューターがアイドル状態のときに実行する ( [AZURE SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)ではサポートされていません) |  
   
 `[ @freq_interval = ] freq_interval` ジョブを実行する曜日。 *freq_interval* は **int**,、既定値は **1**,、 *freq_type*の値に依存します。  
   
@@ -85,7 +85,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`*Freq_subday_interval*の単位を指定します。 *freq_subday_type* は **int**,、既定値は **0**,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定された時間|  
 |**0x2**|Seconds|  
@@ -96,10 +96,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`*Freq_interval*が 32 (月単位) の場合、各月における*freq_interval*のジョブの発生回数。 *freq_relative_interval* は **int**,、既定値は **0**,、これらの値のいずれかを指定することができます。 *freq_type*が32と等しくない場合、 *freq_relative_interval*は無視されます。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|Third|  
 |**8**|4 番目|  
 |**16**|Last (最後へ)|  
@@ -136,7 +136,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -201,5 +201,4 @@ GO
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

@@ -14,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc15af15be20b4ba1bbcd5566c5e63ac0d7226f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c24de4dba33fce34eb88333b8c877d13a4a1ebb0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490928"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006583"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server の JSON データ
 
@@ -194,7 +194,7 @@ OUTER APPLY OPENJSON(skills)
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>SQL Server のデータを JSON に変換または JSON をエクスポートする
 
 >[!NOTE]
->Azure SQL Data Warehouse データの JSON への変換や、JSON のエクスポートは、サポートされていません。
+>Azure Synapse Analytics データの JSON への変換や、JSON のエクスポートは、サポートされていません。
 
 **FOR JSON** 句を **SELECT** ステートメントに追加して、SQL Server データまたは SQL クエリの結果を JSON として書式設定します。 **FOR JSON** を使用して、JSON 出力の形式設定をクライアント アプリケーションから SQL Server に委任します。 詳細については、「[FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」を参照してください。  
   

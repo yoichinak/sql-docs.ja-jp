@@ -18,10 +18,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327068"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
@@ -79,7 +79,7 @@ ms.locfileid: "88327068"
   
      **アーティクル スクリプトを作成し、それをカスタム作成スクリプトとして指定するには**  
   
-    1.  DB2 SQL 言語を使用してアーティクル スクリプトを作成します。 ファイルの最初の行が **bypass_translation**であり、この行に他に記述がないことを確認します。  
+    1.  DB2 SQL 言語を使用してアーティクル スクリプトを作成します。 ファイルの最初の行が **bypass_translation** であり、この行に他に記述がないことを確認します。  
   
     2.  sp_changearticle を実行し、*creation_script* プロパティに対してファイルのパスと名前を指定します。  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0e79cf0185f4657cd8192dd3dcd9bcce47c962e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 031681460a9f5b958bc08f2b39cec6b3ec794623
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977523"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722963"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>手順 4:サーバーがレコード セットを返す (RDS チュートリアル)
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
  RDS は、取得した**レコードセット**オブジェクトをクライアントに送り返すことのできる形式に変換します (つまり、**レコードセット**を*マーシャリング*します)。 変換の正確な形式と送信方法は、サーバーがインターネット上にあるか、イントラネット上にあるか、ローカルエリアネットワーク上にあるか、またはダイナミックリンクライブラリであるかによって異なります。 ただし、この詳細は重要ではありません。これが重要なのは、RDS が **レコードセット** をクライアントに送り返すことだけです。  
   

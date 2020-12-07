@@ -12,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 38626888302f4644a8cdc36c1c370cf43a8134cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46fb0f6fa4e8607296ead7a2f5e77ac97e75f9d5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493865"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866985"
 ---
 # <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>ユーザー辞書によるワード ブレーカーの動作のカスタマイズ (SQL Server Search)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88493865"
   
  詳細については、次の SharePoint の記事を参照してください。  
   
- [ユーザー辞書を作成する (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=215011)  
+ [ユーザー辞書を作成する (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/cc263242(v=office.14))  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、ユーザー辞書ファイルを次のフォルダーに配置します。  
   
@@ -34,5 +34,4 @@ ms.locfileid: "88493865"
  ユーザー辞書ファイルの作成または変更後、次のコマンドで SQL フルテキスト デーモン ランチャーを再起動します。  
   
  `exec sp_fulltext_service 'restart_all_fdhosts'`  
-  
   

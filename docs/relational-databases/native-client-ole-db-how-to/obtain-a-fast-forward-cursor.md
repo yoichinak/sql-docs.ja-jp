@@ -14,12 +14,12 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1f330308b276aa82d7c936d53614fd2b603b8e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5bb39a385f78849df8f0c580e9ef37aff56e85fb
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475699"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866547"
 ---
 # <a name="obtain-a-fast_forward-cursor-native-client-ole-db-provider"></a>FAST_FORWARD カーソルを取得する (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88475699"
  完全なサンプル コードには、行セット プロパティを設定して FAST_FORWARD カーソルを取得する方法が示されています。 プロパティを設定した後、SELECT ステートメントを実行し、**AdventureWorks** データベースの **Purchasing.Vendor** テーブルから **Name** 列を取得して表示します。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>FAST_FORWARD カーソルを取得するには  
   
@@ -409,5 +409,4 @@ void Cleanup() {
    OleUninitialize();  
 }  
 ```  
-  
   

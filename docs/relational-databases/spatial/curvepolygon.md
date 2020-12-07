@@ -11,15 +11,15 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69aaa7667e0aa1576dc1ec2744e1f07a402ccdf0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f117b284799ba4849131254b90a018a397824e7b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455427"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006330"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **CurvePolygon** は、1 つの外部境界リングと 0 個以上の内部リングによって定義された、位相的に閉じた表面です  
   
 > [!IMPORTANT]  
@@ -178,8 +178,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   
- [geometry データ型メソッド リファレンス](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)   
- [geography データ型メソッド リファレンス](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+ [geometry データ型メソッド リファレンス](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)   
+ [geography データ型メソッド リファレンス](../../t-sql/spatial-geography/stequals-geography-data-type.md)   
  [空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)  
-  
   

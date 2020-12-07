@@ -1,7 +1,7 @@
 ---
 title: レポート サーバーのサービス プリンシパル名 (SPN) の登録 | Microsoft Docs
 description: ネットワークで認証に Kerberos が使用されるとき、ドメイン ユーザーとして実行される場合に、レポート サーバー サービス用の SPN を作成する方法について説明します。
-ms.date: 02/12/2020
+ms.date: 09/24/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c87da88bcec8d1fcc29c282a1e012121a81f6f45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544504"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986708"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>レポート サーバーのサービス プリンシパル名 (SPN) の登録
   相互認証に Kerberos プロトコルを使用するネットワークに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を配置する場合に、レポート サーバー サービスをドメイン ユーザー アカウントとして実行するように構成するには、レポート サーバー サービスのサービス プリンシパル名 (SPN) を作成する必要があります。  
@@ -24,7 +24,7 @@ ms.locfileid: "84544504"
   
  SPN を作成するには、 **SetSPN** コマンド ライン ユーティリティを使用します。 詳細については、「  
   
--   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) 。  
+-   [Setspn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) 。  
   
 -   [サービス プリンシパル名 (SPN) SetSPN の構文 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) 。  
   
@@ -32,10 +32,10 @@ ms.locfileid: "84544504"
   
 ## <a name="syntax"></a>構文  
 
-setspn を使用して SPN を操作する場合は、SPN を正しい形式で入力する必要があります。 SPN の形式は `<serviceclass>/host:<por>` です。 SetSPN ユーティリティを使用してレポート サーバーの SPN を作成する場合は、次のようなコマンド構文を使用します。  
+setspn を使用して SPN を操作する場合は、SPN を正しい形式で入力する必要があります。 HTTP SPN の形式は `http/host` です。 SetSPN ユーティリティを使用してレポート サーバーの SPN を作成する場合は、次のようなコマンド構文を使用します。  
   
 ```  
-Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
 ```  
   
  **SetSPN** は、Windows Server で使用できます。 **-s** 引数は、重複する SPN がないことを検証してから、SPN を追加します。 **注: -s** は Windows Server 2008 以降の Windows Server で使用できます。  
@@ -57,10 +57,10 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
 4.  次のコマンドをコピーし、プレースホルダーの値を実際のネットワークで有効な値で置き換えます。  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-    例: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+    例: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  コマンドを実行します。  
   
@@ -69,8 +69,7 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
 7.  このセクションの最初のエントリとして `<RSWindowsNegotiate/>` を追加し、Kerberos を有効にします。  
   
 ## <a name="see-also"></a>参照  
- [サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [サービス アカウントの構成 (レポート サーバー構成マネージャー)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [レポート サーバー サービス アカウントの構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
-  
   

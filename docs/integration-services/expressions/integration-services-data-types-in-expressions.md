@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dd901474ae9c866a7f0ac67b70b2a40a3611c4a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425534"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196423"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
 
@@ -135,12 +135,11 @@ ms.locfileid: "88425534"
  演算や関数の結果のデータ型は、多くの場合、定義済みのものです。 つまり、引数のデータ型、または式エバリュエーターが結果をキャストするデータ型として定義されています。 たとえば、論理 OR 演算子 (||) の結果は常にブール型で、ABS 関数の結果は引数と同じ数値データ型になります。また、乗算の結果は、結果を失うことなく保持可能な最小の数値データ型になります。 結果のデータ型については、「[ &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)」と「[ &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [データ フロー コンポーネントで式を使用する](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [データ フロー コンポーネントで式を使用する](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
 -   pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=746575)」  
   
 -   social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
-  
   

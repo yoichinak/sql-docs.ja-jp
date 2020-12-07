@@ -9,16 +9,16 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bdae6053196eef621d25a4917780dd8f95318ecd
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 72c0cedefebbede20717f3e684a7570f2040d160
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914802"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358433"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
-`azdata` への適用
+[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] への適用
 
 以下の記事では、**azdata** ツールの **sql** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
 
@@ -65,7 +65,7 @@ azdata bdc spark session create [--session-kind -k]
 ### <a name="examples"></a>例
 セッションを作成します。
 ```bash
-azdata spark session create --session-kind pyspark
+azdata bdc spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--session-kind -k`
@@ -115,7 +115,7 @@ azdata bdc spark session list
 ### <a name="examples"></a>例
 すべてのアクティブなセッションを一覧表示します。
 ```bash
-azdata spark session list
+azdata bdc spark session list
 ```
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
@@ -137,7 +137,7 @@ azdata bdc spark session info --session-id -i
 ### <a name="examples"></a>例
 0 の ID を持つセッションのセッション情報を取得します。
 ```bash
-azdata spark session info --session-id 0
+azdata bdc spark session info --session-id 0
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`
@@ -162,7 +162,7 @@ azdata bdc spark session log --session-id -i
 ### <a name="examples"></a>例
 0 の ID を持つセッションのセッション ログを取得します。
 ```bash
-azdata spark session log --session-id 0
+azdata bdc spark session log --session-id 0
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`
@@ -187,7 +187,7 @@ azdata bdc spark session state --session-id -i
 ### <a name="examples"></a>例
 0 の ID を持つセッションのセッション状態を取得します。
 ```bash
-azdata spark session state --session-id 0
+azdata bdc spark session state --session-id 0
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`
@@ -212,7 +212,7 @@ azdata bdc spark session delete --session-id -i
 ### <a name="examples"></a>例
 セッションを削除します。
 ```bash
-azdata spark session delete --session-id 0
+azdata bdc spark session delete --session-id 0
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`

@@ -39,11 +39,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab3e6728560c563b5b3ecf4de03fd9359070f19e
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989886"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131085"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  Azure SQL Database では、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name がサポートされます。 Azure SQL Database では、4 つの要素で構成された名前はサポートされません。  
   
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、テーブルを削除します。  
   
@@ -142,7 +142,7 @@ SELECT * FROM #temptable;
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. IF EXISTS を使用してテーブルを削除する  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  次の例では、T1 のという名前のテーブルを作成します。 2 番目のステートメントで、テーブルを削除します。 3 番目のステートメントでは、テーブルがすでに削除されているため、何も操作が実行されませんが、エラーは発生しません。  
   

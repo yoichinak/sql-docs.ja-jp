@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcec8cc2395f22774b853407fe5959286e539e7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7ecd953c8c383ef78c6e84221282eda76a5f7fca
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917132"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671139"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>データベース管理者用の診断接続
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "86917132"
   
  DAC を使用して接続できるのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin ロールのメンバーのみです。  
   
- DAC は、`sqlcmd` コマンド プロンプト ユーティリティで特殊な管理者スイッチ (`-A`) を指定することによって使用できます。 `sqlcmd` を使用する方法の詳細については、[sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)に関するページを参照してください。 また、インスタント名の前にプレフィックス `admin:` を付けて `sqlcmd -S admin:<*instance_name*>` という形式で接続することもできます。 さらに、`admin:\<*instance_name*>`に接続することによって、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターから DAC を開始することもできます。
+ DAC は、`sqlcmd` コマンド プロンプト ユーティリティで特殊な管理者スイッチ (`-A`) を指定することによって使用できます。 `sqlcmd` を使用する方法の詳細については、[sqlcmd でのスクリプト変数の使用](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)に関するページを参照してください。 また、インスタント名の前にプレフィックス `admin:` を付けて `sqlcmd -S admin:<*instance_name*>` という形式で接続することもできます。 さらに、`admin:\<*instance_name*>`に接続することによって、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターから DAC を開始することもできます。
 
 > [!Note]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から DAC を確立する場合
@@ -122,7 +122,7 @@ ms.locfileid: "86917132"
  `sqlcmd -S serverName.database.windows.net,1434 -U sa -P <xxx> -d AdventureWorks`  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
+ [sqlcmd でのスクリプト変数の使用](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
@@ -136,5 +136,3 @@ ms.locfileid: "86917132"
  [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
  [トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
-  
-

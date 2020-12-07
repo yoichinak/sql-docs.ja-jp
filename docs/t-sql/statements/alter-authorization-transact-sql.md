@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1f3c3e7cf586cfe70fc1e8d4198a6708c36d68b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 5ada149941022761d0135adff7b1b65db592cc48
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024394"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067460"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -121,6 +121,7 @@ ALTER AUTHORIZATION ON
     | [ schema_name. ] object_name    
 }    
 ```    
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
     
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -129,27 +130,27 @@ ALTER AUTHORIZATION ON
     
 |クラス|Product|    
 |-|-|    
-|OBJECT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|ASSEMBLY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ASYMMETRIC KEY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|AVAILABILITY GROUP |**適用対象**:SQL Server 2012 以降。|
-|CERTIFICATE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|CONTRACT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
-|DATABASE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 詳しくは、後の「[データベースに対する ALTER AUTHORIZATION](#AlterDB)」をご覧ください。|    
-|ENDPOINT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
-|FULLTEXT CATALOG|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|FULLTEXT STOPLIST|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|MESSAGE TYPE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
-|REMOTE SERVICE BINDING|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
-|ROLE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ROUTE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
-|SCHEMA|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|SEARCH PROPERTY LIST|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|SERVER ROLE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
-|SERVICE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
-|SYMMETRIC KEY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|TYPE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|XML SCHEMA COLLECTION|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|OBJECT|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
+|ASSEMBLY|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ASYMMETRIC KEY|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|AVAILABILITY GROUP |**適用対象** :SQL Server 2012 以降。|
+|CERTIFICATE|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|CONTRACT|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|DATABASE|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 詳しくは、後の「[データベースに対する ALTER AUTHORIZATION](#AlterDB)」をご覧ください。|    
+|ENDPOINT|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|FULLTEXT CATALOG|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|FULLTEXT STOPLIST|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|MESSAGE TYPE|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|REMOTE SERVICE BINDING|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|ROLE|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ROUTE|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|SCHEMA|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
+|SEARCH PROPERTY LIST|**適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|SERVER ROLE|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|SERVICE|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|SYMMETRIC KEY|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|TYPE|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|XML SCHEMA COLLECTION|**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
     
  *entity_name*    
  エンティティの名前を指定します。    
@@ -179,7 +180,7 @@ ALTER AUTHORIZATION ON
  また、次の点も注意してください。    
     
 > [!IMPORTANT]    
->  オブジェクトの所有者を調べる唯一の信頼性のある方法は、**sys.objects** カタログ ビューに対するクエリを実行する方法です。 型の所有者を調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。    
+>  オブジェクトの所有者を調べる唯一の信頼性のある方法は、 **sys.objects** カタログ ビューに対するクエリを実行する方法です。 型の所有者を調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。    
     
 ## <a name="special-cases-and-conditions"></a>特殊ケースと条件    
  次の表は、権限を変更する場合の特殊ケースと例外、および条件の一覧です。    
@@ -195,7 +196,7 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|プリンシパルは、ログインであることが必要です。|    
   
 ## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> データベースに対する ALTER AUTHORIZATION  
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象** : [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>SQL Server の場合:  
 **新しい所有者の要件:**    
 新しい所有者プリンシパルは、次のいずれかである必要があります。  
@@ -215,7 +216,6 @@ ALTER AUTHORIZATION ON
 -   Azure AD 内に存在するフェデレーション ユーザー (グループではなく)。  
 -   Azure AD 内に存在するマネージド ユーザー (グループではなく) またはアプリケーション。    
 
-> [!NOTE]  
 > 新しい所有者が Azure Active Directory ユーザーの場合は、新しい所有者が新しい DBO になるデータベース内にユーザーとして存在することはできません。 このような Azure AD ユーザーは、ALTER AUTHORIZATION ステートメントを実行して新しいユーザーにデータベース所有権を変更する前にまず、データベースから削除する必要があります。 SQL Database での Azure Active Directory ユーザーの構成について詳しくは、[Azure Active Directory 認証を使用して SQL Database または [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)方法に関するページをご覧ください。   
   
 **ALTER AUTHORIZATION ステートメントを実行するユーザーの要件:**  
@@ -270,12 +270,12 @@ Azure AD ユーザーをデータベースの個人所有者として使う代�
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```   
   
-3.  ユーザー データベースで、Azure AD グループを表すユーザーを、**db_owner** 固定データベース ロールに追加します。 次に例を示します。  
+3.  ユーザー データベースで、Azure AD グループを表すユーザーを、 **db_owner** 固定データベース ロールに追加します。 次に例を示します。  
   ```sql    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
-これで、`mydbogroup` のメンバーは、**db_owner** ロールのメンバーとしてデータベースを集中管理できます。  
+これで、`mydbogroup` のメンバーは、 **db_owner** ロールのメンバーとしてデータベースを集中管理できます。  
 - このグループのメンバーが Azure AD グループから削除されると、このデータベースの dbo アクセス許可を自動的に失います。  
 - 同様に、新しいメンバーが `mydbogroup` Azure AD グループに追加された場合ば、このデータベースの dbo アクセス許可を自動的に取得します。  
   
@@ -334,7 +334,7 @@ GO
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. エンドポイントの所有権を SQL Server ログインに譲渡する    
  次の例では、エンドポイント `CantabSalesServer1` の所有権を `JaePak` に譲渡します。 エンドポイントはサーバー レベルでセキュリティ保護可能なリソースであるため、エンドポイントを譲渡できるのはサーバー レベルのプリンシパルのみです。    
     
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。    
+**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。    
     
 ```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
@@ -352,7 +352,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```    
     
 ### <a name="f-changing-the-owner-of-a-database"></a>F. データベースの所有者を変更する    
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。    
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。    
     
  次の例では、`Parts` データベースの所有者をログイン `MichikoOsada` に変更します。    
     

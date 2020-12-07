@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f30c3e123c80b9a16fd020e3126a3c40f366834
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13b74b5437eb9df1cd51425929ffb70770595a69
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510173"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988390"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>レポートの実行プロパティを構成する
   レポートの処理オプションでは、レポート データが取得されるタイミングを指定できます。 レポート データ処理のスケジュールを設定することは、外部データ ソースが特定の時刻に更新される場合 (日次または週次で更新されるデータ ウェアハウスなど) や、レポート要求のたびに同じデータが取得されるオーバーヘッドを回避したい場合などに効果的です。 また、外部のデータベース サーバーにかかる処理負荷を制御する場合や、まったく同じ一連のデータを扱う複数のユーザーに一貫性した結果を提供する場合に役立てることもできます。 変化しやすいデータを使用した場合、レポートを要求するたびに異なる結果が生成される可能性があります。 一方、レポート スナップショットでは、同時点のデータを含む他のレポートや分析ツールとの有効な比較が可能になります。  
@@ -31,7 +31,7 @@ ms.locfileid: "79510173"
   
 ## <a name="to-configure-report-processing-options"></a>レポート処理オプションを構成するには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../web-portal-ssrs-native-mode.md) を開始します。  
   
 2.  処理オプションを設定するレポートに移動し、そのレポートを開きます。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "79510173"
   
 ## <a name="see-also"></a>参照  
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
- [[コンテンツ] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [[コンテンツ] ページ (レポート マネージャー)](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [[処理オプション] プロパティ ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)  
+ [[処理オプション] プロパティ ページ &#40;レポート マネージャー&#41;](/previous-versions/sql/sql-server-2016/ms178821(v=sql.130))  
   
 ::: moniker-end
 

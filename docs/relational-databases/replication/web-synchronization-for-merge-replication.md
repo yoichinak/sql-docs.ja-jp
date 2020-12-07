@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9139d4e5b0ab2df1074774dc90af44bc711804ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7ddce7f64c33d0646f3d79aa91b75f05ff11ffe
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404478"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869269"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>マージ レプリケーションの Web 同期
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88404478"
   
  [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] の IT 部門は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で各ポータブル コンピューターを構成し、マージ レプリケーションで Web 同期を使用できるようにしました。 各ポータブル コンピューターのマージ エージェントでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を実行しているコンピューターにインストールされたレプリケーション コンポーネントを指すインターネットの URL を保持しています。 これらのコンポーネントにより、パブリッシャーとサブスクライバーが同期されます。 これで各担当者は、リモート ダイアルアップ接続を行わなくても、任意のインターネット接続経由で必要なデータのアップロードやダウンロードが行えるようになります。 インターネット接続ではトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) が使用されるため、仮想プライベート ネットワーク (VPN) は必要ありません。  
   
- Web 同期に必要なコンポーネントを構成する方法については、「[Configure Web Synchronization (Web 同期の構成)](../../relational-databases/replication/configure-web-synchronization.md)」、「[Configure IIS for Web Synchronization (Web 同期用の IIS の構成)](../../relational-databases/replication/configure-iis-for-web-synchronization.md)」、「[Configure IIS 7 for Web Synchronization (Web 同期用の IIS 7 の構成)](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)」をご覧ください。  
+ Web 同期に必要なコンポーネントを構成する方法については、「[Configure Web Synchronization (Web 同期の構成)](../../relational-databases/replication/configure-web-synchronization.md)」、「[Configure IIS for Web Synchronization (Web 同期用の IIS の構成)](./configure-iis-7-for-web-synchronization.md)」、「[Configure IIS 7 for Web Synchronization (Web 同期用の IIS 7 の構成)](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)」をご覧ください。  
   
 > [!NOTE]  
 >  Web 同期は、ポータブル コンピューター、ハンドヘルド デバイスなどのクライアントでデータを同期することを目的に設計されています。 Web 同期は、サーバー間のアプリケーションでの大量のデータ同期には適していません。  
@@ -85,5 +85,4 @@ ms.locfileid: "88404478"
 ## <a name="see-also"></a>参照  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Web 同期トポロジ](../../relational-databases/replication/topologies-for-web-synchronization.md)  
-  
   

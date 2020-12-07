@@ -13,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 566239ac238afb66650c50cd9d96c8fa81d3f70c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68b0546f18d5026caf7e0a141eb58bd62efa2188
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497145"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034878"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>[フルテキスト インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "88497145"
 > フルテキスト インデックスを作成する場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、Enterprise Manager などの外部ツールを使用して、あらかじめデータベースのフルテキスト カタログを作成しておく必要があります。  
 > 
 > [!NOTE]
-> フルテキスト インデックスの機能は、 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)」を参照してください。  
+> フルテキスト インデックスの機能は、 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
 **[選択されたフルテキスト インデックス]**  
 既存のフルテキスト インデックスを一覧表示します。 インデックスを選択すると、右のグリッドにそのインデックスのプロパティが表示されます。 一覧が空の場合、テーブルにフルテキスト インデックスは定義されていません。  
   
@@ -94,7 +94,6 @@ ms.locfileid: "88497145"
 **[一意のインデックス名]**  
 一意の単一列インデックスを持つ、データベース内のすべての列の名前を一覧表示します。 これらの列は、フルテキスト インデックスの作成に使用できます。  
   
-## <a name="see-also"></a>参照  
-[フルテキスト インデックス作成ウィザードの使用](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
-[CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
-  
+## <a name="see-also"></a>関連項目  
+[フルテキスト インデックス作成ウィザードの使用](../../relational-databases/search/use-the-full-text-indexing-wizard.md)  
+[CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d94d1cd62cc9fb8e367b112690de8331b6e2e5c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 307854616b6257c00bbcf9d5b66df6d00211b7b5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425934"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92197168"
 ---
 # <a name="reorganize-index-task"></a>インデックスの再編成タスク
 
@@ -46,10 +46,9 @@ ms.locfileid: "88425934"
 -   [[インデックスの再構成タスク] &#40;メンテナンス プラン&#41;](../../relational-databases/maintenance-plans/reorganize-index-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

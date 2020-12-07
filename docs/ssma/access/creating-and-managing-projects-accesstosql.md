@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 078b7f511d8120a0b5fa7cd182024cf7a124e84a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee6cf3bea905b169503851efe375fd614c4589e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373058"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988198"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>プロジェクトの作成と管理 (管理用 Sql)
 Access データベースをまたは SQL Azure に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、まず SSMA プロジェクトを作成する必要があります。 このプロジェクトは、移行先または SQL Azure のアクセスデータベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移行されたオブジェクトとデータ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続情報、およびプロジェクト設定を受け取る SQL Azure の対象インスタンスに関するメタデータを含むファイルです。  
@@ -39,19 +39,19 @@ SSMA には、データベースオブジェクトを変換および同期した
   
 3.  左側のウィンドウで、[ **変換**] をクリックします。  
   
-4.  右ペインで、オプションを確認します。 これらのオプションの詳細については、「 [プロジェクトの設定 (変換)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)」を参照してください。  
+4.  右ペインで、オプションを確認します。 これらのオプションの詳細については、「 [プロジェクトの設定 (変換)](./project-settings-conversion-accesstosql.md)」を参照してください。  
   
 5.  必要に応じてオプションを変更します。  
   
 6.  **移行**、 **GUI**、および**種類のマッピング**ページに対して、前の手順を繰り返します。  
   
-    -   移行オプションの詳細については、「 [プロジェクトの設定 (移行)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)」を参照してください。  
+    -   移行オプションの詳細については、「 [プロジェクトの設定 (移行)](./project-settings-migration-accesstosql.md)」を参照してください。  
   
-    -   ユーザーインターフェイスオプションの詳細については、「 [プロジェクトの設定 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)」を参照してください。  
+    -   ユーザーインターフェイスオプションの詳細については、「 [プロジェクトの設定 (GUI)](../sybase/project-settings-gui-sybasetosql.md)」を参照してください。  
   
-    -   データ型マッピングの設定の詳細については、「 [プロジェクトの設定 (型のマッピング)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)」を参照してください。  
+    -   データ型マッピングの設定の詳細については、「 [プロジェクトの設定 (型のマッピング)](./project-settings-type-mapping-accesstosql.md)」を参照してください。  
   
-    -   SQL Azure 設定の詳細については、「 [プロジェクトの設定 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)」を参照してください。  
+    -   SQL Azure 設定の詳細については、「 [プロジェクトの設定 (SQL Azure)](./project-settings-azure-sql-db-accesstosql.md)」を参照してください。  
   
 **メモ** SQL Azure 設定は、プロジェクトの作成中に [SQL Azure に移行] を選択した場合にのみ使用できます。  
   
@@ -115,4 +115,3 @@ SSMA により、プロジェクトファイルが作成されます。 これ�
 ## <a name="see-also"></a>参照  
 [Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Access データベースファイルの追加と削除](adding-and-removing-access-database-files-accesstosql.md)  
-  

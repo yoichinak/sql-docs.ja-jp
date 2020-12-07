@@ -15,11 +15,11 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6437172ce0336938ad17a8b49bdb81e6fc4a0177
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350028"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130593"
 ---
 # <a name="azure-blob-download-task"></a>Azure BLOB のダウンロード タスク
 
@@ -28,9 +28,9 @@ ms.locfileid: "88350028"
 
 Azure BLOB のダウンロード タスクを使うと、SSIS パッケージで Azure BLOB ストレージからファイルをダウンロードできます。
 
-**Azure BLOB のダウンロード タスク**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックすると、次の **[Azure BLOB ダウンロード タスク エディター]** ダイアログ ボックスが表示されます。  
+**Azure BLOB のダウンロード タスク** を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックすると、次の **[Azure BLOB ダウンロード タスク エディター]** ダイアログ ボックスが表示されます。  
   
- **Azure BLOB のダウンロード タスク**は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。  
+ **Azure BLOB のダウンロード タスク** は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。  
   
  次の表で、このダイアログ ボックスの各フィールドを説明します。  
 

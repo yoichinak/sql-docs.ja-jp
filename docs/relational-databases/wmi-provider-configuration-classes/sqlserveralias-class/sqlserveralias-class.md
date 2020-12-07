@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d3acca52f0139cf0f7ef6085470a5d9e2b839494
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 48ecf56931682da1ba0cc7ee1e379ad5146479db
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550907"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891632"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias クラス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -38,6 +38,5 @@ ms.locfileid: "89550907"
  **注:**[SqlServerAlias クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)は、プロバイダークラスから**Put**メソッドを継承します。 ただし、 **プロバイダー::P ut** メソッドによって示される結果は返されません。 詳細については、WMI のドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

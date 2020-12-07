@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 919b6b31618b1fcf36f0834aa6a3c5c2436c198b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3421b1c839504c01ecb256530cb579c18f043b86
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484525"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192802"
 ---
 # <a name="transfer-database-task"></a>データベース転送タスク
 
@@ -47,7 +47,7 @@ ms.locfileid: "88484525"
 ## <a name="execution-value"></a>実行値  
  タスクの **ExecutionValue** プロパティで定義される実行値は、値 1 を返します。これは、他の転送タスクとは異なり、データベース転送タスクでは 1 つのデータベースしか転送できないためです。  
   
- データベース転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、エラー メッセージ転送に関する情報をパッケージ内の他のオブジェクトで利用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+ データベース転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、エラー メッセージ転送に関する情報をパッケージ内の他のオブジェクトで利用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../integration-services-ssis-variables.md)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  データベース転送タスクには、次のカスタム ログ エントリが含まれています。  
@@ -84,7 +84,7 @@ ms.locfileid: "88484525"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>プログラムによるデータベース転送タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
@@ -210,4 +210,4 @@ ms.locfileid: "88484525"
   
  ネットワーク ファイル共有の場所を入力するか、参照ボタンをクリックしてネットワーク ファイル共有の場所を見つけます。  
   
- オフライン モードでデータベースを転送すると、データベース ファイルは **[転送先フォルダー]** で指定した場所に転送される前に、 **[ネットワーク ファイル共有]** で指定した場所にコピーされます。  
+ オフライン モードでデータベースを転送すると、データベース ファイルは **[転送先フォルダー]** で指定した場所に転送される前に、 **[ネットワーク ファイル共有]** で指定した場所にコピーされます。

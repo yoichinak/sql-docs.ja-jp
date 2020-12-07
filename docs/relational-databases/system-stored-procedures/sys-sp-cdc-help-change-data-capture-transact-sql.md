@@ -1,6 +1,6 @@
 ---
-description: sp_cdc_help_change_data_capture (Transact-sql)
-title: sp_cdc_help_change_data_capture (Transact-sql) |Microsoft Docs
+description: sys.sp_cdc_help_change_data_capture (Transact-sql)
+title: sys.sp_cdc_help_change_data_capture (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 06e66a24884d243ebd5df2698ebb5c86eddf83de
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 13f78f25cd02ccf9c698518b5aa10f7fda0b7694
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541155"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809824"
 ---
-# <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sp_cdc_help_change_data_capture (Transact-sql)
+# <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  現在のデータベースで変更データキャプチャが有効になっている各テーブルについて、変更データキャプチャの構成を返します。 各ソーステーブルに対して最大で2つの行を返すことができます。キャプチャインスタンスごとに1つの行です。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+  現在のデータベースで変更データキャプチャが有効になっている各テーブルについて、変更データキャプチャの構成を返します。 各ソーステーブルに対して最大で2つの行を返すことができます。キャプチャインスタンスごとに1つの行です。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|ソーステーブル内の行を一意に識別するために使用されるインデックス列の一覧です。|  
 |captured_column_list|**nvarchar(max)**|キャプチャ対象のソース列のリスト。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  *Source_schema*と*source_name*が既定で null に設定されているか、明示的に null が設定されている場合、このストアドプロシージャは、呼び出し元が選択したアクセス権を持つすべてのデータベースキャプチャインスタンスに関する情報を返します。 *Source_schema*および*source_name*が NULL 以外の場合は、特定の名前が有効になっているテーブルに関する情報のみが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -112,5 +112,4 @@ GO
 EXECUTE sys.sp_cdc_help_change_data_capture;  
 GO  
 ```  
-  
   

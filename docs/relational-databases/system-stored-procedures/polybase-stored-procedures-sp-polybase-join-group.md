@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53db2ff3554c095832a6fa21accb061f2575c3d6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fe56373e9f80ce88c647458444655bea60ac431c
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548387"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753890"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -57,7 +57,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="remarks"></a>解説  
- ストアドプロシージャを実行した後、PolyBase エンジンをシャットダウンし、マシン上の PolyBase Data Movement サービスを再起動します。 検証するには、ヘッドノードで次の DMV を実行します: **dm_exec_compute_nodes**。  
+ ストアドプロシージャを実行した後、PolyBase エンジンをシャットダウンし、マシン上の PolyBase Data Movement サービスを再起動します。 検証するには、ヘッドノードで次の DMV を実行します: **sys.dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>例  
  この例では、現在のコンピューターを計算ノードとして PolyBase グループに参加させます。  ヘッドノードの名前は **HST01** で、ヘッドノード上の SQL Server インスタンスの名前は **MSSQLSERVER**です。  
@@ -67,7 +67,6 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [PolyBase の概要](../polybase/polybase-guide.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

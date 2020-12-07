@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ecc213e023483245fb8b40a55de749c23ae16a84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbeaa08cd118e032465f8456c0d7d7e111562f88
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426164"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727704"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -92,9 +92,8 @@ NATURAL PREDICTION JOIN
  [&#40;DMX&#41;の PredictStdev ](../dmx/predictstdev-dmx.md)   
  [&#40;DMX&#41;の PredictSupport ](../dmx/predictsupport-dmx.md)   
  [&#40;DMX&#41;の PredictVariance ](../dmx/predictvariance-dmx.md)   
- [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
  [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
-  
   

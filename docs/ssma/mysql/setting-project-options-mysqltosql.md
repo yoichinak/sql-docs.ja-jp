@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 642d6df01fc5855ece9bd06ea2860de076f754bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df2a29b2d411c2502573ede95feefe9c1e061c5b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418428"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987898"
 ---
 # <a name="setting-project-options-mysqltosql"></a>プロジェクト オプションの設定 (MySQLToSQL)
 SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションでは、オブジェクトの変換方法、データの移行方法、およびソースデータ型とターゲットデータ型のマッピング方法を指定します。  オブジェクトを SQL Server に変換したり、SQL Server または SQL Azure にデータを SQL Azure または移行したりする前に、構成オプションがプロジェクトに適していることを確認してください。  
@@ -55,7 +55,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   [プロジェクト設定 &#40;移行&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [プロジェクトの設定 (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [プロジェクトの設定 (GUI) (SSMA Common)](../sybase/project-settings-gui-sybasetosql.md)  
   
 -   [プロジェクト設定 &#40;型マッピング&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
@@ -103,4 +103,3 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 ## <a name="see-also"></a>参照  
 [MySQL と SQL Server のデータ型のマッピング &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
-  

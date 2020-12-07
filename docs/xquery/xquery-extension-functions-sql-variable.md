@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ed7dd109906b4cace6ed185b1842f9e9e7dedde
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775423"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037039"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery Extension Functions - sql:variable()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "85775423"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 「 [Xml 内部のリレーショナルデータのバインド](../t-sql/xml/binding-relational-data-inside-xml-data.md)」で説明したように、 [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md)を使用して XQuery 内にリレーショナル値を公開するときに、この関数を使用できます。  
+## <a name="remarks"></a>解説  
+ 「 [Xml 内部のリレーショナルデータのバインド](../t-sql/xml/binding-relational-data-inside-xml-data.md)」で説明したように、 [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md) を使用して XQuery 内にリレーショナル値を公開するときに、この関数を使用できます。  
   
- たとえば、 [query () メソッド](../t-sql/xml/query-method-xml-data-type.md)を使用して、 **xml**データ型の変数または列に格納されている xml インスタンスに対してクエリを指定します。 また、場合によっては、リレーショナル データと XML データを一緒にするために、[!INCLUDE[tsql](../includes/tsql-md.md)] 変数の値 (パラメーター) をクエリで使用することもできます。 これを行うには、 **sql: variable**関数を使用します。  
+ たとえば、 [query () メソッド](../t-sql/xml/query-method-xml-data-type.md) を使用して、 **xml** データ型の変数または列に格納されている xml インスタンスに対してクエリを指定します。 また、場合によっては、リレーショナル データと XML データを一緒にするために、[!INCLUDE[tsql](../includes/tsql-md.md)] 変数の値 (パラメーター) をクエリで使用することもできます。 これを行うには、 **sql: variable** 関数を使用します。  
   
  SQL 値は、対応する XQuery 値にマップされ、型は、対応する SQL 型に相当する XQuery 基本データ型になります。  
   
@@ -93,12 +93,11 @@ WHERE ProductID=771
          ListPrice="3399.99" DiscountPrice="2500" />  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [XQuery 拡張関数の SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+## <a name="see-also"></a>参照  
+ [XQuery 拡張関数の SQL Server](./xquery-extension-functions-sql-column.md)   
  [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML データのインスタンスの作成](../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)   
  [XML データ変更言語 &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

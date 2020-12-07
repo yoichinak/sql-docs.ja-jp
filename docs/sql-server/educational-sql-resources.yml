@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 01/07/2020
-  ms.openlocfilehash: ae7785e57f43d83ec1a30e2d0642c6188e3b666d
-  ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+  ms.openlocfilehash: d365573f99f0462a26d3c144476c32b4dc47773b
+  ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/21/2020
-  ms.locfileid: "88745892"
+  ms.lasthandoff: 10/13/2020
+  ms.locfileid: "91988548"
 landingContent:
 - title: SQL について
   linkLists:
@@ -23,7 +23,7 @@ landingContent:
     - text: 初心者向け Azure SQL
       url: https://aka.ms/azuresql4beginners
     - text: Azure SQL の基礎
-      url: https://docs.microsoft.com/learn/paths/azure-sql-fundamentals/
+      url: /learn/paths/azure-sql-fundamentals/
     - text: Azure SQL のハンズオン ラボ
       url: https://aka.ms/asqlworkshop
     - text: Azure SQL の短期集中講座
@@ -39,9 +39,9 @@ landingContent:
   - linkListType: learn
     links:
     - text: SQL Server をアップグレードする
-      url: https://docs.microsoft.com/learn/modules/introduction-upgrading-sql-server/
+      url: /learn/modules/introduction-upgrading-sql-server/
     - text: クエリ調整アシスタントを使用する
-      url: https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/
+      url: /learn/modules/use-sql-server-query-tuning-assistant/
     - text: SQL Server ワークショップ
       url: https://aka.ms/sqlworkshops
   - linkListType: quickstart
@@ -49,7 +49,7 @@ landingContent:
     - text: Azure Data Studio を使用した接続とクエリ
       url: ../azure-data-studio/quickstart-sql-server.md
     - text: SSMS を使用した接続とクエリ
-      url: ../ssms/tutorials/connect-query-sql-server.md
+      url: ../ssms/quickstarts/connect-query-sql-server.md
     - text: Transact-SQL (T-SQL) の記述
       url: ../t-sql/tutorial-writing-transact-sql-statements.md
     - text: 拡張イベント
@@ -115,13 +115,13 @@ landingContent:
   - linkListType: learn
     links:
     - text: データ ストレージ アプローチを選択する
-      url: https://docs.microsoft.com/learn/modules/choose-storage-approach-in-azure/
+      url: /learn/modules/choose-storage-approach-in-azure/
     - text: セキュリティで保護された SQL Database
-      url: https://docs.microsoft.com/learn/modules/secure-your-azure-sql-database/
+      url: /learn/modules/secure-your-azure-sql-database/
     - text: 地理的に分散されたアプリ
-      url: https://docs.microsoft.com/learn/modules/design-a-geographically-distributed-application/
+      url: /learn/modules/design-a-geographically-distributed-application/
     - text: SQL Database のクエリを実行する ASP.NET アプリ
-      url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+      url: /learn/modules/develop-app-that-queries-azure-sql/
   - linkListType: quickstart
     links:
     - text: ポータルまたはコードを使用して DB を作成する
@@ -147,13 +147,13 @@ landingContent:
   - linkListType: learn
     links:
     - text: はじめに
-      url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+      url: /learn/modules/introduction-sql-server-linux/
     - text: 配置
-      url: https://docs.microsoft.com/learn/modules/deploy-sql-server-linux/
+      url: /learn/modules/deploy-sql-server-linux/
     - text: 自動調整
-      url: https://docs.microsoft.com/learn/modules/automatically-tune-sql-server-linux/
+      url: /learn/modules/automatically-tune-sql-server-linux/
     - text: Containers
-      url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
+      url: /learn/modules/run-sql-server-2017-linux-containers/
   - linkListType: quickstart
     links:
     - text: Red Hat

@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 45699c76ef91d76c94dc5829a8f8d328662f6a6a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: febd24b17458a37a6ff12c8b17f55527311a0aee
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114689"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584785"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services と Always On 可用性グループ
 
@@ -128,7 +128,7 @@ ms.locfileid: "91114689"
   
 2.  接続マネージャーで、プロバイダーには、表形式のデータ ストリーム (TDS) プロトコルをサポートするプロバイダーを選択します。 SQL Server Native Client 11.0 は、このプロトコルをサポートしています。  
   
-3.  接続マネージャーで、[サーバー名] に *可用性グループ リスナー*の名前を入力し、グループで使用可能なデータベースを選択します。  
+3.  接続マネージャーで、[サーバー名] に *可用性グループ リスナー* の名前を入力し、グループで使用可能なデータベースを選択します。  
   
      可用性グループ リスナーは、読み取り/書き込み要求の場合はクライアント接続をプライマリ レプリカにリダイレクトし、接続文字列内で読み取りを目的と指定している場合はセカンダリ レプリカにリダイレクトします。 フェールオーバー中にレプリカ ロールが変化する (プライマリがセカンダリになり、セカンダリがプライマリになる) ため、リスナーを常に指定してそれに従ってクライアント接続がリダイレクトされるようにする必要があります。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "91114689"
   
 4.  ソリューションを配置し、完了したらトレースを停止します。  
   
-     トレース ウィンドウには、アプリケーション **Microsoft SQL Server Analysis Services**からのイベントが表示されます。 セカンダリ レプリカをホストしているサーバー インスタンスのデータベースからデータを取得する **SELECT** ステートメントが表示されます (リスナー経由でセカンダリ レプリカに接続された場合)。  
+     トレース ウィンドウには、アプリケーション **Microsoft SQL Server Analysis Services** からのイベントが表示されます。 セカンダリ レプリカをホストしているサーバー インスタンスのデータベースからデータを取得する **SELECT** ステートメントが表示されます (リスナー経由でセカンダリ レプリカに接続された場合)。  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>手順 2. 計画されたフェールオーバーを実行して構成をテストする  
   
@@ -216,13 +216,12 @@ ms.locfileid: "91114689"
   
  読み取り可能なセカンダリ レプリカに常時アクセスするように接続を構成している場合、プライマリ レプリカへの READWRITE 接続を使用する新しい接続を構成する必要があります。  
   
- そのために、Analysis Services モデルに追加のデータ ソースを作成して、読み取りと書き込みの接続をサポートします。 追加のデータ ソースを作成するとき、読み取り専用接続で指定したものと同じリスナー名とデータベースを使用しますが、 **Application Intent**を修正しないで、READWRITE 接続をサポートする既定値を保持します。 読み取りと書き込みのデータ ソースに基づいたデータ ソース ビューに新しいファクトまたはディメンション テーブルを追加し、新しいテーブルへの書き戻しを有効にできます。  
+ そのために、Analysis Services モデルに追加のデータ ソースを作成して、読み取りと書き込みの接続をサポートします。 追加のデータ ソースを作成するとき、読み取り専用接続で指定したものと同じリスナー名とデータベースを使用しますが、 **Application Intent** を修正しないで、READWRITE 接続をサポートする既定値を保持します。 読み取りと書き込みのデータ ソースに基づいたデータ ソース ビューに新しいファクトまたはディメンション テーブルを追加し、新しいテーブルへの書き戻しを有効にできます。  
   
 ## <a name="see-also"></a>参照  
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
- [データ ソースの作成 &#40;SSAS 多次元&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [ディメンションの書き戻しの有効化](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
-  
+ [データ ソースの作成 &#40;SSAS 多次元&#41;](/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [ディメンションの書き戻しの有効化](/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   

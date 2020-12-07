@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22ad17c49a2f084453c87f26b9c782404f93483d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784032"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679262"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Always Encrypted を使用した暗号化データの列への一括読み込み
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85784032"
 ## <a name="data-migration-scenarios"></a>データの移行シナリオ  
 次の表では、いくつかの移行シナリオに適した推奨設定を示しています。  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![いくつかの移行シナリオに適した推奨設定を示す表のスクリーンショット。](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>暗号化されたデータの一括読み込み  
 次のプロセスを使用して、暗号化されたデータを読み込みます。  
@@ -58,7 +58,7 @@ ms.locfileid: "85784032"
 
 1.  あるユーザーに対して、オプションを ON に設定します。  
  
-2.  このユーザーは、データベースに接続されているアプリケーションを実行します。 アプリケーションは一括 API を使用して、暗号化された列にプレーン テキスト値を挿入します。 アプリケーションには、挿入時にデータを暗号化するために Always Encrypted が有効なクライアント ドライバーが必要です。 しかし、アプリケーションが正しく構成されていないため、結局、Always Encrypted をサポートしていないドライバー、または **column encryption setting=enabled**が含まれていない接続文字列が使用されます。  
+2.  このユーザーは、データベースに接続されているアプリケーションを実行します。 アプリケーションは一括 API を使用して、暗号化された列にプレーン テキスト値を挿入します。 アプリケーションには、挿入時にデータを暗号化するために Always Encrypted が有効なクライアント ドライバーが必要です。 しかし、アプリケーションが正しく構成されていないため、結局、Always Encrypted をサポートしていないドライバー、または **column encryption setting=enabled** が含まれていない接続文字列が使用されます。  
 
 3.  アプリケーションはプレーンテキスト値をサーバーに送信します。 暗号化メタデータ チェックがユーザーのサーバーでは無効になっているため、サーバーでは不適切なデータ (適切に暗号化された暗号化テキストではなくプレーンテキスト) を暗号化された列に挿入することができます。  
  

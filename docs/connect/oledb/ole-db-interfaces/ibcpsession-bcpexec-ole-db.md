@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPExec method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 87e7b6e3d53f865ff4c5495729951d9045edb483
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 9c3970eba0c3e9839d2eaa1ba42ad384fdbd5909
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861953"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081821"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ HRESULT BCPExec(
  メソッドが成功しました。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) インターフェイスを使用してください。  
+ プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) インターフェイスを使用してください。  
   
  E_UNEXPECTED  
  メソッドの呼び出しが予期されませんでした。 たとえば、このメソッドを呼び出す前に、**BCPInit** メソッドが呼び出されなかった場合などです。 また、操作が BCP_OPTION_ABORT オプションを使用して中断され、その後、**BCPExec** メソッドが呼び出された場合にも発生します。  
@@ -73,5 +73,4 @@ HRESULT BCPExec(
 ## <a name="see-also"></a>参照  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [一括コピー操作の実行](../../oledb/features/performing-bulk-copy-operations.md)  
-  
   

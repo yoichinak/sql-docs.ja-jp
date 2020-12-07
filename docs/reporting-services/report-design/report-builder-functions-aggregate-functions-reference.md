@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 8338e122e08ddf03417875c6a0436c16d1e3ff34
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255735"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935283"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>レポート ビルダー関数 - 集計関数リファレンス
   レポートに集計値を含めるには、式に組み込み集計関数を使用できます。 数値フィールドの既定の集計関数は SUM です。 式を編集して異なる組み込み集計関数を使用したり、異なるスコープを指定することもできます。 スコープにより、計算に使用するデータセットが識別されます。  
@@ -65,7 +65,7 @@ ms.locfileid: "84255735"
 |[Var](../../reporting-services/report-design/report-builder-functions-var-function.md)|式で指定された NULL 以外のすべての数値の分散を、指定されたスコープで評価して返します。|  
 |[VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)|式で指定された NULL 以外のすべての数値の母集団に対する分散を、指定されたスコープのコンテキストで評価して返します。|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
 ##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> 組み込みフィールド、コレクション、および集計関数に関する制限  
  以下の表には、グローバル組み込みコレクションの参照を含む式を追加できるレポートの場所に関する制限をまとめています。  
@@ -102,7 +102,7 @@ ms.locfileid: "84255735"
   
 -   **注 8:** Count および CountDistinct を除くすべての集計のデータ型は、すべての値で同じデータ型、または null である必要があります。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
 ##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> 入れ子集計に関する制限  
  以下の表には、集計関数に入れ子集計として別の集計関数を指定する際の制限をまとめています。  
@@ -119,7 +119,7 @@ ms.locfileid: "84255735"
   
 -   **注 1:** 集計関数は、集計に参照関数が含まれていない場合に、参照関数の *Source* 式内のみに使用できます。 集計関数は、参照関数の *Destination* 式または *Result* 式内には使用できません。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
 ##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> 実行中の値の計算  
  次の組み込み関数は、データのセットの実行中の値を計算します。 **RowNumber** は、コンテナー スコープ内の行ごとに増加するカウントの実行中の値を返す点で、 **RunningValue** に似ています。 これらの関数のスコープのパラメーターでは、カウントが再開されるタイミングを制御するコンテナー スコープを指定する必要があります。  
@@ -129,7 +129,7 @@ ms.locfileid: "84255735"
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|指定されたスコープの実行中の行数を返します。 **RowNumber** 関数では、カウントが 0 ではなく 1 から再開されます。|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|式で指定された NULL 以外のすべての数値の実行中の集計を、指定されたスコープに対して評価して返します。|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
 ##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> 行数の取得  
  次の組み込み関数は、指定されたスコープの行数を計算します。 この関数を使用すると、NULL 値の行を含め、すべての行がカウントされます。  
@@ -138,7 +138,7 @@ ms.locfileid: "84255735"
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|NULL 値の行を含めて、指定されたスコープ内の行数を返します。|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
 ##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> 別のデータセットの値の参照  
  次の参照関数では、指定されたデータセットから値を取得します。  
@@ -149,7 +149,7 @@ ms.locfileid: "84255735"
 |[LookupSet 関数](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|データセットから、指定された式に対応する値のセットを返します。|  
 |[Multilookup 関数](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|名前と値のペアを含むデータセットから、名前のセットに最初に一致した値のセットを返します。|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
 ##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> 並べ替え依存の値の取得  
  次の組み込み関数は、指定されたスコープ内の最初、最後、または前の値を返します。 これらの関数は、データ値の並べ替え順序に依存します。 たとえば、これらの関数を使用すると、ページの最初の値と最後の値を検出して、辞書形式のページ ヘッダーを作成することができます。 また、 **Previous** を使用すると、特定のスコープ内のある行の値と前の行の値を比較し、テーブルの前年比の比率を検出する処理などを行うことができます。  
@@ -160,7 +160,7 @@ ms.locfileid: "84255735"
 |[Last](../../reporting-services/report-design/report-builder-functions-last-function.md)|指定された式の指定されたスコープの最後の値を返します。|  
 |[[戻る]](../../reporting-services/report-design/report-builder-functions-previous-function.md)|アイテムの、指定されたスコープ内の直前のインスタンスに対応する値または指定された集計値を返します。|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
 ##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> サーバー集計値の取得  
  次の組み込み関数は、データ プロバイダーからカスタム集計を取得します。 たとえば、データ ソースの種類に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用すると、グループ ヘッダーで使用するために、データ ソース サーバーで計算された集計を取得することができます。  
@@ -169,7 +169,7 @@ ms.locfileid: "84255735"
 |------------------|---------------------|  
 |[集計](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|データ プロバイダーの定義に従い、指定された式のカスタムの集計を返します。|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
 ##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> スコープのテスト  
  次の組み込み関数は、レポート アイテムの現在のコンテキストをテストし、それが特定のスコープのメンバーかどうかを確認します。  
@@ -178,7 +178,7 @@ ms.locfileid: "84255735"
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|アイテムの現在のインスタンスが、指定したスコープ内にあるかどうかを示します。|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
 ##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> 再帰レベルの取得  
  次の組み込み関数は、再帰型階層が処理されたときの現在のレベルを取得します。 テキスト ボックスの **Padding** プロパティに対してこの関数の結果を使用して、再帰グループの階層構造のインデント レベルを制御できます。 詳細については、「[複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)」を参照してください。  
@@ -187,11 +187,10 @@ ms.locfileid: "84255735"
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|再帰型階層の現在の深さのレベルを返します。|  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")トップに戻る  
   
 ## <a name="see-also"></a>参照  
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

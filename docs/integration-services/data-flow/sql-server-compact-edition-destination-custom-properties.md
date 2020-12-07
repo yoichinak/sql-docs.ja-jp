@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba01a1c05c9ea83babc36e5c639a4a4fa20a70d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c96209a528c2256126155f393cf2e80378e0b62
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348598"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194732"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 変換先のカスタム プロパティ
 
@@ -35,7 +35,6 @@ ms.locfileid: "88348598"
   
  詳細については、「 [SQL Server Compact Edition 変換先](../../integration-services/data-flow/sql-server-compact-edition-destination.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+## <a name="see-also"></a>参照  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

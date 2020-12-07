@@ -18,12 +18,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 84175e90bdc9c441238f9259268d8a3078364066
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7e4f4589fa5d6c4e2758a2b259ff8e6129904f7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917748"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869076"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>レプリケーションのセキュリティ設定の表示および変更
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -418,7 +418,7 @@ ms.locfileid: "86917748"
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   
 > [!IMPORTANT]  
->  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../../includes/msconame-md.md)] を使用します。  
+>  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](/previous-versions/aa719848(v=vs.71)) 暗号化サービス [!INCLUDE[msCoName](../../../includes/msconame-md.md)] を使用します。  
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>レプリケーション サーバーに格納されているパスワードのインスタンスをすべて変更するには  
   
@@ -435,7 +435,7 @@ ms.locfileid: "86917748"
     -   *password* - 新しいパスワード値。  
   
         > [!IMPORTANT]  
-        >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework に用意されている [暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733) を使用します。  
+        >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework に用意されている [暗号化サービス](/previous-versions/aa719848(v=vs.71)) を使用します。  
   
         > [!NOTE]  
         >  固定サーバー ロール **sysadmin** のメンバー以外、このメソッドを呼び出すことはできません。  
@@ -580,5 +580,4 @@ ms.locfileid: "86917748"
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
-  
   

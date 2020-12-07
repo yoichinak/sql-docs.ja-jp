@@ -1,6 +1,6 @@
 ---
 description: sys.server_principals (Transact-SQL)
-title: server_principals (Transact-sql) |Microsoft Docs
+title: sys.server_principals (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d8a54afa21c46a7881b95d100c4c7746c6e3f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41147a1b5a644c5af7a155635c0e7c690f2e4916
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377298"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196716"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "88377298"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|プリンシパルの名前。 はサーバー内で一意です。|  
 |**principal_id**|**int**|プリンシパルの ID 番号。 はサーバー内で一意です。|  
-|**sid**|**varbinary (85)**|プリンシパルの SID (セキュリティ識別子)。 Windows プリンシパルの場合、これは Windows SID に一致します。|  
-|**type**|**char (1)**|プリンシパルの種類:<br /><br /> S = SQL ログイン<br /><br /> U = Windows ログイン<br /><br /> G = Windows グループ<br /><br /> R = サーバーの役割<br /><br /> C = 証明書にマッピングされたログイン<br /><br /> K = 非対称キーにマップされたログイン|  
-|**type_desc**|**nvarchar(60)**|プリンシパルの種類の説明。<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**sid**|**varbinary(85)**|プリンシパルの SID (セキュリティ識別子)。 Windows プリンシパルの場合、これは Windows SID に一致します。|  
+|**type**|**char(1)**|プリンシパルの種類:<br /><br /> S = SQL ログイン<br /><br /> U = Windows ログイン<br /><br /> G = Windows グループ<br /><br /> R = サーバーの役割<br /><br /> C = 証明書にマッピングされたログイン<br /><br /> E = Azure Active Directory からの外部ログイン<br /><br /> X = Azure Active Directory グループまたはアプリケーションからの外部グループ<br /><br /> K = 非対称キーにマップされたログイン|  
+|**type_desc**|**nvarchar(60)**|プリンシパルの種類の説明。<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> EXTERNAL_LOGIN<br /><br /> EXTERNAL_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = ログインは無効です。|  
 |**create_date**|**datetime**|プリンシパルが作成された日時。|  
 |**modify_date**|**datetime**|プリンシパル定義が最後に変更された時刻。|  
@@ -58,7 +58,7 @@ ms.locfileid: "88377298"
  次のクエリは、サーバープリンシパルに対して明示的に許可または拒否された権限を一覧表示します。  
   
 > [!IMPORTANT]  
->  固定サーバーロール (public 以外) の権限は、sys. server_permissions には表示されません。 そのため、サーバープリンシパルには、ここに記載されていない追加のアクセス許可がある場合があります。  
+>  固定サーバーロール (public 以外) の権限は sys.server_permissions に表示されません。 そのため、サーバープリンシパルには、ここに記載されていない追加のアクセス許可がある場合があります。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a55d74c1f7f75065cafa560cf1c6cc0bc70e2f99
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391118"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195224"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>[Integration Services デザイナー] の [全般] ページのオプション
 
@@ -33,7 +33,7 @@ ms.locfileid: "88391118"
  **[パッケージの読み込み時にデジタル署名を確認する]**  
  パッケージの読み込み時に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] でデジタル署名を確認する場合に選択します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、デジタル署名が存在するか、有効であるか、信頼されるソースから来たものであるかということだけが確認されます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、パッケージの署名後にパッケージが変更されたかどうかは確認されません。  
   
- **BlockedSignatureStates** レジストリ値を設定すると、このレジストリ値が、**[パッケージの読み込み時にデジタル署名を確認する]** オプションをオーバーライドします。 詳細については、「 [レジストリ値を設定して署名ポリシーを実装する](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)」をご覧ください。  
+ **BlockedSignatureStates** レジストリ値を設定すると、このレジストリ値が、**[パッケージの読み込み時にデジタル署名を確認する]** オプションをオーバーライドします。 詳細については、「 [レジストリ値を設定して署名ポリシーを実装する](./security/identify-the-source-of-packages-with-digital-signatures.md)」をご覧ください。  
   
  詳細については、「 [デジタル署名を使用してパッケージのソースを特定する](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)」をご覧ください。  
   
@@ -61,5 +61,4 @@ ms.locfileid: "88391118"
 ## <a name="see-also"></a>関連項目  
  [セキュリティの概要 &#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
  [スクリプトによるパッケージの拡張](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
-  
   

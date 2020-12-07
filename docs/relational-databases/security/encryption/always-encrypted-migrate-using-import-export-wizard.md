@@ -18,10 +18,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 89592db85cd95996274484d17fd968d70a552373
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423376"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードで Always Encrypted を使用して列間でデータを移行する 
@@ -48,7 +48,7 @@ SQL Server インポートおよびエクスポート ウィザードでデー�
 SQL Server インポートおよびエクスポート ウィザードでデータの暗号化と暗号化の解除を確実に行えるようにするには、ソース データベース接続と宛先データベース接続の両方に対して Always Encrypted を有効にすると共に、ソース データベース列内のデータとターゲット データベース列内のデータの両方を保護するキーへのアクセス権を持っている必要があります。 詳細については、「[データベース接続に対して Always Encrypted を有効または無効にする](#enable-and-disable-always-encrypted-for-a-database-connection)」および「[移行中にデータを暗号化または暗号化解除するためのアクセス許可](#permissions-for-encrypting-or-decrypting-data-during-migration)」を参照してください。
 
 ### <a name="keep-data-encrypted-during-migration"></a>移行時にデータを暗号化したままにする
-ソース SQL Server データベース内の暗号化された列から、同じまたは別の SQL Server データベース内の暗号化された列にデータをコピーするときに、ターゲット列で、ソース列と**厳密に**同じスキーマ (データ型、暗号化の種類、列暗号化キーなど) が使用されている場合は、ソース列から暗号化テキストを取得し、その暗号化されたデータ (暗号化テキスト) をターゲット SQL Server データベース内の暗号化された列に挿入するように、SQL Server インポートおよびエクスポート ウィザードを構成することができます。 
+ソース SQL Server データベース内の暗号化された列から、同じまたは別の SQL Server データベース内の暗号化された列にデータをコピーするときに、ターゲット列で、ソース列と **厳密に** 同じスキーマ (データ型、暗号化の種類、列暗号化キーなど) が使用されている場合は、ソース列から暗号化テキストを取得し、その暗号化されたデータ (暗号化テキスト) をターゲット SQL Server データベース内の暗号化された列に挿入するように、SQL Server インポートおよびエクスポート ウィザードを構成することができます。 
 
 このシナリオでは、SQL Server をサポートする任意のデータ プロバイダーを使用して、ソースまたは宛先の SQL Server データベースに接続できます。 Always Encrypted をサポートするプロバイダーを使用して宛先データベースに接続する場合は、そのデータベース接続に対して Always Encrypted が無効になっていることを確認する必要があります。 詳細については、「[データベース接続に対して Always Encrypted を有効または無効にする](#enable-and-disable-always-encrypted-for-a-database-connection)」を参照してください。
 

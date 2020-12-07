@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6704808520b77867bd1a0b39af5118225398dae2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 54d992dd3d9b3604644f985f9e7db5f523b553f9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537289"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889030"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL プロパティ (ClientNetworkProtocol クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  [クライアントプロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)によって指定されたネットワークプロトコルに必要な .dll ファイルの名前を取得します。  
+  [クライアントプロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)によって指定されたネットワークプロトコルに必要な .dll ファイルの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,6 +46,5 @@ object.ProtocolDLL [= value]
 ## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [クライアントのネットワーク プロトコルと Net-Library の構成](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [クライアントのネットワーク プロトコルと Net-Library の構成](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

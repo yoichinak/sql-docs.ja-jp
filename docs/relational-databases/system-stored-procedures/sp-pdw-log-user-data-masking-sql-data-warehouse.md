@@ -1,6 +1,6 @@
 ---
-description: sp_pdw_log_user_data_masking (SQL Data Warehouse)
-title: sp_pdw_log_user_data_masking (SQL Data Warehouse) |Microsoft Docs
+description: sp_pdw_log_user_data_masking (Azure Synapse Analytics)
+title: sp_pdw_log_user_data_masking (Azure Synapse Analytics) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0857ffe4bae954efdbad4e1e692069a2b3eeab60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c014f76aac1544e16ec693277a034779f75883cd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473988"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255614"
 ---
-# <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
+# <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   **Sp_pdw_log_user_data_masking**を使用して、アクティビティログでユーザーデータのマスキングを有効に [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] します。 ユーザーデータのマスキングは、アプライアンス上のすべてのデータベースのステートメントに影響します。  
@@ -34,11 +34,13 @@ ms.locfileid: "88473988"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
-```  
-  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 #### <a name="parameters"></a>パラメーター  
 `[ @masking_mode = ] masking_mode` 透過的なデータ暗号化ログユーザーデータのマスキングが有効かどうかを指定します。 *masking_mode* は **int**,、値は次のいずれかを指定することができます。  
   
@@ -74,7 +76,7 @@ EXEC sp_pdw_log_user_data_masking 1;
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

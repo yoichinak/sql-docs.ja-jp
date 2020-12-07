@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1ea16180c9a4e67f40302de7d70ae357b8393010
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396111"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986628"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>レポートとサブスクリプションの処理を無効化または一時停止する  
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポートやサブスクリプションの処理を無効化または一時停止するには、複数の方法があります。 この記事では、サブスクリプションの無効化からデータ ソース接続の中断までの方法を扱います。 すべての方法をどちらの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードでも使用できるわけではありません。 次の表では、方法とサポートされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードについて概要を示します。  
@@ -60,7 +60,7 @@ Web ポータルで、 **[個人用サブスクリプション]** ページま�
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ"):**Windows PowerShell を使用して、単一のサブスクリプションを無効にする:** 次の PowerShell スクリプトを使用して、特定のサブスクリプションを無効にします。 スクリプト内のサーバー名とサブスクリプション ID は更新してください。  
+![PowerShell 関連コンテンツ](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ"):**Windows PowerShell を使用して、単一のサブスクリプションを無効にする:** 次の PowerShell スクリプトを使用して、特定のサブスクリプションを無効にします。 スクリプト内のサーバー名とサブスクリプション ID は更新してください。  
   
 ```PS  
 #disable specific subscription  
@@ -80,7 +80,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") **Windows PowerShell を使用して、無効になっているすべてのサブスクリプションを一覧表示する:** 次の PowerShell スクリプトを使用して、現在のネイティブ モード レポート サーバーで無効になっているすべてのサブスクリプションを一覧表示します。 サーバー名を更新します。  
+ ![PowerShell 関連コンテンツ](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") **Windows PowerShell を使用して、無効になっているすべてのサブスクリプションを一覧表示する:** 次の PowerShell スクリプトを使用して、現在のネイティブ モード レポート サーバーで無効になっているすべてのサブスクリプションを一覧表示します。 サーバー名を更新します。  
   
 ```  
 #list all disabled subscriptions  
@@ -91,7 +91,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") **Windows PowerShell を使用して、無効になっているすべてのサブスクリプションを有効にする:** 次の PowerShell スクリプトを使用して、現在無効になっているすべてのサブスクリプションを有効にします。 サーバー名を更新します。  
+ ![PowerShell 関連コンテンツ](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") **Windows PowerShell を使用して、無効になっているすべてのサブスクリプションを有効にする:** 次の PowerShell スクリプトを使用して、現在無効になっているすべてのサブスクリプションを有効にします。 サーバー名を更新します。  
   
 ```  
 #enable all subscriptions  
@@ -105,7 +105,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") **Windows PowerShell を使用して、すべてのサブスクリプションを無効にする:** 次の PowerShell スクリプトを使用して、**すべて**のサブスクリプションを無効にします。  
+ ![PowerShell 関連コンテンツ](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") **Windows PowerShell を使用して、すべてのサブスクリプションを無効にする:** 次の PowerShell スクリプトを使用して、**すべて**のサブスクリプションを無効にします。  
   
 ```  
 #DISABLE all subscriptions  
@@ -121,7 +121,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> 共有スケジュールを一時停止する  
  レポートまたはサブスクリプションが共有スケジュールから実行される場合、スケジュールを一時停止して処理を中止できます。 一時停止したスケジュールで実行されるすべてのレポートおよびサブスクリプションの処理は、スケジュールが再開されるまで延期されます。  
   
--   **SharePoint モード:** ![SharePoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") **[サイトの設定]** で、 **[共有スケジュールの管理]** を選択します。 スケジュールを選択し、 **[選択したスケジュールの一時停止]** をクリックします。  
+-   **SharePoint モード:** ![SharePoint 設定](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") **[サイトの設定]** で、 **[共有スケジュールの管理]** を選択します。 スケジュールを選択し、 **[選択したスケジュールの一時停止]** をクリックします。  
   
 -   **ネイティブ モード:** Web ポータルで、Web ポータル画面の上部にあるメニュー バーの **[設定]** ボタン ![[設定] ボタン](media/ssrs-portal-settings-gear.png) を選択し、ドロップダウン メニューから **[サイトの設定]** を選択します。 **[スケジュール]** タブを選択して、[スケジュール] ページを表示します。 有効または無効にするスケジュールの横にあるチェックボックスをオンにしてから、 **[有効]** または **[無効]** ボタンを選択して、目的の操作を実行します。 それに応じて、[状態] 列が "無効" または "有効" に更新されます。  
   
@@ -177,4 +177,3 @@ ForEach ($subscription in $subscriptions)
  [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [レポート サーバーの Web ポータル (SSRS ネイティブ モード)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [セキュリティ保護可能なアイテム](../../reporting-services/security/securable-items.md) 
-  

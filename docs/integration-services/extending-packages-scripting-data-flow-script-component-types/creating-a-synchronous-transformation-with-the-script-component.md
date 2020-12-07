@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d5a3e10574188f4d365ed93b9e1e765b96b6dcba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 71a22131a6852708f087ddda67cabc19cdbfd87e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477224"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193124"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>スクリプト コンポーネントによる同期変換の作成
 
@@ -53,7 +53,7 @@ ms.locfileid: "88477224"
   
  **[スクリプト変換エディター]** の **[入力列]** ページには、データ フローの上流コンポーネントの出力で使用できる列が一覧表示されます。 変換する列、またはそのまま出力する列を選択します。 変換するすべての列の適切な場所に、読み取り/書き込みのマークを付けます。  
   
- **[スクリプト変換エディター]** の **[入力列]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力列] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)」を参照してください。  
+ **[スクリプト変換エディター]** の **[入力列]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力列] ページ&#41;](../data-flow/transformations/script-component.md)」を参照してください。  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>入力、出力、および出力列の設定  
  変換コンポーネントには、1 つ以上の出力を設定できます。  
@@ -71,7 +71,7 @@ ms.locfileid: "88477224"
   
 -   行レベルのエラー用のシミュレートされたエラー出力に新しい列を追加します。 通常、同じ **ExclusionGroup** 内の複数の出力には、同じ出力列のセットが含まれます。 ただし、シミュレートされたエラー出力を作成するには、エラー情報を格納するために列の追加が必要となる場合があります。 データ フロー エンジンがエラー行を処理する方法については、「[データ フロー コンポーネントでのエラー出力の使用](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)」を参照してください。 スクリプト コンポーネントでは、独自のコードを記述して、追加した列に該当するエラー情報を格納する必要があるので注意してください。 詳細については、「[スクリプト コンポーネントに対するエラー出力のシミュレート](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)」を参照してください。  
   
- **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)」を参照してください。  
+ **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../data-flow/transformations/script-component.md)」を参照してください。  
   
 ### <a name="adding-variables"></a>変数の追加  
  スクリプトで既存の変数を使用する場合は、 **[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドに追加できます。  
@@ -80,7 +80,7 @@ ms.locfileid: "88477224"
   
  スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
   
- **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)」を参照してください。  
+ **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../data-flow/transformations/script-component.md)」を参照してください。  
   
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>コード デザイン モードでの同期変換コンポーネントのスクリプト作成  
  コンポーネントのメタデータを構成した後、カスタム スクリプトを記述できます。 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開いて、カスタム スクリプトを追加できます。 使用するスクリプト言語は、 **[スクリプト]** ページの **[ScriptLanguage]** プロパティで、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic と [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# のどちらをスクリプト言語として選択したかによって決まります。  
@@ -267,4 +267,3 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
  [同期変換と非同期変換について](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
  [スクリプト コンポーネントによる非同期変換の作成](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
  [同期出力型のカスタム変換コンポーネントの開発](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
- 

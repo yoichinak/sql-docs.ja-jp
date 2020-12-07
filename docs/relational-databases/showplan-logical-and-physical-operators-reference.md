@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: ae2bfb2427d93eb0b5d923a61c4a63a159a0d48a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760292"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866585"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>プラン表示の論理操作と物理操作のリファレンス
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -253,7 +253,7 @@ ms.locfileid: "88760292"
 |![Nonclustered Index Spool 操作アイコン](../relational-databases/media/index-spool-32x.gif "Nonclustered Index Spool 操作アイコン")|**Index Spool**|**Index Spool** 物理操作の **Argument** 列には、SEEK:() 述語が含まれています。 **Index Spool** 操作では入力行をスキャンし、隠しスプール ファイル ( **tempdb** データベースに格納され、クエリの有効期間内のみ存在します) に各行のコピーを格納して、行に非クラスター化インデックスを作成します。 さらに、インデックスのシーク機能を使用して、SEEK:() 述語に適合する行だけを出力します。 この操作が再度使用され ( **Nested Loops** 操作で使用される場合など)、再バインドが不要な場合は、入力を再スキャンする代わりにスプールされたデータが使用されます。| 
 |![Nonclustered Index Update 操作アイコン](../relational-databases/media/nonclust-index-update-32x.gif "Nonclustered Index Update 操作アイコン")|**Nonclustered Index Update**|**Nonclustered Index Update** 物理操作は、 **Argument** 列 (引数) に指定された非クラスター化インデックスの入力に基づいて行を更新します。 SET:() 述語がある場合、更新される各列がこの値に設定されます。 **Nonclustered Index Update** は物理操作です。| 
 |![Online Index Insert 操作アイコン](../relational-databases/media/online-index-32x.gif "Online Index Insert 操作アイコン")|**Online Index Insert**|**Online Index Insert** 物理操作は、インデックスの作成操作、変更操作、または削除操作がオンラインで実行されることを示します。 つまり、インデックス操作の実行中に、基になるテーブル データをユーザーが利用することができます。| 
-|なし|**並列処理**|<a name="exchange"></a>**Parallelism** 操作 (または交換反復子) は、Distribute Streams、Gather Streams、Repartition Streams の各論理操作を実行します。 **Argument** 列には、パーティション分割される列のコンマ区切りのリストを指定した PARTITION COLUMNS:() 述語を含めることができます。 **Argument** 列には、パーティション分割中に並べ替え順序を保持する列のリストを指定した ORDER BY:() 述語も含めることができます。 **Parallelism** は物理操作です。 Parallelism 操作の詳細については、「[Craig Freedman's blog series](https://docs.microsoft.com/archive/blogs/craigfr/the-parallelism-operator-aka-exchange)」 (Craig Freedman のブログ シリーズ) を参照してください。<br /><br />**注:** クエリが並列クエリとしてコンパイルされても、実行時に直列クエリとして実行されると、SET STATISTICS XML によって生成された、または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[実際の実行プランを含める]** オプションを使用して生成されたプラン表示出力に **Parallelism** 操作の **RunTimeInformation** 要素は含まれません。 SET STATISTICS PROFILE の出力では、 **Parallelism** 操作に対する実際の行数および実際の実行回数としてゼロが表示されます。 いずれの状況が発生した場合も、 **Parallelism** 操作が実行時のクエリ プランではなく、クエリのコンパイル中にのみ使用されたことを示します。 サーバー上での同時実行の負荷が高い場合は、並列クエリ プランが直列に実行されることがあります。| 
+|なし|**並列処理**|<a name="exchange"></a>**Parallelism** 操作 (または交換反復子) は、Distribute Streams、Gather Streams、Repartition Streams の各論理操作を実行します。 **Argument** 列には、パーティション分割される列のコンマ区切りのリストを指定した PARTITION COLUMNS:() 述語を含めることができます。 **Argument** 列には、パーティション分割中に並べ替え順序を保持する列のリストを指定した ORDER BY:() 述語も含めることができます。 **Parallelism** は物理操作です。 Parallelism 操作の詳細については、「[Craig Freedman's blog series](/archive/blogs/craigfr/the-parallelism-operator-aka-exchange)」 (Craig Freedman のブログ シリーズ) を参照してください。<br /><br />**注:** クエリが並列クエリとしてコンパイルされても、実行時に直列クエリとして実行されると、SET STATISTICS XML によって生成された、または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[実際の実行プランを含める]** オプションを使用して生成されたプラン表示出力に **Parallelism** 操作の **RunTimeInformation** 要素は含まれません。 SET STATISTICS PROFILE の出力では、 **Parallelism** 操作に対する実際の行数および実際の実行回数としてゼロが表示されます。 いずれの状況が発生した場合も、 **Parallelism** 操作が実行時のクエリ プランではなく、クエリのコンパイル中にのみ使用されたことを示します。 サーバー上での同時実行の負荷が高い場合は、並列クエリ プランが直列に実行されることがあります。| 
 |![Parameter Table Scan 操作アイコン](../relational-databases/media/parameter-table-scan-32x.gif "Parameter Table Scan 操作アイコン")|**Parameter Table Scan**|**Parameter Table Scan** 操作により、現在のクエリのパラメーターとして機能しているテーブルをスキャンします。 通常、この操作は、ストアド プロシージャ内の INSERT クエリに対して使用されます。 **Parameter Table Scan** は論理操作でもあり、物理操作でもあります。| 
 |なし|**Partial Aggregate**|**Partial Aggregate** は、並列プランで使用されます。 ディスクへの書き込み ("スピル" と呼ばれます) が必要にならないように、できるだけ多くの入力行に集計関数が適用されます。 **Hash Match** は、パーティション集計を実装する唯一の物理操作 (反復子) です。 **Partial Aggregate** は論理操作です。| 
 |![Population Query カーソル操作アイコン](../relational-databases/media/poulation-query-32x.gif "Population Query カーソル操作アイコン")|**Population Query**|**Population Query** 操作によって、カーソルが開かれたときにカーソルの作業テーブルを作成します。| 
@@ -267,7 +267,7 @@ ms.locfileid: "88760292"
 |![Remote Update 操作アイコン](../relational-databases/media/remote-update-32x.gif "Remote Update 操作アイコン")|**Remote Update**|**Remote Update** 操作は、リモート オブジェクトの入力行を更新します。 **Remote Update** は論理操作でもあり、物理操作でもあります。| 
 |![Repartition Streams 並列処理操作アイコン](../relational-databases/media/parallelism-repartition-stream.gif "Repartition Streams 並列処理操作アイコン")|**Repartition Streams**|**Repartition Streams** 操作 (または交換反復子) では、複数のストリームを使用して、複数のレコード ストリームが生成されます。 レコードの内容と形式は変更されません。 クエリ オプティマイザーでビットマップ フィルターが使用される場合は、出力ストリームの行数が少なくなります。 入力ストリームの各レコードは、1 つの出力ストリームに配置されます。 この操作で順序を保持する場合、すべての入力ストリームが並べ替えられ、いくつかの並べ替え済みの出力ストリームにマージされる必要があります。 出力をパーティション分割する場合、 **Argument** 列に PARTITION COLUMNS:() 述語とパーティション列が設定されます。出力を並べ替える場合、 **Argument** 列に ORDER BY:() 述語および並べ替える列が表示されます。 **Repartition Streams** は論理操作です。 この操作は、並列クエリ プランのみで使用されます。| 
 |![Result 言語要素アイコン](../relational-databases/media/result-32x.gif "Result 言語要素アイコン")|**結果**|**Result** 操作は、クエリ プランの最後に返されるデータです。 これは通常、プラン表示のルート要素です。 **Result** は言語要素です。| 
-|![RID Lookup 操作アイコン](../relational-databases/media/rid-nonclust-locate-32x.gif "RID Lookup 操作アイコン")|**RID Lookup**|**RID Lookup** は、指定された行識別子 (RID) を使用する、ヒープ上のブックマーク参照です。 **Argument** 列 (引数) には、テーブル内の行を検索するために使用されるブックマーク ラベルや、行が検索されるテーブルの名前が含まれます。 **RID Lookup** は、常に NESTED LOOP JOIN を伴います。 **RID Lookup** は物理操作です。 ブックマーク参照の詳細については、MSDN の SQL Server ブログの「[ブックマーク参照](https://go.microsoft.com/fwlink/?LinkId=132568)」を参照してください。| 
+|![RID Lookup 操作アイコン](../relational-databases/media/rid-nonclust-locate-32x.gif "RID Lookup 操作アイコン")|**RID Lookup**|**RID Lookup** は、指定された行識別子 (RID) を使用する、ヒープ上のブックマーク参照です。 **Argument** 列 (引数) には、テーブル内の行を検索するために使用されるブックマーク ラベルや、行が検索されるテーブルの名前が含まれます。 **RID Lookup** は、常に NESTED LOOP JOIN を伴います。 **RID Lookup** は物理操作です。 ブックマーク参照の詳細については、MSDN の SQL Server ブログの「[ブックマーク参照](/archive/blogs/craigfr/)」を参照してください。| 
 |![Row Count Spool 操作アイコン](../relational-databases/media/remote-count-spool-32x.gif "Row Count Spool 操作アイコン")|**Row Count Spool**|**Row Count Spool** 操作では入力がスキャンされて存在する行数がカウントされ、同数の行がデータなしで返されます。 この操作は、行に含まれているデータではなく、行の存在チェックが重要な場合に使用されます。 たとえば、 **Nested Loops** 操作で左半結合操作が実行され、結合述語が内部入力に適用される場合、 **Nested Loops** 操作の内部入力の上に Row Count Spool が配置されることがあります。 その後、 **Nested Loops** 操作では、Row Count Spool 操作から出力される行数が特定され (内部からの実際のデータは必要ないため)、外部行を返すかどうかが判断されます。 **Row Count Spool** は物理操作です。| 
 |なし|**Right Anti Semi Join**|**Right Anti Semi Join** 操作は、2 番目 (下部) の入力の中で最初 (上部) の入力に一致する行がない各行を出力します。 一致行は、 **Argument** 列の述語に適合する行として定義されます。述語がない場合は、各行が一致行になります。 **Right Anti Semi Join** は論理操作です。| 
 |なし|**Right Outer Join**|**Right Outer Join** 操作は、2 番目 (下部) の入力と最初 (上部) の入力の一致行との結合に適合する各行を返します。 また、2 番目の入力に最初の入力に一致する行がない場合は、2 番目の入力が NULL と結合された行も返します。 **Argument** 列 (引数) に結合述語がない場合は、各行が一致する行になります。 **Right Outer Join** は論理操作です。| 
@@ -298,4 +298,3 @@ ms.locfileid: "88760292"
 |なし|**Union (結合)**|**Union** 操作は、複数の入力をスキャンし、重複行を削除して、スキャンした各行を出力します。 **Union** は論理操作です。| 
 |![Update (データベース エンジン) 操作アイコン](../relational-databases/media/update-32x.gif "Update (データベース エンジン) 操作アイコン")|**アップデート**|**Update** 操作は、クエリ実行プランの **Argument** 列で指定されているオブジェクトの入力の各行を更新します。 **Update** は論理操作です。 物理操作には、 **Table Update**、 **Index Update**、および **Clustered Index Update**があります。| 
 |![While 言語要素アイコン](../relational-databases/media/while-32x.gif "While 言語要素アイコン")|**While**|**While** 操作は [!INCLUDE[tsql](../includes/tsql-md.md)] while ループを実装します。 **While** は言語要素です。| 
-  

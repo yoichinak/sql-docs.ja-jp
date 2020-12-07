@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d5c44c11d9f5158abc52634f648a4159f86c143
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988508"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726613"
 ---
 # <a name="connection-modules-for-microsoft-sql-database"></a>Microsoft SQL Database の接続モジュール
 
-この記事では、クライアント プログラムが [Microsoft SQL Server](../relational-databases/database-features.md)、およびそれとよく似たクラウド版 [Azure SQL Database](/azure/sql-database/) との対話に使用できる接続モジュール (*ドライバー*) のダウンロード リンクを示します。 次のオペレーティング システムで実行されるさまざまなプログラミング言語用のドライバーが用意されています。
+この記事では、クライアント プログラムが [Microsoft SQL Server](../relational-databases/databases/databases.md)、およびそれとよく似たクラウド版 [Azure SQL Database](/azure/sql-database/) との対話に使用できる接続モジュール (*ドライバー*) のダウンロード リンクを示します。 次のオペレーティング システムで実行されるさまざまなプログラミング言語用のドライバーが用意されています。
 
 - Linux
 - macOS
@@ -54,7 +54,7 @@ ms.locfileid: "87988508"
 
 | Language | ORM ドライバーのダウンロード |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x 以降)](https://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x 以降)](/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM (Laravel のインストールに含まれています)](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/) |
@@ -85,7 +85,7 @@ ms.locfileid: "87988508"
 
 ## <a name="related-links"></a>関連リンク
 
-- [Java およびその他の言語を使用してクラウド内の Azure SQL Database に接続する方法のコード例](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)
+- [Java およびその他の言語を使用してクラウド内の Azure SQL Database に接続する方法のコード例](/azure/sql-database/sql-database-connect-query-java)
 
 <!--
 Image references, **obsolete** markdown syntax alternative:

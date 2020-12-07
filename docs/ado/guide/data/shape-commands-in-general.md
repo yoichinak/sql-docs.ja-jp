@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a982f08323a9e852f555732b290d598412d3a802
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c20132fe933d232d38ee843a706e9ad923d0d376
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979613"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724933"
 ---
 # <a name="shape-commands-in-general"></a>一般的な Shape コマンド
 データシェイプは、整形された **レコードセット**の列、列で表されるエンティティ間のリレーションシップ、および **レコードセット** にデータを設定する方法を定義します。  
@@ -28,7 +28,7 @@ ms.locfileid: "88979613"
   
 |列の型|説明|  
 |-----------------|-----------------|  
-|data|クエリコマンドによって返された **レコードセット** のフィールドを、データプロバイダー、テーブル、または以前に整形された **レコードセット**に返します。|  
+|[データ]|クエリコマンドによって返された **レコードセット** のフィールドを、データプロバイダー、テーブル、または以前に整形された **レコードセット**に返します。|  
 |チャプター|*チャプター*と呼ばれる別の**レコードセット**への参照。 チャプター列を使用すると、親と *子* のリレーションシップを定義できます。 *親* は、チャプター列を含む **レコードセット** であり、 *子* はチャプターによって表される **レコードセット** です。|  
 |集計 (aggregate)|列の値は、すべての行に対して *集計関数* を実行するか、子 **レコードセット**のすべての行の列に対して実行することによって得られます。 (次のトピックの「集計関数」、「集計関数」、「 [CALC 関数」、および「NEW キーワード](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)」を参照してください)。|  
 |計算式|列の値は、 **レコードセット**の同じ行の列に対して Visual Basic for Applications 式を計算することによって得られます。 式は、CALC 関数の引数です。 (次のトピックの「計算式」、「集計関数」、「CALC 関数」、「 [NEW キーワード](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) 」、および「 [Visual Basic for Applications 関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)」を参照してください)。|  
@@ -46,7 +46,7 @@ ms.locfileid: "88979613"
   
  形をした**レコードセット**の**レコードセット**コンポーネントには、プログラムから、または適切なビジュアルコントロールを使用してアクセスできます。  
   
- Microsoft では、図形のコマンドを生成するビジュアルツールを提供しています (Visual Basic 6 のドキュメントでは [データ環境デザイナー](https://go.microsoft.com/fwlink/?LinkId=5689) を参照してください)。また、階層カーソルを表示する別のツールを提供します (Visual Basic 6 のドキュメントの「Microsoft 階層フレキシブルコントロールの使用」を参照してください)。  
+ Microsoft では、図形のコマンドを生成するビジュアルツールを提供しています (Visual Basic 6 のドキュメントでは [データ環境デザイナー](/previous-versions/visualstudio/aa445793(v=vs.60)) を参照してください)。また、階層カーソルを表示する別のツールを提供します (Visual Basic 6 のドキュメントの「Microsoft 階層フレキシブルコントロールの使用」を参照してください)。  
   
  階層 **レコードセット**の移動の詳細については、「 [階層レコードセット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)」を参照してください。  
   

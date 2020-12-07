@@ -13,12 +13,12 @@ dev_langs:
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0bb9580073a6d344f5a8455ba3941c59ac94c2ef
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: c2d0e0e8e49cc190931295e2b00fbb2486e39f1d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076628"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379077"
 ---
 # <a name="session_id-transact-sql"></a>SESSION_ID (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "90076628"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Azure Synapse Analytics and Parallel Data Warehouse  
 SESSION_ID ( )  
 ```  
@@ -47,7 +47,7 @@ SESSION_ID ( )
 ## <a name="examples"></a>例  
  次の例では、現在のセッション ID を返します。  
   
-```  
+```sql  
 SELECT SESSION_ID();  
 ```  
   

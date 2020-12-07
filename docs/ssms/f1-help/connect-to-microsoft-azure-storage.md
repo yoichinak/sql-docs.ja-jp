@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: ed8fa9e9ecb2f5f94d177c588584478fae8e8d81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d1074f9247e8c46a027bde25e3b6a01cc185cb9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417928"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035475"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage への接続
 
@@ -32,7 +32,7 @@ Azure アカウントに関する次の情報を指定し、 **[次へ]** を選
 1.  **[ストレージ アカウント]** : ストレージ アカウント名を指定します。
 
    >[!NOTE]
-   > [汎用のストレージ アカウント](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services)にのみ接続できます。 他の種類のストレージ アカウントに接続すると、次のようなエラーが発生することがあります。
+   > [汎用のストレージ アカウント](/azure/storage/common/storage-introduction#azure-storage-services)にのみ接続できます。 他の種類のストレージ アカウントに接続すると、次のようなエラーが発生することがあります。
    >
    >  The value for one of the HTTP headers is not in the correct format. (いずれかの HTTP ヘッダーの値の形式が正しくありません。) (Microsoft.SqlServer.StorageClient)
    >
@@ -43,4 +43,3 @@ Azure アカウントに関する次の情報を指定し、 **[次へ]** を選
 3.  **[セキュリティ保護されたエンドポイントを使用する (HTTPS)]** : 暗号化された通信とネットワーク Web サーバーのセキュア ID を利用します。  
   
 4.  **[アカウント キーを保存する]** : 暗号化されたファイルにパスワードが保存されます。  
-  

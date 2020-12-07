@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 081941d580e51188f63c54953caa30004c83c6d0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645956"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300397"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ Always Encrypted が有効なクライアント ドライバー ライブラリ�
     |'MSSQL_CERTIFICATE_STORE'|Windows 証明書ストア| 
     |'MSSQL_CSP_PROVIDER'|Microsoft CryptoAPI をサポートするハードウェア セキュリティ モジュール (HSM) などのストア。|
     |'MSSQL_CNG_STORE'|ハードウェア セキュリティ モジュール (HSM) など、Cryptography API: Next Generation をサポートするストア。|  
-    |'AZURE_KEY_VAULT'|「[Azure Key Vault の使用を開始する](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)」をご覧ください|  
+    |'AZURE_KEY_VAULT'|「[Azure Key Vault の使用を開始する](/azure/key-vault/general/overview)」をご覧ください|  
     |'MSSQL_JAVA_KEYSTORE'| Java キー ストア。
   
 
@@ -101,7 +101,7 @@ key_path
      各値の説明:  
   
     *CertificateStoreLocation*  
-    証明書ストアの場所。現在のユーザーまたはローカル マシンにする必要があります。 詳しくは、「[Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx)」(ローカル マシンおよび現在のユーザーの証明書ストア) をご覧ください。  
+    証明書ストアの場所。現在のユーザーまたはローカル マシンにする必要があります。 詳しくは、「[Local Machine and Current User Certificate Stores](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores)」(ローカル マシンおよび現在のユーザーの証明書ストア) をご覧ください。  
   
     *CertificateStore*  
     証明書ストアの名前 (例: "My")。  
@@ -166,7 +166,7 @@ ENCLAVE_COMPUTATIONS
 列マスター キーがエンクレーブ対応であることを指定します。 列マスター キーで暗号化されたすべての列暗号化キーを、サーバー側のセキュリティで保護されたエンクレーブと共有し、エンクレーブ内の計算に使用できます。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
 
 *signature*  
-"*キーのパス*" のデジタル署名と列マスター キーでの ENCLAVE_COMPUTATIONS の設定の結果であるバイナリ リテラル。 署名には、ENCLAVE_COMPUTATIONS が指定されているかどうかが反映されます。 この署名は、承認されていないユーザーが符号付きの値を変更できないようにします。 Always Encrypted 対応のクライアント ドライバーでは、署名が検証されて、署名が無効な場合はアプリケーションにエラーが返されます。 署名は、クライアント側のツールを使用して生成されている必要があります。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
+" *キーのパス* " のデジタル署名と列マスター キーでの ENCLAVE_COMPUTATIONS の設定の結果であるバイナリ リテラル。 署名には、ENCLAVE_COMPUTATIONS が指定されているかどうかが反映されます。 この署名は、承認されていないユーザーが符号付きの値を変更できないようにします。 Always Encrypted 対応のクライアント ドライバーでは、署名が検証されて、署名が無効な場合はアプリケーションにエラーが返されます。 署名は、クライアント側のツールを使用して生成されている必要があります。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -252,4 +252,3 @@ WITH (
 * [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
-  

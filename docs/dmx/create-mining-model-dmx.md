@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35382c7d1d7301d35d8517b62bac352a4ae9fb47
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462046"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726322"
 ---
 # <a name="create-mining-model-dmx"></a>マイニングモデル (DMX) の作成
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -48,10 +48,10 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  現在のプロバイダーによって定義された、データ マイニング アルゴリズムの名前です。  
   
 > [!NOTE]  
->  現在のプロバイダーでサポートされているアルゴリズムの一覧は [DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))を使用して取得できます。 の現在のインスタンスでサポートされているアルゴリズムを表示するには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、「 [データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
+>  現在のプロバイダーでサポートされているアルゴリズムの一覧は [DMSCHEMA_MINING_SERVICES 行セット](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))を使用して取得できます。 の現在のインスタンスでサポートされているアルゴリズムを表示するには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、「 [データマイニングのプロパティ](/analysis-services/server-properties/data-mining-properties)」を参照してください。  
   
  *パラメーターリスト*  
- 任意。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
+ 省略可能。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
   
  *XML 文字列*  
  (高度な用途の場合のみ)。XML エンコードモデル (PMML)。 文字列は単一引用符 (') で囲む必要があります。  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  列の定義に使用できるデータ型、コンテンツの種類、列の分布、およびモデリングフラグの一覧については、次のトピックを参照してください。  
   
--   [データ型 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [データ型 (データ マイニング)](/analysis-services/data-mining/data-types-data-mining)  
   
--   [コンテンツの種類 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [コンテンツの種類 (データ マイニング)](/analysis-services/data-mining/content-types-data-mining)  
   
--   [列の分布 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [列の分布 (データ マイニング)](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [モデリング フラグ (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [モデリング フラグ (データ マイニング)](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  ステートメントに句を追加して、2つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、次の句の使用がサポートされてい \<Column relationship> ます。  
   
@@ -112,7 +112,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 |\<prediction> clause|説明|  
 |---------------------------|-----------------|  
-|**将来**|この列は、モデルによって予測できます。また、入力ケースで指定して、その他の予測可能列の値を予測することもできます。|  
+|**PREDICT**|この列は、モデルによって予測できます。また、入力ケースで指定して、その他の予測可能列の値を予測することもできます。|  
 |**PREDICT_ONLY**|この列はモデルによって予測できますが、その値を入力ケースで使用して他の予測可能列の値を予測することはできません。|  
   
 ### <a name="parameter-definition-list"></a>パラメーター定義リスト  
@@ -122,12 +122,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- 各アルゴリズムに関連付けられているパラメーターの一覧については、「データマイニング [アルゴリズム &#40;Analysis Services データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)」を参照してください。  
+ 各アルゴリズムに関連付けられているパラメーターの一覧については、「データマイニング [アルゴリズム &#40;Analysis Services データマイニング&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
  組み込みのテストデータセットを含むモデルを作成する場合は、ステートメント CREATE マイニング STRUCTURE の後に ALTER マイニング STRUCTURE を使用する必要があります。 ただし、すべての種類のモデルで予約データセットがサポートされるわけではありません。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
   
- CREATEMODEL ステートメントを使用してマイニングモデルを作成する方法のチュートリアルについては、「 [タイムシリーズ予測 DMX のチュートリアル](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)」を参照してください。  
+ CREATEMODEL ステートメントを使用してマイニングモデルを作成する方法のチュートリアルについては、「 [タイムシリーズ予測 DMX のチュートリアル](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130))」を参照してください。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes の例  
  次の例では、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して、新しいマイニングモデルを作成します。 自転車の購入者列は、予測可能な属性として定義されています。  
@@ -191,5 +191,4 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

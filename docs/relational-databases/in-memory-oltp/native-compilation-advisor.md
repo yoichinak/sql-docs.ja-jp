@@ -15,23 +15,23 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31863944670cbb6e32e999ec06164792848236a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efbd90e43c4f2bf7863106330b59f436c31b6238
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722452"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868531"
 ---
 # <a name="native-compilation-advisor"></a>ネイティブ コンパイル アドバイザー
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   トランザクション パフォーマンス分析レポートでは、データベース内にある解釈されたストアド プロシージャをネイティブ コンパイルを使用するように移植した場合に、どのストアド プロシージャで効果が得られるかを知ることができます。 詳細については、「 [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)」を参照してください。  
   
- ネイティブ コンパイルを使用するように移植するストアド プロシージャを特定した後、ネイティブ コンパイル アドバイザー (NCA) を使用して、解釈されたストアド プロシージャをネイティブ コンパイルに移行することができます。 ネイティブ コンパイル ストアド プロシージャの詳細については、「 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」をご覧ください。  
+ ネイティブ コンパイルを使用するように移植するストアド プロシージャを特定した後、ネイティブ コンパイル アドバイザー (NCA) を使用して、解釈されたストアド プロシージャをネイティブ コンパイルに移行することができます。 ネイティブ コンパイル ストアド プロシージャの詳細については、「 [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)」をご覧ください。  
   
  特定の解釈されたストアド プロシージャでは、NCA を使用して、ネイティブ モジュールではサポートされないすべての機能を識別できます。 NCA には、回避策またはソリューションを説明するドキュメントのリンクが用意されています。  
   
- 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
+ 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10))」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>ネイティブ コンパイル アドバイザーの使用に関するチュートリアル  
  **オブジェクト エクスプローラー**で、変換するストアド プロシージャを右クリックし、 **[ネイティブ コンパイル アドバイザー]** をクリックします。 これにより、 **[ストアド プロシージャのネイティブ コンパイル アドバイザー]** のようこそページが表示されます。 **[次へ]** をクリックして次に進みます。  
@@ -105,7 +105,6 @@ SELECT * from SalesOrders;
 ```  
   
 ## <a name="see-also"></a>参照  
- [インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
+ [インメモリ OLTP への移行](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)   
  [メモリ最適化テーブルを使用するための要件](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
-  
   

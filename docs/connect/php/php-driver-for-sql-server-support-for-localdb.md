@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d618706cd05796079904c971cdf7b0c32485c1d4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 47bcfa16712e0ef227da7c7ae53de14aa42deacb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886289"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726773"
 ---
 # <a name="support-for-localdb"></a>LocalDB のサポート
 
@@ -76,7 +76,7 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-LocalDB のインストール手順については、[LocalDB のドキュメント](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)を参照してください。 sqlcmd.exe を使用して LocalDB インスタンス内のデータを変更する場合、[sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)が必要です。
+LocalDB のインストール手順については、[LocalDB のドキュメント](../../database-engine/configure-windows/sql-server-express-localdb.md)を参照してください。 sqlcmd.exe を使用して LocalDB インスタンス内のデータを変更する場合、[sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)が必要です。
 
 ## <a name="see-also"></a>参照
 

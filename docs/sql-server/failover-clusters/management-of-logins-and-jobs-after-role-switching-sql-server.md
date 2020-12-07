@@ -11,14 +11,14 @@ ms.topic: how-to
 helpviewer_keywords:
 - role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 748addc15abc5521a82fb635626131d0cfbb0e25
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: bd11ff436649d4e871c09fb2ebba85f56a83ccc4
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117229"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127639"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>役割の交代後のログインとジョブの管理 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91117229"
 > [!NOTE]  
 >  この問題は、さまざまなコンピューターの Windows ローカル アカウントに影響します。 ただし、各コンピューターの SID は同じであるため、この問題はドメイン アカウントでは発生しません。  
   
- 詳細については、「 [Orphaned Users with Database Mirroring and Log Shipping](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) 」(データベース ミラーリングとログ配布での孤立ユーザー) (データベース エンジンのブログ) を参照してください。  
+ 詳細については、「 [Orphaned Users with Database Mirroring and Log Shipping](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) 」(データベース ミラーリングとログ配布での孤立ユーザー) (データベース エンジンのブログ) を参照してください。  
   
 ## <a name="jobs"></a>ジョブ  
  バックアップ ジョブなどのジョブでは、特別な考慮が必要になります。 通常は、役割の交代後、データベース所有者またはシステム管理者が、新しいプライマリ/プリンシパル データベース用にジョブを再作成する必要があります。  
@@ -50,5 +50,4 @@ ms.locfileid: "91117229"
 ## <a name="see-also"></a>参照  
  [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
-  
   

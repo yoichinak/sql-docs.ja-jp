@@ -33,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc39fbcb191810f7e357167f15c4d0ca084711d8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 325e6d949cfede5bec7ccdb958dac2c82e9d9efa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688668"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005588"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -119,13 +119,17 @@ CREATE TABLE
  *table_constraint*   
  テーブルに追加される PRIMARY KEY、UNIQUE、FOREIGN KEY、CONNECTION 制約、CHECK 制約、または DEFAULT 定義のプロパティを指定します。
  
+ > [!NOTE]   
+ > CONNECTION 制約は、エッジ テーブル型にのみ適用されます。
+ 
  ON { partition_scheme | filegroup | "default" }    
  テーブルが格納されるパーティション構成またはファイル グループを指定します。 partition_scheme を指定すると、テーブルはパーティション テーブルとなり、各パーティションは partition_scheme で指定した 1 つ以上のファイル グループに格納されます。 filegroup を指定すると、テーブルは指定されたファイル グループに格納されます。 ファイル グループがデータベース内に存在している必要があります。 "default" を指定するか、ON をまったく指定しないと、テーブルは既定のファイル グループに格納されます。 CREATE TABLE で指定したテーブルの格納方法を後から変更することはできません。
 
  ON {partition_scheme | filegroup | "default"}    
  PRIMARY KEY 制約または UNIQUE 制約でも指定できます。 これらの制約はインデックスを作成します。 filegroup を指定すると、インデックスは指定されたファイル グループに格納されます。 "default" を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに格納されます。 PRIMARY KEY または UNIQUE 制約によりクラスター化インデックスが作成される場合、テーブルのデータ ページはインデックスと同じファイル グループに格納されます。 CLUSTERED を指定するか、制約によりクラスター化インデックスを作成し、テーブル定義の partition_scheme または filegroup とは異なる partition_scheme (またはその逆) を指定すると、制約定義だけが優先され、それ以外は無視されます。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>解説
+
 一時テーブルをノード テーブルまたはエッジ テーブルとして作成することはできません。  
 
 ノード テーブルまたはエッジ テーブルをテンポラル テーブルとして作成することはできません。
@@ -163,6 +167,16 @@ CREATE TABLE
 ```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
+```
+
+次の例では、他のユーザーと友人になることができるのは、人**だけ**であるとするルールをモデル化しています。つまり、このエッジでは、Person 以外のノードへの参照は許可されません。
+
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 

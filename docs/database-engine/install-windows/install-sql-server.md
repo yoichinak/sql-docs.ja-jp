@@ -12,15 +12,15 @@ helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 426df300ba160d9a19ff8c29edb7e413d28e6ec6
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 46a83efe3efcab212d3569c5f2f32c232f1962c5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216722"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125870"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server のインストール ガイド
 
@@ -31,7 +31,7 @@ ms.locfileid: "88216722"
 その他の展開シナリオは次のとおりです。
 
 - [Linux](../../linux/sql-server-linux-setup.md)
-- [Docker コンテナー](../../linux/sql-server-linux-configure-docker.md)
+- [Docker コンテナー](../../linux/sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - ビッグ データ クラスター](../../big-data-cluster/deploy-get-started.md)
 
 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] は 64 ビット アプリケーションでのみ使用できるようになりました。 SQL Server の入手およびインストールの方法に関する重要な詳細情報を次に示します。
@@ -86,12 +86,12 @@ ms.locfileid: "88216722"
 |[アーティクル]|説明|  
 |-----------|-----------------|  
 |[インストール ウィザードからの SQL Server&2016; のインストール (セットアップ)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|setup.exe セットアップ メディアから起動するインストール ウィザード GUI を使用して SQL Server をインストールします。 |  
-|[コマンド プロンプト](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|コマンド プロンプトから SQL Server インストールを実行するためのサンプルの構文とインストール パラメーター。 | 
+|[コマンド プロンプト](./install-sql-server-from-the-command-prompt.md)|コマンド プロンプトから SQL Server インストールを実行するためのサンプルの構文とインストール パラメーター。 | 
 |[Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Windows Server Core に [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] をインストールします。|  
 |[システム構成チェッカーの検査パラメーター](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|システム構成チェッカー (SCC) の機能について説明します。|   
-|[構成ファイル](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|構成ファイルからセットアップを実行するためのサンプルの構文とインストール パラメーター。|  
+|[構成ファイル](./install-sql-server-using-a-configuration-file.md)|構成ファイルからセットアップを実行するためのサンプルの構文とインストール パラメーター。|  
 |[SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|SysPrep からセットアップを実行するためのサンプルの構文とインストール パラメーター。|
-|[インスタンスへの機能の追加](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の既存のインスタンスのコンポーネントを更新します。|  
+|[インスタンスへの機能の追加](./add-features-to-an-instance-of-sql-server-setup.md)|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の既存のインスタンスのコンポーネントを更新します。|  
 |[SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)| SQL Server フェールオーバー クラスター インスタンスをインストールします。  | 
 |[失敗した [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のインストールを修復する](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|失敗した [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のインストールを修復します。|  
 |[SQL Server をホストしているコンピューターの名前を変更する](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|SQL Server のスタンドアロン インスタンスをホストしているコンピューターのホスト名が変更された後、sys.servers に格納されているシステム メタデータを更新します。 |  
@@ -107,7 +107,7 @@ ms.locfileid: "88216722"
 |[SQL Server データベース エンジン](../../database-engine/install-windows/install-sql-server-database-engine.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] をインストールし、構成します。|  
 |[SQL Server レプリケーション](../../database-engine/install-windows/install-sql-server-replication.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションをインストールし、構成します。|  
 |[分散再生](../../tools/distributed-replay/install-distributed-replay-overview.md)|分散再生の機能のインストールに関する記事を一覧表示します。|  
-|[SQL Server 管理ツールと SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールをインストールし、構成します。|  
+|[SQL Server 管理ツールと SSMS](../../ssms/download-sql-server-management-studio-ssms.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールをインストールし、構成します。|  
 |[SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell コンポーネントのインストールに関する考慮事項。|  
   
 
@@ -116,7 +116,7 @@ ms.locfileid: "88216722"
 |[アーティクル]|説明|  
 |-----------|-----------------|  
 |[Windows ファイアウォールの構成 (SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|ファイアウォール構成の概要と、SQL Server へのアクセスを許可するように Windows ファイアウォールを構成する方法。|  
-|[Windows ファイアウォールの構成 (SSAS)](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint へのアクセスを許可するためにポートとファイアウォールの両方の設定を構成します。|  
+|[Windows ファイアウォールの構成 (SSAS)](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint へのアクセスを許可するためにポートとファイアウォールの両方の設定を構成します。|  
 |[マルチホーム コンピューターの構成](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|マルチホーム環境内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにネットワーク接続できるように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成します。|  
 
  
@@ -127,4 +127,4 @@ ms.locfileid: "88216722"
 [SQL Server Reporting Services (SSRS) のインストール](../../reporting-services/install-windows/install-reporting-services.md)   
 [SQL Server Analysis Services (SSAS) のインストール](/analysis-services/instances/install-windows/install-analysis-services)   
 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のビジネス インテリジェンス機能のインストール](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
-[高可用性ソリューション &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+[高可用性ソリューション &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)

@@ -1,19 +1,19 @@
 ---
 title: ビッグ データ クラスターの展開での Active Directory と Kubernetes の DNS の調整
-description: ビッグ データ クラスターへのアクセスを管理する
-author: mihaelablendea
-ms.author: mihaelab
+description: Active Directory モードの SQL Server ビッグ データ クラスターに対する DNS の調整を構成する
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 411d713734db080b036a98bd18b0618326dbd70f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 63a5c53e64ece7650e65414fd24ddd82d6da5324
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279432"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892462"
 ---
 # <a name="active-directory-and-kubernetes-dns-reconciliation-in-big-data-clusters-deployments"></a>ビッグ データ クラスターの展開での Active Directory と Kubernetes の DNS の調整
 
@@ -53,7 +53,7 @@ ms.locfileid: "86279432"
 
 ### <a name="no-duplication-of-records"></a>レコードの重複がない
 
-内部 DNS レコードは複数の場所にあります。 これらのレコードの唯一のストレージは Kubernetes CoreDNS です。 BDC の内部 CoreDNS では、DNS クエリの計算の書き換えと Kubernetes CoreDNS への転送が行われます。
+内部 DNS レコードは複数の場所にあります。 これらのレコードの唯一のストレージは Kubernetes CoreDNS です。 BDC の内部 CoreDNS によって、DNS クエリの計算の書き換えと Kubernetes CoreDNS への転送が行われます。
 
 ### <a name="computational-rewriting"></a>計算の書き換え
 
@@ -89,6 +89,6 @@ BDC を削除した後は、クラスターをプロビジョニング解除す�
 
 ## <a name="next-steps"></a>次のステップ
 
-- [Active Directory モードで SQL Server ビッグ データ クラスターを展開する](deploy-active-directory.md)
+- [Active Directory モードで SQL Server ビッグ データ クラスターを展開する](active-directory-deploy.md)
 - [Active Directory モードでビッグ データ クラスター アクセスを管理する](active-directory-objects.md)
 - [同じ Active Directory ドメインに複数の SQL Server ビッグ データ クラスターをデプロイする](active-directory-deployment-background.md)

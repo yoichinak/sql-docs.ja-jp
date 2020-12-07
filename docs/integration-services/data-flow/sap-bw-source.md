@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d62e20117bf23511a1d261142a3618dcbd5095a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349028"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195334"
 ---
 # <a name="sap-bw-source"></a>SAP BW 転送元
 
@@ -111,7 +111,7 @@ ms.locfileid: "88349028"
   
     -   **[E - 抽出のみ]** オプションでは、要求 ID を指定します。  
   
--   文字列変換のルールを指定します (たとえば、すべての文字列を SAP Netweaver BW システムが Unicode であるかどうかに応じて変換するか、 **varchar** または **nvarchar**に変換するかどうか)。  
+-   文字列変換のルールを指定します (たとえば、すべての文字列を SAP Netweaver BW システムが Unicode であるかどうかに応じて変換するか、 **varchar** または **nvarchar** に変換するかどうか)。  
   
 -   選択したオプションを使用して、抽出するデータをプレビューします。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88349028"
   
  変換元を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
- SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](https://go.microsoft.com/fwlink/?LinkID=137090)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
+ SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100))」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>SSIS デザイナーを使用してソースを構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる SAP BW 変換元のプロパティの詳細については、次のトピックのいずれかを参照してください。  
@@ -144,5 +144,4 @@ ms.locfileid: "88349028"
   
 ## <a name="see-also"></a>関連項目  
  [Microsoft Connector for SAP BW のコンポーネント](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

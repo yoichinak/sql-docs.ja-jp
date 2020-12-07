@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6949a8130601bf0bf3ffac5903d7584a16d7d83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 662b52803ddca54f5c660fa79c457cdc05ced3fa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449834"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193864"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) パッケージおよびプロジェクト パラメーター
 
@@ -28,7 +28,7 @@ ms.locfileid: "88449834"
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 " *プロジェクト パラメーター* " はプロジェクト レベル、" *パッケージ パラメーター* " はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[Project.params]** ウィンドウを使用して、プロジェクト パラメーターを作成、変更、または削除します。 **デザイナーの** [パラメーター] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用して、パッケージ パラメーターを作成、変更、および削除します。 **[パラメーター化]** ダイアログ ボックスを使用して、新規または既存のパラメーターをタスクのプロパティと関連付けます。 **[Project.params]** ウィンドウと **[パラメーター]** タブの使用の詳細については「 [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)」を参照してください。 **[パラメーター化]** ダイアログ ボックスの詳細については、「 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)」を参照してください。  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[Project.params]** ウィンドウを使用して、プロジェクト パラメーターを作成、変更、または削除します。 **デザイナーの** [パラメーター] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用して、パッケージ パラメーターを作成、変更、および削除します。 **[パラメーター化]** ダイアログ ボックスを使用して、新規または既存のパラメーターをタスクのプロパティと関連付けます。 **[Project.params]** ウィンドウと **[パラメーター]** タブの使用の詳細については「 [Create Parameters]()」を参照してください。 **[パラメーター化]** ダイアログ ボックスの詳細については、「 [Parameterize Dialog Box]()」を参照してください。  
   
 ## <a name="parameters-and-package-deployment-model"></a>パラメーターとパッケージ配置モデル  
  通常、パッケージ配置モデルを使用してパッケージを配置する場合、パラメーターではなく構成を使用する必要があります。  
@@ -42,7 +42,7 @@ ms.locfileid: "88449834"
   
 -   [ストアド プロシージャ &#40;Integration Services カタログ&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
--   [[構成] ダイアログ ボックス](../integration-services/service/configure-dialog-box.md)  
+-   [[構成] ダイアログ ボックス](./catalog/configure-dialog-box.md)  
   
 -   [[パッケージの実行] ダイアログ ボックス](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "88449834"
 ### <a name="parameter-validation"></a>パラメーターの検証  
  パラメーター値を解決できない場合、対応するパッケージ実行は失敗します。 失敗を回避するために、 **の** [検証] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ダイアログ ボックスを使用してプロジェクトとパッケージを検証できます。 検証を使用すると、すべてのパラメーター値に必要な値が設定されているか、または特定の環境参照で必要な値を解決できるかを確認できます。 検証では、その他の一般的なパッケージの問題も確認されます。  
   
- 詳細については、「 [Validate Dialog Box](../integration-services/service/validate-dialog-box.md)」を参照してください。  
+ 詳細については、「 [Validate Dialog Box](./catalog/validate-dialog-box.md)」を参照してください。  
   
 ### <a name="parameter-example"></a>パラメーターの例  
  この例では、 **pkgOptions** という名前のパラメーターについて説明します。これは、このパラメーターが存在するパッケージのオプションを指定するために使用されます。  
@@ -166,7 +166,7 @@ ms.locfileid: "88449834"
     > **警告!!!** リストで直接編集することも、 **[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] \(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、 **[パラメーター値の管理]** ダイアログ ボックスを開いて、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-**[パラメーター化]** ダイアログ ボックスでは、新規または既存のパラメーターをタスクのプロパティと関連付けることができます。 このダイアログ ボックスを開くには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでタスクまたは [制御フロー] タブを右クリックし、 **[パラメーター化]** をクリックします。 次の一覧では、このダイアログ ボックスの UI 要素について説明します。 パラメーターの詳細については、「 [Integration Services (SSIS) パラメーター](https://msdn.microsoft.com/library/hh213214.aspx)」を参照してください。
+**[パラメーター化]** ダイアログ ボックスでは、新規または既存のパラメーターをタスクのプロパティと関連付けることができます。 このダイアログ ボックスを開くには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでタスクまたは [制御フロー] タブを右クリックし、 **[パラメーター化]** をクリックします。 次の一覧では、このダイアログ ボックスの UI 要素について説明します。 パラメーターの詳細については、「 [Integration Services (SSIS) パラメーター]()」を参照してください。
   
 ### <a name="options"></a>オプション  
  **プロパティ**  
@@ -219,5 +219,4 @@ ms.locfileid: "88449834"
   
 ## <a name="related-content"></a>関連コンテンツ  
  mattmasson.com のブログ「 [SSIS 簡単なヒント: 必要なパラメーター](https://go.microsoft.com/fwlink/?LinkId=239781)」  
-  
   

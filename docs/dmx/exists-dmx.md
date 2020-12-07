@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a0fa41dfff8edc6ddddeb420027a436f235e54a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f45a4a1d0e709c6b8eb9bb7217d268420f31d07
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353338"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726233"
 ---
 # <a name="exists-dmx"></a>存在 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,9 +41,9 @@ EXISTS(<subquery>)
  EXISTS のサブクエリ引数に追加する列の一覧は、関係ありません。関数は、条件を満たす行が存在するかどうかのみをチェックします。  
   
 ## <a name="examples"></a>例  
- EXISTS と NOT EXISTS を使用して、入れ子になったテーブルの条件を確認することができます。 これは、データマイニングモデルのトレーニングまたはテストに使用されるデータを制御するフィルターを作成する場合に便利です。 詳細については、「[マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)」を参照してください。  
+ EXISTS と NOT EXISTS を使用して、入れ子になったテーブルの条件を確認することができます。 これは、データマイニングモデルのトレーニングまたはテストに使用されるデータを制御するフィルターを作成する場合に便利です。 詳細については、「[マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)」を参照してください。  
   
- 次の例は、 `[Association]` 「 [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成したマイニング構造とマイニングモデルに基づいています。 このクエリでは、顧客が少なくとも1つの patch kit を購入したケースのみが返されます。  
+ 次の例は、 `[Association]` 「 [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」で作成したマイニング構造とマイニングモデルに基づいています。 このクエリでは、顧客が少なくとも1つの patch kit を購入したケースのみが返されます。  
   
 ```  
 SELECT * FROM [Association].CASES  
@@ -58,6 +58,5 @@ WHERE [[Model] = 'Patch kit'
   
 ## <a name="see-also"></a>参照  
  [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
- [モデル フィルターの構文と例 (Analysis Services - データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
-  
+ [モデル フィルターの構文と例 (Analysis Services - データ マイニング)](/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   

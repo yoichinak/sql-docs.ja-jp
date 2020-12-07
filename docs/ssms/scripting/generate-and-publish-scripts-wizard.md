@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901374"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039022"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード
 
@@ -57,7 +57,7 @@ ms.locfileid: "88901374"
 
 **スクリプトの生成とパブリッシュ ウィザード** を使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]のインスタンス間でデータベースを転送するスクリプトを作成できます。 データベース用のスクリプトは、ローカル ネットワーク上のデータベース エンジンのインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]から生成できます。 生成したスクリプトは、データベース エンジンの別のインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]で実行できます。 また、ウィザードを使用して、Database Publishing Services を使用して作成された Web サービスに、データベースの内容を直接パブリッシュすることもできます。 スクリプトの作成は、データベース全体または特定のオブジェクトに限定して行うことができます。
 
-スクリプトの生成とパブリッシュ ウィザードの使用に関する詳細なチュートリアルについては、[チュートリアル:スクリプト生成ウィザード](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases)に関するページをご覧ください。
+スクリプトの生成とパブリッシュ ウィザードの使用に関する詳細なチュートリアルについては、[チュートリアル:スクリプト生成ウィザード](../tutorials/scripting-ssms.md#script-databases)に関するページをご覧ください。
 
 ## <a name="before-you-begin"></a>はじめに
 
@@ -130,7 +130,7 @@ ms.locfileid: "88901374"
 
 ![ノートブックとして保存](media/generate-and-publish-scripts-wizard/save.png)
 
-- **[[ファイルに保存]](../../azure-data-studio/notebooks-guidance.md)** - スクリプトを 1 つ以上の .sql ファイルに保存します。 参照ボタン ( **…** ) を選択して、ファイルの名前と場所を指定します。
+- **[[ファイルに保存]](../../azure-data-studio/notebooks/notebooks-guidance.md)** - スクリプトを 1 つ以上の .sql ファイルに保存します。 参照ボタン ( **…** ) を選択して、ファイルの名前と場所を指定します。
 
 - **[Save as script file]\(スクリプト ファイルとして保存\)** : スクリプトを 1 つ以上の .sql ファイルに保存します。 参照ボタン ( **…** ) を選択して、ファイルの名前と場所を指定します。 同じ名前のファイルが既に存在する場合にそのファイルを置き換えるには、 **[既存のファイルの上書き]** チェック ボックスをオンにします。 スクリプトを生成する方法を指定するには、 **[Single script file]\(単一のスクリプト ファイル\)** または **[One script file per object]\(オブジェクトごとに 1 つのスクリプト ファイル\)** を選択します。 スクリプト内で使用されるテキストの種類を指定するには、 **[Unicode テキスト]** または **[ANSI テキスト]** を選択します。
 
@@ -246,7 +246,7 @@ ms.locfileid: "88901374"
 
 すべての設定が正しい場合は、構成が正常に完了します。
 
-## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Azure SQL Data Warehouse のスクリプトの生成
+## <a name="generating-scripts-on-azure-synapse-analytics"></a>Azure Synapse Analytics でのスクリプトの生成
 
 "Script As..." を使用して生成された構文が [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] のような構文になっていないときや、エラー メッセージが表示されたときは、SQL Server Management Studio でスクリプト作成オプションを [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] に設定することが必要な場合があります。
 

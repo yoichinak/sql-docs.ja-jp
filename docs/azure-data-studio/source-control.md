@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 09/24/2019
+ms.openlocfilehash: 7f032d870952cdadbde79dbf56f4c63ae351d6e9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746152"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081571"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Azure Data Studio のソース管理
 
@@ -22,12 +22,12 @@ Azure Data Studio は、バージョン管理/ソース管理用の Git をサ�
 
 ## <a name="git-support-in-azure-data-studio"></a>Azure Data Studio の Git サポート
 
-Azure Data Studio には、Git ソース管理マネージャー (SCM) が付属していますが、これらの機能を使用できるようにする前に [Git (バージョン 2.0.0 以降) をインストールする](https://git-scm.com/download)必要があります。 
+Azure Data Studio には、Git ソース管理マネージャー (SCM) が付属していますが、これらの機能を使用できるようにする前に [Git (バージョン 2.0.0 以降) をインストールする](https://git-scm.com/download)必要があります。
 
 ## <a name="open-an-existing-git-repository"></a>既存の Git リポジトリを開く
 
 1. **[ファイル]** メニューで、 **[フォルダーを開く]** を選択します。
-2. Git で追跡されるファイルが含まれているフォルダーを参照して、 **[フォルダーの選択]** をクリックします。 ここで、ローカル リポジトリ内のサブフォルダーを選択できます。
+2. Git によって追跡されるファイルが含まれているフォルダーを参照して、 **[フォルダーの選択]** を選択します。 ここで、ローカル リポジトリ内のサブフォルダーを選択できます。
 
 ## <a name="initialize-a-new-git-repository"></a>新しい Git リポジトリを初期化する
 
@@ -41,7 +41,7 @@ Azure Data Studio には、Git ソース管理マネージャー (SCM) が付属
 
 ## <a name="working-with-git-repositories"></a>Git リポジトリの操作
 
-Azure Data Studio では、Git 実装が VS Code から継承されていますが、追加の SCM プロバイダーは現在サポートされていません。 リポジトリを開くか、初期化した後に Git を操作する方法の詳細については、[VS コードでの Git のサポート](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)に関する記事を参照してください。
+Azure Data Studio は、VS Code から Git 実装を継承していますが、追加の SCM プロバイダーについては、現在サポートしていません。 リポジトリを開くか、初期化した後に Git を操作する方法の詳細については、[VS コードでの Git のサポート](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)に関する記事を参照してください。
 
 ## <a name="additional-resources"></a>その他のリソース
 

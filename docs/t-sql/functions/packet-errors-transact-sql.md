@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 214f6cff39f520de9a155625f910486cbf237ffa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1470d95dd12134abf0e097e4c56f7eb908c807f0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363478"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124621"
 ---
 # <a name="x40x40packet_errors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88363478"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 @@PACKET_ERRORS  
 ```  
   
@@ -49,12 +48,12 @@ ms.locfileid: "88363478"
  **integer**  
   
 ## <a name="remarks"></a>注釈  
- いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パケットのエラーなどの統計情報の実行 **sp_monitor**です。  
+ いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パケットのエラーなどの統計情報の実行 **sp_monitor** です。  
   
 ## <a name="examples"></a>例  
  次の例に、`@@PACKET_ERRORS` の使用方法を示します。  
   
-```  
+```sql  
 SELECT @@PACKET_ERRORS AS 'Packet Errors';  
 ```  
   

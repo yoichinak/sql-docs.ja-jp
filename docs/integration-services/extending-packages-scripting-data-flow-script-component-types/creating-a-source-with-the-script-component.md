@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e1d40b856409ab1e4d7859c818f1259133dc60b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19fe9c40aa87d4ee1cdc7b719e06911de9a1f167
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477255"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193139"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>スクリプト コンポーネントによる変換元の作成
 
@@ -55,7 +55,7 @@ ms.locfileid: "88477255"
   
  スクリプト コンポーネントで接続マネージャーを使用する方法の一般情報については、「[スクリプト コンポーネントでのデータ ソースへの接続](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)」を参照してください。  
   
- **[スクリプト変換エディター]** の **[接続マネージャー]** ページの詳細については、「[スクリプト変換エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)」を参照してください。  
+ **[スクリプト変換エディター]** の **[接続マネージャー]** ページの詳細については、「[スクリプト変換エディター &#40;[接続マネージャー] ページ&#41;](../data-flow/transformations/script-component.md)」を参照してください。  
   
 ### <a name="configuring-outputs-and-output-columns"></a>出力および出力列の設定  
  変換元コンポーネントに入力はありませんが、1 つ以上の出力を設定できます。 **[スクリプト変換エディター]** の **[入力および出力]** ページには、既定で 1 つの出力が作成されていますが、出力列は作成されていません。 エディターのこのページで、必要に応じて以下の項目を設定します。  
@@ -71,7 +71,7 @@ ms.locfileid: "88477255"
   
 -   通常、同じ **ExclusionGroup** 内の複数の出力には、同じ出力列が含まれます。 ただし、シミュレートされたエラー出力を作成するには、エラー情報を格納するために列の追加が必要になる場合があります。 データ フロー エンジンがエラー行を処理する方法については、「[データ フロー コンポーネントでのエラー出力の使用](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)」を参照してください。 ただし、スクリプト コンポーネントでは、独自のコードを記述して、追加した列に該当するエラー情報を格納する必要があります。 詳細については、「[スクリプト コンポーネントに対するエラー出力のシミュレート](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)」を参照してください。  
   
- **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)」を参照してください。  
+ **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../data-flow/transformations/script-component.md)」を参照してください。  
   
 ### <a name="adding-variables"></a>変数の追加  
  値をスクリプト内で使用する既存の変数がある場合は、 **[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドに追加できます。  
@@ -80,7 +80,7 @@ ms.locfileid: "88477255"
   
  スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
   
- **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)」を参照してください。  
+ **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../data-flow/transformations/script-component.md)」を参照してください。  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>コード デザイン モードでの変換元コンポーネントのスクリプト作成  
  コンポーネントのメタデータを構成したら、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開き、カスタム スクリプトのコードを作成します。 VSTA を開くには、 **[スクリプト変換エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックします。 **[ScriptLanguage]** プロパティで選択したスクリプト言語に応じて [!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# のいずれかを使用し、独自のスクリプトを記述できます。  
@@ -394,5 +394,4 @@ ms.locfileid: "88477255"
 ## <a name="see-also"></a>参照  
  [スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [カスタム変換元コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
-  
   

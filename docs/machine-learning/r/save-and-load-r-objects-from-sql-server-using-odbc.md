@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11c963405245b28efd40949c8fe1f8d6227d4119
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 203645002fcd6c46d1c1f786450e2c0c69e10d67
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179911"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195793"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>ODBC を使用して SQL Server に R オブジェクトを保存し、読み込む
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -45,7 +45,7 @@ R 環境から直接 SQL Server に R オブジェクトを保存するには、
 
 - `rxListKeys` は、すべての使用可能なオブジェクトをキーと値のペアとして一覧表示します。 これは、R オブジェクトの名前とバージョンを特定する場合に役立ちます。
 
-各関数の構文の詳細なヘルプが必要な場合は、R のヘルプを使用してください。 詳細については、「[ScaleR の参考資料](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)」に関するページも参照してください。
+各関数の構文の詳細なヘルプが必要な場合は、R のヘルプを使用してください。 詳細については、「[ScaleR の参考資料](/r-server/r-reference/revoscaler/revoscaler)」に関するページも参照してください。
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>ODBC を使用して SQL Server に R オブジェクトを格納する方法
 

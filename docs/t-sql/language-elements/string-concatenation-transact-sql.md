@@ -22,12 +22,12 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa1c1cb27204fc6da21fa3841a2a32ba530c808c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889d6d6c8b76c57b906cd0a6a87e250619084322
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422466"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193275"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (文字列連結) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422466"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 expression + expression  
 ```  
   
@@ -51,7 +51,7 @@ expression + expression
  2 つのバイナリ間にある任意の文字列を、その両端にあるバイナリ文字列と結合する場合、文字データへの明示的な変換を使用する必要があります。 次の例では、バイナリ連結で `CONVERT` または `CAST` を使用する必要がある場合と、`CONVERT` または `CAST` を使用する必要がない場合を示します。  
   
 ```sql
-DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
+DECLARE @mybin1 VARBINARY(5), @mybin2 VARBINARY(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
 -- No CONVERT or CAST function is required because this example   
@@ -59,12 +59,11 @@ SET @mybin2 = 0xA5
 SELECT @mybin1 + @mybin2  
 -- A CONVERT or CAST function is required because this example  
 -- concatenates two binary strings plus a space.  
-SELECT CONVERT(varchar(5), @mybin1) + ' '   
-   + CONVERT(varchar(5), @mybin2)  
+SELECT CONVERT(VARCHAR(5), @mybin1) + ' '   
+   + CONVERT(VARCHAR(5), @mybin2)  
 -- Here is the same conversion using CAST.  
-SELECT CAST(@mybin1 AS varchar(5)) + ' '   
-   + CAST(@mybin2 AS varchar(5))  
-  
+SELECT CAST(@mybin1 AS VARCHAR(5)) + ' '   
+   + CAST(@mybin2 AS VARCHAR(5))  
 ```  
   
 ## <a name="result-types"></a>戻り値の型  
@@ -94,7 +93,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```sql  
 -- Uses AdventureWorks  
   
-SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
+SELECT 'The order is due on ' + CONVERT(VARCHAR(12), DueDate, 101)  
 FROM Sales.SalesOrderHeader  
 WHERE SalesOrderID = 50001;  
 GO  
@@ -139,12 +138,12 @@ GO
 次の例では、複数の文字列を連結して 1 つの長い文字列を形成し、最終的な文字列の計算を試行します。 結果セットの最終的な長さは、式の評価が左 (つまり、@x + @z + @y => (@x + @z) + @y) から開始されるため、16000 です。 この場合、(@x + @z) の結果は、8000 バイトで切り捨てられ、@y が結果セットに追加され、文字列の最終的な長さは 16000 になります。 @y は大きな値の型の文字列であるため、切り捨ては行われません。
 
 ```sql
-DECLARE @x varchar(8000) = replicate('x', 8000)
-DECLARE @y varchar(max) = replicate('y', 8000)
-DECLARE @z varchar(8000) = replicate('z',8000)
+DECLARE @x VARCHAR(8000) = REPLICATE('x', 8000)
+DECLARE @y VARCHAR(max) = REPLICATE('y', 8000)
+DECLARE @z VARCHAR(8000) = REPLICATE('z',8000)
 SET @y = @x + @z + @y
 -- The result of following select is 16000
-SELECT len(@y) AS y
+SELECT LEN(@y) AS y
 GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

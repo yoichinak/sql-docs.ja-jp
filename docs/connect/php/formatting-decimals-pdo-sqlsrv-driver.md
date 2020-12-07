@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: db9392b523be8777a96e4d262cfca5acccc8f406
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680657"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726843"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>10 進数文字列と金額の書式設定 (PDO_SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-正確さを維持するため、[decimal 型または numeric 型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)は、正確な精度と小数点以下桁数の文字列として常にフェッチされます。 値が 1 未満の場合、先頭の 0 はありません。 money フィールドと smallmoney フィールドも、小数点以下桁数が 4 に固定された 10 進数フィールドであるため、これと同じです。
+正確さを維持するため、[decimal 型または numeric 型](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)は、正確な精度と小数点以下桁数の文字列として常にフェッチされます。 値が 1 未満の場合、先頭の 0 はありません。 money フィールドと smallmoney フィールドも、小数点以下桁数が 4 に固定された 10 進数フィールドであるため、これと同じです。
 
 ## <a name="add-leading-zeroes-if-missing"></a>先頭に 0 がない場合に追加する
 バージョン 5.6.0 以降では、ユーザーは、接続属性またはステートメント属性 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` を使用して、10 進数の文字列の書式を設定できます。 この属性はブール値 (true または false) であり、フェッチされた結果の decimal または numeric の値の書式設定にのみ影響します。 つまり、この属性は挿入や更新などの他の操作には影響しません。

@@ -23,12 +23,12 @@ ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc2fdfc46c53b5a345d6ac27847592485043f934
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0274a2259bab7fe16109520030d526113d4e876c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459476"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124510"
 ---
 # <a name="-bitwise-or-assignment-transact-sql"></a>|= (ビットごとの OR 代入) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88459476"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 expression |= expression  
 ```  
   
@@ -47,7 +47,7 @@ expression |= expression
 
 ## <a name="arguments"></a>引数
  *式 (expression)*  
- 数値型に分類される任意のデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** データ型は除きます。  
+ 数値型に分類される任意のデータ型を持つ有効な [式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** データ型は除きます。  
   
 ## <a name="result-types"></a>戻り値の型  
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  

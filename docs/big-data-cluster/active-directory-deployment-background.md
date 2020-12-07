@@ -1,28 +1,28 @@
 ---
 title: Active Directory ドメインに複数をデプロイする
 titleSuffix: SQL Server Big Data Cluster
-description: Active Directory ドメインでの SQL Server ビッグ データ クラスターのデプロイについて学習します。
-author: mihaelablendea
-ms.author: mihaelab
+description: 単一の Active Directory ドメインに複数の SQL Server ビッグ データ クラスターをデプロイする方法について説明します。
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9617e4a447db1d2cef3aa9e6afc7927eb007a981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 144b769ce42b192099678cda4cfe6fb2935c1c2f
+ms.sourcegitcommit: af663bdca0df8a1f34a14667390662f6f0e17766
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730941"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924169"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>同じ Active Directory ドメインに複数の [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をデプロイする
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-この記事では、SQL Server 2019 CU 5 への更新について説明します。これにより、複数の SQL Server 2019 ビッグ データ クラスターを同じ Active Directory ドメインにデプロイし、統合する機能が有効になります。
+この記事では、SQL Server 2019 CU5 への更新について説明します。これにより、複数の SQL Server 2019 ビッグ データ クラスターを同じ Active Directory ドメインにデプロイして統合できるようになります。
 
-CU5 より前は、AD ドメインでの複数の BDC のデプロイを妨げる 2 つの問題がありました。
+SQL 2019 CU5 より前は、2 つの問題のため、1 つの AD ドメインに複数の BDC をデプロイできませんでした。
 
 - サービス プリンシパル名と DNS ドメインの名前の競合
 - ドメイン アカウント プリンシパル名
@@ -35,11 +35,11 @@ CU5 より前は、AD ドメインでの複数の BDC のデプロイを妨げ�
 
 ### <a name="domain-account-principal-names"></a>ドメイン アカウント プリンシパル名
 
-Active Directory ドメインを使用する BDC のデプロイ時に、BDC 内で実行されているサービスに対して複数のアカウント プリンシパルが生成されます。 これらは基本的には AD ユーザー アカウントです。 CU5 より前は、これらのアカウントの名前はクラスター間で一意ではありませんでした。 これは、2 つの異なるクラスター内の BDC の特定のサービスに対して、同じユーザー アカウント名を作成しようとする場合に発生します。 2 番目にデプロイされるクラスターでは、AD で競合が発生し、そのアカウントを作成することはできません。
+Active Directory ドメインを使用する BDC のデプロイ時に、BDC 内で実行されているサービスに対して複数のアカウント プリンシパルが生成されます。 これらは基本的には AD ユーザー アカウントです。 SQL 2019 CU5 より前は、これらのアカウントの名前はクラスター間で一意ではありませんでした。 これは、2 つの異なるクラスター内の BDC の特定のサービスに対して、同じユーザー アカウント名を作成しようとする場合に発生します。 2 番目にデプロイされるクラスターでは、AD で競合が発生し、そのアカウントを作成することはできません。
 
 ## <a name="resolution-for-collisions"></a>競合の解決
 
-### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---cu5"></a>SPN と DNS ドメインに関する問題を解決するためのソリューション - CU5
+### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---sql-2019-cu5"></a>SPN と DNS ドメインに関する問題を解決するための解決策 - SQL 2019 CU5
 
 2 つのクラスターで SPN は異なる必要があるため、デプロイ時に渡される DNS ドメイン名は異なる必要があります。 展開構成ファイルで新しく導入された設定 (`subdomain`) を使用して、異なる DNS 名を指定することができます。 2 つのクラスターでサブドメインが異なり、このサブドメインを介して内部通信が行われる可能性がある場合、必要な一意性を実現するサブドメインが SPN に含まれます。
 
@@ -63,7 +63,7 @@ Active Directory 構成仕様で新しく導入されたサブドメイン パ�
 
 ## <a name="semantics"></a>セマンティクス
 
-まとめると、ドメイン内の複数のクラスターに対して、CU5 で追加されたパラメーターのセマンティクスは次のとおりです。
+まとめると、1 つのドメイン内の複数のクラスター用に SQL 2019 CU5 で追加されたパラメーターのセマンティクスは次のとおりです。
 
 ### `subdomain`
 
@@ -138,9 +138,9 @@ Active Directory 構成仕様で新しく導入されたサブドメイン パ�
 
 必須ではありませんが、お勧めします。 個別のクラスターに個別の OU を指定すると、生成されるユーザー アカウントを管理するのに役立ちます。
 
-### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>CU5 より前の動作に戻すにはどうすればよいですか?
+### <a name="how-to-revert-back-to-the-pre-cu5-behavior-in-sql-2019"></a>SQL 2019 で CU5 より前の動作に戻すにはどうすればよいですか?
 
-新しく導入された `subdomain` パラメーターに対応できないシナリオもあります。 たとえば、CU5 より前のリリースをデプロイする必要があり、`azdata` CLI がアップグレード済みである場合です。 これは非常にまれですが、CU5 より前の動作に戻す必要がある場合は、`control.json` の Active Directory セクションで `useSubdomain` パラメーターを `false` に設定できます。
+新しく導入された `subdomain` パラメーターに対応できないシナリオもあります。 たとえば、CU5 より前のリリースをデプロイする必要があり、[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] がアップグレード済みである場合です。 これは非常にまれですが、CU5 より前の動作に戻す必要がある場合は、`control.json` の Active Directory セクションで `useSubdomain` パラメーターを `false` に設定できます。
 
 次の例では、このシナリオで `useSubdomain` を `false` に設定します。
 

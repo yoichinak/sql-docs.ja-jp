@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d663d75f7588ad91973f3bce5f416136bc5583e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487686"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193786"
 ---
 # <a name="security-overview-integration-services"></a>セキュリティの概要 (Integration Services)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88487686"
   
  構成を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ではなくファイル システムに格納する場合は、パッケージ構成ファイルが格納されるフォルダーをセキュリティで保護してください。  
   
- 構成の詳細については、「 [パッケージ構成](../../integration-services/packages/package-configurations.md)」を参照してください。  
+ 構成の詳細については、「 [パッケージ構成](../packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Integration Services サービスへのアクセスの制御  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、格納されているパッケージの一覧を表示する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが使用されます。 権限のないユーザーが、ローカル コンピューターまたはリモート コンピューターに格納されているパッケージに関する情報を参照してプライベート情報を取得できないようにするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行するコンピューターへのアクセスを制限します。  
@@ -121,7 +121,7 @@ ms.locfileid: "88487686"
 ### <a name="configuration-files"></a>構成ファイル  
  ログイン情報やパスワード情報などの機密情報が構成に含まれている場合は、その構成を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に保存することを検討するか、アクセス制御リスト (ACL) を使用して、ファイルを保存する場所またはフォルダーへのアクセスを制限し、特定のアカウントにのみアクセスを許可する必要があります。 通常は、パッケージの実行を許可するアカウント、およびパッケージの管理とトラブルシューティング (構成の内容、チェックポイント、およびログ ファイルの確認) を行うアカウントにアクセス権を許可します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバー レベルおよびデータベース レベルでの保護により、さらに堅牢なセキュリティが提供されます。 構成を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に保存するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成の種類を使用します。 ファイル システムに保存するには、XML 構成の種類を使用します。  
   
- 詳細については、「 [パッケージ構成](../../integration-services/packages/package-configurations.md)」、「 [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)」、および「 [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)」を参照してください。  
+ 詳細については、「 [パッケージ構成](../packages/legacy-package-deployment-ssis.md)」、「 [パッケージ構成を作成する](../packages/legacy-package-deployment-ssis.md)」、および「 [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)」を参照してください。  
   
 ### <a name="checkpoint-files"></a>チェックポイント ファイル  
  同様に、パッケージで使用するチェックポイント ファイルに機密情報が含まれている場合も、アクセス制御リスト (ACL) を使用して、ファイルが格納されている場所またはフォルダーを保護する必要があります。 チェックポイント ファイルは、パッケージの進行状況に関する現在の状態情報と変数の現在の値を格納します。 たとえば、電話番号を格納するカスタム変数がパッケージに含まれることがあります。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
@@ -147,4 +147,4 @@ ms.locfileid: "88487686"
   
 -   [デジタル証明書を使用してパッケージに署名する](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [パッケージの保護レベルを設定または変更する](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [パッケージの保護レベルを設定または変更する](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6e2a3540ea758fa394ad0ebcdcd28777bf4237b
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901586"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036306"
 ---
 # <a name="specify-a-breakpoint-filter"></a>ブレークポイント フィルターの指定
 
@@ -52,6 +52,6 @@ ms.locfileid: "88901586"
 3.  **[OK]** をクリックして変更を適用するか、 **[キャンセル]** をクリックして変更を適用せずに終了します。  
   
 ## <a name="see-also"></a>参照  
- [ブレークポイント条件の指定](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [ヒット カウントの指定](../../relational-databases/scripting/specify-a-hit-count.md)   
- [ブレークポイント アクションの指定](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
+ [ブレークポイント条件の指定](./specify-a-breakpoint-condition.md)   
+ [ヒット カウントの指定](./specify-a-hit-count.md)   
+ [ブレークポイント アクションの指定](./specify-a-breakpoint-action.md)

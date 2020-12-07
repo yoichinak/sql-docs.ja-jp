@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d1d5d09d0c41de51d545ca68aa4509f8a6b240f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0405dabd99568e09bc07502544db5a181bf357a5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487777"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192422"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>デジタル署名を使用してパッケージのソースを特定する
 
@@ -71,7 +71,7 @@ ms.locfileid: "88487777"
 |3|署名が無効であるか署名が信頼できないパッケージ、および署名がないパッケージをブロックします。<br /><br /> この設定では、自己生成された署名もブロックします。|  
   
 > [!NOTE]  
->  **BlockedSignatureStates** の推奨設定は 3 です。 この設定では、署名されていないパッケージまたは無効な署名や信頼できない署名に対する最大の保護が提供されます。 ただし、推奨される設定がすべての状況に適しているとは限りません。 デジタル アセットの署名の詳細については、MSDN ライブラリの「[コード署名の概要](https://go.microsoft.com/fwlink/?LinkId=51414)」を参照してください。  
+>  **BlockedSignatureStates** の推奨設定は 3 です。 この設定では、署名されていないパッケージまたは無効な署名や信頼できない署名に対する最大の保護が提供されます。 ただし、推奨される設定がすべての状況に適しているとは限りません。 デジタル アセットの署名の詳細については、MSDN ライブラリの「[コード署名の概要](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))」を参照してください。  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>パッケージに対する署名ポリシーを実装するには  
   
@@ -104,11 +104,11 @@ ms.locfileid: "88487777"
   
     -   証明書を発行する公的な商用証明機関から証明書を入手します。  
   
-    -   組織が証明書を内部的に発行できるようにする証明書サーバーから証明書を入手します。 証明書の署名に使用されるルート証明書を、 **[信頼されたルート証明機関]** ストアに追加する必要があります。 ルート証明書を追加するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) の証明書スナップインを使用します。 詳細については、MSDN ライブラリの「[証明書サービス](https://go.microsoft.com/fwlink/?LinkId=100755)」を参照してください。  
+    -   組織が証明書を内部的に発行できるようにする証明書サーバーから証明書を入手します。 証明書の署名に使用されるルート証明書を、 **[信頼されたルート証明機関]** ストアに追加する必要があります。 ルート証明書を追加するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) の証明書スナップインを使用します。 詳細については、MSDN ライブラリの「[証明書サービス](/windows/win32/seccrypto/certificate-services)」を参照してください。  
   
-    -   テスト目的でのみ独自の証明書を作成します。 証明書作成ツール (Makecert.exe) は、テスト目的で X.509 証明書を生成します。 詳細については、MSDN ライブラリの「[証明書作成ツール (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)」を参照してください。  
+    -   テスト目的でのみ独自の証明書を作成します。 証明書作成ツール (Makecert.exe) は、テスト目的で X.509 証明書を生成します。 詳細については、MSDN ライブラリの「[証明書作成ツール (Makecert.exe)](/previous-versions/dotnet/netframework-2.0/bfsktky3(v=vs.80))」を参照してください。  
   
-     証明書の詳細については、証明書スナップインのオンライン ヘルプを参照してください。 デジタル アセットの署名方法の詳細については、MSDN ライブラリの「[Authenticode を使用したコードの署名と検証](https://go.microsoft.com/fwlink/?LinkId=78100)」を参照してください。  
+     証明書の詳細については、証明書スナップインのオンライン ヘルプを参照してください。 デジタル アセットの署名方法の詳細については、MSDN ライブラリの「[Authenticode を使用したコードの署名と検証](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))」を参照してください。  
   
 -   証明書がコードの署名用に有効になっていることを確認します。 証明書がコードの署名用に有効になっているかどうかを判断するには、証明書スナップインで証明書のプロパティを確認します。  
   
@@ -153,5 +153,4 @@ ms.locfileid: "88487777"
 ## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; パッケージ](../../integration-services/integration-services-ssis-packages.md)   
  [セキュリティの概要 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
-  
   

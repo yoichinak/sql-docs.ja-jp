@@ -14,12 +14,12 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48143270af2a56f9662d742ec41e5984972b30c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d61cdfb974a59f61fe53ba65656d49002a816d32
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490856"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868864"
 ---
 # <a name="processing-results---process-results"></a>結果の処理 - 処理結果
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ODBC アプリケーションでの結果の処理では、最初に結果セッ
   
 3.  結果セット内の各行に対して次の操作を行います。  
   
-    -   [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) を呼び出して次の行を取得します。  
+    -   [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) を呼び出して次の行を取得します。  
   
     -   バインドされた列が使用されている場合は、バインドされた列のバッファー内で現在使用可能なデータを使用します。  
   
@@ -42,15 +42,15 @@ ODBC アプリケーションでの結果の処理では、最初に結果セッ
   
     -   **SQLGetData** を複数回呼び出して、text または image 列からデータを取得します。  
   
-4.  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) が SQL_NO_DATA を返すことによって結果セットの終了を示したら、[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出して、使用可能な結果セットが他にあるかどうかを確認します。  
+4.  [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) が SQL_NO_DATA を返すことによって結果セットの終了を示したら、[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出して、使用可能な結果セットが他にあるかどうかを確認します。  
   
     -   SQL_SUCCESS が返された場合は、別の結果セットを使用できます。  
   
     -   SQL_NO_DATA が返された場合は、他に使用できる結果セットはありません。  
   
-    -   SQL_SUCCESS_WITH_INFO または SQL_ERROR が返された場合は、[SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) を呼び出して、PRINT ステートメントまたは RAISERROR ステートメントからの出力が使用可能かどうかを確認します。  
+    -   SQL_SUCCESS_WITH_INFO または SQL_ERROR が返された場合は、[SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) を呼び出して、PRINT ステートメントまたは RAISERROR ステートメントからの出力が使用可能かどうかを確認します。  
   
-         バインドされたステートメントのパラメーターが出力パラメーターまたはストアド プロシージャの戻り値に使用されている場合は、バインドされたパラメーターのバッファーでデータを使用できるようになります。 バインドされたパラメーターが使用される場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) または [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) への各呼び出しで、SQL ステートメントが *S* 回実行されます。*S* は、バインドされたパラメーターの配列内にある要素の数です。 つまり、処理する結果のセットが *S* 個あることを意味します。これらの結果の各セットには、結果セット、出力パラメーター、および通常 SQL ステートメントの 1 回の実行で返されるリターン コードがすべて含まれます。  
+         バインドされたステートメントのパラメーターが出力パラメーターまたはストアド プロシージャの戻り値に使用されている場合は、バインドされたパラメーターのバッファーでデータを使用できるようになります。 バインドされたパラメーターが使用される場合は、[SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) または [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) への各呼び出しで、SQL ステートメントが *S* 回実行されます。*S* は、バインドされたパラメーターの配列内にある要素の数です。 つまり、処理する結果のセットが *S* 個あることを意味します。これらの結果の各セットには、結果セット、出力パラメーター、および通常 SQL ステートメントの 1 回の実行で返されるリターン コードがすべて含まれます。  
   
     > [!NOTE]  
     >  結果セットに計算行が含まれている場合、各計算行は個々の結果セットとして使用できるようになります。 これらの計算結果セットは標準行内に点在し、標準行は複数の結果セットに分割されます。  
@@ -60,9 +60,8 @@ ODBC アプリケーションでの結果の処理では、最初に結果セッ
 6.  別の結果セットが使用できる場合は、手順 1 に戻ります。  
 
 > [!NOTE]  
->  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) によって SQL_NO_DATA が返される前に結果セットの処理を取り消すには、[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) を呼び出します。  
+>  [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) によって SQL_NO_DATA が返される前に結果セットの処理を取り消すには、[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) を呼び出します。  
   
 ## <a name="see-also"></a>参照  
 [ODBC&#41;&#40;結果セットの情報を取得します。 ](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
-  
   

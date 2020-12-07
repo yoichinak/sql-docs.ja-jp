@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361e98e19788f4d2c6aa921caf71e58552ee53a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488566"
 ---
 # <a name="specify-default-values-for-columns"></a>列の既定値の指定
@@ -56,7 +56,7 @@ ms.locfileid: "88488566"
 
 ### <a name="object-explorer"></a>オブジェクト エクスプローラー
 
-1. **オブジェクト エクスプローラー**で、有効桁数を変更する列が含まれているテーブルを右クリックし、 **[デザイン]** をクリックします。
+1. **オブジェクト エクスプローラー** で、有効桁数を変更する列が含まれているテーブルを右クリックし、 **[デザイン]** をクリックします。
 
 2. 既定値を指定する列を選択します。
 
@@ -73,7 +73,7 @@ SSMS を使用して T-SQL を送信することにより、さまざまな方�
 
 ### <a name="alter-table-t-sql"></a>ALTER TABLE (T-SQL)
 
-1. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。
+1. **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。
 
 2. [標準] ツール バーの **[新しいクエリ]** をクリックします。
 

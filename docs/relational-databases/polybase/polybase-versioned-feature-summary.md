@@ -2,7 +2,7 @@
 description: PolyBase の機能と制限事項
 title: PolyBase の機能と制限事項 | Microsoft Docs
 descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
-ms.date: 09/24/2018
+ms.date: 11/13/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d3d6021b34f5804f33cd784bc9b7fd38c7eb1f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce4c3624600741d900d51dc832ab4a685c28107a
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427994"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631748"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase の機能と制限事項
 
@@ -38,7 +38,7 @@ PolyBase の主な機能と、これらの機能を利用できる製品を一�
 |Azure Blob Storage からデータをインポートする|はい|いいえ|はい|はい|
 |Azure Blob Storage にデータをエクスポートする|はい|いいえ|はい|はい|  
 |Azure Data Lake Store からデータをインポートする|いいえ|いいえ|はい|いいえ|
-|Azure Data Lake Store からデータをエクスポートする|いいえ|いいえ|はい|いいえ|
+|Azure Data Lake Store にデータをエクスポートする|いいえ|いいえ|はい|いいえ|
 |Microsoft BI ツールから PolyBase クエリを実行する|はい|いいえ|はい|はい|
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 演算子でサポートされるプッシュダウン計算

@@ -1,2 +1,2 @@
-<Token>**適用対象:** ![×](media/no-icon.png)SQL Server ![○](media/yes-icon.png)Azure SQL Managed Instance ![X](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![X](media/no-icon.png)Parallel Data Warehouse </Token>
+<Token>**適用対象:** :::image type="icon" source="media/no-icon.png":::SQL Server :::image type="icon" source="media/yes-icon.png":::Azure SQL Managed Instance :::image type="icon" source="media/no-icon.png":::Azure Synapse Analytics (SQL DW) :::image type="icon" source="media/no-icon.png":::Parallel Data Warehouse</Token>
 

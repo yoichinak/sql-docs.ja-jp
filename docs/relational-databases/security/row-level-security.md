@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88f809409337557603120cc87a24874319a96c9a
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: e5ddd76c050e50576a446e8e404b889fcc8fa92d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392190"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867966"
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
 
@@ -39,7 +39,7 @@ Row-Level Security (RLS) は、アプリケーションでセキュリティの�
   
 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して RLS を実装すると、[インライン テーブル値関数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)として述語が作成されます。  
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([入手](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([入手](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
   
 > [!NOTE]
 > Azure Synapse では、フィルター述語のみがサポートされています。 ブロック述語は現在、Azure Synapse でサポートされていません。
@@ -363,7 +363,7 @@ CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=
 AS SELECT * FROM sales;
 ```
 
-3 人のユーザーに外部テーブルの SELECT 権限を付与します。
+作成した Sales_ext 外部テーブルで、3 人のユーザーに SELECT を付与します。
 
 ```sql
 GRANT SELECT ON Sales_ext TO Sales1;  

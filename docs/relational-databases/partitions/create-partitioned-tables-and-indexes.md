@@ -31,11 +31,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a22807e98d887504cb1700e7bc3497984b699059
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482535"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130225"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "88482535"
   
 1.  パーティション分割するテーブルを右クリックし、**[ストレージ]** をポイントします。次に、**[パーティションの作成]** をクリックします。  
   
-2.  **パーティションの作成ウィザード**の **[パーティションの作成ウィザードへようこそ]** ページで、 **[次へ]** をクリックします。  
+2.  **パーティションの作成ウィザード** の **[パーティションの作成ウィザードへようこそ]** ページで、 **[次へ]** をクリックします。  
   
 3.  **[パーティション分割列の選択]** ページの **[使用可能なパーティション分割列]** グリッドで、テーブルのパーティション分割に使用する列を選択します。 **[使用可能なパーティション分割列]** グリッドには、データのパーティション分割に使用できるデータ型の列だけが表示されます。 計算列をパーティション分割列として選択する場合は、列を PERSISTED として指定する必要があります。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "88482535"
      このページで使用できる他のオプションを次に示します。  
   
      **[境界の設定]**  
-     **[境界値の設定]** ダイアログ ボックスを開き、パーティションの境界値と日付範囲を選択します。 このオプションは、 **date**、 **datetime**、 **smalldatetime**、 **datetime2**、または **datetimeoffset**のいずれかのデータ型を含むパーティション分割列を選択した場合にのみ使用できます。  
+     **[境界値の設定]** ダイアログ ボックスを開き、パーティションの境界値と日付範囲を選択します。 このオプションは、 **date**、 **datetime**、 **smalldatetime**、 **datetime2**、または **datetimeoffset** のいずれかのデータ型を含むパーティション分割列を選択した場合にのみ使用できます。  
   
      **[ストレージの推定]**  
      パーティションに指定された各ファイル グループのストレージの行数、必要な領域、および使用できる領域を推定します。 これらの値は、読み取り専用の値としてグリッドに表示されます。  
@@ -265,7 +265,7 @@ ms.locfileid: "88482535"
   
 #### <a name="to-create-a-partitioned-table"></a>パーティション テーブルを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

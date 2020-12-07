@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45c89f83ca8d478eac40be867bbde946ce8e51d8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 307d1cf41c319debad4b0fc06b8ba0da516491bd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681067"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257322"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>RESTful Web サービスを使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されたアプリを使用する
 
@@ -26,7 +26,7 @@ ms.locfileid: "88681067"
 ## <a name="prerequisites"></a>前提条件
 
 - [SQL Server ビッグ データ クラスター](deployment-guidance.md)
-- [azdata コマンドライン ユーティリティ](deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 - [azdata](app-create.md) または [App Deploy](app-deployment-extension.md) 拡張機能を使用して展開されたアプリ
 
 > [!NOTE]

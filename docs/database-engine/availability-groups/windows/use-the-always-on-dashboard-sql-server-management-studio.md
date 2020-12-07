@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 80b7f3e83af181676f09a6dc38b3652ae6142c89
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902366"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583664"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -329,9 +329,9 @@ ms.locfileid: "85902366"
 ## <a name="always-on-availability-group-latency-reports"></a>Always On 可用性グループ待機時間レポート
 可用性グループ待機時間レポートは、可用性グループ ダッシュボードに組み込まれているレポート ツールであり、[SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) リリースで使用できます。 この機能では、ログ転送プロセスのさまざまなフェーズで費やされる時間を詳細に示すわかりやすいレポートが提供されます。 これにより、同期プロセス中の待機時間の潜在的な原因を絞り込むことができます。 
 
-SQL エージェントではデータ収集を行います。プライマリ レプリカと、1 つ以上のセカンダリ レプリカの両方で SQL エージェントを有効にする必要があります。 SQL Server Management Studio の**オブジェクト エクスプローラー**で、可用性グループを右クリックし、[レポート]、[標準レポート] の順に選択してレポートを表示します。  
+SQL エージェントではデータ収集を行います。プライマリ レプリカと、1 つ以上のセカンダリ レプリカの両方で SQL エージェントを有効にする必要があります。 SQL Server Management Studio の **オブジェクト エクスプローラー** で、可用性グループを右クリックし、[レポート]、[標準レポート] の順に選択してレポートを表示します。  
 
-詳細については、[Always On 可用性グループの待機時間レポート](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/)に関するページを参照してください。
+詳細については、[Always On 可用性グループの待機時間レポート](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports)に関するページを参照してください。
 
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -340,5 +340,4 @@ SQL エージェントではデータ収集を行います。プライマリ レ
 ## <a name="see-also"></a>参照  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [可用性グループの監視 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

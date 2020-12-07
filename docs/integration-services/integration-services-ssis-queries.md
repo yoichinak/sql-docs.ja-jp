@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79d6e93c536828e0de44c77ebd1377fab5021d69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54a577a2a94c64eafe3817ccd9a041125629f846
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449804"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193845"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) のクエリ
 
@@ -62,13 +62,13 @@ SQL ステートメントは次の方法で提供できます。
   
  また、直接入力は、タスクやデータ フロー コンポーネントのダイアログ ボックス、またはプロパティ ウィンドウにクエリを入力しても行えます。  
   
- 詳細については、「 [クエリ ビルダー](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)」を参照してください。  
+ 詳細については、「 [クエリ ビルダー]()」を参照してください。  
   
 ## <a name="sql-in-files"></a>ファイルの SQL  
  SQL 実行タスクの SQL ステートメントを、別のファイルに格納しておくことも可能です。 たとえば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のクエリ エディターのようなツールを使用してクエリを記述し、ファイルに保存して、パッケージを実行するときにファイルからクエリを読み込むことができます。 ファイルには、実行する SQL ステートメントとコメントのみを含めることができます。 ファイルに格納された SQL ステートメントを使用するには、ファイル名とファイルの場所を指定するファイル接続を用意する必要があります。 詳しくは「 [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md)」をご覧ください。  
   
 ## <a name="sql-in-variables"></a>変数の SQL  
- SQL 実行タスクの SQL ステートメントのソースが変数の場合、クエリが格納されている変数の名前を指定します。 変数の Value プロパティにクエリのテキストを格納します。 変数の ValueType プロパティを文字列データ型に設定し、Value プロパティに SQL ステートメントを入力またはコピーします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+ SQL 実行タスクの SQL ステートメントのソースが変数の場合、クエリが格納されている変数の名前を指定します。 変数の Value プロパティにクエリのテキストを格納します。 変数の ValueType プロパティを文字列データ型に設定し、Value プロパティに SQL ステートメントを入力またはコピーします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](./integration-services-ssis-variables.md)」をご覧ください。  
 
 ## <a name="query-builder-dialog-box"></a>[クエリ ビルダー] ダイアログ ボックス
 **[クエリ ビルダー]** ダイアログ ボックスを使用すると、SQL 実行タスク、OLE DB 変換元と OLE DB 変換先、および参照変換で使用するクエリを作成できます。  
@@ -85,9 +85,9 @@ SQL ステートメントは次の方法で提供できます。
   
  **[クエリ ビルダー]** ダイアログ ボックスのグラフィカル ツールにより、ドラッグ アンド ドロップ操作でクエリを作成できます。 既定では、[クエリ ビルダー] ダイアログ ボックスは SELECT クエリを構築しますが、INSERT、UPDATE、または DELETE クエリも作成できます。 **[クエリ ビルダー]** ダイアログ ボックスで、すべての種類の SQL ステートメントを解析して実行できます。 パッケージの SQL ステートメントの詳細については、「[Integration Services (SSIS) のクエリ](../integration-services/integration-services-ssis-queries.md)」を参照してください。  
   
- Transact-SQL 言語およびその構文の詳細については、「[Transact-SQL リファレンス (データベース エンジン)](../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
+ Transact-SQL 言語およびその構文の詳細については、「[Transact-SQL リファレンス (データベース エンジン)](../t-sql/language-reference.md)」を参照してください。  
   
- クエリで変数を使用して、入力パラメーターへの値の指定、出力パラメーターの値の取得、およびリターン コードの格納を行うこともできます。 パッケージで使用するクエリでの変数の使用の詳細については、「[SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md)」、「[OLE DB ソース](../integration-services/data-flow/ole-db-source.md)」、および「[Integration Services (SSIS) のクエリ](../integration-services/integration-services-ssis-queries.md)」を参照してください。 SQL 実行タスクでの変数の使用の詳細については、「 [SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 」および「 [SQL 実行タスクにおける結果セット](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)」を参照してください。  
+ クエリで変数を使用して、入力パラメーターへの値の指定、出力パラメーターの値の取得、およびリターン コードの格納を行うこともできます。 パッケージで使用するクエリでの変数の使用の詳細については、「[SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md)」、「[OLE DB ソース](../integration-services/data-flow/ole-db-source.md)」、および「[Integration Services (SSIS) のクエリ](../integration-services/integration-services-ssis-queries.md)」を参照してください。 SQL 実行タスクでの変数の使用の詳細については、「 [SQL 実行タスクのパラメーターとリターン コード](./control-flow/execute-sql-task.md) 」および「 [SQL 実行タスクにおける結果セット](./control-flow/execute-sql-task.md)」を参照してください。  
   
  参照変換およびあいまい参照変換でも、パラメーターとリターン コードに変数を使用できます。 OLE DB ソースに関する情報は、これら 2 つの変換にも適用されます。  
   
@@ -119,4 +119,3 @@ SQL ステートメントは次の方法で提供できます。
 |**[SQL]** ペイン|クエリを SQL テストとして表示します。 **[ダイアグラム]** ペインおよび **[グリッド]** ペインで行われた変更がここに表示されます。このペインで行われた変更は、 **[ダイアグラム]** ペインおよび **[グリッド]** ペインに表示されます。|  
 |**[結果]** ペイン|ツール バーの **[実行]** をクリックしたときに、クエリの結果が表示されます。| 
 
-  

@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac0ff0ea8a07aaa5f08d8c1ccbf0fb0094448310
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116922"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128597"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "91116922"
 ## <a name="syntax"></a>構文  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の構文:
 
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の構文:
   
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  
@@ -94,7 +94,11 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>注釈  
 DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際には注意が必要です。 プロシージャ (プラン) キャッシュをクリアすると、すべてのプランが削除されます。その後にクエリを実行すると、以前にキャッシュされたプランは再利用されず、新しいプランがコンパイルされます。 
 
-そのため、新しいコンパイルの数が増えると、クエリのパフォーマンスが突然一時的に低下する可能性があります。 プラン キャッシュ内のキャッシュストアがクリアされるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、'DBCC FREEPROCCACHE' 操作または 'DBCC FREESYSTEMCACHE' 操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
+そのため、新しいコンパイルの数が増えると、クエリのパフォーマンスが突然一時的に低下する可能性があります。 プラン キャッシュ内のキャッシュストアが消去されるたびに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに、以下の通知メッセージが記録されます。
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.` 
+
+このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 
 次の再構成操作でもプロシージャ キャッシュはクリアされます。
 -   access check cache bucket count  

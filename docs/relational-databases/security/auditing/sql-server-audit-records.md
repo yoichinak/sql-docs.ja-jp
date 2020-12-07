@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1683231db68ea20fda3082a8ade8f945fcae4c29
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885313"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868553"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server 監査レコード
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85885313"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|監査可能なアクションが発生した日付/時刻。|**datetime2**|はい|  
 |**sequence_no**|大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。|**int**|はい|  
-|**action_id**|アクションの ID<br /><br /> ヒント:**action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)」を参照してください。|**varchar (4)**|はい|  
+|**action_id**|アクションの ID<br /><br /> ヒント:**action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)」を参照してください。|**varchar (4)**|はい|  
 |**succeeded**|監査イベントをトリガーするアクションのアクセス許可のチェックが成功または失敗したかどうかを示します。 |**bit**<br /> - 1 = 成功 <br />0 = 失敗|はい|  
 |**permission_bitmask**|該当する場合、許可、拒否、または取り消されたアクセス許可を表示します。|**bigint**|いいえ|  
 |**is_column_permission**|列レベル権限を示すフラグ。|**bit** <br />- 1 = True <br />0 = False|いいえ|  
@@ -110,5 +110,4 @@ ms.locfileid: "85885313"
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)  
   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
-  
   

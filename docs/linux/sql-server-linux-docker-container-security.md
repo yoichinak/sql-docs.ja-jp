@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 10d2eb061a4ee6d9ff9c8d0594561667dd882dc9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 60ee13c6715362ba821575a3f8b9f9d5bc3e2bfa
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511590"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589331"
 ---
 # <a name="secure-sql-server-docker-containers"></a>SQL Server Docker コンテナーをセキュリティで保護する
 
@@ -126,6 +126,60 @@ chmod -R g=u <database file dir>
 ```bash
 chown -R 10001:0 <database file dir>
 ```
+## <a name="encrypting-connections-to-sql-server-linux-containers"></a>SQL Server Linux コンテナーへの接続の暗号化
+
+SQL Server Linux コンテナーへの接続を暗号化するには、[ここ]で説明されている要件の証明書が必要です。
+
+SQL Server Linux コンテナーへの接続を暗号化する方法の例を次に示します。 ここでは、自己署名証明書を使用します。これは、このような環境の運用シナリオには使用しないでください。CA 証明書を使用するようにしてください。
+
+1. 自己署名証明書を作成します。これは、テスト環境と非運用環境のみに適しています。
+  
+      ```bash
+      openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=sql1.contoso.com' -keyout /container/sql1/mssql.key -out /container/sql1/mssql.pem -days 365
+      ```
+     この sql1 は SQL コンテナーのホスト名です。そのため、このコンテナーに接続するときに、接続文字列で使用される名前は \'sql1.contoso.com,port\' になります。
+
+    > [!NOTE]
+    > 上記のコマンドを実行する前に、フォルダー パス /container/sql1/ が、既に存在しているようにしてください。
+
+2. 確実に mssql.key ファイルと mssql.pem ファイルに適切なアクセス許可を設定し、ファイルを SQL コンテナーにマウントするときのエラーを回避できるようにします。
+
+    ```bash
+    chmod 440 /container/sql1/mssql.pem
+    chmod 440 /container/sql1/mssql.key
+    ```
+
+3. 次に、以下の内容で mssql.conf ファイルを作成して、サーバーによって開始される暗号化を有効にします。クライアントによって開始される暗号化の場合は、最後の行を 'forceencryption = 0\' に変更します。
+
+    ```bash
+    [network]
+    tlscert = /etc/ssl/certs/mssql.pem
+    tlskey = /etc/ssl/private/mssql.key
+    tlsprotocols = 1.2
+    forceencryption = 1
+    ```
+
+    > [!NOTE]
+    > Linux ディストリビューションによっては、証明書とキーの格納先のパスは、それぞれ /etc/pki/tls/certs/ と /etc/pki/tls/private/ である可能性があります。 SQL コンテナーの mssql.conf を更新する前に、パスを確認してください。 mssql.conf に設定された場所は、コンテナー内の SQL Server で証明書とそのキーが検索される場所になります。 この場合、その場所は /etc/ssl/certs/ と /etc/ssl/private/ です。
+
+    mssql.conf ファイルも同じフォルダーである location /container/sql1/ 以下に作成されます。 上記の手順を行うと、sql1 フォルダー内に mssql.conf、mssql.key、mssql.pem の 3 つのファイルが作成されます。
+
+4. 次に示すコマンドを使用して SQL コンテナーをデプロイします。
+
+    ```bash
+    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -p 5434:1433 --name sql1 -h sql1 -v /container/sql1/mssql.conf:/var/opt/mssql/mssql.conf -v   /container/sql1/mssql.pem:/etc/ssl/certs/mssql.pem -v /container/sql1/mssql.key:/etc/ssl/private/mssql.key -d mcr.microsoft.com/mssql/server:2019-latest
+    ```
+
+    上記のコマンドを使い、mssql.conf、mssql.pem、mssql.key ファイルをコンテナーにマウントし、コンテナー内の 1433 (SQL Server の既定のポート) ポートをホストの 5434 ポートにマップしました。 
+
+    > [!NOTE]
+    > RHEL 8 以降を使用している場合は、\'docker run\' ではなく \'podman run\' コマンドを使用することもできます。 
+
+Linux コンテナー上の SQL Server への接続の暗号化を開始するには、[ここ][1]で説明されている\"クライアント マシンへの証明書の登録\"と\"接続文字列の例\"に関するセクションに従ってください。
+
+  [Encrypting connection to SQL Server Linux]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true
+  [ここ]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#requirements-for-certificates
+  [1]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#client-initiated-encryption
 
 ## <a name="next-steps"></a>次のステップ
 

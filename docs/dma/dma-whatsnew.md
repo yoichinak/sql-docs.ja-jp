@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 11bbf0a39ed9a9bbaa19992f98e4e23d50d6fbe9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988498"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727761"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 
@@ -83,7 +83,7 @@ Data Migration Assistant の version 4.1 リリースでは、SQL Managed Instan
   - 動作の変更: 報告されたスキーマオブジェクトは引き続き機能しますが、パフォーマンスの低下など、動作が異なる場合があります。
   - 情報に関する問題: これらのオブジェクトは移行に影響を与えることはありませんが、機能 SQL Server のリリースで非推奨とされる可能性があります。
 
-評価が完了したら、 [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) を使用して、SQL Server データベースの SQL Managed Instance への移行を実行します。  DMS では、SQL Managed Instance への[オフライン](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)(1 回限り) および[オンライン](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)(最小限のダウンタイム) データベースの移行がサポートされています。
+評価が完了したら、 [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) を使用して、SQL Server データベースの SQL Managed Instance への移行を実行します。  DMS では、SQL Managed Instance への [オフライン](/azure/dms/tutorial-sql-server-to-managed-instance) (1 回限り) および [オンライン](/azure/dms/tutorial-sql-server-managed-instance-online) (最小限のダウンタイム) データベースの移行がサポートされています。
 
 ## <a name="data-migration-assistant-v40"></a>Data Migration Assistant v4.0
 
@@ -92,7 +92,7 @@ Data Migration Assistant の v2.0 リリースでは、Azure SQL Database SKU �
 > [!NOTE]
 > 現在、この機能は、コマンドラインインターフェイス (CLI) を介してのみ使用できます。
 
-詳細については、[オンプレミスデータベースの適切な AZURE SQL DATABASE SKU の特定に](dma-sku-recommend-sql-db.md)関する記事を参照してください。
+詳細については、 [オンプレミスデータベースの適切な AZURE SQL DATABASE SKU の特定に](dma-sku-recommend-sql-db.md)関する記事を参照してください。
 
 ## <a name="data-migration-assistant-v36"></a>Data Migration Assistant v1.0
 
@@ -141,7 +141,7 @@ Linux と Windows では、異なるパス形式を使用します。 結果と�
 
 ### <a name="migrating-windows-logins"></a>Windows ログインの移行
 
-Active Directory (AD) ログインの移行は Linux 上の SQL Server 2017 で正式にサポートされていますが、正常に機能するためには追加の構成が必要です。 Linux での SQL Server 2017 での Active Directory ログインの設定の詳細については、 [SQL Server on Linux での認証の Active Directory](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication)に関する記事を参照してください。 必要な構成を実行すると、セットアップが完了し、Active Directory ログインを通常どおりに移行できるようになります。 標準の SQL 認証は、追加の設定を行わなくても期待どおりに動作します。
+Active Directory (AD) ログインの移行は Linux 上の SQL Server 2017 で正式にサポートされていますが、正常に機能するためには追加の構成が必要です。 Linux での SQL Server 2017 での Active Directory ログインの設定の詳細については、 [SQL Server on Linux での認証の Active Directory](../linux/sql-server-linux-active-directory-authentication.md) に関する記事を参照してください。 必要な構成を実行すると、セットアップが完了し、Active Directory ログインを通常どおりに移行できるようになります。 標準の SQL 認証は、追加の設定を行わなくても期待どおりに動作します。
 
 ## <a name="data-migration-assistant-v32"></a>Data Migration Assistant 3.2
 
@@ -168,7 +168,7 @@ Data Migration Assistant の v2.0 リリースでは Azure SQL Database 評価�
 
 Data Migration Assistant のバージョン2.1 リリースには、次の追加機能が含まれています。
 
-- 評価を大規模に実行するのに役立つ無人モードで評価を実行するためのコマンドラインサポート。 詳細については、「[コマンドラインから Data Migration Assistant を実行](dma-commandline.md)する」を参照してください。
+- 評価を大規模に実行するのに役立つ無人モードで評価を実行するためのコマンドラインサポート。 詳細については、「 [コマンドラインから Data Migration Assistant を実行](dma-commandline.md)する」を参照してください。
 - ユーザーが DMA を起動して閉じるときのパフォーマンスが向上しました。
 - SQL 接続のタイムアウトを構成する権限です。詳細については、「 [Data Migration Assistant の構成設定](dma-configurationsettings.md)」を参照してください。
 
@@ -190,6 +190,6 @@ Data Migration Assistant の v1.0 リリースは最初のリリースであり�
   - ストレージ
 - 評価を実行する最新のユーザーエクスペリエンス。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Data Migration Assistant の概要](../dma/dma-overview.md)

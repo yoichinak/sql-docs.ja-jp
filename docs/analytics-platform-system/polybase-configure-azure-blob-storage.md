@@ -1,6 +1,6 @@
 ---
 title: PolyBase を使用して Azure Blob ストレージ内の外部データにアクセスする
-description: Parallel Data Warehouse で PolyBase を構成して外部 Hadoop に接続する方法について説明します。
+description: 並列データウェアハウス (APS) で PolyBase を使用して、Azure Blob ストレージ内の外部データに対してクエリを実行する方法について説明します。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 52ad8a4e8c335eea412264b69d87453a5ce84104
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "74400727"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520976"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage 内の外部データにアクセスするように PolyBase を構成する
 
@@ -173,7 +173,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>SSDT で PolyBase オブジェクトを表示する  
 
-SQL Server Data Tools では、外部テーブルが別のフォルダー **外部テーブル**に表示されます。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]** の下のサブフォルダーにあります。  
+SQL Server Data Tools では、外部テーブルが別のフォルダー **外部テーブル** に表示されます。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]** の下のサブフォルダーにあります。  
   
 ![SSDT の PolyBase オブジェクト](media/polybase/external-tables-datasource.png)  
 

@@ -13,25 +13,28 @@ author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
 ms.date: 06/12/2020
-ms.openlocfilehash: b2d4364d01b871364fda3ac42d98536e99269c29
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 004a7b0a50a657632bb2b9970f0558857d416494
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763944"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257977"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>xp_cmdshell サーバー構成オプション
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-この記事では、**xp_cmdshell** SQL Server 構成オプションを有効にする方法について説明します。 システム管理者はこのオプションを使用して、[xp_cmdshell 拡張ストアド プロシージャ](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)をシステムで実行できるかどうかを制御できます。 新規インストールの場合、**xp_cmdshell** オプションは既定で無効になっています。
+この記事では、 **xp_cmdshell** SQL Server 構成オプションを有効にする方法について説明します。 システム管理者はこのオプションを使用して、[xp_cmdshell 拡張ストアド プロシージャ](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)をシステムで実行できるかどうかを制御できます。 新規インストールの場合、 **xp_cmdshell** オプションは既定で無効になっています。
 
 このオプションを有効にする前に、潜在的なセキュリティの影響を考慮することが重要です。
 
-- 新しく開発されたコードでは、**xp_cmdshell** ストアド プロシージャを使用しないでください。通常は、無効のままにしておく必要があります。
-- 一部のレガシ アプリケーションでは、**xp_cmdshell** を有効にする必要があります。 このストアド プロシージャを使用しないようにアプリケーションを変更できない場合は、以下の説明に従って有効にすることができます。
+- 新しく開発されたコードでは、 **xp_cmdshell** ストアド プロシージャを使用しないでください。通常は、無効のままにしておく必要があります。
+- 一部のレガシ アプリケーションでは、 **xp_cmdshell** を有効にする必要があります。 このストアド プロシージャを使用しないようにアプリケーションを変更できない場合は、以下の説明に従って有効にすることができます。
 
-**xp_cmdshell** を有効にする必要がある場合は、[ポリシーベースの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)を使用するか、次のコード例に示すように **sp_configure** システム ストアド プロシージャを実行します。  
+> [!NOTE]  
+> **xp_cmdshell** を使用する必要がある場合、セキュリティのベスト プラクティスとして、それを必要とする実際のタスクの期間だけそれを有効にすることをお勧めします。
+
+**xp_cmdshell** を有効にする必要がある場合は、 [ポリシーベースの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)を使用するか、次のコード例に示すように **sp_configure** システム ストアド プロシージャを実行します。  
   
 ``` sql
 -- To allow advanced options to be changed.  

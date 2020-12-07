@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b65b2c71fa8901a4a2aa36ad2b1879433ae94ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6bcdb94260a5fe1190e6f96ada085f004458c54
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484585"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194234"
 ---
 # <a name="notify-operator-task"></a>オペレーターへの通知タスク
 
@@ -31,7 +31,7 @@ ms.locfileid: "88484585"
 
   オペレーターへの通知タスクは、通知メッセージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オペレーターに送信します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オペレーターは、電子通知を受信できる人またはグループの別名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーターの詳細については、「 [オペレーター](../../ssms/agent/operators.md)」を参照してください。  
   
- オペレーターへの通知タスクを使用すると、パッケージは電子メール、ポケットベル、または **Net Send**経由で、1 人以上のオペレーターに通知できます。 通知方法は、オペレーターごとに変更できます。 たとえば、オペレーター A には電子メールとポケットベルで通知し、オペレーター B にはポケットベルと **Net Send**で通知します。 オペレーターへの通知タスクから通知を受信するオペレーターは、このタスク上にある **OperatorNotify** コレクションのメンバーである必要があります。  
+ オペレーターへの通知タスクを使用すると、パッケージは電子メール、ポケットベル、または **Net Send** 経由で、1 人以上のオペレーターに通知できます。 通知方法は、オペレーターごとに変更できます。 たとえば、オペレーター A には電子メールとポケットベルで通知し、オペレーター B にはポケットベルと **Net Send** で通知します。 オペレーターへの通知タスクから通知を受信するオペレーターは、このタスク上にある **OperatorNotify** コレクションのメンバーである必要があります。  
   
  オペレーターへの通知タスクは、Transact-SQL ステートメントや DBCC コマンドをカプセル化しない、唯一のデータベース メンテナンス タスクです。  
   
@@ -44,6 +44,5 @@ ms.locfileid: "88484585"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

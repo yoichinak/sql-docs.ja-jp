@@ -17,19 +17,19 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f532b124fa23a65a71480b4bcb1bf31272a3081e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 527f69fddc65e31d72b65726fe4b7ace5434af60
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862226"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081481"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server エラーの詳細
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server では、プロバイダー固有のエラー インターフェイス [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) が定義されます。 このインターフェイスにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラーの詳細が返されるので、コマンドの実行や行セットの操作が失敗したときに役立ちます。  
+  OLE DB Driver for SQL Server では、プロバイダー固有のエラー インターフェイス [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md) が定義されます。 このインターフェイスにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラーの詳細が返されるので、コマンドの実行や行セットの操作が失敗したときに役立ちます。  
   
  **ISQLServerErrorInfo** インターフェイスにアクセスする方法は 2 つあります。  
   
@@ -61,5 +61,4 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 ## <a name="see-also"></a>参照  
  [エラー](../../oledb/ole-db-errors/errors.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
   

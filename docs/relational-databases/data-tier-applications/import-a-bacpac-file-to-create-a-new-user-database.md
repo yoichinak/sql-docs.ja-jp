@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412438"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195595"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88412438"
 2.  エクスポート ファイルからデータを一括コピーします。  
 
 ## <a name="sql-server-utility"></a>SQL Server ユーティリティ (SQL Server Utility)  
- データベース エンジンのインスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の**ユーティリティ エクスプローラー**の **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、 **[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
+ データベース エンジンのインスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **ユーティリティ エクスプローラー** の **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、 **[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
   
 ## <a name="database-options-and-settings"></a>データベースのオプションと設定  
  既定では、インポート時に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定がすべて適用されます。ただし、データベースの照合順序および互換性レベルは、DAC のエクスポート ファイルで定義された値に設定されます。 DAC のエクスポート ファイルには、元のデータベースに基づく値が使用されます。  
@@ -69,7 +69,7 @@ ms.locfileid: "88412438"
   
 1.  内部設置型または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 内で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
-2.  **オブジェクト エクスプローラー**で、 **[データベース]** を右クリックしてから、 **[データ層アプリケーションのインポート]** メニュー項目を選択してウィザードを起動します。  
+2.  **オブジェクト エクスプローラー** で、 **[データベース]** を右クリックしてから、 **[データ層アプリケーションのインポート]** メニュー項目を選択してウィザードを起動します。  
   
 3.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88412438"
   
 -   **[Import from Azure]\(Azure からインポート\)** : BACPAC ファイルを Microsoft Azure コンテナーからインポートします。 このオプションを検証するには、Microsoft Azure コンテナーに接続する必要があります。 [Import from Azure]\(Azure からインポート\) オプションでは、一時ファイル用のローカル ディレクトリを指定する必要もあります。 一時ファイルは、指定した場所に作成され、操作の完了後も残ります。  
   
-     Azure を参照するときに、1 つのアカウント内のコンテナーを切り替えることができます。 インポート操作を続行するには、1 つの .bacpac ファイルを指定する必要があります。 列は、**名前**、**サイズ**、または**更新日時**で並べ替えることができます。  
+     Azure を参照するときに、1 つのアカウント内のコンテナーを切り替えることができます。 インポート操作を続行するには、1 つの .bacpac ファイルを指定する必要があります。 列は、**名前**、**サイズ**、または **更新日時** で並べ替えることができます。  
   
      続行するには、インポートする .bacpac ファイルを指定し、 **[開く]** をクリックします。  
   
@@ -122,8 +122,8 @@ ms.locfileid: "88412438"
   
  **Azure SQL データベースの場合**  
   
- - 「 **[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 」を参照してください。Azure portal、PowerShell、SSMS、または SqlPackage を使用する場合の詳しい手順が記載されています。  
- - 「 **[SQL Database のオプションとパフォーマンス: 各サービス階層で使用できる内容について理解する](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** 」を参照してください。さまざまなサービス階層について、詳しく説明されています。  
+ - 「 **[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](/azure/azure-sql/database/database-import)** 」を参照してください。Azure portal、PowerShell、SSMS、または SqlPackage を使用する場合の詳しい手順が記載されています。  
+ - 「 **[SQL Database のオプションとパフォーマンス: 各サービス階層で使用できる内容について理解する](/azure/azure-sql/database/purchasing-models)** 」を参照してください。さまざまなサービス階層について、詳しく説明されています。  
 
 ### <a name="validation-page"></a>[検証] ページ  
  このページを使用して、操作の妨げとなる問題を確認します。 続行するには、妨げとなる問題を解決し、 **[検証の再実行]** をクリックして、検証が成功したことを確認します。  
@@ -144,8 +144,7 @@ ms.locfileid: "88412438"
  **[閉じる]** をクリックしてウィザードを閉じます。  
   
 ## <a name="see-also"></a>関連項目  
-[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](/azure/azure-sql/database/database-import)  
  [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [データ層アプリケーションのエクスポート](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

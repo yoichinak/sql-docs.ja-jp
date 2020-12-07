@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdcee07d25c05ca8571071dfe8f98b00c9259f9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aead1bff6950305af650040bffb65d92a436f769
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357858"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498089"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "88357858"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>  
   
 <decryption_mechanism> ::=  
@@ -95,7 +94,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>A. 証明書を使用して対称キーを開く  
  次の例では、対称キー `SymKeyMarketing3` を開き、証明書 `MarketingCert9` の秘密キーを使って暗号化を解除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 OPEN SYMMETRIC KEY SymKeyMarketing3   
     DECRYPTION BY CERTIFICATE MarketingCert9;  
@@ -105,7 +104,7 @@ GO
 ### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>B. 別の対称キーを使用して対称キーを開く  
  次の例では、対称キー `MarketingKey11` を開き、対称キー `HarnpadoungsatayaSE3` を使って暗号化を解除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 -- First open the symmetric key that you want for decryption.  
 OPEN SYMMETRIC KEY HarnpadoungsatayaSE3   

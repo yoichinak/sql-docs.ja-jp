@@ -14,12 +14,12 @@ ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b84795842e2db88867e55c9f0c16a42fda33903
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a2d8a552d3d1efeccd24a34524bbdde273d3f09
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475677"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867148"
 ---
 # <a name="icommand-native-client-ole-db-provider"></a>ICommand (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,6 +30,5 @@ ms.locfileid: "88475677"
  列のサイズより大きなデータを挿入すると、通常はエラーが発生します。 ただし、S_OK が返され、*dwStatus* が DBSTATUS_S_TRUNCATED に設定される場合もあります。 これは通常、パラメーターを使用してデータを挿入するときに、列のサイズがデータを保持するのに十分ではなく、 **ICommandWithParameters:: SetParameterInfo** が呼び出されていない場合に発生します。  
   
 ## <a name="see-also"></a>参照  
- [インターフェイス &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
-  
+ [インターフェイス &#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)  
   

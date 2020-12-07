@@ -1,6 +1,6 @@
 ---
+title: '[メンテナンス プラン] ([デザイン] タブ)'
 description: '[メンテナンス プラン] ([デザイン] タブ)'
-title: '[メンテナンス プラン] ([デザイン] タブ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +12,22 @@ f1_keywords:
 - sql13.swb.maint.maintplanproperties.optimizations.f1
 - sql13.swb.maint.planeditor.f1
 - sql13.swb.maint.subplaneditor.f1
+- Task.FileExtension
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e56d4d52cee3ac75354acd17d7496d062bc3ed73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cc3aaec07d038ed6218a7a20268e94f23d3949
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420876"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "93067324"
 ---
 # <a name="maintenance-plan-design-tab"></a>[メンテナンス プラン] ([デザイン] タブ)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **[メンテナンス プラン] \([デザイン] タブ)** では、メンテナンス プランとそのサブプランのプロパティを指定します。 ツールボックスのタスクをプラン デザイナーにドラッグします。 タスクのグループを右クリックし、分岐する実行パスを作成します。 メンテナンス プランは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェント ジョブで実行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージとして保存されます。  
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+**[メンテナンス プラン] \([デザイン] タブ)** では、メンテナンス プランとそのサブプランのプロパティを指定します。 ツールボックスのタスクをプラン デザイナーにドラッグします。 タスクのグループを右クリックし、分岐する実行パスを作成します。 メンテナンス プランは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェント ジョブで実行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージとして保存されます。  
   
 ## <a name="options"></a>オプション  
  **[サブプランの追加]**  
@@ -64,9 +67,9 @@ ms.locfileid: "88420876"
   
  たとえば、インデックスの再構成タスクは、先行するデータベースの整合性確認タスクが正常に完了した場合のみ実行するように指定できます。 タスクの優先順位制約機能を利用すると、プランでエラーや失敗の条件を処理することもできます。 たとえば、データベースの整合性確認タスクが失敗したときに、オペレーターへの通知タスクを実行してユーザーまたはオペレーターに失敗を通知できます。  
   
- *タスク分岐*の例としては、先行するタスクが失敗した後に実行するタスクを指定することなどがあります。  
+ *タスク分岐* の例としては、先行するタスクが失敗した後に実行するタスクを指定することなどがあります。  
   
- *タスクの並列処理*の例としては、先行するタスクが正常に完了した場合に、複数のタスクを同時に開始するように指定することなどがあります。 制約のないすべてのタスクは、並行して開始および実行されます。 制約を使用すると、先行するタスクが完了するまでタスクを待機させることができます。  
+ *タスクの並列処理* の例としては、先行するタスクが正常に完了した場合に、複数のタスクを同時に開始するように指定することなどがあります。 制約のないすべてのタスクは、並行して開始および実行されます。 制約を使用すると、先行するタスクが完了するまでタスクを待機させることができます。  
   
  メンテナンス タスクをデザイン画面に配置した後で、タスクのプロパティを必要に応じて編集できます。 たとえば、データベースのバックアップ タスクをプランに追加した後で、そのタスクでバックアップするデータベースを指定できます。 デザイン画面で適切に設定されていないタスクには、白い x 印の付いた赤いアイコンが表示されます。  
   

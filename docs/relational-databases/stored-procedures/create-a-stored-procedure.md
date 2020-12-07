@@ -15,12 +15,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dde2beed868314f315bf51e9fa8174ba01b09e3e
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 5da64e544211e29491ce4270c91ae527bda923de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332661"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364764"
 ---
 # <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,10 +28,9 @@ ms.locfileid: "87332661"
 
 このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の CREATE PROCEDURE ステートメントを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する方法について説明します。  
   
-##  <a name="Top"></a>   
 -   **作業を開始する準備:** [アクセス許可](#Permissions)  
   
--   **プロシージャを作成するには次を使用します:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **プロシージャを作成するには次を使用します:** [SQL Server Management Studio](#SSMSProcedure)、 [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースの CREATE PROCEDURE 権限と、プロシージャを作成するスキーマに対する ALTER 権限が必要です。  
@@ -46,7 +45,7 @@ ms.locfileid: "87332661"
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **オブジェクト エクスプローラーでプロシージャを作成するには**  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  **[データベース]** を展開し、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを展開して、 **[プログラミング]** を展開します。  
   
@@ -63,15 +62,15 @@ ms.locfileid: "87332661"
     |説明|従業員のデータが返されます。|  
     |[Procedure_name]|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|**nvarchar**(50)|  
+    |@Datatype_For_Param1|**nvarchar** (50)|  
     |[Default_Value_For_Param1]|NULL|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|**nvarchar**(50)|  
+    |@Datatype_For_Param2|**nvarchar** (50)|  
     |[Default_Value_For_Param2]|NULL|  
   
 6.  **[OK]** をクリックします。  
   
-7.  **クエリ エディター**で、SELECT ステートメントを次のステートメントに置き換えます。  
+7.  **クエリ エディター** で、SELECT ステートメントを次のステートメントに置き換えます。  
   
     ```sql  
     SELECT FirstName, LastName, Department  
@@ -96,7 +95,7 @@ ms.locfileid: "87332661"
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **クエリ エディターでプロシージャを作成するには**  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
@@ -132,7 +131,6 @@ ms.locfileid: "87332661"
   
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
 ## <a name="see-also"></a>参照  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   

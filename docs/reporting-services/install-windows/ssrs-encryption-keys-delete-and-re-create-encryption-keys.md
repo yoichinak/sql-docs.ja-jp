@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 60e0814a72d09ff8612ef6d14a6ef7abfd2e92f1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866305"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934666"
 ---
-# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>暗号化キーの削除と再作成 (SSRS 構成マネージャー)
+# <a name="delete-and-recreate-encryption-keys-report-server-configuration-manager"></a>暗号化キーの削除と再作成 (レポート サーバー構成マネージャー)
   暗号化キーの削除および再作成は、日常の暗号化キー メンテナンスには該当しない作業です。 レポート サーバーに対する特定の脅威への対処、またはレポート サーバー データベースにアクセスできなくなったときの最後の手段としてこの作業を行ってください。  
   
 -   既存の対称キーが侵害されたと思われる場合は、対称キーを再作成します。 セキュリティのベスト プラクティスとして、定期的にキーを再作成することもできます。  
@@ -35,7 +35,7 @@ ms.locfileid: "74866305"
   
  対称キーを再作成できるのは、レポート サーバーが動作中の場合のみです。 暗号化キーの再作成およびコンテンツの再暗号化を実行すると、サーバーの処理が中断されます。 再暗号化の実行中はサーバーをオフラインにする必要があります。 再暗号化中にレポート サーバーに対して要求を送信することはできません。  
   
- 対称キーおよび暗号化データを再設定するには、Reporting Services 構成ツールまたは **rskeymgmt** ユーティリティを使用できます。 対称キーの作成方法の詳細については、「[レポート サーバーの初期化 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
+ 対称キーおよび暗号化データを再設定するには、Reporting Services 構成ツールまたは **rskeymgmt** ユーティリティを使用できます。 対称キーがどのように作成されるかに関する詳細については、[レポート サーバーの初期化 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md) に関する記事を参照してください。  
   
 ### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>暗号化キーの再作成方法 (Reporting Services 構成ツール)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "74866305"
 4.  暗号化されたデータ (ファイル共有の配信拡張機能や暗号化を使用するサードパーティ製の配信拡張機能など) を使用する各サブスクリプションを開いて、資格情報を再入力します。 レポート サーバーの電子メール配信を使用するサブスクリプションでは、暗号化されたデータが使用されないため、キーの変更による影響を受けません。  
   
 ## <a name="see-also"></a>参照  
- [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [暗号化キーの構成と管理 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [暗号化されたレポート サーバー データの格納 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

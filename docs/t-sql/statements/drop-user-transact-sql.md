@@ -24,12 +24,12 @@ ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ee43b1b294ad76e432ffd72aac750128ff3f0a7
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7baa74c6e4655ee95cfd9e10b7107431339cddb2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990096"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955823"
 ---
 # <a name="drop-user-transact-sql"></a>DROP USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,18 +40,17 @@ ms.locfileid: "90990096"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP USER [ IF EXISTS ] user_name  
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP USER user_name  
 ```  
-  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
@@ -77,7 +76,7 @@ DROP USER user_name
 ## <a name="examples"></a>例  
  次の例では、`AbolrousHazem` データベースからデータベース ユーザー `AdventureWorks2012` を削除します。  
   
-```  
+```sql  
 DROP USER AbolrousHazem;  
 GO  
 ```  

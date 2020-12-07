@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b96c091413e5ded9f3cff862f2c5650ce38fe5d1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fc49e558305a7cd4f86f517a05653093b798846c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902373"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583826"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>エンドポイント URL の指定 - 可用性レプリカの追加と変更
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85902373"
 ##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> エンドポイント URL の構文  
  エンドポイント URL の構文は、次のような形式になります。  
   
- TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
+ TCP <strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  where  
   
@@ -49,7 +49,7 @@ ms.locfileid: "85902373"
   
          _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
   
-         *computer_name*はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[... **.** _domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
+         *computer_name* はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[... **.** _domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
   
          ドメイン セグメントの内容と数は、会社内または組織内で決定されます。 詳細については、このトピックの「 [完全修飾ドメイン名の検索](#Finding_FQDN)」を参照してください。  
   
@@ -144,11 +144,10 @@ ms.locfileid: "85902373"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
 ## <a name="see-also"></a>参照  
  [可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
-  
   

@@ -10,26 +10,26 @@ ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 86da24e325b51235d031364a765daa65ebd32ca3
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116229"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584319"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>ドメインに依存しない可用性グループを作成する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Always On 可用性グループ (AG) には、基になる Windows Server フェールオーバー クラスター (WSFC) が必要です。 Windows Server 2012 R2 を使用して WSFC を展開するには、WSFC (ノードとも呼ばれる) に参加しているサーバーが同じドメインに追加されていることが常に必要です。 Active Directory Domain Services (AD DS) の詳細については、[ここ](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)を参照してください。
+Always On 可用性グループ (AG) には、基になる Windows Server フェールオーバー クラスター (WSFC) が必要です。 Windows Server 2012 R2 を使用して WSFC を展開するには、WSFC (ノードとも呼ばれる) に参加しているサーバーが同じドメインに追加されていることが常に必要です。 Active Directory Domain Services (AD DS) の詳細については、[ここ](/previous-versions/windows/it-pro/windows-server-2003/cc759073(v=ws.10))を参照してください。
 
 データベース ミラーリング (DBM) は、このような依存関係を持たずに、証明書を使用して複数のデータ センターに展開できるため、AD DS と WSFC の依存関係は、DBM の構成で以前に展開されたものよりも複雑です。  複数のデータ センターに広がる従来の可用性グループでは、すべてのサーバーが同じ Active Directory ドメインに参加している必要があります。異なるドメインでは、信頼されたドメインであっても動作しません。 すべてのサーバーが、同じ WSFC のノードである必要があります。 この構成を次の図に示します。 SQL Server 2016 には、異なる方法でこの目的を達成することもできる、分散された可用性グループもあります。
 
 
 ![同じドメインに接続された 2 つのデータ センターに広がる WSFC][1]
 
-Windows Server 2012 R2 では、可用性グループで使用できる Windows Server フェールオーバー クラスターの特殊な形式である、[Active Directory がデタッチされたクラスター](https://technet.microsoft.com/library/dn265970.aspx)を導入しました。 この種類の WSFC は、同じ Active Directory ドメインにドメイン参加しているノードがまだ必要です。ただし、この場合、WSFC は DNS を使用していますが、ドメインは使用しません。 ドメインが引き続き含まれているため、Active Directory がデタッチされたクラスターでは、完全にドメインを必要としないエクスペリエンスを提供することはまだありません。
+Windows Server 2012 R2 では、可用性グループで使用できる Windows Server フェールオーバー クラスターの特殊な形式である、[Active Directory がデタッチされたクラスター](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970(v=ws.11))を導入しました。 この種類の WSFC は、同じ Active Directory ドメインにドメイン参加しているノードがまだ必要です。ただし、この場合、WSFC は DNS を使用していますが、ドメインは使用しません。 ドメインが引き続き含まれているため、Active Directory がデタッチされたクラスターでは、完全にドメインを必要としないエクスペリエンスを提供することはまだありません。
 
 Windows Server 2016 では、Active Directory がデタッチされたクラスター (ワークグループ クラスター) を基にした新しい種類の Windows Server フェールオーバー クラスターを導入しました。 ワークグループ クラスターによって、SQL Server 2016 は、AD DS を必要としない WSFC の上部に可用性グループを展開することができます。 SQL Server では、データベース ミラーリングのシナリオで証明書が必要なように、エンドポイントのセキュリティに証明書を使用する必要があります。  可用性グループのこの種類は、ドメインに依存しない可用性グループと呼ばれます。 基になるワークグループ クラスターでの可用性グループの展開では、WSFC を構成するノードに対して次の組み合わせをサポートします。
 - ドメインに参加しているノードはありません。
@@ -47,7 +47,7 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 ![Standard Edition の AG の高レベルのビュー][3]
 
 ドメインに依存しない可用性グループの展開には、既知の注意事項がいくつかあります。
-- クォーラムと共に使用できる監視の種類は、ディスクと[クラウド](https://technet.microsoft.com/windows-server-docs/failover-clustering/deploy-cloud-witness)のみです。クラウドは、Windows Server 2016 の新機能です。 可用性グループによる共有ディスクの使用はほとんどないため、ディスクでは問題があります。
+- クォーラムと共に使用できる監視の種類は、ディスクと[クラウド](/windows-server/failover-clustering/deploy-cloud-witness)のみです。クラウドは、Windows Server 2016 の新機能です。 可用性グループによる共有ディスクの使用はほとんどないため、ディスクでは問題があります。
 - WSFC の基になるワークグループ クラスター バリアントは、PowerShell を使用してのみ作成できますが、フェールオーバー クラスター マネージャーを使用して管理することができます。
 - Kerberos が必要な場合、Active Directory にアタッチされる標準の WSFC を展開する必要があります。ドメインに依存しない可用性グループは、オプションではない可能性があります。
 - リスナーが構成されるときは、使用できる DNS に登録される必要があります。 前述のとおり、リスナーに対する Kerberos サポートはありません。
@@ -80,7 +80,7 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 現在、ドメインの独立した可用性グループの作成は、SQL Server Management Studio を使用して完全に達成することはできません。 ドメインに依存しない可用性グループの作成は、標準の可用性グループの作成と基本的に同じですが、特定のアスペクト (証明書の作成など) は Transact-SQL でのみ可能です。 次の例は、2 つのレプリカを持つ可用性グループの構成を想定しています。プライマリが 1 つとセカンダリが 1 つです。 
 
 1. [このリンクの手順を使用して](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059)、すべてが可用性グループに参加するサーバーで構成されるワークグループ クラスターを展開します。 ワークグループ クラスターを構成する前に、共通の DNS サフィックスが既に構成されていることを確認します。
-2. 可用性グループに追加する各インスタンスの [Always On 可用性グループ機能を有効にします](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)。 これには、各 SQL Server インスタンスの再起動が必要がです。
+2. 可用性グループに追加する各インスタンスの [Always On 可用性グループ機能を有効にします](./enable-and-disable-always-on-availability-groups-sql-server.md)。 これには、各 SQL Server インスタンスの再起動が必要がです。
 3. プライマリ レプリカをホストするインスタンスごとに、データベース マスター キーが必要です。 マスター キーがまだ存在していない場合は、次のコマンドを実行します。
 
    ```sql
@@ -172,4 +172,4 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png 
+[4]: ./media/diag-successful-dns-suffix.png

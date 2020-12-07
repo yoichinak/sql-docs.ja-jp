@@ -19,10 +19,10 @@ ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae61fcfcec740ee26a7fc2a57c0e03b0141e6e10
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425944"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 接続マネージャー
@@ -38,7 +38,7 @@ ms.locfileid: "88425944"
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 接続マネージャーの構成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの **接続** コレクションに追加します。  
   
- 接続マネージャーの **ConnectionManagerType** プロパティは、 **SQLMOBILE**に設定されます。  
+ 接続マネージャーの **ConnectionManagerType** プロパティは、 **SQLMOBILE** に設定されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続マネージャーは、次の方法で構成できます。  
   

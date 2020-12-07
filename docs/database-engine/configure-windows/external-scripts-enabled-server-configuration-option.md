@@ -15,12 +15,12 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3346d217228bf6ca914b6ae1aa31af0883383908
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec430a256e07cfee21a14bbe3fe97426b044b4fd
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173243"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636132"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>external scripts enabled サーバー構成オプション
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,6 +42,10 @@ ms.locfileid: "88173243"
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] では、R と Python の両方の言語がサポートされています。
 
     外部スクリプトの実行を有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップの間に、**Machine Learning Services** 機能をインストールします。 初期セットアップのときに、必ず少なくとも 1 つの言語を選んでください (R と Python のどちらか一方または両方)。
+    
++ [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 以降の [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] によって、R、Python、Java のすべてとその他のサード パーティ言語がサポートされています。
+
+任意のサポート言語で外部スクリプトの実行を有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時に、Machine Learning Services と言語拡張機能をインストールします。
 
 ## <a name="additional-requirements"></a>その他の要件
 

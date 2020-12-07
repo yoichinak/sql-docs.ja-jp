@@ -9,16 +9,16 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b5257d6e99600e28605fc02dfac2df2910d28b7
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 5d39e9b28edf04848fd718459219691f9c020b67
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914790"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358422"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
-`azdata` への適用
+[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] への適用
 
 以下の記事では、**azdata** ツールの **sql** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
 
@@ -39,7 +39,7 @@ azdata bdc spark statement list --session-id -i
 ### <a name="examples"></a>例
 セッションのすべてのステートメントを一覧表示します。
 ```bash
-azdata spark statement list --session-id 0
+azdata bdc spark statement list --session-id 0
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`
@@ -64,7 +64,7 @@ azdata bdc spark statement create --session-id -i
 ### <a name="examples"></a>例
 ステートメントを実行します。
 ```bash
-azdata spark statement create --session-id 0 --code "2+2"
+azdata bdc spark statement create --session-id 0 --code "2+2"
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`
@@ -91,7 +91,7 @@ azdata bdc spark statement info --session-id -i
 ### <a name="examples"></a>例
 セッション ID が 0、ステートメント ID が 0 のステートメント情報を取得します。
 ```bash
-azdata spark statement info --session-id 0 --statement-id 0
+azdata bdc spark statement info --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`
@@ -118,7 +118,7 @@ azdata bdc spark statement cancel --session-id -i
 ### <a name="examples"></a>例
 ステートメントをキャンセルします。
 ```bash
-azdata spark statement cancel --session-id 0 --statement-id 0
+azdata bdc spark statement cancel --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`

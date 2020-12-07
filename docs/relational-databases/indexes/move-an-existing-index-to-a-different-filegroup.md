@@ -18,10 +18,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470471"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスの別のファイル グループへの移動
@@ -102,7 +102,7 @@ ms.locfileid: "88470471"
   
 8.  **[OK]** をクリックします。  
   
- **[インデックスのプロパティ - ** _index_name_] ダイアログ ボックスの **[ストレージ]** ページでは、次の情報を利用できます。  
+ **[インデックスのプロパティ -** _index_name_] ダイアログ ボックスの **[ストレージ]** ページでは、次の情報を利用できます。  
   
  **[ファイル グループ]**  
  指定したファイル グループのインデックスを格納します。 一覧には、標準 (ROW) ファイル グループのみが表示されます。 既定で選択されているのは、データベースのプライマリ ファイル グループです。  
@@ -148,7 +148,7 @@ ms.locfileid: "88470471"
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスを別のファイル グループに移動するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

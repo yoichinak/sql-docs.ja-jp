@@ -1,6 +1,6 @@
 ---
 description: テーブル値パラメーターの使用 (ODBC)
-title: テーブル値パラメーターの使用 (ODBC) |Microsoft Docs
+title: Table-Valued パラメーターの使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1d5b7baaba443c948e0c02440d6e38520eb16c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 089d113a6908b02736626445360e99c5f29807e7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499188"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866862"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>テーブル値パラメーターの使用 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルでは、テーブル値パラメーターを使用して、サーバーへの 1 度の呼び出しで複数の行を複数の列と共に挿入する方法を示します。  
   
- テーブル値パラメーターの詳細については、「 [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。 テーブル値パラメーターを使用したその他のサンプルについては、「 [ODBC テーブル値パラメーターのプログラミング例](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)」を参照してください。  
+ テーブル値パラメーターの詳細については、「 [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。 テーブル値パラメーターを使用したその他のサンプルについては、「 [ODBC Table-Valued パラメーターのプログラミング例](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  TVPDemo という名前の ODBC データ ソースが必要です。 TVPDemo 用の既定のデータベースには、コンピューター上にある任意のテスト データベースを使用できます。 このデータ ソースには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 用の ODBC ドライバーが使用されている必要があります。  
@@ -1256,5 +1256,4 @@ int _tmain() {
    demo_metadata_from_catalog_APIs((SQLTCHAR *)_T("TVPOrderEntry"));  
 }  
 ```  
-  
   

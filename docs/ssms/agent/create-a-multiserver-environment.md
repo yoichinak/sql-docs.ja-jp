@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ea258ee3fc53012286f171e78379f9459343c0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 356fb010386f3675a3f62073dacc4cd28cf09e9c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418218"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038285"
 ---
 # <a name="create-a-multiserver-environment"></a>マルチサーバー環境の作成
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 マルチサーバー管理では、マスター サーバー (MSX) 1 台と、ターゲット サーバー (TSX) 1 台以上を設定する必要があります。 すべてのターゲット サーバーで処理されるジョブは、まずマスター サーバーで定義されてからターゲット サーバーにダウンロードされます。  
   
@@ -63,8 +63,7 @@ ms.locfileid: "88418218"
 |マスター サーバーにターゲット サーバーを参加させる方法について説明します。|[マスター サーバーへのターゲット サーバーの参加](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
 |マスター サーバーからターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからのターゲット サーバーの参加の解除](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |マスター サーバーから複数のターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからの複数のターゲット サーバーの参加の解除](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
-|ターゲット サーバーの状態を確認する方法について説明します。|[sp_help_targetserver (Transact-SQL)](https://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](https://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
+|ターゲット サーバーの状態を確認する方法について説明します。|[sp_help_targetserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)<br /><br />[sp_help_targetservergroup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)|  
   
 ## <a name="see-also"></a>参照  
 [プロキシを使用するマルチサーバー ジョブのトラブルシューティング](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  
-  

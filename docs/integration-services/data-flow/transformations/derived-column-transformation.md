@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93548684fb17ce59e5cee78e2a7a268dfce903ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430694"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123378"
 ---
 # <a name="derived-column-transformation"></a>派生列変換
 
@@ -36,13 +36,13 @@ ms.locfileid: "88430694"
   
  この変換を使用すると、次のタスクを実行できます。  
   
--   複数の異なる列のデータを 1 つの派生列に連結します。 たとえば、 **という式を使用すると、** FirstName **列と** LastName **列の値を、1 つの**FullName `FirstName + " " + LastName`という名前の派生列に結合できます。  
+-   複数の異なる列のデータを 1 つの派生列に連結します。 たとえば、 **という式を使用すると、** FirstName **列と** LastName **列の値を、1 つの** FullName `FirstName + " " + LastName`という名前の派生列に結合できます。  
   
 -   SUBSTRING などの関数を使用して文字列データから文字を抽出し、その結果を派生列に格納します。 たとえば、 **という式を使用すると、** FirstName `SUBSTRING(FirstName,1,1)`列から名前の頭文字を抽出できます。  
   
--   数学関数を数値データに適用し、その結果を派生列に格納します。 たとえば、 **という式を使用すると、数値列**SalesTax `ROUND(SalesTax, 2)`の長さと有効桁数を、小数点以下 2 桁に変更できます。  
+-   数学関数を数値データに適用し、その結果を派生列に格納します。 たとえば、 **という式を使用すると、数値列** SalesTax `ROUND(SalesTax, 2)`の長さと有効桁数を、小数点以下 2 桁に変更できます。  
   
--   入力列と変数を比較する式を作成します。 たとえば、 **という式を使用すると、変数** Version **と列**ProductVersion **のデータを比較し、その比較結果に応じて、** Version **と**ProductVersion `ProductVersion == @Version? ProductVersion : @Version`のどちらかの値を使用できます。  
+-   入力列と変数を比較する式を作成します。 たとえば、 **という式を使用すると、変数** Version **と列** ProductVersion **のデータを比較し、その比較結果に応じて、** Version **と** ProductVersion `ProductVersion == @Version? ProductVersion : @Version`のどちらかの値を使用できます。  
   
 -   datetime 値の一部を抽出します。 たとえば、 `DATEPART("year",GETDATE())`という式を使用すると、GETDATE 関数と DATEPART 関数を使用して現在の年を抽出できます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "88430694"
     > [!NOTE]  
     >  派生列変換によって上書きされる入力列を式が参照する場合、その式は派生した値ではなく、列の元の値を使用します。  
   
--   データ型が **文字列**の場合に結果を新しい列に追加するには、コード ページを指定します。 詳しくは、「 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)」をご覧ください。  
+-   データ型が **文字列** の場合に結果を新しい列に追加するには、コード ページを指定します。 詳しくは、「 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)」をご覧ください。  
   
  派生列変換には、FriendlyExpression カスタム プロパティがあります。 このプロパティは、パッケージの読み込み時にプロパティ式で更新できます。 詳細については、「 [パッケージでプロパティ式を使用する](../../../integration-services/expressions/use-property-expressions-in-packages.md)」および「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」を参照してください。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88430694"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "88430694"
  新しい列にデータを追加すると、 **[派生列変換エディター]** ダイアログ ボックスによって、DT_STR データ型のコード ページが自動的に設定されます。 **[コード ページ]** は必要に応じて更新できます。  
   
  **[エラー出力の構成]**  
- [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
+ [[エラー出力の構成]](../error-handling-in-data.md) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
+ social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」

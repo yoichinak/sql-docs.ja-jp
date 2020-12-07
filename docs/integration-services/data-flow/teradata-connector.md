@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a866d7d1083435acffeb157edf9fe4a0bb725d3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425764"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Microsoft Connector for Teradata
@@ -65,7 +65,7 @@ Teradata データベースのコネクタをインストールするには、[M
 
 ## <a name="design-and-execute-ssis-packages"></a>SSIS パッケージのデザインと実行
 
-Microsoft Connector for Teradata は、Attunity Teradata Connector と同様のユーザー エクスペリエンスを提供します。 ユーザーは、SSDT for VS 2017 または VS 2019 を使用して *SQL Server 2019 をターゲット*にすることで、以前のエクスペリエンスに基づいて新しいパッケージをデザインできます。
+Microsoft Connector for Teradata は、Attunity Teradata Connector と同様のユーザー エクスペリエンスを提供します。 ユーザーは、SSDT for VS 2017 または VS 2019 を使用して *SQL Server 2019 をターゲット* にすることで、以前のエクスペリエンスに基づいて新しいパッケージをデザインできます。
 
 Teradata のソースと変換先は、[共通] カテゴリにあります。
 
@@ -86,15 +86,15 @@ Attunity Teradata Connector を使用してデザインされた既存の SSIS �
 
 SSDT で *SQL Server 2017 以前をターゲットとする* SSIS パッケージをデザインするには、**Microsoft Connector for Teradata** があり、対応するバージョンの **Microsoft Connector for Teradata by Attunity** をインストールする必要があります。
 
-## <a name="limitationsandknownissues"></a>制限事項と既知の問題
+## <a name="limitations-and-known-issues"></a>制限事項と既知の問題
 
-- Teradata ソース/変換先エディター、 **[既定のデータベース]**  プロパティは有効になりません。 回避策として、テーブルまたはビューをフィルター処理するためのドロップダウン ボックスにデータベース名を入力します。
+- Teradata ソース/変換先エディター、 **[既定のデータベース]** プロパティは有効になりません。  回避策として、テーブルまたはビューをフィルター処理するためのドロップダウン ボックスにデータベース名を入力します。
 
-- Teradata ソース/変換先エディター、 \<database>.<table/view> と入力した場合、マッピング手順が機能しません。 回避策として、 \<database>.<table/view> と入力してからドロップダウン ボタンをクリックします。
+- Teradata ソース/変換先エディター、\<database>.<table/view> と入力した場合、マッピング手順が機能しません。 回避策として、\<database>.<table/view> と入力してからドロップダウン ボタンをクリックします。
 
 - Teradata ソースエディター、データ アクセス モードが "テーブル名 – TPT Export" の場合、ビューを表示できません。 回避策として、Teradata ソースの詳細エディターを使用します。
 
-- Teradata 変換先、属性 'PackMaximum' を 'True' に設定できません。 それ以外の場合、エラーが発生します。
+- Teradata 変換先、属性 'PackMaximum' を 'True' に設定できません。  それ以外の場合、エラーが発生します。
 
 ## <a name="uninstallation"></a>アンインストール
 

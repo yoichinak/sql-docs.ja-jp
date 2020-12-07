@@ -26,12 +26,12 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e3f496f123e237858772a4a5cab5c8631acd448
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 6ac3719d3946e07ec3314b586f5abb5a14910133
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116899"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955880"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 
@@ -42,7 +42,8 @@ ms.locfileid: "91116899"
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の構文:
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)] の構文:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  

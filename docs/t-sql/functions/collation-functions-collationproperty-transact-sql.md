@@ -20,12 +20,12 @@ ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67977deba00a1df52a9264256b83f6e57bc49ed5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7cd3bfc9b136dac41352d2be594e7d1e3099bd37
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116128"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118941"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>照合順序関数 - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,8 +51,8 @@ collation プロパティ。 *property* 引数は、**varchar (128)** データ�
   
 |プロパティ名|説明|  
 |---|---|
-|**CodePage**|照合順序の Unicode 以外のコード ページ。 これは、**varchar** データで使用される文字セットです。 これらの値を変換してその文字マッピングを確認するには、「[Appendix G Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx)」(付録 G: DBCS/Unicode マッピングテーブル) と「[Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx)」(付録H: コード ページ) を参照してください。<br /><br />基本データ型: **int**|  
-|**LCID**|照合順序の Windows ロケール ID。 これは、並べ替えおよび比較規則に使用されるカルチャです。 これらの値を変換するには、「[LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx)」(LCID 構造) を参照してください (最初に **varbinary** に変換する必要があります)。<br /><br />基本データ型: **int**|  
+|**CodePage**|照合順序の Unicode 以外のコード ページ。 これは、**varchar** データで使用される文字セットです。 これらの値を変換してその文字マッピングを確認するには、「[Appendix G Mapping Tables](/previous-versions/cc194886(v=msdn.10))」(付録 G: DBCS/Unicode マッピングテーブル) と「[Appendix H Code Pages](/previous-versions/cc195051(v=msdn.10))」(付録H: コード ページ) を参照してください。<br /><br />基本データ型: **int**|  
+|**LCID**|照合順序の Windows ロケール ID。 これは、並べ替えおよび比較規則に使用されるカルチャです。 これらの値を変換するには、「[LCID Structure](/openspecs/windows_protocols/ms-lcid/63d3d639-7fd2-4afb-abbe-0d5b5551eef8)」(LCID 構造) を参照してください (最初に **varbinary** に変換する必要があります)。<br /><br />基本データ型: **int**|  
 |**ComparisonStyle**|照合順序の Windows 比較形式。 (\_BIN) と (\_BIN2) の両方と、すべてのプロパティに区別がある場合 ((\_CS\_AS\_KS\_WS)、(\_CS\_AS\_KS\_WS\_SC)、(\_CS\_AS\_KS\_WS\_VSS))、バイナリ照合順序に対して 0 を返します。 ビットマスク値:<br /><br /> 大文字と小文字を区別しない: 1<br /><br /> アクセントを無視する: 2<br /><br /> ひらがなとカタカナを区別しない: 65536<br /><br /> 全角と半角を区別しない: 131072<br /><br /> 注: 比較動作に影響する場合でも、variation-selector-sensitive (\_VSS) オプションはこの値では表されません。<br /><br />基本データ型: **int**|  
 |**Version**|照合順序のバージョン。 0 から 3 の間の値が返されます。<br /><br /> 名前に "140" が含まれる照合順序では、3 が返されます。<br /><br /> 名前に "100" が含まれる照合順序では、2 が返されます。<br /><br /> 名前に "90" が含まれる照合順序では、1 が返されます。<br /><br /> 他のすべての照合順序では 0 が返されます。<br /><br />基本データ型: **tinyint**|  
   
@@ -86,5 +86,3 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 ## <a name="see-also"></a>関連項目
 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
   
-  
-

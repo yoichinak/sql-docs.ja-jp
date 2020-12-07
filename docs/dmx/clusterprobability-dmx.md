@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f27a901bbb45c48996c82bbedbbb3691c1a6cbc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb2cc218ff18b23237c561a3cac1a9a68373f3ae
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431114"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726324"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,7 +41,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- この構文の使用方法の詳細については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;のコンテンツ &#40;](../dmx/select-from-model-content-dmx.md)ます。 マイニングモデルコンテンツスキーマ行セットの詳細については、「 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110))」を参照してください。  
+ この構文の使用方法の詳細については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;のコンテンツ &#40;](../dmx/select-from-model-content-dmx.md)ます。 マイニングモデルコンテンツスキーマ行セットの詳細については、「 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](/previous-versions/sql/sql-server-2012/ms126267(v=sql.110))」を参照してください。  
   
  \<node caption>が指定されていない場合、関数は、入力ケースが最も可能性の高いクラスターに属する確率を返します。 **クラスター**関数を使用して、最も可能性の高いクラスターを返します。  
   
@@ -66,5 +66,4 @@ NATURAL PREDICTION JOIN
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
  [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
-  
   

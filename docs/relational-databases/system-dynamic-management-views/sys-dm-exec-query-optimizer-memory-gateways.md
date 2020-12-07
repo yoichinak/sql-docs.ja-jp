@@ -1,11 +1,11 @@
 ---
-title: dm_exec_query_optimizer_memory_gateways (Transact-sql)
+title: sys.dm_exec_query_optimizer_memory_gateways (Transact-sql)
 description: 同時クエリの最適化を調整するために使用されるリソースセマフォの現在の状態を返します。
 ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: language-reference
 f1_keywords:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3da92fb6d489bd8ca09c65e267f67dca75d8c01a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646402"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96503509"
 ---
-# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>dm_exec_query_optimizer_memory_gateways (Transact-sql)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-sql)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 同時クエリの最適化を調整するために使用されるリソースセマフォの現在の状態を返します。
 
-|Column|種類|説明|  
+|Column|種類|[説明]|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Resource Governor の下のリソースプール ID|  
 |**name**|**sysname**|コンパイルゲート名 (小規模ゲートウェイ、中規模ゲートウェイ、ビッグゲートウェイ)|
@@ -54,7 +54,7 @@ Azure SQL Database には、データベースに対する VIEW DATABASE STATE �
 ## <a name="remarks"></a>注釈  
 SQL Server では、階層化されたゲートウェイアプローチを使用して、許可される同時コンパイルの数を調整します。  小規模、中、大など、3つのゲートウェイが使用されます。 ゲートウェイを使用すると、より大きなコンパイルメモリを必要とするコンシューマーによって、全体的なメモリリソースが枯渇するのを防ぐことができます。
 
-ゲートウェイの結果を遅延コンパイルで待機します。 調整された要求には、コンパイル時の遅延に加えて、RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類の累積が関連付けられます。 RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類は、クエリがコンパイルに大量のメモリを使用していて、メモリが不足していること、または、特定のゲートウェイで使用可能なユニットがいっぱいになっていることを示している場合があります。 **Dm_exec_query_optimizer_memory_gateways**の出力を使用して、クエリ実行プランをコンパイルするためのメモリが不足しているシナリオのトラブルシューティングを行うことができます。  
+ゲートウェイの結果を遅延コンパイルで待機します。 調整された要求には、コンパイル時の遅延に加えて、RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類の累積が関連付けられます。 RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類は、クエリがコンパイルに大量のメモリを使用していて、メモリが不足していること、または、特定のゲートウェイで使用可能なユニットがいっぱいになっていることを示している場合があります。 **Sys.dm_exec_query_optimizer_memory_gateways** の出力を使用して、クエリ実行プランをコンパイルするためのメモリが不足しているシナリオのトラブルシューティングを行うことができます。  
 
 ## <a name="examples"></a>例  
 

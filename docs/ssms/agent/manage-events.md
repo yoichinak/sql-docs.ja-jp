@@ -20,18 +20,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98b162787254ed49ed64e5acd38d1ff8cb13f84f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41519f278ae684c58fabb693d677ad79373a726a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418118"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037335"
 ---
 # <a name="manage-events"></a>イベントの管理
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスには、特定のエラー重大度レベル以上のあらゆるイベント メッセージを転送できます。 この処理を *イベントの転送*と呼びます。 転送先サーバーは、マスター サーバーにもなる専用のサーバーです。 イベントの転送を使用して、サーバーのグループに対する警告を集中管理できます。その結果、使用頻度の高いサーバーの負荷を減少させることができます。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "88418118"
   
 -   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)  
   
 ## <a name="running-event-triggered-jobs"></a>イベント トリガーのジョブの実行  
 警告に応答して実行されるジョブを定義できます。 たとえば、警告によって検出された問題を修正したり、さらに診断したりするジョブを実行できます。  
@@ -95,5 +95,4 @@ ms.locfileid: "88418118"
 > ジョブがイベントを発生させることもありえるので、再帰的な警告ジョブ ループを作成しないように注意してください。  
   
 ## <a name="see-also"></a>参照  
-[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
-  
+[sp_add_notification (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysmessages-transact-sql.md)  

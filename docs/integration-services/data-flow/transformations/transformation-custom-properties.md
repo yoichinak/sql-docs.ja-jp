@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1219bf8b502d7e91194b3413910aa7ae16ec09c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed5b4ad8fb62b326f48c85dced98fdb2686750c4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425694"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194624"
 ---
 # <a name="transformation-custom-properties"></a>変換のカスタム プロパティ
 
@@ -56,9 +56,9 @@ ms.locfileid: "88425694"
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、ほとんどのデータ フロー オブジェクトには共通するプロパティがありますが、それ以外にも、多くのデータ フロー オブジェクトにはオブジェクト固有のカスタム プロパティがあります。 カスタム プロパティにアクセスできるのは実行時のみで、このプロパティに関する説明は、『[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] マネージド プログラミング リファレンス マニュアル』には記載されていません。  
   
- ここでは、さまざまなデータ フローの変換のカスタム プロパティを一覧で示し、それぞれについて説明します。 データ フロー オブジェクトの大部分との共通プロパティについては、「 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」を参照してください。  
+ ここでは、さまざまなデータ フローの変換のカスタム プロパティを一覧で示し、それぞれについて説明します。 データ フロー オブジェクトの大部分との共通プロパティについては、「 [Common Properties](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
- 変換のプロパティの一部は、プロパティ式を使用して設定できます。 詳細については、「 [式を使って設定できるデータ フロー プロパティ](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)」をご覧ください。  
+ 変換のプロパティの一部は、プロパティ式を使用して設定できます。 詳細については、「 [式を使って設定できるデータ フロー プロパティ](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))」をご覧ください。  
   
 ## <a name="transformations-with-custom-properties"></a>カスタム プロパティを持つ変換  
 
@@ -159,7 +159,7 @@ ms.locfileid: "88425694"
 |[ValidateExternalMetadata]|Boolean|デザイン時に外部データ ソースを使用してキャッシュ変換を検証するかどうかを示します。 このプロパティが **False**に設定されている場合、外部データ ソースに対する検証は実行時に行われます。<br /><br /> 既定値は **True**です。|  
 |AvailableInputColumns|String|使用できる入力列の一覧。|  
 |InputColumns|String|選択した入力列の一覧。|  
-|CacheColumnName|String|選択した入力列にマップする列の名前を指定します。<br /><br /> CacheColumnName プロパティの列の名前は、 **[キャッシュ接続マネージャー エディター]** の **[列]** ページに表示されている対応する列の名前に一致する必要があります。<br /><br /> 詳細については、「 [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)」をご覧ください。|  
+|CacheColumnName|String|選択した入力列にマップする列の名前を指定します。<br /><br /> CacheColumnName プロパティの列の名前は、 **[キャッシュ接続マネージャー エディター]** の **[列]** ページに表示されている対応する列の名前に一致する必要があります。<br /><br /> 詳細については、「 [Cache Connection Manager Editor](../../connection-manager/cache-connection-manager.md)」をご覧ください。|  
   
 ##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> 文字マップ変換のカスタム プロパティ  
  コンポーネント レベルでは、文字マップ変換はすべてのデータ フロー コンポーネントとの共通プロパティのみを持ちます。  
@@ -211,7 +211,7 @@ ms.locfileid: "88425694"
   
 |プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|列の解析に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 このプロパティの既定値は **False**です。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 .<br /><br /> 注:このプロパティは、**データ変換変換エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
+|FastParse|Boolean|列の解析に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 このプロパティの既定値は **False**です。 詳細については、「 [Fast Parse](../parsing-data.md) 」および「 [Standard Parse](../parsing-data.md)」を参照してください。 .<br /><br /> 注:このプロパティは、**データ変換変換エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
 |SourceInputColumnLineageId|Integer|出力列のソースである入力列の **LineageID** 。|  
   
  データ変換の変換の入力、入力列、および出力には、カスタム プロパティがありません。  
@@ -370,7 +370,7 @@ ms.locfileid: "88425694"
 |DefaultCodePage|Integer|コード ページに関する情報をデータ ソースから取得できない場合に使用する既定のコード ページ。|  
 |MaxMemoryUsage|Integer|参照テーブルの最大キャッシュ サイズ。 このプロパティの既定値は **25**で、これはキャッシュ サイズが無制限であることを示します。|  
 |MaxMemoryUsage64|Integer|64 ビット コンピューター上での参照テーブルの最大キャッシュ サイズ。|  
-|NoMatchBehavior|Integer (列挙)|参照データセットに一致するエントリがない行をエラーとして処理するかどうかを指定する値。<br /><br /> このプロパティが " **一致するエントリがない行をエラーとして処理します** " (0) に設定されている場合、一致するエントリがない行はエラーとして処理されます。 **[参照変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、この種類のエラーが発生した場合の処理方法を指定できます。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。<br /><br /> このプロパティが " **一致するエントリがない行を不一致出力に送信します** " (1) に設定されている場合、行はエラーとして処理されません。<br /><br /> 既定値は " **一致するエントリがない行をエラーとして処理します** " (0) です。|  
+|NoMatchBehavior|Integer (列挙)|参照データセットに一致するエントリがない行をエラーとして処理するかどうかを指定する値。<br /><br /> このプロパティが " **一致するエントリがない行をエラーとして処理します** " (0) に設定されている場合、一致するエントリがない行はエラーとして処理されます。 **[参照変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、この種類のエラーが発生した場合の処理方法を指定できます。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](./lookup-transformation.md)」をご覧ください。<br /><br /> このプロパティが " **一致するエントリがない行を不一致出力に送信します** " (1) に設定されている場合、行はエラーとして処理されません。<br /><br /> 既定値は " **一致するエントリがない行をエラーとして処理します** " (0) です。|  
 |ParameterMap|String|**SqlCommand** ステートメント内で使用されるパラメーターにマップする系列 ID を、セミコロンで区切った一覧。|  
 |ReferenceMetadataXML|String|参照テーブル内の列のうち、変換が出力にコピーする列のメタデータ。|  
 |SqlCommand|String|参照テーブルを設定する SELECT ステートメント。|  
@@ -656,8 +656,7 @@ ms.locfileid: "88425694"
   
 ## <a name="see-also"></a>参照  
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [パスのプロパティ](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [式を使って設定できるデータ フロー プロパティ](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
-  
+ [共通プロパティ](../set-the-properties-of-a-data-flow-component.md)   
+ [パスのプロパティ](../integration-services-paths.md)   
+ [式を使って設定できるデータ フロー プロパティ](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))  
   

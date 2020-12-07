@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ed6cb1967e7c64ad77b5d5cbc8c40000a733e3fb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 811ab46ce472f91aeab40c48ff11ce584f3cabb7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550578"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810148"
 ---
 # <a name="object-catalog-views-transact-sql"></a>オブジェクトカタログビュー (Transact-sql)
 
@@ -115,7 +115,5 @@ ms.locfileid: "89550578"
 :::row-end:::
   
 ## <a name="see-also"></a>参照  
- システム[カタログビュー](catalog-views-transact-sql.md) [システムビュー &#40;transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ システム[カタログビュー](catalog-views-transact-sql.md) [システムビュー &#40;transact-sql&#41;](../../t-sql/language-reference.md)  
   
-  
-

@@ -1,6 +1,6 @@
 ---
-description: dm_io_virtual_file_stats (Transact-sql)
-title: dm_io_virtual_file_stats (Transact-sql) |Microsoft Docs
+description: sys.dm_io_virtual_file_stats (Transact-sql)
+title: sys.dm_io_virtual_file_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330c14ca06fab7a67c580c1aa1337d1d5c7699cb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532585"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535296"
 ---
-# <a name="sysdm_io_virtual_file_stats-transact-sql"></a>dm_io_virtual_file_stats (Transact-sql)
+# <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   データファイルとログファイルの i/o 統計を返します。 この動的管理ビューでは、 [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) 関数が置き換えられます。  
   
 > [!NOTE]  
->  これをから呼び出すには [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 **dm_pdw_nodes_io_virtual_file_stats**という名前を使用します。 
+>  これをから呼び出すには [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 **sys.dm_pdw_nodes_io_virtual_file_stats** という名前を使用します。 
 
 ## <a name="syntax"></a>構文  
   
@@ -48,7 +48,7 @@ sys.dm_io_virtual_file_stats (
 ```  
 
 ```  
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 sys.dm_pdw_nodes_io_virtual_file_stats
 ```
@@ -76,7 +76,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|データベース名。</br></br>SQL Data Warehouse の場合、これは pdw_node_id によって識別されるノードに格納されているデータベースの名前です。 各ノードには、13個のファイルを持つ tempdb データベースが1つあります。 各ノードには、ディストリビューションごとに1つのデータベースがあり、各ディストリビューションデータベースには5つのファイルがあります。 たとえば、各ノードに4つのディストリビューションが含まれている場合、結果には pdw_node_id あたり20個のディストリビューションデータベースファイルが表示されます。 
+|**database_name**|**sysname**|**次のものには適用されません:**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> データベース名。</br></br>Azure Synapse Analytics の場合、これは pdw_node_id によって識別されるノードに格納されているデータベースの名前です。 各ノードには、13個のファイルを持つ tempdb データベースが1つあります。 各ノードには、ディストリビューションごとに1つのデータベースがあり、各ディストリビューションデータベースには5つのファイルがあります。 たとえば、各ノードに4つのディストリビューションが含まれている場合、結果には pdw_node_id あたり20個のディストリビューションデータベースファイルが表示されます。 
 |**database_id**|**smallint**|データベースの ID。|  
 |**file_id**|**smallint**|ファイルの ID。|  
 |**sample_ms**|**bigint**|コンピューターの起動後に経過した時間 (ミリ秒単位)。 この列を使用して、この関数とは異なる出力を比較できます。</br></br>のデータ型は **int** です [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -89,7 +89,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|ファイルでの i/o の完了をユーザーが待機した合計時間 (ミリ秒単位)。|  
 |**size_on_disk_bytes**|**bigint**|このファイルのディスクで使用されているバイト数。 スパースファイルの場合、この数は、データベーススナップショットに使用されるディスク上の実際のバイト数です。|  
 |**file_handle**|**varbinary**|このファイルの Windows ファイルハンドル。|  
-|**io_stall_queued_read_ms**|**bigint**|**は、:: からには適用されません** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> 読み取りの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。 詳細については、「 [sys. dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)」を参照してください。|  
+|**io_stall_queued_read_ms**|**bigint**|**は、:: からには適用されません** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> 読み取りの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。 詳細については、「 [sys.dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)」を参照してください。|  
 |**io_stall_queued_write_ms**|**bigint**|**は、:: からには適用されません** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br />  書き込みの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。|
 |**pdw_node_id**|**int**|**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布のノードの識別子。
  
@@ -114,7 +114,7 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Tempdb 内のファイルの統計を返す
 
-**適用対象:** Azure SQL Data Warehouse
+**適用対象:** Azure Synapse Analytics
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 

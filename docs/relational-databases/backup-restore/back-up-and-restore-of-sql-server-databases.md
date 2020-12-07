@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a39bffb27177281b5e5c89330bb605ce7fd90acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b6e369cc3677e399182f631885afdfb3b3ac53ee
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771723"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129414"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server データベースのバックアップと復元
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85771723"
   
  SQL Server のバックアップと復元コンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている大切なデータを保護するうえで不可欠な保護対策を提供します。 致命的なデータ損失のリスクを最小限に抑えるには、データベースを定期的にバックアップして、データの変更を保持する必要があります。 十分に計画されたバックアップおよび復元戦略は、さまざまな障害が原因で発生するデータ損失からデータベースを保護します。 一連のバックアップの復元とデータベースの回復を実行することでご自分の戦略をテストして、災害に効率的に対応するための準備を整えてください。
   
- バックアップを格納するローカル ストレージに加えて、SQL Server では、バックアップおよび Azure Blob Storage サービスからの復元がサポートされます。 詳細については、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 Microsoft Azure BLOB ストレージ サービスを使用して格納したデータベース ファイルの場合、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、Azure スナップショットを使用してほぼ瞬時にバックアップし、より迅速に復元するためのオプションが提供されます。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。 Azure では、Azure VM で実行されている SQL Server 向けのエンタープライズ クラスのバックアップ ソリューションも提供されています。 それはフル マネージド バックアップ ソリューションであり、Always On 可用性グループ、長期保有、特定の時点に復旧、一元的な管理と監視がサポートされています。 詳細については、[Azure VM での SQL Server 用の Azure Backup](https://docs.microsoft.com/azure/backup/backup-azure-sql-database) に関する記事をご覧ください。
+ バックアップを格納するローカル ストレージに加えて、SQL Server では、バックアップおよび Azure Blob Storage サービスからの復元がサポートされます。 詳細については、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 Microsoft Azure BLOB ストレージ サービスを使用して格納したデータベース ファイルの場合、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、Azure スナップショットを使用してほぼ瞬時にバックアップし、より迅速に復元するためのオプションが提供されます。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。 Azure では、Azure VM で実行されている SQL Server 向けのエンタープライズ クラスのバックアップ ソリューションも提供されています。 それはフル マネージド バックアップ ソリューションであり、Always On 可用性グループ、長期保有、特定の時点に復旧、一元的な管理と監視がサポートされています。 詳細については、[Azure VM での SQL Server 用の Azure Backup](/azure/backup/backup-azure-sql-database) に関する記事をご覧ください。
   
 ##  <a name="why-back-up"></a>バックアップする理由  
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップしたり、既存のバックアップの復元テストを実行したりできるほか、離れた安全な場所にバックアップのコピーを保管することによって、致命的な損失からデータを保護することができます。 **バックアップは、データを保護できる唯一の方法です。**
@@ -285,11 +285,10 @@ GO
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Analysis Services データベースのバックアップと復元](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
+ [Analysis Services データベースのバックアップと復元](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
-  
   

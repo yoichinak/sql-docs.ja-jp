@@ -1,6 +1,6 @@
 ---
-description: dm_clr_appdomains (Transact-sql)
-title: dm_clr_appdomains (Transact-sql) |Microsoft Docs
+description: sys.dm_clr_appdomains (Transact-sql)
+title: sys.dm_clr_appdomains (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,31 +19,31 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac0a451dd88d79ab1847d4c5414fadeb01724e3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f1357535d22306f09f8378e8e71aef6801975ae
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545346"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834106"
 ---
-# <a name="sysdm_clr_appdomains-transact-sql"></a>dm_clr_appdomains (Transact-sql)
+# <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバー内のアプリケーションドメインごとに1行の値を返します。 アプリケーションドメイン (**AppDomain**) は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アプリケーションの分離の単位である共通言語ランタイム (CLR) の構成要素です。 このビューを使用すると、で実行されている CLR 統合オブジェクトを理解し、トラブルシューティングを行うことができ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  CLR 統合マネージド データベース オブジェクトにはいくつかの種類があります。 これらのオブジェクトに関する一般的な情報については、「 [共通言語ランタイム (CLR) 統合によるデータベースオブジェクトの構築](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)」を参照してください。 これらのオブジェクトが実行されるたびに、に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よって、必要なコードを読み込んで実行できる **AppDomain** が作成されます。 **Appdomain**の分離レベルは、所有者ごとにデータベースごとに1つの**appdomain**です。 つまり、ユーザーが所有するすべての CLR オブジェクトは、常にデータベースごとに同じ **AppDomain** で実行されます (ユーザーが異なるデータベースに clr データベースオブジェクトを登録した場合、clr データベースオブジェクトは異なるアプリケーションドメインで実行されます)。 コードの実行が完了した後、 **AppDomain** は破棄されません。 代わりに、以降の実行に備えて、メモリ内にキャッシュされます。 これによってパフォーマンスも向上します。  
   
- 詳細については、「 [アプリケーションドメイン](https://go.microsoft.com/fwlink/p/?LinkId=299658)」を参照してください。  
+ 詳細については、「 [アプリケーションドメイン](../../sql-server/what-s-new-in-sql-server-2016.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary (8)**|**AppDomain**のアドレス。 ユーザーが所有するすべての管理対象データベースオブジェクトは、常に同じ **AppDomain**に読み込まれます。 この列を使用して、この **AppDomain** に現在読み込まれているすべてのアセンブリを **dm_clr_loaded_assemblies**に参照できます。|  
+|**appdomain_address**|**varbinary (8)**|**AppDomain**のアドレス。 ユーザーが所有するすべての管理対象データベースオブジェクトは、常に同じ **AppDomain**に読み込まれます。 この列を使用して、 **sys.dm_clr_loaded_assemblies**でこの**AppDomain**に現在読み込まれているすべてのアセンブリを検索できます。|  
 |**appdomain_id**|**int**|**AppDomain**の ID。 各 **AppDomain** には一意の ID があります。|  
 |**appdomain_name**|**varchar (386)**|によって割り当てられた **AppDomain** の名前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**creation_time**|**datetime**|**AppDomain**が作成された時刻。 **AppDomains**はキャッシュされ、パフォーマンス向上のために再利用されるため、 **creation_time**は必ずしもコードが実行された時間とは限りません。|  
 |**db_id**|**int**|この **AppDomain** が作成されたデータベースの ID。 2つの異なるデータベースに格納されているコードは、1つの **AppDomain**を共有できません。|  
 |**user_id**|**int**|この **AppDomain**でオブジェクトを実行できるユーザーの ID。|  
-|**状態**|**nvarchar(128)**|**AppDomain**の現在の状態の記述子。 AppDomain は、作成から削除まで、さまざまな状態になることがあります。 詳細については、このトピックの「解説」を参照してください。|  
+|**state**|**nvarchar(128)**|**AppDomain**の現在の状態の記述子。 AppDomain は、作成から削除まで、さまざまな状態になることがあります。 詳細については、このトピックの「解説」を参照してください。|  
 |**strong_refcount**|**int**|この **AppDomain**への強い参照の数。 これは、この **AppDomain**を使用している現在実行中のバッチの数を反映します。 このビューを実行すると、 **強力な refcount**が作成されることに注意してください。が現在実行されているコードがない場合でも、 **strong_refcount** の値は1になります。|  
 |**weak_refcount**|**int**|この **AppDomain**への弱参照の数。 これは、 **AppDomain** 内のキャッシュされているオブジェクトの数を示します。 マネージデータベースオブジェクトを実行すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 後で再利用するために、によって **AppDomain** 内にキャッシュされます。 これによってパフォーマンスも向上します。|  
 |**cost**|**int**|**AppDomain**のコスト。 コストが高いほど、この **AppDomain** がメモリ不足でアンロードされる可能性が高くなります。 通常、コストは、この **AppDomain**を再作成するために必要なメモリ量によって異なります。|  
@@ -52,8 +52,8 @@ ms.locfileid: "89545346"
 |**total_allocated_memory_kb**|**bigint**|アプリケーション ドメインの作成後、それによって行われたすべてのメモリ割り当ての、KB 単位の合計サイズです。収集されたメモリ量も差し引かれません。 これは、 **MonitoringTotalAllocatedMemorySize**に相当します。|  
 |**survived_memory_kb**|**bigint**|最後の完全なブロッキングコレクションの後に残っていた、現在のアプリケーションドメインによって参照されていることがわかっているキロバイト数。 これは、 **MonitoringSurvivedMemorySize**に相当します。|  
   
-## <a name="remarks"></a>解説  
- **Dm_clr_appdomains appdomain_address**と**dm_clr_loaded_assemblies appdomain_address**の間には、一対一のリレーションシップがあります。  
+## <a name="remarks"></a>注釈  
+ **Dm_clr_appdomains と appdomain_address**の間には、一対一のリレーションシップが**あります。**  
   
  次の表に、使用可能な **状態** の値とその説明、およびそれらが **AppDomain** のライフサイクルで発生するタイミングを示します。 この情報を使用すると、 **appdomain** のライフサイクルに従い、Windows イベントログを解析することなく、疑わしいまたは繰り返しの **appdomain** インスタンスのアンロードを監視できます。  
   
@@ -110,7 +110,6 @@ where appdomain_id = 15);
 ```  
   
 ## <a name="see-also"></a>参照  
- [dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+ [sys.dm_clr_loaded_assemblies &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Transact-sql&#41;&#40;共通言語ランタイム関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
-  
   

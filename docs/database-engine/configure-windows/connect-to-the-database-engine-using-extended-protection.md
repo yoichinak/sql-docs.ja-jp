@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22b1d58bac2433f9f5bae7dac5a6568050e38daf
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772639"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670285"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85772639"
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート  
  Windows による **拡張保護**のサポートの詳細については、以下のリンク先を参照してください。  
   
--   [拡張保護付き統合 Windows 認証](https://msdn.microsoft.com/library/dd639324.aspx)  
+-   [拡張保護付き統合 Windows 認証](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   
 -   [マイクロソフト セキュリティ アドバイザリ (973811)、認証の拡張保護](/security-updates/SecurityAdvisories/2009/973811)
   
@@ -100,12 +100,11 @@ ms.locfileid: "85772639"
 ## <a name="configuring-other-sql-server-components"></a>その他の SQL Server コンポーネントの構成  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の 構成方法の詳細については、「 [Reporting Services での認証の拡張保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)」を参照してください。  
   
- IIS を使用して HTTP 接続または HTTPS 接続経由で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データにアクセスする場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で IIS によって提供される拡張保護を利用できます。 拡張保護を使用するように IIS を構成する方法の詳細については、「 [IIS 7.5 における拡張保護の構成](https://go.microsoft.com/fwlink/?LinkId=181105)」を参照してください。  
+ IIS を使用して HTTP 接続または HTTPS 接続経由で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データにアクセスする場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で IIS によって提供される拡張保護を利用できます。 拡張保護を使用するように IIS を構成する方法の詳細については、「 [IIS 7.5 における拡張保護の構成](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee909472(v=ws.10))」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [サーバー ネットワークの構成](../../database-engine/configure-windows/server-network-configuration.md)   
  [クライアント ネットワーク構成](../../database-engine/configure-windows/client-network-configuration.md)   
- [認証の拡張保護の概要](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [拡張保護付き統合 Windows 認証](https://go.microsoft.com/fwlink/?LinkId=179922)  
-  
+ [認証の拡張保護の概要](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+ [拡張保護付き統合 Windows 認証](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   

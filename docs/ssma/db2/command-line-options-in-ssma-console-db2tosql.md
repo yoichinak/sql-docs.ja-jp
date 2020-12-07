@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5dde1168e8107f01f06d5e60fb2b1853d47abc43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3dfef8a72c8c578b468ebcf34372e603579d13ed
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472525"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987438"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA コンソールのコマンドラインオプション (DB2ToSQL)
 Microsoft では、SSMA アクティビティを実行および制御するための強固な set コマンドラインオプションを提供しています。 以降のセクションでも同じことが説明されています。  
@@ -120,7 +120,7 @@ Xmloutput には、可視化の2つのオプションを使用できます。
 ### <a name="secure-password-option--psecurepassword"></a>セキュリティで保護されたパスワードオプション:-p/securepassword  
 このオプションは、サーバー接続の暗号化されたパスワードを示します。 このオプションは、他のすべてのオプションとは異なります。このオプションでは、どのスクリプトも実行されず、移行に関連するアクティビティでも役に立ちませんが、移行プロジェクトで使用されるサーバー接続のパスワード暗号化の管理に役立ちます。  
   
-コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「 [パスワードの管理](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) 」セクションを参照してください。  
+コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「 [パスワードの管理](./managing-passwords-db2tosql.md) 」セクションを参照してください。  
   
 では、次のサブオプションがサポートされてい `-p/securepassword` ます。  
   
@@ -170,4 +170,3 @@ SSMA コンソールのコマンドラインオプションの表形式の表示
 2.  レポートを生成する方法については、「 [レポートの生成 &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)」を参照してください。  
   
 3.  コンソールでの問題のトラブルシューティングについては、「 [&#40;DB2ToSQL&#41;のトラブルシューティング ](../../ssma/db2/troubleshooting-db2tosql.md)」を参照してください。  
-  

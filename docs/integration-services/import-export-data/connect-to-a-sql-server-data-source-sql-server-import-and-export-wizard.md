@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87d7a1a9132d4a41bdc73100b4f86d51de5c6d08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5238049681cfb8ec71ea27a444a4e41bf7c64703
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495582"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196396"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -68,7 +68,7 @@ ms.locfileid: "88495582"
 ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 ODBC ドライバーを使用して接続するには、最初に **[.NET Framework Data Provider for ODBC]** をデータ ソースとして選択します。 このプロバイダーは、ODBC ドライバーのラッパーとして機能します。
 
 > [!TIP]
-> **最新のドライバーを入手します**。 [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql) をダウンロードします。
+> **最新のドライバーを入手します**。 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) をダウンロードします。
 
 下の図は、.NET Framework Data Provider for ODBC を選んだ直後に表示される一般的な画面です。
 
@@ -120,8 +120,8 @@ Windows 統合認証ではなく SQL Server 認証を使用する接続文字列
 
 > [!IMPORTANT]
 > Microsoft OLE DB Provider for SQL Server と SQL Server Native Client は、SQL Server 2012 より後のバージョンではサポートされません。 代わりに、ODBC ドライバーを使用します。 ODBC ドライバーへの移行に関する詳細については、次のブログ記事を参照してください。
->   -   [ODBC のネイティブのリレーショナル データ アクセスへの対応](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)
->   -   [新しい Microsoft ODBC Drivers for SQL Server の概要](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/)
+>   -   [ODBC のネイティブのリレーショナル データ アクセスへの対応](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access)
+>   -   [新しい Microsoft ODBC Drivers for SQL Server の概要](/archive/blogs/sqlnativeclient/introducing-the-new-microsoft-odbc-drivers-for-sql-server)
 
 ## <a name="other-data-providers-and-more-info"></a>その他のデータ プロバイダーと詳細情報
 ここに記載されていないデータ プロバイダーを使用して SQL Server に接続する方法については、「[SQL Server connection strings](https://www.connectionstrings.com/sql-server/)」 (SQL Server 接続文字列) を参照してください。 このサード パーティのサイトには、このページで説明したデータ プロバイダーと接続パラメーターに関する詳細情報も含まれています。
@@ -129,4 +129,3 @@ Windows 統合認証ではなく SQL Server 認証を使用する接続文字列
 ## <a name="see-also"></a>参照
 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

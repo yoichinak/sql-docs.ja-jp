@@ -5,16 +5,16 @@ ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: e465f1e4e8c6cc9e5effb27c1cc97ee7633309eb
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200295"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297969"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server のサポート終了オプション 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -24,8 +24,8 @@ ms.locfileid: "88200295"
 ## <a name="understanding-the-sql-server-lifecycle"></a>SQL Server のライフサイクルについて
 
 各バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、少なくとも 10 年間のサポートが受けられます。これには、メインストリーム サポートの 5 年間、および延長サポートの 5 年間が含まれます。
--  **メインストリーム サポート**には、機能、パフォーマンス、スケーラビリティ、およびセキュリティ更新プログラムが含まれています。 
--  **延長サポート**には、セキュリティ更新プログラムのみが含まれます。 
+-  **メインストリーム サポート** には、機能、パフォーマンス、スケーラビリティ、およびセキュリティ更新プログラムが含まれています。 
+-  **延長サポート** には、セキュリティ更新プログラムのみが含まれます。 
 
 **サポートの終了** (有効期間の終了とも呼ばれます) は、製品がそのライフサイクルの終了に達したことと、製品でサービスとサポートを利用できなくなったことを示します。 Microsoft ライフサイクルの詳細については、「[Microsoft ライフサイクル ポリシー](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)」を参照してください。
 
@@ -37,7 +37,7 @@ ms.locfileid: "88200295"
 - 現在のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードする。
 - [延長セキュリティ更新プログラムのサブスクリプション](https://www.microsoft.com/cloud-platform/extended-security-updates)を購入する。 
 - [無料の延長セキュリティ更新プログラム](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)を取得するため、ワークロードをそのまま Azure 仮想マシンに移行する。
-- [Azure SQL Database サービス](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)にワークロードを移行する。 
+- [Azure SQL Database サービス](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)にワークロードを移行する。 
 
 アップグレードまたは移行の計画と自動化を行うための情報、ガイダンス、ツールの詳細については、[SQL Server 2005 のサポート終了](https://www.microsoft.com/sql-server/sql-server-2005)と [SQL Server 2008 のサポート終了](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)に関するページをご覧ください。  
 
@@ -95,7 +95,7 @@ ms.locfileid: "88200295"
 
 ## <a name="extend-support"></a>サポートを延長する 
 
-アップグレードの準備ができておらず、クラウドに移行する準備ができていない場合は、延長セキュリティ更新プログラムのサブスクリプションを購入して、サポート終了日を過ぎてから最長 3 年間は**重要な**セキュリティ更新プログラムを受け取ることができます。  
+アップグレードの準備ができておらず、クラウドに移行する準備ができていない場合は、延長セキュリティ更新プログラムのサブスクリプションを購入して、サポート終了日を過ぎてから最長 3 年間は **重要な** セキュリティ更新プログラムを受け取ることができます。  
 
 ### <a name="benefits"></a>メリット 
 
@@ -241,7 +241,7 @@ ms.locfileid: "88200295"
 
 ### <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-JSON データを使用し、堅牢なクエリ処理とトランザクション データ処理の組み合わせを必要とする最新のスケーラブルなモバイル アプリケーションや Web アプリケーションには、Azure Cosmos DB をご検討ください。 詳細については、「[Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)」を参照してください。 データのインポートの詳細については、[Cosmos DB にデータをインポートする方法](https://docs.microsoft.com/azure/cosmos-db/import-data/)に関するページを参照してください。
+JSON データを使用し、堅牢なクエリ処理とトランザクション データ処理の組み合わせを必要とする最新のスケーラブルなモバイル アプリケーションや Web アプリケーションには、Azure Cosmos DB をご検討ください。 詳細については、「[Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)」を参照してください。 データのインポートの詳細については、[Cosmos DB にデータをインポートする方法](/azure/cosmos-db/import-data/)に関するページを参照してください。
 
 Azure Cosmos DB には、次のような利点があります。
 - ドキュメントにはインデックスが作成されるので、使い慣れた SQL 構文を使用してクエリを実行することができます。
@@ -274,7 +274,7 @@ Azure テーブル ストレージには、次のような利点があります�
 | [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008%20R2) | 2010 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2008](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008) | 2008 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
-| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) |
+| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](/archive/blogs/cdnitmanagers/sql-server-2000-end-of-support-april-2013) |
 
 > [!IMPORTANT]
 > この表と、[!INCLUDE[msCoName](../../includes/msconame-md.md)] ライフサイクルのページが一致しない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] ライフサイクルがこの表よりも優先されます。これは、この表がおおまかな参照としての使用を目的としているためです。  
@@ -286,5 +286,4 @@ Azure テーブル ストレージには、次のような利点があります�
 [延長セキュリティ更新プログラム (ESU) の概要](sql-server-extended-security-updates.md)   
 [Azure にそのまま移行するための無料の延長セキュリティ更新プログラム (ESU)](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)   
 [SQL Server VM の概要](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
-[Azure SQL Database の概要](/azure/sql-database/sql-database-technical-overview)    
-
+[Azure SQL Database の概要](/azure/sql-database/sql-database-technical-overview)

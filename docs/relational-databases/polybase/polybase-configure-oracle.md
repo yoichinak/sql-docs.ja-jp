@@ -10,14 +10,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 322c858a9b20548662136e395c0db1c76171f5fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 29a8d7074d88af68605831529ca0e92e58a6129e
+ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85740959"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92134820"
 ---
-# <a name="configure-polybase-to-access-external-data-in-oracled"></a>Oracle 内の外部データにアクセスするように PolyBase を構成する
+# <a name="configure-polybase-to-access-external-data-in-oracle"></a>Oracle 上の外部データにアクセスするための PolyBase の構成
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
@@ -49,6 +49,9 @@ Oracle データ ソースのデータに対してクエリを実行するには
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > PolyBase 用の Oracle ODBC コネクタでサポートされるのは、Kerberos 認証ではなく、基本認証のみです。 
 
 1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 

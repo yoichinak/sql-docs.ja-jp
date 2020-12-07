@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 974cf89ca255f42f088d9b271863c45f4294fbbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19caca02569f477570236eb2b71adceb388b1358
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491901"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037225"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用したオブジェクトの管理
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88491901"
 オブジェクト エクスプローラーからサーバーに接続すると、オブジェクト エクスプローラーの接続設定を使用してコード エディターの新しいウィンドウを開くことができます。 コード エディターの新しいウィンドウを開くには、オブジェクト エクスプローラーでサーバー名を右クリックして **[新しいクエリ]** をクリックします。 特定のデータベースを使用してコード エディターのウィンドウを開くには、データベース名を右クリックして **[新しいクエリ]** をクリックします。 Analysis Services サーバーに対する新しいクエリを開くときには、DMX、MDX、XMLA のいずれかのクエリを選択できます。  
   
 ### <a name="start-powershell"></a>PowerShell を起動する  
-PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[PowerShell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell サポートが有効になった PowerShell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の PowerShell 環境で PowerShell コマンドを入力できます。 詳細については、「[SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)」を参照してください。  
+PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[PowerShell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell サポートが有効になった PowerShell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の PowerShell 環境で PowerShell コマンドを入力できます。 詳細については、「[SQL Server PowerShell](../../powershell/sql-server-powershell.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [[オブジェクト エクスプローラー]](../../ssms/object/object-explorer.md)  
@@ -61,4 +61,3 @@ PowerShell セッションを起動するには、オブジェクト エクス�
 [オブジェクト エクスプローラーからインスタンスへの接続](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [[オブジェクト エクスプローラーの詳細] ペイン](../../ssms/object/object-explorer-details-pane.md)  
 [Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)  
-  

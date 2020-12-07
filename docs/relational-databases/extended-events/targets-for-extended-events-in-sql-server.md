@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 706aa149b51b2cc56b524ad39db0e1453324bd00
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863372"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868774"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 
@@ -156,7 +156,7 @@ CREATE EVENT SESSION [event_counter_1]
 > [!NOTE]
 > Azure SQL Database でサポートされるのは、Azure Blob Storage に `xel` ファイルを格納することのみです。 
 >
-> 特に SQL Database (および SQL Managed Instance) の **event_file** のコード例については、[SQL Database の拡張イベント用のイベント ファイル ターゲット コード](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)に関するページを参照してください。
+> 特に SQL Database (および SQL Managed Instance) の **event_file** のコード例については、[SQL Database の拡張イベント用のイベント ファイル ターゲット コード](/azure/sql-database/sql-database-xevent-code-event-file)に関するページを参照してください。
 
 ::: moniker-end
 
@@ -792,9 +792,6 @@ event_stream ターゲットは、C# などの言語で記述された .NET プ�
 ### <a name="xevent-namespaces"></a>XEvent の名前空間
 
 
-- [Microsoft.SqlServer.Management.XEvent 名前空間](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
+- [Microsoft.SqlServer.Management.XEvent 名前空間](/dotnet/api/microsoft.sqlserver.management.xevent)
 
-- [Microsoft.SqlServer.XEvent.Linq 名前空間](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
-
-
-
+- [Microsoft.SqlServer.XEvent.Linq 名前空間](/dotnet/api/microsoft.sqlserver.xevent.linq)

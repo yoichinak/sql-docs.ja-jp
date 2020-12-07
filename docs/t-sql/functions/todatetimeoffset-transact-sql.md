@@ -25,12 +25,12 @@ ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5274a17e4de005c3947aba96956b62b5d200409
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 204cdfe73791ef1cf7e6d3b66ed20735b61e9b09
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459542"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380457"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88459542"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 TODATETIMEOFFSET ( expression , time_zone )  
 ```  
   
@@ -52,7 +52,7 @@ TODATETIMEOFFSET ( expression , time_zone )
  [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 値に解決される[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 > [!NOTE]  
->  型の式をすることはできません **テキスト**, 、**ntext**, 、または **イメージ** に、これらの型を暗黙的に変換できないため **varchar** または **nvarchar**です。  
+>  型の式をすることはできません **テキスト**, 、**ntext**, 、または **イメージ** に、これらの型を暗黙的に変換できないため **varchar** または **nvarchar** です。  
   
  *time_zone*  
  タイム ゾーン オフセットを表す式です。たとえば、分単位で表す式 (整数の場合) は -120、時間と分単位で表す式 (文字列の場合) は '+13:00' です。 範囲は +14 ～ -14 (時間) です。 式は、指定された time_zone のローカル時刻で解釈されます。  
@@ -69,7 +69,7 @@ TODATETIMEOFFSET ( expression , time_zone )
  次の例では、現在の日付と時刻のゾーン オフセットを、タイム ゾーン `-07:00` に変更します。  
   
 ```sql  
-DECLARE @todaysDateTime datetime2;  
+DECLARE @todaysDateTime DATETIME2;  
 SET @todaysDateTime = GETDATE();  
 SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
 -- RETURNS 2019-04-22 16:23:51.7666667 -07:00  

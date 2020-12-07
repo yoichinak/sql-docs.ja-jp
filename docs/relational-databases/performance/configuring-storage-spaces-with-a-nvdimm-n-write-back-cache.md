@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbd255dc2cd1a9bcb4bc146bcc6c6489b0cb1071
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 7f95a343074ce2fb9f7f54c3121b0db6beafe34d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457348"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679236"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "86457348"
 Get-PhysicalDisk | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Get-PhysicalDisk](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
+ ![Get-PhysicalDisk コマンドレットの出力を示す Windows Powershell ウィンドウのスクリーンショット。](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
   
 > [!NOTE]  
 >  NVDIMM-N デバイスを使用すると、ライトバック キャッシュの対象になるデバイスを具体的に選択する必要がなくなります。  
@@ -47,7 +47,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
+ ![$Pd コマンドレットの出力を示す Windows Powershell ウィンドウのスクリーンショット。](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>記憶域プールの作成  
  PhysicalDisks を含む $pd 変数を使用すると、New-StoragePool PowerShell コマンドレットを使用して記憶域プールを構築するのが容易になります。  
@@ -56,7 +56,7 @@ $pd | Select FriendlyName, MediaType, BusType
 New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
- ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
+ ![New-StoragePool コマンドレットの出力を示す Windows Powershell ウィンドウのスクリーンショット。](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
 ## <a name="creating-the-virtual-disk-and-volume"></a>仮想ディスクとボリュームの作成  
  プールが作成されたら、次に仮想ディスクを切り出して、書式設定します。 次のケースでは、仮想ディスクは 1 つだけ作成され、New-Volume PowerShell コマンドレットを使用してこのプロセスを効率化することができます。  
@@ -65,20 +65,19 @@ New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName N
 New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
- ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
+ ![New-Volume コマンドレットの出力を示す Windows Powershell ウィンドウのスクリーンショット。](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
  仮想ディスクが作成、初期化され、NTFS でフォーマットされます。 次の画面キャプチャは、サイズが 300 GB で、書き込みキャッシュが 1 GB であり、NVDIMM-N でホストされることを示しています。  
   
- ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
+ ![Get-VirtualDisk コマンドレットの出力を示す Windows Powershell ウィンドウのスクリーンショット。](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  サーバーで表示されるこの新しいボリュームが確認できるようになりました。 SQL Server トランザクション ログに対してこのドライブを使用できます。  
   
- ![Log_Space ドライブ](../../relational-databases/performance/media/log-space-drive.png "Log_Space ドライブ")  
+ ![Log_Space ドライブを示す、[この PC] ページ上のエクスプローラー ウィンドウのスクリーンショット。](../../relational-databases/performance/media/log-space-drive.png "Log_Space ドライブ")  
   
 ## <a name="see-also"></a>参照  
  [Windows 10 の Windows 記憶域スペース](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
- [Windows 2012 R2 の Windows 記憶域スペース](https://technet.microsoft.com/library/hh831739.aspx)   
+ [Windows 2012 R2 の Windows 記憶域スペース](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11))   
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [データ ファイルとログ ファイルの既定の場所の表示または変更 &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
-  
   

@@ -8,15 +8,14 @@ ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 22cbb7c46e02ad989dd89b7296e2d0e824b94e44
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8ca5b9db64d7846caf9f97188614f11faa7e4d1d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178477"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870332"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用して R で予測モデルを作成してスコア付けする
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -51,16 +50,16 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 このクイック スタートを実行するには、次の前提条件を用意しておく必要があります。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールするには、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールするには、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- SQL Server 2016 R Services。 R Services をインストールする方法については、[Windows インストール ガイド](../install/sql-r-services-windows-install.md)に関するページを参照してください。
+- SQL Server 2016 R Services。 R Services をインストールするには、[Windows インストール ガイド](../install/sql-r-services-windows-install.md)に関するページを参照してください。
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL Managed Instance の Machine Learning Services。 サインアップの方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
+- Azure SQL Managed Instance の Machine Learning Services。 詳細については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
 ::: moniker-end
 
 - R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
@@ -164,7 +163,7 @@ GO
 
 ## <a name="score-new-data-using-the-trained-model"></a>トレーニング済みのモデルを使用して新しいデータをスコアリングする
 
-*スコアリング*は、データ サイエンスで使用される用語で、トレーニング済みのモデルに取り込まれた新しいデータに基づいて、予測、確率、またはその他の値を生成することを意味します。 前のセクションで作成したモデルを使用して、新しいデータに対して予測のスコアリングを行います。
+*スコアリング* は、データ サイエンスで使用される用語で、トレーニング済みのモデルに取り込まれた新しいデータに基づいて、予測、確率、またはその他の値を生成することを意味します。 前のセクションで作成したモデルを使用して、新しいデータに対して予測のスコアリングを行います。
 
 ### <a name="create-a-table-of-new-data"></a>新しいデータのテーブルを作成する
 

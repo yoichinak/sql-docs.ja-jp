@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bb8aca979735819200d8b03c2c2f77a30f2c8398
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115608"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128586"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ABS ( numeric_expression )
 真数のデータ型または概数のデータ型の式を指定します。
   
 ## <a name="return-types"></a>戻り値の型  
-*numeric_expression*と同じ型を返します。
+*numeric_expression* と同じ型を返します。
   
 ## <a name="examples"></a>例  
 次の例では、3 つの異なる値に対して `ABS` 関数を使用した結果を示します。

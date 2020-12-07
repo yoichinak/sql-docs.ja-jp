@@ -1,1 +1,1 @@
-**適用対象:** ![はい](media/yes-icon.png)SQL Server 2016 以降 (Windows のみ) ![いいえ](media/no-icon.png)Azure SQL Database ![いいえ](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![いいえ](media/no-icon.png)Parallel Data Warehouse
+**適用対象:** :::image type="icon" source="media/yes-icon.png":::SQL Server 2016 以降 (Windows のみ) :::image type="icon" source="media/no-icon.png":::Azure SQL Database :::image type="icon" source="media/no-icon.png":::Azure Synapse Analytics (SQL DW) :::image type="icon" source="media/no-icon.png":::Parallel Data Warehouse

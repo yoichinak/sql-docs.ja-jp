@@ -26,11 +26,11 @@ ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ac14d633e221e50fb821d92c0c1a0f61b2ce5efd
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688717"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131277"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ## <a name="permissions"></a>アクセス許可  
  CREATE SERVER ROLE 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
- さらに、ログインのための *server_principal* に対する IMPERSONATE 権限、 *server_principal*として使用されるサーバー ロールのための ALTER 権限、または server_principal として使用される Windows グループのメンバーシップも必要です。  
+ さらに、ログインのための *server_principal* に対する IMPERSONATE 権限、 *server_principal* として使用されるサーバー ロールのための ALTER 権限、または server_principal として使用される Windows グループのメンバーシップも必要です。  
   
  これによりを追加するには、オブジェクトの種類のサーバーの役割設定とイベントの種類を Audit Server Principal Management イベントが発生します。  
   

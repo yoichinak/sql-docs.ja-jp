@@ -10,14 +10,14 @@ ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6562517c088de44044baaa6b2b0b80b4243eb9fa
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a408ff7289b117a1cdab5abb36be164535feb15c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116244"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584418"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>PowerShell による Always On 可用性グループの作成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "91116244"
 
 ## <a name="using-powershell"></a>PowerShell の使用
 
-[SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)を設定して使用します。 
+[SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)を設定して使用します。 
 
 > [!NOTE]  
-> 特定のコマンドレットの構文や例を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
+> 特定のコマンドレットの構文や例を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
 
 1. プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (**cd**) します。  
   
@@ -212,13 +212,13 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 - **ブログ:**  
   
-     [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server PowerShell を使用した Always On の構成](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/configuring-alwayson-with-sql-server-powershell/)  
+     [SQL Server PowerShell を使用した Always On の構成](/archive/blogs/sqlalwayson/configuring-alwayson-with-sql-server-powershell)  
   
-     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)  
   
 - **ビデオ:**  
   
@@ -228,9 +228,9 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 - **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   

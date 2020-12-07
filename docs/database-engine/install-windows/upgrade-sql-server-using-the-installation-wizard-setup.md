@@ -11,15 +11,15 @@ helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99e9c4af8006b621be0bc547f1c171019c6ec1c2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900204"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125697"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server のアップグレード (セットアップ)
 
@@ -46,7 +46,7 @@ ms.locfileid: "85900204"
 セットアップは管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、リモート共有に対する読み取り権限と実行権限を持つ、ローカル管理者のドメイン アカウントを使用する必要があります。  
   
 > [!WARNING]  
->  アップグレードする機能は変更できず、アップグレード操作中に機能を追加することもできないことに注意してください。 アップグレード操作の完了後に、アップグレード済みの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インスタンスに機能を追加する方法の詳細については、[SQL Server のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md) に関するページをご覧ください。  
+>  アップグレードする機能は変更できず、アップグレード操作中に機能を追加することもできないことに注意してください。 アップグレード操作の完了後に、アップグレード済みの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インスタンスに機能を追加する方法の詳細については、[SQL Server のインスタンスへの機能の追加 &#40;セットアップ&#41;](./add-features-to-an-instance-of-sql-server-setup.md) に関するページをご覧ください。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードする場合は、「 [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) 」を確認し、ご利用の環境に応じて次の作業を行ってください。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "85900204"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール メディアを挿入し、ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
-2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが開始されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のインスタンスをアップグレードするには、左側のナビゲーション領域の **[インストール]** をクリックし、**アップグレード ボタン**をクリックして、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードします。  
+2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが開始されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のインスタンスをアップグレードするには、左側のナビゲーション領域の **[インストール]** をクリックし、**アップグレード ボタン** をクリックして、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードします。  
   
 3.  [プロダクト キー] ページで、オプションをクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の無償のエディションにアップグレードするかどうか、または SQL Server の製品版の PID キーを持っているかどうかを指定します。 詳細については、「 [SQL Server 2016 のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2016.md) 」および「 [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "85900204"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン情報を指定したら、 **[次へ]** をクリックします。  
   
-15. [フルテキスト検索アップグレード オプション] ページで、アップグレードするデータベースのアップグレード オプションを指定します。 詳細については、「 [フルテキスト検索アップグレード オプション](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)」。  
+15. [フルテキスト検索アップグレード オプション] ページで、アップグレードするデータベースのアップグレード オプションを指定します。 詳細については、「 [フルテキスト検索アップグレード オプション](./install-sql-server.md)」。  
   
 16. すべてのルールに合格した場合は、[機能ルール] ウィンドウは自動的に進行します。  
   
@@ -143,6 +143,5 @@ ms.locfileid: "85900204"
   
 ## <a name="see-also"></a>参照  
  [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)   
- [旧バージョンとの互換性_削除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [旧バージョンとの互換性_削除](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

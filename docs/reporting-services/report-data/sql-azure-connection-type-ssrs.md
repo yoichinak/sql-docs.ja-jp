@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988469"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935192"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Azure SQL の接続の種類 (SSRS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "87988469"
 > [!NOTE]  
 > [!INCLUDE[ssSDS](../../includes/sssds-md.md)]への接続を開くときに、接続タイムアウトを 30 秒に設定してください。
   
-詳細については、[docs.microsoft.com で Microsoft Azure SQL Database のドキュメント](https://docs.microsoft.com/azure/sql-database/)を参照してください。  
+詳細については、[docs.microsoft.com で Microsoft Azure SQL Database のドキュメント](/azure/sql-database/)を参照してください。  
   
 このトピックの情報を使用して、データ ソースを構築してください。 手順については、「 [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -55,7 +55,7 @@ Windows 認証 (統合セキュリティ) はサポートされていません�
   
 - 保存されているユーザー名とパスワードを使用する。 レポート データを格納するデータベースがレポート サーバーとは別のサーバーに存在する場合に発生するダブル ホップに対処するには、資格情報を Windows 資格情報として使用するオプションを選択します。 データ ソースに接続した後に、認証されているユーザーの権限を借用するオプションもあります。  
   
-- 資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
+- 資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、「[自動実行アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
 詳細については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
@@ -79,7 +79,7 @@ Windows 認証 (統合セキュリティ) はサポートされていません�
   
 詳細については、「[リレーショナル クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)」および「[テキストベースのクエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] で使用されるグラフィカル クエリ デザイナーには、要約データのみを取得するクエリの作成に役立つグループ化と集計のサポートが組み込まれています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の機能には、GROUP BY 句、DISTINCT キーワード、および集計 (SUM、COUNT など) があります。 テキスト ベースのクエリ デザイナーでは、グループ化と集計が含まれている [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語が完全にサポートされています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] で使用されるグラフィカル クエリ デザイナーには、要約データのみを取得するクエリの作成に役立つグループ化と集計のサポートが組み込まれています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の機能には、GROUP BY 句、DISTINCT キーワード、および集計 (SUM、COUNT など) があります。 テキスト ベースのクエリ デザイナーでは、グループ化と集計が含まれている [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語が完全にサポートされています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/language-reference.md)」を参照してください。  
   
 ### <a name="using-query-type-text"></a><a name="QueryText"></a> Text の種類のクエリの使用
 
@@ -161,9 +161,9 @@ Azure SQL Database は Azure Active Directory (AAD) パススルー認証と共�
 このシナリオは、以下の項目を正しく設定した場合にサポートされます。
 
 - [SQL Server 用の Active Directory 認証ライブラリ (ADALSQL) ](https://www.microsoft.com/download/details.aspx?id=48742) がレポート サーバーにインストールされている。
-- [Active Directory フェデレーション サービス (AD FS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) が、オンプレミスの Active Directory (AD) と AAD 全体で連携するように構成されている。
-- [Kerberos の制約付き委任 (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) がレポート サーバーから ADFS サーバーに対して構成されている。
-- レポートを表示するユーザーとして [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) に対する認証を受けるようにレポート/データ ソースを構成している。
+- [Active Directory フェデレーション サービス (AD FS)](/windows-server/identity/active-directory-federation-services) が、オンプレミスの Active Directory (AD) と AAD 全体で連携するように構成されている。
+- [Kerberos の制約付き委任 (KCD)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) がレポート サーバーから ADFS サーバーに対して構成されている。
+- レポートを表示するユーザーとして [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) に対する認証を受けるようにレポート/データ ソースを構成している。
 
 ::: moniker-end
 
@@ -198,8 +198,7 @@ Azure SQL Database は Azure Active Directory (AAD) パススルー認証と共�
   
 ## <a name="see-also"></a>参照
 
-[docs.microsoft.com の Microsoft Azure SQL Database のドキュメント](https://docs.microsoft.com/azure/sql-database/)  
+[docs.microsoft.com の Microsoft Azure SQL Database のドキュメント](/azure/sql-database/)  
 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-
+[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

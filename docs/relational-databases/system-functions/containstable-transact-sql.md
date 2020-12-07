@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454797"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753707"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ CONTAINSTABLE
 ## <a name="remarks"></a>解説  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
- 返されるテーブルには、フルテキストキー値を含む **key** という名前の列があります。 フルテキストインデックスが作成された各テーブルには、値が一意であることが保証される列があります。また、 **キー** 列に返される値は、contains 検索条件で指定された選択基準に一致する行のフルテキストキー値です。 OBJECTPROPERTYEX 関数から取得された **TableFulltextKeyColumn** プロパティは、この一意のキー列の id を提供します。 フルテキストインデックスのフルテキストキーに関連付けられている列の ID を取得するには、 **fulltext_indexes**を使用します。 詳細については、「 [sys. fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)」を参照してください。  
+ 返されるテーブルには、フルテキストキー値を含む **key** という名前の列があります。 フルテキストインデックスが作成された各テーブルには、値が一意であることが保証される列があります。また、 **キー** 列に返される値は、contains 検索条件で指定された選択基準に一致する行のフルテキストキー値です。 OBJECTPROPERTYEX 関数から取得された **TableFulltextKeyColumn** プロパティは、この一意のキー列の id を提供します。 フルテキストインデックスのフルテキストキーに関連付けられている列の ID を取得するには、 **sys.fulltext_indexes**を使用します。 詳細については、「 [sys.fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)」を参照してください。  
   
  元のテーブルから目的の行を取得するには、CONTAINSTABLE 行との結合を指定してください。 CONTAINSTABLE を使用する場合、通常は次の形式で FROM 句を SELECT ステートメントに指定します。  
   
@@ -284,10 +284,9 @@ GO
 ## <a name="see-also"></a>参照  
  [ランクを使用して検索結果を制限する](../../relational-databases/search/limit-search-results-with-rank.md)   
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
- [フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
-  
   

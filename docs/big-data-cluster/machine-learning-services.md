@@ -4,16 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: Machine Learning Services を使用して SQL Server ビッグ データ クラスターのマスター インスタンスで Python や R のスクリプトを実行する方法について説明します。
 author: dphansen
 ms.author: davidph
-ms.date: 04/30/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: a14258c15ac1af1445b201f7b999dbec1682555d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: aa71450a1c16c9239a0dc74403a1989b5a9a1986
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196927"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947967"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターで Machine Learning Services を使用して Python および R のスクリプトを実行する
 
@@ -22,7 +22,7 @@ ms.locfileid: "86196927"
 [Machine Learning Services](../machine-learning/index.yml) を使用して [SQL Server ビッグ データ クラスター](big-data-cluster-overview.md)のマスター インスタンスで Python や R のスクリプトを実行できます。
 
 > [!NOTE]
-> また、[SQL Server 言語拡張機能](../language-extensions/language-extensions-overview.md)を使用して、マスター インスタンスで Java コードを実行することもできます。 以下の手順に従うと、言語拡張機能も有効になります。
+> また、[Java 言語拡張機能](../language-extensions/java-overview.md)を使用して、SQL Server ビッグ データ クラスターのマスター インスタンスで Java コードを実行することもできます。 以下の手順に従うと、[SQL Server言語拡張機能](../language-extensions/language-extensions-overview.md)も有効になります。
 
 ## <a name="enable-machine-learning-services"></a>Machine Learning Services を有効にする
 

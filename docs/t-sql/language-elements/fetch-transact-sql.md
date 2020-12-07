@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a15d8c06e47dd7ae651d0034037f2e3a4cd21bcb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5e8be7438efd35d57a81b30270ab865ca795b9d7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417118"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128247"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 -- Declare the variables to store the values returned by FETCH.  
-DECLARE @LastName varchar(50), @FirstName varchar(50);  
+DECLARE @LastName VARCHAR(50), @FirstName VARCHAR(50);  
   
 DECLARE contact_cursor CURSOR FOR  
 SELECT LastName, FirstName FROM Person.Person  

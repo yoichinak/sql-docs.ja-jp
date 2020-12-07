@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 442e95c2e579fa67cb54b801fe6ebbdcd4098ae3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461085"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125240"
 ---
 # <a name="common-errors-with-database-mail"></a>データベース メールの一般的なエラー 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

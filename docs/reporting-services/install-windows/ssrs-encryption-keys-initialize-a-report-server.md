@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d04dce2fa829938ede09ebbceaa4980c110002cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7cbe27857ba31dc8b91ac8d93ae08ca8dd219f6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446083"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934675"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS の暗号化キー - レポート サーバーの初期化
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、初期化されたサーバーとは、レポート サーバー データベース内のデータの暗号化および暗号化解除を実行できるサーバーのことです。 レポート サーバーを操作するには、初期化が必要です。 初期化は、レポート サーバー サービスを最初に開始するときに行われます。 また、既存の配置にレポート サーバーを追加するときや、復旧処理の一環としてキーを手動で再作成するときにも、初期化が行われます。 暗号化キーを使用する方法と理由の詳細については、「[暗号化キーの構成と管理 (構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」および「[暗号化されたレポート サーバー データの格納 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)」を参照してください。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、初期化されたサーバーとは、レポート サーバー データベース内のデータの暗号化および暗号化解除を実行できるサーバーのことです。 レポート サーバーを操作するには、初期化が必要です。 初期化は、レポート サーバー サービスを最初に開始するときに行われます。 また、既存の配置にレポート サーバーを追加するときや、復旧処理の一環としてキーを手動で再作成するときにも、初期化が行われます。 暗号化キーを使用する方法と理由の詳細については、「[暗号化キーの構成と管理 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」、および[暗号化されたレポート サーバー データの格納 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md) に関する記事を参照してください。  
   
  暗号化キーは、レポート サーバー サービスのプロファイル情報に一部基づいています。 レポート サーバー サービスの実行に使用されるユーザー ID を変更する場合は、それに応じてキーを更新する必要があります。 Reporting Services 構成ツールを使用して ID を変更すると、この手順が自動的に実行されます。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "88446083"
   
 ## <a name="how-to-initialize-a-report-server"></a>レポート サーバーを初期化する方法  
   
--   レポート サーバーを初期化するには、Reporting Services 構成ツールを使用します。 初期化は、レポート サーバー データベースを作成および構成するときに自動的に行われます。 詳細については、「 [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」で確認します。  
+-   レポート サーバーを初期化するには、Reporting Services 構成ツールを使用します。 初期化は、レポート サーバー データベースを作成および構成するときに自動的に行われます。 詳細については、[レポート サーバー データベース接続の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) に関する記事を参照してください。  
   
--   レポート サーバーをスケールアウト配置用に初期化するには、Reporting Services 構成ツールの [初期化] ページまたは **RSKeymgmt** ユーティリティを使用します。 実行手順については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
+-   レポート サーバーをスケールアウト配置用に初期化するには、Reporting Services 構成ツールの [初期化] ページまたは **RSKeymgmt** ユーティリティを使用します。 詳細な手順に従うには、[ネイティブ モード レポート サーバーのスケールアウト配置の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) に関する記事を参照してください。  
   
 > [!NOTE]  
 >  **RSKeymgmt** は、既にスケールアウト配置に含まれているレポート サーバー インスタンスをホストするコンピューター上のコマンド ラインから実行するコンソール アプリケーションです。 ユーティリティを実行するとき、初期化するリモートのレポート サーバー インスタンスを選択するための引数を指定します。  
   
- レポート サーバーは、インストール識別子と公開キーが一致する場合のみ初期化されます。 正しく一致すると、暗号化の解除を許可する対称キーが作成されます。 一致しないと、レポート サーバーが無効になります。このとき、バックアップ キーの適用、またはバックアップ キーが利用できない場合や有効でない場合に暗号化データの削除が必要になることがあります。 レポート サーバーによる暗号化キーの使用の詳細については、「[暗号化キーの構成と管理 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」を参照してください。  
+ レポート サーバーは、インストール識別子と公開キーが一致する場合のみ初期化されます。 正しく一致すると、暗号化の解除を許可する対称キーが作成されます。 一致しないと、レポート サーバーが無効になります。このとき、バックアップ キーの適用、またはバックアップ キーが利用できない場合や有効でない場合に暗号化データの削除が必要になることがあります。 レポート サーバーで使用される暗号化キーの詳細については、「[暗号化キーの構成と管理 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の Windows Management Instrumentation (WMI) プロバイダーを使用して、レポート サーバーをプログラムで初期化することもできます。 詳細については、「 [Reporting Service WMI プロバイダーへのアクセス](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)」を参照してください。  
@@ -69,6 +69,6 @@ ms.locfileid: "88446083"
  レポート サーバーの初期化を確認するには、コマンド ウィンドウで「**https://\<servername>/reportserver**」と入力し、レポート サーバー Web サービスに対して ping を実行します。 **RSReportServerNotActivated** エラーが発生した場合は、初期化が失敗しています。  
   
 ## <a name="see-also"></a>参照
-[暗号化キーの構成と管理 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+[暗号化キーの構成と管理 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
   
   

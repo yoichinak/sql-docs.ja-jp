@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d5fd2e96e9d0695f098eab02fb3d4ab86e5d256
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902331"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115865"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux の Docker コンテナーで SQL Server データベースを復元する
 
@@ -85,7 +85,7 @@ ms.locfileid: "85902331"
    このコマンドにより、Developer エディションの SQL Server 2017 コンテナー (規定値) が作成されます。 SQL Server のポート **1433** は、ホスト上ではポート **1401** として公開されています。 省略可能な `-v sql1data:/var/opt/mssql` パラメーターを使うと、**sql1ddata** という名前のデータ ボリューム コンテナーが作成されます。 これは、SQL Server によって作成されたデータを永続化するために使われます。
 
    > [!IMPORTANT]
-   > この例では、Docker 内のデータ ボリューム コンテナーが使用されます。 ホスト ディレクトリのマッピングを代わりに選択する場合、Mac と Windows では、Docker でのこの手法に制限があることにご留意ください。 詳細については、「[Docker で SQL Server コンテナーイメージを構成する](sql-server-linux-configure-docker.md#persist)」を参照してください。
+   > この例では、Docker 内のデータ ボリューム コンテナーが使用されます。 ホスト ディレクトリのマッピングを代わりに選択する場合、Mac と Windows では、Docker でのこの手法に制限があることにご留意ください。 詳細については、「[Docker で SQL Server コンテナーイメージを構成する](./sql-server-linux-docker-container-configure.md#persist)」を参照してください。
 
 1. Docker コンテナーを表示するには、`docker ps` コマンドを使用します。
 
@@ -97,7 +97,7 @@ ms.locfileid: "85902331"
    docker ps -a
    ```
 
-1. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](sql-server-linux-configure-docker.md#troubleshooting)を参照してください。
+1. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](./sql-server-linux-docker-container-troubleshooting.md)を参照してください。
 
   ```bash
   $ sudo docker ps -a
@@ -153,7 +153,7 @@ ms.locfileid: "85902331"
    docker ps -a
    ```
 
-1. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](sql-server-linux-configure-docker.md#troubleshooting)を参照してください。
+1. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](./sql-server-linux-docker-container-troubleshooting.md)を参照してください。
 
    ```bash
    $ sudo docker ps -a
@@ -170,7 +170,7 @@ ms.locfileid: "85902331"
 
 ## <a name="copy-a-backup-file-into-the-container"></a>バックアップ ファイルをコンテナーにコピーする
 
-このチュートリアルでは、[Wide World Importers のサンプル データベース](../sample/world-wide-importers/wide-world-importers-documentation.md)を使います。 以下の手順に従って、Wide World Importers のデータベース バックアップ ファイルをダウンロードし、お使いの SQL Server コンテナーにコピーします。
+このチュートリアルでは、[Wide World Importers のサンプル データベース](../samples/wide-world-importers-what-is.md)を使います。 以下の手順に従って、Wide World Importers のデータベース バックアップ ファイルをダウンロードし、お使いの SQL Server コンテナーにコピーします。
 
 1. まず、**docker exec** を使ってバックアップ フォルダーを作成します。 次のコマンドを実行すると、SQL Server コンテナー内に **/var/opt/mssql/backup** ディレクトリが作成されます。
 
@@ -208,7 +208,7 @@ ms.locfileid: "85902331"
 これで、コンテナー内にバックアップ ファイルが配置されました。 バックアップを復元する前に、バックアップ内の論理ファイル名とファイルの種類を把握しておくことが重要です。 以下の Transact-SQL コマンドでは、バックアップを検査し、コンテナーで **sqlcmd** を使って復元を実行します。
 
 > [!TIP]
-> コンテナーには **sqlcmd** が事前にインストールされているため、このチュートリアルではコンテナー内でこのツールを使います。 ただし、[Visual Studio Code](sql-server-linux-develop-use-vscode.md) や [SQL Server Management Studio](sql-server-linux-manage-ssms.md) など、コンテナーの外部にある他のクライアント ツールを使って Transact-SQL ステートメントを実行することもできます。 接続するには、コンテナーのポート 1433 にマップされたホストのポートを使います。 この例では、ホスト コンピューター上の **localhost,1401** とリモートの **Host_IP_Address,1401** が該当します。
+> コンテナーには **sqlcmd** が事前にインストールされているため、このチュートリアルではコンテナー内でこのツールを使います。 ただし、[Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) や [SQL Server Management Studio](sql-server-linux-manage-ssms.md) など、コンテナーの外部にある他のクライアント ツールを使って Transact-SQL ステートメントを実行することもできます。 接続するには、コンテナーのポート 1433 にマップされたホストのポートを使います。 この例では、ホスト コンピューター上の **localhost,1401** とリモートの **Host_IP_Address,1401** が該当します。
 
 1. コンテナー内で **sqlcmd** を実行し、バックアップ内の論理ファイル名とパスを一覧表示します。 これを行うには、Transact-SQL ステートメントの **RESTORE FILELISTONLY** を使います。
 
@@ -545,4 +545,4 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 次に、その他の Docker の構成とトラブルシューティングのシナリオを確認します。
 
 > [!div class="nextstepaction"]
->[Docker 上の SQL Server 2017 の構成ガイド](sql-server-linux-configure-docker.md)
+>[Docker 上の SQL Server 2017 の構成ガイド](./sql-server-linux-docker-container-deployment.md)

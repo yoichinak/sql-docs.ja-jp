@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7dac50281c264412e288fe3fce25fda84d99b659
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7d84ba6285867f9b37aa26f1fc3f721c75fefb9
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459650"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380795"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,7 @@ ms.locfileid: "88459650"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
@@ -138,7 +137,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 ### <a name="a-parse-into-datetime2"></a>A. Datetime2 に解析します。  
   
-```  
+```sql  
 SELECT PARSE('Monday, 13 December 2010' AS datetime2 USING 'en-US') AS Result;  
 ```  
   
@@ -154,7 +153,7 @@ Result
   
 ### <a name="b-parse-with-currency-symbol"></a>B. 通貨記号で解析します  
   
-```  
+```sql  
 SELECT PARSE('€345,98' AS money USING 'de-DE') AS Result;  
 ```  
   
@@ -170,7 +169,7 @@ Result
   
 ### <a name="c-parse-with-implicit-setting-of-language"></a>C. 暗黙的な言語設定で解析します  
   
-```  
+```sql  
 -- The English language is mapped to en-US specific culture  
 SET LANGUAGE 'English';  
 SELECT PARSE('12/16/2010' AS datetime2) AS Result;  

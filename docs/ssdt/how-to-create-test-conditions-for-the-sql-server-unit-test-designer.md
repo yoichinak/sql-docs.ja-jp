@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: ae0b544fb49a1161699a1a9e2d152abea2d847bb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518892"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985940"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>方法:SQL Server 単体テスト デザイナーのテスト条件を作成する
 
-新しいテスト条件の作成には、拡張可能な [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) クラスを利用できます。 たとえば、列数や結果セットの値を検証するテスト条件を作成することができます。  
+新しいテスト条件の作成には、拡張可能な [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) クラスを利用できます。 たとえば、列数や結果セットの値を検証するテスト条件を作成することができます。  
   
 ## <a name="to-create-a-test-condition"></a>テスト条件を作成するには  
 この手順では、SQL Server 単体テスト デザイナーに表示されるテスト条件を作成する方法について説明します。  
@@ -47,9 +47,9 @@ ms.locfileid: "85518892"
   
 9. ファイルを保存して閉じます。 **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロジェクトの再読み込み]** をクリックします。  
   
-10. [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) クラスから、独自のクラスを派生します。  
+10. [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) クラスから、独自のクラスを派生します。  
   
-11. アセンブリに厳密な名前で署名します。 詳細については、「[厳密な名前でアセンブリに署名する](https://msdn.microsoft.com/library/xc31ft41.aspx)」を参照してください。  
+11. アセンブリに厳密な名前で署名します。 詳細については、「[厳密な名前でアセンブリに署名する](/dotnet/standard/assembly/sign-strong-name)」を参照してください。  
   
 12. クラス ライブラリをビルドします。  
   
@@ -172,9 +172,9 @@ namespace Ssdt.Samples.SqlUnitTesting
 }  
 ```  
   
-カスタムのテスト条件のクラスは、[TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 基本クラスから継承します。 カスタムのテスト条件のインストール後は、条件の追加プロパティを使用して、[プロパティ] ウィンドウから条件を構成できます。  
+カスタムのテスト条件のクラスは、[TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) 基本クラスから継承します。 カスタムのテスト条件のインストール後は、条件の追加プロパティを使用して、[プロパティ] ウィンドウから条件を構成できます。  
   
-[TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) を拡張したクラスに [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) を追加する必要があります。 この属性により、このクラスは SQL Server Data Tools で探索可能になり、単体テストの設計および実行中に使用できるようになります。 この属性は、次の 2 つのパラメーターを受け取ります。  
+[TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) を拡張したクラスに [ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103)) を追加する必要があります。 この属性により、このクラスは SQL Server Data Tools で探索可能になり、単体テストの設計および実行中に使用できるようになります。 この属性は、次の 2 つのパラメーターを受け取ります。  
   
 |属性パラメーター|[位置]|説明|  
 |-----------------------|------------|---------------|  
@@ -205,4 +205,3 @@ Assert メソッドで、テスト条件の主要なタスクを実行します�
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

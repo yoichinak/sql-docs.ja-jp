@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b02f55100110952bce5785130ba330b5c96bce81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748428"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130448"
 ---
 # <a name="create-an-encrypted-backup"></a>暗号化されたバックアップの作成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85748428"
   
  **前提条件:**  
   
--   Windows ストレージ アカウントとコンテナー。 詳細については、以下を参照してください。 [レッスン 1:Azure ストレージ オブジェクトの作成](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)。  
+-   Windows ストレージ アカウントとコンテナー。 詳細については、以下を参照してください。 [レッスン 1:Azure ストレージ オブジェクトの作成](/previous-versions/sql/sql-server-2016/jj720557(v=sql.130))。  
   
 -   master データベースのデータベース マスター キー、SQL Server インスタンス上の証明書または非対称キー。 暗号化の要件と権限については、「 [バックアップの暗号化](../../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
   
@@ -129,5 +129,4 @@ ms.locfileid: "85748428"
     GO  
   
     ```  
-  
   

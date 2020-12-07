@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c05251bb8ac19f3c4594a263c7b108a8dbc90a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b741c74a2cc614ecab4e866f9bcfe26618133aa4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498086"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891902"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 ネイティブ モード レポート サーバーをインストールする
 
@@ -58,7 +58,7 @@ ms.locfileid: "88498086"
 
 - レポート サーバー データベース用の接続情報 (データ ソース名 (DSN) とも呼ばれます)。
 
- セットアップでは、自動実行用アカウント、レポート サーバーの電子メール、暗号化キーのバックアップ、およびスケールアウト配置が構成されません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、これらのプロパティを構成できます。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。
+ セットアップでは、自動実行用アカウント、レポート サーバーの電子メール、暗号化キーのバックアップ、およびスケールアウト配置が構成されません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、これらのプロパティを構成できます。 詳細については、「[レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。
 
 ## <a name="when-to-install-the-default-configuration-for-native-mode"></a><a name="bkmk_whentoinstalldefaultconfig"></a> ネイティブ モードの既定の構成をインストールする場合
 

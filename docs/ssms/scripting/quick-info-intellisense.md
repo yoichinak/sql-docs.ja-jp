@@ -16,12 +16,12 @@ ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b62555ab2395e4a32d78a427dd6301fcb264b28e
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 9a0f2d426c940950b114687f39d7a94bedbb75cf
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902122"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036432"
 ---
 # <a name="quick-info-intellisense"></a>クイック ヒント (IntelliSense)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,6 +33,5 @@ ms.locfileid: "88902122"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでは、 **クイック ヒント** は、IntelliSense によってサポートされる [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文の部品でのみ利用できます。 たとえば、IntelliSense によってサポートされないデータ型を持つオブジェクトの識別子上にマウス ポインターを移動すると、そのデータ型はサポートされていない旨のメッセージが **クイック ヒント** のポップアップ ウィンドウに表示されます。  
   
 ## <a name="see-also"></a>参照  
- [IntelliSense でサポートされている Transact-SQL 構文](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md)  
-  
+ [IntelliSense でサポートされている Transact-SQL 構文](./transact-sql-syntax-supported-by-intellisense.md)  
   

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d44212b3d290f69f8565040d44946104f92b045
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 240444331ed9a3ffa4fd083107aa68c476153392
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880284"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935127"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)
   座標ベースのグラフ (縦棒グラフ、横棒グラフ、面グラフ、散布図、線グラフ、および範囲グラフ) では、2 本の軸を使用してデータ間の関係を分類および表示します。 それぞれの軸には、異なる書式が適用されます。  
@@ -106,7 +106,7 @@ ms.locfileid: "84880284"
   
  スカラー軸を設定するには、次の 2 つの方法があります。  
   
--   **[軸のプロパティ]** ダイアログ ボックスの **[スカラー軸]** チェック ボックスをオンにします。 これにより軸上で、データをグループ化する値が存在しない箇所に、数値または日付/時刻値が追加されます。 詳細については、「[[軸のプロパティ] ダイアログ ボックス、[軸のオプション] &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)」をご覧ください。  
+-   **[軸のプロパティ]** ダイアログ ボックスの **[スカラー軸]** チェック ボックスをオンにします。 これにより軸上で、データをグループ化する値が存在しない箇所に、数値または日付/時刻値が追加されます。 詳細については、「[[軸のプロパティ] ダイアログ ボックス、[軸のオプション] &#40;レポート ビルダーおよび SSRS&#41;](/previous-versions/sql/)」をご覧ください。  
   
 -   **[系列のプロパティ]** ダイアログ ボックスの **[カテゴリ フィールド]** オプションで、フィールドを選択するか、式を入力します。 グラフでは、指定したカテゴリ フィールドのすべての値に対して軸の間隔が追加されます。  
   
@@ -128,5 +128,4 @@ ms.locfileid: "84880284"
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [グラフでのデータ ポイントの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
-  
   

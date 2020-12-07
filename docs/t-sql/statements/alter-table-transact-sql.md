@@ -2,7 +2,7 @@
 description: ALTER TABLE (Transact-SQL)
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/04/2020
+ms.date: 09/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35c55f7a989899e46c1189909fd4d90041ac8165
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 3cef7fd2ddbcc95789ddb8a306538b6dfdaf29c5
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024449"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521189"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -395,9 +395,9 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 <column_constraint>::=
     [ CONSTRAINT constraint_name ] 
     {
-        DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
-        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        DEFAULT constant_expression
+        | PRIMARY KEY NONCLUSTERED (column_name [ ,... n ]) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name [ ,... n ]) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
 {
@@ -632,7 +632,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
 
 レコードが有効になる時間の長さを記録するためにシステムによって使用される列の名前を指定します。 既存の列を指定したり、ADD PERIOD FOR SYSTEM_TIME 引数の一部として新しい列を作成したりできます。 データ型 datetime2 を使って列を設定し、それらを NOT NULL として定義します。 期間列を NULL として定義した場合、エラーが発生します。 system_start_time 列と system_end_time 列の [column_constraint](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) を定義し、[列の既定値を指定する](../../relational-databases/tables/specify-default-values-for-columns.md)ことができます。 system_end_time 列の既定値の使用方法については、後述する「[システムのバージョン管理](#system_versioning)」の例 A を参照してください。
 
-SET SYSTEM_VERSIONING 引数と共にこの引数を使用して、既存のテーブル上でシステムのバージョン管理を有効にします。 詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[Azure SQL Database のテンポラル テーブルの概要](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)」を参照してください。
+SET SYSTEM_VERSIONING 引数と共にこの引数を使用して、既存のテーブル上でシステムのバージョン管理を有効にします。 詳細については、「[テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)」と「[Azure SQL Database のテンポラル テーブルの概要](/azure/azure-sql/temporal-tables)」を参照してください。
 
 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の時点では、ユーザーは一方または両方の期間列を **HIDDEN** フラグを使ってマークし、これらの列を暗黙的に非表示にすることで、**SELECT \* FROM \<table_name>** からその列の値が返されないようにすることが可能です。 既定では、期間の列は非表示ではありません。 非表示の列を使用するためには、テンポラル テーブルを直接参照するすべてのクエリで明示的に含める必要があります。
 
@@ -665,7 +665,7 @@ COLUMN *column_name*
 - ルールにバインドされます。
 
 > [!NOTE]
-> 列を削除しても、列のディスク領域は回収されません。 テーブルの行サイズが制限に近いか制限を超えている場合は、必要に応じて、削除した列のディスク領域を再要求します。 領域を再確保するには、テーブルにクラスター化インデックスを作成するか、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用して既存のクラスター化インデックスを再構築します。 LOB データ型の削除による影響の詳細については、この [CSS ブログ エントリ](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower)を参照してください。
+> 列を削除しても、列のディスク領域は回収されません。 テーブルの行サイズが制限に近いか制限を超えている場合は、必要に応じて、削除した列のディスク領域を再要求します。 領域を再確保するには、テーブルにクラスター化インデックスを作成するか、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用して既存のクラスター化インデックスを再構築します。 LOB データ型の削除による影響の詳細については、この [CSS ブログ エントリ](/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower)を参照してください。
 
 FOR SYSTEM_TIME の期間  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -696,7 +696,7 @@ MAXDOP オプションを使用して、並列プランの実行に使用され�
 詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。
 
 > [!NOTE]
-> 並列インデックス操作は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 詳細については、[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するセクションと [SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するページを参照してください。
+> 並列インデックス操作は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 詳細については、[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2016.md)に関するセクションと [SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するページを参照してください。
 
 ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。 REBUILD は ONLINE 操作として実行できます。
@@ -712,7 +712,7 @@ OFF
 詳細については、「[オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)」を参照してください。
 
 > [!NOTE]
-> オンラインでのインデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 詳細については、[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するセクションと [SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するページを参照してください。
+> オンラインでのインデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 詳細については、[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2016.md)に関するセクションと [SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するページを参照してください。
 
 MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **"** default **"** }  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -808,7 +808,7 @@ SET (DATA_DELETION =
                 )] }   
 **適用対象:** Azure SQL Edge "*のみ*"
 
-データベース内のテーブルの古いデータまたは期限切れのデータに対し、アイテム保持ポリシーを使用したクリーンアップを有効にします。 詳細については、[データ保持の有効化と無効化](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)に関するページを参照してください。 データ保持を有効にするには、次のパラメーターを指定します。 
+データベース内のテーブルの古いデータまたは期限切れのデータに対し、アイテム保持ポリシーを使用したクリーンアップを有効にします。 詳細については、[データ保持の有効化と無効化](/azure/azure-sql-edge/data-retention-enable-disable)に関するページを参照してください。 データ保持を有効にするには、次のパラメーターを指定します。 
 
 - FILTER_COLUMN = { column_name }  
 列を指定します。これは、テーブル内の行が廃止されているかどうかを判断するために使用します。 フィルター列に使用できるデータ型は次のとおりです。
@@ -818,7 +818,7 @@ SET (DATA_DELETION =
   - SmallDateTime
   - DateTimeOffset
 
-- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS }}       
 テーブルの保持期間のポリシーを指定します。 保有期間は、正の整数値と日付部分の単位を組み合わせて指定します。 
 
 SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
@@ -1020,7 +1020,7 @@ ALTER TABLE で指定した変更はすぐに実装されます。 変更でテ�
 
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>オンライン操作としての NOT NULL 列の追加
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 以降では、既定値を持つ NOT NULL 列の追加は、既定値が*ランタイム定数*である場合、オンライン操作です。 つまり、テーブル内の行数に関係なく、操作がほぼ瞬時に完了します。 なぜなら、操作中にテーブル内の既存の行が更新されないためです。 その代わりに、既定値はテーブルのメタデータだけに格納され、これらの列にアクセスするクエリで、必要に応じて、値が検索されます。 この動作は自動的に行われます。 ADD COLUMN 構文以外に、オンライン操作を実装するための追加の構文は必要ありません。 ランタイム定数は、その決定性に関係なく、テーブルの各行に対して実行時に同じ値を生成する式です。 たとえば、定数式 "My temporary data" やシステム関数 GETUTCDATETIME() は、ランタイム定数です。 一方、関数 `NEWID()` や `NEWSEQUENTIALID()` は、テーブルの各行で一意の値が生成されるため、ランタイム定数ではありません。 ランタイム定数ではない既定値を持つ NOT NULL 列の追加は、常にオフラインで実行され、操作中は排他 (SCH-M) ロックが取得されます。
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 以降では、既定値を持つ NOT NULL 列の追加は、既定値が *ランタイム定数* である場合、オンライン操作です。 つまり、テーブル内の行数に関係なく、操作がほぼ瞬時に完了します。 なぜなら、操作中にテーブル内の既存の行が更新されないためです。 その代わりに、既定値はテーブルのメタデータだけに格納され、これらの列にアクセスするクエリで、必要に応じて、値が検索されます。 この動作は自動的に行われます。 ADD COLUMN 構文以外に、オンライン操作を実装するための追加の構文は必要ありません。 ランタイム定数は、その決定性に関係なく、テーブルの各行に対して実行時に同じ値を生成する式です。 たとえば、定数式 "My temporary data" やシステム関数 GETUTCDATETIME() は、ランタイム定数です。 一方、関数 `NEWID()` や `NEWSEQUENTIALID()` は、テーブルの各行で一意の値が生成されるため、ランタイム定数ではありません。 ランタイム定数ではない既定値を持つ NOT NULL 列の追加は、常にオフラインで実行され、操作中は排他 (SCH-M) ロックが取得されます。
 
 既存の行はメタデータに格納された値を参照しますが、新しい行が挿入され、列に別の値が指定されない場合、既定値はその行に格納されます。 メタデータに格納された既定値は、行が更新されるか (UPDATE ステートメントで実際の列が指定されなくても)、テーブルまたはクラスター化インデックスが再構築された場合、既存の行に移動されます。
 
@@ -1110,7 +1110,7 @@ ALTER TABLE 権限は、ALTER TABLE SWITCH ステートメントに含まれる�
 
 ALTER TABLE ステートメント内の任意の列を、共通言語ランタイム (CLR) ユーザー定義型または別名データ型として定義している場合は、その型に対する REFERENCES 権限が必要です。
 
-テーブルの行を更新する列を追加するには、テーブルの **UPDATE** 権限が必要です。 たとえば、既定値を持つ **NOT NULL** 列を追加する場合や、テーブルが空でないときに ID 列を追加する場合です。
+テーブルの行を更新する列を追加または変更するには、テーブルの **UPDATE** 権限が必要です。 たとえば、既定値を持つ **NOT NULL** 列を追加する場合や、テーブルが空でないときに ID 列を追加する場合です。
 
 ## <a name="examples"></a><a name="Example_Top"></a> 使用例
 
@@ -1435,7 +1435,7 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [例](#Example_Top)
+![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [例](#Example_Top)
 
 ### <a name="altering-a-column-definition"></a><a name="alter_column"></a> 列定義を変更する
 

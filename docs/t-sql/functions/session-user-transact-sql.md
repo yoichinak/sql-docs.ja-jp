@@ -24,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b5c75b95d32905e6cd2fa7ff30cb0440cca0dd9
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4de45bdd147626832f932f5bd619c3a89860d68a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688818"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379407"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "90688818"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 SESSION_USER  
 ```  
   
@@ -59,7 +59,7 @@ SESSION_USER
 ### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. SESSION_USER を使用して現在のセッションのユーザー名を返す  
  次の例では、変数を `nchar` 型として宣言し、`SESSION_USER` の現在値をこの変数に割り当てた後、テキストの説明と共にこの変数を出力します。  
   
-```  
+```sql  
 DECLARE @session_usr NCHAR(30);  
 SET @session_usr = SESSION_USER;  
 SELECT 'This session''s current user is: '+ @session_usr;  
@@ -78,7 +78,7 @@ This session's current user is: Surya
 ### <a name="b-using-session_user-with-default-constraints"></a>B. SESSION_USER を DEFAULT 制約と共に使用する  
  次の例では、荷物の受領記録者の名前に対し、`SESSION_USER` を `DEFAULT` 制約として使用するテーブルを作成します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE deliveries3  
@@ -95,7 +95,7 @@ GO
   
  テーブルに追加されたレコードに対して、現在のユーザーのユーザー名が設定されます。 この例では、`Wanida`、`Sylvester`、`Alejandro` が荷物の受領を確認します。 `EXECUTE AS` を使用してユーザー コンテキストを切り替えることでも、同様の機能を実現できます。  
   
-```  
+```sql
 EXECUTE AS USER = 'Wanida'  
 INSERT deliveries3 (cust_id)  
 VALUES (7510);  
@@ -117,7 +117,7 @@ GO
   
  次のクエリでは、`deliveries3` テーブルからすべての情報を選択します。  
   
-```  
+```sql
 SELECT order_id AS 'Order #', cust_id AS 'Customer #',   
    delivery_date AS 'When Delivered', received_shipment   
    AS 'Received By'  
@@ -145,7 +145,7 @@ Order #   Customer #  When Delivered       Received By
 ### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C. SESSION_USER を使用して現在のセッションのユーザー名を返す  
  次の例では、現在のセッションのセッション ユーザーを返します。  
   
-```  
+```sql
 SELECT SESSION_USER;  
 ```  
   

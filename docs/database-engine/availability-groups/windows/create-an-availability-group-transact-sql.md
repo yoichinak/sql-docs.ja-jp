@@ -10,14 +10,14 @@ ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e4a74f95a8fbeab3ca8decce1cc6ab8764b0ea0d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e6235f980627ad56d18330031c3bae6995eb45d2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110988"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584417"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Transact-SQL (T-SQL) を使用した Always On 可用性グループの作成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "91110988"
         GO  
         ```  
   
-    2.  次のコード例では、 *MyDb1* および *MyDb2*データベースの完全バックアップを作成します。 このコード例では、架空のバックアップ共有 \\\\*FILESERVER*\\*SQLbackups*を使用します。  
+    2.  次のコード例では、 *MyDb1* および *MyDb2* データベースの完全バックアップを作成します。 このコード例では、架空のバックアップ共有 \\\\*FILESERVER*\\*SQLbackups* を使用します。  
   
         ```sql  
         -- Backup sample databases:  
@@ -154,7 +154,7 @@ ms.locfileid: "91110988"
   
      2 つのサーバー インスタンスのサービス アカウントが、互いに異なるドメイン ユーザーで実行されている場合、それぞれのサーバー インスタンス上に、相手のサーバー インスタンス用のログインを作成し、このログイン権限に、ローカルのデータベース ミラーリング エンドポイントのアクセス権を付与します。  
   
-     ログインを作成し、エンドポイントの権限を付与するための [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントのコード例を次に示します。 ここでは、リモート サーバー インスタンスのドメイン アカウントを *domain_name*\\*user_name*としています。  
+     ログインを作成し、エンドポイントの権限を付与するための [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントのコード例を次に示します。 ここでは、リモート サーバー インスタンスのドメイン アカウントを *domain_name*\\*user_name* としています。  
   
     ```sql  
     -- If necessary, create a login for the service account, domain_name\user_name  
@@ -171,7 +171,7 @@ ms.locfileid: "91110988"
   
 4.  ユーザー データベースが存在するサーバー インスタンス上に、可用性グループを作成します。  
   
-     次のコード例では、サンプル データベースの *MyDb1* と *MyDb2* を作成したサーバー インスタンス上に、 *MyAG*という名前の可用性グループを作成しています。 最初に、 `AgHostInstance`COMPUTER01 *上のローカル サーバー インスタンス (* ) が指定されています。 初期プライマリ レプリカは、このインスタンスによってホストされます。 リモート サーバー インスタンス ( *COMPUTER02*上の既定のサーバー インスタンス) は、セカンダリ レプリカをホストするように指定されています。 どちらの可用性レプリカも、非同期コミット モードと手動フェールオーバーを使用するように構成します (非同期コミットのレプリカでは、手動フェールオーバーは、データ損失の可能性を伴う強制フェールオーバーを意味します)。  
+     次のコード例では、サンプル データベースの *MyDb1* と *MyDb2* を作成したサーバー インスタンス上に、 *MyAG* という名前の可用性グループを作成しています。 最初に、 `AgHostInstance`COMPUTER01 *上のローカル サーバー インスタンス (* ) が指定されています。 初期プライマリ レプリカは、このインスタンスによってホストされます。 リモート サーバー インスタンス ( *COMPUTER02* 上の既定のサーバー インスタンス) は、セカンダリ レプリカをホストするように指定されています。 どちらの可用性レプリカも、非同期コミット モードと手動フェールオーバーを使用するように構成します (非同期コミットのレプリカでは、手動フェールオーバーは、データ損失の可能性を伴う強制フェールオーバーを意味します)。  
   
     ```sql
     -- Create the availability group, MyAG:   
@@ -501,11 +501,11 @@ GO
   
 -   **ブログ:**  
   
-     [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)  
   
 -   **ビデオ:**  
   
@@ -515,9 +515,9 @@ GO
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -526,5 +526,4 @@ GO
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e59cb5565ca518dc927f29e684401bf8fc6d5822
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418318"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235369"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>SSMA for Sybase コンソールを使用したはじめに (SybaseToSQL)
 このセクションでは、SSMA for Sybase コンソールアプリケーションを起動して作業を開始する手順について説明します。 ここでは、一般的な SSMA コンソールの出力ウィンドウで使用される規則についても説明します。  
@@ -53,7 +53,7 @@ Windows システムでコンソールが正常に起動されたら、次の手
 ## <a name="ssma-console-output-conventions"></a>SSMA コンソールの出力規則  
 SSMA スクリプトコマンドとオプションを実行すると、コンソールプログラムによって、結果とメッセージ (情報やエラーなど) がコンソールに表示されます。また、必要に応じて、xml 出力ファイルにリダイレクトされます。 出力の各種類のメッセージは、一意の色で表されます。 たとえば、ホワイトカラーのテキストメッセージは、スクリプトファイルのコマンドを表します。緑色の色は、ユーザー入力のプロンプトを表します。  
   
-![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
+![SSMA コンソールの Sybase 出力の例を示すスクリーンショット。](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
   
 コンソール出力の色の解釈を次の表に示します。  
   

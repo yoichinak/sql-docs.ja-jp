@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7793983cd46859f71a37984174cd1a3978779273
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2302849edafee15448c3485e967c2e792a8b7984
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987516"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098651"
 ---
 # <a name="ado-md-methods"></a>ADO MD のメソッド
 
-|方法|説明|  
+|メソッド|説明|  
 |-|-|  
 |[閉じる](./close-method-ado-md.md)|開いているセルセットを閉じます。|  
 |[GetSchemaObject](./getschemaobject-method-ado-md.md)|一意の名前で ADO MD スキーマオブジェクト (ディメンション、階層、レベル、またはメンバー) を取得します。|  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8e1e0b55183e2d1a2093d4726abdfd39f55f19ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d27181eac591f6c66166810e9662c04b6b97fc40
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425374"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92196422"
 ---
 # <a name="using-variables-in-the-script-component"></a>スクリプト コンポーネントでの変数の使用
 
@@ -32,7 +32,7 @@ ms.locfileid: "88425374"
 > [!IMPORTANT]  
 >  **ReadWriteVariables** のコレクションは、**PostExecute** メソッド内でのみ、パフォーマンスを最大化し、ロックによる競合のリスクを最小限に抑えるために使用できます。 したがって、データ行を処理するたびにパッケージ変数の値を直接増やすことはできません。 このような場合、ローカル変数の値を増やし、すべてのデータが処理された後で、**PostExecute** メソッド内でパッケージ変数の値をローカル変数の値に設定します。 また、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> プロパティを使用してこの制限を回避できます。この方法については、このトピックの後半で説明します。 ただし、各行が処理されているときにパッケージ変数に直接書き込みを行うと、パフォーマンスに悪影響を与え、ロックによる競合のリスクが増えます。  
   
- **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」および「[スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)」を参照してください。  
+ **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」および「[スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../data-flow/transformations/script-component.md)」を参照してください。  
   
  スクリプト コンポーネントは、**ComponentWrapper** プロジェクト アイテム内に、**Variables** コレクション クラスを作成します。ここには、構成済みの各変数の値に対して、変数自体と同じ名前を持つ、厳密に型指定されたアクセサー プロパティがあります。 このコレクションは、**ScriptMain** クラスの **Variables** プロパティを介して公開されます。 アクセサー プロパティにより、変数の値が読み取り専用か読み取り/書き込み用かが決まります。 たとえば、`MyIntegerVariable` という整数型の変数を **ReadOnlyVariables** 一覧に追加した場合、次のコードを使用して、この値をスクリプト内で取得できます。  
   
@@ -42,6 +42,5 @@ ms.locfileid: "88425374"
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の変数](../../../integration-services/integration-services-ssis-variables.md)   
- [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [パッケージで変数を使用する](../../integration-services-ssis-variables.md)  
   

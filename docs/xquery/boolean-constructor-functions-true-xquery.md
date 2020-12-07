@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3661757a2352c5a4a968e58c8676aec609391652
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8dc3582cb34c80f488005f5a2eaf1c6022c5e1be
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914645"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035795"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>ブール値コンストラクター関数 - true (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>例  
- このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+ このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. XQuery 論理関数 true() の使用  
- 次の例では、型指定されていない**xml**変数をクエリします。 **Value ()** メソッドの式は、"aaa" が属性値の場合にブール値**true ()** を返します。 **Xml**データ型の**value ()** メソッドは、ブール値をビットに変換して返します。  
+ 次の例では、型指定されていない **xml** 変数をクエリします。 **Value ()** メソッドの式は、"aaa" が属性値の場合にブール値**true ()** を返します。 **Xml**データ型の**value ()** メソッドは、ブール値をビットに変換して返します。  
   
 ```  
 DECLARE @x XML  
@@ -48,11 +48,11 @@ go
 -- result = 1  
 ```  
   
- 次の例では、型指定された**xml**列に対してクエリが指定されています。 式は、 `if` <> 要素の型指定されたブール値をチェック `ROOT` し、それに従って構築された XML を返します。 この例では、次の処理を実行します。  
+ 次の例では、型指定された **xml** 列に対してクエリが指定されています。 式は、 `if` <> 要素の型指定されたブール値をチェック `ROOT` し、それに従って構築された XML を返します。 この例では、次の処理を実行します。  
   
 -   Xs: boolean 型の <> 要素を定義する XML スキーマコレクションを作成し `ROOT` ます。  
   
--   XML スキーマコレクションを使用して、型指定された**xml**列を含むテーブルを作成します。  
+-   XML スキーマコレクションを使用して、型指定された **xml** 列を含むテーブルを作成します。  
   
 -   XML インスタンスを列に保存し、クエリを実行します。  
   
@@ -90,6 +90,5 @@ go
 ```  
   
 ## <a name="see-also"></a>参照  
- [ブール型コンストラクター関数 &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
-  
+ [ブール型コンストラクター関数 &#40;XQuery&#41;](./xquery-functions-against-the-xml-data-type.md)  
   

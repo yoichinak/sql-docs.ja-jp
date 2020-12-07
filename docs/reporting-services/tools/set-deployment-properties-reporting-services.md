@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 97a0f7d9bf63bf6ad74b522a42900fc36cfcd429
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512338"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891652"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>配置プロパティを設定する (Reporting Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88512338"
  プロジェクト構成でプロジェクトのプロパティのセットを作成および管理するには、構成マネージャーを使用します。 構成マネージャーは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の基となる [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] によってサポートされる機能です。  
   
 > [!NOTE]  
-> この機能は、インストール後に Reporting Services を構成するために使用する Reporting Services 構成マネージャーと混同しないようにしてください。 詳細については、「[レポート サーバーを構成および管理する](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) &#40;SSRS ネイティブ モード&#41;」を参照してください。  
+> この機能と、インストール後に Reporting Services を構成するために使用するレポート サーバー構成マネージャーとを混同しないようにしてください。 詳細については、「[レポート サーバーを構成および管理する](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) &#40;SSRS ネイティブ モード&#41;」を参照してください。  
 >
 > [!NOTE]  
 > [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]では、Report Server プロジェクトまたはソリューションからレポートをパブリッシュするアクションは、 *レポートの配置*として知られています。  

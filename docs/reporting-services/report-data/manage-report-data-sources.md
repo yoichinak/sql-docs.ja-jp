@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a433169d694f9f2d71a049c906267a64b6c0756
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 85f40936b589ac5a1f90ec47a81756998c5e9db7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458259"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934919"
 ---
 # <a name="manage-report-data-sources"></a>レポート データ ソースを管理する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート、レポート モデル、およびデータ ドリブン サブスクリプションが外部データ ソースからデータを取得します。 レポート サーバーは外部データ ソースに接続するために、レポート、モデル、またはサブスクリプションで定義または参照されているデータ ソース接続情報を使用します。 データ ソース接続プロパティは常に、レポートやモデルの作成時にそれらと共に定義されますが、レポートやモデルをレポート サーバーにパブリッシュした後は、それらとは別に管理できます。  
@@ -62,17 +62,17 @@ ms.locfileid: "86458259"
 |----------|----------|----------|  
 |接続文字列の例を表示する。||[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |データ ソースに接続するための資格情報を取得する方法を選択する。||[レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
-|データ ソース接続プロパティをレポート定義 (.rdl) ファイルに追加する。|レポート デザイナー|[埋め込みデータ ソースまたは共有データ ソースを作成する (SSRS)](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
+|データ ソース接続プロパティをレポート定義 (.rdl) ファイルに追加する。|レポート デザイナー|[埋め込みデータ ソースまたは共有データ ソースを作成する (SSRS)](/previous-versions/sql/)|  
 |共有データ ソース (.rds) ファイルをレポート プロジェクトに追加する/そのファイルへのリンクを設定する。|レポート デザイナー|[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |ユーザーが実行時に選択できるデータ ソースの定義済み一覧を作成する。 ユーザーがレポートを要求すると、データ ソースの一覧が表示されます。 ユーザーは、レポートを実行する前に、使用するデータ ソースを選択する必要があります。 レポートにデータ ソース選択一覧を追加するには式を使用します。<br /><br /> これは、動的データ ソース接続と呼ばれます。|レポート デザイナー|[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |レポート サーバー上の共有データ ソース アイテムを作成する。|[共有データ ソースを作成、変更、および削除する](create-modify-and-delete-shared-data-sources-ssrs.md) |  
 |サブスクリプションやレポート スナップショットを作成するために必要な資格情報を格納する。|Web ポータル|[Reporting Services データ ソースに資格情報を保存する](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
 |パブリッシュされたレポートのデータ ソース接続プロパティを編集する。|Web ポータル|[レポートのデータ ソースのプロパティを構成する](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
-|レポート サーバー上の共有データ ソース アイテムを作成する。|SharePoint サイト|[共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
+|レポート サーバー上の共有データ ソース アイテムを作成する。|SharePoint サイト|[共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](/previous-versions/sql/)|  
 |既存の .odc 接続情報をレポートで使用する。|SharePoint サイト|[レポートで Office Data Connection &#40;.odc&#41; を使用する &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
->  レポート データ ソースへのデータ ソース接続の管理と、レポート サーバー データベースへのレポート サーバー接続の管理は異なります。 内部データ ストアへのレポート サーバーの接続の詳細については、「[レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
+>  レポート データ ソースへのデータ ソース接続の管理と、レポート サーバー データベースへのレポート サーバー接続の管理は異なります。 内部データ ストアへのレポート サーバーの接続に関する詳細については、「[レポート サーバー データベース接続の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポートまたはモデルを共有データ ソースにバインドする (SSRS)](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
@@ -80,5 +80,4 @@ ms.locfileid: "86458259"
  [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
-  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b66ae216df1b50ee1fa71de8e18f7ee8251e1be4
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 86bc7c0352e7bf2447628a143a5c1732b132a412
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547874"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891372"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 機能の有効化と無効化
   運用レポート サーバーに対する外部からの攻撃の危険性を低減するためのロックダウン ストラテジには含まれないレポート サーバー機能を無効にできます。 ほとんどの場合は、複数の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能を同時に実行して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供される機能をすべて利用します。 ただし、配置モデルによっては、不要な機能を無効にすることができます。 たとえば、すべてのレポート処理をスケジュールに従って実行するように構成すると、バックグラウンド処理だけを有効にすることもできます。 同様に、対話型の要求時レポートだけが必要な場合は、レポート サーバー Web サービスだけを実行することもできます。  
@@ -116,7 +116,7 @@ SQL Server 2016 Reporting Services 累積的更新プログラム 2 より、Web
 4.  **[OK]** を選択します。  
   
 ## <a name="see-also"></a>関連項目  
-[Reporting Services Configuration Manager (ネイティブ モード)](../install-windows/reporting-services-configuration-manager-native-mode.md)
+[レポート サーバー構成マネージャー (ネイティブ モード)](../install-windows/reporting-services-configuration-manager-native-mode.md)
 
  その他の質問 [Reporting Services のフォーラムにアクセスします](https://go.microsoft.com/fwlink/?LinkId=620231)
   

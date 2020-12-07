@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88325843"
 ---
 # <a name="sequence-properties-general-page"></a>[順序のプロパティ]\([全般] ページ)
@@ -87,7 +87,7 @@ ms.locfileid: "88325843"
  CREATE SEQUENCE のオプションの詳細については、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
- SCHEMA に対する **CREATE SEQUENCE**権限、 **ALTER**権限、または **CONTROL** 権限が必要です。  
+ SCHEMA に対する **CREATE SEQUENCE** 権限、 **ALTER** 権限、または **CONTROL** 権限が必要です。  
   
 ## <a name="see-also"></a>関連項目  
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  

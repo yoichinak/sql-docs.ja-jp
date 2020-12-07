@@ -1,6 +1,6 @@
 ---
 title: MSSQLSERVER_233 | Microsoft Docs
-description: SQL Server クライアントがサーバーに接続できません。 エラーの説明と、考えられる解決策をご確認ください。
+description: SQL Server クライアントがサーバーに接続できません。 エラー 233 の説明と、考えられる解決策をご確認ください。
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201665dc-7ac8-4c19-90d3-33354c5caa72
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87c312289b9a2a8ed7e0ae9d97a4993121772721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf1a3e2f94c221caa4b70105aaccc331c6082b97
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780465"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521073"
 ---
 # <a name="mssqlserver_233"></a>MSSQLSERVER_233
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -15,12 +15,12 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4436f28610b465b896db8c269da3677af60c20a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac7f7f4a1bef87ed823a9db953281ee3e2682bbf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465285"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867630"
 ---
 # <a name="retrieve-rows-using-bookmarks-native-client-ole-db-provider"></a>ブックマークを使用して行を取得する (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88465285"
   コンシューマーは、バインド構造体の **dwFlag** フィールド値に DBCOLUMNSINFO_ISBOOKMARK を設定して、その列がブックマークに使用されることを示します。 また、コンシューマーは行セット プロパティ DBPROP_BOOKMARKS に VARIANT_TRUE を設定します。 これによって、列 0 を行セットに入れることができます。 次に **IRowsetLocate::GetRowsAt** メソッドが使用され、ブックマークからのオフセットで指定される行から始まる行が取り出されます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>ブックマークを使用して行を取得するには  
   
@@ -385,5 +385,4 @@ int ProcessResultSet() {
    return 0;  
 }  
 ```  
-  
   

@@ -10,19 +10,18 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 08/06/2020
-ms.openlocfilehash: 9a3b653a0e82eed4bffdf88461474a999eef152d
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: ba4b1362a3f435617f36c75fbcf0e8371169f990
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714180"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005156"
 ---
 # <a name="how-to-enable-the-tcp-protocol"></a>TCP プロトコルを有効化する方法
 
 ## <a name="how-to-enable-the-tcp-protocol-when-connected-to-the-console-with-sqlps"></a>SQLPS を使用してコンソールに接続するとき、TCP プロトコルを有効にする方法
 
-> [!Note]
-> **SQLPS** モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **[SqlServer](sql-server-powershell.md)** モジュールです。
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 1. コマンド プロンプトを開いて、次のように入力します。
 
@@ -92,10 +91,6 @@ ms.locfileid: "88714180"
 
     Restart-Service -Name MSSQLSERVER -Force
     ```
-
-
-
-
 
 ## <a name="next-steps"></a>次のステップ
 

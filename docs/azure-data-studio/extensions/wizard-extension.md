@@ -3,24 +3,24 @@ title: ウィザード拡張機能を作成する
 description: このチュートリアルでは、カスタム機能を Azure Data Studio に追加するウィザード拡張機能を作成する方法について説明します。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
-ms.topic: how-to
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 1ae3fe6606c926fedf7ff8c60a729c17d70b96be
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288144"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364059"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Azure Data Studio のウィザード拡張機能を作成する
 
 このチュートリアルでは、新しい **Azure Data Studio のウィザード拡張機能**を作成する方法について説明します。 この拡張機能は、Azure Data Studio でのウィザードとユーザーのやりとりに役立ちます。
 
-このチュートリアルでは、次の方法を学習します。
+この記事では、次の方法について説明します。
 > [!div class="checklist"]
 > - 拡張機能ジェネレーターをインストールする
 > - 拡張機能を作成する

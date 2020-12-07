@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: a9e762c88291deb0643acef0db3bfc7c4e79e8a1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227225"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124415"
 ---
 # <a name="expressions-transact-sql"></a>式 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "91227225"
   
  C や [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] などのプログラミング言語の場合、式は常に単一の結果に評価されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 選択リスト内の式の場合は、この規則の限りではありません。式は、結果セット内の各行に対して個別に評価されます。 1 つの式が結果セット内の各行でそれぞれ異なる値をとることもあります。ただし、各行の値は式に対して 1 つだけです。 たとえば、次の `SELECT` ステートメントにおいて、選択リスト内の `ProductID` への参照と `1+2` の項は両方とも式です。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, 1+2  

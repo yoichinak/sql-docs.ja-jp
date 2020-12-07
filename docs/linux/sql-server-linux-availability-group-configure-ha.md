@@ -1,21 +1,21 @@
 ---
 title: SQL Server on Linux の可用性グループを構成する
 description: Linux で高可用性を実現するために SQL Server の Always On 可用性グループ (AG) を作成する方法について説明します。
-author: MikeRayMSFT
+author: VanMSFT
 ms.custom: seo-lt-2019
-ms.author: mikeray
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d15d295b36ae14e81a3e39272e1c3af71cb51d2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892308"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115940"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux で高可用性を実現するために SQL Server の Always On 可用性グループを構成する
 
@@ -80,7 +80,7 @@ ms.locfileid: "85892308"
 >[!NOTE]
 >可用性グループには、追加の同期または非同期レプリカを含めることができます。 
 
-Linux で高可用性のための AG を作成します。 `CLUSTER_TYPE = EXTERNAL` を指定した [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql) を使います。 
+Linux で高可用性のための AG を作成します。 `CLUSTER_TYPE = EXTERNAL` を指定した [CREATE AVAILABILITY GROUP](../t-sql/statements/create-availability-group-transact-sql.md) を使います。 
 
 * 可用性グループ - `CLUSTER_TYPE = EXTERNAL`: 外部クラスター エンティティにより AG が管理されることを指定します。 Pacemaker は外部クラスター エンティティの例です。 AG のクラスターの種類が外部である場合は、 
 

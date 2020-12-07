@@ -14,15 +14,15 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445870"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>リテラル日付文字列を DATE 値に非決定論的に変換する
 
-CHARACTER 文字列を DATE データ型に変換することを許可するときは注意が必要です。 このような変換はしばしば_非決定論的_であるためです。
+CHARACTER 文字列を DATE データ型に変換することを許可するときは注意が必要です。 このような変換はしばしば _非決定論的_ であるためです。
 
 このような非決定論的な変換は [SET LANGUAGE](../statements/set-language-transact-sql.md) と [SET DATEFORMAT](../statements/set-dateformat-transact-sql.md) の設定を考慮することで制御します。
 
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-***/
+**_/
 ```
 
 
@@ -69,9 +69,9 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-上記の **dmy** 形式によると、'01-03-2018' というサンプル日付文字列は _2018 年 3 月の最初の日_として解釈されます。
+上記の _ *dmy** 形式では、'01-03-2018' という日付文字列の例は "_2018 年 3 月の最初の日_" として解釈されます。
 
-代わりに **mdy** が指定された場合、同じ文字列 '01-03-2018' は _2018 年 1 月の 3 番目の日_として解釈されます。
+代わりに **mdy** が指定された場合、同じ文字列 '01-03-2018' は _2018 年 1 月の 3 番目の日_ として解釈されます。
 
 また、**ymd** が指定された場合、何が出力されるかはわかりません。 "2018" という数値は日としては大きすぎる数字です。
 <!--
@@ -80,7 +80,7 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 #### <a name="specific-countries"></a>特定の国
 
-日本と中国では、DATEFORMAT に **ymd** が使用されます。 この形式の各部分は、最も大きいユニットから最も小さいユニットへという理にかなった順序になっています。 結果的に、このフォーマットは効果的に並べ替えられます。 この形式は_国際式_と見なされています。 国際式と見なされるのは、4 桁は年度であることがはっきりしており、**ydm** という古式を使用している国はないからです。
+日本と中国では、DATEFORMAT に **ymd** が使用されます。 この形式の各部分は、最も大きいユニットから最も小さいユニットへという理にかなった順序になっています。 結果的に、このフォーマットは効果的に並べ替えられます。 この形式は _国際式_ と見なされています。 国際式と見なされるのは、4 桁は年度であることがはっきりしており、**ydm** という古式を使用している国はないからです。
 
 ドイツやフランスなど、その他の国では、DATEFORMAT は **dmy** です。これは **'dd-mm-yyyy'** を意味します。 **dmy** 書式は並べ替えが効果的ではありませんが、最も小さいユニットから最も大きいユニットへとなっており、順序としては理にかなっています。
 
@@ -115,14 +115,14 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-***/
+**_/
 ```
 
-上のコード例の最後の例では、**ymd** 形式と入力文字列が一致していません。 入力文字列の 3 番目のノードは数値ですが、日としては大きすぎます。 Microsoft は、このような不一致から値が出力されることは保証しません。
+上のコード例の最後の例では、_ *ymd** 形式と入力文字列が一致していません。 入力文字列の 3 番目のノードは数値ですが、日としては大きすぎます。 Microsoft は、このような不一致から値が出力されることは保証しません。
 
-#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT からは、日付書式を_決定的に_制御するための明示的コードが与えられます。
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT からは、日付書式を _決定的に_ 制御するための明示的コードが与えられます。
 
-CAST と CONVERT に関する Microsoft のドキュメント記事には、CONVERT 関数と併用し、日付変換を_決定的に_制御できる明示的コードの一覧があります。 この記事は毎月、飛び抜けて高い閲覧数を記録します。
+CAST と CONVERT に関する Microsoft のドキュメント記事には、CONVERT 関数と併用し、日付変換を _決定的に_ 制御できる明示的コードの一覧があります。 この記事は毎月、飛び抜けて高い閲覧数を記録します。
 
 - [CAST と CONVERT (Transact-SQL): 日付と時刻のスタイル](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
 - [CAST と CONVERT (Transact-SQL): 一部の datetime 変換が非決定論的である](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)

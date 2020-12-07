@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2f640415ecdc2ae4a48220aeec2a2c78ed79807c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18d4e9c18c4848a0857c1afb146b0d0405f418ce
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488553"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956563"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW のインストールと構成
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 WideWorldImportersDW データベースのインストールと構成の手順。
 
-- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 このサンプルの完全バージョンを使用するには、SQL Server Evaluation/Developer/Enterprise Edition を使用します。
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 このサンプルの完全バージョンを使用するには、SQL Server Evaluation/Developer/Enterprise Edition を使用します。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 最良の結果を得るには、2016年6月リリース以降を使用します。
 
 ## <a name="download"></a>ダウンロード
@@ -45,23 +45,23 @@ SQL Server または Azure SQL Database のエディションに対応するサ�
 バックアップを SQL Server インスタンスに復元するには、Management Studio を使用できます。
 
 1. SQL Server Management Studio を開き、ターゲットの SQL Server インスタンスに接続します。
-2. [**データベース**] ノードを右クリックし、[**データベースの復元**] を選択します。
+2. [ **データベース** ] ノードを右クリックし、[ **データベースの復元**] を選択します。
 3. [**デバイス**] を選択し、[.. **.** ] ボタンをクリックします。
-4. ダイアログで [**バックアップデバイスの選択**] をクリックし、[**追加**] をクリックして、サーバーのファイルシステム内のデータベースバックアップに移動し、バックアップを選択します。 **[OK]** をクリックします。
-5. 必要に応じて、[**ファイル**] ウィンドウでデータファイルとログファイルのターゲットの場所を変更します。 データファイルとログファイルは別のドライブに配置することをお勧めします。
+4. ダイアログで [ **バックアップデバイスの選択**] をクリックし、[ **追加**] をクリックして、サーバーのファイルシステム内のデータベースバックアップに移動し、バックアップを選択します。 **[OK]** をクリックします。
+5. 必要に応じて、[ **ファイル** ] ウィンドウでデータファイルとログファイルのターゲットの場所を変更します。 データファイルとログファイルは別のドライブに配置することをお勧めします。
 6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了すると、SQL Server インスタンスにデータベース WideWorldImporters がインストールされます。
 
 ### <a name="azure-sql-database"></a>Azure SQL データベース
 
 Bacpac を新しい SQL Database にインポートするには、Management Studio を使用できます。
 
-1. optionalまだ Azure に SQL Server がない場合は、 [Azure portal](https://portal.azure.com/)に移動し、新しい SQL Database を作成します。 データベースを作成するプロセスでは、サーバーを作成します。 サーバーをメモしておきます。
-   - [このチュートリアル](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)を参照して、データベースを数分で作成してください
+1. optionalまだ Azure に SQL Server がない場合は、 [Azure portal](https://portal.azure.com/) に移動し、新しい SQL Database を作成します。 データベースを作成するプロセスでは、サーバーを作成します。 サーバーをメモしておきます。
+   - [このチュートリアル](/azure/azure-sql/database/single-database-create-quickstart)を参照して、データベースを数分で作成してください
 2. SQL Server Management Studio を開き、Azure のサーバーに接続します。
-3. [**データベース**] ノードを右クリックし、[**データ層アプリケーションのインポート**] をクリックします。
-4. [**インポートの設定**] で、[**ローカルディスクからインポート**する] を選択し、ファイルシステムからサンプルデータベースの bacpac を選択します。
-5. [**データベースの設定**] で、データベース名を*WideWorldImportersDW*に変更し、使用するターゲットエディションとサービス目標を選択します。
-6. [**次へ** **] をクリックして、** 展開を開始します。 この処理は完了までに数分かかります。 S2 より低いサービス目標を指定すると、時間がかかることがあります。
+3. [ **データベース** ] ノードを右クリックし、[ **Data-Tier アプリケーションのインポート**] を選択します。
+4. [ **インポートの設定** ] で、[ **ローカルディスクからインポート** する] を選択し、ファイルシステムからサンプルデータベースの bacpac を選択します。
+5. [ **データベースの設定** ] で、データベース名を *WideWorldImportersDW* に変更し、使用するターゲットエディションとサービス目標を選択します。
+6. [ **次へ** **] をクリックして、** 展開を開始します。 この処理は完了までに数分かかります。 S2 より低いサービス目標を指定すると、時間がかかることがあります。
 
 ## <a name="configuration"></a>構成
 

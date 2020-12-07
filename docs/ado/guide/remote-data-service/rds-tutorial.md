@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0781d75d20254582a3a887cf92a54c8e32848289
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 70f91e85010abb784291c3c9eca52b9a74ed6286
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977833"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721393"
 ---
 # <a name="rds-tutorial"></a>RDS チュートリアル
 このチュートリアルでは、RDS プログラミングモデルを使用してデータソースを照会および更新する方法について説明します。 まず、このタスクを実行するために必要な手順について説明します。 このチュートリアルは、Microsoft® Visual Basic Scripting Edition (Windows Foundation クラス (ADO/WFC) 用の ADO を使用) で繰り返されています。  
@@ -30,7 +30,7 @@ ms.locfileid: "88977833"
 -   特定の RDS 機能が不明で、別の言語が少しわからない場合は、別の言語で表現された同じ機能を検索することで、質問を解決できる可能性があります。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
 ## <a name="how-the-tutorial-is-presented"></a>チュートリアルの表示方法  
  このチュートリアルは、RDS プログラミングモデルに基づいています。 プログラミングモデルの各ステップについて個別に説明します。 また、Visual Basic コードのフラグメントを使用した各手順についても説明します。  

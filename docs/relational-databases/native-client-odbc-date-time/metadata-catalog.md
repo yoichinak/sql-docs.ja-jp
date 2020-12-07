@@ -15,19 +15,19 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d48f89b3de07a8350217aa6dee79cfab3e32fa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c51864905542e420b8764a95b2c0fdcb59672576
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420606"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868360"
 ---
 # <a name="metadata---catalog"></a>メタデータ - カタログ
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、 **Sqlcolumns** と **SQLProcedureColumns**によって返される列のメタデータと、 **SQLGetTypeInfo**によって返されるデータ型のメタデータについて説明します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の列の値は、 **Sqlcolumns** および **SQLProcedureColumns**によって日付/時刻型に対して返されます。  
   
 |パラメーターの型|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
@@ -54,7 +54,7 @@ ms.locfileid: "88420606"
 |CREATE_PARAMS|NULL|scale|NULL|NULL|scale|scale|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|検索可能|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
+|SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -68,6 +68,5 @@ ms.locfileid: "88420606"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;メタデータ ](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
-  
+ [ODBC&#41;&#40;メタデータ ](./date-and-time-improvements-odbc.md)  
   

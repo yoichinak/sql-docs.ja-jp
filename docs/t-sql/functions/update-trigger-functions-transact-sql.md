@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e9764fc038eba85f9f31a68bd101c2f079d75069
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05820d6b375329e3746cfb4ea64ba05d64dc3cf3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479547"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379437"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - トリガー関数 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,8 +42,7 @@ ms.locfileid: "88479547"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
-  
+```syntaxsql
 UPDATE ( column )   
 ```  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb6981b3396afdc387693c7ae89430179a6d68b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b41e35d48f6add25f4ff8c535fb7e96ed7afe67f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492655"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935425"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>レポート サーバーで Windows 認証を構成する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、既定では、ネゴシエート認証または NTLM 認証を指定する要求を受け入れます。 これらのセキュリティ プロバイダーを使用するクライアント アプリケーションおよびブラウザーが配置に含まれている場合は、追加の構成なしで既定値を使用できます。 Windows 統合セキュリティの別のセキュリティ プロバイダーを使用する場合 (たとえば Kerberos を直接使用する場合)、または既定値を変更した後に元の設定を復元する場合は、このトピックの情報を使用して、レポート サーバーで認証設定を指定できます。  
@@ -131,7 +131,7 @@ ms.locfileid: "88492655"
   
 -   ドメイン ユーザー アカウントでレポート サーバー サービスの SPN を登録します。 詳細については、「[レポート サーバーのサービス プリンシパル名 &#40;SPN&#41; の登録](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)」を参照してください。  
   
--   ネットワーク サービスなどのビルトイン アカウントで実行されるように、サービス アカウントを変更します。 ビルトイン アカウントは、HTTP SPN を Host SPN にマップします。これは、コンピューターをネットワークに追加するときに定義されます。 詳細については、「[サービス アカウントの構成 (SSRS 構成マネージャー)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。
+-   ネットワーク サービスなどのビルトイン アカウントで実行されるように、サービス アカウントを変更します。 ビルトイン アカウントは、HTTP SPN を Host SPN にマップします。これは、コンピューターをネットワークに追加するときに定義されます。 詳細については、[サービス アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md) に関する記事を参照してください。
   
 -   NTLM を使用します。 NTLM は一般に、Kerberos 認証が失敗した場合に機能します。 NTLM を使用するには、RSReportServer.config ファイルから **RSWindowsNegotiate** を削除し、 **RSWindowsNTLM** のみが指定されていることを確認します。 この方法を選択すれば、SPN を定義していないドメイン ユーザー アカウントでも、引き続きレポート サーバー サービスに使用できます。  
   

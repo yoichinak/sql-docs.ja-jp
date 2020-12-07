@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9d710ef77a7555d4e9bbe16157469ceaa4b74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a268ef27e1f2e5337e2325fb464656e255b454c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480614"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005842"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する方法
 
@@ -34,7 +34,7 @@ ms.locfileid: "88480614"
 
 ## <a name="edit-in-your-browser"></a><a id="githubui"></a> ブラウザーで編集する
 
-お使いのブラウザーで SQL Server のコンテンツに簡単な編集を加え、Microsoft に送信することができます。 詳細については、[Microsoft Docs 共同作成者ガイドの概要](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)のページを参照してください。 
+お使いのブラウザーで SQL Server のコンテンツに簡単な編集を加え、Microsoft に送信することができます。 詳細については、[Microsoft Docs 共同作成者ガイドの概要](/contribute/#quick-edits-to-existing-documents)のページを参照してください。 
 
 次の手順は、このプロセスをまとめたものです。 
 
@@ -59,10 +59,10 @@ ms.locfileid: "88480614"
 
 この方法で投稿する場合は、次の記事を参照してください。
 
-- [GitHub アカウントを作成する](https://docs.microsoft.com/contribute/get-started-setup-github)
-- [コンテンツ オーサリング ツールをインストールする](https://docs.microsoft.com/contribute/get-started-setup-tools)
-- [Git リポジトリをローカルに設定する](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [ツールを使って投稿する](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
+- [GitHub アカウントを作成する](/contribute/get-started-setup-github)
+- [コンテンツ オーサリング ツールをインストールする](/contribute/get-started-setup-tools)
+- [Git リポジトリをローカルに設定する](/contribute/get-started-setup-local)
+- [ツールを使って投稿する](/contribute/how-to-write-workflows-major)
 
 ドキュメントを大幅に変更する pull request を送信する場合は、オンライン**貢献者使用許諾契約書 (CLA)** の提出を求める GitHub のコメントを受け取ります。 オンライン フォームを提出してからでないと、pull request は受け付けられません。
 
@@ -107,13 +107,13 @@ SQL Server の各記事には、タイトルの後に **applies-to** インク�
 - 一般的に使用されるインクルードの一覧は、[SQL Server のバージョンと applies-to インクルード ファイル](applies-to-includes.md)に関するページを参照してください。
 - 同じ機能または関連タスクをカバーしている他の記事を探します。 その記事を編集する場合は、applies-to インクルード リンクの Markdown をコピーできます (送信しないで編集をキャンセルできます)。
 - [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) ディレクトリで、"applies-to" というテキストを含むファイルを探します。 GitHub の **[Find]** ボタンを使ってすばやくフィルター処理できます。 ファイルをクリックして、どのようにレンダリングされるかを確認します。
-- 名前付けの規則に注意してください。 名前に "x" が含まれる場合は、通常、サービスのサポートがないことを示すプレースホルダーです。 たとえば、**appliesto-xx-xxxx-asdw-xxx-md.md** は、**asdw** だけが明示され、他のフィールドは "x" になっているので、Azure SQL Data Warehouse のみのサポートであることを示します。
+- 名前付けの規則に注意してください。 名前に "x" が含まれる場合は、通常、サービスのサポートがないことを示すプレースホルダーです。 たとえば、**appliesto-xx-xxxx-asdw-xxx-md.md** は、**asdw** だけが明示され、他のフィールドは "x" になっているので、Azure Synapse Analytics のみのサポートであることを示しています。
 - **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md** のようにバージョン番号が指定されていることもあります。 SQL Server の特定のバージョンで機能が導入されたことがわかっている場合は、そのインクルードだけを使ってください。
 
 ## <a name="contributor-resources"></a>共同作成者のリソース
 
-- [docs.microsoft.com の共同作成者ガイド](https://docs.microsoft.com/contribute/)
-- [Microsoft スタイル ガイド](https://docs.microsoft.com/teamblog/style-guide)
+- [docs.microsoft.com の共同作成者ガイド](/contribute/)
+- [Microsoft スタイル ガイド](/teamblog/style-guide)
 - [Markdown の基礎](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

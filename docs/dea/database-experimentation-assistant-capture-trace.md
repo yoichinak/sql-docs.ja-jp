@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951537"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636102"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Database Experimentation Assistant でトレースをキャプチャする
 
@@ -29,11 +29,11 @@ SQL Server のクエリキャッシュは、評価結果に影響を与える可
 
 ## <a name="configure-a-trace-capture"></a>トレースキャプチャの構成
 
-1. DEA の左側のナビゲーションバーで、カメラアイコンを選択し、[**すべてのキャプチャ**] ページで [**新しいキャプチャ**] を選択します。
+1. DEA の左側のナビゲーションバーで、カメラアイコンを選択し、[ **すべてのキャプチャ** ] ページで [ **新しいキャプチャ**] を選択します。
 
     ![DEA でキャプチャを作成する](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
-2. [**新しいキャプチャ**] ページの [**キャプチャの詳細**] で、次の情報を入力または選択します。
+2. [ **新しいキャプチャ** ] ページの [ **キャプチャの詳細**] で、次の情報を入力または選択します。
 
     - **キャプチャ名**: キャプチャのトレースファイルの名前を入力します。
     - **形式**: キャプチャの形式 (Trace または xevent) を指定します。
@@ -45,28 +45,28 @@ SQL Server のクエリキャッシュは、評価結果に影響を与える可
 
 3. **[はい、手動でバックアップ**を作成しました] を選択してバックアップを実行したことを確認します。 チェック ボックスをオンにします。
 
-4. [**キャプチャの詳細**] で、次の情報を入力または選択します。
+4. [ **キャプチャの詳細**] で、次の情報を入力または選択します。
 
     - [**サーバーの種類**]: SQL server の種類 (**SqlServer**、 **AzureSqlDb**、 **AzureSqlManagedInstance**) を指定します。
     - **サーバー名**: SQL Server のサーバー名または IP アドレスを指定します。
     - **認証の種類**: [認証の種類] で [ **Windows**] を選択します。
     - **データベース名**: データベーストレースを開始するデータベースの名前を入力します。 データベースを指定しない場合は、サーバー上のすべてのデータベースでトレースがキャプチャされます。
 
-5. シナリオに応じて、[**接続を暗号化**し、**サーバー証明書を信頼**する] チェックボックスをオンまたはオフにします。
+5. シナリオに応じて、[ **接続を暗号化** し、 **サーバー証明書を信頼** する] チェックボックスをオンまたはオフにします。
 
     ![新しいキャプチャページ](./media/database-experimentation-assistant-capture-trace/dea-new-capture.png)
 
 ## <a name="start-the-trace-capture"></a>トレースキャプチャを開始する
 
-1. 必要な情報を入力または選択したら、[**開始**] を選択してトレースキャプチャを開始します。
+1. 必要な情報を入力または選択したら、[ **開始** ] を選択してトレースキャプチャを開始します。
 
-    入力した情報が有効な場合は、トレースキャプチャプロセスが開始されます。 そうしないと、無効なエントリを含むテキストボックスが赤色で強調表示されます。 エラーが発生した場合は、必要なエントリを修正し、[**開始**] を再度選択します。
+    入力した情報が有効な場合は、トレースキャプチャプロセスが開始されます。 そうしないと、無効なエントリを含むテキストボックスが赤色で強調表示されます。 エラーが発生した場合は、必要なエントリを修正し、[ **開始** ] を再度選択します。
 
-    トレースキャプチャが実行されている間、[**キャプチャの詳細**] の下にトレースキャプチャプロセスの状態と進行状況が表示されます。
+    トレースキャプチャが実行されている間、[ **キャプチャの詳細**] の下にトレースキャプチャプロセスの状態と進行状況が表示されます。
 
     ![キャプチャの進行状況の監視](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
 
-2. トレースキャプチャの実行が完了すると、新しいトレース (.trc) ファイルが、初期構成中に指定した**キャプチャ場所**に保存されます。
+2. トレースキャプチャの実行が完了すると、新しいトレース (.trc) ファイルが、初期構成中に指定した **キャプチャ場所** に保存されます。
 
     ![完了したトレースキャプチャ](./media/database-experimentation-assistant-capture-trace/dea-capture-complete.png)
 
@@ -133,19 +133,19 @@ DEA を使用すると、サーバー内のすべてのデータベースまた�
 
 - SQL Server を実行しているコンピューターの名前が有効です。 確認するには、SQL Server Management Studio (SSMS) を使用して SQL Server を実行しているコンピューターに接続します。
 - ファイアウォールの構成により、SQL Server を実行しているコンピューターへの接続がブロックされることはありません。
-- ユーザーには、[再生 FAQ](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)に記載されているアクセス許可があります。
+- ユーザーには、 [再生 FAQ](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)に記載されているアクセス許可があります。
 - トレース名は、標準のロールオーバー規則 (Capture 1) に従っていません \_ 。 代わりに、Capture 1a や Capture1 などのトレース名を試してください \_ 。
 
 表示される可能性のあるエラーとその解決策を次に示します。
 
-|考えられるエラー|解決策|  
+|考えられるエラー|ソリューション|  
 |---|---|  
 |ターゲット SQL Server でトレースを開始できません。必要なアクセス許可があるかどうか、および指定されたトレースファイルパスに対する書き込みアクセス権が SQL Server アカウントにあるかどうかを確認してください。 Sql エラーコード (53)|DEA ツールを実行するユーザーは、SQL Server を実行しているコンピューターにアクセスできる必要があります。 ユーザーに sysadmin ロールが割り当てられている必要があります。|  
 |ターゲット SQL Server でトレースを開始できません。必要なアクセス許可があるかどうか、および指定されたトレースファイルパスに対する書き込みアクセス権が SQL Server アカウントにあるかどうかを確認してください。 Sql エラーコード (19062)|指定されたトレースパスが存在しないか、フォルダーに SQL Server サービスを実行しているアカウント (NETWORK SERVICE など) に対する書き込みアクセス許可がありません。 パスが存在し、トレースを開始するために必要なアクセス許可を持っている必要があります。|  
 |現在、DEA トレースが対象サーバーで実行されています。|アクティブなトレースは、既に対象サーバーで実行されています。 サーバー全体のトレースが既に実行されている場合、新しいトレースを開始することはできません。|  
 |キャプチャトレース用に要求されたデータベースを開くことができません。 このエラーは、データベース名が正しくないことが原因である可能性があります。|指定されたデータベースが存在しないか、現在のユーザーがアクセスできません。 正しいデータベース名を使用してください。|  
 
-*Sql エラーコード*というラベルの他のエラーが表示された場合は、詳細な説明について[データベースエンジンエラー](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors)を参照してください。
+*Sql エラーコード*というラベルの他のエラーが表示された場合は、詳細な説明について[データベースエンジンエラー](../relational-databases/errors-events/database-engine-events-and-errors.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 15130a351548ab5ad1d21ef2142b5b8c68db11b8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435207"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081871"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ PDOStatement オブジェクトを閉じるには、`unset` を呼び出しま�
 unset($stmt);
 ```
 
-## <a name="example"></a>例
+## <a name="forward-only-example"></a>順方向専用の例
 この例では、パラメーター マーカーと順方向専用カーソルで PDO::prepare を使用する方法を示します。
 
 ```
@@ -100,7 +100,7 @@ unset($stmt);
 ?>
 ```
 
-## <a name="example"></a>例
+## <a name="static-cursor-example"></a>静的カーソルの例
 この例では、サーバー側の静的カーソルで PDO::prepare を使用する方法を示します。 クライアント側カーソルの例については、「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。
 
 ```
@@ -140,7 +140,7 @@ print_r($row);
 ?>
 ```
 
-## <a name="example"></a>例
+## <a name="targeted-example"></a>ターゲットの例
 次の 2 つのスニペットでは、CHAR/VARCHAR 列のターゲットとなるデータに PDO::prepare を使用する方法を示しています。 PDO::prepare の既定のエンコードは UTF-8 なので、ユーザーはオプション `PDO::SQLSRV_ENCODING_SYSTEM` を使用して、暗黙的な変換を回避できます。
 
 **方法 1**
@@ -169,7 +169,7 @@ $statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCO
 
 <a name="emulate-prepare" />
 
-## <a name="example"></a>例
+## <a name="prepare-example"></a>準備の例
 
 この例では、`PDO::ATTR_EMULATE_PREPARES` を true に設定して PDO::prepare を使用する方法を示します。
 

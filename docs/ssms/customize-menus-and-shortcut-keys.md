@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0cc9ba049ab56b65165fd1ba016ecd913df49a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 242dc262053aefe5a95e6e65d99ae98965491e55
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480224"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034925"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>メニューとショートカット キーのカスタマイズ
 
@@ -163,5 +163,4 @@ Ctrl キーを使用したストアド プロシージャのキーボード シ�
 > 関連する内容が [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で表示されている場合にしか使用できないコマンドもあります。 メニューに使用できるコマンドが存在しない場合、メニュー項目は使用できません。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server Management Studio の機能](../ssms/features-in-sql-server-management-studio.md)  
-  
+[SQL Server Management Studio の機能](./sql-server-management-studio-ssms.md)  

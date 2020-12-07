@@ -13,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 195390d76716bcad18df884491fa07335c70665b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15986ee3b8407a62fc4ed40a49c043921fe34588
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88306632"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92035854"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>レッスン 2: データベース オブジェクトに対するアクセス許可の構成
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "88306632"
 ## <a name="prerequisites"></a>前提条件
 このチュートリアルを実行するには、SQL Server Management Studio と SQL Server インスタンスへのアクセスが必要です。 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 
 SQL Server インスタンスへのアクセス権を持っていない場合は、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
 - **Windows**: [SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- **macOS**: [Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+- **macOS**: [Docker で SQL Server 2017 をダウンロードする](../linux/quickstart-install-connect-docker.md)。
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -111,4 +111,3 @@ Mary にアクセス権を与えるには、 **TestData** データベースに�
 詳細については、次の記事に進んでください
 > [!div class="nextstepaction"]
 >[次の手順](lesson-3-deleting-database-objects.md)
-  

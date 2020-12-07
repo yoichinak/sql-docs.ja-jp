@@ -16,12 +16,12 @@ ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3c468994dcfa80b1db2ee8c6c49dd881dd7bcf85
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eaba2d8acd2a0443bfe2ed97fc53b50fcb667629
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417808"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439386"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>ダイアグラム ペイン (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,23 +55,23 @@ ms.locfileid: "88417808"
   
 |アイコン|オブジェクトの種類|  
 |--------|---------------|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi1.gif "Visual Database Tools のアイコン")|テーブル|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi2.gif "Visual Database Tools のアイコン")|クエリまたはビュー|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi3.gif "Visual Database Tools のアイコン")|リンク テーブル|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dvudficon.gif "Visual Database Tools のアイコン")|ユーザー定義関数|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi5.gif "Visual Database Tools のアイコン")|リンク ビュー|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi1.gif":::|テーブル|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi2.gif":::|クエリまたはビュー|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi3.gif":::|リンク テーブル|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dvudficon.gif":::|ユーザー定義関数|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi5.gif":::|リンク ビュー|  
   
 各四角形には、テーブルまたはテーブル値オブジェクトのデータ列が表示されます。 列の名前の横に表示されるチェック ボックスと記号は、その列がクエリでどのように使われるかを示しています。 ツール ヒントには、列のデータ型やサイズなどの情報が表示されます。  
   
 テーブルまたはテーブル値オブジェクトの四角形で使用されるチェック ボックスと記号は、次の表のとおりです。  
   
-|チェック ボックスまたは記号|説明|  
+|チェック ボックスまたは記号|Description|  
 |-----------------------|---------------|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools のアイコン")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools のアイコン")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools のアイコン")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools のアイコン")|データ列をクエリの結果セットに表示するかどうか (選択クエリ)、または更新クエリ、結果の挿入クエリ、テーブルの作成クエリ、値の挿入クエリで使用するかどうかを指定します。 結果に列を追加するには、その列のチェック ボックスをオンにします。 **[すべての列]** を選択すると、すべてのデータ列が出力に表示されます。<br /><br />チェック ボックスに表示されるアイコンは、作成するクエリの種類によって変わります。 削除クエリを作成するときは、列を個別に選択することはできません。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools のアイコン")<br /><br />![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools のアイコン")|クエリ結果の並べ替えに使用される (ORDER BY 句の一部である) データ列を示します。 並べ替え順序が昇順の場合はアイコンに A-Z と表示されます。降順の場合は Z-A と表示されます。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbid.gif "Visual Database Tools のアイコン")|集計クエリで結果セットをグループ化するために使用される (GROUP BY 句の一部である) データ列を示します。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbie.gif "Visual Database Tools のアイコン")|クエリの検索条件に含まれる (WHERE 句または HAVING 句の一部である) データ列を示します。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbif.gif "Visual Database Tools のアイコン")|データ列の内容が出力のときに集約される (SUM、AVG、または他の集計関数に含まれる) ことを示します。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi7.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi8.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi9.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbia.gif":::|データ列をクエリの結果セットに表示するかどうか (選択クエリ)、または更新クエリ、結果の挿入クエリ、テーブルの作成クエリ、値の挿入クエリで使用するかどうかを指定します。 結果に列を追加するには、その列のチェック ボックスをオンにします。 **[すべての列]** を選択すると、すべてのデータ列が出力に表示されます。<br /><br />チェック ボックスに表示されるアイコンは、作成するクエリの種類によって変わります。 削除クエリを作成するときは、列を個別に選択することはできません。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbib.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbic.gif":::|クエリ結果の並べ替えに使用される (ORDER BY 句の一部である) データ列を示します。 並べ替え順序が昇順の場合はアイコンに A-Z と表示されます。降順の場合は Z-A と表示されます。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbid.gif":::|集計クエリで結果セットをグループ化するために使用される (GROUP BY 句の一部である) データ列を示します。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbie.gif":::|クエリの検索条件に含まれる (WHERE 句または HAVING 句の一部である) データ列を示します。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbif.gif":::|データ列の内容が出力のときに集約される (SUM、AVG、または他の集計関数に含まれる) ことを示します。|  
   
 > [!NOTE]  
 > テーブルまたはテーブル値オブジェクトに対して十分なアクセス権がない場合、またはデータベース ドライバーがこれらのオブジェクトに関する情報を返すことができない場合、クエリおよびビュー デザイナーにはこれらのオブジェクトのデータ列が表示されません。 この場合は、テーブルまたはテーブル構造オブジェクトのタイトル バーだけが表示されます。  
@@ -81,21 +81,21 @@ ms.locfileid: "88417808"
   
 結合線の中央に表示されるアイコンの形は、テーブルまたはテーブル構造オブジェクトの結合方法を示しています。 等号 (=) 以外の演算子が結合句で使われている場合は、その演算子が結合線のアイコンに表示されます。 結合線に表示されるアイコンは、次の表のとおりです。  
   
-|結合線のアイコン|説明|  
+|結合線のアイコン|Description|  
 |------------------|---------------|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools のアイコン")|内部結合 (等号を使って作成)。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools のアイコン")|"大なり" 演算子 (>) による内部結合 (結合線アイコンの内部には、結合で使われる演算子が表示されます)。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbij.gif "Visual Database Tools のアイコン")|外部結合。右側のテーブルに一致する行があるかどうかにかかわらず、左側のテーブルのすべての行が含められます。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbik.gif "Visual Database Tools のアイコン")|外部結合。左側のテーブルに一致する行があるかどうかにかかわらず、右側のテーブルのすべての行が含められます。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbil.gif "Visual Database Tools のアイコン")|完全外部結合。関連テーブルに一致する行があるかどうかにかかわらず、両方のテーブルのすべての行が含められます。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|内部結合 (等号を使って作成)。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|"大なり" 演算子 (>) による内部結合 (結合線アイコンの内部には、結合で使われる演算子が表示されます)。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|外部結合。右側のテーブルに一致する行があるかどうかにかかわらず、左側のテーブルのすべての行が含められます。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|外部結合。左側のテーブルに一致する行があるかどうかにかかわらず、右側のテーブルのすべての行が含められます。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|完全外部結合。関連テーブルに一致する行があるかどうかにかかわらず、両方のテーブルのすべての行が含められます。|  
   
 結合線の端に表示されるアイコンは、結合の種類を示しています。 結合の種類と結合線の端に表示されるアイコンは、次の表のとおりです。  
   
-|結合線の端のアイコン|説明|  
+|結合線の端のアイコン|Description|  
 |-----------------------------|---------------|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools のアイコン")|一対一結合|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools のアイコン")|一対多結合|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbio.gif "Visual Database Tools のアイコン")|クエリおよびビュー デザイナーが種類を特定できない結合|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|一対一結合|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|一対多結合|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif ":::|クエリおよびビュー デザイナーが種類を特定できない結合|  
   
 ## <a name="see-also"></a>参照  
 [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

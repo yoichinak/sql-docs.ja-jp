@@ -16,12 +16,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 613633dced2e5e906ad5d676e05b519e5f1708a5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: decdf70e29d907e8f95b7e16cbd88ac94e16b857
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901874"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036085"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>IntelliSense に関する問題を特定する - SQL Server Management Studio (SSMS)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "88901874"
   
      既定では、IntelliSense の多くの機能が自動的に実行されるようになっていますが、各機能を無効にすることもできます。  
   
-     自動入力候補機能を無効にしている場合でも、IntelliSense 機能を使用することは可能です。 詳細については、「[IntelliSense の構成 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)」を参照してください。  
+     自動入力候補機能を無効にしている場合でも、IntelliSense 機能を使用することは可能です。 詳細については、「[IntelliSense の構成 &#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md)」を参照してください。  
   
 ## <a name="database-engine-query-intellisense"></a>データベース エンジン クエリの IntelliSense  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] クエリ エディターに関しては、次の点に注意してください。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense 機能では、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文要素がサポートされているわけではありません。 パラメーターのヘルプでは、拡張ストアド プロシージャなど、一部のオブジェクトのパラメーターがサポートされていません。 詳細については、「 [IntelliSense でサポートされている Transact-SQL 構文](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md)」を参照してください。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense 機能では、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文要素がサポートされているわけではありません。 パラメーターのヘルプでは、拡張ストアド プロシージャなど、一部のオブジェクトのパラメーターがサポートされていません。 詳細については、「 [IntelliSense でサポートされている Transact-SQL 構文](./transact-sql-syntax-supported-by-intellisense.md)」を参照してください。  
   
 -   IntelliSense は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターが [!INCLUDE[ssDE](../../includes/ssde-md.md)] 以降の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスに接続されている場合にのみ使用できます。 Intellisense は、クエリ エディターが以前のバージョンの [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続されているときは使用できません。  
   
@@ -70,5 +70,4 @@ ms.locfileid: "88901874"
 -   権限のないデータベース オブジェクトは入力候補一覧に表示されません。 IntelliSense は、権限のあるオブジェクトへの参照にフラグを付けます。 たとえば、別のユーザーが記述したスクリプトを開いた場合、そのユーザーには権限があるものの自分には権限のないオブジェクトへの参照には無効のフラグが付けられます。  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスへの接続が失われると、入力候補一覧が機能しなくなることがあります。 インスタンスに再接続してください。  
-  
   

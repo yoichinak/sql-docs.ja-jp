@@ -2,19 +2,19 @@
 title: SQL テーブルから Python Pandas データフレームにデータを挿入する
 titleSuffix: SQL machine learning
 description: Python を使用して SQL テーブルからデータを読み取り、Pandas データフレームに挿入する方法について説明します。
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 32b546107697dffdf3c77ea292b7b68c5c7dc9b5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 041291804f6fbefe4832398b7c56b2ab97940008
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179831"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870246"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>SQL テーブルから Python Pandas データフレームにデータを挿入する
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ ms.locfileid: "88179831"
 ## <a name="prerequisites"></a>前提条件
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server : インストール方法については、[Windows 用](../../database-engine/install-windows/install-sql-server.md)または[Linux 用](../../linux/sql-server-linux-overview.md)の SQL Server に関するページを参照してください。
+* [Windows 用](../../database-engine/install-windows/install-sql-server.md)または [Linux 用の SQL Server](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database。 サインアップ方法については、[Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal) に関するページを参照してください
+* [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance。 サインアップ方法については、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart) に関するページを参照してください。
+* [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * サンプル データベースを Azure SQL Managed Instance に復元するための [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
-* Azure Data Studio。 インストール方法については、[Azure Data Studio](../../azure-data-studio/what-is.md) に関するページを参照してください。
+* Azure Data Studio。 インストールするには、[Azure Data Studio](../../azure-data-studio/what-is.md) に関するページを参照してください。
 
 * この記事で使用されているサンプル データを取得するために、[サンプル データベースを復元](../../samples/adventureworks-install-configure.md)します。
 

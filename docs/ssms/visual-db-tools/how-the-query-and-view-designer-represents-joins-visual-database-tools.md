@@ -15,12 +15,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1d8686e1502fab121e49abed19f8f01488d22b7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462801"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439356"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>クエリおよびビュー デザイナーでの結合の表示方法 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,26 +41,26 @@ ms.locfileid: "88462801"
   
 |**結合線のアイコン**|**説明**|  
 |----------------------|-------------------|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools のアイコン")|内部結合 (等号を使用して作成)。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools のアイコン")|"大なり" 演算子 (>) による内部結合|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbij.gif "Visual Database Tools のアイコン")|外部結合。右側のテーブルに一致する行があるかどうかにかかわらず、左側のテーブルのすべての行が含められます。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbik.gif "Visual Database Tools のアイコン")|外部結合。左側のテーブルに一致する行があるかどうかにかかわらず、右側のテーブルのすべての行が含められます。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbil.gif "Visual Database Tools のアイコン")|完全外部結合。関連テーブルに一致する行があるかどうかにかかわらず、両方のテーブルのすべての行が含められます。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|内部結合 (等号を使用して作成)。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|"大なり" 演算子 (>) による内部結合|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|外部結合。右側のテーブルに一致する行があるかどうかにかかわらず、左側のテーブルのすべての行が含められます。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|外部結合。左側のテーブルに一致する行があるかどうかにかかわらず、右側のテーブルのすべての行が含められます。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|完全外部結合。関連テーブルに一致する行があるかどうかにかかわらず、両方のテーブルのすべての行が含められます。|  
   
 結合線の端に表示される記号は、結合の種類を示しています。 結合の種類と結合線の端に表示されるアイコンは、次の表のとおりです。  
   
 |**結合線の端のアイコン**|**結合の種類**|  
 |---------------------------------|--------------------|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools のアイコン")|一対一結合。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools のアイコン")|一対多結合。|  
-|![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbio.gif "Visual Database Tools のアイコン")|クエリおよびビュー デザイナーが特定できない種類の結合です。 この状態は、結合を手動で作成した場合に多く発生します。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|一対一結合。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|一対多結合。|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif":::|クエリおよびビュー デザイナーが特定できない種類の結合です。 この状態は、結合を手動で作成した場合に多く発生します。|  
   
 ## <a name="sql-pane"></a>SQL ペイン  
 SQL ステートメントでは、さまざまな方法で結合を表現できます。 正確な構文は、使用するデータベースおよび結合を定義する方法によって異なります。  
   
 テーブルの結合に使用する構文オプションは、次のとおりです。  
   
--   **FROM 句の JOIN 修飾子**。   キーワード INNER および OUTER で結合の種類を指定します。 この構文は、ANSI 92 SQL の標準です。  
+-   **FROM 句の JOIN 修飾子** 。   キーワード INNER および OUTER で結合の種類を指定します。 この構文は、ANSI 92 SQL の標準です。  
   
     たとえば、 `publishers` テーブルと `pub_info` テーブルを両方のテーブルの `pub_id` 列に基づいて結合する場合、SQL ステートメントは次のようになります。  
   
@@ -72,7 +72,7 @@ SQL ステートメントでは、さまざまな方法で結合を表現でき�
   
     外部結合を作成する場合は、INNER の代わりに LEFT OUTER または RIGHT OUTER というキーワードが使用されます。  
   
--   **WHERE 句による両テーブルの列の比較**。   データベースが JOIN 構文をサポートしていない場合、またはユーザーが自分で入力した場合には、WHERE 句が使用されます。 WHERE 句で結合が作成される場合は、FROM 句で両方のテーブルの名前が指定されます。  
+-   **WHERE 句による両テーブルの列の比較** 。   データベースが JOIN 構文をサポートしていない場合、またはユーザーが自分で入力した場合には、WHERE 句が使用されます。 WHERE 句で結合が作成される場合は、FROM 句で両方のテーブルの名前が指定されます。  
   
     たとえば、 `publishers` テーブルと `pub_info` テーブルを結合するステートメントは、次のようになります。  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 246c9d419d6f9b8fdbaae2619ef45df4d9465c36
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785077"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892432"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>レッスン 2: 名前付け基準ポリシーの作成と適用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "85785077"
 ## <a name="prerequisites"></a>前提条件
 このチュートリアルを完了するには、SQL Server Management Studio と SQL Server を実行しているサーバーへのアクセスが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
   
 ## <a name="create-the-finance-database"></a>Finance データベースの作成  
@@ -160,4 +160,4 @@ ms.locfileid: "85785077"
 チュートリアルの一覧については、「 [SQL Server 2016 チュートリアル](../../sql-server/tutorials-for-sql-server-2016.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
+[ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)

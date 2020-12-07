@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9beaaa54cf6016c881903edd4fe141c37edaac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2455138c200097adc1547d3d57fbe4014b2be022
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392858"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194259"
 ---
 # <a name="history-cleanup-task"></a>履歴クリーンアップ タスク
 
@@ -61,10 +61,9 @@ ms.locfileid: "88392858"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

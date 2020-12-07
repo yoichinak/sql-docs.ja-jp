@@ -1,6 +1,6 @@
 ---
-description: 拡張プロパティのカタログビュー-sys. extended_properties
-title: extended_properties (Transact-sql) |Microsoft Docs
+description: 拡張プロパティのカタログビュー-sys.extended_properties
+title: sys.extended_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 154fadb3b2f5fc1fe5654c2e8ec70b213651b10e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8095a1097f23b17dcfdaa88342d84ccd82a95eef
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537543"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810071"
 ---
-# <a name="extended-properties-catalog-views---sysextended_properties"></a>拡張プロパティのカタログビュー-sys. extended_properties
+# <a name="extended-properties-catalog-views---sysextended_properties"></a>拡張プロパティのカタログビュー-sys.extended_properties
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベース内の拡張プロパティごとに 1 行のデータを返します。  
@@ -40,17 +40,16 @@ ms.locfileid: "89537543"
 |major_id|**int**|拡張プロパティが属するアイテムの ID です。アイテムのクラスに従って解釈されます。 ほとんどの項目では、これはクラスが表すものに適用される ID です。 非標準の主要な Id の解釈は次のとおりです。<br /><br /> class が 0 の場合、major_id は常に 0 になります。<br /><br /> class が 1、2、または 7 の場合、major_id は object_id になります。|  
 |minor_id|**int**|拡張プロパティが属するアイテムのセカンダリ ID です。アイテムのクラスに従って解釈されます。 ほとんどの項目では、これは0です。それ以外の場合、ID は次のようになります。<br /><br /> class が 1 の場合、minor_id は、列であれば column_id に、オブジェクトであれば 0 になります。<br /><br /> class が 2 の場合、minor_id は parameter_id になります。<br /><br /> class が 7 の場合、minor_id は index_id になります。|  
 |name|**sysname**|class、major_id、および minor_id で一意となるプロパティ名です。|  
-|値|**sql_variant**|拡張プロパティの値です。|  
+|value|**sql_variant**|拡張プロパティの値です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [拡張プロパティのカタログビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)   
- [fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [拡張プロパティのカタログビュー &#40;Transact-sql&#41;](./catalog-views-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426304"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080671"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -92,7 +92,7 @@ SELECT SCOPE_IDENTITY()
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a>例  
+## <a name="object-example"></a>オブジェクトの例  
 次の例では、結果セットの各行を PHP オブジェクトとして取得します。 この例では、SQL Server と [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ``` 
@@ -131,7 +131,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="class-example"></a>クラスの例  
 次の例では、スクリプトに定義されている *Product* クラスのインスタンスとして結果セットの各行が取得されます。 この例では、指定納期 *DueDate* で在庫数 *StockQty* が指定値より少ない製品の情報が AdventureWorks データベースの *Purchasing.PurchaseOrderDetail* テーブルと *Production.Product* テーブルから取得されます。 この例では、 **sqlsrv_fetch_object**の呼び出しにクラスを指定したときに適用される規則の一部が強調表示されています。  
   
 -   *$product* 変数は *Product* クラスのインスタンスです。「Product」が *$className* パラメーターで指定され、 *Product* クラスが存在するからです。  

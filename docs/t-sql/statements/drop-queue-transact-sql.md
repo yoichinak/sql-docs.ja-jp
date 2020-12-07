@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 736b413affafc1a75ff3b08ffaa686aff7893cbd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4bf41bb420ddaaccd0f1899c641a30a17bbb8fcd
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544209"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131168"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89544209"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP QUEUE <object>  
 [ ; ]  
   
@@ -68,9 +67,8 @@ DROP QUEUE <object>
 ## <a name="examples"></a>例  
  次の例では、現在のデータベースから **ExpenseQueue** キューを削除します。  
   
-```  
+```sql  
 DROP QUEUE ExpenseQueue ;  
-  
 ```  
   
 ## <a name="see-also"></a>参照  

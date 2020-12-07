@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a821c49ba80ce3e51c4a12f0c0d7dee660384d3
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: dd2fffbce8d2db5bb5bafbcb49b1f37ea48873c7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990389"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726050"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
 
@@ -40,7 +40,7 @@ ms.locfileid: "90990389"
   
  **SSISDB** データベースを保守するには、ユーザー データベースの管理に標準的なエンタープライズ ポリシーを適用することをお勧めします。 メンテナンス プランの作成については、「 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)」をご覧ください。  
   
- **SSISDB** カタログおよび **SSISDB** データベースは、Windows PowerShell をサポートしています。 Windows PowerShell による SQL Server の使用の詳細については、「 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)」をご覧ください。 Windows PowerShell を使用してプロジェクトの配置などのタスクを実行する方法の例については、blogs.msdn.com のブログ エントリ「 [SQL Server 2012 での SSIS と PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)」をご覧ください。  
+ **SSISDB** カタログおよび **SSISDB** データベースは、Windows PowerShell をサポートしています。 Windows PowerShell による SQL Server の使用の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」をご覧ください。 Windows PowerShell を使用してプロジェクトの配置などのタスクを実行する方法の例については、blogs.msdn.com のブログ エントリ「 [SQL Server 2012 での SSIS と PowerShell](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)」をご覧ください。  
   
  操作データの表示に関する詳細については、「 [パッケージとその他の操作を実行するモニター](../../integration-services/performance/monitor-running-packages-and-other-operations.md)」をご覧ください。  
   
@@ -416,7 +416,7 @@ ms.locfileid: "90990389"
   
     ```  
   
-3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、「[データベースをバックアップする方法 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812) に関する記事をご覧ください。  
+3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、「[データベースをバックアップする方法 (SQL Server Management Studio)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) に関する記事をご覧ください。  
   
 4.  次の手順を実行して、##MS_SSISServerCleanupJobLogin## の CREATE LOGIN スクリプトを生成します。 詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)」を参照してください。  
   
@@ -440,7 +440,7 @@ ms.locfileid: "90990389"
   
 ### <a name="to-restore-the-ssis-database"></a>SSIS データベースを復元するには  
   
-1.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、`sp_configure` ストアド プロシージャを実行して、共通言語ランタイム (CLR) を有効にします。 詳細については、「[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」と「[clr enabled サーバー構成オプション](https://go.microsoft.com/fwlink/?LinkId=231855)」を参照してください。  
+1.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、`sp_configure` ストアド プロシージャを実行して、共通言語ランタイム (CLR) を有効にします。 詳細については、「[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」と「[clr enabled サーバー構成オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)」を参照してください。  
   
     ```  
     use master   
@@ -456,7 +456,7 @@ ms.locfileid: "90990389"
            FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
 
-    `YourSQLServerDefaultCompatibilityLevel` の値は、[SQL Server の既定の互換性レベルの一覧](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments)で確認することができます。
+    `YourSQLServerDefaultCompatibilityLevel` の値は、[SQL Server の既定の互換性レベルの一覧](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=sql-server-ver15#arguments)で確認することができます。
   
     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ログインを行うには Microsoft Win32 API などの制限付きのリソースへの追加アクセスが必要であるため、CLR ストアド プロシージャでは、UNSAFE 権限をログインに付与する必要があります。 UNSAFE コード権限の要件の詳細については、「 [アセンブリの作成](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)」を参照してください。  
 
@@ -679,4 +679,4 @@ SSISDB は、制約付き委任をサポートしません。 ダブルホップ
   
 -   blogs.msdn.com のブログ エントリ「 [SSIS カタログのアクセス制御のヒント](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057)」  
   
--   blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)」  
+-   blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)」

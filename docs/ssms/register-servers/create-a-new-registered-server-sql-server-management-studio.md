@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5b75fa312f06fa91d7ffbe9a4a4226f0e3852449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9bdbf68766e6c271f17254afc4262de341deaeb3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480171"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037599"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>新しい登録済みサーバーの作成 (SQL Server Management Studio)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88480171"
   
 -   ローカル サーバー グループ  
   
-     ローカル サーバー グループを使用すると、管理頻度の高いサーバーに簡単に接続できます。 ローカル サーバーとローカル以外のサーバーは、どちらもローカル サーバー グループに登録されます。 ローカル サーバー グループは各ユーザーに固有です。 登録済みサーバーの情報を共有する方法については、「 [登録済みサーバー情報のエクスポート &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md) 」および「 [登録済みサーバー情報のインポート &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)の 登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。  
+     ローカル サーバー グループを使用すると、管理頻度の高いサーバーに簡単に接続できます。 ローカル サーバーとローカル以外のサーバーは、どちらもローカル サーバー グループに登録されます。 ローカル サーバー グループは各ユーザーに固有です。 登録済みサーバーの情報を共有する方法については、「 [登録済みサーバー情報のエクスポート &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md) 」および「 [登録済みサーバー情報のインポート &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)の 登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。  
   
     > [!NOTE]  
     >  可能な限り Windows 認証を使用することをお勧めします。  
@@ -98,7 +98,7 @@ ms.locfileid: "88480171"
      クリックすると、登録済みサーバーの設定を保存します。  
   
 ## <a name="multiserver-queries"></a>マルチサーバー クエリ  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディター ウィンドウを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスに同時に接続してクエリを実行できます。 クエリから返された結果は、マージして 1 つの結果ペインに表示することも、別々の結果ペインに表示することもできます。 クエリ エディターには、各行を生成したサーバーの名前と、各行を提供したサーバーへの接続に使用されたログインを表示する列をオプションで追加できます。 マルチサーバー クエリを実行する方法については、「[複数のサーバーに対してステートメントを同時に実行する方法 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)」を参照してください。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディター ウィンドウを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスに同時に接続してクエリを実行できます。 クエリから返された結果は、マージして 1 つの結果ペインに表示することも、別々の結果ペインに表示することもできます。 クエリ エディターには、各行を生成したサーバーの名前と、各行を提供したサーバーへの接続に使用されたログインを表示する列をオプションで追加できます。 マルチサーバー クエリを実行する方法については、「[複数のサーバーに対してステートメントを同時に実行する方法 &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md)」を参照してください。  
   
  ローカル サーバー グループ内のすべてのサーバーに対してクエリを実行するには、サーバー グループを右クリックし、 **[接続]** をポイントして、 **[新しいクエリ]** をクリックします。 新しいクエリ エディター ウィンドウで実行したクエリは、ユーザー認証コンテキストなど保存されている接続情報を使用して、グループ内のすべてのサーバーに対して実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して登録されていても、パスワードが保存されていないサーバーは接続できません。  
   
@@ -106,7 +106,6 @@ ms.locfileid: "88480171"
   
 ## <a name="see-also"></a>参照  
  [オブジェクト エクスプローラーのシステム オブジェクトの非表示](../object/hide-system-objects-in-object-explorer.md)   
- [登録済みサーバー情報のエクスポート &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [登録済みサーバー情報のインポート &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
-  
+ [登録済みサーバー情報のエクスポート &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)   
+ [登録済みサーバー情報のインポート &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)  
   

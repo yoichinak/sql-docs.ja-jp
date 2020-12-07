@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e382be5f109efff9a0a08eb434017334fe54d2c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cd20a9ca7a25e1e00613ea5c87baa9eda41accc8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466740"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726630"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS の参照データ サービス
 
@@ -38,7 +38,7 @@ ms.locfileid: "88466740"
   
  Marketplace と DQS のシームレスな統合により、DQS 内からのデータ品質プロジェクトに関する情報の検出、検索、および取得に関連付けられている手順が簡素化されます。 このデータは DQS から使用され、DQS ユーザーはこのデータを使用して DQS、Marketplace、および参照データ サービス プロバイダーを革新的な方法で 1 つにまとめて、データの品質を高めることができます。  
   
- DQS でクレンジング アクティビティに Marketplace の参照データを使用するには、Marketplace アカウント キーが必要です。 Marketplace アカウント キーの作成は無料です。有料のデータセットをサブスクライブする場合にのみ料金がかかります。 無料のデータセットのサブスクライブと使用には料金はかかりません。 Marketplace アカウントキーの作成の詳細については、「 [アカウントの作成](https://go.microsoft.com/fwlink/?LinkId=212936) 」 (を参照してください https://go.microsoft.com/fwlink/?LinkId=212936) 。  
+ DQS でクレンジング アクティビティに Marketplace の参照データを使用するには、Marketplace アカウント キーが必要です。 Marketplace アカウント キーの作成は無料です。有料のデータセットをサブスクライブする場合にのみ料金がかかります。 無料のデータセットのサブスクライブと使用には料金はかかりません。 Marketplace アカウントキーの作成の詳細については、「 [アカウントの作成](/previous-versions/azure/ff717655(v=azure.100)) 」 (を参照してください https://go.microsoft.com/fwlink/?LinkId=212936) 。  
   
  また、DQS 内から次の Marketplace アクティビティを実行できます。  
   
@@ -75,5 +75,4 @@ ms.locfileid: "88466740"
 |Marketplace またはダイレクト オンライン サード パーティ データ プロバイダーの参照データ サービスを使用するように DQS を構成する方法を説明します。|[参照データを使用する DQS の構成](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |ナレッジ ベースのドメインまたは複合ドメインを参照データ サービスにマップする方法を説明します。|[参照データへのドメインまたは複合ドメインのアタッチ](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |参照データ サービスを使用してデータをクレンジングする方法を説明します。|[参照データ &#40;外部&#41; のナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
-  
   

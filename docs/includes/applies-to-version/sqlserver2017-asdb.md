@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 06/11/2020
 ms.author: mikeray
 ms.openlocfilehash: 21ea86ec000713d45315a97a369caa547b45bee9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650838"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96131244"
 ---
 [!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server 2017](_ss2017.md)] 以降  [!INCLUDE [Azure SQL Database](../../includes/applies-to-version/_asdb.md)]

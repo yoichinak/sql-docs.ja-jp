@@ -12,12 +12,12 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5711115843a32b18a1a16f50cd8eaf79fefb2f63
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ab153d8d28e2f8005f0b0a370ffa4def42f81c58
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537088"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125216"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>実証: インメモリ OLTP によるパフォーマンスの向上
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,9 +64,9 @@ go
   
 1.  コード例に使用する既存のテスト データベースを決定します。  
   
-2.  新しいテスト データベースを作成する場合は、 [Azure ポータル](https://portal.azure.com) を使用して、 **imoltp**という名前のデータベースを作成します。  
+2.  新しいテスト データベースを作成する場合は、 [Azure ポータル](https://portal.azure.com) を使用して、 **imoltp** という名前のデータベースを作成します。  
   
- その場合に Azure ポータルを使用する手順については、「 [Get Started with Azure SQL Database (Azure SQL Database の概要)](https://azure.microsoft.com/documentation/articles/sql-database-get-started)」を参照してください。  
+ その場合に Azure ポータルを使用する手順については、「 [Get Started with Azure SQL Database (Azure SQL Database の概要)](/azure/azure-sql/database/single-database-create-quickstart)」を参照してください。  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>手順 2:メモリ最適化テーブルと NCSProc を作成する  
  この手順では、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャ (NCSProc) を作成します。 次の操作を行います。  
@@ -198,5 +198,4 @@ go
   
 ## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

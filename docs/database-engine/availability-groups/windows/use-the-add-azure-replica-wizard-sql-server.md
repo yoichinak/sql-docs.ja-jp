@@ -10,19 +10,21 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 93f20096c1ccce60b5ea0e2299725a4037f71ae3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9ff107b2f3e132015e294ef7ba8174ade5a0c575
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894180"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583693"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>可用性グループでセカンダリ レプリカとして Azure VM を構成する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Azure のレプリカ追加ウィザードを使用して、ハイブリッド IT 環境に新しい Azure VM を作成し、新規または既存の Always On 可用性グループのセカンダリ レプリカとしてこれを構成することができます。  
-  
+
+>  [!IMPORTANT]  
+>  Azure には、リソースの作成と操作に関して 2 種類のデプロイメント モデルがあります。リソース マネージャー デプロイメント モデルとクラシック デプロイメント モデルです。 この記事では、クラシック デプロイ モデルの使用方法について説明します。 最新のデプロイメントでは、リソース マネージャー モデルを使用することをお勧めします。 この記事の手順は、Resource Manager モデルを使用して Azure 仮想マシンをデプロイしている場合には適用されません。   
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  これまでに可用性グループに可用性レプリカを追加したことがない場合は、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」の、「サーバー インスタンス」と「可用性グループとレプリカ」のセクションを参照してください。  
@@ -31,7 +33,7 @@ ms.locfileid: "85894180"
   
 -   現在のプライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
--   オンプレミスのサブネットに Azure とのサイト間 VPN があるハイブリッド IT 環境が必要です。 詳細については、「 [管理ポータルでのサイト間 VPN の構成](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create)」を参照してください。  
+-   オンプレミスのサブネットに Azure とのサイト間 VPN があるハイブリッド IT 環境が必要です。 詳細については、「 [管理ポータルでのサイト間 VPN の構成](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-classic-portal)」を参照してください。  
   
 -   可用性グループに、内部設置型可用性レプリカが含まれている必要があります。  
   
@@ -47,6 +49,12 @@ ms.locfileid: "85894180"
  また、可用性グループへのレプリカ追加ウィザードでデータベース ミラーリング エンドポイントを管理できるようにする場合は、CONTROL ON ENDPOINT 権限も必要です。  
   
 ##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Azure のレプリカ追加ウィザードの使用 (SQL Server Management Studio)  
+
+>  [!IMPORTANT]  
+>  Azure レプリカの追加ウィザードでサポートされるのは、クラシック デプロイ モデルで作成された仮想マシンのみです。 新しい仮想マシンのデプロイでは、新しい Resource Manager モデルを使用する必要があります。 Resource Manager で仮想マシンを使用する場合は、Transact-SQL コマンド (ここには示されていません) を使用して、セカンダリ Azure レプリカを手動で追加する必要があります。 このウィザードは、Resource Manager のシナリオでは機能しません。 
+>
+>  Azure レプリカの追加ウィザードは、SQL Server Management Studio の最新リリース (バージョン 18.x および 17.x) では使用できません。
+        
  Azure のレプリカ追加ウィザードは、 [[レプリカの指定] ページ](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)から起動できます。 このページを開くには、次の 2 つの方法があります。  
   
 -   [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
@@ -57,7 +65,7 @@ ms.locfileid: "85894180"
   
 1.  まず、Azure サブスクリプションの管理証明書をダウンロードします。 **[ダウンロード]** をクリックして、サインイン ページを開きます。  
   
-2.  Microsoft アカウントまたは組織アカウントを使用して Microsoft Azure にサインインします。 Microsoft アカウントまたは組織アカウントは、HYPERLINK "mailto:patc@contoso.com" patc@contoso.com などの電子メール アドレスの形式になっています。 Azure の資格情報の詳細については、「 [Microsoft Account for Organizations FAQ (組織向け Microsoft アカウントに関する FAQ)](https://technet.microsoft.com/jj592903) 」および [Troubleshooting sign-in problems with your organizational account (組織アカウントのサインインに関する問題のトラブルシューティング)](https://support.microsoft.com/kb/2756852)に関するページを参照してください。  
+2.  Microsoft アカウントまたは組織アカウントを使用して Microsoft Azure にサインインします。 Microsoft アカウントまたは組織アカウントは、HYPERLINK "mailto:patc@contoso.com" patc@contoso.com などの電子メール アドレスの形式になっています。 Azure の資格情報の詳細については、「 [Microsoft Account for Organizations FAQ (組織向け Microsoft アカウントに関する FAQ)](/previous-versions/jj592903(v=msdn.10)) 」および [Troubleshooting sign-in problems with your organizational account (組織アカウントのサインインに関する問題のトラブルシューティング)](https://support.microsoft.com/kb/2756852)に関するページを参照してください。  
   
 3.  次に、 **[接続]** をクリックしてサブスクリプションに接続します。 接続すると、 **[仮想ネットワーク]** や **[仮想ネットワーク サブネット]** などの Azure のパラメーターがドロップダウン リストに設定されます。  
   
@@ -107,5 +115,4 @@ ms.locfileid: "85894180"
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
-  
   

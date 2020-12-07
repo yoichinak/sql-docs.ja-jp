@@ -1,6 +1,6 @@
 ---
 description: sys.dm_repl_traninfo (Transact-SQL)
-title: dm_repl_traninfo (Transact-sql) |Microsoft Docs
+title: sys.dm_repl_traninfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccac1a54db0fb5395f76205713fe65c9cba3f8e1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6369fc0d1ee2c0b70cb3e6e13fd201fd718236dc
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542107"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834574"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,21 +63,19 @@ ms.locfileid: "89542107"
 |**max_cmds_in_tran**|**int**|ログリーダーエージェントによって指定された、論理トランザクション内のコマンドの最大数。|  
 |**begin_time**|**datetime**|トランザクションが開始された時刻。|  
 |**commit_time**|**datetime**|トランザクションがコミットされた時刻。|  
-|**session_id**|**int**|変更データキャプチャのログスキャンセッションの ID。 この列は、 [dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)の**session_id**列にマップされます。|  
-|**session_phase**|**int**|エラー発生時のセッションのフェーズを示す数値。 この列は、 [dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)の**phase_number**列にマップされます。|  
+|**session_id**|**int**|変更データキャプチャのログスキャンセッションの ID。 この列は[sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)の**session_id**列にマップされます。|  
+|**session_phase**|**int**|エラー発生時のセッションのフェーズを示す数値。 この列は[sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)の**phase_number**列にマップされます。|  
 |**is_known_cdc_tran**|**bit**|トランザクションが変更データキャプチャによって追跡されることを示します。<br /><br /> 0 = トランザクション レプリケーション トランザクション。<br /><br /> 1 = 変更データ キャプチャ トランザクション。|  
 |**error_count**|**int**|発生したエラーの数。|  
   
 ## <a name="permissions"></a>アクセス許可  
  パブリケーション データベースまたは変更データ キャプチャが有効にされたデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  この情報は、アーティクルキャッシュに現在読み込まれている、レプリケートされたデータベースオブジェクトまたは変更データキャプチャが有効になっているテーブルに対してのみ返されます。  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [レプリケーション関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [変更データ キャプチャに関連した動的管理ビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [変更データ キャプチャに関連した動的管理ビュー &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)  
   
-  
-

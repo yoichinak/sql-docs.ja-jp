@@ -19,10 +19,10 @@ ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 61304621317ee302585102acdd82198fd90baedd
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115975"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
@@ -46,8 +46,8 @@ MIN_ACTIVE_ROWVERSION ( )
 ## <a name="return-types"></a>戻り値の型
  返します、 **binary (8)** 値。  
   
-## <a name="remarks"></a>解説  
- MIN_ACTIVE_ROWVERSION は、現在のデータベースの最低のアクティブ **rowversion** 値を返す非決定的関数です。 新しい **rowversion** 値は、通常、 **rowversion**型の列を含むテーブルに対して挿入または更新が実行されたときに生成されます。 データベース内にアクティブな値がない場合は、MIN_ACTIVE_ROWVERSION は @@DBTS + 1 と同じ値を返します。  
+## <a name="remarks"></a>注釈  
+ MIN_ACTIVE_ROWVERSION は、現在のデータベースの最低のアクティブ **rowversion** 値を返す非決定的関数です。 新しい **rowversion** 値は、通常、 **rowversion** 型の列を含むテーブルに対して挿入または更新が実行されたときに生成されます。 データベース内にアクティブな値がない場合は、MIN_ACTIVE_ROWVERSION は @@DBTS + 1 と同じ値を返します。  
   
  **rowversion** 値を使用して一連の変更をグループ化するデータ同期などのシナリオでは、MIN_ACTIVE_ROWVERSION が役立ちます。 アプリケーションで MIN_ACTIVE_ROWVERSION ではなく @@DBTS を使用する場合、同期が行われるときにアクティブな変更が失われる可能性があります。  
   

@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 74f3306167a4c2fbc248f65e5384ea9847f48f7a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680603"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678916"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Visual Studio Code を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]にアプリケーションを展開する方法
 
@@ -93,7 +93,7 @@ azdata bdc endpoint list
 
 ### <a name="app-template"></a>アプリ テンプレート
 
-Visual Studio Code 内で、アプリの成果物を保存する*ワークスペースを開く*必要があります。
+Visual Studio Code 内で、アプリの成果物を保存する *ワークスペースを開く* 必要があります。
 
 いずれかのテンプレートから新しいアプリを展開するには、[`App Specifications`]\(アプリの仕様\) ウィンドウの [`New App Template`]\(新しいアプリ テンプレート\) ボタンをクリックします。このボタンをクリックすると、名前、ランタイム、およびローカル コンピューターで新しいアプリを配置する場所を入力するように求められます。 指定する名前とバージョンは、DNS-1035 ラベルとする必要があります。また、小文字の英数字または '-' で構成され、アルファベット文字で始まり、英数字で終わる必要があります。
 
@@ -153,7 +153,7 @@ Visual Studio Code 内で、アプリの成果物を保存する*ワークスペ
 
 `Links` をクリックすると、展開されたアプリの `swagger.json` にアクセスできることがわかります。これにより、アプリを呼び出す独自のクライアントを作成できます。
 
-![Swagger](media/vs-extension/swagger.png)
+![VS Code UI のスクリーンショット。swagger.json ファイルが表示されています。](media/vs-extension/swagger.png)
 
 詳細については、「[ビッグ データ クラスターでアプリケーションを使用する](app-consume.md)」を参照してください。
 

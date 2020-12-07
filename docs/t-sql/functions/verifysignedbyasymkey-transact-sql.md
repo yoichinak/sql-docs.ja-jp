@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0257bd8b66a915ec5d7f0b59e3aa85f197f38867
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f2a75cf3da8220e861d8320b2454683c3b65a1f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362248"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380597"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88362248"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )  
 ```  
   
@@ -72,7 +71,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ### <a name="a-testing-for-data-with-a-valid-signature"></a>A. データの署名が有効かどうかをテストする  
  次の例では、選択したデータが非対称キー `WillisKey74` で署名された後に変更されていない場合は 1 が返されます。 この例では、データが変更されている場合は 0 が返されます。  
   
-```  
+```sql
 SELECT Data,  
      VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), SignedData,  
      DataSignature ) as IsSignatureValid  
@@ -85,7 +84,7 @@ RETURN;
 ### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>B. 有効な署名が添付されたデータを含む結果セットを返す  
  次の例では、`SignedData04` 内の行で、非対称キー `WillisKey74` で署名された後に変更されていないデータを含む行が返されます。 この例では、データベースから非対称キーの ID を取得するため関数 `AsymKey_ID` を呼び出します。  
   
-```  
+```sql
 SELECT Data   
 FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), Data,  

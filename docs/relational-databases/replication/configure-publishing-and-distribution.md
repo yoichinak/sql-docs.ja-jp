@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f321bc96749a0a5c6bf260a8093113258c64f3f1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863359"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866566"
 ---
 # <a name="configure-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの構成
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "87863359"
 
 5. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> メソッドを呼び出してディストリビューターをインストールします。 安全なパスワード (パブリッシャーがリモート ディストリビューターへの接続時に使用) および手順 3. の <xref:Microsoft.SqlServer.Replication.DistributionDatabase> オブジェクトを指定します。 詳細については、「[ディストリビューターのセキュリティ保護](../../relational-databases/replication/security/secure-the-distributor.md)」を参照してください。
 
-   > `IMPORTANT!!` 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。
+   > `IMPORTANT!!` 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](/previous-versions/aa719848(v=vs.71)) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。
 
 6. <xref:Microsoft.SqlServer.Replication.DistributionPublisher> クラスのインスタンスを作成します。
 
@@ -158,7 +158,7 @@ ms.locfileid: "87863359"
 11. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> メソッドを呼び出します。 リモート ディストリビューターの名前、および手順 5. で指定したリモート ディストリビューターのパスワードを渡します。
 
 > [!IMPORTANT]
-> 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework に用意されている [暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733) を使用します。
+> 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework に用意されている [暗号化サービス](/previous-versions/aa719848(v=vs.71)) を使用します。
 
 ###  <a name="example-rmo"></a><a name="PShellExample"></a> 例 (RMO) 
 レプリケーション管理オブジェクト (RMO) を使用することで、プログラムによってレプリケーション パブリッシングおよびディストリビューションを構成できます。
@@ -172,6 +172,4 @@ ms.locfileid: "87863359"
 [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
 [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
 [レプリケーション管理オブジェクトの概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-[AlwaysOn 可用性グループ用のレプリケーションの構成 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md) 
-
-
+[AlwaysOn 可用性グループ用のレプリケーションの構成 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

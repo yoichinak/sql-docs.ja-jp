@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d150330a700b8580f561c4459d50ceab355eb8de
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942912"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005675"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>インメモリ OLTP での初期領域の調査
 
@@ -72,7 +72,7 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
 2 つの主なシナリオを以下に示します。  
   
 - *バッチ運用分析* では、営業時間後に実行されるか、トランザクション データのコピーを持つセカンダリ ハードウェアに対して実行される集計処理を参照します。  
-  - [Azure SQL データ ウェアハウス](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-what-is/) もバッチ運用分析に関連します。  
+  - [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) もバッチ運用分析に関連します。  
 - *リアルタイム運用分析* では、営業時間内およびトランザクション ワークロードに使用されるプライマリ ハードウェアで実行される集計処理を参照します。  
   
   
@@ -93,24 +93,24 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
 #### <a name="real-time-operational-analytics"></a>リアルタイム運用分析
 
 1. [インメモリ テクノロジを使用したリアルタイム運用分析](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
-2. [リアルタイム運用分析 - 非クラスター化列ストア インデックス (NCCI) の概要](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [リアルタイム運用分析: SQL Server 2016 で非クラスター化列ストア インデックス (NCCI) を使用するシンプルな例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
-4. [リアルタイム運用分析: SQL Server 2016 の DML 運用と非クラスター化列ストア インデックス (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
-5. [リアルタイム運用分析: フィルターした非クラスター化列ストア インデックス (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
-6. [リアルタイム運用分析: 非クラスター化列ストア インデックス (NCCI) の圧縮遅延オプション](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
-7. [リアルタイム運用分析: NCCI とパフォーマンスを使用した圧縮遅延オプション](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
-8. [リアルタイム運用分析: メモリ最適化テーブルと列ストア インデックス](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
+2. [リアルタイム運用分析 - 非クラスター化列ストア インデックス (NCCI) の概要](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)
+3. [リアルタイム運用分析: SQL Server 2016 で非クラスター化列ストア インデックス (NCCI) を使用するシンプルな例](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)
+4. [リアルタイム運用分析: SQL Server 2016 の DML 運用と非クラスター化列ストア インデックス (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)
+5. [リアルタイム運用分析: フィルターした非クラスター化列ストア インデックス (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)
+6. [リアルタイム運用分析: 非クラスター化列ストア インデックス (NCCI) の圧縮遅延オプション](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)
+7. [リアルタイム運用分析: NCCI とパフォーマンスを使用した圧縮遅延オプション](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)
+8. [リアルタイム運用分析: メモリ最適化テーブルと列ストア インデックス](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
 
 #### <a name="defragment-a-columnstore-index"></a>列ストア インデックスを最適化する
 
-1. [REORGANIZE コマンドを使用した列ストア インデックスの最適化](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)
-2. [REORGANIZE の列ストア インデックス マージ ポリシー](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)
+1. [REORGANIZE コマンドを使用した列ストア インデックスの最適化](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
+2. [REORGANIZE の列ストア インデックス マージ ポリシー](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
 
 #### <a name="bulk-importation-of-data"></a>データの一括インポート
 
-1. [クラスター化列ストア: 一括読み込み](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [クラスター化列ストア インデックス: データ読み込みの最適化 - 最小ログ記録](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
-3. [クラスター化列ストア インデックス: データ読み込みの最適化 - 並行一括インポート](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
+1. [クラスター化列ストア: 一括読み込み](/archive/blogs/sqlserverstorageengine/clustered-column-store-index-bulk-loading-the-data)
+2. [クラスター化列ストア インデックス:データ読み込みの最適化 - 最小ログ記録](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
+3. [クラスター化列ストア インデックス:データ読み込みの最適化 - 並行一括インポート](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
 
 
 
@@ -128,7 +128,7 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
 CREATE TABLE ステートメントの T-SQL キーワード MEMORY_OPTIMIZED は、ディスクではなく、アクティブ メモリに存在するテーブルの作成方法を示します。  
   
   
-[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) はアクティブ メモリ内に存在し、ディスク上にセカンダリ コピーを保持します。  
+[メモリ最適化テーブル](./sample-database-for-in-memory-oltp.md) はアクティブ メモリ内に存在し、ディスク上にセカンダリ コピーを保持します。  
   
 - ディスク上のコピーは、サーバーまたはデータベースがシャットダウンして再起動した後の日常的な復旧に使用されます。 このメモリとディスクの二重性はユーザーとユーザー コードに対して完全に非表示になります。  
   
@@ -144,14 +144,14 @@ CREATE PROCEDURE ステートメントの T-SQL キーワード NATIVE_COMPILATI
   
 ネイティブ コンパイル モジュールには次の 3 種類があります。  
   
-- [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+- [ネイティブ コンパイル ストアド プロシージャ](./a-guide-to-query-processing-for-memory-optimized-tables.md)。  
 - スカラーのネイティブ コンパイル ユーザー定義関数 (UDF)。  
 - ネイティブ コンパイル トリガー。  
   
   
 #### <a name="availability-in-azure-sql-database"></a>Azure SQL Database での提供状況  
   
-インメモリ OLTP および列ストアは、Azure SQL Database で使用できます。 詳細については、「[Optimize Performance using In-Memory Technologies in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)」 (SQL データベースでのインメモリ テクノロジを使用したパフォーマンスの最適化) を参照してください。
+インメモリ OLTP および列ストアは、Azure SQL Database で使用できます。 詳細については、「[Optimize Performance using In-Memory Technologies in SQL Database](/azure/sql-database/sql-database-in-memory)」 (SQL データベースでのインメモリ テクノロジを使用したパフォーマンスの最適化) を参照してください。
   
   
 <a name="ensure-compatibility-level-gteq-130-99c"></a>  
@@ -452,7 +452,7 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
 - ネイティブ コンパイル トリガー (ネイティブ トリガー)。  
   - メモリ最適化テーブルでは、ネイティブ コンパイル トリガーのみが許可されます。  
 - ネイティブ コンパイル [テーブル値関数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
-  - [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
+  - [Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)  
   
 ネイティブ コンパイルのユーザー定義関数 (UDF) は、解釈された UDF よりも高速で実行されます。 UDF に関するいくつかの考慮事項を以下に示します。  
   
@@ -463,7 +463,7 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
   
 ネイティブ UDF のパフォーマンスに関するテスト データと説明については、以下を参照してください。  
   
-  - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
+  - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016](/archive/blogs/sqlcat/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016)  
   - 2016 年 1 月、Gail Shaw 氏によるブログ投稿「[Natively Compiled User Defined Functions](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)」 (ネイティブ コンパイル ユーザー定義関数)。  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
@@ -472,11 +472,11 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
   
 メモリ最適化テーブルの特別な考慮事項について説明した以下の記事も参照してください。  
   
-- [インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+- [インメモリ OLTP への移行](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   - [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - SQL Server Management Studio のトランザクション パフォーマンス分析レポートは、インメモリ OLTP によってデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。  
   - [メモリ最適化アドバイザー](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) を使用すると、ディスク ベース データベース テーブルをインメモリ OLTP に簡単に移行できます。   
-- [メモリ最適化テーブルのバックアップ、復元、復旧](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [メモリ最適化テーブルのバックアップ、復元、復旧](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   - メモリ最適化テーブルで使用されるストレージはメモリ内にあるときのサイズを大きく上回ることがあり、データベースのバックアップのサイズに影響します。  
 - [メモリ最適化テーブルでのトランザクション](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - メモリ最適化テーブルでのトランザクションに関する、T-SQL の再試行ロジックの情報が含まれます。  
@@ -490,7 +490,7 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
 
 目次にある次の記事とその子記事は、ネイティブにコンパイルされたストアド プロシージャについて詳しく説明しています。
 
-- [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)
+- [ネイティブ コンパイル ストアド プロシージャ](./a-guide-to-query-processing-for-memory-optimized-tables.md)
   
 <a name="related-links-43f"></a>  
   
@@ -501,4 +501,4 @@ Transact-SQL で使用可能なネイティブ コンパイル モジュール�
 インメモリ OLTP を使用して実現できるパフォーマンスの向上を実証するためのコードを提供する記事は以下のとおりです。  
   
 - 「[実証: インメモリ OLTP によるパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)」には、大幅なパフォーマンス向上が望める小規模なデモが用意されています。  
-- 「[Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)」 (インメモリ OLTP のサンプル データベース) には、より大規模なデモが用意されています。  
+- 「[Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)」 (インメモリ OLTP のサンプル データベース) には、より大規模なデモが用意されています。

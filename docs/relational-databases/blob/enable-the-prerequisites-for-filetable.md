@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: fc5ba7ab181e07552f9865eff482d67e292c0249
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767994"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809923"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable の前提条件の有効化
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ GO
  使用できる非トランザクション アクセスのレベルは、FULL、READ_ONLY、および OFF です。  
   
  **Transact-SQL を使用して非トランザクション アクセスのレベルを指定する**  
- - **新しいデータベースを作成**するときに、**NON_TRANSACTED_ACCESS** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントを呼び出します。
+ - **新しいデータベースを作成**するときに、**NON_TRANSACTED_ACCESS** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) ステートメントを呼び出します。
 
    ```sql
    CREATE DATABASE database_name  
@@ -94,7 +94,7 @@ GO
  指定する名前は、データベース レベルで存在するディレクトリに対して一意であることが必要です。  
   
 **Transact-SQL を使用して FileTable のディレクトリを指定する**  
-- **新しいデータベースを作成**するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントを呼び出します。
+- **新しいデータベースを作成**するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) ステートメントを呼び出します。
 
    ```sql
    CREATE DATABASE database_name  
@@ -110,7 +110,7 @@ GO
     GO  
     ```  
   
--   **データベースをアタッチ**するときに、**FOR ATTACH** オプションおよび **DIRECTORY_NAME** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントを呼び出します。  
+-   **データベースをアタッチ**するときに、**FOR ATTACH** オプションおよび **DIRECTORY_NAME** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) ステートメントを呼び出します。  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -153,5 +153,4 @@ GO
 -   非トランザクション アクセスをデータベース レベルで有効または無効にするとき、ディレクトリ名が指定されているかどうか、またはディレクトリ名が一意であるかどうかのチェックは行われません。  
   
 -   FileTable に対して有効化されていたデータベースを削除すると、データベース レベルのディレクトリとそれ以下のすべての FileTable のすべてのディレクトリ構造が削除されます。  
-  
   

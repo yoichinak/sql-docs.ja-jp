@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b20f19032a298805c8958d269adffd8a9600a58a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ea7b94d092565827bbd0086f7f4d122ce219fac
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449991"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725421"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>参照データを使用する DQS の構成
 
@@ -33,7 +33,7 @@ ms.locfileid: "88449991"
 ## <a name="before-you-begin"></a>はじめに  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
- Marketplace の参照データを使用するには、Marketplace の有効なアカウント キーを所有している必要があります。 Marketplace アカウントキーの作成の詳細については、「 [アカウントの作成](https://go.microsoft.com/fwlink/?LinkId=212936) 」 (を参照してください https://go.microsoft.com/fwlink/?LinkId=212936) 。 Marketplace のアカウント キーは、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 内で作成することもできます。 **のホーム画面で、** [管理] **の下の** [構成] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] をクリックし、 **[参照データ]** タブの **[DataMarket のアカウント ID を作成]** をクリックします。  
+ Marketplace の参照データを使用するには、Marketplace の有効なアカウント キーを所有している必要があります。 Marketplace アカウントキーの作成の詳細については、「 [アカウントの作成](/previous-versions/azure/ff717655(v=azure.100)) 」 (を参照してください https://go.microsoft.com/fwlink/?LinkId=212936) 。 Marketplace のアカウント キーは、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 内で作成することもできます。 **のホーム画面で、** [管理] **の下の** [構成] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] をクリックし、 **[参照データ]** タブの **[DataMarket のアカウント ID を作成]** をクリックします。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
@@ -70,7 +70,7 @@ ms.locfileid: "88449991"
   
     3.  **[カテゴリ]** ボックスに、新しいダイレクト参照データ サービス プロバイダーによって提供されるデータのカテゴリを入力します。  
   
-    4.  [スキーマ] ボックスに、ダイレクト参照データ サービス プロバイダーが使用するフィールドの文字列 (列名) を定義するスキーマを指定します。 フィールド名にスペースを含めることはできず、フィールドはコンマで区切る必要があります。 たとえば、`FirstName, LastName, City, State` のように指定します。  
+    4.  [スキーマ] ボックスに、ダイレクト参照データ サービス プロバイダーが使用するフィールドの文字列 (列名) を定義するスキーマを指定します。 フィールド名にスペースを含めることはできず、フィールドはコンマで区切る必要があります。 (例: `FirstName, LastName, City, State`)。  
   
     5.  **[URI]** ボックスに、ダイレクト参照データ サービス プロバイダーの URI を入力します。 DQS ではセキュリティで保護された URI ("https://" で始まるアドレス) だけが使用できます。  
   
@@ -84,5 +84,4 @@ ms.locfileid: "88449991"
   
 ##  <a name="follow-up-after-configuring-dqs-to-use-reference-data"></a><a name="FollowUp"></a> 補足情報: 参照データを使用するように DQS を構成した後  
  必要なナレッジ ベース ドメインを、構成したデータ プロバイダーから提供される参照データにマップする必要があります。 方法については、「[参照データにドメインまたは複合ドメインをアタッチする](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)」をご覧ください。  
-  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 47412f3781274fa242c03975295cdc5ba66b1669
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 059ecfb25389de1be0f8636a868e81e621e57bac
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284812"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867235"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Apache Spark コネクタ:SQL Server および Azure SQL
 
@@ -25,7 +25,7 @@ SQL Server と Azure SQL 用の Apache Spark コネクタは、パフォーマ�
 
 [Apache Spark](https://spark.apache.org/) は、"大規模なデータ処理のための統合された分析エンジン" です。
 
-ソースからコネクタを作成することも、GitHub のリリース セクションから jar をダウンロードすることもできます。 コネクタの最新情報については、[SQL Spark コネクタの GitHub リポジトリ](https://github.com/microsoft/sql-spark-connector)に関する記事をご覧ください。
+Maven 座標 (`com.microsoft.azure:spark-mssql-connector:1.0.0`) を使用して、コネクタをプロジェクトにインポートできます。 また、ソースからコネクタを作成することも、GitHub のリリース セクションから jar をダウンロードすることもできます。 コネクタの最新情報については、[SQL Spark コネクタの GitHub リポジトリ](https://github.com/microsoft/sql-spark-connector)に関する記事をご覧ください。
 
 ## <a name="supported-features"></a>サポートされている機能
 
@@ -53,10 +53,11 @@ SQL Server と Azure SQL 用の Apache Spark コネクタは、こちらで定�
 
 | オプション | Default | 説明 |
 | --------- | ------------------ | ------------------------------------------ |
-| `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` または `NO_DUPLICATES`。 `NO_DUPLICATES` は、実行プログラム再起動シナリオで信頼性の高い挿入を実装します |
-| `dataPoolDataSource` | `none` | `none` は、値が設定されておらず、コネクタが SQL Server の単一インスタンスに書き込む必要があることを意味します。 SQL Server ビッグ データ クラスターのデータ プール テーブルに書き込むデータ ソース名に、この値を設定します|
+| `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` または `NO_DUPLICATES`。 `NO_DUPLICATES` を使用すると、実行プログラム再起動シナリオで、信頼性の高い挿入を実装できます |
+| `dataPoolDataSource` | `none` | `none` は、値が設定されておらず、SQL Server の単一インスタンスへの書き込みにコネクタを使用する必要があることを意味します。 ビッグ データ クラスターのデータ プール テーブルに書き込むデータ ソース名に、この値を設定します|
 | `isolationLevel` | `READ_COMMITTED` | 分離レベルを指定します |
 | `tableLock` | `false` | 書き込みパフォーマンスを向上させるために、`TABLOCK` オプションと共に挿入を実装します |
+| `schemaCheckEnabled` | `true` | false に設定されている場合は、データ フレームと sql テーブル スキーマの厳密なチェックを無効にします |
 
 その他の[一括コピー オプション](../jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)を、`dataframe` のオプションとして設定でき、書き込み時に `bulkcopy` API に渡されます
 
@@ -227,3 +228,5 @@ Azure SQL および SQL Server 用の Apache Spark コネクタは、オープ�
 ## <a name="next-steps"></a>次のステップ
 
 [SQL Spark コネクタの GitHub リポジトリ](https://github.com/microsoft/sql-spark-connector)にアクセスします。
+
+分離レベルについての詳細については、「[SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。

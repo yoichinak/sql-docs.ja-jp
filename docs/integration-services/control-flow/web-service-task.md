@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cecf1f8803b0180ef6127cde203659be26f3c6c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ff964cda9e4e9687a61d50db7c7d53c6e9e24ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477904"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196006"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
 
@@ -52,7 +52,7 @@ ms.locfileid: "88477904"
   
  WSDL ファイルには、Web サービスが提供するメソッド、メソッドに必要な入力パラメーター、メソッドが返す応答、および Web サービスとの通信方法が一覧表示されます。  
   
- メソッドが入力パラメーターを使用する場合、Web サービス タスクにはパラメーター値が必要です。 たとえば、身長に基づいて購入するスキーの長さをアドバイスする Web サービス メソッドでは、入力パラメーターに身長を送信する必要があります。 パラメーター値は、タスク内で定義されている文字列、またはタスクのスコープか親コンテナーで定義されている変数によって指定できます。 変数を使用すると、パッケージ構成またはスクリプトを使用してパラメーター値を動的に更新できるという利点があります。 詳細については、「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージ構成](../../integration-services/packages/package-configurations.md)」を参照してください。  
+ メソッドが入力パラメーターを使用する場合、Web サービス タスクにはパラメーター値が必要です。 たとえば、身長に基づいて購入するスキーの長さをアドバイスする Web サービス メソッドでは、入力パラメーターに身長を送信する必要があります。 パラメーター値は、タスク内で定義されている文字列、またはタスクのスコープか親コンテナーで定義されている変数によって指定できます。 変数を使用すると、パッケージ構成またはスクリプトを使用してパラメーター値を動的に更新できるという利点があります。 詳細については、「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージ構成](../packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
  多くの Web サービス メソッドでは、入力パラメーターを使用しません。 たとえば、今月が誕生月の大統領の名前を取得する Web サービス メソッドでは、入力パラメーターは必要ありません。これは、Web サービスで現在の月をローカルに判別できるためです。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88477904"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>プログラムによる Web サービス タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
@@ -93,7 +93,7 @@ ms.locfileid: "88477904"
 > [!IMPORTANT]  
 >  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
   
- **関連トピック:** [HTTP 接続マネージャー](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 接続マネージャー エディター &#40;[サーバー] ページ&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **関連トピック:** [HTTP 接続マネージャー](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 接続マネージャー エディター &#40;[サーバー] ページ&#41;](../connection-manager/http-connection-manager.md)  
   
  **[WSDLFile]**  
  コンピューターのローカルにある WSDL ファイルの完全修飾パスを入力するか、参照ボタン ( **[...]** ) をクリックしてファイルを指定します。  
@@ -176,13 +176,13 @@ ms.locfileid: "88477904"
  **[最近使ったファイル]**  
  一覧でファイル接続マネージャーを選択するか、[\<**New Connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../connection-manager/file-connection-manager.md)  
   
 #### <a name="outputtype--variable"></a>[OutputType] = [変数]  
  **変数**  
  一覧で変数を選択するか、[\<**New Variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- MSDN ライブラリのビデオ「[Web サービス タスクを使用して Web サービスを呼び出す方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=259642) (technet.microsoft.com)  
+ MSDN ライブラリのビデオ「[Web サービス タスクを使用して Web サービスを呼び出す方法 (SQL Server ビデオ)](/previous-versions/dn912438(v=msdn.10)) (technet.microsoft.com)

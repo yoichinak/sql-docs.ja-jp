@@ -1,7 +1,7 @@
 ---
 title: Reporting Services のリリース ノート (2017 以降) | Microsoft Docs
 description: バージョン 2017 以降の SQL Server Reporting Services (SSRS) での変更点の詳細について説明します。
-ms.date: 08/31/2020
+ms.date: 10/11/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: a3b1984133387f1cbf5405f0c90b4532e56e776b
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: a20939e77c29566c890450d828cff441366c6f00
+ms.sourcegitcommit: dc3ea1696b8a4332934568439aed6cce4e9737eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89282396"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93244664"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 以降のリリース ノート
 
@@ -54,6 +54,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
 ## <a name="15075454810-20200831"></a>15.0.7545.4810、2020 年 8 月 31 日 
+" *(製品バージョン: 15.0.1102.861)* "
 
 | 修正された問題 | 詳細 |
 | :---------- | :------ |
@@ -72,6 +73,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | コマンド ラインのアップグレードで EULA フラグが不要になった  | &nbsp; |
 
 ## <a name="150724337714-20191101"></a>15.0.7243.37714、2019/11/01
+" *(製品バージョン: 15.0.1102.675)* "
 
 最初のリリース。
 
@@ -187,7 +189,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | リンク レポートのレポート パラメーターの表示が、そのプロパティを編集すると元に戻る。 | &nbsp; |
 | Express エディションで URL パラメーター rc:Toolbar=false が機能しない。 | &nbsp; |
 | CanGrow プロパティが false に設定されたテキスト ボックスに式があると、値が表示されない。 | &nbsp; |
-| セットアップ時のプロダクト キーに "_詳細情報_" リンクが追加される。 | &nbsp; |
+| セットアップ時のプロダクト キーに " _詳細情報_ " リンクが追加される。 | &nbsp; |
 | カスタムのフォーム認証を使用した Web ポータルで、スライド式有効期限の Cookie が無視される。 | &nbsp; |
 | 行のコンテンツが空の場合、Word にエクスポートすると行の高さが等しくならない。 | &nbsp; |
 | &nbsp; | &nbsp; |

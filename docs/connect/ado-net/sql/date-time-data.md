@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff8e80314210dee9c227360e54f8ba1e6b1a3691
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896990"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725653"
 ---
 # <a name="date-and-time-data"></a>日付型と時刻型のデータ
 
@@ -27,7 +27,7 @@ SQL Server 2008 では、日付と時刻の情報を処理するための新し�
   
 SQL Server 2008 より前のバージョンの SQL Server では、日付と時刻の値を操作するために 2 つのデータ型 (`datetime` と `smalldatetime`) しかありませんでした。 いずれのデータ型も日付値と時刻値の両方を保持するため、日付と時刻のどちらか一方の値のみを使用する場合にはかえって面倒になります。 さらに、これらのデータ型では、1753 年に英国でグレゴリオ暦が導入された後の日付のみがサポートされます。 もう 1 つの制限事項は、これらの古いデータ型がタイムゾーンに対応していないことです。これにより、複数のタイムゾーンからのデータの操作が困難になります。  
   
-SQL Server のデータ型の詳細なドキュメントについては SQL Server オンライン ブックを参照してください。 日付型と時刻型のデータに関するエントリレベルのトピックについては、「[日時データの使用](https://go.microsoft.com/fwlink/?LinkID=98361)」を参照してください。
+SQL Server のデータ型の詳細なドキュメントについては SQL Server オンライン ブックを参照してください。 日付型と時刻型のデータに関するエントリレベルのトピックについては、「[日時データの使用](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))」を参照してください。
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 で導入された日付/時刻データ型  
  次の表では、新しい新しい日付と時刻のデータ型について説明します。  
@@ -47,12 +47,12 @@ SQL Server で日付と時刻の値を解析する方法は、型システムの
   
 Transact-SQL SET LANGUAGE ステートメントでは、日付部分の順序を決定する DATEFORMAT を暗黙的に設定します。 接続に対して SET DATEFORMAT Transact-SQL ステートメントを使用して、MDY、DMY、YMD、YDM、MYD、DYM の順序で日付部分を並べ替えることにより、日付値を明確にすることができます。  
   
-接続に対して DATEFORMAT を指定しない場合、SQL Server では接続に関連付けられている既定の言語が使用されます。 たとえば、' 01/02/03' の日付文字列は、米国英語の言語設定のサーバーでは MDY (2003 年 1 月 2 日) として解釈され、英国英語の言語設定のサーバーでは DMY (2003 年 2 月 1 日) として解釈されます。 年は SQL Server の終了年のルールを使用して決定されます。このルールでは、世紀値を割り当てるための終了日を定義しています。 詳細については、SQL Server オンライン ブックの「[two digit year cutoff オプション](https://go.microsoft.com/fwlink/?LinkId=120473)」を参照してください。  
+接続に対して DATEFORMAT を指定しない場合、SQL Server では接続に関連付けられている既定の言語が使用されます。 たとえば、' 01/02/03' の日付文字列は、米国英語の言語設定のサーバーでは MDY (2003 年 1 月 2 日) として解釈され、英国英語の言語設定のサーバーでは DMY (2003 年 2 月 1 日) として解釈されます。 年は SQL Server の終了年のルールを使用して決定されます。このルールでは、世紀値を割り当てるための終了日を定義しています。 詳細については、SQL Server オンライン ブックの「[two digit year cutoff オプション](/previous-versions/sql/sql-server-2008-r2/ms189577(v=sql.105))」を参照してください。  
   
 > [!NOTE]
 >  文字列形式から `date`、`time`、`datetime2`、または `datetimeoffset` に変換する場合、YDM 日付形式はサポートされていません。  
   
-SQL Server で日付と時刻のデータがどのように解釈されるかの詳細については、SQL Server 2008 オンライン ブックの「[日時データの使用](https://go.microsoft.com/fwlink/?LinkID=98361)」を参照してください。  
+SQL Server で日付と時刻のデータがどのように解釈されるかの詳細については、SQL Server 2008 オンライン ブックの「[日時データの使用](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))」を参照してください。  
   
 ## <a name="datetime-data-types-and-parameters"></a>日付/時刻データ型とパラメーター  
 新しい日付と時刻のデータ型をサポートするため、<xref:System.Data.SqlDbType> に次の列挙値が追加されています。  
@@ -68,9 +68,9 @@ SQL Server で日付と時刻のデータがどのように解釈されるかの
 <xref:Microsoft.Data.SqlClient.SqlParameter> のデータ型は、前の <xref:System.Data.SqlDbType> 列挙型のいずれかの値を使って指定できます。 
 
 > [!NOTE]
-> `SqlParameter` の `DbType` プロパティは `SqlDbType.Date` に設定できません。
+> `DbType` の `SqlParameter` プロパティは `SqlDbType.Date` に設定できません。
 
-`SqlParameter` オブジェクトの <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> プロパティを特定の <xref:System.Data.DbType> に設定することで、汎用的に <xref:Microsoft.Data.SqlClient.SqlParameter> の型を指定することもできます。 `datetime2` 型と `datetimeoffset` 型をサポートするため、<xref:System.Data.DbType> には、次の列挙値が追加されています。  
+<xref:Microsoft.Data.SqlClient.SqlParameter> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> プロパティを特定の `SqlParameter` に設定することで、汎用的に <xref:System.Data.DbType> の型を指定することもできます。 <xref:System.Data.DbType> 型と `datetime2` 型をサポートするため、`datetimeoffset` には、次の列挙値が追加されています。  
   
 - DbType.DateTime2  
   
@@ -94,7 +94,7 @@ SQL Server で日付と時刻のデータがどのように解釈されるかの
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|<xref:Microsoft.Data.SqlClient.SqlParameter.IsNullable%2A>|値が null 許容であるかどうかを取得または設定します。 サーバーに null パラメーター値を送信する場合、`null` (Visual Basic では `Nothing`) ではなく、<xref:System.DBNull> を指定する必要があります。 データベースの null 値の詳細については、「[null 値の処理](handle-null-values.md)」を参照してください。|  
+|<xref:Microsoft.Data.SqlClient.SqlParameter.IsNullable%2A>|値が null 許容であるかどうかを取得または設定します。 サーバーに null パラメーター値を送信する場合、<xref:System.DBNull> (Visual Basic では `null`) ではなく、`Nothing` を指定する必要があります。 データベースの null 値の詳細については、「[null 値の処理](handle-null-values.md)」を参照してください。|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Precision%2A>|値を表すために使用される最大桁数を取得または設定します。 この設定は日付と時刻のデータ型では無視されます。|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Scale%2A>|小数点以下の桁数を取得または設定します。これは `Time`、`DateTime2`、`DateTimeOffset` の時刻部分の値の処理で使用されます。 既定値は 0 で、これは実際のスケールが値から推論され、サーバーに送信されることを意味します。|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Size%2A>|日付と時刻のデータ型では無視されます。|  
@@ -105,7 +105,7 @@ SQL Server で日付と時刻のデータがどのように解釈されるかの
 >  0 時未満または 24 時以上の時刻値では、<xref:System.ArgumentException> がスローされます。  
   
 ### <a name="creating-parameters"></a>パラメーターの作成  
-<xref:Microsoft.Data.SqlClient.SqlParameter> オブジェクトを作成するには、そのコンストラクターを使用するか、それを <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> コレクションに、<xref:Microsoft.Data.SqlClient.SqlParameterCollection> の `Add` メソッドを呼び出すことによって追加します。 `Add` メソッドは、コンストラクター引数または既存のパラメーター オブジェクトのいずれかを入力として受け取ります。  
+<xref:Microsoft.Data.SqlClient.SqlParameter> オブジェクトを作成するには、そのコンストラクターを使用するか、それを <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> コレクションに、`Add` の <xref:Microsoft.Data.SqlClient.SqlParameterCollection> メソッドを呼び出すことによって追加します。 `Add` メソッドは、コンストラクター引数または既存のパラメーター オブジェクトのいずれかを入力として受け取ります。  
   
 このトピックの次のセクションでは、日付と時刻のパラメーターを指定する方法の例について説明します。
   
@@ -150,7 +150,7 @@ parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");
 ```  
   
 ### <a name="addwithvalue"></a>AddWithValue  
-次のコード フラグメントに示すように、<xref:Microsoft.Data.SqlClient.SqlCommand> の `AddWithValue` メソッドを使用してパラメーターを指定することもできます。 ただし、`AddWithValue` メソッドでは、パラメーターの <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> または <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> を指定することはできません。  
+次のコード フラグメントに示すように、`AddWithValue` の <xref:Microsoft.Data.SqlClient.SqlCommand> メソッドを使用してパラメーターを指定することもできます。 ただし、`AddWithValue` メソッドでは、パラメーターの <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> または <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> を指定することはできません。  
   
 ```csharp  
 command.Parameters.AddWithValue(   
@@ -177,7 +177,7 @@ SQL Server 2008 の date 値と time 値を取得するためのメソッドを�
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>|そのフィールドの基になるプロバイダー固有の型である型を返します。 新しい日付と時刻の型に対して `GetFieldType` と同じ型を返します。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>|指定した列の値を取得します。 新しい日付と時刻の型に対して `GetValue` と同じ型を返します。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>|指定した配列内の値を取得します。|  
-|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|列の値を <xref:System.Data.SqlTypes.SqlString> として取得します。 データを `SqlString` として表現できない場合、<xref:System.InvalidCastException> が発生します。|  
+|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|列の値を <xref:System.Data.SqlTypes.SqlString> として取得します。 データを <xref:System.InvalidCastException> として表現できない場合、`SqlString` が発生します。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValue%2A>|列データをその既定の `SqlDbType` として取得します。 新しい日付と時刻の型に対して `GetValue` と同じ型を返します。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>|指定した配列内の値を取得します。|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetString%2A>|Type System Version が SQL Server 2005 に設定されている場合、列の値を文字列として取得します。 データを文字列として表現できない場合、<xref:System.InvalidCastException> が発生します。|  
@@ -208,9 +208,9 @@ SQL Server 2008 での日付と時刻の値の操作の詳細については、S
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[日付と時刻のデータ型および関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Transact-SQL の日付と時刻のデータ型と関数の概要を説明します。|  
-|[日時データの使用](https://go.microsoft.com/fwlink/?LinkId=98361)|日付と時刻のデータ型と関数に関する情報とそれらの使用例を提供します。|  
-|[データ型 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008 のシステム データ型について説明します。|  
+|[日付と時刻のデータ型および関数 (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms186724(v=sql.100))|Transact-SQL の日付と時刻のデータ型と関数の概要を説明します。|  
+|[日時データの使用](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|日付と時刻のデータ型と関数に関する情報とそれらの使用例を提供します。|  
+|[データ型 (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100))|SQL Server 2008 のシステム データ型について説明します。|  
   
 ## <a name="next-steps"></a>次のステップ
 - [SQL Server のデータ型と ADO.NET](sql-server-data-types.md)

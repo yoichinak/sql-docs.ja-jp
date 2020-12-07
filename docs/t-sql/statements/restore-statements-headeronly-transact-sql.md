@@ -24,12 +24,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f4411388de1c2a621665a65aacddc188a3a9f2ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a306c9ceba9078852f7f2edcce7978518c251dd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478752"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498134"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -44,7 +44,6 @@ ms.locfileid: "88478752"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 RESTORE HEADERONLY   
 FROM <backup_device>   
 [ WITH   
@@ -169,7 +168,7 @@ FROM <backup_device>
 ## <a name="examples"></a>例  
  次の例では、ディスク ファイル `C:\AdventureWorks-FullBackup.bak` のヘッダー情報を返します。  
   
-```  
+```sql 
 RESTORE HEADERONLY   
 FROM DISK = N'C:\AdventureWorks-FullBackup.bak';  
 GO  

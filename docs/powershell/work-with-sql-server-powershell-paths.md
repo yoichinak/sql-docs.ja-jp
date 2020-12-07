@@ -4,37 +4,34 @@ description: コマンドレット、またはプロバイダー パスで識別
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 15dae50a965c6e30c9531a76b0cb7d6867ee49ec
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.openlocfilehash: 3f07a7bef87e6ab770c82a482c85bd9dacf9dae1
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714320"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081941"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell パスの操作
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダーのパスでノードに移動した後、ノードに関連付けられている [!INCLUDE[ssDE](../includes/ssde-md.md)] 管理オブジェクトのメソッドとプロパティを使用して、作業を実行したり、情報を取得したりできます。  
-  
-> [!NOTE]
-> SQL Server PowerShell モジュールには **SqlServer** と **SQLPS** の 2 つがあります。 **SQLPS** モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。 **SqlServer** モジュールには **SQLPS** のコマンドレットの更新バージョンだけでなく、最新の SQL 機能をサポートする新しいコマンドレットも含まれています。  
-> SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれて*いました*が、SSMS の 16.x バージョンのみです。 PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを PowerShell ギャラリーからインストールする必要があります。
-> **SqlServer** モジュールをインストールする場合は、「[SQL Server PowerShell のインストール](download-sql-server-ps-module.md)」を参照してください。
 
-  
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
+
 [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダーのパスでノードに移動した後、次の 2 種類の操作を実行できます。  
   
 -   **Rename-Item**など、ノードを操作する Windows PowerShell コマンドレットを実行できます。  
   
 -   関連付けられた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト モデル (SMO など) のメソッドを呼び出すことができます。 たとえば、パスで <xref:Microsoft.SqlServer.Management.Smo.Database> ノードに移動すると、 クラスのメソッドとプロパティを使用できます。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのオブジェクトを管理するために使用されます。 データベース内のデータの処理には使用されません。 テーブルまたはビューに移動した場合に、プロバイダーを使用してデータの選択、挿入、更新、または削除を行うことはできません。 テーブルおよびビューのデータを Windows PowerShell 環境からクエリまたは変更するには、 **Invoke-Sqlcmd** コマンドレットを使用します。 詳細については、「 [Invoke-Sqlcmd コマンドレット](invoke-sqlcmd-cmdlet.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのオブジェクトを管理するために使用されます。 データベース内のデータの処理には使用されません。 テーブルまたはビューに移動した場合に、プロバイダーを使用してデータの選択、挿入、更新、または削除を行うことはできません。 テーブルおよびビューのデータを Windows PowerShell 環境からクエリまたは変更するには、 **Invoke-Sqlcmd** コマンドレットを使用します。 詳細については、「 [Invoke-Sqlcmd コマンドレット](/powershell/module/sqlserver/invoke-sqlcmd)」を参照してください。  
   
 ##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a> メソッドとプロパティの一覧表示  
  **メソッドとプロパティの一覧表示**  
@@ -101,7 +98,6 @@ $MyDBVar.State
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell パスの移動](navigate-sql-server-powershell-paths.md)   
- [URN から SQL Server プロバイダー パスへの変換](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)   
+ [URN から SQL Server プロバイダー パスへの変換](/powershell/module/sqlserver/Convert-UrnToPath)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
   

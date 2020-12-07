@@ -15,25 +15,25 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8e081ecc3eecf44e358d5288fa689e2676d21f22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496065"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123657"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight クラスターの削除タスク
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-**Azure HDInsight クラスターの削除タスク**を使用すると、指定された Azure サブスクリプションとリソース グループの Azure HDInsight クラスターを SSIS パッケージで削除できます。
+**Azure HDInsight クラスターの削除タスク** を使用すると、指定された Azure サブスクリプションとリソース グループの Azure HDInsight クラスターを SSIS パッケージで削除できます。
   
-**Azure HDInsight クラスターの削除タスク**は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
+**Azure HDInsight クラスターの削除タスク** は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
   
 > [!NOTE]
 > HDInsight クラスターの削除には 10 分から 20 分かかる場合があります。  
   
-**Azure HDInsight クラスターの削除タスク**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックすると、次の **[Azure HDInsight クラスターの削除タスク エディター]** ダイアログ ボックスが表示されます。  
+**Azure HDInsight クラスターの削除タスク** を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックすると、次の **[Azure HDInsight クラスターの削除タスク エディター]** ダイアログ ボックスが表示されます。  
   
 次の表で、ダイアログ ボックスの各フィールドについて説明します。  
   

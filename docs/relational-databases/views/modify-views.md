@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d273277eff9a9d731aca1f60115aef28ef27a25f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472974"
 ---
 # <a name="modify-views"></a>ビューの変更
@@ -61,7 +61,7 @@ ms.locfileid: "88472974"
   
 #### <a name="to-modify-a-view"></a>ビューを変更するには  
   
-1.  **オブジェクト エクスプローラー**で、ビューがあるデータベースの横にあるプラス記号をクリックし、 **[ビュー]** フォルダーの横にあるプラス記号をクリックします。  
+1.  **オブジェクト エクスプローラー** で、ビューがあるデータベースの横にあるプラス記号をクリックし、 **[ビュー]** フォルダーの横にあるプラス記号をクリックします。  
   
 2.  変更するビューを右クリックし、 **[デザイン]** を選択します。  
   
@@ -73,13 +73,13 @@ ms.locfileid: "88472974"
   
     3.  削除するテーブルのタイトル バーを右クリックし、 **[削除]** をクリックします。  
   
-4.  **ファイル** メニューの **view name**_の保存_をクリックします。  
+4.  **ファイル** メニューの **view name**_の保存_ をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-modify-a-view"></a>ビューを変更するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

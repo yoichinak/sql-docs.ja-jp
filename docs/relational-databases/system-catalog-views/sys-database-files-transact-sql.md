@@ -1,6 +1,6 @@
 ---
 description: sys.database_files (Transact-SQL)
-title: database_files (Transact-sql) |Microsoft Docs
+title: sys.database_files (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50db45870e5168ab30973b2692fbcc7a3f6e7601
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 39b6c373a75a5480d4b2d044af84a53c7b906c4d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537507"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810518"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "89537507"
 |**data_space_id**|**int**|値には0または0より大きい値を指定できます。 値0はデータベースログファイルを表し、0より大きい値はこのデータファイルが格納されているファイルグループの ID を表します。|  
 |**name**|**sysname**|データベース内のファイルの論理名。|  
 |**physical_name**|**nvarchar(260)**|オペレーティングシステムのファイル名。 データベースが AlwaysOn の [読み取り可能なセカンダリレプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)によってホストされている場合、 **physical_name** は、プライマリレプリカデータベースのファイルの場所を示します。 読み取り可能なセカンダリデータベースの正しいファイルの場所に対して、クエリ [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)を使用します。|  
-|**状態**|**tinyint**|ファイルの状態です。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = 問題あり<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
+|**state**|**tinyint**|ファイルの状態です。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = 問題あり<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|ファイルの状態の説明です。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 詳しくは、「[ファイルの状態](../../relational-databases/databases/file-states.md)」をご覧ください。|  
 |**size**|**int**|ファイルの現在のサイズ (8 KB ページ単位)。<br /><br /> 0 = 適用なし<br /><br /> データベース スナップショットの場合、size は、スナップショットがファイルに対して使用する中で最大の領域を表します。<br /><br /> FILESTREAM ファイルグループコンテナーの場合、サイズはコンテナーの現在使用されているサイズを反映します。|  
 |**max_size**|**int**|最大ファイルサイズ (8 KB ページ単位):<br /><br /> 0 = 拡張は許可されません。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログファイルは、最大サイズの 2 TB まで拡張されます。<br /><br /> FILESTREAM ファイルグループコンテナーの場合、max_size にはコンテナーの最大サイズが反映されます。<br /><br /> ログファイルのサイズを無制限にしてアップグレードされたデータベースでは、ログファイルの最大サイズに対して-1 が報告されることに注意してください。|  
@@ -66,7 +66,7 @@ ms.locfileid: "89537507"
 |**backup_lsn**|**numeric(25,0)**|ファイルの最新のデータまたは差分バックアップの LSN。|  
   
 > [!NOTE]  
->  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連付けられているロックが延期されます。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 そのため、ラージオブジェクトを削除または切り捨てた直後に、sys. database_files によって返された値は、実際に使用可能なディスク領域を反映していない可能性があります。  
+>  大きなインデックスを削除または再構築したり、大きなテーブルを削除したり切り捨てたりすると、では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] トランザクションがコミットされるまで、実際のページの割り当て解除とそれに関連付けられているロックが延期されます。 遅延削除操作では、割り当てられた領域はすぐに解放されません。 このため、大きなオブジェクトを削除または切り捨てた直後に sys.database_files によって返された値は、実際に使用可能なディスク領域を反映していない可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
@@ -80,14 +80,13 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-を使用する場合の詳細につい [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ては、SQL Customer アドバイザリチームブログの「 [Azure SQL Database V12 でのデータベースサイズの決定](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) 」を参照してください。
+を使用する場合の詳細につい [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ては、SQL Customer アドバイザリチームブログの「 [Azure SQL Database V12 でのデータベースサイズの決定](/archive/blogs/sqlcat/determining-database-size-in-azure-sql-database-v12) 」を参照してください。
   
 ## <a name="see-also"></a>参照  
  [データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [ファイルの状態](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
-  
   

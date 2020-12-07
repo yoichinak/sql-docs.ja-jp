@@ -12,12 +12,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ab6d2ce34991dfaf4d2266ca0b0d900eb93fdde6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0ab6f4ff4d5681d0dfeb30ded57447ddbb8b24a0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990155"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300545"
 ---
 # <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ CREATE TABLE AS SELECT (CTAS) は、使用可能な最も重要な T-SQL 機能�
 -   外部データをクエリまたはインポートする。  
 
 > [!NOTE]  
-> CTAS はテーブルの作成機能に加えられたものであるため、このトピックでは CREATE TABLE トピックの内容は繰り返しません。 代わりに、CTAS と CREATE TABLE のステートメントの違いについて説明します。 CREATE TABLE の詳細については、[CREATE TABLE (Azure Synapse Analytics)](https://msdn.microsoft.com/library/mt203953/) ステートメントを参照してください。 
+> CTAS はテーブルの作成機能に加えられたものであるため、このトピックでは CREATE TABLE トピックの内容は繰り返しません。 代わりに、CTAS と CREATE TABLE のステートメントの違いについて説明します。 CREATE TABLE の詳細については、[CREATE TABLE (Azure Synapse Analytics)](./create-table-azure-sql-data-warehouse.md) ステートメントを参照してください。 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,13 +81,13 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="arguments-bk"></a>
   
 ## <a name="arguments"></a>引数  
-詳細については、CREATE TABLE の「[引数](https://msdn.microsoft.com/library/mt203953/#Arguments)」セクションを参照してください。  
+詳細については、CREATE TABLE の「[引数](./create-table-azure-sql-data-warehouse.md#Arguments)」セクションを参照してください。  
 
 <a name="column-options-bk"></a>
 
 ### <a name="column-options"></a>列のオプション
 `column_name` [ ,...`n` ]   
- 列名では、CREATE TABLE に示されている[列のオプション](https://msdn.microsoft.com/library/mt203953/#ColumnOptions)は使用できません。  代わりに、新しいテーブルには 1 つ以上の列名のオプション リストを指定できます。 新しいテーブルの列では、指定した名前を使用します。 列名を指定する場合、列リスト内の列の数は、SELECT の結果内の列の数と一致する必要があります。 列名を指定しない場合、新しいターゲット テーブルでは、SELECT ステートメントの結果の列名を使用します。 
+ 列名では、CREATE TABLE に示されている[列のオプション](./create-table-azure-sql-data-warehouse.md#ColumnOptions)は使用できません。  代わりに、新しいテーブルには 1 つ以上の列名のオプション リストを指定できます。 新しいテーブルの列では、指定した名前を使用します。 列名を指定する場合、列リスト内の列の数は、SELECT の結果内の列の数と一致する必要があります。 列名を指定しない場合、新しいターゲット テーブルでは、SELECT ステートメントの結果の列名を使用します。 
   
  データ型、照合順序、NULL 値の許容など、その他の列オプションを指定することはできません。 これらの各属性は、`SELECT` ステートメントの結果から派生されます。 ただし、SELECT ステートメントを使用して、属性を変更することができます。 例については、「[CTAS を使用して列属性を変更する](#ctas-change-column-attributes-bk)」を参照してください。   
 
@@ -98,14 +98,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 CTAS ステートメントには分散オプションが必要であり、既定値はありません。 これは、既定値を持つ CREATE TABLE とは異なります。 
 
-最適な分散オプションの選択方法などの詳細については、CREATE TABLE の「[Table distribution options](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions)」 (テーブル分散オプション) セクションを参照してください。 
+最適な分散オプションの選択方法などの詳細については、CREATE TABLE の「[Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions)」 (テーブル分散オプション) セクションを参照してください。 
 
 <a name="table-partition-options-bk"></a>
 
 ### <a name="table-partition-options"></a>テーブル パーティションのオプション
 CTAS ステートメントは、ソース テーブルがパーティション分割されている場合でも、既定では、非パーティション テーブルを作成します。 CTAS ステートメントを使用して、パーティション テーブルを作成するには、パーティション オプションを指定する必要があります。 
 
-詳細については、CREATE TABLE の「[Table partition options](https://msdn.microsoft.com/library/mt203953/#TablePartitionOptions)」 (テーブル パーティションのオプション) セクションを参照してください。
+詳細については、CREATE TABLE の「[Table partition options](./create-table-azure-sql-data-warehouse.md#TablePartitionOptions)」 (テーブル パーティションのオプション) セクションを参照してください。
 
 <a name="select-options-bk"></a>
 
@@ -125,14 +125,14 @@ SELECT ステートメントは、CTAS と CREATE TABLE の基本的な違いで
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>アクセス許可  
-CTAS には、*select_criteria* で参照されるすべてのオブジェクトに対する `SELECT` 権限が必要です。
+CTAS には、 *select_criteria* で参照されるすべてのオブジェクトに対する `SELECT` 権限が必要です。
 
-テーブルを作成する権限については、CREATE TABLE の「[権限](https://msdn.microsoft.com/library/mt203953/#Permissions)」を参照してください。 
+テーブルを作成する権限については、CREATE TABLE の「[権限](./create-table-azure-sql-data-warehouse.md#Permissions)」を参照してください。 
   
 <a name="general-remarks-bk"></a>
   
 ## <a name="general-remarks"></a>全般的な解説
-詳細については、CREATE TABLE の「[全般的な解説](https://msdn.microsoft.com/library/mt203953/#GeneralRemarks)」を参照してください。
+詳細については、CREATE TABLE の「[全般的な解説](./create-table-azure-sql-data-warehouse.md#GeneralRemarks)」を参照してください。
 
 <a name="limitations-bk"></a>
 
@@ -147,7 +147,7 @@ CTAS では [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-row
 <a name="locking-behavior-bk"></a>
   
 ## <a name="locking-behavior"></a>ロック動作  
- 詳細については、CREATE TABLE の「[ロック動作](https://msdn.microsoft.com/library/mt203953/#LockingBehavior)」を参照してください。
+ 詳細については、CREATE TABLE の「[ロック動作](./create-table-azure-sql-data-warehouse.md#LockingBehavior)」を参照してください。
  
 <a name="performance-bk"></a>
  
@@ -847,8 +847,5 @@ OPTION (MAXDOP 1);
  [CREATE TABLE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](./create-external-table-transact-sql.md)  
   
-  
-
-

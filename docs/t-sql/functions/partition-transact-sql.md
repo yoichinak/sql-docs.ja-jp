@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 241eb35a882350a982177da3bcc94f4154f25e6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95f101b79978c86e2b963891d495ff5a067b5fd9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459597"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128375"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88459597"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 [ database_name. ] $PARTITION.partition_function_name(expression)  
 ```  
   
@@ -50,7 +49,7 @@ ms.locfileid: "88459597"
  パーティション分割列の値のセットが適用される、既存のパーティション関数の名前を指定します。  
   
  *式 (expression)*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。このデータ型は、対応するパーティション分割列のデータ型と一致するか、パーティション分割列のデータ型に暗黙的に変換される必要があります。 *式* に現在参加しているパーティション分割列の名前を指定できますも *partition_function_name*です。  
+ [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。このデータ型は、対応するパーティション分割列のデータ型と一致するか、パーティション分割列のデータ型に暗黙的に変換される必要があります。 *式* に現在参加しているパーティション分割列の名前を指定できますも *partition_function_name* です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -65,10 +64,10 @@ ms.locfileid: "88459597"
 ### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>A. パーティション分割列の値のセットに対してパーティション番号を取得する  
  次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数 `RangePF1` を作成します。 $PARTITION は、`10` のパーティション分割列を表す値 `RangePF1` が、テーブルのパーティション 1 に配置されるかどうかを判定するために使用します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE PARTITION FUNCTION RangePF1 ( int )  
+CREATE PARTITION FUNCTION RangePF1 ( INT )  
 AS RANGE FOR VALUES (10, 100, 1000) ;  
 GO  
 SELECT $PARTITION.RangePF1 (10) ;  
@@ -80,7 +79,7 @@ GO
   
  この例を実行するには、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースに対して最初に PartitionAW.sql スクリプトを実行する必要があります。 詳細については、「[PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)」を参照してください。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT $PARTITION.TransactionRangePF1(TransactionDate) AS Partition,   
@@ -96,7 +95,7 @@ GO
 > [!NOTE]  
 >  この例を実行するには、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースに対して最初に PartitionAW.sql スクリプトを実行する必要があります。 詳細については、「[PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)」を参照してください。  
   
-```  
+```sql  
 SELECT * FROM Production.TransactionHistory  
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  

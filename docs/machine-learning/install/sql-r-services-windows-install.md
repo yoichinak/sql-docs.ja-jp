@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487655"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956771"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services のインストール
 
@@ -32,7 +32,7 @@ Windows に SQL Server 2016 R Services をインストールする方法につ�
 
 + データベース エンジンのインスタンスが必要です。 R だけをインストールすることはできませんが、既存のインスタンスに段階的に追加することはできます。
 
-+ ビジネス継続性のために、R Services では [Always On 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)がサポートされています。 各ノードに R Services をインストールし、パッケージを構成する必要があります。
++ ビジネス継続性のために、R Services では [Always On 可用性グループ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)がサポートされています。 各ノードに R Services をインストールし、パッケージを構成する必要があります。
 
 + SQL Server Always On フェールオーバー クラスター インスタンス (FCI) に R Services をインストールしないでください。 R プロセスを分離に使用されるセキュリティ上のメカニズムは、SQL Server Always On フェールオーバー クラスター インスタンス (FCI) 環境との互換性がありません。
 
@@ -91,7 +91,7 @@ SQL Server の前提条件としてインストールされる特定のバージ
     + データベース エンジン サービス
     + R Services (データベース内)
 
-1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
+1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。
 
 ## <a name="set-environment-variables"></a>環境変数の設定
 
@@ -110,7 +110,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 ##  <a name="enable-script-execution"></a>スクリプトの実行を有効にする
 
-1. [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) または [Azure Data Studio](../../azure-data-studio/what-is.md) を開きます。
+1. [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) または [Azure Data Studio](../../azure-data-studio/what-is.md) を開きます。
 
 1. R Services をインストールしたインスタンスに接続し、 **[新しいクエリ]** をクリックしてクエリ ウィンドウを開き、次のコマンドを実行します。
 
@@ -181,7 +181,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 1. 既にインストールされているベースライン インスタンスを使用して開始します: SQL Server 2016 初回リリース、SQL Server 2016 SP 1、または SQL Server 2016 SP 2。
 
-1. 累積的な更新プログラムの一覧に移動します: [Microsoft SQL Server の最新の更新プログラム](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+1. 累積的な更新プログラムの一覧に移動します: [Microsoft SQL Server の最新の更新プログラム](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 1. 最新の Service Pack (ベースライン インスタンスとしてまだインストールされていない) と累積更新プログラムを選択します。 実行可能ファイルがダウンロードされ、自動的に抽出されます。
 
@@ -205,7 +205,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 * [SQL Server Machine Learning Services のファイアウォール構成](../../machine-learning/security/firewall-configuration.md)。
 * [追加のネットワーク プロトコルの有効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 * [リモート接続の有効化](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)。
-* ディスク領域を消費するタスクを外部スクリプトで実行しないようにするための[ディスク クォータの管理](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)。
+* ディスク領域を消費するタスクを外部スクリプトで実行しないようにするための[ディスク クォータの管理](/windows/desktop/fileio/managing-disk-quotas)。
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>

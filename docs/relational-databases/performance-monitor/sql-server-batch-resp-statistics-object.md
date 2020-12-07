@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 155ff6d21fdb0a40e042463b809c1ed14bbe70df
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458154"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983164"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server、Batch Resp Statistics オブジェクト
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "86458154"
   
 |項目|説明|  
 |----------|-----------------|  
-|**CPU Time:Requests**|要求に対して CPU が使用した時間。|  
+|**CPU Time:Requests**|CPU 時間に基づく要求の数。|  
 |**CPU Time:Total(ms)**|バッチに対して CPU が使用した合計時間。|  
-|**Elapsed Time:Requests**|要求の経過時間。|  
+|**Elapsed Time:Requests**|経過時間に基づく要求の数。|  
 |**Elapsed Time:Total(ms)**|バッチの経過時間。|  
 
 ## <a name="see-also"></a>参照

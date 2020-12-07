@@ -17,12 +17,12 @@ ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c880b9ff6a96a7bcd5365e3afc098467630b3a7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82efd353b95faba757622e37d0471f784d13d58d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465418"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192842"
 ---
 # <a name="system-databases"></a>システム データベース
 
@@ -38,7 +38,7 @@ ms.locfileid: "88465418"
 |[tempdb データベース](../../relational-databases/databases/tempdb-database.md)|一時オブジェクトや生成途中の結果セットを保存するためのワークスペースです。|  
 
 > [!IMPORTANT]
-> Azure SQL Database 単一データベースおよびエラスティック プールでは、master データベースと tempdb データベースのみが適用されます。 詳しくは、「[Azure SQL Database サーバーとは](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)」をご覧ください。 Azure SQL Database のコンテキストでの tempdb の詳細については、「[SQL Database の Tempdb データベース](tempdb-database.md#tempdb-database-in-sql-database)」を参照してください。 Azure SQL Managed Instance の場合、すべてのシステム データベースが適用されます。 Azure SQL Database の Managed Instance について詳しくは、「[マネージド インスタンスとは?](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)」をご覧ください。
+> Azure SQL Database 単一データベースおよびエラスティック プールでは、master データベースと tempdb データベースのみが適用されます。 詳しくは、「[Azure SQL Database サーバーとは](/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)」をご覧ください。 Azure SQL Database のコンテキストでの tempdb の詳細については、「[SQL Database の Tempdb データベース](tempdb-database.md#tempdb-database-in-sql-database)」を参照してください。 Azure SQL Managed Instance の場合、すべてのシステム データベースが適用されます。 Azure SQL Database の Managed Instance について詳しくは、「[マネージド インスタンスとは?](/azure/sql-database/sql-database-managed-instance)」をご覧ください。
   
 ## <a name="modifying-system-data"></a>システム データの変更  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーは、システム テーブル、システム ストアド プロシージャ、カタログ ビューなどのシステム オブジェクトに含まれている情報を直接更新できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、代わりに完全な管理ツール セットが用意されています。ユーザーは、これらのツールを使用して、システムを完全に管理し、データベース内のすべてのユーザーとオブジェクトを管理できます。 コーディネートは次のとおりです。  
@@ -78,5 +78,4 @@ ms.locfileid: "88465418"
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
  [データベース](../../relational-databases/databases/databases.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b54697ebaad053c4fa7a598fa5407d150c6a51d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eba08dc813e869a6ce412dd185757d6b533407a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496171"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724988"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
 
@@ -35,7 +35,7 @@ ms.locfileid: "88496171"
   
 -   SQL Server CDC メカニズムによって生成される一連の変更テーブルと変更アクセス関数。これらは、通常の (Oracle 用ではない) SQL Server CDC で使用されるものと同じです。  
   
- 初期状態で `cdc` スキーマにアクセスできるのは、 **dbowner** 固定データベース ロールのメンバーだけです。 変更テーブルと変更関数へのアクセスは、SQL Server CDC と同じセキュリティ モデルによって決まります。 このセキュリティ モデルの詳細については、「 [セキュリティ モデル](https://go.microsoft.com/fwlink/?LinkId=231151)」を参照してください。  
+ 初期状態で `cdc` スキーマにアクセスできるのは、 **dbowner** 固定データベース ロールのメンバーだけです。 変更テーブルと変更関数へのアクセスは、SQL Server CDC と同じセキュリティ モデルによって決まります。 このセキュリティ モデルの詳細については、「 [セキュリティ モデル](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105))」を参照してください。  
   
 ## <a name="creating-the-cdc-database"></a>CDC データベースの作成  
  CDC データベースは、CDC デザイナー コンソールを使用して作成されるのが一般的ですが、CDC デザイナー コンソールを使用して生成される CDC 配置スクリプトを使用して作成することもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム管理者は、このデータベースの設定を必要に応じて変更できます (ストレージ、セキュリティ、可用性のための項目の設定など)。  
@@ -55,11 +55,11 @@ ms.locfileid: "88496171"
  ミラー テーブルは空です。データは格納されていません。 ミラー テーブルは、Oracle CDC インスタンスによって使用される標準の SQL Server CDC インフラストラクチャを有効にするために使用されます。 ミラー テーブルに対してデータの挿入や更新が行われないようにするために、UPDATE、DELETE、および INSERT のすべての操作が PUBLIC に対して拒否されます。 これにより、ミラー テーブルを変更できないことが保証されます。  
   
 ## <a name="access-to-change-data"></a>変更データへのアクセス  
- キャプチャ インスタンスに関連付けられている変更データへのアクセスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルによって制御されます。このセキュリティ モデルでは、ユーザーが変更データにアクセスするには、関連付けられているミラー テーブルのすべてのキャプチャ対象列に対する `select` アクセスが許可されている必要があります (元の Oracle テーブルへのアクセスが許可されていても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の変更テーブルにはアクセスできません)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルについては、「 [セキュリティ モデル](https://go.microsoft.com/fwlink/?LinkId=231151)」を参照してください。  
+ キャプチャ インスタンスに関連付けられている変更データへのアクセスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルによって制御されます。このセキュリティ モデルでは、ユーザーが変更データにアクセスするには、関連付けられているミラー テーブルのすべてのキャプチャ対象列に対する `select` アクセスが許可されている必要があります (元の Oracle テーブルへのアクセスが許可されていても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の変更テーブルにはアクセスできません)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モデルについては、「 [セキュリティ モデル](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105))」を参照してください。  
   
  また、キャプチャ インスタンスの作成時にゲーティング ロールが指定されている場合、呼び出し元は、指定されたゲーティング ロールのメンバーである必要もあります。 メタデータにアクセスするためのその他の一般的な変更データ キャプチャ関数には、PUBLIC ロールですべてのデータベース ユーザーがアクセスできます。ただし、通常、返されるメタデータへのアクセスは、基になるソース テーブルに対する select アクセス、および定義されたすべてのゲーティング ロールのメンバーシップに基づいて制限されます。  
   
- 変更データを読み取るには、キャプチャ インスタンスの作成時に SQL Server の CDC コンポーネントによって生成される特殊なテーブル ベース関数を呼び出します。 この関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)」を参照してください。  
+ 変更データを読み取るには、キャプチャ インスタンスの作成時に SQL Server の CDC コンポーネントによって生成される特殊なテーブル ベース関数を呼び出します。 この関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)」を参照してください。  
   
  これらの規則は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の CDC ソース コンポーネントから CDC データにアクセスする場合にも適用されます。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88496171"
   
  テーブル `<schema-name>.<table-name>`に対して最初にキャプチャを有効にしたときの既定のキャプチャ インスタンス名は、 `<schema-name>_<table-name>`です。 たとえば、Oracle HR.EMPLOYEES テーブルの既定のキャプチャ インスタンス名は HR_EMPLOYEES で、関連付けられる変更テーブルは [cdc]. [HR_EMPLOYEES_CT] です。  
   
- キャプチャ テーブルは、Oracle CDC インスタンスによって書き込まれ、 キャプチャ インスタンスの作成時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される特殊なテーブル値関数を使用して読み取られます たとえば、「 `fn_cdc_get_all_changes_HR_EMPLOYEES` 」のように入力します。 これらの CDC 関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)」を参照してください。  
+ キャプチャ テーブルは、Oracle CDC インスタンスによって書き込まれ、 キャプチャ インスタンスの作成時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される特殊なテーブル値関数を使用して読み取られます たとえば、「 `fn_cdc_get_all_changes_HR_EMPLOYEES` 」のように入力します。 これらの CDC 関数の詳細については、「 [変更データ キャプチャの関数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)」を参照してください。  
   
 ###  <a name="cdclsn_time_mapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** テーブルは、SQL Server の CDC コンポーネントによって生成されます。 Oracle CDC の場合、このテーブルの使用方法が通常とは異なります。  
@@ -192,5 +192,4 @@ ms.locfileid: "88496171"
   
 ## <a name="see-also"></a>参照  
  [Attunity の Change Data Capture Designer for Oracle](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
-  
   

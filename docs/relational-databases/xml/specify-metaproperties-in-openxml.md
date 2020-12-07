@@ -18,11 +18,11 @@ ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd34411b00bfa89c5c69b0d71073ee1c0d4d2280
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728119"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130822"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85728119"
   
  一部のメタプロパティ属性は、処理の目的で使用されます。 たとえば **xmltext** メタプロパティ属性は、オーバーフロー処理のために使用されます。 オーバーフロー処理では、ドキュメントに含まれる未使用および未処理データを参照します。 OPENXML によって生成された行セット内の列の 1 つは、オーバーフロー列として識別されるようにすることができます。 ある列がオーバーフロー列として識別されるようにするには、 **ColPattern** パラメーターを使用して、この列を *xmltext* メタプロパティにマップします。 このマッピングを行うと、列はオーバーフロー データを受け取ります。 列に含まれるのが未使用データだけなのかすべてのデータなのかは *flags* パラメーターによって判断します。  
   
- 次の表に、解析されたそれぞれの XML 要素が所有するメタプロパティ属性を示します。 これらのメタプロパティ属性には、名前空間 **urn:schemas-microsoft-com:xml-metaprop**を使用してアクセスできます。 ただし、ユーザーがこれらのメタプロパティを使用して XML ドキュメントに直接設定した値は無視されます。  
+ 次の表に、解析されたそれぞれの XML 要素が所有するメタプロパティ属性を示します。 これらのメタプロパティ属性には、名前空間 **urn:schemas-microsoft-com:xml-metaprop** を使用してアクセスできます。 ただし、ユーザーがこれらのメタプロパティを使用して XML ドキュメントに直接設定した値は無視されます。  
   
 > [!NOTE]  
 >  これらのメタプロパティは、XPath による位置指定では参照できません。  

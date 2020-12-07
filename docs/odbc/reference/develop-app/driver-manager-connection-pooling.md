@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 397aed6cd2b2066bd73343ad861f0212e8357570
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c3c2fecc26cf2d8bbf5d53598a7b28ce7db5612
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483085"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195574"
 ---
 # <a name="driver-manager-connection-pooling"></a>ドライバー マネージャーの接続プール
 接続プールを使用すると、アプリケーションは、使用するたびに再確立する必要のない接続のプールからの接続を使用できます。 接続が作成され、プールに配置されると、アプリケーションは、完全な接続プロセスを実行することなく、その接続を再利用できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "88483085"
   
  ドライバーはこのオプションを効率的に実装する必要があります。そうしないと、接続プールのパフォーマンスが低下します。 具体的には、この接続属性の取得を呼び出すと、サーバーへのラウンドトリップが発生しません。 代わりに、ドライバーは接続の最後の既知の状態を返すだけです。 最後のトリップが成功した場合、サーバーへの最後のトリップが失敗した場合、接続は停止していません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  接続が失われた (SQL_ATTR_CONNECTION_DEAD によって報告された) 場合、ODBC ドライバーマネージャーはドライバーで SQLDisconnect を呼び出してその接続を破棄します。 新しい接続要求で、プール内の使用可能な接続が検出されない可能性があります。 最終的には、ドライバーマネージャーはプールが空であると仮定して、新しい接続を作成する可能性があります。  
   
  接続プールを使用するために、アプリケーションは次の手順を実行します。  
@@ -60,11 +60,11 @@ ms.locfileid: "88483085"
     > [!NOTE]  
     >  要求された接続をプールされた接続と照合する方法は、SQL_ATTR_CP_MATCH 環境属性によって決まります。 詳細については、「 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)」を参照してください。  
   
-     接続プールを使用する ODBC アプリケーションでは、アプリケーションの初期化中に [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) を呼び出し、アプリケーションの終了時に [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) を呼び出す必要があります。  
+     接続プールを使用する ODBC アプリケーションでは、アプリケーションの初期化中に [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) を呼び出し、アプリケーションの終了時に [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) を呼び出す必要があります。  
   
 5.  接続の完了時に **Sqldisconnect** を呼び出します。 接続が接続プールに返され、再利用できるようになります。  
   
- 詳細については、「 [Microsoft Data Access Components でのプーリング](https://go.microsoft.com/fwlink/?LinkId=120776)」を参照してください。  
+ 詳細については、「 [Microsoft Data Access Components でのプーリング](/previous-versions/ms810829(v=msdn.10))」を参照してください。  
   
 ## <a name="connection-pooling-considerations"></a>接続プールに関する考慮事項  
  (ODBC API を介してではなく) SQL コマンドを使用して次のアクションを実行すると、接続の状態に影響が生じ、接続プールがアクティブになっている場合に予期しない問題が発生する可能性があります。  
@@ -83,7 +83,7 @@ ms.locfileid: "88483085"
 ## <a name="driver-aware-connection-pooling"></a>ドライバー対応接続プール  
  Windows 8 以降では、ODBC ドライバーがプール内の接続をより効率的に使用できるようになります。 詳細については、「 [ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データソースまたはドライバーへの接続](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Microsoft データアクセスコンポーネントでのプーリング](https://go.microsoft.com/fwlink/?LinkId=120776)
+ [Microsoft データアクセスコンポーネントでのプーリング](/previous-versions/ms810829(v=msdn.10))

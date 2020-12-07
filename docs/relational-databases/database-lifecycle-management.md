@@ -32,12 +32,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c36813bee6c6b75d869bc4f04d47665c206cfcc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 604fbce3aebe8e6e902e2dc9292a24779471c86e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781605"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196221"
 ---
 # <a name="database-lifecycle-management"></a>データベースのライフサイクル管理
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85781605"
   
  DLM では、まずプロジェクトのデザインと目的を考察することから始めます。次に、データベースの開発、テスト、構築、配置、管理、監視、およびバックアップの各操作を行ってから、最後にデータをアーカイブします。 このトピックでは、データベースの開発から始まり、構築、配置、監視の各操作を進める、DLM の段階の概要を示します。 また、データ管理作業や、インポートとエクスポート、バックアップ、移行、同期などのデータ移行操作も示します。  
   
- トピック全体を確認するには、「 [データベース ライフ サイクル管理 (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)」を参照してください。  
+ トピック全体を確認するには、「 [データベース ライフ サイクル管理 (DLM)](/previous-versions/sql/sql-server-guides/jj907294(v=sql.110))」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Azure ホーム ページ](https://www.windowsazure.com/)   
@@ -53,5 +53,4 @@ ms.locfileid: "85781605"
  [Azure 管理センター](https://www.windowsazure.com/manage/overview/)   
  [Azure チーム ブログ](https://www.windowsazure.com/community/blog/)   
  [Azure サポート オプション](https://www.windowsazure.com/support/contact/)  
-  
   

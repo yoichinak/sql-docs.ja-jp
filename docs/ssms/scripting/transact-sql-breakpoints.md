@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e6744d8296272dab3b8c774f57e2d60e3ac5858
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: eca7c941bbf64c0e9f159c868e35413415b18136
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901496"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036209"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL ブレークポイント
 
@@ -39,15 +39,14 @@ ms.locfileid: "88901496"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|デバッガーを一時停止する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定する方法について説明します。|[ブレークポイントの切り替え](../../relational-databases/scripting/toggle-a-breakpoint.md)|  
-|ブレークポイントを一時的に非アクティブ化し、後で再アクティブ化する方法について説明します。 ブレークポイントを削除する方法についても説明します。|[ブレークポイントの有効化、無効化、削除](../../relational-databases/scripting/enable-disable-and-delete-breakpoints.md)|  
-|指定した Transact-SQL 式の評価に基づいてブレークポイントがブレークするかどうかを決定する条件を指定する方法について説明します。|[ブレークポイント条件の指定](../../relational-databases/scripting/specify-a-breakpoint-condition.md)|  
-|ブレークポイントを含むステートメントが指定の回数実行されたときにのみ、ブレークポイントがブレークするように、ヒット カウントを指定する方法について説明します。|[ヒット カウントの指定](../../relational-databases/scripting/specify-a-hit-count.md)|  
-|指定されたプロセスまたはスレッドでのみブレークポイントがブレークするように、フィルターを指定する方法について説明します。|[ブレークポイント フィルターの指定](../../relational-databases/scripting/specify-a-breakpoint-filter.md)|  
-|ブレークポイント ステートメントが実行されるときに行われるカスタム操作である、 **ヒット時** アクションを指定する方法について説明します。 例としては、メッセージの出力などが考えられます。|[ブレークポイント アクションの指定](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
-|ブレークポイントの場所を編集する方法について説明します。|[ブレークポイントの位置の編集](../../relational-databases/scripting/edit-a-breakpoint-location.md)|  
+|デバッガーを一時停止する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定する方法について説明します。|[ブレークポイントの切り替え](./toggle-a-breakpoint.md)|  
+|ブレークポイントを一時的に非アクティブ化し、後で再アクティブ化する方法について説明します。 ブレークポイントを削除する方法についても説明します。|[ブレークポイントの有効化、無効化、削除](./enable-disable-and-delete-breakpoints.md)|  
+|指定した Transact-SQL 式の評価に基づいてブレークポイントがブレークするかどうかを決定する条件を指定する方法について説明します。|[ブレークポイント条件の指定](./specify-a-breakpoint-condition.md)|  
+|ブレークポイントを含むステートメントが指定の回数実行されたときにのみ、ブレークポイントがブレークするように、ヒット カウントを指定する方法について説明します。|[ヒット カウントの指定](./specify-a-hit-count.md)|  
+|指定されたプロセスまたはスレッドでのみブレークポイントがブレークするように、フィルターを指定する方法について説明します。|[ブレークポイント フィルターの指定](./specify-a-breakpoint-filter.md)|  
+|ブレークポイント ステートメントが実行されるときに行われるカスタム操作である、 **ヒット時** アクションを指定する方法について説明します。 例としては、メッセージの出力などが考えられます。|[ブレークポイント アクションの指定](./specify-a-breakpoint-action.md)|  
+|ブレークポイントの場所を編集する方法について説明します。|[ブレークポイントの位置の編集](./edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)  
-  
+ [Transact-SQL デバッガー情報](./transact-sql-debugger-information.md)  
   

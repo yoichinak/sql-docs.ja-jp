@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18809d6d6d5937355fedebf72f50e82fadad10ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662802"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988376"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Reporting Services レポートの問題のトラブルシューティング
 このトピックは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] レポートのデザイン、レポートのプレビュー、ネイティブ モードまたは SharePoint モードのレポート サーバーへのレポートのパブリッシュ、レポート サーバーでのレポートの表示、別のファイル形式へのレポートのエクスポートに関する問題のトラブルシューティングを行ううえで参考になります。  
@@ -38,7 +38,7 @@ ms.locfileid: "80662802"
 ## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] を使用してクエリと資格情報を検証する  
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] を使用すると、複雑なクエリをレポートに含める前に検証できます。   
   
-詳細については、「 [データベース エンジン クエリ エディター](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) 」と「 [オブジェクト エクスプローラーを使用したオブジェクトの管理](~/ssms/object/manage-objects-by-using-object-explorer.md)」を参照してください。  
+詳細については、「 [データベース エンジン クエリ エディター](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) 」と「 [オブジェクト エクスプローラーを使用したオブジェクトの管理](~/ssms/object/manage-objects-by-using-object-explorer.md)」を参照してください。  
   
 ## <a name="analyze-problem-reports-with-report-data-cached-on-the-client"></a>クライアント上にキャッシュされたレポート データを使用して問題のあるレポートを分析する  
 レポート作成者が Business Intelligence Development Studio でレポートを作成する場合は、レポート作成クライアントで、レポートのプレビュー時に使用される .rdl.data ファイルとしてデータがキャッシュされます。 キャッシュは、クエリが変更されるたびに更新されます。 レポートに関する問題をデバッグするには、レポート データが更新されないようにしてデバッグ中にデータが変更されることを防ぐと役立つ場合があります。   
@@ -60,5 +60,3 @@ ms.locfileid: "80662802"
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

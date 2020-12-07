@@ -21,12 +21,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e15d2d46f6bf1d7c922b11a210825cf78509ebe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889e473669093646ae7c976025ed4032c17beeff
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468051"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038350"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Microsoft SQL データベース関数とは
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ SQL データベースで使うことができる組み込み関数のカテゴ�
 |[文字列関数](string-functions-transact-sql.md)|文字列型 (**char** または **varchar**) の入力値に対して操作を実行し、文字列値または数値を返します。|  
 |[システム関数](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|値、オブジェクト、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内の設定値に対して操作を実行し、それについての情報を返します。|  
 |[システム統計関数](system-statistical-functions-transact-sql.md)|システムについての統計情報を返します。|  
-|[テキストとイメージ関数](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|テキスト入力値、イメージ入力値、または列に対して操作を実行し、値についての情報を返します。|  
+|[テキストとイメージ関数](./text-and-image-functions-textptr-transact-sql.md)|テキスト入力値、イメージ入力値、または列に対して操作を実行し、値についての情報を返します。|  
   
 ## <a name="function-determinism"></a>関数の決定性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の組み込み関数は、決定的または非決定的のいずれかです。 特定の一連の入力値を使用して呼び出されたときに必ず同じ結果を返す場合、その関数は決定的です。 同じ特定の一連の入力値を使用しても呼び出すたびに異なる結果を返す場合、その関数は非決定的です。 詳しくは、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」をご覧ください。  
@@ -83,5 +83,4 @@ SQL データベースで使うことができる組み込み関数のカテゴ�
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [ストアド プロシージャの使用 &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  
-  
   

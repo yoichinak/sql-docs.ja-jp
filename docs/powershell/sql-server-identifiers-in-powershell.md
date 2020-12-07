@@ -4,7 +4,6 @@ description: Windows PowerShell プロバイダーがデータ階層を公開す
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,26 +18,25 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54a37555038b3757ebff61faad8717c6a800ff1c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.openlocfilehash: 4f889fa93b78782a368ba36085a393f8b79fdb91
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714300"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006108"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell での SQL Server 識別子
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Windows PowerShell 用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、Windows Powershell のパスに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子を使用します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子には、Windows PowerShell でパスとしてサポートされない文字が含まれている場合があります。 Windows PowerShell パスでこの識別子を使用する場合は、これらの文字をエスケープするか、この文字に特殊なエンコードを使用する必要があります。  
   
-> [!NOTE]
-> SQL Server PowerShell モジュールには **SqlServer** と **SQLPS** の 2 つがあります。 **SQLPS** モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。 **SqlServer** モジュールには **SQLPS** のコマンドレットの更新バージョンだけでなく、最新の SQL 機能をサポートする新しいコマンドレットも含まれています。  
-> SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれて*いました*が、SSMS の 16.x バージョンのみです。 PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを PowerShell ギャラリーからインストールする必要があります。
-> **SqlServer** モジュールをインストールする場合は、「[SQL Server PowerShell のインストール](download-sql-server-ps-module.md)」を参照してください。
-
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Windows PowerShell パス内の SQL Server 識別子  
- Windows PowerShell プロバイダーは、Windows ファイル システムに似たパス構造を使用してデータ階層を公開します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトへのパスを実装します。 [!INCLUDE[ssDE](../includes/ssde-md.md)]については、ドライブが SQLSERVER: に、最初のフォルダーが \SQL に設定され、データベース オブジェクトがコンテナーおよびアイテムとして参照されます。 これは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] の既定のインスタンスにある [!INCLUDE[ssDE](../includes/ssde-md.md)]データベースの Purchasing スキーマ内の Vendor テーブルへのパスです。  
+
+Windows PowerShell プロバイダーは、Windows ファイル システムに似たパス構造を使用してデータ階層を公開します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトへのパスを実装します。 [!INCLUDE[ssDE](../includes/ssde-md.md)]については、ドライブが SQLSERVER: に、最初のフォルダーが \SQL に設定され、データベース オブジェクトがコンテナーおよびアイテムとして参照されます。 これは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] の既定のインスタンスにある [!INCLUDE[ssDE](../includes/ssde-md.md)]データベースの Purchasing スキーマ内の Vendor テーブルへのパスです。  
   
 ```  
 SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  

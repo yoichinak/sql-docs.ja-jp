@@ -1,25 +1,25 @@
 ---
-title: azdata をインストールする
+title: Azure Data CLI (azdata) をインストールする
 titleSuffix: ''
-description: azdata ツールをインストールする方法について説明します。
+description: Azure Data CLI (azdata) ツールをインストールする方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 7939aa1575aaeec8edff33a9a9f7101a1014abc2
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 82aa3a2795328804a10a76e9ecd8af80f3bf7152
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914918"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257417"
 ---
-# <a name="install-azdata"></a>`azdata` のインストール
+# <a name="install-azure-data-cli-azdata"></a>[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] のインストール
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-`azdata` は、REST API 経由でデータ サービスをブートストラップし管理できる、Python で記述されたコマンドライン ユーティリティです。 
+[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] は、REST API 経由でデータ サービスをブートストラップし管理できる、Python で記述されたコマンドライン ユーティリティです。 
 
 ## <a name="find-latest-version"></a>最新バージョンを探す
 

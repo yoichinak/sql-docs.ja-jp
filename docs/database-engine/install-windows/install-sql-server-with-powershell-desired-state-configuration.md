@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f33fff4f29650e54803d47dc2188ec67d5594f89
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 5a9770cd648fe804ee973878adee27b2d55080d0
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472384"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671065"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>PowerShell Desired State Configuration での SQL Server をインストールする
 
@@ -44,7 +44,7 @@ ms.locfileid: "87472384"
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>SqlServerDsc DSC リソースのインストール
 
-[SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC リソースは、[Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module?view=powershell-5.1) コマンドレットを使用して [PowerShell Gallery](https://www.powershellgallery.com/) からダウンロードします。 
+[SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC リソースは、[Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1) コマンドレットを使用して [PowerShell Gallery](https://www.powershellgallery.com/) からダウンロードします。 
 
 > [!NOTE]
 > このモジュールをインストールするには、PowerShell が**管理者として**実行されていることを確認します。
@@ -71,7 +71,7 @@ Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666
 
 ### <a name="configuration"></a>構成
 
-[管理オブジェクト フォーマット (MOF)](https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-) ドキュメントを生成するために呼び出される構成関数を作成します。
+[管理オブジェクト フォーマット (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-) ドキュメントを生成するために呼び出される構成関数を作成します。
 
 ```PowerShell
 Configuration SQLInstall
@@ -180,7 +180,7 @@ Start-DscConfiguration -Path C:\SQLInstall -Wait -Force -Verbose
 
 ### <a name="dsc"></a>DSC
 
-[Test-DscConfiguration](https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) コマンドレットによって、サーバーの現在の状態が目的の状態を満たしているかどうかを判断できます。 この場合は SQL Server のインストールです。 **Test-DscConfiguration** の結果は **True** になります。
+[Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) コマンドレットによって、サーバーの現在の状態が目的の状態を満たしているかどうかを判断できます。 この場合は SQL Server のインストールです。 **Test-DscConfiguration** の結果は **True** になります。
 
 ```PowerShell
 PS C:\> Test-DscConfiguration

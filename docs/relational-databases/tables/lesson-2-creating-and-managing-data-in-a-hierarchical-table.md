@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89006f322ce113808deb989010b62ff9df49f04c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460230"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809468"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>レッスン 2: 階層テーブルでデータを作成して管理する
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "88460230"
 ## <a name="prerequisites"></a>前提条件  
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
-- [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
+- [AdventureWorks2017 サンプル データベース](../../samples/adventureworks-install-configure.md)をダウンロードする。
 
-SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページをご覧ください。   
+SSMS でデータベースを復元する手順については、[データベースの復元](../backup-restore/restore-a-database-backup-using-ssms.md)に関するページをご覧ください。   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>hierarchyid データ型を使用してテーブルを作成する
 EmployeeOrg という名前のテーブルを作成する例を次に示します。このテーブルには、従業員データと、それらの従業員のレポート階層が含まれています。 この例では、テーブルを AdventureWorks2017 データベースに作成しますが、これは任意です。 例をわかりやすくするために、このテーブルには 5 つの列のみ含まれています。  
@@ -392,4 +392,3 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
 Jill に直属していた組織のツリー全体 (Wanida と Kevin の両方) が Sariya に直属するようになりました。  
   
 階層のセクションを再編成するストアド プロシージャについては、「 [サブツリーの移動](../../relational-databases/hierarchical-data-sql-server.md#BKMK_MovingSubtrees)」の「サブツリーの移動」を参照してください。  
-  

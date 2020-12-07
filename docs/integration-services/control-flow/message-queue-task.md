@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e5eab167ddaa471ac0bddbd4b048b38e040b62e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484605"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194284"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -46,7 +46,7 @@ ms.locfileid: "88484605"
   
  メッセージ キュー タスクは、メッセージの送受信時に、"データ ファイル"、"文字列"、"文字列メッセージを変数に指定"、"変数" の 4 つのうちのいずれかのメッセージ型を使用します。 "文字列メッセージを変数に指定" メッセージ型は、メッセージの受信時にのみ使用できます。  
   
- タスクは MSMQ 接続マネージャーを使用して、メッセージ キューに接続します。 詳細については、「 [MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)」を参照してください。 メッセージ キューの詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkId=7022)を参照してください。  
+ タスクは MSMQ 接続マネージャーを使用して、メッセージ キューに接続します。 詳細については、「 [MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)」を参照してください。 メッセージ キューの詳細については、 [MSDN ライブラリ](../../sql-server/index.yml)を参照してください。  
   
  メッセージ キュー タスクには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインストールが必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[インストールするコンポーネント]** ページまたは **[機能の選択]** ページでインストールの選択をした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントによっては、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントのサブセットの一部がインストールされます。 これらのコンポーネントを使用して一部のタスクを実行することは可能ですが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のすべての機能は使用できません。 たとえば、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のオプションでは、パッケージをデザインするために必要な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントがインストールされますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスはインストールされません。したがって、メッセージ キュー タスクは機能しません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を完全にインストールするには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [インストールするコンポーネント] **ページで** を選択する必要があります。 メッセージ キュー タスクのインストールと実行の詳細については、「 [Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)」を参照してください。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88484605"
  プログラムによってこれらのプロパティを設定する方法の詳細については、開発者ガイドの **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** クラスのドキュメントを参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
 ## <a name="message-queue-task-editor-general-page"></a>[メッセージ キュー タスク エディター] ([全般] ページ)
   **[メッセージ キュー タスク エディター]** の **[全般]** ページを使用すると、メッセージ キュー タスクの名前と説明を設定したり、メッセージの形式を指定したり、タスクでメッセージを送受信できるかどうかを指定したりできます。  
@@ -123,7 +123,7 @@ ms.locfileid: "88484605"
  **[MSMQConnection]**  
  既存の MSMQ 接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 接続マネージャー エディター](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **関連トピック:** [MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 接続マネージャー エディター](../connection-manager/msmq-connection-manager.md)  
   
  **メッセージ**  
  メッセージ キュー タスクでメッセージを送信するのか、受信するのかを指定します。 **[メッセージの送信]** を選択すると、ダイアログ ボックスの左側のペインに [送信] ページが表示されます。 **[メッセージの受信]** を選択すると、[受信] ページが表示されます。 既定では、 **[メッセージの送信]** に設定されています。  
@@ -233,7 +233,7 @@ ms.locfileid: "88484605"
  **変数**  
  変数の名前を入力するか、[\<**New variable...**>] をクリックして新しい変数を設定します。  
   
- **関連トピック:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [変数の追加](../integration-services-ssis-variables.md)  
   
 #### <a name="filter-dynamic-options"></a>[Filter] の動的オプション  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88484605"
  **変数**  
  受信したメッセージを格納する変数の名前を入力するか、[\<**New variable...**>] をクリックして新しい変数を設定します。  
   
- **関連トピック:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [変数の追加](../integration-services-ssis-variables.md)  
   
 ## <a name="select-variables"></a>[変数の選択]
   **[変数の選択]** ダイアログ ボックスを使用すると、メッセージ キュー タスクの 2 番目のメッセージ操作で使用する変数を指定できます。 **[利用可能な変数]** の一覧には、メッセージ キュー タスクまたは親コンテナーのスコープのシステム変数とユーザー定義変数が含まれます。 タスクは、 **[選択された変数]** の一覧の変数を使用します。  
@@ -299,9 +299,8 @@ ms.locfileid: "88484605"
  **[新しい変数]**  
  新しい変数を作成します。  
   
- **関連トピック:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [変数の追加](../integration-services-ssis-variables.md)  
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

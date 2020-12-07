@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ddfed49481df7de8c63db08c8a184247c30857a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465411"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194310"
 ---
 # <a name="modified-features-contained-database"></a>変更された機能 (包含データベース)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88465411"
  ALTER DATABASE ステートメントを包含データベース外で使用する場合の構文は、非包含データベースに使用する構文と異なります。 これらの変更を防ぐためには、データベースの境界を越えます。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 ## <a name="create-database"></a>CREATE DATABASE  
- CREATE DATABASE の構文は、包含データベースを使用する場合と非包含データベースを使用する場合とで異なります。 新しい構文の要件と許容値の詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+ CREATE DATABASE の構文は、包含データベースを使用する場合と非包含データベースを使用する場合とで異なります。 新しい構文の要件と許容値の詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)」を参照してください。  
   
 ## <a name="temporary-tables"></a>一時テーブル  
  包含データベース内でローカル一時テーブルを使用することはできますが、その動作は非包含データベース内のローカル一時テーブルの動作と異なります。 非包含データベースでは、一時テーブル データは **tempdb**の照合順序で照合されます。 包含データベースでは、一時テーブル データは包含データベースの照合順序で照合されます。  
@@ -55,5 +55,4 @@ ms.locfileid: "88465411"
 ## <a name="see-also"></a>参照  
  [包含データベースの照合順序](../../relational-databases/databases/contained-database-collations.md)   
  [包含データベース](../../relational-databases/databases/contained-databases.md)  
-  
   

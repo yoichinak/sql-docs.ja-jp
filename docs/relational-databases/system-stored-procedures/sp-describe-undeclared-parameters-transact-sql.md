@@ -19,17 +19,17 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 5ca659670cb68bafa10f758bc2a7997243f5c1a8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 232ad1cfe65fca719260a9ed8ab87a7f2d7ed3dd
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990128"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443153"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
-  バッチ内の宣言されていないパラメーターに関するメタデータを含む結果セットを返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 ** \@ Tsql**バッチで使用されているが、 ** \@ params**で宣言されていない各パラメーターを考慮します。 結果セットが返されます。この結果セットには、そのパラメーターに対して推測される型情報が含まれる、このようなパラメーターごとに1行のデータが含まれます。 ** \@ Tsql**入力バッチにパラメーターがない場合、このプロシージャは空の結果セットを返します ( ** \@ params**で宣言されているものを除く)。  
+  バッチ内の宣言されていないパラメーターに関するメタデータを含む結果セットを返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 **\@ Tsql** バッチで使用されているが、 **\@ params** で宣言されていない各パラメーターを考慮します。 結果セットが返されます。この結果セットには、そのパラメーターに対して推測される型情報が含まれる、このようなパラメーターごとに1行のデータが含まれます。 **\@ Tsql** 入力バッチにパラメーターがない場合、このプロシージャは空の結果セットを返します ( **\@ params** で宣言されているものを除く)。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,20 +43,20 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> Azure Synapse Analytics (以前の SQL DW) でこのストアドプロシージャを使用するには、データベースの互換性レベルを20以上に設定します。   オプトアウトするには、データベースの互換性レベルを10に変更します。
+> 専用 SQL プールの Azure Synapse Analytics でこのストアドプロシージャを使用するには、データベースの互換性レベルを20以上に設定します。   オプトアウトするには、データベースの互換性レベルを10に変更します。
 
 ## <a name="arguments"></a>引数  
 `[ \@tsql = ] 'Transact-SQL\_batch'` 1つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント。 *Transact-sql SQL_batch* は **nvarchar (**_n_**)** または **nvarchar (max)** です。  
   
 `[ \@params = ] N'parameters'`\@params は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_executesql の動作と同様に、バッチのパラメーターの宣言文字列を提供します。 *パラメーター* には、 **nvarchar (**_n_**)** または **nvarchar (max)** を指定できます。  
   
- は、 *Transact SQL_batch*に埋め込まれているすべてのパラメーターの定義を含む1つの文字列です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 n は、追加のパラメーター定義を示すプレースホルダーです。 ステートメント内の Transact-sql ステートメントまたはバッチにパラメーターが含まれていない場合、 \@ params は必要ありません。 このパラメーターの既定値は NULL です。  
+ は、 *Transact SQL_batch* に埋め込まれているすべてのパラメーターの定義を含む1つの文字列です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 n は、追加のパラメーター定義を示すプレースホルダーです。 ステートメント内の Transact-sql ステートメントまたはバッチにパラメーターが含まれていない場合、 \@ params は必要ありません。 このパラメーターの既定値は NULL です。  
   
- データ型  
+ DataType  
  パラメーターのデータ型です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 成功した場合、 **sp_describe_undeclared_parameters**は常に戻り値0を返します。 プロシージャがエラーをスローし、プロシージャが RPC として呼び出された場合、返される状態は、dm_exec_describe_first_result_set の error_type 列で説明されているエラーの種類によって設定されます。 プロシージャがから呼び出された場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、エラーが発生した場合でも、戻り値は常に0になります。  
+ 成功した場合、 **sp_describe_undeclared_parameters** は常に戻り値0を返します。 プロシージャがエラーをスローし、プロシージャが RPC として呼び出された場合、戻り値の状態は、sys.dm_exec_describe_first_result_set の error_type 列で説明されているエラーの種類によって設定されます。 プロシージャがから呼び出された場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、エラーが発生した場合でも、戻り値は常に0になります。  
   
 ## <a name="result-sets"></a>結果セット  
  **sp_describe_undeclared_parameters** は、次の結果セットを返します。  
@@ -67,7 +67,7 @@ sp_describe_undeclared_parameters
 |**name**|**sysname NOT NULL**|パラメーターの名前を格納します。|  
 |**suggested_system_type_id**|**int NOT NULL**|に指定されているパラメーターのデータ型の **system_type_id** を格納します。<br /><br /> CLR 型の場合、 **system_type_name** 列が NULL を返す場合でも、この列は値240を返します。|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|データ型の名前を格納します。 パラメーターのデータ型に対して指定された引数 (長さ、有効桁数、小数点以下桁数など) を含めます。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義データ型である場合は、この列に NULL が返されます。 パラメーターの型を推測できない場合は、NULL が返されます。|  
-|**suggested_max_length**|**smallint NOT NULL**|「Sys. 列」を参照してください。 **max_length**列の説明。|  
+|**suggested_max_length**|**smallint NOT NULL**|「Sys. 列」を参照してください。 **max_length** 列の説明。|  
 |**suggested_precision**|**tinyint NOT NULL**|「Sys. 列」を参照してください。 有効桁数列の説明。|  
 |**suggested_scale**|**tinyint NOT NULL**|「Sys. 列」を参照してください。 スケール列の説明。|  
 |**suggested_user_type_id**|**int NULL**|CLR 型と別名型の場合、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
@@ -93,7 +93,7 @@ sp_describe_undeclared_parameters
   
  最も一般的な使用方法は、パラメーターを含み、それらのパラメーターを任意の方法で処理する必要がある [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがアプリケーションで指定される場合です。 たとえば、ユーザーが ODBC パラメーターの構文に基づくクエリを提供するユーザー インターフェイス (ODBCTest または RowsetViewer など) があります。 アプリケーションは、パラメーターの数を動的に検出し、各パラメーターの入力をユーザーに求める必要があります。  
   
- 別の例として、ユーザー入力なしで、アプリケーションがパラメーターをループして、そのデータを他の場所 (テーブルなど) から取得する必要がある場合が挙げられます。 この場合は、アプリケーションはすべてのパラメーター情報を一度に渡す必要はありません。 代わりに、アプリケーションはプロバイダーからすべてのパラメーター情報を取得し、テーブルからデータ自体を取得することができます。 **Sp_describe_undeclared_parameters**を使用するコードはより汎用的で、データ構造が後で変更される場合に変更が必要になる可能性は低くなります。  
+ 別の例として、ユーザー入力なしで、アプリケーションがパラメーターをループして、そのデータを他の場所 (テーブルなど) から取得する必要がある場合が挙げられます。 この場合は、アプリケーションはすべてのパラメーター情報を一度に渡す必要はありません。 代わりに、アプリケーションはプロバイダーからすべてのパラメーター情報を取得し、テーブルからデータ自体を取得することができます。 **Sp_describe_undeclared_parameters** を使用するコードはより汎用的で、データ構造が後で変更される場合に変更が必要になる可能性は低くなります。  
   
  **sp_describe_undeclared_parameters** は、次のいずれかの場合にエラーを返します。  
   
@@ -146,9 +146,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   ユーザー定義関数 (テーブル値 UDF を含む)、プロシージャ、またはメソッドの引数。  
   
--   **INSERT**ステートメントの**VALUES**句の引数。  
+-   **INSERT** ステートメントの **VALUES** 句の引数。  
   
--   **キャスト**または**変換**の引数。  
+-   **キャスト** または **変換** の引数。  
   
  型推論アルゴリズムでは、 \@ E (p) のターゲットデータ型 TT (p) が検索され \@ ます。 前の例のターゲットデータ型は次のとおりです。  
   
@@ -224,27 +224,27 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     この場合、E ( \@ p) は Col_Int + p であり、 \@ TT ( \@ p) は **Int**です。暗黙的な変換が生成されないため、p には **int** が選択されてい \@ ます。 その他の任意のデータ型では、少なくとも1つの暗黙的な変換が生成されます。  
+     この場合、E ( \@ p) は Col_Int + p であり、 \@ TT ( \@ p) は **Int** です。暗黙的な変換が生成されないため、p には **int** が選択されてい \@ ます。 その他の任意のデータ型では、少なくとも1つの暗黙的な変換が生成されます。  
   
-2.  変換の最小数に対して複数のデータ型が関連付けられている場合は、優先順位の高いデータ型が使用されます。 例  
+2.  変換の最小数に対して複数のデータ型が関連付けられている場合は、優先順位の高いデータ型が使用されます。 次に例を示します。  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     この場合、 **int** と **smallint** は1つの変換を生成します。 他のすべてのデータ型では、2 つ以上の変換が生成されます。 **Int**は**smallint**よりも優先されるため、p には**int**が使用され \@ ます。 データ型の優先順位の詳細については、「 [transact-sql&#41;&#40;データ型の優先順位 ](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
+     この場合、 **int** と **smallint** は1つの変換を生成します。 他のすべてのデータ型では、2 つ以上の変換が生成されます。 **Int** は **smallint** よりも優先されるため、p には **int** が使用され \@ ます。 データ型の優先順位の詳細については、「 [transact-sql&#41;&#40;データ型の優先順位 ](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
-     このルールは、ルール 1 に該当するすべてのデータ型と、最高位の優先順位を持つデータ型との間に暗黙的な変換がある場合にのみ適用されます。 暗黙的な変換がない場合、データ型の推論はエラーで失敗します。 たとえば、クエリでは、 `SELECT @p FROM t` p の任意のデータ型が同等に適しているため、データ型の推論は失敗し \@ ます。 たとえば、int から**xml**への暗黙の**型**変換はありません。  
+     このルールは、ルール 1 に該当するすべてのデータ型と、最高位の優先順位を持つデータ型との間に暗黙的な変換がある場合にのみ適用されます。 暗黙的な変換がない場合、データ型の推論はエラーで失敗します。 たとえば、クエリでは、 `SELECT @p FROM t` p の任意のデータ型が同等に適しているため、データ型の推論は失敗し \@ ます。 たとえば、int から **xml** への暗黙の **型** 変換はありません。  
   
-3.  2つの類似したデータ型が rule 1 に関連付けられている場合 ( **varchar (8000)** と **varchar (max)** など) は、小さい方のデータ型 (**varchar (8000)**) が選択されます。 **Nvarchar**および**varbinary**データ型にも同じ原則が適用されます。  
+3.  2つの類似したデータ型が rule 1 に関連付けられている場合 ( **varchar (8000)** と **varchar (max)** など) は、小さい方のデータ型 (**varchar (8000)**) が選択されます。 **Nvarchar** および **varbinary** データ型にも同じ原則が適用されます。  
   
 4.  ルール 1 のために、型推論アルゴリズムでは、特定の変換が他の変換よりも優先されます。 変換の優先順序は、次のとおりです。  
 
     1.  異なる長さの同じ基本データ型間の変換。  
   
-    2.  同じデータ型の固定長と可変長のバージョン ( **char** から **varchar**など) の間の変換。  
+    2.  同じデータ型の固定長と可変長のバージョン ( **char** から **varchar** など) の間の変換。  
   
-    3.  **NULL**と**int**の間の変換です。  
+    3.  **NULL** と **int** の間の変換です。  
   
     4.  その他の変換。  
   
@@ -255,7 +255,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ## <a name="permissions"></a>アクセス許可  
  Tsql 引数を実行する権限が必要です \@ 。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、宣言されていない `@id` パラメーターおよび `@name` パラメーターに対して予期されるデータ型などの情報を返します。  
   
 ```sql
@@ -279,5 +279,5 @@ WHERE object_id = @id OR NAME = @name',
   
 ## <a name="see-also"></a>参照  
  [sp_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [dm_exec_describe_first_result_set_for_object &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+ [sys.dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

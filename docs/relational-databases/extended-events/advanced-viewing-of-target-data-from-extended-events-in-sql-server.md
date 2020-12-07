@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16671290ed86def1b013a77d991487dfdad26a10
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 174873d62a2c90ba6309f9063294a27517326d62
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85779497"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523988"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server での拡張イベントからのターゲット データの詳細表示
 
@@ -66,7 +66,7 @@ Microsoft SQL Server と Azure SQL Database の 2 つの製品における拡張
 
 Azure SQL Database に固有の拡張イベントに関するドキュメントについては、次を参照してください。
 
-- [Azure SQL Database での拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Azure SQL Database での拡張イベント](/azure/azure-sql/database/xevent-db-diff-from-svr)
 
 
 
@@ -271,7 +271,7 @@ SSMS 表示フィルターは、次のとおりです。
 - *列の値* フィルター。
 
 
-時間フィルターと列フィルターの関係は、ブール値 '*AND*' です。
+時間フィルターと列フィルターの関係は、ブール値 ' *AND* ' です。
 
 
 ![[フィルター] ダイアログの時間範囲フィルターと列フィルター](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)
@@ -288,9 +288,9 @@ SSMS 表示フィルターは、次のとおりです。
 #### <a name="d41-grouping"></a>D.4.1 グループ化
 
 
-拡張イベントのツール バーの **[グループ化]** ボタンをクリックすると、ある特定の列を基準に表示データをグループ化できるダイアログが開きます。 次のスクリーン ショットは、*name* 列によるグループ化に使用されているダイアログを示しています。
+拡張イベントのツール バーの **[グループ化]** ボタンをクリックすると、ある特定の列を基準に表示データをグループ化できるダイアログが開きます。 次のスクリーン ショットは、 *name* 列によるグループ化に使用されているダイアログを示しています。
 
-![ツール バー > [グループ化] ボタンをクリックすると表示される [グループ化] ダイアログ](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
+![[グループ化] が選択されたツール バーと [グループ化] ダイアログ ボックスを示すスクリーンショット。](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
 グループ化が完了すると、表示の外観が次のように新しくなります。
 
@@ -301,13 +301,13 @@ SSMS 表示フィルターは、次のとおりです。
 #### <a name="d42-aggregation"></a>D.4.2 集計
 
 
-表示データがグループ化されたら、他の列のデータを集計できるようになります。  次のスクリーン ショットは、グループ化されたデータが *count*を基準に集計されていることを示しています。
+表示データがグループ化されたら、他の列のデータを集計できるようになります。  次のスクリーン ショットは、グループ化されたデータが *count* を基準に集計されていることを示しています。
 
-![ツール バー > [集計] ボタンをクリックすると表示される [集計] ダイアログ](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
+![[集計] が選択されたツール バーと [集計] ダイアログ ボックスを示すスクリーンショット。](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
 集計が完了すると、表示の外観が次のように新しくなります。
 
-![ツール バー > [集計] ボタンをクリックすると表示される [集計] ダイアログ](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
+![COUNT 値が追加されたことを示す表示のスクリーンショット。](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
 
 
 

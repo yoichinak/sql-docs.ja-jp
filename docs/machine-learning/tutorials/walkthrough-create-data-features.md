@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e2f21808bcd45224027ae7ddc28c8a07f0d85db
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6e4b05970efde3519e29e51cfb3925ba1bbf4c16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173603"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192632"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R と SQL Server を使用したデータ機能の作成 (チュートリアル)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) では、_sqlQuery_ パラメーターの引数として指定された、有効な SELECT クエリで構成されるクエリ、または _table_ パラメーターとして指定されたテーブル オブジェクトの名前のいずれかを指定できます。
+    - [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) では、_sqlQuery_ パラメーターの引数として指定された、有効な SELECT クエリで構成されるクエリ、または _table_ パラメーターとして指定されたテーブル オブジェクトの名前のいずれかを指定できます。
     
     - テーブルからデータをサンプリングする場合は、_sqlQuery_ パラメーターを使用して、T-SQL TABLESAMPLE 句を使用してサンプリング パラメーターを定義し、_rowBuffering_ 引数を FALSE に設定する必要があります。
 
@@ -91,7 +91,7 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
     rxSetComputeContext("local");
     ```
 
-5. [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) 関数を呼び出して機能エンジニアリング データを取得し、`env$ComputeDist` 関数をメモリ内のデータに適用します。
+5. [rxDataStep](/r-server/r-reference/revoscaler/rxdatastep) 関数を呼び出して機能エンジニアリング データを取得し、`env$ComputeDist` 関数をメモリ内のデータに適用します。
 
     ```R
     start.time <- proc.time();
@@ -109,7 +109,7 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + RxDataStep 関数では、データをインプレースで変更するためのさまざまなメソッドをサポートしています。 詳細については、次の記事を参照してください。[Microsoft R でデータを変換およびサブセット化する方法](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + RxDataStep 関数では、データをインプレースで変更するためのさまざまなメソッドをサポートしています。 詳細については、次の記事を参照してください。[Microsoft R でデータを変換およびサブセット化する方法](/r-server/r/how-to-revoscaler-data-transform)
     
     ただし、rxDataStep について注目すべき点がいくつかあります。 
     
@@ -117,7 +117,7 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
 
     上記のコードでは、より大きなデータ セットに対して実行すると警告メッセージが生成される場合もあります。 行数を作成される列数に掛けた値が設定値 (既定値は 300 万) を超えると、rxDataStep によって警告が返され、返されたデータ フレーム内の行数が切り捨てられます。 警告を削除するには、rxDataStep 関数の _maxRowsByCols_ 引数を変更します。 ただし、_maxRowsByCols_ が大きすぎる場合は、データ フレームをメモリに読み込むときに問題が発生する可能性があります。
 
-7. 必要に応じて [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) を呼び出して、変換されたデータ ソースのスキーマを検査できます。
+7. 必要に応じて [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo) を呼び出して、変換されたデータ ソースのスキーマを検査できます。
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -127,7 +127,7 @@ R 言語は統計ライブラリが豊富なことで知られていますが、
 
 この演習では、カスタム R 関数の代わりに、SQL 関数を使用して同じタスクを実行する方法について学習します。 
 
-[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) または別のクエリ エディターに切り替えて、T-SQL スクリプトを実行します。
+[SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) または別のクエリ エディターに切り替えて、T-SQL スクリプトを実行します。
 
 1. *fnCalculateDistance* という名前の SQL 関数を使用します。 この関数は、NYCTaxi_Sample データベースに既に含まれているはずです。 オブジェクト エクスプローラーで、次のパスに移動して関数が存在することを確認します。データベース > NYCTaxi_Sample > プログラミング > 関数 > スカラー値関数 > dbo.fnCalculateDistance。
 
@@ -252,4 +252,3 @@ SQL 関数を呼び出すときにデータ変換にかかる時間を確認す�
 
 > [!div class="nextstepaction"]
 > [R モデルを構築して SQL に保存する](walkthrough-build-and-save-the-model.md)
-

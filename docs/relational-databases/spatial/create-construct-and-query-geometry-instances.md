@@ -14,15 +14,15 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d6a82ad07670a714cb701498224cb20d0207862
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddc0df0e6949ed429d415940fe9fda4263d3190a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455434"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127711"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>geometry インスタンスの作成、構築、およびクエリ
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
    平面空間データ型の **geometry** は、ユークリッド (平面) 座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では共通言語ランタイム (CLR) のデータ型として実装されています。  
   
  **geometry** 型は、各データベースで使用できるように事前に定義されています。 **geometry** 型のテーブル列を作成し、他の CLR 型を使用するときと同じように **geometry** データを操作できます。  
@@ -178,7 +178,7 @@ ms.locfileid: "88455434"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> 点の数  
- 空でないすべての **geometry** インスタンスは *点*で構成されています。 これらの点は、ジオメトリが描画される平面の X 座標と Y 座標を表します **geometry** には、インスタンスの点に対するクエリを実行するための組み込みメソッドが数多く用意されています。  
+ 空でないすべての **geometry** インスタンスは *点* で構成されています。 これらの点は、ジオメトリが描画される平面の X 座標と Y 座標を表します **geometry** には、インスタンスの点に対するクエリを実行するための組み込みメソッドが数多く用意されています。  
   
  **インスタンスを構成する点の数を取得するには**  
  [STNumPoints &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)  
@@ -206,7 +206,7 @@ ms.locfileid: "88455434"
   
   
 ###  <a name="dimension"></a><a name="dimension"></a> [ディメンション]  
- 空でない **geometry** インスタンスの次元は、0 次元、1 次元、2 次元のいずれかになります。 0 次元の **ジオメトリ**( **Point** や **MultiPoint**など) には長さや面積はありません。 1 次元のオブジェクト ( **LineString、CircularString、CompoundCurve**、 **MultiLineString**など) には長さがあります。 2 次元のインスタンス ( **Polygon**、 **CurvePolygon**、 **MultiPolygon**など) には面積と長さがあります。 空のインスタンスの次元は -1 としてレポートされます。 **GeometryCollection** でレポートされる面積は、その内容の型によって異なります。  
+ 空でない **geometry** インスタンスの次元は、0 次元、1 次元、2 次元のいずれかになります。 0 次元の **ジオメトリ**( **Point** や **MultiPoint** など) には長さや面積はありません。 1 次元のオブジェクト ( **LineString、CircularString、CompoundCurve**、 **MultiLineString** など) には長さがあります。 2 次元のインスタンス ( **Polygon**、 **CurvePolygon**、 **MultiPolygon** など) には面積と長さがあります。 空のインスタンスの次元は -1 としてレポートされます。 **GeometryCollection** でレポートされる面積は、その内容の型によって異なります。  
   
  **インスタンスの次元を取得するには**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -219,14 +219,14 @@ ms.locfileid: "88455434"
   
   
 ###  <a name="empty"></a><a name="empty"></a> 空  
- _空_の **geometry** インスタンスには点はありません。 空の **LineString, CircularString**、 **CompoundCurve**、および **MultiLineString** インスタンスの長さは 0 です。 空の **Polygon**、 **CurvePolygon**、および **MultiPolygon** インスタンスの面積は 0 です。  
+ _空_ の **geometry** インスタンスには点はありません。 空の **LineString, CircularString**、 **CompoundCurve**、および **MultiLineString** インスタンスの長さは 0 です。 空の **Polygon**、 **CurvePolygon**、および **MultiPolygon** インスタンスの面積は 0 です。  
   
  **インスタンスが空かどうかを調べるには**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md)。  
   
   
 ###  <a name="simple"></a><a name="simple"></a> Simple  
- インスタンスの **geometry** が *単純*であるためには、次の両方の要件が満たされている必要があります。  
+ インスタンスの **geometry** が *単純* であるためには、次の両方の要件が満たされている必要があります。  
   
 -   インスタンスの各図形が終点以外で自己交差していてはいけない。  
   
@@ -266,7 +266,7 @@ SELECT @g.STBoundary().ToString();
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
 ###  <a name="envelope"></a><a name="envelope"></a> エンベロープ  
- *geometry* インスタンスの **エンベロープ** ( *境界ボックス*とも呼ばれます) とは、インスタンスの最小および最大の (X,Y) 座標によって形成される軸に沿った四角形です。  
+ *geometry* インスタンスの **エンベロープ** ( *境界ボックス* とも呼ばれます) とは、インスタンスの最小および最大の (X,Y) 座標によって形成される軸に沿った四角形です。  
   
  **インスタンスのエンベロープを取得するには**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  

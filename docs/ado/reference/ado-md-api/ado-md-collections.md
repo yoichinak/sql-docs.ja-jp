@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdd41be1cf7ed4d412978d387270242874b56d7f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f83f06c5aa72c31df711db05198032206c5a32b9
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987573"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098671"
 ---
 # <a name="ado-md-collections"></a>ADO MD のコレクション
 

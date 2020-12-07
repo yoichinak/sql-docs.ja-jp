@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1dd037349e2e8126a74fbd895598f3ef05e06583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488611"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
@@ -60,7 +60,7 @@ ms.locfileid: "88488611"
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用してビューのプロパティを取得する  
   
-1.  **オブジェクト エクスプローラー**で、プロパティを表示するビューを含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[ビュー]** フォルダーを展開します。  
+1.  **オブジェクト エクスプローラー** で、プロパティを表示するビューを含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[ビュー]** フォルダーを展開します。  
   
 2.  プロパティを表示するビューを右クリックし、 **[プロパティ]** を選択します。  
 
@@ -101,7 +101,7 @@ ms.locfileid: "88488611"
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>ビュー デザイナー ツールを使用したビューのプロパティの取得  
   
-1.  **オブジェクト エクスプローラー**で、プロパティを表示するビューを含むデータベースを展開します。次に、 **[ビュー]** フォルダーを展開します。  
+1.  **オブジェクト エクスプローラー** で、プロパティを表示するビューを含むデータベースを展開します。次に、 **[ビュー]** フォルダーを展開します。  
   
 2.  プロパティを表示するビューを右クリックし、 **[デザイン]** を選択します。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "88488611"
   
 #### <a name="to-get-dependencies-on-the-view"></a>ビューの依存関係を取得するには  
   
-1.  **オブジェクト エクスプローラー**で、プロパティを表示するビューを含むデータベースを展開します。次に、 **[ビュー]** フォルダーを展開します。  
+1.  **オブジェクト エクスプローラー** で、プロパティを表示するビューを含むデータベースを展開します。次に、 **[ビュー]** フォルダーを展開します。  
   
 2.  プロパティを表示するビューを右クリックし、 **[依存関係の表示]** を選択します。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "88488611"
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>ビューの定義およびプロパティを取得するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "88488611"
   
 #### <a name="to-get-the-dependencies-of-a-view"></a>ビューの依存関係を取得するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

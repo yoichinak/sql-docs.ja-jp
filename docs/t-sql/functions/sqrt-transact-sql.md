@@ -20,12 +20,12 @@ ms.assetid: 26e244e8-e82d-4664-a445-1226230ee1c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b526a4b57487fd43e7e39808d63e55a523b6836b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70350f99ad21f711d02f4fa504bc75d8075b04dd
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467851"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379884"
 ---
 # <a name="sqrt-transact-sql"></a>SQRT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88467851"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 SQRT ( float_expression )  
 ```  
   
@@ -44,7 +44,7 @@ SQRT ( float_expression )
 
 ## <a name="arguments"></a>引数
  *float_expression*  
- **float** 型、または暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ **float** 型、または暗黙的に float 型に変換できる [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
@@ -52,8 +52,8 @@ SQRT ( float_expression )
 ## <a name="examples"></a>例  
  次の例では、`1.00` から `10.00` までの値の平方根を返します。  
   
-```  
-DECLARE @myvalue float;  
+```sql  
+DECLARE @myvalue FLOAT;  
 SET @myvalue = 1.00;  
 WHILE @myvalue < 10.00  
    BEGIN  
@@ -89,7 +89,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例は、`1.00` ～ `10.00` までの数値の平方根を返します。  
   
-```  
+```sql  
 SELECT SQRT(1.00), SQRT(10.00);  
 ```  
   

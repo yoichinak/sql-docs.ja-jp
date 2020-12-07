@@ -15,12 +15,12 @@ ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cbed5106fdea4a74cec0c4d08d0da653b03c1e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 596dd2755e41eb476ee5588909cae5e13cf1e1ca
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423864"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868955"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日付と時刻の強化機能 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88423864"
  [ODBC の日付/時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付と時刻のデータ型をサポートする ODBC 型について説明します。  
   
- [ODBC&#41;&#40;メタデータ ](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [ODBC&#41;&#40;メタデータ ]()  
  実装パラメーター記述子 (IPD) および実装行記述子 (IRD) フィールドに返される情報、および **Sqlcolumns** と **SQLProcedureColumns**によって返される列のメタデータについて説明します。 また、 **SQLGetTypeInfo**によって返されるデータ型のメタデータについても説明します。  
   
  [ODBC&#41;&#40;の datetime データ型の変換 ](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  
@@ -53,5 +53,4 @@ ms.locfileid: "88423864"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
   

@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15924f5116261de308a9288935396d24d54b8aa8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115115"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
@@ -63,7 +63,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
  *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* は必須です。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  
- *式*と同じ値を返します。  
+ *式* と同じ値を返します。  
   
 ## <a name="remarks"></a>注釈  
  MIN は NULL 値をすべて無視します。  

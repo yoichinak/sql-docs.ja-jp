@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83eaa525c9cfa6ca80be2712fd0d21e42cc4f180
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04007ee3165838669fd1b0faefdcb20d09940af7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425194"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192474"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>パッケージに対する SQL Server エージェント ジョブ
 
@@ -45,17 +45,17 @@ ms.locfileid: "88425194"
 -   [スケジュールされたパッケージのトラブルシューティング](#trouble)  
   
 ##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを実行してタスクの自動化とスケジュール設定を可能にする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってインストールされるサービスです。 ジョブを自動的に実行できるようにするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを実行している必要があります。 詳細については、「 [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent)」をご覧ください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを実行してタスクの自動化とスケジュール設定を可能にする、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってインストールされるサービスです。 ジョブを自動的に実行できるようにするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを実行している必要があります。 詳細については、「 [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)」をご覧ください。  
   
  **のインスタンスに接続すると、** のオブジェクト エクスプローラーに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [SQL Server エージェント] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ノードが表示されます。  
   
- 定期的なタスクを自動化するには、 **[新しいジョブ]** ダイアログ ボックスを使用してジョブを作成します。 詳細については、 [「ジョブの実装」](https://docs.microsoft.com/sql/ssms/agent/implement-jobs)を参照してください。  
+ 定期的なタスクを自動化するには、 **[新しいジョブ]** ダイアログ ボックスを使用してジョブを作成します。 詳細については、 [「ジョブの実装」](../../ssms/agent/implement-jobs.md)を参照してください。  
   
- ジョブを作成した後は、少なくとも 1 つのステップを追加する必要があります。 1 つのジョブに複数のステップを含め、それぞれのステップで異なるタスクを実行できます。 詳細については、 [ジョブ ステップの管理](https://docs.microsoft.com/sql/ssms/agent/manage-job-steps)を参照してください。  
+ ジョブを作成した後は、少なくとも 1 つのステップを追加する必要があります。 1 つのジョブに複数のステップを含め、それぞれのステップで異なるタスクを実行できます。 詳細については、 [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)を参照してください。  
   
- ジョブとジョブ ステップを作成した後は、ジョブを実行するためのスケジュールを作成できます。 また、手動で実行する、スケジュールされていないジョブも作成できます。 詳細については、「 [スケジュールの作成とジョブへのアタッチ](https://docs.microsoft.com/sql/ssms/agent/create-and-attach-schedules-to-jobs)」を参照してください。  
+ ジョブとジョブ ステップを作成した後は、ジョブを実行するためのスケジュールを作成できます。 また、手動で実行する、スケジュールされていないジョブも作成できます。 詳細については、「 [スケジュールの作成とジョブへのアタッチ](../../ssms/agent/create-and-attach-schedules-to-jobs.md)」を参照してください。  
   
- ジョブ完了時にオペレーターへ電子メール メッセージを送信する通知オプションなどの設定、警告の追加を行い、ジョブを拡張できます。 詳細については、「 [警告](https://docs.microsoft.com/sql/ssms/agent/alerts)」を参照してください。  
+ ジョブ完了時にオペレーターへ電子メール メッセージを送信する通知オプションなどの設定、警告の追加を行い、ジョブを拡張できます。 詳細については、「 [警告](../../ssms/agent/alerts.md)」を参照してください。  
   
 ##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのスケジュールを設定する場合は、少なくとも 1 つのステップを追加し、ステップの種類を **[SQL Server Integration Services パッケージ]** に設定する必要があります。 1 つのジョブに複数のステップを含め、それぞれのステップで異なるパッケージを実行できます。  
@@ -64,14 +64,14 @@ ms.locfileid: "88425194"
   
  詳しくは、「 [SQL Server エージェントを使用してパッケージのスケジュールを設定する](#schedule)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用してパッケージを実行する方法を示しているビデオについては、MSDN ライブラリのビデオのホームページの「[SQL Server エージェントを使用してパッケージ実行を自動化する方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=141771)」をご覧ください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用してパッケージを実行する方法を示しているビデオについては、MSDN ライブラリのビデオのホームページの「[SQL Server エージェントを使用してパッケージ実行を自動化する方法 (SQL Server ビデオ)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100))」をご覧ください。  
   
 ##  <a name="troubleshooting"></a><a name="trouble"></a> トラブルシューティング  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップは、パッケージを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] およびコマンド ラインで正常に実行できる場合でも、パッケージの開始に失敗することがあります。 この問題には、いくつかの一般的な原因と、推奨されるソリューションがあります。 詳細については、次のリソースを参照してください。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出したときに SSIS パッケージが実行されません](https://support.microsoft.com/kb/918760)  
   
--   MSDN ライブラリのビデオ「[トラブルシューティング: SQL Server エージェントを使用した SSIS パッケージ実行 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=141772)」  
+-   MSDN ライブラリのビデオ「[トラブルシューティング: SQL Server エージェントを使用した SSIS パッケージ実行 (SQL Server ビデオ)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100))」  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップがパッケージを開始した後、パッケージの実行が失敗したり、正常に実行されても予期しない結果になる場合があります。 これらの問題のトラブルシューティングには、次のツールを使用できます。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "88425194"
 
         > **注:** プロキシ アカウントが使用する資格情報のパスワードが変更された場合は、資格情報のパスワードを更新する必要があります。 そうしない場合、ジョブ ステップは失敗します。  
 
-        SQL Server エージェントのサービス アカウントを構成する方法については、「[SQL Server エージェントのサービス開始アカウントの設定 (SQL Server 構成マネージャー)](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)」を参照してください。  
+        SQL Server エージェントのサービス アカウントを構成する方法については、「[SQL Server エージェントのサービス開始アカウントの設定 (SQL Server 構成マネージャー)](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)」を参照してください。  
 
 8.  **[パッケージ ソース]** ボックスの一覧でパッケージのソースをクリックし、ジョブ ステップのオプションを構成します。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "88425194"
     ||**パスワード**|  
     ||**Package**<br /><br /> 参照ボタンをクリックして、パッケージを選択します。<br /><br /> **オブジェクト エクスプローラー** の **[格納されたパッケージ]** ノードの下にあるフォルダー内のパッケージを選択します。|  
     |**Package**<br /><br /> これらは、ファイル システムに格納されるパッケージのタブ オプションです。|**Package**<br /><br /> パッケージ ファイルのフル パスを入力するか、参照ボタンをクリックしてパッケージを選択します。|  
-    |**構成**|特定の構成でパッケージを実行するための XML 構成ファイルを追加します。 パッケージのプロパティの値を実行時に更新するために、パッケージ構成を使用します。<br /><br /> このオプションは、 **dtexec** の **/ConfigFile**オプションに対応しています。<br /><br /> パッケージ構成が適用されるしくみについては、「 [Package Configurations](../../integration-services/packages/package-configurations.md)」を参照してください。 パッケージ構成を作成する方法の詳細については、「 [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)」を参照してください。|  
+    |**構成**|特定の構成でパッケージを実行するための XML 構成ファイルを追加します。 パッケージのプロパティの値を実行時に更新するために、パッケージ構成を使用します。<br /><br /> このオプションは、 **dtexec** の **/ConfigFile**オプションに対応しています。<br /><br /> パッケージ構成が適用されるしくみについては、「 [Package Configurations](./legacy-package-deployment-ssis.md)」を参照してください。 パッケージ構成を作成する方法の詳細については、「 [Create Package Configurations](./legacy-package-deployment-ssis.md)」を参照してください。|  
     |**[コマンド ファイル]**|**dtexec**と共に実行する追加のオプションを、別のファイル内に指定します。<br /><br /> たとえば、/Dump *errorcode* オプションが記述されたファイルを含めると、パッケージの実行中に 1 つ以上の指定されたイベントが発生した場合に、デバッグ ダンプ ファイルを生成することができます。<br /><br /> 複数のファイルを作成し、 **[コマンド ファイル]** オプションを使用して適切なファイルを指定することで、異なるオプションのセットでパッケージを実行できます。<br /><br /> **[コマンド ファイル]** オプションは、 **dtexec** の **/CommandFile**オプションに対応しています。|  
     |**データ ソース**|パッケージに含まれている接続マネージャーを表示します。 接続文字列を変更するには、接続マネージャーをクリックして、接続文字列をクリックします。<br /><br /> このオプションは、 **dtexec** の **/Connection**オプションに対応しています。|  
     |**実行オプション**|**検証時に警告が発生したらパッケージを失敗とする**<br /> 警告メッセージをエラーと見なすかどうかを示します。 このオプションを選択した場合、検証中に警告が発生すると、パッケージは失敗します。 このオプションは、 **dtexec** の **/WarnAsError**オプションに対応しています。<br /><br /> **[パッケージを実行せずに検証する]**<br /> 検証フェーズ後にパッケージの実行を停止して、実際にはパッケージを実行しないかどうかを示します。 このオプションは、 **dtexec** の **/Validate**オプションに対応しています。<br /><br /> **MacConcurrentExecutables プロパティをオーバーライドする**<br /> パッケージが同時に実行できる実行可能ファイルの数を指定します。 値を -1 にすると、パッケージが実行できる実行可能ファイルの最大数が、パッケージを実行しているコンピューターのプロセッサの合計数に 2 を加えた数と等しくなることを意味します。 このオプションは、 **dtexec** の **/MaxConcurrent**オプションに対応しています。<br /><br /> **[パッケージのチェックポイントを有効にする]**<br /> パッケージの実行中にパッケージがチェックポイントを使用するかどうかを示します。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。<br /><br /> このオプションは、 **dtexec** の **/CheckPointing**オプションに対応しています。<br /><br /> **[再開オプションをオーバーライドする]**<br /> パッケージの **CheckpointUsage** プロパティに新しい値が設定されるかどうかを示します。 **[再開オプション]** ボックスの一覧から値を選択します。<br /><br /> このオプションは、 **dtexec** の **/Restart**オプションに対応しています。<br /><br /> **32 ビット ランタイムを使用する**<br /> 64 ビット バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがインストールされている 64 ビット コンピューター上で、32 ビット バージョンの dtexec ユーティリティを使用してパッケージを実行するかどうかを示します。<br /><br /> たとえば、パッケージが 64 ビット バージョンでは使用できないネイティブ OLE DB プロバイダーを使用している場合に、32 ビット バージョンの dtexec を使用してパッケージを実行する必要がある場合があります。 詳細については、「 [64 ビット コンピューター上の Integration Services に関する注意点](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)」を参照してください。<br /><br /> 既定では、ジョブ ステップの種類として **[SQL Server Integration Services パッケージ]** を選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントはシステムによって自動的に呼び出されるバージョンの dtexec ユーティリティを使用してパッケージを実行します。 システムは、コンピューター プロセッサと、コンピューター上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのバージョンに応じて、32 ビットまたは 64 ビット バージョンのユーティリティを呼び出します。|  
@@ -212,14 +212,13 @@ ms.locfileid: "88425194"
   
 -   [Web サイトのサポート技術情報の記事「](https://support.microsoft.com/kb/918760)SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出したときに SSIS パッケージが実行されません [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」  
   
--   MSDN ライブラリのビデオ「[トラブルシューティング: SQL Server エージェントを使用した SSIS パッケージ実行 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=141772)」  
+-   MSDN ライブラリのビデオ「[トラブルシューティング: SQL Server エージェントを使用した SSIS パッケージ実行 (SQL Server ビデオ)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100))」  
   
--   MSDN ライブラリのビデオ「[SQL Server エージェントを使用してパッケージ実行を自動化する方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=141771)」  
+-   MSDN ライブラリのビデオ「[SQL Server エージェントを使用してパッケージ実行を自動化する方法 (SQL Server ビデオ)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100))」  
   
 -   mssqltips.com の技術記事「 [Windows PowerShell を使用した SQL Server エージェント ジョブの確認](https://go.microsoft.com/fwlink/?LinkId=165675)」  
   
 -   mssqltips.com の技術記事「 [SQL エージェント ジョブを有効または無効にしたときの自動警告](https://go.microsoft.com/fwlink/?LinkId=165676)」  
   
 -   mssqltips.com のブログ「 [Windows イベント ログに書き込むための SQL エージェント ジョブの構成](https://go.microsoft.com/fwlink/?LinkId=220745)」  
-  
   

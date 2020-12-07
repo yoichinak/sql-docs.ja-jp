@@ -13,12 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a84bfa9b7aa9fc50d16268005ac02868f11784b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93cecf5b261a888375ead03aac1eec07b76c63d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393554"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196496"
 ---
 # <a name="flexible-file-task"></a>柔軟なファイル タスク
 
@@ -29,7 +29,7 @@ ms.locfileid: "88393554"
 
 - ローカル ファイル システム
 - [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
 
 柔軟なファイル タスクは、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
 
@@ -62,12 +62,12 @@ ms.locfileid: "88393554"
 ***サービス プリンシパルのアクセス許可の構成に関する注意事項***
 
 **テスト接続**が機能するためには (BLOB ストレージまたは Data Lake Storage Gen2)、サービス プリンシパルには少なくともストレージ アカウントに対する**ストレージ BLOB データ閲覧者**の役割を割り当てる必要があります。
-これは、[RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) を使用して行います。
+これは、[RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) を使用して行います。
 
 BLOB ストレージの場合、少なくとも**ストレージ BLOB データ閲覧者**と**ストレージ BLOB データ共同作成者**の役割をそれぞれ割り当てることにより、読み取りと書き込みのアクセス許可が付与されます。
 
-Data Lake Storage Gen2 の場合、アクセス許可は RBAC と [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) の両方によって決定されます。
-[こちら](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)に説明されているように、アプリ登録に対応するサービス プリンシパルのオブジェクト ID (OID) を使用して ACL を構成することに注意してください。
+Data Lake Storage Gen2 の場合、アクセス許可は RBAC と [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) の両方によって決定されます。
+[こちら](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)に説明されているように、アプリ登録に対応するサービス プリンシパルのオブジェクト ID (OID) を使用して ACL を構成することに注意してください。
 これは、RBAC 構成で使用されるアプリケーション (クライアント) ID とは異なります。
 組み込みロールまたはカスタム ロールを使用してセキュリティ プリンシパルに RBAC データ アクセス許可が付与されると、これらのアクセス許可は、要求の認可時に最初に評価されます。
 要求された操作がセキュリティ プリンシパルの RBAC 割り当てによって認可された場合、認可はすぐに解決され、追加の ACL チェックは実行されません。
@@ -76,4 +76,4 @@ Data Lake Storage Gen2 の場合、アクセス許可は RBAC と [ACL](https://
 - 読み取りアクセス許可の場合、少なくともソース ファイル システムから開始する**実行**アクセス許可を、コピーするファイルに対する**読み取り**アクセス許可と共に付与します。 または、少なくとも**ストレージ BLOB データ閲覧者**の役割を RBAC を使用して付与します。
 - 書き込みアクセス許可の場合、少なくともシンク ファイル システムから開始する**実行**アクセス許可を、シンク フォルダーに対する**書き込み**アクセス許可と共に付与します。 または、少なくとも**ストレージ BLOB データ共同作成者**の役割を RBAC を使用して付与します。
 
-詳細については、[この記事](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)を参照してください。
+詳細については、[この記事](/azure/storage/blobs/data-lake-storage-access-control)を参照してください。

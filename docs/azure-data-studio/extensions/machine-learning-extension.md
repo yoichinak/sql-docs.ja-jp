@@ -9,22 +9,22 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: bc3039207e083d2afc8f0850a6328facd1f1916f
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 163f5efca97e99609cbdbaae8f713c4576cc4e0b
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137017"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035978"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio の Machine Learning 拡張機能 (プレビュー)
 
-[Azure Data Studio](../what-is.md) の Machine Learning 拡張機能を使用すると、パッケージの管理、機械学習モデルのインポート、予測の作成、および SQL データベースの実験を実行するためのノートブックの作成を行うことができます。 この拡張機能は、現在プレビューの段階にあります。
+[Azure Data Studio](../what-is-azure-data-studio.md) の Machine Learning 拡張機能を使用すると、パッケージの管理、機械学習モデルのインポート、予測の作成、および SQL データベースの実験を実行するためのノートブックの作成を行うことができます。 この拡張機能は、現在プレビューの段階にあります。
 
 ## <a name="prerequisites"></a>前提条件
 
 Azure Data Studio を実行するコンピューターには、次の前提条件をインストールする必要があります。
 
-- [Python 3](https://www.python.org/downloads/)。 Python をインストールしたら、[[拡張機能の設定]](#settings) で、Python インストールへのローカル パスを指定する必要があります。 Azure Data Studio で [Python カーネル ノートブック](../notebooks-tutorial-python-kernel.md)を使用したことがある場合は、拡張機能ではノートブックからのパスが既定で使用されます。
+- [Python 3](https://www.python.org/downloads/)。 Python をインストールしたら、[[拡張機能の設定]](#settings) で、Python インストールへのローカル パスを指定する必要があります。 Azure Data Studio で [Python カーネル ノートブック](../notebooks/notebooks-python-kernel.md)を使用したことがある場合は、拡張機能ではノートブックからのパスが既定で使用されます。
 
 - Windows、macOS、または Linux 用の [Microsoft ODBC driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)。
 
@@ -68,7 +68,7 @@ Machine Learning 拡張機能の設定を変更するには、次の手順に従
 
 1. Azure Data Studio で拡張機能マネージャーを開きます。 拡張機能アイコンを選択するか、[表示] メニューの [拡張機能] を選択できます。
 
-1. **有効化された**拡張機能の下で、**Machine Learning** 拡張機能を見つけます。
+1. **有効化された** 拡張機能の下で、 **Machine Learning** 拡張機能を見つけます。
 
 1. **[管理]** アイコンを選択します。
 
@@ -87,7 +87,7 @@ Machine Learning 拡張機能の設定を変更するには、次の手順に従
 
 1. **[Machine Learning: Python の有効化]** が有効になっていることを確認します。 既定では、この設定は有効になっています。
 
-1. 既存の Python インストールへのパスを **[Machine Learning: Python パス]** で指定します。 これには Python の実行可能ファイルまたは実行可能ファイルが格納されているフォルダーへの完全なパスを指定できます。 Azure Data Studio で [Python カーネル ノートブック](../notebooks-tutorial-python-kernel.md)を使用したことがある場合は、拡張機能ではノートブックからのパスが既定で使用されます。
+1. 既存の Python インストールへのパスを **[Machine Learning: Python パス]** で指定します。 これには Python の実行可能ファイルまたは実行可能ファイルが格納されているフォルダーへの完全なパスを指定できます。 Azure Data Studio で [Python カーネル ノートブック](../notebooks/notebooks-python-kernel.md)を使用したことがある場合は、拡張機能ではノートブックからのパスが既定で使用されます。
 
 ### <a name="enable-r"></a>R の有効化
 
@@ -107,13 +107,13 @@ Azure Data Studio で Machine Learning 拡張機能を使用するには、次�
 
 1. 左側のメニューの **[全般]** の下で **[Machine Learning]** を選択します。
 
-Machine Learning 拡張機能を使用して、パッケージを管理し、予測を行い、データベースにモデルをインポートする方法については、**次のステップ**の下のリンクを参照してください。
+Machine Learning 拡張機能を使用して、パッケージを管理し、予測を行い、データベースにモデルをインポートする方法については、 **次のステップ** の下のリンクを参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 
 - [データベースでのパッケージの管理](machine-learning-extension-manage-packages.md)
 - [予測を行う](machine-learning-extension-predictions.md)
 - [モデルのインポートまたは表示](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio のノートブック](../notebooks-guidance.md)
+- [Azure Data Studio のノートブック](../notebooks/notebooks-guidance.md)
 - [SQL の機械学習のドキュメント](../../machine-learning/index.yml)
 - [SQL Edge での ONNX を使用した機械学習と AI (プレビュー)](/azure/azure-sql-edge/onnx-overview)

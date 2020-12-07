@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bd75bde9e125ffc99f1af6f382aa91d2f1e0caf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362515"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987278"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server の使用状況と診断データの収集のローカル監査 (CEIP)
 
@@ -333,7 +333,7 @@ UserRequestedLocalAuditDirectory レジストリ キー エントリを削除し
 
 **この JSON 出力を読み取るために使用できるクライアントまたはツールはありますか?**
 出力は、メモ帳、Visual Studio、JSON リーダーなど任意のツールで読み取ることができます。
-また、JSON ファイルを読み取り、以下の図のように SQL Server インスタンスのデータを分析することもできます。 SQL Server で JSON ファイルを読み取る方法の詳細については、「 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)」(OPENROWSET (BULK) と OPENJSON (Transact-SQL) を使用して JSON ファイルを SQL Server にインポートする) を参照してください。
+また、JSON ファイルを読み取り、以下の図のように SQL Server インスタンスのデータを分析することもできます。 SQL Server で JSON ファイルを読み取る方法の詳細については、「 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server)」(OPENROWSET (BULK) と OPENJSON (Transact-SQL) を使用して JSON ファイルを SQL Server にインポートする) を参照してください。
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

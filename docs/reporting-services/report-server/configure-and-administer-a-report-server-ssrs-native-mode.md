@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 68a37cc93271fc913cc89d2b0e522a81adec443f
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 3f9d31706fd0ba46c565d4c9049a981dd06fb54b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547464"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933797"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>レポート サーバーを構成および管理する (SSRS ネイティブ モード)
   この記事では、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を構成するための方法について説明します。 また、特定のコンポーネント、機能、サーバー機能の構成方法について説明しているトピックへのリストも記載されています。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は次の方法で構成できます。  
   
--   Reporting Services 構成マネージャーを使用します。 このセクションの多くのトピックでは、このツールを使用して特定の機能を構成する方法について説明しています。  
+-   レポート サーバー構成マネージャーを使用します。 このセクションの多くのトピックでは、このツールを使用して特定の機能を構成する方法について説明しています。  
   
 -   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、サーバーのプロパティのカスタマイズ、個人用レポートの有効化、トレース ログの有効化、および、サイト全体に対する既定値の設定を行います。 サイト設定の詳細については、Management Studio の「 [Reporting Services レポート サーバー &#40;ネイティブ モード&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md) 」を参照してください。 サーバーのプロパティをプログラムから設定するスクリプトを作成して実行できます。 詳細については、「 [配置タスクおよび管理タスクのスクリプト作成](../../reporting-services/tools/script-deployment-and-administrative-tasks.md) 」および「 [レポート サーバーのシステム プロパティ](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)」を参照してください。  
   
@@ -36,27 +36,27 @@ ms.locfileid: "84547464"
 -   必要に応じて、構成ファイルを修正し、アプリケーションの設定を変更します。 各ファイルの詳細およびそれらの修正のガイドラインについては、「 [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [レポート サーバー URL の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  レポート サーバーおよび Web ポータルへのアクセスに使用する URL の定義方法について説明します。  
   
- [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [レポート サーバー サービス アカウントの構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  サービスのアカウントとパスワードを変更する方法の推奨事項と手順について説明します。  
   
- [レポート サーバー データベースの作成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
+ [レポート サーバー データベースの作成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
  サーバーのメタデータやオブジェクトの格納に必要なレポート サーバー データベースを作成する方法について説明します。  
   
- [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [レポート サーバー データベース接続の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  レポート サーバーからレポート サーバー データベースへの接続に使用する接続文字列を変更する方法について説明します。  
   
  [Reporting Services の電子メール配信](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
  電子メールによるレポートの配信をサポートするようにレポート サーバーを構成する方法について説明します。  
   
- [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
+ [自動実行アカウントの構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  自動実行モードでレポートを処理するようにユーザー アカウントを構成する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目  
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services のセキュリティと保護](../../reporting-services/security/reporting-services-security-and-protection.md)   
  [Reporting Services レポート サーバー &#40;ネイティブ モード&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
   

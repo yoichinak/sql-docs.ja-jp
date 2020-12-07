@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad545578e9d3baf019be37b1bc9c7969df5ee1ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa326be8b57eed58f0aa52876d0d32b889320c58
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495105"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193744"
 ---
 # <a name="variables-window"></a>[変数] ウィンドウ
 
@@ -50,7 +50,7 @@ ms.locfileid: "88495105"
  変数を一覧から選択し、 **[変数の削除]** をクリックします。  
   
  **グリッドのオプション**  
- クリックすると **[可変グリッドのオプション]** ダイアログ ボックスが開きます。このダイアログ ボックスで、列の選択を変更したり、 **[変数]** ウィンドウにフィルターを適用したりできます。 詳細については、「 [可変グリッドのオプション](../integration-services/variable-grid-options.md)」を参照してください。  
+ クリックすると **[可変グリッドのオプション]** ダイアログ ボックスが開きます。このダイアログ ボックスで、列の選択を変更したり、 **[変数]** ウィンドウにフィルターを適用したりできます。 詳細については、「 [可変グリッドのオプション]()」を参照してください。  
   
  **Name**  
  変数名を表示します。 ユーザー定義変数の名前を更新できます。  
@@ -116,8 +116,7 @@ ms.locfileid: "88495105"
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)   
- [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [パッケージで変数を使用する](./integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; 式](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [パッケージ実行用のダンプ ファイルを生成する](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
   

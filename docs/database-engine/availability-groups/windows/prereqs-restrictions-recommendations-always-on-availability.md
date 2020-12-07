@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: 3ff589af87c2fbf6bb5bca7670a2a38d6c8abc16
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88092011"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130151"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88092011"
 ###  <a name="permissions-windows-system"></a><a name="PermissionsWindows"></a> 権限 (Windows システム)  
  WSFC を管理するユーザーは、すべてのクラスター ノードのシステム管理者であることが必要です。  
   
- クラスターを管理するためのアカウントの詳細については、「[付録 A: フェールオーバー クラスターの要件](https://technet.microsoft.com/library/dd197454.aspx)」を参照してください。  
+ クラスターを管理するためのアカウントの詳細については、「[付録 A: フェールオーバー クラスターの要件](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197454(v=ws.10))」を参照してください。  
   
 ###  <a name="related-tasks-windows-system"></a><a name="RelatedTasksWindows"></a> 関連タスク (Windows システム)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88092011"
   
 -   [フェールオーバー クラスターの Windows PowerShell の概要](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [クラスター リソースのコマンドと同等の Windows PowerShell コマンドレット](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [クラスター リソースのコマンドと同等の Windows PowerShell コマンドレット](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619744(v=ws.10)#BKMK_resource)  
   
 ###  <a name="related-content-windows-system"></a><a name="RelatedContentWS"></a> 関連コンテンツ (Windows システム)  
   
@@ -131,10 +131,10 @@ ms.locfileid: "88092011"
   
 |前提条件|リンク|  
 |------------------|-----------|  
-|このホスト コンピューターは WSFC ノードである必要があります。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは、クラスターの別のノードに存在します。 別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができます。 SQL Server 2016 には分散型可用性グループが導入されています。 分散型可用性グループでは、2 つの可用性グループが別々のクラスターに存在します。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [分散型可用性グループ (Always On 可用性グループ)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
+|このホスト コンピューターは WSFC ノードである必要があります。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは、クラスターの別のノードに存在します。 別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができます。 SQL Server 2016 には分散型可用性グループが導入されています。 分散型可用性グループでは、2 つの可用性グループが別々のクラスターに存在します。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [分散型可用性グループ (Always On 可用性グループ)](./distributed-availability-groups.md)|  
 |可用性グループで Kerberos を操作するには:<br /><br /> 可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで、同じ SQL Server サービス アカウントを使用する必要があります。<br /><br /> ドメイン管理者は、可用性グループ リスナーの仮想ネットワーク名 (VNN) の SQL Server サービス アカウントに、Active Directory でサーバー プリンシパル名 (SPN) を手動で登録する必要があります。 SQL Server サービス アカウント以外のアカウントに SPN が登録されている場合は、認証が失敗します。<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> SQL Server サービス アカウントを変更した場合は、ドメイン管理者が SPN を手動で再登録する必要があります。|[Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡単な説明:**<br /><br /> Kerberos と SPN は相互認証を行います。 SPN は、SQL Server サービスを起動する Windows アカウントにマップされます。 SPN が正常に登録されていないか登録に失敗した場合、Windows セキュリティ レイヤーは、SPN に関連するアカウントを決定することができず、Kerberos 認証は使用できません。<br /><br /> <br /><br /> 注:NTLM には、この要件はありません。|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と要件](#FciArLimitations) (この記事の後半)|  
-|Always On 可用性グループに参加するために、各サーバー インスタンスで同じバージョンの SQL Server が実行されている必要がある。|[SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014)、[SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016)、[SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017) の各エディションとサポートされる機能|  
+|Always On 可用性グループに参加するために、各サーバー インスタンスで同じバージョンの SQL Server が実行されている必要がある。|[SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014&preserve-view=true)、[SQL 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016&preserve-view=true)、[SQL 2017](../../../sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017&preserve-view=true) の各エディションとサポートされる機能|  
 |特定の可用性グループの可用性レプリカをホストするすべてのサーバー インスタンス間で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の照合順序を統一する必要があります。|[サーバーの照合順序の設定または変更](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を有効にします。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のサーバー インスタンスは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 環境がサポートする範囲内であれば、1 台のコンピューターでいくつでも有効にすることができます。|[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> WSFC を破棄してから再作成した場合は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効にしていた、元のクラスター上の各サーバー インスタンスについて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を無効にしてからもう一度有効にする必要があります。|  
 |すべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。 このエンドポイントは、サーバー インスタンス上のミラーリング監視サーバーとデータベース ミラーリング パートナー、および可用性レプリカすべてによって共有されます。<br /><br /> 可用性レプリカのホストとして選んだサーバー インスタンスがドメイン ユーザー アカウントで実行されていて、まだデータベース ミラーリング エンドポイントが存在しない場合、 [新しい可用性グループ ウィザード](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (または [可用性グループへのレプリカの追加ウィザード](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) でエンドポイントを作成し、サーバー インスタンス サービス アカウントに CONNECT 権限を許可することができます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。ウィザードは、サーバー インスタンス上でデータベース ミラーリング エンドポイントを作成できなくなります。 この場合は、データベース ミラーリング エンドポイントを手動で作成してからウィザードを起動することをお勧めします。<br /><br /> <br /><br /> <b>\*\* セキュリティに関する注意 \*\*</b>[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のトランスポート セキュリティは、データベース ミラーリングと同じです。|[データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
@@ -166,7 +166,7 @@ ms.locfileid: "88092011"
 
 -  SQL Server 2019 では、メモリ最適化可用性グループ データベースに対する並列再実行が導入されました。 SQL Server 2016 と 2017 では、可用性グループ内のデータベースがメモリ最適化もされている場合、ディスク ベースのテーブルで並列再実行は使用されません。 
   
- 詳細については、「[Always On - HADRON 学習シリーズ: HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)」 (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジニア ブログ) を参照してください。  
+ 詳細については、「[Always On - HADRON 学習シリーズ: HADRON 対応データベースでのワーカー プールの使用](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)」 (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジニア ブログ) を参照してください。  
   
 ###  <a name="permissions-server-instance"></a><a name="PermissionsSI"></a> 権限 (サーバー インスタンス)  
   
@@ -185,7 +185,7 @@ ms.locfileid: "88092011"
   
 ###  <a name="related-content-server-instance"></a><a name="RelatedContentSI"></a> 関連コンテンツ (サーバー インスタンス)  
   
--   [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
+-   [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
 ##  <a name="network-connectivity-recommendations"></a><a name="NetworkConnect"></a> ネットワーク接続の推奨事項  
  WSFC ノード間の通信と、可用性レプリカ間の通信には、同じネットワーク リンクを使用することを強くお勧めします。  別々のネットワーク リンクを使用すると、一部のリンクにエラーが発生した場合に (断続的なエラーであっても)、予期しない動作が発生する可能性があります。  
@@ -209,14 +209,14 @@ ms.locfileid: "88092011"
 ###  <a name="restrictions-fcis"></a><a name="RestrictionsFCI"></a> 制限 (FCI)  
   
 > [!NOTE]  
-> フェールオーバー クラスター インスタンスは、クラスター化共有ボリューム (CSV) をサポートしています。 CSV の詳細については、「 [フェールオーバー クラスターのクラスターの共有ボリュームについて](https://technet.microsoft.com/library/dd759255.aspx)」を参照してください。  
+> フェールオーバー クラスター インスタンスは、クラスター化共有ボリューム (CSV) をサポートしています。 CSV の詳細については、「 [フェールオーバー クラスターのクラスターの共有ボリュームについて](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11))」を参照してください。  
   
 -   **FCI のクラスター ノードでホストできるレプリカは、特定の可用性グループに対して 1 つだけである:** FCI に可用性レプリカを追加する場合、FCI の有効な所有者である WSFC ノードで、同じ可用性グループに対して別のレプリカをホストすることはできません。  競合を避けるために、フェールオーバー クラスター インスタンスの所有者を構成することをお勧めします。 これにより、1 つの WSFC によって同じ可用性グループの 2 つの可用性レプリカがホストされる可能性がなくなります。
   
      さらに、その他の各レプリカは、同じ Windows Server フェールオーバー クラスター内の別のクラスター ノードに存在する SQL Server 2016 のインスタンスによってホストされている必要があります。 唯一の例外は、別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。 
 
   >[!WARNING]
-  > フェールオーバー クラスター マネージャーを使用して、可用性グループをホストしている*フェールオーバー クラスター インスタンス*を、同じ可用性グループのレプリカを "*すでに*" ホストしているノードに移動すると、可用性グループのレプリカが失われ、それによってターゲット ノード上でオンラインにできなくなる可能性があります。 フェールオーバー クラスターの 1 つのノードでは、同じ可用性グループの複数のレプリカをホストすることはできません。 これがどのように発生し、どのように回復するかの詳細については、ブログ記事の「[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)」(可用性グループでレプリカが予想外に削除される) を参照してください。 
+  > フェールオーバー クラスター マネージャーを使用して、可用性グループをホストしている *フェールオーバー クラスター インスタンス* を、同じ可用性グループのレプリカを "*すでに*" ホストしているノードに移動すると、可用性グループのレプリカが失われ、それによってターゲット ノード上でオンラインにできなくなる可能性があります。 フェールオーバー クラスターの 1 つのノードでは、同じ可用性グループの複数のレプリカをホストすることはできません。 これがどのように発生し、どのように回復するかの詳細については、ブログ記事の「[Replica unexpectedly dropped in availability group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group)」(可用性グループでレプリカが予想外に削除される) を参照してください。 
 
   
 -   **可用性グループによる自動フェールオーバーは FCI ではサポートされない:** FCI は可用性グループによる自動フェールオーバーをサポートしないため、FCI によってホストされる可用性レプリカは手動フェールオーバー用にのみ構成できます。  
@@ -234,14 +234,14 @@ ms.locfileid: "88092011"
 |タスク|[アーティクル]|  
 |----------|-----------|  
 |SQL Server フェールオーバー クラスターのインストール|[新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|既存の SQL Server フェールオーバー クラスターのインプレース アップグレード|[SQL Server フェールオーバー クラスター インスタンスのアップグレード &#40;セットアップ&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
+|既存の SQL Server フェールオーバー クラスターのインプレース アップグレード|[SQL Server フェールオーバー クラスター インスタンスのアップグレード &#40;セットアップ&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |既存の SQL Server フェールオーバー クラスターのメンテナンス|[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
 ###  <a name="related-content-fcis"></a><a name="RelatedContentFCIs"></a> 関連コンテンツ (FCI)  
   
 -   [フェールオーバー クラスタリングと可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Always On アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性およびディザスター リカバリー ソリューションの構築](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Always On アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性およびディザスター リカバリー ソリューションの構築](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
 ##  <a name="availability-group-prerequisites-and-restrictions"></a><a name="PrerequisitesForAGs"></a> 可用性グループの前提条件と制限  
  **このセクションの内容**  
@@ -381,11 +381,11 @@ ms.locfileid: "88092011"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
--   [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
+-   [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -394,5 +394,4 @@ ms.locfileid: "88092011"
   
     
   
---------------------------------------------------  
-
+--------------------------------------------------

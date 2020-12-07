@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d213c8849c23ec1cb57e2628403542a31655a495
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913762"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193774"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>パッケージ実行用のダンプ ファイルを生成する
 
@@ -35,7 +35,7 @@ ms.locfileid: "86913762"
   
      実行中のパッケージを一時停止してダンプ ファイルを作成する場合に、このストアド プロシージャを呼び出します。  
   
- パッケージ配置モデルを使用する場合は、 **dtexec** ユーティリティまたは **dtutil** ユーティリティを使用して、コマンド ラインでデバッグ ダンプ オプションを指定することによって、デバッグ ダンプ ファイルを作成します。 詳細については、「 [dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md) 」と「 [dtutil ユーティリティ](../../integration-services/dtutil-utility.md)」を参照してください。 パッケージ配置モデルの詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](https://msdn.microsoft.com/library/hh213290.aspx)」と「[レガシー パッケージの配置 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)」を参照してください。   
+ パッケージ配置モデルを使用する場合は、 **dtexec** ユーティリティまたは **dtutil** ユーティリティを使用して、コマンド ラインでデバッグ ダンプ オプションを指定することによって、デバッグ ダンプ ファイルを作成します。 詳細については、「 [dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md) 」と「 [dtutil ユーティリティ](../../integration-services/dtutil-utility.md)」を参照してください。 パッケージ配置モデルの詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../packages/deploy-integration-services-ssis-projects-and-packages.md)」と「[レガシー パッケージの配置 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)」を参照してください。   
   
 ## <a name="debug-dump-file-format"></a>デバッグ ダンプ ファイルの形式  
  デバッグ ダンプ オプションを指定した場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって作成されるデバッグ ダンプ ファイルを次に示します。  
@@ -55,4 +55,4 @@ ms.locfileid: "86913762"
 |最新のメッセージ|システムで発行された最新のメッセージ。 各メッセージの時刻、種類、説明、およびスレッド ID が含まれます。|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp:2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID:2368           (ThreadID)<br /><br /> [E:3]         Event Name:OnError                        (EventName)<br /><br /> [E:3]         Source Name:              (SourceName)<br /><br /> [E:3]         Source ID:                      (SourceID)<br /><br /> [E:3]         Execution ID:               (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description:コンポーネントが見つからないか、登録されていないか、アップグレードできないか、コンポーネントに必要なインターフェイスが見つかりません。 このコンポーネントの連絡先情報は "" です。|  
   
 ## <a name="related-information"></a>関連情報  
-[[パッケージの実行] ダイアログ ボックス](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+[[パッケージの実行] ダイアログ ボックス](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)

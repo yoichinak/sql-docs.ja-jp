@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dec289a898c25900afb7f5dd30ec2aa2fe9e34f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5ea310eb9054beb5fdab77e589ad9fbc2901cc7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495423"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130012"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact-SQL を使用して Visual Studio Code から SSIS プロジェクトを配置する
 
@@ -23,7 +23,7 @@ ms.locfileid: "88495423"
 
 このクイックスタートでは、Visual Studio Code を使用して、SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS プロジェクトを SSIS カタログに配置する方法を示します。
 
-Visual Studio Code は、拡張機能をサポートする Windows、macOS、および Linux のコード エディターです。拡張機能には、Microsoft SQL Server、Azure SQL Database、または Azure SQL Data Warehouse に接続するための `mssql` 拡張機能が含まれます。 VS Code の詳細については、「[Visual Studio Code](https://code.visualstudio.com/)」を参照してください。
+Visual Studio Code は、拡張機能をサポートする Windows、macOS、および Linux のコード エディターです。拡張機能には、Microsoft SQL Server、Azure SQL Database、または Azure Synapse Analytics に接続するための `mssql` 拡張機能が含まれます。 VS Code の詳細については、「[Visual Studio Code](https://code.visualstudio.com/)」を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 

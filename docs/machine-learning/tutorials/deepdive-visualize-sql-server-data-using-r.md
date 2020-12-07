@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 23f3eb157a76a9a197cf0f15a72ae0e51f7cf13b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180389"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196270"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>R を使用して SQL Server データを視覚化する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 6 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 6 です。
 
 このチュートリアルでは、R 関数を使用して、*creditLine* 列の値の分布を男女別に表示します。
 
@@ -84,13 +84,13 @@ ms.locfileid: "88180389"
 
 ## <a name="visualize-data-using-rxhistogram"></a>rxHistogram を使用してデータを視覚化する
 
-1. 次の R コードを使用して [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 関数を呼び出し、式とデータ ソースを渡します。 ローカルで最初にこの操作を実行することで、予想される結果と、所要時間を確認できます。
+1. 次の R コードを使用して [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) 関数を呼び出し、式とデータ ソースを渡します。 ローカルで最初にこの操作を実行することで、予想される結果と、所要時間を確認できます。
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    内部的には、 **rxHistogram** は、 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) パッケージに含まれる **rxCube** 関数を呼び出します。 **rxCube** は、式で指定された各変数の 1 つの列を含む 1 つのリスト (またはデータ フレーム) とカウント列を出力します。
+    内部的には、 **rxHistogram** は、 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/rxcube) パッケージに含まれる **rxCube** 関数を呼び出します。 **rxCube** は、式で指定された各変数の 1 つの列を含む 1 つのリスト (またはデータ フレーム) とカウント列を出力します。
     
 2. ここで、リモート SQL Server コンピューターにコンピューティング コンテキストを設定し、**rxHistogram** を再度実行します。
   
@@ -108,7 +108,7 @@ ms.locfileid: "88180389"
 
 散布図は、データ探索時に 2 つの変数間の関係を比較するためによく使用されます。 この目的には、組み込みの R パッケージと **RevoScaleR** 関数によって提供される入力を使用できます。
 
-1. [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) 関数を呼び出して、*numTrans* と *numIntlTrans* のすべての組み合わせに対する *fraudRisk* の平均を計算します。
+1. [rxCube](/machine-learning-server/r-reference/revoscaler/rxcrosstabs) 関数を呼び出して、*numTrans* と *numIntlTrans* のすべての組み合わせに対する *fraudRisk* の平均を計算します。
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -118,7 +118,7 @@ ms.locfileid: "88180389"
   
     **rxCube** の既定の戻り値は、クロス集計を表す *rxCube object* です。 
   
-2. [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) 関数を呼び出して、R の標準プロット関数のいずれかで簡単に使用できるデータ フレームに、結果を変換できます。
+2. [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf) 関数を呼び出して、R の標準プロット関数のいずれかで簡単に使用できるデータ フレームに、結果を変換できます。
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -142,7 +142,7 @@ ms.locfileid: "88180389"
   
 この簡単な分析から、トランザクションの数および国際的トランザクションの数の両方に伴って不正行為のリスクが高くなることがわかります。
 
-一般的な **rxCube** 関数およびクロス集計表の詳細については、「[RevoScaleR を使用したデータのサマリー](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)」を参照してください。
+一般的な **rxCube** 関数およびクロス集計表の詳細については、「[RevoScaleR を使用したデータのサマリー](/machine-learning-server/r/how-to-revoscaler-data-summaries)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 32fa18577753641583ff5b6c12d864da0f0e36af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: acc73e861b0c27b4a1fa46e7c4c2efa0e23cb55d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467884"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91378885"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88467884"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
+```syntaxsql 
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  
   
@@ -66,8 +65,8 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ## <a name="examples"></a>例  
  次の例では、証明書 `ABerglundCert07` を使用して `@SensitiveData` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
   
-```  
-DECLARE @SensitiveData nvarchar(max);  
+```sql  
+DECLARE @SensitiveData NVARCHAR(max);  
 SET @SensitiveData = N'Saddle Price Points are   
     2, 3, 5, 7, 11, 13, 17, 19, 23, 29';  
 INSERT INTO [SignedData04]  

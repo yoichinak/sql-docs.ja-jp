@@ -12,12 +12,12 @@ ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff6f5f8cd3bd9300e38f0eaaebd9d7c442ab95e8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 2e5902be2e28aaa2b3f020664ac31b8582de2a42
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479622"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038982"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,14 +30,13 @@ ms.locfileid: "89479622"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|入力候補オプション、IntelliSense をオフにする Transact-SQL スクリプトのサイズなどの、IntelliSense オプションの構成方法について説明します。|[IntelliSense の構成 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)|  
-|パラメーター ヒントを使用して、関数またはストアド プロシージャのパラメーターの数、名前、およびサイズに関する情報を取得する方法について説明します。|[パラメーター ヒント &#40;IntelliSense&#41;](../../relational-databases/scripting/parameter-info-intellisense.md)|  
-|クイック ヒントを使用して、識別子 (テーブルやビューの名前など) を説明するツールヒントを取得する方法について説明します。|[クイック ヒント &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)|  
-|名前の一部を入力し、それと同じ文字列で始まる名前のオブジェクトの短い一覧を取得した後で、識別子の残り部分を IntelliSense に補完させる方法について説明します。|[入力候補 &#40;IntelliSense&#41;](../../relational-databases/scripting/complete-word-intellisense.md)|  
-|IntelliSense が区切り記号のペアの両端を識別する方法と、ペアの片方の端からもう一方の端へ移動する方法を説明します。|[構文ペアの自動照合](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
+|入力候補オプション、IntelliSense をオフにする Transact-SQL スクリプトのサイズなどの、IntelliSense オプションの構成方法について説明します。|[IntelliSense の構成 &#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md)|  
+|パラメーター ヒントを使用して、関数またはストアド プロシージャのパラメーターの数、名前、およびサイズに関する情報を取得する方法について説明します。|[パラメーター ヒント &#40;IntelliSense&#41;](./parameter-info-intellisense.md)|  
+|クイック ヒントを使用して、識別子 (テーブルやビューの名前など) を説明するツールヒントを取得する方法について説明します。|[クイック ヒント &#40;IntelliSense&#41;](./quick-info-intellisense.md)|  
+|名前の一部を入力し、それと同じ文字列で始まる名前のオブジェクトの短い一覧を取得した後で、識別子の残り部分を IntelliSense に補完させる方法について説明します。|[入力候補 &#40;IntelliSense&#41;](./complete-word-intellisense.md)|  
+|IntelliSense が区切り記号のペアの両端を識別する方法と、ペアの片方の端からもう一方の端へ移動する方法を説明します。|[構文ペアの自動照合](./automatic-matching-of-syntax-pairs.md)|  
 |IntelliSense が動作しない状況について説明します。|IntelliSense のトラブルシューティング (SQL Server Management Studio)|  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
-  
+ [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
   

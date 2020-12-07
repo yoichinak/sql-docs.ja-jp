@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411148"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868903"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>ホスト ガーディアン サービスにコンピューターを登録する
 
@@ -120,7 +120,7 @@ TPM の構成証明では、次の 3 つのデータ ファイルが収集され
 | -------------------- | ---------------- | ---------- |
 | プラットフォーム識別子  | コンピューターの TPM の公開保証キーと、TPM 製造元からの保証キーの証明書。 | コンピューターごとに 1 個 |
 | TPM ベースライン | ブート プロセス中に読み込まれるファームウェアと OS の構成を測定する TPM のプラットフォーム制御レジスタ (PCR)。 たとえば、セキュア ブートの状態や、クラッシュ ダンプが暗号化されるかどうかなどがあります。 | 固有のコンピューター構成ごとに 1 つのベースライン (同じハードウェアとソフトウェアは同じベースラインを使用できます) |
-| コードの整合性ポリシー | コンピューターを保護するための信頼する[Windows Defender アプリケーション制御](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)ポリシー | コンピューターにデプロイされた固有の CI ポリシーごとに 1 つ。 |
+| コードの整合性ポリシー | コンピューターを保護するための信頼する[Windows Defender アプリケーション制御](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)ポリシー | コンピューターにデプロイされた固有の CI ポリシーごとに 1 つ。 |
 
 HGS で各構成証明の成果物を複数構成して、ハードウェアとソフトウェアのさまざまな組み合わせをサポートすることができます。
 HGS では、証明するコンピューターは各ポリシー カテゴリの 1 つのポリシーとのみ一致する必要があります。
@@ -147,7 +147,7 @@ WDAC コードの整合性ポリシーは、コードを実行しようとする
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. 「[Windows Defender アプリケーション制御展開ガイド](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)」のガイダンスに従って、[グループ ポリシー](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy)を使用して `allowall_cipolicy.bin` ファイルを [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターにデプロイします。 ワークグループ コンピューターの場合は、ローカル グループ ポリシー エディター (`gpedit.msc`) を使用して同じプロセスを実行します。
+2. 「[Windows Defender アプリケーション制御展開ガイド](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)」のガイダンスに従って、[グループ ポリシー](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy)を使用して `allowall_cipolicy.bin` ファイルを [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターにデプロイします。 ワークグループ コンピューターの場合は、ローカル グループ ポリシー エディター (`gpedit.msc`) を使用して同じプロセスを実行します。
 
 3. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターで `gpupdate /force` を実行して、新しいコードの整合性ポリシーを構成し、コンピューターを再起動してポリシーを適用します。
 
@@ -243,7 +243,7 @@ HGS で証明する [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.
 
 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを HGS に登録した後 (TPM モードの場合は[手順 4A](#step-4a-register-a-computer-in-tpm-mode)、ホスト キー モードの場合は[手順 4B](#step-4b-register-a-computer-in-host-key-mode))、正常に証明できることを確認する必要があります。
 
-[Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps) を使用するといつでも、HGS 構成証明クライアントの構成を確認して、構成証明を試行できます。
+[Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps) を使用するといつでも、HGS 構成証明クライアントの構成を確認して、構成証明を試行できます。
 このコマンドの出力は、次のようになります。
 
 ```

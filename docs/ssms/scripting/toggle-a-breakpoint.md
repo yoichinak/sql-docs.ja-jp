@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6c43f4376d6e60607fd1fcfb1c64f1d25cea3af
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: f9b9ddfd58beed00a00c3512b5db51e7a3a7907c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901482"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036217"
 ---
 # <a name="toggle-a-breakpoint"></a>ブレークポイントの切り替え
 
@@ -33,7 +33,7 @@ ms.locfileid: "88901482"
   
  1 行に複数の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがある場合、ステートメントごとにブレークポイントを切り替えることができます。 ウィンドウの左側にある灰色のバーをクリックすると、行の最初のステートメントのブレークポイントが切り替わります。 ステートメントの任意の箇所を強調表示するか、ステートメント内にカーソルを移動してから、F9 キーを押すか、 **[デバッグ]** メニューの **[ブレークポイントの設定/解除]** をクリックすることにより、後続のステートメント内でブレークポイントを切り替えることができます。 1 行に複数のブレークポイントがある場合、左側の灰色のバーにブレークポイント グリフが 1 つだけ表示されます。  
   
- ブレークポイントを切り替えた後に、ブレークポイントでプロパティの編集や一時的な無効化などさまざまな操作を実行できます。 詳細については、「 [Transact-SQL ブレークポイント](../../relational-databases/scripting/transact-sql-breakpoints.md)」を参照してください。  
+ ブレークポイントを切り替えた後に、ブレークポイントでプロパティの編集や一時的な無効化などさまざまな操作を実行できます。 詳細については、「 [Transact-SQL ブレークポイント](./transact-sql-breakpoints.md)」を参照してください。  
   
 ## <a name="toggle-a-breakpoint"></a>ブレークポイントの切り替え  
  **Transact-SQL ステートメントでブレークポイントを切り替えるには**  
@@ -45,5 +45,4 @@ ms.locfileid: "88901482"
     -   F9 キーを押します。  
   
     -   **[デバッグ]** メニューの **[ブレークポイントの設定/解除]** をクリックする。  
-  
   

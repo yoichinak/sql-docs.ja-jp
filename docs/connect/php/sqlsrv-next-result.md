@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7d88913a06e44bdec247793b0080f3ba860025
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426234"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081261"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_next_result( resource $stmt )
 ## <a name="return-value"></a>戻り値  
 次の結果を正常にアクティブにできたら、ブール値 **true** が返されます。 次の結果をアクティブにする際にエラーが発生した場合、 **false** が返されます。 これ以上結果がない場合、 **null** が返されます。  
   
-## <a name="example"></a>例  
+## <a name="example-1"></a>例 1  
 次の例では、 *Production.ProductReview* テーブルに製品のレビューに挿入するストアド プロシージャを作成して実行します。その後、指定した製品のすべてのレビューを選択します。 ストアド プロシージャの実行後、最初の結果 (ストアド プロシージャの挿入クエリの影響を受ける行数) は **sqlsrv_next_result** を呼び出さずに消費されます。 次の結果は (ストアド プロシージャで SELECT クエリによって返される行) は **sqlsrv_next_result** を呼び出すことによって利用でき、[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) を使用して消費されます。  
   
 > [!NOTE]  
@@ -180,7 +180,7 @@ sqlsrv_close( $conn );
   
 出力パラメーターがあるストアド プロシージャを実行する場合は、出力パラメーターの値にアクセスする前にその他のすべての結果を消費することをお勧めします。 詳細については、「 [方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="example-2"></a>例 2  
 次の例では、指定した製品 ID の製品レビュー情報を取得し、製品のレビューを挿入し、次いで指定した製品 ID の製品レビュー情報を再取得するバッチ クエリを実行します。 新しく挿入した製品のレビューは、バッチ クエリの最終的な結果セットに含められます。 この例では [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) を使用し、バッチ クエリの 1 つの結果から、次に移動します。  
   
 > [!NOTE]  

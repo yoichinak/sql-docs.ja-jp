@@ -1,2 +1,2 @@
 > [!IMPORTANT]  
-> [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では、この T-SQL 機能の特定の動作が変更されています。 すべての T-SQL の動作変更の詳細については、[Azure SQL Managed Instance の T-SQL の SQL Server との相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information)に関する記事を参照してください。
+> [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) では、この T-SQL 機能の特定の動作が変更されています。 すべての T-SQL の動作変更の詳細については、[Azure SQL Managed Instance の T-SQL の SQL Server との相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information)に関する記事を参照してください。

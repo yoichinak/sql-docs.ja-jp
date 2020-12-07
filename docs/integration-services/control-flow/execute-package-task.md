@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3307c81165731907f8252c99ebb03b057ca6af74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457552"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725935"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
 
@@ -67,7 +67,7 @@ ms.locfileid: "88457552"
  既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティは **False**に設定されるので、子パッケージは親パッケージと同じプロセス内で実行されます。 このプロパティを **True**に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、このプロパティを **True**に設定した場合、ツールのみのインストールではパッケージをデバッグできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)」を参照してください。  
   
 ## <a name="extending-transactions"></a>トランザクションの拡張  
- 親パッケージで使用するトランザクションを子パッケージに拡張できます。このため、両方のパッケージで実行される作業をコミットまたはロールバックできます。 たとえば、親パッケージで実行されるデータベースの挿入は、子パッケージで実行されるデータベースの挿入に基づいてコミットまたはロールバックできます。その逆も同様です。 詳細については、「 [トランザクションの継承](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)」を参照してください。  
+ 親パッケージで使用するトランザクションを子パッケージに拡張できます。このため、両方のパッケージで実行される作業をコミットまたはロールバックできます。 たとえば、親パッケージで実行されるデータベースの挿入は、子パッケージで実行されるデータベースの挿入に基づいてコミットまたはロールバックできます。その逆も同様です。 詳細については、「 [トランザクションの継承](../integration-services-transactions.md)」を参照してください。  
   
 ## <a name="propagating-logging-details"></a>ログ記録の詳細の設定  
  パッケージ実行タスクで実行される子パッケージでログ記録を使用するように構成する場合でも、そうでない場合でも、子パッケージは、ログ記録の詳細を常に親パッケージに転送します。 パッケージ実行タスクがログ記録を使用するように構成されている場合、子パッケージからの詳細がログ記録されます。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
@@ -89,7 +89,7 @@ ms.locfileid: "88457552"
   
 -   **パラメーター**  
   
-     親パッケージの変数またはパラメーター、またはプロジェクトのパラメーターを子パッケージのパラメーターにマップするように、パッケージ実行タスクを構成できます。 プロジェクトはプロジェクト配置モデルを使用し、子パッケージが親パッケージと同じプロジェクトに含まれている必要があります。 詳細については、「 [パッケージ実行タスク エディター](../../integration-services/control-flow/execute-package-task-editor.md)」を参照してください。  
+     親パッケージの変数またはパラメーター、またはプロジェクトのパラメーターを子パッケージのパラメーターにマップするように、パッケージ実行タスクを構成できます。 プロジェクトはプロジェクト配置モデルを使用し、子パッケージが親パッケージと同じプロジェクトに含まれている必要があります。 詳細については、「 [パッケージ実行タスク エディター]()」を参照してください。  
   
     > [!NOTE]  
     >  機密性が高くない子パッケージのパラメーターが、機密性の高い親パラメーターにマップされる場合は、子パッケージの実行に失敗します。  
@@ -118,7 +118,7 @@ ms.locfileid: "88457552"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>プログラムによるパッケージ実行タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
@@ -224,5 +224,4 @@ ms.locfileid: "88457552"
   
  **Remove**  
  パラメーターまたは変数と子パッケージのパラメーターの間のマッピングを削除する場合にクリックします。  
-  
   

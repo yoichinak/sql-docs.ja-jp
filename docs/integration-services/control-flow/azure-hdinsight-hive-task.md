@@ -15,11 +15,11 @@ ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c327451deeb763605dc9e66862fe275046cddb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496040"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123617"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Pig Task
 
@@ -28,7 +28,7 @@ ms.locfileid: "88496040"
 
 Azure HDInsight クラスターで Hive スクリプトを実行するには、 **Azure HDInsight Hive Task** を使用します。
      
-**Azure HDInsight Hive Task**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックします。 **[Azure HDInsight Hive Task エディター]** ダイアログ ボックスが表示されます。  
+**Azure HDInsight Hive Task** を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックします。 **[Azure HDInsight Hive Task エディター]** ダイアログ ボックスが表示されます。  
   
 **Azure HDInsight Hive Task** は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
   

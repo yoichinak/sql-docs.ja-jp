@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8815b6d3f6d4f825082b0c2eac4d8bfa45cb98de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8f84909de05efc5d53b924eb298adcaab93d7f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320878"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985035"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>変数値ファイルの作成 (「に」)
 変数値ファイルは、サーバーの移行間で頻繁に変更されるコマンドのパラメーター値 (転送元または転送先のサーバー名など) を構成する XML ファイルです。 多数のデータベースの移行が行われると、コマンドラインで **-v** スイッチを使用して、各ソースサーバーの値を格納するための複数の変数ファイルが作成され、マスタースクリプトファイルに参照されます。 この動作により、複数の変数ファイルの変数値を使用して、少数のスクリプトファイルで静的な値を保持することができます。  
@@ -91,9 +91,8 @@ ms.locfileid: "88320878"
 ## <a name="variable-value-file-validation"></a>変数値ファイルの検証  
 ユーザーは、[スキーマ] フォルダーで使用可能なスキーマ定義ファイル **ConsoleScriptVariablesSchema** に対して、変数の値ファイルを簡単に検証できます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、 [サーバー接続ファイル &#40;作成して、sql&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>関連項目  
-[サーバー接続ファイルの作成 (アクセス)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
-  
+[サーバー接続ファイルの作成 (アクセス)](./creating-the-server-connection-files-accesstosql.md)  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3fea7af807dee5ff6307817992fe2f034ca00e78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b3bb37af363727d1eb41922979ee6f78a9fd008
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363488"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124624"
 ---
 # <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88363488"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@PACK_RECEIVED  
 ```  
   
@@ -51,7 +51,7 @@ ms.locfileid: "88363488"
 ## <a name="examples"></a>例  
  次の例は、`@@PACK_RECEIVED` の使用方法を示しています。  
   
-```  
+```sql  
 SELECT @@PACK_RECEIVED AS 'Packets Received';   
 ```  
   

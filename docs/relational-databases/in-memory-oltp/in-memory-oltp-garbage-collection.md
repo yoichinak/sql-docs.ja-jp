@@ -12,12 +12,12 @@ ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8784e1fe3f44cd2927ffc1f1a48d51242671051a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92a1137dd1fa20ad2a6748be9309d812fdfc38f6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537035"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866760"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>インメモリ OLTP ガベージ コレクション
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,6 +46,5 @@ ms.locfileid: "89537035"
  ユーザー トランザクションは、コミット後に、そのトランザクションが実行されているスケジューラに関連付けられたすべてのキュー項目を特定し、メモリを解放します。 スケジューラのガベージ コレクションのキューが空の場合は、現在の NUMA ノードの空でないキューを検索します。 トランザクション アクティビティが低レベルで、メモリに負荷がかかっている場合、ガベージ コレクターのメイン スレッドは、任意のキューからガベージ コレクト行にアクセスできます。 (たとえば) 大量の行を削除したため、トランザクション アクティビティがなく、メモリにも負荷がかかっていない場合は、トランザクション アクティビティが再開されるか、メモリに負荷がかかってくるまで、削除された行のガベージ コレクションは実行されません。  
   
 ## <a name="see-also"></a>参照  
- [インメモリ OLTP のメモリ管理](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)  
-  
+ [インメモリ OLTP のメモリ管理](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))  
   

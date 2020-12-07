@@ -7,14 +7,14 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
-author: rachel-msft
-ms.author: raagyema
-ms.openlocfilehash: 99e52735f317a538c9a11d3c048c513b153d5da7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+author: sunilagarwal
+ms.author: sunila
+ms.openlocfilehash: fddbceec338a05d693fd9d1e039d08e271bbc01f
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766551"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785005"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>クイック スタート:Azure Data Studio を使用して、PostgreSQL に接続してクエリを実行する
 
@@ -25,7 +25,7 @@ ms.locfileid: "88766551"
 このクイック スタートを完了するには、Azure Data Studio、Azure Data Studio 用の PostgreSQL 拡張機能、PostgreSQL サーバーへのアクセス権が必要です。
 
 - [Azure Data Studio をインストールする](./download-azure-data-studio.md?view=sql-server-ver15)。
-- [Azure Data Studio 用の PostgreSQL 拡張機能をインストールする](postgres-extension.md)。
+- [Azure Data Studio 用の PostgreSQL 拡張機能をインストールする](./extensions/postgres-extension.md)。
 - [PostgreSQL をインストールする](https://www.postgresql.org/download/)。 (または、[az postgres up](/azure/postgresql/quickstart-create-server-up-azure-cli) を使用して、クラウドに Postgres データベースを作成することもできます)。 
 
 ## <a name="connect-to-postgresql"></a>PostgreSQL への接続
@@ -133,4 +133,4 @@ ms.locfileid: "88766551"
 
 ## <a name="next-steps"></a>次の手順
 
-[Azure Data Studio で Postgres に使用できるシナリオ](postgres-extension.md)について学習します。
+[Azure Data Studio で Postgres に使用できるシナリオ](./extensions/postgres-extension.md)について学習します。

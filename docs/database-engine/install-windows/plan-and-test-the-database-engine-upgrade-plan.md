@@ -8,15 +8,15 @@ ms.technology: install
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bd123a6f634177b455b57229bffb2375aab385dd
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900341"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125845"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>データベース エンジンのアップグレード計画の策定およびテスト
 
@@ -29,7 +29,7 @@ ms.locfileid: "85900341"
 
 - [SQL Server 2017 リリース ノート](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 リリース ノート](../../sql-server/sql-server-2016-release-notes.md) 
-- 「[SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)」の記事。  
+- 「[SQL Server データベース エンジンの旧バージョンとの互換性](../discontinued-database-engine-functionality-in-sql-server.md)」の記事。  
   
 ## <a name="pre-upgrade-planning-checklist"></a>アップグレード前の計画チェックリスト  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードする前に、次のチェックリストと関連する記事を確認します。 これらの記事は、アップグレードの方法に関係なく、すべてのアップグレードに適用され、次の中から最適なアップグレード方法を決定するのに役立ちます: ローリング アップグレード、新しいインストールのアップグレード、またはインプレース アップグレード。 たとえば、オペレーティング システムのアップグレード、SQL Server 2005 からのアップグレード、または SQL Server の 32 ビット バージョンからアップグレードの場合、インプレース アップグレードまたはローリング アップグレードは実行できない場合があります。 デシジョン ツリーについては、「 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」を参照してください。  
@@ -60,7 +60,7 @@ ms.locfileid: "85900341"
     > [!NOTE]  
     >  [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] を前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise エディションからアップグレードする場合は、Enterprise エディションとコアベース ライセンスの Enterprise エディションのいずれかを選ぶことができます。 これらの Enterprise エディションは、ライセンス モードのみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
--   **下位互換性:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] データベース エンジンの下位互換性に関する記事を参照して、[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] とアップグレード対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンとの間の動作の違いについて確認します。 「 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)」を参照してください。  
+-   **下位互換性:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] データベース エンジンの下位互換性に関する記事を参照して、[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] とアップグレード対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンとの間の動作の違いについて確認します。 「 [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md)」を参照してください。  
   
 -   **Data Migration Assistant:** アップグレード プロセスを妨げるおそれのある問題、あるいは既存のスクリプトまたはアプリケーションを修正しなければならない可能性がある重大な変更については、Data Migration Assistant を実行して診断を行うことができます。
     Data Migration Assistant は[ここ](https://aka.ms/get-dma)からダウンロードできます。  
@@ -98,4 +98,4 @@ ms.locfileid: "85900341"
 [データベース エンジンのアップグレード](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>その他のリソース 
-[データベース移行ガイド](https://aka.ms/datamigration)  
+[データベース移行ガイド](https://aka.ms/datamigration)

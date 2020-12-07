@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c319ec2d8deca78787ca0cec80e2afc7947eaa41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b68f0dc3ac5b5591dc556c81bc083a62aa8d4606
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430214"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195238"
 ---
 # <a name="using-variables-in-the-script-task"></a>スクリプト タスクでの変数の使用
 
@@ -121,6 +121,5 @@ public class ScriptMain
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の変数](../../../integration-services/integration-services-ssis-variables.md)   
- [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [パッケージで変数を使用する](../../integration-services-ssis-variables.md)  
   

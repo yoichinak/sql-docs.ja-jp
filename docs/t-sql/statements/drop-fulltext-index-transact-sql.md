@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 98d7d4fb82ee030afe623a9873be14963632f7c1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7883bb6eab65b2877e08c9ad9c0e9c869d4988af
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541301"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131401"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "89541301"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP FULLTEXT INDEX ON table_name  
 ```  
   
@@ -58,7 +57,7 @@ DROP FULLTEXT INDEX ON table_name
 ## <a name="examples"></a>例  
  次の例では、`JobCandidate` テーブルに存在するフルテキスト インデックスを削除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DROP FULLTEXT INDEX ON HumanResources.JobCandidate;  

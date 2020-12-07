@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13b2f1d7af594346a6c9f0ce46a0c412541fcc65
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 24bfa991596630165675bc0c8349a04c76085420
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547914"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987198"
 ---
 # <a name="cache-a-shared-dataset"></a>共有データセットのキャッシュ
   パフォーマンスを向上させる方法の 1 つに、共有データセットのキャッシュ プロパティを構成するという方法があります。 共有データセットをキャッシュに格納した場合、クエリ結果のコピーが指定の時間、保存されます。 共有データセットを使用するレポートを要求した 1 人目のユーザーは、クエリ結果とすべての処理が完了しないとレポートを閲覧できません。 それ以降、同じレポートを要求したユーザーは、キャッシュの保持時間内であれば、クエリと処理が既に完了しているため、すぐにレポートを閲覧できます。 キャッシュ更新計画を指定してクエリを実行し、指定したキャッシュ有効期限まで結果をキャッシュしておくこともできます。  
@@ -25,7 +25,7 @@ ms.locfileid: "84547914"
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>キャッシュされたレポートの有効期限をスケジュールするには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../web-portal-ssrs-native-mode.md) を開始します。  
   
 2.  レポート マネージャーで、キャッシュ プロパティを設定する共有データセットに移動し、アイテムの上にマウス ポインターを移動して、下矢印をクリックします。  
   
@@ -44,5 +44,4 @@ ms.locfileid: "84547914"
   
 ## <a name="see-also"></a>参照  
  [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)  
-  
   

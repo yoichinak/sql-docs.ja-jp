@@ -1,19 +1,19 @@
 ---
 title: フェールオーバー クラスター インスタンス - SQL Server on Linux
 description: Linux 上の SQL Server フェールオーバー クラスター インスタンスの概念には、クラスタリング レイヤー、インスタンスの数、IP アドレスと名前、共有ストレージが含まれます。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2db19ff4a953f0652e96903134b46c377196c0da
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b2b852a1c1acecefa3b702bb140d9128d04a212
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897318"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784642"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス - SQL Server on Linux
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ODBC CALL syntax
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99c2603e310807ad3f15618082579de434f6dd75
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: dea00388e5014791ae861ad175418670f06d6666
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860316"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727113"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 呼び出しと処理の出力でのストアド プロシージャの実行
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860316"
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドが複数の結果を返す場合は、**IMultipleResults::GetResult** が DB_S_NORESULT を返すか **IMultipleResults** インターフェイスが完全に解放されると、いずれか早いほうが発生した時点で、出力パラメーター データを使用できるようになります。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>リターン コードと出力パラメーターを処理するには  
   
@@ -359,5 +359,4 @@ GO
   
 ## <a name="see-also"></a>参照  
  [結果を処理する方法に関するトピック &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

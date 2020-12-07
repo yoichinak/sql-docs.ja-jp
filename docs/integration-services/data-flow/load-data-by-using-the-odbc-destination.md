@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fbcb0fa1f7618a7cf6d2a78b18d9193e09f81f02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ea049a657b5d0392841f8bd6e44954d2774c13c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495847"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193232"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 入力先を使用したデータ読み込み
 
@@ -56,8 +56,7 @@ ms.locfileid: "88495847"
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [[ODBC 変換先エディター] &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](./odbc-destination.md)   
+ [[ODBC 変換先エディター] &#40;[マッピング] ページ&#41;](./odbc-destination.md)   
+ [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](./odbc-source.md)  
   

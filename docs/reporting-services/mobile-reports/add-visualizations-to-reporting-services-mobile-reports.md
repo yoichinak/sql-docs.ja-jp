@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed45f77f509d3206340a2f52e6d3b31ac6824d87
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79447981"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907190"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートへの視覚エフェクトの追加
 グラフは、データの視覚化における重要な部分です。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートで使用可能な、幅広いシナリオに対応した各種グラフについて説明します。 
@@ -55,13 +55,13 @@ ms.locfileid: "79447981"
   
 時間グラフは、 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]で最も基本的なグラフです。 グラフの時間 (および日付) 軸は、データ テーブル内の最初の有効な日付/時刻フィールドに自動的に設定されます。  
 
-![mobile-report-time-chart](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
+![モバイル レポートの時間グラフのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
 
 1. **[レイアウト]** タブからデザイン画面に **時間グラフ** をドラッグし、そのサイズを変更します。
 
 2. 既定では、積み上げ横棒グラフとなります。 これは、 **[系列の視覚化]** で変更できます。
 
-3. レポートにまだ存在していないデータがグラフで必要な場合は、 **[データ]** タブ、 **[データの追加]** の順に選択して、[Excel または共有データセットからデータを取得](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)します。
+3. レポートにまだ存在していないデータがグラフで必要な場合は、 **[データ]** タブ、 **[データの追加]** の順に選択して、 [Excel または共有データセットからデータを取得](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)します。
 
 3. **[データ プロパティ]** ペインに表示される **[主要な系列]** は **[SimulatedTable]** です。 ボックス内の矢印を選択し、テーブルを選択します。
 
@@ -73,9 +73,9 @@ ms.locfileid: "79447981"
   
 ## <a name="category-charts"></a>カテゴリ グラフ  
   
-時間グラフの場合とは異なり、カテゴリ グラフでは、X 軸で日付/時刻フィールド以外のフィールドでグループ化を行います。 このグループ化は、 *カテゴリ コーディネート*と呼ばれ、数値フィールドではなく文字列フィールドに対して行われる必要があります。
+時間グラフの場合とは異なり、カテゴリ グラフでは、X 軸で日付/時刻フィールド以外のフィールドでグループ化を行います。 このグループ化は、 *カテゴリ コーディネート* と呼ばれ、数値フィールドではなく文字列フィールドに対して行われる必要があります。
 
-![mobile-report-category-chart](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
+![モバイル レポートのカテゴリ グラフのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
 
 1. **カテゴリ グラフ** を **[レイアウト]** タブからデザイン画面にドラッグし、そのサイズを変更し、必要に応じて [それに関するデータを取得](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)します。
 
@@ -85,7 +85,7 @@ ms.locfileid: "79447981"
   
 ## <a name="totals-charts"></a>合計グラフ  
 
-![mobile-report-totals-chart](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
+![モバイル レポートの合計グラフのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
   
 合計グラフでは、次の 2 つの個別の処理を行います。 
 * 複数の系列を対象とするのでなく、定義された主要な系列の合計のみが提供されます。 
@@ -95,9 +95,9 @@ ms.locfileid: "79447981"
   
 ## <a name="comparison-charts"></a>比較グラフ  
   
-時間グラフ、カテゴリ グラフ、および合計グラフは、 *比較グラフ*としても使用できます。 比較グラフでは、主要系列だけでなく、別に 1 つ比較系列を指定することができます。 主要系列と比較系列は、3 種類の方法で表示することができます。
+時間グラフ、カテゴリ グラフ、および合計グラフは、 *比較グラフ* としても使用できます。 比較グラフでは、主要系列だけでなく、別に 1 つ比較系列を指定することができます。 主要系列と比較系列は、3 種類の方法で表示することができます。
 
-![mobile-report-comparison-time-chart](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
+![モバイル レポートの時間の比較グラフのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
 
 1. **比較グラフ** (時間グラフ、カテゴリ グラフ、または合計グラフ) の 1 つを **[レイアウト]** タブからデザイン画面にドラッグし、そのサイズを変更し、必要に応じて [それに関するデータを取得](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)します。
 
@@ -120,7 +120,7 @@ ms.locfileid: "79447981"
 * **モバイル レポートの** 円グラフ [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] は、円型、ドーナツ型、または中央に合計を示すドーナツ型とすることができます。 円グラフでは、全体を構成するさまざまな部分の相対的なサイズを示すのに適しています。 スライスが多すぎると、読みにくくなります。
 * **じょうごグラフ** は、販売などのプロセスの段階を表示するのによく使用されます。
 
-![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
+![モバイル レポートのじょうごグラフのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
 
 ### <a name="structure-pie-and-funnel-chart-data-by-rows-or-by-columns"></a>円グラフおよびじょうごグラフの行ごとのデータまたは列ごとのデータを構成する
 1. **円グラフ** または **じょうごグラフ** を **[レイアウト]** タブからデザイン画面にドラッグし、そのサイズを変更し、必要に応じて [それに関するデータを取得](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)します。
@@ -137,7 +137,7 @@ ms.locfileid: "79447981"
   
 ツリーマップは、四角形グリッド内のサイズやタイルの色に値を適用することで、メトリックを表示します。 
 
-![mobile-report-group-treemap](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
+![モバイル レポートのグループ ツリーマップのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
 
 1. **ツリーマップ** を **[レイアウト]** タブからデザイン画面にドラッグし、そのサイズを変更し、必要に応じて [それに関するデータを取得](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)します。
 2.  **[データ]** タブを選択し、 **[データ プロパティ]** で次の選択を行います。 
@@ -175,15 +175,15 @@ ms.locfileid: "79447981"
 
 1. **ウォーターフォール図** を **[レイアウト]** タブからデザイン画面にドラッグし、必要に応じてサイズの調整と [データの取得](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)を行います。
 
-    ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
+    ![モバイル レポートのウォーターフォール図アイコンのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
 2.  **[データ]** タブをクリックし、 **[データのプロパティ]** ペインで、データから **[Category Coordinate]** (カテゴリ座標) のカテゴリ フィールドと **[主要な系列]** の数値フィールドを選択します。 
 
-    ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
+    ![モバイル レポートのウォーターフォール データのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     
 3. **[レイアウト]** タブをクリックして、ウォーターフォール図のプレビューを確認します。
 
-   ![mobile-report-waterfall-chart](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
+   ![モバイル レポートのウォーターフォール図のスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
    
    2 月、6 月、7 月などの損失が出た月は赤色で示されています。 
    9 月、10 月、11 月などの利益が出た月は緑色で示されています。 

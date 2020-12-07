@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1d86fbfceefd3f0a4fba6f3bb86a071736e12c54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6fcca84f52f5a6b9b8c033c00980374a0c17d7be
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492236"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036686"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>データ移行の設定 (SybaseToSQL)
   
 ## <a name="data-migration-settings"></a>データの移行設定  
 **データ移行設定** を使用すると、ユーザーはデータ移行のためのカスタムクエリを作成できます。  
   
--   このタブは、[プロジェクトの設定] で [**非表示**] に設定した場合に、[**拡張データ移行オプション**] が [**表示**] に設定され、非表示になるときに使用できます。 プロジェクトの移行設定の詳細については、「 [プロジェクトの設定 (移行)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) 」を参照してください。  
+-   このタブは、[プロジェクトの設定] で [**非表示**] に設定した場合に、[**拡張データ移行オプション**] が [**表示**] に設定され、非表示になるときに使用できます。 プロジェクトの移行設定の詳細については、「 [プロジェクトの設定 (移行)](./project-settings-migration-sybasetosql.md) 」を参照してください。  
   
 -   カスタム SQL ステートメントの解析は、テーブルノードの [ **データ移行の設定** ] タブで実装されます。  
   
@@ -53,5 +53,4 @@ ms.locfileid: "88492236"
 -   **取り消し:** 変更が行われる前に設定を復元するには、[ **キャンセル** ] をクリックします。  
   
 ## <a name="see-also"></a>参照  
-[Sybase データの SQL Server/SQL Azure への移行](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  
-  
+[Sybase データの SQL Server/SQL Azure への移行](./migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md)  

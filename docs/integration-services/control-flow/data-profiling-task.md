@@ -18,11 +18,11 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430994"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123542"
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
 
@@ -89,13 +89,13 @@ ms.locfileid: "88430994"
   
  \* 有効なデータ型をまとめた上の表では、 **integer**、 **char**、 **datetime**、 **numeric** 型に次の固有データ型が含まれます。  
   
- 整数型には、 **bit**, **tinyint**、 **smallint**、 **int**、 **bigint**が含まれます。  
+ 整数型には、 **bit**, **tinyint**、 **smallint**、 **int**、 **bigint** が含まれます。  
   
  文字型には、 **char**、 **nchar**、 **varchar**、 **nvarchar** が含まれますが、 **varchar(max)** と **nvarchar(max)** は含まれません。  
   
- 日付/時刻型には、 **datetime**、 **smalldatetime**、 **timestamp**が含まれます。  
+ 日付/時刻型には、 **datetime**、 **smalldatetime**、 **timestamp** が含まれます。  
   
- 数値型には、 **integer** 型 ( **bit**を除く)、 **money**、 **smallmoney**、 **decimal**、 **float**、 **real**、 **numeric**が含まれます。  
+ 数値型には、 **integer** 型 ( **bit** を除く)、 **money**、 **smallmoney**、 **decimal**、 **float**、 **real**、 **numeric** が含まれます。  
   
  \*\* **image**、**text**、**XML**、**udt**、**variant** 型は、列の NULL 比プロファイル以外のプロファイルではサポートされません。  
   

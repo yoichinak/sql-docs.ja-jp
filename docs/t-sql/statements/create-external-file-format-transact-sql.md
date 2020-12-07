@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1beca4564978fc069a896eadd42ed257dc28414
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 0c7d02931ab25c1400fbb256fc86d14464826114
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024366"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947937"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ Hadoop、Azure Blob Storage、Azure Data Lake Store に格納される外部デ�
   
 - 区切りテキスト  
   
-- Hive RCFile  
+- Hive RCFile - Azure Synapse Analytics には適用されません。
   
 - Hive ORC
   
@@ -87,6 +87,9 @@ WITH (
     }  
     [ , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec' ]);
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### <a name="orc"></a>[ORC](#tab/orc)
 ```syntaxsql  
 --Create an external file format for ORC file.  
@@ -98,6 +101,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'      }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### <a name="parquet"></a>[Parquet](#tab/parquet)
 ```syntaxsql
 --Create an external file format for PARQUET files.  
@@ -121,6 +127,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ---
   
 ## <a name="arguments"></a>引数  
@@ -244,7 +253,7 @@ PolyBase の読み込みの間にすべてのファイルで最初に読み取�
 > [!IMPORTANT]
 > カスタム `DATE_FORMAT` を指定すると、すべての既定の型の形式が上書きされます。 つまり、ファイル内のすべての日時、日付、時刻のセルで同じ日付形式を使用する必要があります。 オーバーライドされた `DATE_FORMAT` では、日付と時刻の値を異なる形式にすることはできません。
 
-**日付形式の例**を次の表に示します。
+**日付形式の例** を次の表に示します。
   
 テーブルに関する注意事項:  
   
@@ -322,7 +331,6 @@ PolyBase の読み込みの間にすべてのファイルで最初に読み取�
    `Encoding = {'UTF8' | 'UTF16'}`
    
  [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4) では、PolyBase は、UTF8 と UTF16 LE でエンコードされた区切りテキスト ファイルを読み取ることができます。 SQL Server の PolyBase では、UTF16 でエンコードされたファイルの読み取りはサポートされていません。
-
 
 ## <a name="permissions"></a>アクセス許可  
  ALTER ANY EXTERNAL FILE FORMAT アクセス許可が必須です。

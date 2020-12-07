@@ -15,11 +15,11 @@ ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 336c9687e0d44d90d8d251a11728ac06402f4852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425424"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127103"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (より小さい) (SSIS 式)
 
@@ -51,7 +51,7 @@ expression1 < expression2
 ## <a name="remarks"></a>注釈  
  比較する式のいずれかが NULL の場合、比較結果は NULL になります。 両方の式が NULL の場合も、結果は NULL になります。  
   
- 設定する式の *expression1* と *expression2*は、次のいずれかのルールに従う必要があります。  
+ 設定する式の *expression1* と *expression2* は、次のいずれかのルールに従う必要があります。  
   
 -   **数値***expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
@@ -98,7 +98,7 @@ expression1 < expression2
 ListPrice < 500  
 ```  
   
- この例では、変数 **LPrice**を使用しています。 **LPrice** の値が 500 よりも小さい場合、この例の結果は TRUE に評価されます。 式を解析するためには、この変数のデータ型は数値である必要があります。  
+ この例では、変数 **LPrice** を使用しています。 **LPrice** の値が 500 よりも小さい場合、この例の結果は TRUE に評価されます。 式を解析するためには、この変数のデータ型は数値である必要があります。  
   
 ```  
 @LPrice < 500  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b907472303d6ba11691efe72bb08717ac7854ea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 75b1f1b489a50041d360ac8abc60dd492bf43378
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538008"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868244"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -159,9 +159,8 @@ GO
 この問題を軽減するためには、必要に応じて追加のメモリを提供する動的メモリ機能に依存して最小限のメモリを割り当てる代わりに、データベースを復旧または再起動するために十分なメモリをデータベースに事前に割り当ててください。
   
 ## <a name="see-also"></a>参照  
- [インメモリ OLTP のメモリ管理](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
+ [インメモリ OLTP のメモリ管理](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))   
  [メモリ使用量の監視とトラブルシューティング](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [データベースを作成してリソース プールにバインドする方法については、「](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md)  
  [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
-  

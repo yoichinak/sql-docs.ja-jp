@@ -15,11 +15,11 @@ ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38de021617ed0454048a3d8cd7f0c5732d09861f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457474"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127337"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store Source
 
@@ -48,4 +48,4 @@ ms.locfileid: "88457474"
 
 ## <a name="text-qualifier"></a>テキスト修飾子
 
-**Azure Data Lake Store Source** はテキスト修飾子をサポートしません。 ファイルを正しく処理するためにテキスト修飾子を指定する必要がある場合、ファイルをローカル コンピューターにダウンロードし、**フラット ファイル ソース**を使用してファイルを処理することを検討してください。 フラット ファイル ソースでテキスト修飾子を指定できるようになります。 詳細については、「[フラット ファイル ソース](flat-file-source.md)」を参照してください。
+**Azure Data Lake Store Source** はテキスト修飾子をサポートしません。 ファイルを正しく処理するためにテキスト修飾子を指定する必要がある場合、ファイルをローカル コンピューターにダウンロードし、**フラット ファイル ソース** を使用してファイルを処理することを検討してください。 フラット ファイル ソースでテキスト修飾子を指定できるようになります。 詳細については、「[フラット ファイル ソース](flat-file-source.md)」を参照してください。

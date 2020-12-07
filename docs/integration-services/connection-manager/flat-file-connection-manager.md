@@ -24,11 +24,11 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 93890a2bf8fc0b9209eb9582c8129ee6856865ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351288"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130102"
 ---
 # <a name="flat-file-connection-manager"></a>フラット ファイル接続マネージャー
 
@@ -47,11 +47,11 @@ ms.locfileid: "88351288"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>フラット ファイル接続マネージャーの構成  
  フラット ファイル接続マネージャーをパッケージに追加すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、実行時にフラット ファイル接続を解決する接続マネージャーが作成され、フラット ファイル接続プロパティが設定され、フラット ファイル接続マネージャーがパッケージの **Connections** コレクションに追加されます。  
   
- 接続マネージャーの **ConnectionManagerType** プロパティは、 **FLATFILE**に設定されます。  
+ 接続マネージャーの **ConnectionManagerType** プロパティは、 **FLATFILE** に設定されます。  
   
  既定では、フラット ファイル接続マネージャーは、引用符で囲まれていないデータの行区切り記号を常に確認し、行区切り記号が見つかると新しい行を開始します。 これにより、接続マネージャーは列フィールドがない行を含むファイルを正しく解析できます。  
   
- 場合によっては、この機能を無効にすると、パッケージのパフォーマンスが向上します。 この機能を無効にするには、フラット ファイル接続マネージャーのプロパティである **AlwaysCheckForRowDelimiters**を **False**に設定します。  
+ 場合によっては、この機能を無効にすると、パッケージのパフォーマンスが向上します。 この機能を無効にするには、フラット ファイル接続マネージャーのプロパティである **AlwaysCheckForRowDelimiters** を **False** に設定します。  
   
  フラット ファイル接続マネージャーは、次の方法で構成できます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88351288"
   
 -   式を使用してファイルを指定する場合は、 **[フラット ファイル接続マネージャー エディター]** の **[ファイル名]** ボックスにファイル パスを追加します。  
   
--   フラット ファイル接続マネージャーの **DelayValidation** プロパティを **True**に設定します。  
+-   フラット ファイル接続マネージャーの **DelayValidation** プロパティを **True** に設定します。  
   
  フラット ファイルの変換先に対してフラット ファイル接続マネージャーを使用することにより、実行時に式を使用してファイル名を作成できます。  
   

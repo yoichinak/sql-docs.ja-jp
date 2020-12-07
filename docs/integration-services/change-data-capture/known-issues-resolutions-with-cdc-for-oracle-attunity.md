@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6841092edcb5eac4005d0a068f31c768aedf5bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394388"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "94384732"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity の既知のエラーと解決策
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "88394388"
 - CDC for Oracle インスタンスが起動時にハングし、変更をキャプチャしません。 Oracle サーバーのメモリがメモリ不足になるか、クラッシュするまで増えることがあります。
 - [2672759](https://support.microsoft.com/kb/2672759): Microsoft Change Data Capture Service for Oracle by Attunity の使用時のエラー メッセージ: "ORA-00600: 内部エラー コード"。 SOURCE レベル トレースを追加し、同じ ORA-00600 エラーが表示されるかどうかを確認します。 Oracle パッチ ダウンロードによって修正されました。
 - 複数パーティション
-    - Oracle テーブルで 10 個を超えるパーティションを使用すると、CDC インスタンスでは、そのテーブルの変更を全部キャプチャできません。 Oracle テーブルが 10 個を超えるパーティションで定義されると、変更は最後の 10 個のパーティションからのみキャプチャされます。 _SQL Server 2012 向け Service Pack 1 リリース_で修正されました。 [SP1 用 Feature Pack のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=35580)を参照してください。 
+    - Oracle テーブルで 10 個を超えるパーティションを使用すると、CDC インスタンスでは、そのテーブルの変更を全部キャプチャできません。 Oracle テーブルが 10 個を超えるパーティションで定義されると、変更は最後の 10 個のパーティションからのみキャプチャされます。 _SQL Server 2012 向け Service Pack 1 リリース_ で修正されました。 [SP1 用 Feature Pack のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=35575)を参照してください。 
 - 変更が失われます
-    - イベントのキャプチャが無限ループに入り、新しいデータ変更のキャプチャが停止することがあります (Oracle バグ 5623813 に関連)。 Oracle RAC 環境で CDC インスタンスの停止または再開を実行しているとき、変更はスキップされたり、失われたりすることがあります。 つまり、SQL Server 変更データ キャプチャで重要な行が失われ、そのため、データ ウェアハウスやサブスクリプション システムでデータが失われます。 _SQL Server 2012 向け Service Pack 1 リリース_で修正されました。 [SP1 用 Feature Pack のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=35580)を参照してください
+    - イベントのキャプチャが無限ループに入り、新しいデータ変更のキャプチャが停止することがあります (Oracle バグ 5623813 に関連)。 Oracle RAC 環境で CDC インスタンスの停止または再開を実行しているとき、変更はスキップされたり、失われたりすることがあります。 つまり、SQL Server 変更データ キャプチャで重要な行が失われ、そのため、データ ウェアハウスやサブスクリプション システムでデータが失われます。 _SQL Server 2012 向け Service Pack 1 リリース_ で修正されました。 [SP1 用 Feature Pack のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=35575)を参照してください
 - SQL で列の幅が 2 倍になる
     - CDC for Oracle インスタンスの作成時、SQL Server に対して実行するスクリプトで、変数の幅のデータ型列の長さが、スクリプトで作成された SQL Server テーブルで 2 倍になります。 たとえば、Oracle テーブルで VARCHAR2(10) 列の変更を追跡しようとすると、SQL Server テーブルのそれに対応する列が配置スクリプトで NVARCHAR(20) になります。 KB [2769673](https://support.microsoft.com/kb/2769673) で説明されているとおり、_SQL Server 2012 SP1 向け累積更新プログラム 2_ または _SQL Server 2012 向け累積更新プログラム 5_ で修正されました。 
 - DDL データが切り捨てられます
@@ -107,27 +107,27 @@ SQL Server 内で CDC データベースのトレース テーブルにクエリ
 
 診断をキャプチャするには、Oracle Change Data Capture 管理コンソールの [状態] タブで **[診断情報の収集]** を選択します。 
 
-![診断情報の収集のリンク](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
+![[診断情報の収集] オプションが選択されている Oracle Change Data Capture 管理コンソールの [状態] タブを示すスクリーンショット。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
 開始時刻を選択し、ログ ファイルの場所を選択します。 次に、**[作成]** を選択し、診断情報収集を開始します。 
 
-![診断情報の収集のリンク](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
+![[Collect Diagnostics for testTA]\(testTA の診断情報の収集\) ダイアログ ボックスのスクリーンショット。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
 
 ### <a name="detailed-errors"></a>詳細なエラー
 
 インスタンスによって収集されるトレースのレベルを上げ、シナリオを繰り返して詳細ログをさらに集めることができます。 これを行うには、 **[アクション]** の下で **[プロパティ]** を選択し、 **[詳細]** タブの **[詳細設定]** グリッドで新しいプロパティを追加します。プロパティの名前を `trace` に設定し、値を `SOURCE` に設定します。 
 
-![診断情報の収集のリンク](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
+![[アクション] の [プロパティ] オプションを示すスクリーンショット。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
 エラーを再現し、**[診断情報の収集]** オプションを選択してログを収集します。 
 
-![診断情報の収集のリンク](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
+![[診断情報の収集] オプションが選択されている Oracle Change Data Capture 管理コンソールの [状態] タブの別のスクリーンショット。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
 ## <a name="ora-00942-table-of-view-does-not-exist"></a>ORA-00942 ビューのテーブルがありません 
 
-これは CDC インスタンスの**ステータス** メッセージ フィールドに表示される一般的なエラーです。 インスタンスの再試行は何回も行われます。そのため、ステータス アイコンは一瞬、緑に変わりますが、その後、赤の感嘆符と UNEXPECTED ステータスが表示され、失敗します。 
+これは CDC インスタンスの **ステータス** メッセージ フィールドに表示される一般的なエラーです。 インスタンスの再試行は何回も行われます。そのため、ステータス アイコンは一瞬、緑に変わりますが、その後、赤の感嘆符と UNEXPECTED ステータスが表示され、失敗します。 
 
-![Oracle エラー](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
+![CDC インスタンスのステータス メッセージ フィールドに表示される一般的なエラーを示すスクリーンショット。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
 
 ```
 "ERROR","computername","ERROR","UNEXPECTED",
@@ -153,7 +153,7 @@ SQL Server 内で CDC データベースのトレース テーブルにクエリ
 
 ユーザー アカウントは、**CDC Designer** ウィンドウ内で、左側のペインから CDCInstance を選択し、右端にある [アクション] ペインで [プロパティ] ボタンを選択して設定できます。 Oracle ログ マイニング認証アカウントはプロパティ ダイアログ ページから変更できます。
 
-![Oracle エラー](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
+![[testTA プロパティ] ダイアログ ボックスの [Oracle] タブを示すスクリーンショット。](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 
 
   

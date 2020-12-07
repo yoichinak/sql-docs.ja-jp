@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: caca5016c6d461af5cd665ae0ada144cd5fd1c2e
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111146"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384676"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 リリース ノートします。
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -133,7 +133,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         2.  **[機能の選択]** インターフェイスで、 **[.NET Framework 3.5.1 の機能]** を展開します。  
   
-        3.  **[.NET Framework 3.5.1 の機能]** を展開すると、2 つのチェック ボックスが表示されます。 1 つは .NET Framework 3.5.1 用で、もう 1 つは WCF アクティブ化用です。 **.NET Framework 3.5.1**のチェック ボックスをオンにし、 **[次へ]** をクリックします。 .NET Framework 3.5.1 の機能をインストールする前に、必要な役割サービスと機能もインストールする必要があります。  
+        3.  **[.NET Framework 3.5.1 の機能]** を展開すると、2 つのチェック ボックスが表示されます。 1 つは .NET Framework 3.5.1 用で、もう 1 つは WCF アクティブ化用です。 **.NET Framework 3.5.1** のチェック ボックスをオンにし、 **[次へ]** をクリックします。 .NET Framework 3.5.1 の機能をインストールする前に、必要な役割サービスと機能もインストールする必要があります。  
   
         4.  **[インストール オプションの確認]** で、選択内容を確認して、[インストール] をクリックします。  
   
@@ -156,7 +156,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         1.  **[スタート]** ボタンをクリックし、 |  **[コントロール パネル]**  |  **[プログラム]** 、 **[Windows の機能の有効化または無効化]** の順にクリックします。 管理者のパスワードの入力または確認入力を求めるメッセージが表示されたら、パスワードを入力するか、確認入力を行います。  
   
-        2.  **Microsoft .NET Framework 3.5.1**を有効にするには、この機能の横にあるチェック ボックスをオンにします。 Windows の機能を無効化するには、チェック ボックスをオフにします。  
+        2.  **Microsoft .NET Framework 3.5.1** を有効にするには、この機能の横にあるチェック ボックスをオンにします。 Windows の機能を無効化するには、チェック ボックスをオフにします。  
   
         3.  **[OK]** をクリックします。  
   
@@ -630,7 +630,7 @@ SQL Server 2012 Reporting Services から Microsoft SQL Server PDW Appliance Upd
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="90-streaminsight"></a><a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 には StreamInsight 2.0 が含まれています。 StreamInsight 2.0 を使用するには、Microsoft SQL Server 2012 のライセンスと .NET Framework 4.0 が必要です。 StreamInsight 2.0 には、いくつかのバグ修正に加え、さまざまなパフォーマンスの改善が施されています。 詳細については、「 [Microsoft StreamInsight 2.0 RC0 Release Notes (Microsoft StreamInsight 2.0 のリリース ノート)](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)」をご覧ください。 StreamInsight 2.0 を単独でダウンロードするには、Microsoft ダウンロード センターの [Microsoft StreamInsight 2.0 のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=241593) にアクセスしてください。  
+SQL Server 2012 には StreamInsight 2.1 が含まれています。 StreamInsight 2.1 を使用するには、Microsoft SQL Server 2012 のライセンスと .NET Framework 4.0 が必要です。 StreamInsight 2.0 には、いくつかのバグ修正に加え、さまざまなパフォーマンスの改善が施されています。 詳細については、「[Microsoft StreamInsight 2.1 のリリース ノート](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)」をご覧ください。 StreamInsight 2.1 を単独でダウンロードするには、Microsoft ダウンロード センターの [Microsoft StreamInsight 2.1 のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=30149)にアクセスしてください。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

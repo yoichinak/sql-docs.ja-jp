@@ -7,15 +7,15 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/16/2019
-ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 9/2/2020
+ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253313"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935572"
 ---
-# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>レポート サーバー データベースの作成、SSRS Configuration Manager  
+# <a name="create-a-report-server-database-report-server-configuration-manager"></a>レポート サーバー データベースの作成 (レポート サーバーの構成マネージャー)  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -49,7 +49,7 @@ SharePoint モードの 3 つのデータベースの名前の例を次に示し
  ### <a name="native-mode"></a>ネイティブ モード
  ネイティブ モードのレポート サーバー データベースは、次の方法で作成できます。  
   
-- **[自動]** 。 インストールに対して既定の構成オプションを選択する場合は、SQL Server セットアップ ウィザードを使用します。 SQL Server インストール ウィザードでは、このオプションは **[Report Server Installation Options]\(レポート サーバー インストール オプション\)** ページの **[Install and configure]\(インストールと構成\)** です。 **[Install only]\(インストールのみ\)** オプションを選択する場合は、SQL Server Reporting Services Configuration Manager を使用してデータベースを作成する必要があります。  
+- **[自動]** 。 インストールに対して既定の構成オプションを選択する場合は、SQL Server セットアップ ウィザードを使用します。 SQL Server インストール ウィザードでは、このオプションは **[Report Server Installation Options]\(レポート サーバー インストール オプション\)** ページの **[Install and configure]\(インストールと構成\)** です。 **[インストールのみ]** オプションを選択する場合は、SQL Server レポート サーバーの構成マネージャーを使用してデータベースを作成する必要があります。  
   
 - **[手動]** 。 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager を使用します。 リモート環境の [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]を使用してデータベースをホストする場合は、レポート サーバー データベースを手動で作成します。 詳しくは、「[ネイティブ モードのレポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」をご覧ください。  
 
@@ -84,10 +84,8 @@ SharePoint モードの 3 つのデータベースの名前の例を次に示し
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
-- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
 
-リモート コンピューターにレポート サーバー データベースを作成する場合は、ネットワークにアクセスできるドメイン ユーザー アカウントまたはサービス アカウントを使用するように接続を構成します。 リモートの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する場合は、レポート サーバーがインスタンスに接続するときに使用する必要がある資格情報を検討します。 詳しくは、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」をご覧ください。  
+リモート コンピューターにレポート サーバー データベースを作成する場合は、ネットワークにアクセスできるドメイン ユーザー アカウントまたはサービス アカウントを使用するように接続を構成します。 リモートの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する場合は、レポート サーバーがインスタンスに接続するときに使用する必要がある資格情報を検討します。 詳細については、「[レポート サーバー データベース接続の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
 > [!IMPORTANT]  
 > レポート サーバーと、レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、同じドメインに属していなくてもかまいません。 インターネット配置では、ファイアウォール内にあるサーバーを使用するのが一般的です。 
@@ -100,6 +98,6 @@ SharePoint モードの 3 つのデータベースの名前の例を次に示し
 
 ## <a name="next-steps"></a>次のステップ
 
-[Reporting Services Configuration Manager](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434) について読みます。  
+[レポート サーバーの構成マネージャー](reporting-services-configuration-manager-native-mode.md)に関するページを参照してください。  
 
 その他の質問 [Reporting Services フォーラム](https://go.microsoft.com/fwlink/?LinkId=620231)で質問してください。

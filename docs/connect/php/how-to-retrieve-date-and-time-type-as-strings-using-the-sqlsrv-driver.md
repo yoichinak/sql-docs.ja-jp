@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51135c202b40cbae5a251a2ab36a695f6981c68e
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 2dd1bd53b5ce3304b48fe8ed022e538d4d705154
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410966"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081441"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "87410966"
 
 PDO_SQLSRV ドライバーからは、既定で日付と時刻の型が文字列として返されます。 PHP DateTime オブジェクトとして取得する方法については、「[方法: PDO_SQLSRV を使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)」を参照してください
 
-## <a name="example"></a>例
+## <a name="example-1"></a>例 1
 次は、日付/時刻型を文字列として取得する構文の例です。
 
 ```php
@@ -50,7 +50,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>例
+## <a name="example-2"></a>例 2
 次の例では、文字列の取得時に UTF-8 を指定することで、接続が `"ReturnDatesAsStrings" => false` で行われていても、日付を文字列として取得できます。
 
 ```php
@@ -87,7 +87,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>例
+## <a name="example-3"></a>例 3
 次の例は、接続文字列に UTF-8 と `"ReturnDatesAsStrings" => true` を指定し、日付を文字列として取得する方法を示しています。
 
 ```php
@@ -123,7 +123,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>例
+## <a name="example-4"></a>例 4
 次のコード例では、日付を PHP 型として取得する方法を示します。 `'ReturnDatesAsStrings'=> false` は既定でオンです。
 
 ```php
@@ -161,7 +161,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>例
+## <a name="example-5"></a>例 5
 ステートメント レベルの ReturnDatesAsStrings オプションを指定すると、対応する接続オプションはオーバーライドされます。
 
 ```php

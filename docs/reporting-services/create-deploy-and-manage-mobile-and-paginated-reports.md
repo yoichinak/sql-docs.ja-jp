@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
-ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
+ms.openlocfilehash: db705ffc6bd3f7f961ea569883b77934e9689f9f
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86291149"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679203"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) とは
 
@@ -38,9 +38,9 @@ SSRS ソリューションは、正しいユーザーに正しい情報を柔軟
 
 SQL Server の Reporting Services では、更新された製品スイートが提供されます。
 
-* 更新されたツールと新しい作成機能で現代風のレポートを作成できる、新しくなった **"従来の" ページ分割されたレポート**。
-* さまざまなデバイスと持ち方に適応できる対応性の高いレイアウトの**新しいモバイル レポート** 。
-* 最新のブラウザーで表示できる**新しい Web ポータル** 。 新しいポータルでは、モバイルやページ分割された Reporting Services レポートや KPI を整理および表示することができます。 ポータルで Excel ブックを保存することもできます。
+* 更新されたツールと新しい作成機能で現代風のレポートを作成できる、新しくなった **"従来の" ページ分割されたレポート** 。
+* さまざまなデバイスと持ち方に適応できる対応性の高いレイアウトの **新しいモバイル レポート** 。
+* 最新のブラウザーで表示できる **新しい Web ポータル** 。 新しいポータルでは、モバイルやページ分割された Reporting Services レポートや KPI を整理および表示することができます。 ポータルで Excel ブックを保存することもできます。
 
 以降ではそれぞれについて詳しく説明します。
 
@@ -54,7 +54,7 @@ SQL Server の Reporting Services では、更新された製品スイートが�
 
 ## <a name="paginated-reports"></a>ページ分割されたレポート
 
-![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
+![デスクトップ画面とタブレット デバイス上のページ分割されたレポートのイメージ。](../reporting-services/media/ssrs-paginated-reports.png)
 
 Reporting Services は "従来の" ページ分割されたレポートと関連付けられており、PDF ファイルや Word ファイルのような印刷用に最適化された固定レイアウトのドキュメントに最適です。
 
@@ -67,7 +67,7 @@ Reporting Services は "従来の" ページ分割されたレポートと関連
 
 ## <a name="mobile-reports"></a>モバイル レポート
 
-![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
+![デスクトップ画面とタブレット デバイス上のモバイル レポートのイメージ。](../reporting-services/media/ssrs-mobile-reports.png)
 
 モバイル コンピューティングによって使用する必要のあるデバイスが変化し、現在では異なるレポート ニーズが生まれています。 タブレットや携帯電話を導入すると、固定レイアウトのレポート エクスペリエンスではうまく機能しません。 PC のワイド画面用に設計されたレポートは、小さいだけでなく縦方向または横方向のスマートフォンの画面では最適なエクスペリエンスになりません。
 
@@ -79,7 +79,7 @@ Reporting Services は "従来の" ページ分割されたレポートと関連
 
 ## <a name="web-portal"></a>Web ポータル
 
-![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
+![Web ポータル ラップトップのイメージ。](../reporting-services/media/ssrs-web-portal.png)
 
 ネイティブ モードの Reporting Services のエンド ユーザーにとっての入り口は、最新のブラウザーで表示できる最新の Web ポータルです。 新しいポータルからは、Reporting Services のモバイル レポート、ページ分割されたレポート、KPI のすべてにアクセスできます。 KPI を使うと、レポートを開かなくても、主要なビジネス指標をブラウザーで簡単に見ることができます。
 

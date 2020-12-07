@@ -22,10 +22,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 656f36cce2c1b458f2eb85c734709691b59a82bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423546"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>パラメーター化されたフィルター - パラメーター化された行フィルター
@@ -55,7 +55,7 @@ ms.locfileid: "88423546"
 >  パラメーター化されたフィルターの比較が実行されるときは、常にデータベース照合順序が使用されます。 たとえば、データベース照合順序で大文字と小文字が区別されず、テーブルまたは列の照合順序で大文字と小文字が区別される場合、比較では大文字と小文字は区別されません。  
   
 ### <a name="filtering-with-suser_sname"></a>SUSER_SNAME() によるフィルター選択  
- **サンプル データベースの** Employee テーブル [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] について考えてみます。 このテーブルには **LoginID**列が含まれており、この列には各従業員のログインが '*domain\login*' という形式で格納されています。 このテーブルにフィルターを適用して、従業員が各自に関連するデータのみを受け取れるようにするには、フィルター句を次のように指定します。  
+ **サンプル データベースの** Employee テーブル [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] について考えてみます。 このテーブルには **LoginID** 列が含まれており、この列には各従業員のログインが '*domain\login*' という形式で格納されています。 このテーブルにフィルターを適用して、従業員が各自に関連するデータのみを受け取れるようにするには、フィルター句を次のように指定します。  
   
 ```  
 LoginID = SUSER_SNAME()  
@@ -89,7 +89,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 > [!NOTE]  
 >  HOST_NAME() をオーバーライドした場合、HOST_NAME() 関数のすべての呼び出しは、指定された値を返します。 他のアプリケーションが、コンピューター名を返す HOST_NAME() 関数に依存していないことを確認してください。  
   
- **HumanResources.Employee** テーブルについて考えてみます。 このテーブルには **EmployeeID**という列があります。 このテーブルにフィルターを適用して各従業員が関連データのみを受け取れるようにするには、フィルター句を次のように指定します。  
+ **HumanResources.Employee** テーブルについて考えてみます。 このテーブルには **EmployeeID** という列があります。 このテーブルにフィルターを適用して各従業員が関連データのみを受け取れるようにするには、フィルター句を次のように指定します。  
   
  `EmployeeID = CONVERT(int,HOST_NAME())`  
   
@@ -121,7 +121,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  フィルター選択オプションを設定するには、「 [Optimize Parameterized Row Filters](../../../relational-databases/replication/publish/optimize-parameterized-row-filters.md)」を参照してください。  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>"パーティション グループを使用" および "パーティションの変更を保持" の設定  
- **パーティション グループを使用** オプションと **パーティションの変更を保持** オプションでは、いずれもパブリケーション データベースに追加のメタデータを格納することにより、フィルター選択されたアーティクルを持つパブリケーションの同期パフォーマンスを向上します。 **パーティション グループを使用** オプションでは、事前計算済みパーティション機能を使用することにより、パフォーマンスを向上させることができます。 このオプションは、パブリケーションのアーティクルが一連の要件を満たしている場合に、既定で **true** に設定されています。 これらの要件の詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。 アーティクルが事前計算済みパーティションを使用するための要件を満たしていない場合は、 **パーティションの変更を保持** オプションが **true**に設定されます。  
+ **パーティション グループを使用** オプションと **パーティションの変更を保持** オプションでは、いずれもパブリケーション データベースに追加のメタデータを格納することにより、フィルター選択されたアーティクルを持つパブリケーションの同期パフォーマンスを向上します。 **パーティション グループを使用** オプションでは、事前計算済みパーティション機能を使用することにより、パフォーマンスを向上させることができます。 このオプションは、パブリケーションのアーティクルが一連の要件を満たしている場合に、既定で **true** に設定されています。 これらの要件の詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。 アーティクルが事前計算済みパーティションを使用するための要件を満たしていない場合は、 **パーティションの変更を保持** オプションが **true** に設定されます。  
   
 ### <a name="setting-partition-options"></a>[パーティションのオプション] の設定  
  **[パーティションのオプション]** プロパティの値は、アーティクルを作成するときに、フィルター選択されたテーブルのデータをサブスクライバーが共有する方法に応じて設定します。 このプロパティは、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)、および **[アーティクルのプロパティ]** ダイアログ ボックスを使用して、4 つの値のいずれかに設定できます。 このプロパティは、 **[フィルターの追加]** ダイアログ ボックスまたは **[フィルターの編集]** ダイアログ ボックスを使用して、2 つの値のいずれかに設定できます。これらのダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから使用できます。 次の表は、利用可能な値をまとめたものです。  
@@ -184,7 +184,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   アーティクルは、1 つのパラメーター化されたフィルターまたは結合フィルターのみを持っている必要があります。 パラメーター化されたフィルターを持ち、かつ結合フィルターの親になることは可能です。 パラメーター化されたフィルターを持ち、かつ結合フィルターの子になることはできません。 複数の結合フィルターを持つことはできません。  
   
--   パブリッシャーの 2 つのテーブルに結合フィルター リレーションシップがあり、子テーブルの行が親テーブルの行と対応していない場合、その行を親テーブルに挿入しても、関連する行はサブスクライバーにダウンロードされません (行は重複するパーティションによってダウンロードされます)。 たとえば、 **SalesOrderDetail** テーブルの行に対応する行が **SalesOrderHeader** テーブル内に存在せず、その行を **SalesOrderHeader**に挿入した場合、その行はサブスクライバーにダウンロードされますが、 **SalesOrderDetail** 内の対応する行はダウンロードされません。  
+-   パブリッシャーの 2 つのテーブルに結合フィルター リレーションシップがあり、子テーブルの行が親テーブルの行と対応していない場合、その行を親テーブルに挿入しても、関連する行はサブスクライバーにダウンロードされません (行は重複するパーティションによってダウンロードされます)。 たとえば、 **SalesOrderDetail** テーブルの行に対応する行が **SalesOrderHeader** テーブル内に存在せず、その行を **SalesOrderHeader** に挿入した場合、その行はサブスクライバーにダウンロードされますが、 **SalesOrderDetail** 内の対応する行はダウンロードされません。  
   
 ## <a name="see-also"></a>参照  
  [時間ベースの行フィルターの推奨事項](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   

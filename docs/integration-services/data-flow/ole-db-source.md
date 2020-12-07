@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd306ce541f3fe4f6cf352421e0087afb595c41e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a61d85e961b2572ce60d9766e7df0c83d042e84e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430814"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195374"
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
 
@@ -34,7 +34,7 @@ ms.locfileid: "88430814"
   OLE DB ソースは、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなリレーショナル データベースからデータを抽出します。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルからデータを抽出できます。  
   
 > [!NOTE]  
->  データ ソースが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 である場合、Excel の以前のバージョンとは異なる接続マネージャーが必要になります。 詳細については、「 [Excel ブックに接続する](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)」を参照してください。  
+>  データ ソースが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 である場合、Excel の以前のバージョンとは異なる接続マネージャーが必要になります。 詳細については、「 [Excel ブックに接続する](../load-data-to-from-excel-with-ssis.md)」を参照してください。  
   
  OLE DB ソースには、データを抽出するために、次の 4 つの異なるデータ アクセス モードが用意されています。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88430814"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [OLE DB カスタム プロパティ](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -122,9 +122,9 @@ ms.locfileid: "88430814"
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、ソースの OLE DB 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 を使用するデータ ソースからデータを読み込むには、OLE DB ソースを使用します。 Excel ソースを使用して Excel 2007 データ ソースからデータを読み込むことはできません。 詳細については、「 [Configure OLE DB Connection Manager](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)」 (OLE DB 接続マネージャーの構成) を参照してください。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 を使用するデータ ソースからデータを読み込むには、OLE DB ソースを使用します。 Excel ソースを使用して Excel 2007 データ ソースからデータを読み込むことはできません。 詳細については、「 [Configure OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)」 (OLE DB 接続マネージャーの構成) を参照してください。  
 >   
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 以前のバージョンを使用するデータ ソースからデータを読み込むには、Excel ソースを使用します。 詳細については、「[[Excel ソース エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)」を参照してください。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 以前のバージョンを使用するデータ ソースからデータを読み込むには、Excel ソースを使用します。 詳細については、「[[Excel ソース エディター] ([接続マネージャー] ページ)](./excel-source.md)」を参照してください。  
   
 > [!NOTE]  
 >  OLE DB ソースの **CommandTimeout** プロパティは、 **[OLE DB ソース エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 このプロパティの詳細については、「 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
@@ -150,7 +150,7 @@ ms.locfileid: "88430814"
 |オプション|説明|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|OLE DB データベースのテーブルまたはビューからデータを取得します。|  
-|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](../integration-services-ssis-variables.md)|  
 |[SQL コマンド]|SQL クエリを使用して、OLE DB データ ソースからデータを取得します。|  
 |[変数からの SQL コマンド]|SQL クエリ テキストを変数で指定します。|  
   
@@ -234,5 +234,4 @@ ms.locfileid: "88430814"
  [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  
   

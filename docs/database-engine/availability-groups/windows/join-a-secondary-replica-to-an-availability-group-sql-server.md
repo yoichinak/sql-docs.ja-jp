@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], joining
 - Availability Groups [SQL Server], configuring
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 17c2b0f35dbd5eb682dc3844e1740ceb01e3fd64
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: aa4ef43cd9c33fbbea2bc2bd3333ca85927d8ed5
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116186"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584211"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Always On 可用性グループへのセカンダリ レプリカの参加
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -91,11 +91,11 @@ ms.locfileid: "91116186"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
--   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="follow-up-configure-secondary-databases"></a><a name="FollowUp"></a> 補足情報: セカンダリ データベースの構成  
  可用性グループ内のすべてのデータベースには、それぞれ対応するセカンダリ データベースが、セカンダリ レプリカをホストしているサーバー インスタンス上に存在している必要があります。 セカンダリ データベースの構成は、セカンダリ レプリカを可用性グループに参加させる前に行うことも、参加させた後に行うこともできます。  
@@ -108,5 +108,4 @@ ms.locfileid: "91116186"
  [可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
-  
   

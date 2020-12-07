@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0073698d4cc7ce29912be8bbce3badf3eeea6742
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 1b0fea6ec995f383cd290ebbee786e31623b25f1
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288334"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669663"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -55,7 +55,7 @@ LocalDB は、SQL Server Express のインストール中に選択する機能�
 
 LocalDB セットアップ プログラムでは、`SqlLocalDB.msi` プログラムを使用して、コンピューターに必要なファイルがインストールされます。 LocalDB はインストールされると [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを作成して開くことができます。 データベースのシステム データベース ファイルは、通常は非表示になっているローカル AppData パスに格納されます。 たとえば、「 `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\` 」のように入力します。 ユーザー データベース ファイルは、ユーザーが指定する場所 (通常は `C:\Users\<user>\Documents\` フォルダー内の任意の場所) に格納されます。
 
-LocalDB をアプリケーション内に組み込む手順の詳細については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の「[ローカル データの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))」と「[Visual Studio でデータベースを作成し、テーブルを追加する](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)」を参照してください。
+LocalDB をアプリケーション内に組み込む手順の詳細については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の「[ローカル データの概要](/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))」と「[Visual Studio でデータベースを作成し、テーブルを追加する](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)」を参照してください。
 
 LocalDB API の詳細については、「[SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)」を参照してください。
 

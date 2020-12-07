@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
-ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
-ms.translationtype: MT
+ms.openlocfilehash: a443b615a6a04b588ed6dc84c6a8a4f6ed12e2f0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721351"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726760"
 ---
 ## <a name="specifying-application-intent"></a>アプリケーション インテントの指定
 
@@ -31,9 +31,9 @@ ms.locfileid: "83721351"
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
     - 対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止できます。 この選択は、**PRIMARY_ROLE** および **SECONDARY_ROLE** Transact-SQL ステートメントの **ALLOW_CONNECTIONS** 句を使用することで制御できます。
 
-- [geo レプリケーション](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
+- [geo レプリケーション](/azure/sql-database/sql-database-geo-replication-overview)
 
-- [読み取りスケールアウト](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
+- [読み取りスケールアウト](/azure/sql-database/sql-database-read-scale-out)
 
 これらの特別なターゲットがいずれも使用できない場合は、通常のデータベースから読み取られます。
 
@@ -54,5 +54,4 @@ ms.locfileid: "83721351"
 
 複数の接続でそれぞれに読み取り専用ルーティングが使用されている場合、すべてが同じ読み取り専用レプリカに接続されるとは限りません。 データベース同期の変更やサーバーのルーティング構成の変更によって、クライアントが別の読み取り専用レプリカに接続される場合があります。 すべての読み取り専用要求が、同じ読み取り専用レプリカに接続されるようにすることができます。 この同一性を保証するには、**Server** 接続文字列キーワードに可用性グループ リスナーを "*渡さない*" ようにします。 代わりに、読み取り専用インスタンスの名前を指定します。
 
-読み取り専用ルーティングには、プライマリへの接続よりも時間がかかることがあります。 待機時間が長くなるのは、読み取り専用ルーティングがまずプライマリに接続し、次に使用できる読み取り可能なセカンダリを検索するためです。 これらの複数の手順により、ログインタイムアウトを少なくとも30秒に増やす必要があります。
-
+読み取り専用ルーティングには、プライマリへの接続よりも時間がかかることがあります。 待機時間が長くなるのは、読み取り専用ルーティングがまずプライマリに接続し、次に使用できる読み取り可能なセカンダリを検索するためです。 このような複数のステップがあるため、ログイン タイムアウトを少なくとも 30 秒に増やす必要があります。

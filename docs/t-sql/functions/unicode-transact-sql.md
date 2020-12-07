@@ -21,12 +21,12 @@ ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 273faa70282ca1bc9c6ec0ab441dcb5f6fcfda1a
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: ae4305acd245c6d7576698d27dc7ce339d57063b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990205"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379493"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ UNICODE ( 'ncharacter_expression' )
  次の例では、`UNICODE` と `NCHAR` の各関数を使用して、文字列 `Åkergatan` 24 の先頭文字を表す UNICODE 値と実際の先頭文字 `Å` を出力します。  
   
 ```sql  
-DECLARE @nstring nchar(12);  
+DECLARE @nstring NCHAR(12);  
 SET @nstring = N'Åkergatan 24';  
 SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
 ```  
@@ -78,7 +78,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
-DECLARE @position int, @nstring nchar(12);  
+DECLARE @position INT, @nstring NCHAR(12);  
 -- Initialize the current position variable to the first character in   
 -- the string.  
 SET @position = 1;  
@@ -92,6 +92,7 @@ SET @nstring = N'Åkergatan 24';
 PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
 WHILE @position <= LEN(@nstring)  
 -- While these are still characters in the character string,  
+
 BEGIN;  
    SELECT @position AS [position],   
       SUBSTRING(@nstring, @position, 1) AS [character],  

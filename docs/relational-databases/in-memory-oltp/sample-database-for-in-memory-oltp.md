@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe3f756c08229631a76effe5fc8b16bc5fe6f965
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 919b3126a47fb0f71efb41e645e0443c309f643e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216702"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867565"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88216702"
  このサンプルでは、インメモリ OLTP 機能を紹介します。 このサンプルで取り上げるのは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャです。また、インメモリ OLTP のパフォーマンス上の利点も示します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のこのトピックを表示するには、「 [メモリ内 OLTP を実証する AdventureWorks の拡張](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver15#in-memory-oltp-overview)」をご覧ください。  
+>  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のこのトピックを表示するには、「 [メモリ内 OLTP を実証する AdventureWorks の拡張](./overview-and-usage-scenarios.md?view=sql-server-ver15#in-memory-oltp-overview)」をご覧ください。  
   
  このサンプルは、AdventureWorks データベースの 5 つのテーブルをメモリ最適化テーブルに移行します。販売注文処理のデモ ワークロードも含まれています。 このデモ ワークロードを使用して、サーバーでインメモリ OLTP を使用するパフォーマンス上の利点を確認できます。  
   
@@ -183,10 +183,10 @@ ms.locfileid: "88216702"
   
  ハッシュ インデックスを使用すると、ワークロードをさらに最適化できます。 これは、特にポイント参照と行挿入に合わせて最適化されています。 ただし、範囲スキャン、並べ替えられたスキャン、または先頭のインデックス キー列での検索がサポートされていないことを考慮する必要があります。 したがって、このインデックスを使用するときは注意が必要です。 また、作成時に bucket_count を指定する必要もあります。 一般的にはインデックス キー値の数の 1 ～ 2 倍に設定しますが、多めに設定しても通常は問題ありません。  
   
-詳細については、オンライン ブックの [インデックスのガイドライン](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations)、および [適切な bucket_count の選択](https://sqlserver-help.com/tag/bucket_count/)に関するガイドラインをご覧ください。  
+詳細については、オンライン ブックの [インデックスのガイドライン](/sql/relational-databases/indexes/guidelines-for-online-index-operations)、および [適切な bucket_count の選択](https://sqlserver-help.com/tag/bucket_count/)に関するガイドラインをご覧ください。  
 
 オンライン ブックからは、次のトピックに関する詳細が得られます。
-- [インデックス ガイドライン](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [インデックス ガイドライン](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  移行したテーブルのインデックスは、販売注文処理のデモ ワークロードに合わせて調整されています。 ワークロードは、Sales.SalesOrderHeader_inmem テーブルおよび Sales.SalesOrderDetail_inmem テーブルの挿入とポイント参照のほか、Production.Product_inmem テーブルおよび Sales.SpecialOffer_inmem テーブルの主キー列のポイント参照にも依存します。  
   
@@ -274,7 +274,7 @@ ms.locfileid: "88216702"
   
     -   指定された販売注文の出荷情報を更新します。 これにより、販売注文のすべての品目の出荷情報も更新されます。  
   
-    -   これはネイティブ コンパイル ストアド プロシージャ Sales.usp_UpdateSalesOrderShipInfo_native のラッパー プロシージャで、再試行ロジックを備えており、同じ注文を更新する同時実行トランザクションとの間で発生する可能性のある (予期しない) 競合を処理します。 再試行ロジックの詳細については、オンライン ブックの [こちら](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables)のトピックを参照してください。  
+    -   これはネイティブ コンパイル ストアド プロシージャ Sales.usp_UpdateSalesOrderShipInfo_native のラッパー プロシージャで、再試行ロジックを備えており、同じ注文を更新する同時実行トランザクションとの間で発生する可能性のある (予期しない) 競合を処理します。 再試行ロジックの詳細については、オンライン ブックの [こちら](./transactions-with-memory-optimized-tables.md)のトピックを参照してください。  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -760,4 +760,4 @@ ORDER BY state, file_type
   
 ## <a name="see-also"></a>参照
 
-[インメモリ OLTP &#40;インメモリ最適化&#41;](in-memory-oltp-in-memory-optimization.md)  
+[インメモリ OLTP &#40;インメモリ最適化&#41;](in-memory-oltp-in-memory-optimization.md)

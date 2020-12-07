@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-author: jodebrui
-ms.author: jodebrui
+author: kevin-farlee
+ms.author: kfarlee
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6f759c6cb9b13b75216f5927d078f45996378ab8
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722418"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175985"
 ---
 # <a name="overview-and-usage-scenarios"></a>概要と使用シナリオ
 
@@ -29,7 +29,7 @@ ms.locfileid: "85722418"
 
 ## <a name="in-memory-oltp-overview"></a>インメモリ OLTP の概要
 
-インメモリ OLTP は、適切なワークロードの場合にパフォーマンスが大きく向上します。 お客様の BWIN は、インメモリ OLTP を利用して、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] を実行する 1 台のコンピューターで[毎秒 120 万要求を達成](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)しました。 また、Quorum は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でインメモリ OLTP を利用して、[リソース使用率を 70% 下げ](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)、ワークロードを 2 倍にしました。 一部の事例では、最大 30 倍のパフォーマンス向上が見られていますが、向上率はワークロードによって変わります。
+インメモリ OLTP は、適切なワークロードの場合にパフォーマンスが大きく向上します。 お客様の BWIN は、インメモリ OLTP を利用して、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] を実行する 1 台のコンピューターで[毎秒 120 万要求を達成](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale)しました。 また、Quorum は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でインメモリ OLTP を利用して、[リソース使用率を 70% 下げ](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)、ワークロードを 2 倍にしました。 一部の事例では、最大 30 倍のパフォーマンス向上が見られていますが、向上率はワークロードによって変わります。
 
 それでは、このパフォーマンス向上は何に由来するのでしょうか。 基本的に、インメモリ OLTP は、データ アクセスとトランザクションの実行を効率化し、同時に実行されるトランザクション間のロックとラッチの競合を取り除くことで、トランザクション プロセスのパフォーマンスを改善します。高速化の理由はデータがメモリ内にあるからではなく、メモリ内のデータを中心にして最適化しているためです。 メモリ内のコンカレンシー処理が多い計算に関する最新の機能強化を利用するように、データ ストレージ、アクセス、処理アルゴリズムはゼロから再設計されました。
 
@@ -122,11 +122,11 @@ ASP.NET セッションの状態のメモリ最適化を始めるには、GitHub
 
 #### <a name="implementation-considerations"></a>実装時の注意事項
 
-開始するには、以下をご覧ください。[メモリ最適化を使用した一時テーブルとテーブル変数のパフォーマンスの向上。](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
+開始するには、以下をご覧ください。[メモリ最適化を使用した一時テーブルとテーブル変数のパフォーマンスの向上。](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
 
 #### <a name="customer-case-studies"></a>お客様の導入事例
 
-- あるお客様は、従来の TVP をメモリ最適化 TVP に置き換えるだけでパフォーマンスを 40% 改善できました:[High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/) (Azure でのインメモリ OLTP を使用した高速 IoT データ インジェスト)
+- あるお客様は、従来の TVP をメモリ最適化 TVP に置き換えるだけでパフォーマンスを 40% 改善できました:[High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](/archive/blogs/sqlserverstorageengine/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure) (Azure でのインメモリ OLTP を使用した高速 IoT データ インジェスト)
 - SentryOne では、エンタープライズ スケーラビリティの改善の一部として、tempdb をインメモリ OLTP テーブルに入れ替えることで、監視するソリューションの待機時間がほぼゼロになり、データ インジェストの能力が大幅に改善されました:[Solution provider breaks through performance ceiling with data monitoring innovation](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure) (ソリューション プロバイダーがデータの監視の技術革新でパフォーマンスの壁を突破する)。
 
 ### <a name="etl-extract-transform-load"></a>ETL (抽出、変換、読み込み)
@@ -222,12 +222,12 @@ GO
 
 ## <a name="resources-to-learn-more"></a>詳細情報に関するリソース
 
-- [T-SQL のパフォーマンスを向上させるためのインメモリ OLTP テクノロジ](https://msdn.microsoft.com/library/mt694156.aspx)
+- [T-SQL のパフォーマンスを向上させるためのインメモリ OLTP テクノロジ](./survey-of-initial-areas-in-in-memory-oltp.md)
 - インメモリ OLTP を使用したパフォーマンス デモ: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [インメモリ OLTP の説明とデモを紹介する 17 分のビデオ](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)
 - [インメモリ OLTP を有効にして推奨されるオプションを設定するスクリプト](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 - [主なインメモリ OLTP ドキュメント](in-memory-oltp-in-memory-optimization.md)
 - [インメモリ OLTP が Azure SQL Database のパフォーマンスとリソース活用にもたらす利点](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
-- [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
-- [SQL データベースでのインメモリ テクノロジを使用したパフォーマンスの最適化](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
+- [Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+- [SQL データベースでのインメモリ テクノロジを使用したパフォーマンスの最適化](/azure/sql-database/sql-database-in-memory)
 - [メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)

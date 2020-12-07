@@ -17,12 +17,12 @@ ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b993b6503f721ddfb88f2c34b09df3cc7ded0a68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09750a9c500c0c5928924845f883acfc2a836917
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417798"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034866"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナーの設定 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,8 +59,7 @@ ms.locfileid: "88417798"
   
     9. sp_upgraddiagrams ストアド プロシージャ  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [データベース ダイアグラムの所有権について (Visual Database Tools)](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
 [旧エディションのデータベース ダイアグラムのアップグレード (Visual Database Tools)](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
-[ALTER AUTHORIZATION (Transact-SQL)](https://msdn.microsoft.com/8c805ae2-91ed-4133-96f6-9835c908f373)  
-  
+[ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)  

@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8fd56c7b3c3177f1ae08c9b2c5d821d1c2552f70
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 70ca43a017edaa760a5ffa999f40d99516f232bb
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765681"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914349"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのコントローラーとは
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-このコントローラーでは、ビッグ データ クラスターを展開および管理するコア ロジックがホストされます。 Kubernetes、クラスターの一部である SQL Server インスタンス、および HDFS や Spark などのその他のコンポーネントとのすべてのやり取りがここで処理されます。
+このコントローラーでは、SQL Server ビッグ データ クラスターを展開および管理するコア ロジックがホストされます。 Kubernetes、クラスターの一部である SQL Server インスタンス、および HDFS や Spark などのその他のコンポーネントとのすべてのやり取りがここで処理されます。
 
 コントローラー サービスには、次のコア機能があります。
 
@@ -44,7 +44,7 @@ ms.locfileid: "88765681"
 
 いずれかの **azdata** コマンドを使用して、コントローラー サービスを介してクラスターを管理できます。 ポッドのような追加の Kubernetes オブジェクトを同じ名前空間に展開しても、コントローラー サービスによって管理または監視されません。 **kubectl** コマンドを使用して、Kubernetes レベルでクラスターを管理することもできます。 詳細については「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の監視とトラブルシューティング](cluster-troubleshooting-commands.md)」を参照してください。
 
-ビッグ データ クラスター用に作成されたコントローラーと Kubernetes オブジェクト (ステートフル セット、ポッド、シークレットなど) は、専用の Kubernetes 名前空間に存在します。 コントローラー サービスには、その名前空間内のすべてのリソースを管理するために、Kubernetes クラスター管理者によってアクセス許可が付与されます。  このシナリオの RBAC ポリシーは、**azdata** を使用して初期クラスター展開の一部として自動的に構成されます。
+ビッグ データ クラスター用に作成されたコントローラーと Kubernetes オブジェクト (ステートフル セット、ポッド、シークレットなど) は、専用の Kubernetes 名前空間に存在します。 コントローラー サービスには、その名前空間内のすべてのリソースを管理するために、Kubernetes クラスター管理者によってアクセス許可が付与されます。  このシナリオの RBAC ポリシーは、 **azdata** を使用して初期クラスター展開の一部として自動的に構成されます。
 
 ### <a name="azdata"></a>azdata
 
@@ -57,7 +57,7 @@ ms.locfileid: "88765681"
 コントローラー サービス エンドポイントに対する認証は、Active Directory ID を使用するか、ユーザー名とパスワードに基づいています。 これらの資格情報は、環境変数 `AZDATA_USERNAME` および `AZDATA_PASSWORD` の入力を使用して、クラスターのブートストラップ時にプロビジョニングされます。
 
 > [!NOTE]
-> [SQL Server パスワードの複雑さの要件](../relational-databases/security/password-policy.md?view=sql-server-2017)に準拠したパスワードを指定する必要があります。
+> [SQL Server パスワードの複雑さの要件](../relational-databases/security/password-policy.md)に準拠したパスワードを指定する必要があります。
 
 ## <a name="next-steps"></a>次のステップ
 

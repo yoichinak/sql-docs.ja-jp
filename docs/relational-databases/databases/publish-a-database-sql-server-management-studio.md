@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 503fe13d4f2d24c1795993bea84f2e04fb4ba0e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7865180ffd1bcf090e51eafd1542e12c97d17ac
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471177"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195003"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>データベースのパブリッシュ (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **スクリプトの生成とパブリッシュ ウィザード**を使用して、データベース全体または個々のデータベース オブジェクトを Web ホスティング プロバイダーにパブリッシュできます。  
+  **スクリプトの生成とパブリッシュ ウィザード** を使用して、データベース全体または個々のデータベース オブジェクトを Web ホスティング プロバイダーにパブリッシュできます。  
   
 > [!NOTE]  
 >  以前のバージョンでは、このトピックで説明する機能がデータベース パブリッシュ ウィザードで提供されていました。 今回のバージョンから、パブリッシュ機能はスクリプトの生成とパブリッシュ ウィザードに追加され、データベース パブリッシュ ウィザードは廃止されました。  
@@ -47,7 +47,6 @@ ms.locfileid: "88471177"
 5.  **[スクリプトの保存またはパブリッシュ]** ページで、パブリケーションの進行状況を監視します。  
 
 ## <a name="see-also"></a>参照  
- [スクリプトの生成 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
+ [スクリプトの生成 &#40;SQL Server Management Studio&#41;](../../ssms/scripting/generate-scripts-sql-server-management-studio.md)   
  [他のサーバーへのデータベースのコピー](../../relational-databases/databases/copy-databases-to-other-servers.md)  
-  
   

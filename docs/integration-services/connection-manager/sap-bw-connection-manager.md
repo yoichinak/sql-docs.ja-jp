@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e09a6cdf6f8d863e57d2de0749e29b33c989eea
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426004"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91719547"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 接続マネージャー
 
@@ -30,7 +30,7 @@ ms.locfileid: "88426004"
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW に関するドキュメントでは、SAP Netweaver BW 環境について理解していることを前提としています。 SAP Netweaver BW の詳細または SAP Netweaver BW オブジェクトやプロセスを構成する方法については、SAP のマニュアルを参照してください。  
   
- SAP BW 接続マネージャーをパッケージに追加する場合、接続マネージャーの **ConnectionManagerType** プロパティを **SAPBI**に設定します。  
+ SAP BW 接続マネージャーをパッケージに追加する場合、接続マネージャーの **ConnectionManagerType** プロパティを **SAPBI** に設定します。  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>SAP BW 接続マネージャーの構成  
  SAP BW 接続マネージャーは、次の方法で構成できます。  
@@ -50,12 +50,12 @@ ms.locfileid: "88426004"
   
  接続マネージャーを構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
- SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](https://go.microsoft.com/fwlink/?LinkID=137090)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
+ SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100))」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>SSIS デザイナーを使用してソースを構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる、SAP BW マネージャーのプロパティの詳細については、次のトピックを参照してください。  
   
--   [SAP BW 接続マネージャー エディター](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [SAP BW 接続マネージャー エディター]()  
   
 ## <a name="sap-bw-connection-manager-editor"></a>SAP BW 接続マネージャー エディター
   SAP Netweaver BW Version 7 システムへの接続に使用するプロパティを指定するには、 **[SAP BW 接続マネージャー エディター]** を使用します。  
@@ -154,5 +154,4 @@ ms.locfileid: "88426004"
   
 ## <a name="see-also"></a>関連項目  
  [Microsoft Connector for SAP BW のコンポーネント](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

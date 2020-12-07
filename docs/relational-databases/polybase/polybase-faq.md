@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 5083228cc44b859faec866eca7d36aae9626e8fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760445"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96127852"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 
@@ -36,7 +36,7 @@ ms.locfileid: "85760445"
 
 ## <a name="whats-new-in-polybase-2019"></a>PolyBase 2019 の新機能 
 
-[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] の PolyBase は、さまざまな大規模なデータ ソースからデータを読み取ることができるようになりました。 これらの外部データ ソースのデータは、SQL Server で外部テーブルとして保存できます。 PolyBase では、ODBC ジェネリック型を除くこれらの外部データ ソースへのプッシュ ダウン計算もサポートします。
+[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] の PolyBase は、さまざまな大規模なデータ ソースからデータを読み取ることができるようになりました。 これらの外部データ ソースのデータは、SQL Server で外部テーブルとして格納できます。 PolyBase により、ODBC ジェネリック型を除くこれらの外部データ ソースへのプッシュ ダウン計算もサポートされます。
 
 ### <a name="compatible-data-sources"></a>互換性のあるデータ ソース
 

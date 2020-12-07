@@ -14,11 +14,11 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4cb9b5a4c97e178e3acfbd64f1f99f831f116f09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484875"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123770"
 ---
 # <a name="access-the-cdc-designer-console"></a>CDC デザイナー コンソールへのアクセス
 
@@ -49,10 +49,10 @@ ms.locfileid: "88484875"
  矢印をクリックして、構成するオプションを表示します。 これらのオプションを既定値のままにすることもできます。 使用可能なオプションは次のとおりです。  
   
  **[接続タイムアウト]**  
- CDC Service for Oracle が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は **15**です。  
+ CDC Service for Oracle が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は **15** です。  
   
  **[実行タイムアウト]**  
- Oracle CDC Windows Service がコマンドの実行を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は、 **30**です。  
+ Oracle CDC Windows Service がコマンドの実行を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は、 **30** です。  
   
  **[暗号化接続]**  
  Oracle CDC Service とターゲットの **インスタンスの間の暗号化された接続を使用した通信に対しては、** [暗号化接続] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択します。**[詳細設定]**: 必要に応じて、 **[詳細設定]** をクリックし、[高度な接続プロパティ] ダイアログ ボックスに追加の接続プロパティを入力します。  

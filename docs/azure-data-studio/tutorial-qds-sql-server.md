@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 06/01/2020
-ms.openlocfilehash: 678d985daf2ca3130fbf7eb3b052718c3cc898ab
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 8137ca8f37254bab94dfaae6d9c8072c293a81ff
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746192"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243391"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル:データベース ダッシュボードに *5 つの最低速クエリ* サンプル ウィジェットを追加する
 
-このチュートリアルでは、組み込みの Azure Data Studio サンプル ウィジェットの 1 つを "*データベース ダッシュボード*" に追加してデータベースの 5 つの最低速クエリをすばやく表示するプロセスについて説明します。 Azure Data Studio の機能を使用して低速クエリおよびクエリ プランの詳細を表示する方法についても説明します。 このチュートリアルでは、次の方法を学習します。
+このチュートリアルでは、組み込みの Azure Data Studio サンプル ウィジェットの 1 つを " *データベース ダッシュボード* " に追加してデータベースの 5 つの最低速クエリをすばやく表示するプロセスについて説明します。 Azure Data Studio の機能を使用して低速クエリおよびクエリ プランの詳細を表示する方法についても説明します。 このチュートリアルでは、次の方法を学習します。
 
 > [!div class="checklist"]
 > * データベースでクエリ ストアを有効にする
@@ -26,7 +26,7 @@ ms.locfileid: "88746192"
 > * データベースの最低速クエリに関する詳細を表示する
 > * 低速クエリのクエリ実行プランを表示する
 
-Azure Data Studio には、設定なしですぐに使える分析情報ウィジェットがいくつか含まれています。 このチュートリアルでは、*query-data-store-db-insight* ウィジェットを追加する方法を紹介しますが、手順は基本的にどのウィジェットを追加する場合でも同じです。
+Azure Data Studio には、設定なしですぐに使える分析情報ウィジェットがいくつか含まれています。 このチュートリアルでは、 *query-data-store-db-insight* ウィジェットを追加する方法を紹介しますが、手順は基本的にどのウィジェットを追加する場合でも同じです。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -38,7 +38,7 @@ Azure Data Studio には、設定なしですぐに使える分析情報ウィ�
 
 ## <a name="turn-on-query-store-for-your-database"></a>データベースのクエリ ストアをオンにする
 
-この例のウィジェットでは、*クエリ ストア*を有効にする必要があります。
+この例のウィジェットでは、 *クエリ ストア* を有効にする必要があります。
 
 1. ( **[サーバー]** サイドバーで) **TutorialDB** データベースを右クリックし、 **[新しいクエリ]** を選択します。
 
@@ -50,15 +50,15 @@ Azure Data Studio には、設定なしですぐに使える分析情報ウィ�
 
 ## <a name="add-the-slow-queries-widget-to-your-database-dashboard"></a>低速クエリ ウィジェットをデータベース ダッシュボードに追加する
 
-*低速クエリ ウィジェット*をダッシュボードに追加するには、 *[ユーザー設定]* ファイルの *dashboard.database.widgets* 設定を編集します。
+*低速クエリ ウィジェット* をダッシュボードに追加するには、 *[ユーザー設定]* ファイルの *dashboard.database.widgets* 設定を編集します。
 
 1. **Ctrl + Shift + P** を押して *[ユーザー設定]* を開き、 *[コマンド パレット]* を開きます。
 
-2. 検索ボックスに「*settings*」と入力し、 **[ユーザー設定:ユーザー設定を開く]** を選択します。
+2. 検索ボックスに「 *settings* 」と入力し、 **[ユーザー設定:ユーザー設定を開く]** を選択します。
 
    ![[ユーザー設定を開く] コマンド](./media/tutorial-qds-sql-server/open-user-settings.png)
 
-3. [設定の検索] ボックスに「*dashboard*」と入力し、**dashboard.database.widgets** を見つけ、 *[edit in settings.json]\(settings.json で編集\)* をクリックします。
+3. [設定の検索] ボックスに「 *dashboard* 」と入力し、 **dashboard.database.widgets** を見つけ、 *[edit in settings.json]\(settings.json で編集\)* をクリックします。
 
    ![検索設定](./media/tutorial-qds-sql-server/search-settings.png)
 
@@ -120,7 +120,7 @@ Azure Data Studio には、設定なしですぐに使える分析情報ウィ�
 
 ## <a name="view-the-query-plan"></a>クエリ プランを表示する
 
-1. **TutorialDB**データベースを右クリックし、 *[管理]* を選択します
+1. **TutorialDB** データベースを右クリックし、 *[管理]* を選択します
 
 2. *[slow query widget]\(低速クエリ ウィジェット\)* で分析情報ウィジェットの追加情報を表示するには、右上にある省略記号 ( **...** ) をクリックし、 **[クエリの実行]** を選択します。
 
@@ -136,7 +136,7 @@ Azure Data Studio には、設定なしですぐに使える分析情報ウィ�
 
 5. クエリの実行プランを表示します。
 
-   ![プラン表示 (showplan)](./media/tutorial-qds-sql-server/showplan.png)
+   ![クエリの実行プランを示すスクリーンショット。](./media/tutorial-qds-sql-server/showplan.png)
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -147,7 +147,7 @@ Azure Data Studio には、設定なしですぐに使える分析情報ウィ�
 > * データベースの最低速クエリに関する詳細を表示する
 > * 低速クエリのクエリ実行プランを表示する
 
-**テーブル領域使用**のサンプル分析情報を有効にする方法については、次のチュートリアルを完了してください。
+**テーブル領域使用** のサンプル分析情報を有効にする方法については、次のチュートリアルを完了してください。
 
 > [!div class="nextstepaction"]
 > [テーブル領域のサンプル分析情報ウィジェットを有効にする](tutorial-table-space-sql-server.md)

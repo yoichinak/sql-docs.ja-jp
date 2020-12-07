@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring transaction logs [SQL Server], restoring backups
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6c983279a1fe317b2e7975b972e5471b9724b65d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717952"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129115"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>トランザクション ログ バックアップの復元 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "85717952"
   
     -   **[復元するデータベースへのアクセスを制限する (WITH RESTRICTED_USER)]**  
   
-         復元するデータベースの使用を、 **db_owner**、 **dbcreator**、または **sysadmin**のメンバーだけに制限します。  
+         復元するデータベースの使用を、 **db_owner**、 **dbcreator**、または **sysadmin** のメンバーだけに制限します。  
   
          このオプションをチェックすることは、 **RESTORE** ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTRICTED_USER** オプションを使用することと同じです。  
   

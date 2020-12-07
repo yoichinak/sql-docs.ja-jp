@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9e82a25d3386de2f86d7e43fe5bde13eb25c6416
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 41fc8b3ae6185183b3d81988874b23ea926077e2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435123"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081271"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -90,7 +90,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 詳細については、「[SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="example-1"></a>例 1  
 次の例では、ステートメントを準備して実行します。 このステートメントを実行すると (「[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)」を参照)、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルのフィールドが更新されます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
@@ -137,7 +137,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="example-2"></a>例 2  
 次の例では、ステートメントを準備し、異なるパラメーター値で再実行する方法を示します。 この例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルの *OrderQty* 列を更新します。 更新されたら、更新プログラムが成功したことを確認するため、データベースが照会されます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
@@ -223,9 +223,9 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 値を [10 進数列または数値列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)にバインドするときは、有効桁数と精度を保持するために、入力として文字列を使用することをお勧めします。これは、PHP には[浮動小数点数](https://php.net/manual/en/language.types.float.php)の有効桁数に制限があるためです。 値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外にある場合は特に、同じことが bigint 列にも適用されます。
+> 値を [10 進数列または数値列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)にバインドするときは、有効桁数と精度を保持するために、入力として文字列を使用することをお勧めします。これは、PHP には[浮動小数点数](https://php.net/manual/en/language.types.float.php)の有効桁数に制限があるためです。 値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外にある場合は特に、同じことが bigint 列にも適用されます。
 
-## <a name="example"></a>例  
+## <a name="example-3"></a>例 3  
 このコード サンプルでは、入力パラメーターとして 10 進数値をバインドする方法を示しています。  
 
 ```
@@ -264,4 +264,3 @@ sqlsrv_close($conn);
 [データの取得](../../connect/php/retrieving-data.md)
 
 [データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
-

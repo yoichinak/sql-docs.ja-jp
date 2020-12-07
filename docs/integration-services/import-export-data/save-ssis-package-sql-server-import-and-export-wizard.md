@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 379973cb0174e25a91b6a3dfb0ed7cc319efd842
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc69ad61d1f2eb025d4a5fcae317ba787da61860
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346818"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439306"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
 
@@ -47,14 +47,14 @@ ms.locfileid: "88346818"
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>スクリーン ショット - SQL Server にパッケージを保存する
 
- 次のスクリーンショットは、**[パッケージの保存および実行]** ページで **[SQL Server]** を選択した場合のウィザードの **[SSIS パッケージの保存]** ページです。 
+ 次のスクリーンショットは、 **[パッケージの保存および実行]** ページで **[SQL Server]** を選択した場合のウィザードの **[SSIS パッケージの保存]** ページです。 
   
-![インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ](../../integration-services/import-export-data/media/save-package2.png "インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ")  
+![[パッケージの保存および実行] ページで [SQL Server] を選択した場合のインポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページを示すスクリーンショット。](../../integration-services/import-export-data/media/save-package2.png "インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ")  
 
 ## <a name="options-to-specify-target--sql-server"></a>指定するオプション (ターゲット = SQL Server) 
 
  > [!NOTE]
- > ウィザードは、**msdb** データベースの **sysssispackages** テーブルにパッケージを保存します。 このオプションでは、SSIS カタログ データベース (SSISDB) にパッケージを保存**できません**。  
+ > ウィザードは、 **msdb** データベースの **sysssispackages** テーブルにパッケージを保存します。 このオプションでは、SSIS カタログ データベース (SSISDB) にパッケージを保存 **できません** 。  
  
  **サーバー名**  
  保存先のサーバー名を入力または選択します。  
@@ -73,14 +73,14 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>スクリーン ショット - ファイル システムにパッケージを保存する
  
-次のスクリーンショットは、**[パッケージの保存および実行]** ページで **[ファイル システム]** を選択した場合のウィザードの **[SSIS パッケージの保存]** ページです。 
+次のスクリーンショットは、 **[パッケージの保存および実行]** ページで **[ファイル システム]** を選択した場合のウィザードの **[SSIS パッケージの保存]** ページです。 
   
-![インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ](../../integration-services/import-export-data/media/save-package1.png "インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ")  
+![[パッケージの保存および実行] ページで [ファイル システム] オプションを選択した場合のインポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページを示すスクリーンショット。](../../integration-services/import-export-data/media/save-package1.png "インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ")  
 
 ## <a name="options-to-specify-target--file-system"></a>指定するオプション (ターゲット = ファイル システム)
 
  **[ファイル名]**  
- 保存先ファイルのパスとファイル名を入力するか、**[参照]** ボタンを使用して保存先を指定します。  
+ 保存先ファイルのパスとファイル名を入力するか、 **[参照]** ボタンを使用して保存先を指定します。  
   
 > [!TIP]
 > 保存先フォルダーは、入力するか参照して、必ず指定してください。 ファイル名のみを入力し、パスを入力しないと、ウィザードがパッケージをどこに保存するかわかりません。 また、ウィザードはユーザーがファイル保存権限を持っていない場所にパッケージを保存しようとして、エラーが発生する可能性があります。  
@@ -88,7 +88,7 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
 >  パッケージ ファイルの保存場所を忘れないでください。  
   
  **[参照]**  
- 必要に応じて、**[パッケージの保存]** ダイアログ ボックスで保存先ファイルのパスを参照して選択します。  
+ 必要に応じて、 **[パッケージの保存]** ダイアログ ボックスで保存先ファイルのパスを参照して選択します。  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>パッケージを保存するためのオプションの 2 つのページについて  
  **[SSIS パッケージの保存]** ページは、SSIS パッケージを保存するためのオプションを選択する 2 つのページの 1 つです。  

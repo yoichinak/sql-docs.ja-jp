@@ -14,11 +14,11 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425974"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123555"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>[列パターン プロファイル要求] のオプション (データ プロファイル タスク)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88425974"
  データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
   
 ## <a name="understanding-the-use-of-delimiters-and-symbols"></a>区切り記号と記号の使用方法について  
- データ プロファイル タスクは、 **列パターン プロファイル要求**のパターンを計算する前にデータをトークン化します。 つまり、データ プロファイル タスクは、文字列値をトークンと呼ばれる小さな単位に分割します。 データ プロファイル タスクは、 **Delimiters** プロパティおよび **Symbols** プロパティで指定された区切り記号と記号に基づいて文字列をトークンに分割します。  
+ データ プロファイル タスクは、 **列パターン プロファイル要求** のパターンを計算する前にデータをトークン化します。 つまり、データ プロファイル タスクは、文字列値をトークンと呼ばれる小さな単位に分割します。 データ プロファイル タスクは、 **Delimiters** プロパティおよび **Symbols** プロパティで指定された区切り記号と記号に基づいて文字列をトークンに分割します。  
   
 -   **Delimiters** 既定では、区切り記号の一覧には、空白文字、水平タブ文字 (\t)、改行文字 (\n)、および復帰文字 (\r) が含まれます。 追加の区切り記号を指定できますが、既定の区切り記号を削除することはできません。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "88425974"
  区切り記号はすべて、トークン化処理の一部として 1 つの空白文字に正規化されます。一方、記号はそのまま保持されます。  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>タグ テーブルの使用方法について  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内に作成した特別なテーブルにタグと関連用語を保存することで、1 つのタグを持つ関連トークンを必要に応じてグループ化することができます。 タグ テーブルには、"Tag" および "Term" という名前の 2 つの文字列型の列が必要です。 これらの列には **char**型、 **nchar**型、 **varchar**型、または **nvarchar**型を指定できますが、 **text** 型と **ntext**型は指定できません。 1 つのテーブルで複数のタグと対応する用語を結合できます。 1 つの列パターン プロファイル要求で使用できるタグ テーブルは 1 つのみです。 タグ テーブルには個別の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して接続できます。 そのため、タグ テーブルは、ソース データとは異なるデータベースまたはサーバーに格納できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内に作成した特別なテーブルにタグと関連用語を保存することで、1 つのタグを持つ関連トークンを必要に応じてグループ化することができます。 タグ テーブルには、"Tag" および "Term" という名前の 2 つの文字列型の列が必要です。 これらの列には **char** 型、 **nchar** 型、 **varchar** 型、または **nvarchar** 型を指定できますが、 **text** 型と **ntext** 型は指定できません。 1 つのテーブルで複数のタグと対応する用語を結合できます。 1 つの列パターン プロファイル要求で使用できるタグ テーブルは 1 つのみです。 タグ テーブルには個別の [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用して接続できます。 そのため、タグ テーブルは、ソース データとは異なるデータベースまたはサーバーに格納できます。  
   
  たとえば、住所に含まれる可能性がある "East"、"West"、"North"、および "South" という値を、"Direction" という 1 つのタグでグループ化できます。 次の表に、このようなタグ テーブルの例を示します。  
   

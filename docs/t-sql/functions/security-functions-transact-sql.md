@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: daed4bd7a6f8d64fd6e78e77a95693e06226cba3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 776f3bfbefbafa3f2e7e116db40d893cacd425f5
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363158"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419853"
 ---
 # <a name="security-functions-transact-sql"></a>セキュリティ関数 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -121,10 +121,17 @@ ms.locfileid: "88363158"
 :::row-end:::
 :::row:::
     :::column:::
-        [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)
+        [LOGINPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/loginproperty-transact-sql.md)
     :::column-end:::
     :::column:::
         [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)
+    :::column-end:::
+    :::column:::
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -143,6 +150,5 @@ ms.locfileid: "88363158"
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [暗号化関数 &#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [セキュリティ ステートメント](https://msdn.microsoft.com/library/aebe2ec7-31bc-4697-a493-dcfcd0903a7b)  
-  
+ [セキュリティ ステートメント](../statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)  
   

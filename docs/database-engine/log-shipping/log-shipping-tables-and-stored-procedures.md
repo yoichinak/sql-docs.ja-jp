@@ -14,14 +14,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4d0164cee84309f9789dc71e2e64caf812b12b4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8ae00ecf4b71e4614b95f80e428ae88b65b54f35
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85695975"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130771"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

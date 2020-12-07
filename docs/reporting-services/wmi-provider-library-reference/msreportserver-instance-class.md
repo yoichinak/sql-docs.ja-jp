@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_Instance クラス
 title: MSReportServer_Instance クラス | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92b678e0b9cc07cacfc6501b75b3e9d5c2889e12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ffcef1c806b8a02b84a30e56c81c25edcd0fc7da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92255811"
 ---
 # <a name="msreportserver_instance-class"></a>MSReportServer_Instance クラス
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  

@@ -17,12 +17,12 @@ ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc27d803393653d551f1dfc89acf7a704ba509da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0a06ab3c1a707d27cb97bff1db380974488d3d4
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486677"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081621"
 ---
 # <a name="ibcpsessionbcpreadfmt-native-client-ole-db-provider"></a>IBCPSession:: BCPReadFmt (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ HRESULT BCPReadFmt(
  メソッドが成功しました。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) インターフェイスを使用してください。  
+ プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](isqlservererrorinfo-geterrorinfo-ole-db.md) インターフェイスを使用してください。  
   
  E_OUTOFMEMORY  
  メモリ不足エラー。  
@@ -66,5 +66,4 @@ HRESULT BCPReadFmt(
 ## <a name="see-also"></a>参照  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [一括コピー操作の実行](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
-  
   

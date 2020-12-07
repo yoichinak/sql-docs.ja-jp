@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447200"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155078"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88447200"
 
 Machine Learning Services の場合、 [Python](../../machine-learning/concepts/extension-python.md) と [R](../../machine-learning/concepts/extension-r.md) はサポートされている言語です。 言語拡張の場合、Java はサポートされていますが、 [CREATE EXTERNAL Language](../../t-sql/statements/create-external-language-transact-sql.md)を使用して定義する必要があります。
 
-**Sp_execute_external_script**を実行するには、まず Machine Learning Services または言語拡張機能をインストールする必要があります。 詳細については、Windows および[linux](../../linux/sql-server-linux-setup-machine-learning.md)[に SQL Server Machine Learning Services (Python および R) をインストール](../../machine-learning/install/sql-machine-learning-services-windows-install.md)するか、windows および[Linux](../../linux/sql-server-linux-setup-language-extensions.md)[に SQL Server 言語拡張機能をインストール](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)してください。
+**Sp_execute_external_script**を実行するには、まず Machine Learning Services または言語拡張機能をインストールする必要があります。 詳細については、Windows および[linux](../../linux/sql-server-linux-setup-machine-learning.md)[に SQL Server Machine Learning Services (Python および R) をインストール](../../machine-learning/install/sql-machine-learning-services-windows-install.md)するか、windows および[Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)[に SQL Server 言語拡張機能をインストール](../../language-extensions/install/windows-java.md)してください。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -165,14 +165,14 @@ sp_execute_external_script
 
 ### <a name="monitor-script-execution"></a>スクリプトの実行の監視
 
-[Dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)と[sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)を使用してスクリプトの実行を監視します。
+[Sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)と[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)を使用してスクリプトの実行を監視します。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>パーティションモデリングのパラメーター
 
 パーティション分割されたデータでのモデリングを可能にする2つの追加パラメーターを設定できます。この場合、パーティションは、指定した1つ以上の列に基づいて作成され、スクリプトの実行中にのみ使用される論理パーティションにデータセットを分割します。 年齢、性別、地域、日付、または時刻の繰り返し値を含む列は、パーティション分割されたデータセットに適したいくつかの例です。
 
-2つのパラメーター **input_data_1_partition_by_columns** と **input_data_1_order_by_columns**で、2番目のパラメーターを使用して結果セットを並べ替えます。 パラメーターは、 `sp_execute_external_script` すべてのパーティションに対して1回実行される外部スクリプトを使用して、入力として渡されます。 詳細と例については、「 [チュートリアル: パーティションベースのモデルを作成する](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition)」を参照してください。
+2つのパラメーター **input_data_1_partition_by_columns** と **input_data_1_order_by_columns**で、2番目のパラメーターを使用して結果セットを並べ替えます。 パラメーターは、 `sp_execute_external_script` すべてのパーティションに対して1回実行される外部スクリプトを使用して、入力として渡されます。 詳細と例については、「 [チュートリアル: パーティションベースのモデルを作成する](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md)」を参照してください。
 
 を指定することにより、スクリプトを並列で実行でき `@parallel=1` ます。 入力クエリを並列化できる場合は、 `@parallel=1` 引数の一部としてをに設定する必要があり `sp_execute_external_script` ます。 既定では、クエリオプティマイザーは `@parallel=1` 256 行を超えるテーブルで動作しますが、これを明示的に処理する場合、このスクリプトにはパラメーターがデモンストレーションとして含まれます。
 
@@ -225,7 +225,7 @@ Float 値 (たとえば、、 `+Inf` 、 `-Inf` `NaN` ) は、両方の言語で
 
 **すべての外部スクリプトデータベースの実行**権限が必要です。  
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 このセクションでは、を使用して、このストアドプロシージャを使用して R または Python スクリプトを実行する方法の例について説明 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。
 
@@ -334,4 +334,4 @@ Python を使って似たモデルを生成するには、言語識別子を `@l
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server のExternal Scripts オブジェクト](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

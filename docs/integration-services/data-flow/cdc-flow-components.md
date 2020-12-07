@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb7897aa3f14a043eef6f983daafe8121a07c8bf
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 19b4d69708405a3c70ffaacd0f9d81e995f4aba8
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480894"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384627"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
 
@@ -31,11 +31,11 @@ ms.locfileid: "89480894"
   
  次のコンポーネントが Attunity 変更データ キャプチャ (CDC) コンポーネントです。  
   
- **CDC 制御フロー コンポーネント**:  
+ **CDC 制御フロー コンポーネント** :  
   
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
- **CDC データ フロー コンポーネント**:  
+ **CDC データ フロー コンポーネント** :  
   
  [CDC ソース](../../integration-services/data-flow/cdc-source.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "89480894"
 ## <a name="installation"></a>インストール  
  このセクションでは、CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]のインストール手順について説明します。  
   
- SSIS 用の CDC コンポーネントは、MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® に同梱されています。 このダウンロードは、SQL Server の Feature Pack の一部です。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
+ SSIS 用の CDC コンポーネントは、MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® に同梱されています。 このダウンロードは、SQL Server の Feature Pack の一部です。 [SQL Server 2016 Feature Pack の Web ページ](https://www.microsoft.com/download/details.aspx?id=56833)から、Feature Pack のコンポーネントをダウンロードします。  
   
 ### <a name="version-support"></a>バージョンのサポート
 
@@ -84,9 +84,9 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
   
  ![パッケージの制御フローを処理するトリクル フィード](../../integration-services/data-flow/media/tricklefeedprocessing.gif "パッケージの制御フローを処理するトリクル フィード")  
   
- この [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 制御フローには、2 つの CDC 制御タスクとデータ フロー タスクが含まれています。 **Get CDC Processing Range** (CDC 処理範囲の取得) という最初のタスクでは、 **Process Changes**(変更の処理) というデータ フロー タスクで処理される変更の LSN 範囲を設定します。 この範囲は、前回のパッケージ実行時に処理されて永続的なストアに保存された内容に基づいて設定されます。  
+ この [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 制御フローには、2 つの CDC 制御タスクとデータ フロー タスクが含まれています。 **Get CDC Processing Range** (CDC 処理範囲の取得) という最初のタスクでは、 **Process Changes** (変更の処理) というデータ フロー タスクで処理される変更の LSN 範囲を設定します。 この範囲は、前回のパッケージ実行時に処理されて永続的なストアに保存された内容に基づいて設定されます。  
   
- CDC 制御タスクの使用の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 」と「 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)」を参照してください。  
+ CDC 制御タスクの使用の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 」と「 [CDC Control Task Editor](../control-flow/cdc-control-task.md)」を参照してください。  
   
  次の図に、変更の処理方法を概念的に表した、 **Process Changes (変更の処理)** データ フローを示します。  
   
@@ -104,11 +104,11 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
   
  [CDC ソース](../../integration-services/data-flow/cdc-source.md)  
   
- [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](./cdc-source.md)  
   
- [[CDC ソース エディター] &#40;[列] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [[CDC ソース エディター] &#40;[列] ページ&#41;](./cdc-source.md)  
   
- [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC ソース エディター &#40;[エラー出力] ページ&#41;](./cdc-source.md)  
   
  CDC スプリッターの詳細については、以下のトピックを参照してください。  
   
@@ -181,7 +181,7 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
 |2- ILEND (Initial-Load-Ended)|初期読み込みパッケージが正常に終了したときの状態です。 CDC 制御タスクに対する MarkInitialLoadEnd 操作の呼び出し後に、この状態になります。<br /><br /> CDC 制御タスクの操作の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。|  
 |3-ILUPDATE (Initial Load Update)|初期読み込みの後に更新パッケージを初めて実行した後、まだ初期処理範囲を処理しているときの状態です。 CDC 制御タスクに対する **GetProcessingRange** 操作の呼び出し後に、この状態になります。<br /><br /> **_$reprocessing** 列を使用している場合は、既にターゲットに存在する行をパッケージが再処理している可能性があることを示す 1 に設定されます。<br /><br /> CDC 制御タスクの操作の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。|  
 |4-TFEND (Trickle-Feed-Update-Ended)|定期的な CDC の実行で期待される状態です。 前の実行が正常に完了していることと、新しい実行を新しい処理範囲で開始できることを表します。|  
-|5-TFSTART (Trickle-Feed-Update-Started)|CDC 制御タスクに対して **GetProcessingRange** 操作を呼び出した後で、更新パッケージの後続実行を行ったときの状態です。<br /><br /> 定期的な CDC の実行を開始したものの、まだ完了していないことを表します (**MarkProcessedRange**)。<br /><br /> CDC 制御タスクの操作の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。|  
+|5-TFSTART (Trickle-Feed-Update-Started)|CDC 制御タスクに対して **GetProcessingRange** 操作を呼び出した後で、更新パッケージの後続実行を行ったときの状態です。<br /><br /> 定期的な CDC の実行を開始したものの、まだ完了していないことを表します ( **MarkProcessedRange** )。<br /><br /> CDC 制御タスクの操作の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。|  
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|TFSTART の後に **GetProcessingRange** が行われたときの状態です。 前の実行が正常に完了しなかったことを表します。<br /><br /> __$reprocessing 列を使用している場合は、既にターゲットに存在する行をパッケージが再処理している可能性があることを示す 1 に設定されます。|  
 |7-ERROR|CDC グループはエラー状態です。|  
   
@@ -217,9 +217,8 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
   
 -   social.technet.microsoft.com の技術記事「 [Microsoft Change Data Capture for Oracle by Attunity の CDC インスタンス エラーのトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=252961)」  
   
--   technet.microsoft.com のビデオ「 [SQL Server Integration Services 2012 を使用した Oracle データベースの CDC (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/jj218898)」  
+-   technet.microsoft.com のビデオ「 [SQL Server Integration Services 2012 を使用した Oracle データベースの CDC (SQL Server ビデオ)](/previous-versions/dn912438(v=msdn.10))」  
   
 ## <a name="see-also"></a>関連項目  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

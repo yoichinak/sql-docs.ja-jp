@@ -1,20 +1,20 @@
 ---
 title: 分析情報ウィジェットを使用してサーバーとデータベースを監視する
 description: Azure Data Studio の分析情報ウィジェットを使用し、サーバーやデータベースを監視するクエリを視覚化し、分析情報を得る方法について説明します。
-ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
-ms.date: 05/14/2019
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan, sstein
-ms.topic: conceptual
+ms.topic: how-to
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af095f23a61a40c10541b6d403ba008d04e3b181
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.reviewer: alayu, sstein
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
+ms.date: 05/14/2019
+ms.openlocfilehash: c93cd3ea16b87a23dac96c1f21f3720d169e8c19
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745952"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364015"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>Azure Data Studio の分析情報ウィジェットを使用してサーバーとデータベースを管理する
 

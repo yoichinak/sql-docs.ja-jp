@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 915bd2824f6e3a706587769413c0f116df859f06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775585"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125027"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>名前をワイルドカード文字で指定した列
 

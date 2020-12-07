@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae3932611181f99b71d72bc2365967a19c968b9c
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454582"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96125013"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services のインストールの移行 (ネイティブ モード)
 
@@ -122,7 +122,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新しいインスタンスをインストールする前に、現在インストールされているすべてのファイルを必ずバックアップしてください。  
   
-1. レポート サーバー データベースの暗号化キーをバックアップします。 これは、移行を正しく行うための重要な手順です。 移行プロセスの後の方で、暗号化されたデータへのレポート サーバーからのアクセスを復旧するために、このキーを復元する必要があります。 キーをバックアップするには、Reporting Services 構成マネージャーを使用してください。  
+1. レポート サーバー データベースの暗号化キーをバックアップします。 これは、移行を正しく行うための重要な手順です。 移行プロセスの後の方で、暗号化されたデータへのレポート サーバーからのアクセスを復旧するために、このキーを復元する必要があります。 キーをバックアップするには、レポート サーバー構成マネージャーを使用してください。  
   
 2. サポートされている任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース バックアップ方法で、レポート サーバー データベースをバックアップします。 詳細については、「[別のコンピューターへのレポート サーバー データベースの移動 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」にあるレポート サーバー データベースのバックアップ方法に関する指示をご覧ください。  
   
@@ -132,7 +132,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
     2. Rswebapplication.config  
   
-    3. Rssvrpolicy.config  
+    3. Rssrvpolicy.config  
   
     4. Rsmgrpolicy.config  
   
@@ -202,7 +202,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
 1. アセンブリがサポートされているか、または再コンパイルが必要かを確認します。
 
-    * カスタム セキュリティ拡張機能は、[IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) インターフェイスを使用して記述し直す必要があります。
+    * カスタム セキュリティ拡張機能は、[IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2) インターフェイスを使用して記述し直す必要があります。
   
     * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のカスタム表示拡張機能は、表示オブジェクト モデル (ROM) を使用して記述し直す必要があります。  
   
@@ -237,15 +237,15 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
 > [!IMPORTANT]
 >  スケールアウト配置内にオンラインで、移行されていないレポート サーバーがある場合、アップグレードされたデータベースへの接続時に古いスキーマが使用されるため、*rsInvalidReportServerDatabase* 例外が発生する場合があります。  
 
-移行したレポート サーバーがスケールアウト配置用の共有データベースとして構成されていた場合、**ReportServer** データベースの **Keys** テーブルから古い暗号化キーをすべて削除した後で、レポート サーバー サービスを構成する必要があります。 このキーが削除されていない場合、移行したレポート サーバーでは、スケールアウト配置モードで初期化が試行されます。 詳細については、「[スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)」と「[暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」をご覧ください。  
+移行したレポート サーバーがスケールアウト配置用の共有データベースとして構成されていた場合、**ReportServer** データベースの **Keys** テーブルから古い暗号化キーをすべて削除した後で、レポート サーバー サービスを構成する必要があります。 このキーが削除されていない場合、移行したレポート サーバーでは、スケールアウト配置モードで初期化が試行されます。 詳細については、[スケールアウト配置に関する暗号化キーの追加と削除 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) に関する記事、および「[暗号化キーの構成と管理 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」をご覧ください。  
 
 このスケールアウト キーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは削除できません。 SQL Server Management Studio を使用して、 **ReportServer** データベースの **Keys** テーブルから古いキーを削除する必要があります。 Keys テーブル内のすべての行を削除します。 このアクションによってテーブルがクリアされ、以降の手順に示すように、対称キーのみを復元できるように準備されます。  
 
 キーを削除する前に、対称暗号化キーをバックアップしておくことをお勧めします。 キーのバックアップには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用できます。 Configuration Manager を開き、[暗号化キー] タブをクリックし、 **[バックアップ]** ボタンをクリックします。 スクリプト WMI コマンドを使用して暗号化キーをバックアップすることもできます。 WMI の詳細については、「[BackupEncryptionKey メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)」をご覧ください。  
   
-1. Reporting Services Configuration Manager を起動し、インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+1. レポート サーバー構成マネージャーを起動し、インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。 詳細については、「[レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
-2. レポート サーバーと Web ポータルの URL を構成します。 詳細については、「[URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)」をご覧ください。  
+2. レポート サーバーと Web ポータルの URL を構成します。 詳細については、「[URL の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)」を参照してください。  
   
 3. 以前のインストールから既存のレポート サーバー データベースを選択して、レポート サーバー データベースを構成します。 正常に構成された後、レポート サーバー サービスが再開されます。また、レポート サーバー データベースへの接続が確立されると、データベースが自動的に SQL Server Reporting Services にアップグレードされます。 データベースの変更ウィザードを使用してレポート サーバー データベースを作成または選択する方法の詳細については、「[ネイティブ モード レポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」をご覧ください。  
   
@@ -300,6 +300,6 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
 * [レポート サーバー データベース](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Reporting Services の旧バージョンとの互換性](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [レポート サーバー構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

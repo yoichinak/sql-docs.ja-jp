@@ -20,12 +20,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4938844b0014745dd50060b0e1da43b4e574a20e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464968"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868968"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "88464968"
   
     -   **[既存の検索プロパティ リストから作成する]**  
   
-     詳細については、「 [New Search Property List](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql)」を参照してください。  
+     詳細については、「 [New Search Property List](../../t-sql/statements/create-search-property-list-transact-sql.md)」を参照してください。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -202,7 +202,7 @@ GO
   
     2.  ドキュメント プロパティを追加するには、リストの末尾で **\*** の右側の空白行をクリックして、新しいプロパティの値を入力します。  
   
-         これらの値の詳細については、「 [検索プロパティ リスト エディター](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
+         これらの値の詳細については、「 [検索プロパティ リスト エディター](../../t-sql/statements/create-search-property-list-transact-sql.md)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -228,5 +228,4 @@ GO
 ## <a name="see-also"></a>参照  
  [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

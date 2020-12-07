@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 25cdef293ced7b58ea41f71f78a1046c6b5dd0ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463804"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128633"
 ---
 # <a name="ddl-events"></a>DDL イベント
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "88463804"
   
 :::row:::
     :::column:::
-        CREATE_APPLICATION_ROLE (CREATE APPLICATION ROLE ステートメントと **sp_addapprole**に適用されます。 新しいスキーマが作成されると、このイベントは CREATE_SCHEMA イベントもトリガーします。)
+        CREATE_APPLICATION_ROLE (CREATE APPLICATION ROLE ステートメントと **sp_addapprole** に適用されます。 新しいスキーマが作成されると、このイベントは CREATE_SCHEMA イベントもトリガーします。)
     :::column-end:::
     :::column:::
-        ALTER_APPLICATION_ROLE (ALTER APPLICATION ROLE ステートメントと **sp_approlepassword**に適用されます。)
+        ALTER_APPLICATION_ROLE (ALTER APPLICATION ROLE ステートメントと **sp_approlepassword** に適用されます。)
     :::column-end:::
     :::column:::
-        DROP_APPLICATION_ROLE (DROP APPLICATION ROLE ステートメントと **sp_dropapprole**に適用されます。)
+        DROP_APPLICATION_ROLE (DROP APPLICATION ROLE ステートメントと **sp_dropapprole** に適用されます。)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -70,7 +70,7 @@ ms.locfileid: "88463804"
         ALTER_AUTHORIZATION
     :::column-end:::
     :::column:::
-        ALTER_AUTHORIZATION_DATABASE (ON DATABASE が指定されている場合の ALTER AUTHORIZATION ステートメント、および **sp_changedbowner**に適用されます。)
+        ALTER_AUTHORIZATION_DATABASE (ON DATABASE が指定されている場合の ALTER AUTHORIZATION ステートメント、および **sp_changedbowner** に適用されます。)
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -163,10 +163,10 @@ ms.locfileid: "88463804"
 :::row-end:::  
 :::row:::
     :::column:::
-        BIND_DEFAULT ( **sp_bindefault**に適用されます。)
+        BIND_DEFAULT ( **sp_bindefault** に適用されます。)
     :::column-end:::
     :::column:::
-        UNBIND_DEFAULT ( **sp_unbindefault**に適用されます。)
+        UNBIND_DEFAULT ( **sp_unbindefault** に適用されます。)
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -183,13 +183,13 @@ ms.locfileid: "88463804"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_EXTENDED_PROPERTY ( **sp_addextendedproperty**に適用されます。)
+        CREATE_EXTENDED_PROPERTY ( **sp_addextendedproperty** に適用されます。)
     :::column-end:::
     :::column:::
-        ALTER_EXTENDED_PROPERTY ( **sp_updateextendedproperty**に適用されます。)
+        ALTER_EXTENDED_PROPERTY ( **sp_updateextendedproperty** に適用されます。)
     :::column-end:::
     :::column:::
-        DROP_EXTENDED_PROPERTY ( **sp_dropextendedproperty**に適用されます。)
+        DROP_EXTENDED_PROPERTY ( **sp_dropextendedproperty** に適用されます。)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -197,7 +197,7 @@ ms.locfileid: "88463804"
         CREATE_FULLTEXT_CATALOG (CREATE FULLTEXT CATALOG ステートメントと、 **create** が指定されている場合の *sp_fulltextcatalog* に適用されます。)
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_CATALOG (ALTER FULLTEXT CATALOG ステートメント、 **start_incremental** 、 *start_full*、 *Stop*、または *Rebuild*が指定されている場合の *sp_fulltextcatalog* 、および **enable** が指定されている場合の *sp_fulltext_database* に適用されます。)
+        ALTER_FULLTEXT_CATALOG (ALTER FULLTEXT CATALOG ステートメント、 **start_incremental** 、 *start_full*、 *Stop*、または *Rebuild* が指定されている場合の *sp_fulltextcatalog* 、および **enable** が指定されている場合の *sp_fulltext_database* に適用されます。)
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_CATALOG (DROP FULLTEXT CATALOG ステートメントと、 **drop** が指定されている場合の *sp_fulltextcatalog* に適用されます。)
@@ -208,7 +208,7 @@ ms.locfileid: "88463804"
         CREATE_FULLTEXT_INDEX (CREATE FULLTEXT INDEX ステートメントと、 **create** が指定されている場合の *sp_fulltexttable* に適用されます。)
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_INDEX (ALTER FULLTEXT INDEX ステートメント、 **start_full** 、 *start_incremental*、または *stop*が指定されている場合の *sp_fulltextcatalog* 、 **sp_fulltext_column**、および **create** または *drop* 以外のアクションが指定されている場合の *sp_fulltext_table* に適用されます。)
+        ALTER_FULLTEXT_INDEX (ALTER FULLTEXT INDEX ステートメント、 **start_full** 、 *start_incremental*、または *stop* が指定されている場合の *sp_fulltextcatalog* 、 **sp_fulltext_column**、および **create** または *drop* 以外のアクションが指定されている場合の *sp_fulltext_table* に適用されます。)
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_INDEX (DROP FULLTEXT INDEX ステートメントと、 **drop** が指定されている場合の *sp_fulltexttable* に適用されます。)
@@ -241,7 +241,7 @@ ms.locfileid: "88463804"
         CREATE_INDEX
     :::column-end:::
     :::column:::
-        ALTER_INDEX (ALTER INDEX ステートメントと **sp_indexoption**に適用されます。)
+        ALTER_INDEX (ALTER INDEX ステートメントと **sp_indexoption** に適用されます。)
     :::column-end:::
     :::column:::
         DROP_INDEX
@@ -293,7 +293,7 @@ ms.locfileid: "88463804"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_PLAN_GUIDE ( **sp_create_plan_guide**に適用されます。)
+        CREATE_PLAN_GUIDE ( **sp_create_plan_guide** に適用されます。)
     :::column-end:::
     :::column:::
         ALTER_PLAN_GUIDE (ENABLE、ENABLE ALL、DISABLE、または DISABLE ALL が指定されている場合の **sp_control_plan_guide** に適用されます。)
@@ -307,7 +307,7 @@ ms.locfileid: "88463804"
         CREATE_PROCEDURE
     :::column-end:::
     :::column:::
-        ALTER_PROCEDURE (ALTER PROCEDURE ステートメントと **sp_procoption**に適用されます。)
+        ALTER_PROCEDURE (ALTER PROCEDURE ステートメントと **sp_procoption** に適用されます。)
     :::column-end:::
     :::column:::
         DROP_PROCEDURE
@@ -346,7 +346,7 @@ ms.locfileid: "88463804"
 :::row-end:::  
 :::row:::
     :::column:::
-        RENAME ( **sp_rename**に適用されます。)
+        RENAME ( **sp_rename** に適用されます。)
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -355,13 +355,13 @@ ms.locfileid: "88463804"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_ROLE (CREATE ROLE ステートメント、 **sp_addrole**、および **sp_addgroup**に適用されます。)
+        CREATE_ROLE (CREATE ROLE ステートメント、 **sp_addrole**、および **sp_addgroup** に適用されます。)
     :::column-end:::
     :::column:::
         ALTER_ROLE
     :::column-end:::
     :::column:::
-        DROP_ROLE (DROP ROLE ステートメント、 **sp_droprole**、および **sp_dropgroup**に適用されます。)
+        DROP_ROLE (DROP ROLE ステートメント、 **sp_droprole**、および **sp_dropgroup** に適用されます。)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -397,20 +397,20 @@ ms.locfileid: "88463804"
 :::row-end:::  
 :::row:::
     :::column:::
-        BIND_RULE ( **sp_bindrule**に適用されます。)
+        BIND_RULE ( **sp_bindrule** に適用されます。)
     :::column-end:::
     :::column:::
-        UNBIND_RULE ( **sp_unbindrule**に適用されます。)
+        UNBIND_RULE ( **sp_unbindrule** に適用されます。)
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_SCHEMA (CREATE SCHEMA ステートメント、 **sp_addrole**、 **sp_adduser**、 **sp_addgroup**、および **sp_grantdbaccess**に適用されます。)
+        CREATE_SCHEMA (CREATE SCHEMA ステートメント、 **sp_addrole**、 **sp_adduser**、 **sp_addgroup**、および **sp_grantdbaccess** に適用されます。)
     :::column-end:::
     :::column:::
-        ALTER_SCHEMA (ALTER SCHEMA ステートメントと **sp_changeobjectowner**に適用されます。)
+        ALTER_SCHEMA (ALTER SCHEMA ステートメントと **sp_changeobjectowner** に適用されます。)
     :::column-end:::
     :::column:::
         DROP_SCHEMA
@@ -539,7 +539,7 @@ ms.locfileid: "88463804"
         CREATE_TABLE
     :::column-end:::
     :::column:::
-        ALTER_TABLE (ALTER TABLE ステートメントと **sp_tableoption**に適用されます。)
+        ALTER_TABLE (ALTER TABLE ステートメントと **sp_tableoption** に適用されます。)
     :::column-end:::
     :::column:::
         DROP_TABLE
@@ -550,7 +550,7 @@ ms.locfileid: "88463804"
         CREATE_TRIGGER
     :::column-end:::
     :::column:::
-        ALTER_TRIGGER (ALTER TRIGGER ステートメントと **sp_settriggerorder**に適用されます。)
+        ALTER_TRIGGER (ALTER TRIGGER ステートメントと **sp_settriggerorder** に適用されます。)
     :::column-end:::
     :::column:::
         DROP_TRIGGER
@@ -558,23 +558,23 @@ ms.locfileid: "88463804"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_TYPE (CREATE TYPE ステートメントと **sp_addtype**に適用されます。)
+        CREATE_TYPE (CREATE TYPE ステートメントと **sp_addtype** に適用されます。)
     :::column-end:::
     :::column:::
-        DROP_TYPE (DROP TYPE ステートメントと **sp_droptype**に適用されます。)
+        DROP_TYPE (DROP TYPE ステートメントと **sp_droptype** に適用されます。)
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_USER (CREATE USER ステートメント、 **sp_adduser**、および **sp_grantdbaccess**に適用されます。)
+        CREATE_USER (CREATE USER ステートメント、 **sp_adduser**、および **sp_grantdbaccess** に適用されます。)
     :::column-end:::
     :::column:::
-        ALTER_USER (ALTER USER ステートメントと **sp_change_users_login**に適用されます。)
+        ALTER_USER (ALTER USER ステートメントと **sp_change_users_login** に適用されます。)
     :::column-end:::
     :::column:::
-        DROP_USER (DROP USER ステートメント、 **sp_dropuser**、および **sp_revokedbaccess**に適用されます。)
+        DROP_USER (DROP USER ステートメント、 **sp_dropuser**、および **sp_revokedbaccess** に適用されます。)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -663,7 +663,7 @@ ms.locfileid: "88463804"
         CREATE_DATABASE
     :::column-end:::
     :::column:::
-        ALTER_DATABASE (ALTER DATABASE ステートメントと **sp_fulltext_database**に適用されます。)
+        ALTER_DATABASE (ALTER DATABASE ステートメントと **sp_fulltext_database** に適用されます。)
     :::column-end:::
     :::column:::
         DROP_DATABASE
@@ -693,20 +693,20 @@ ms.locfileid: "88463804"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_EXTENDED_PROCEDURE ( **sp_addextendedproc**に適用されます。)
+        CREATE_EXTENDED_PROCEDURE ( **sp_addextendedproc** に適用されます。)
     :::column-end:::
     :::column:::
-        DROP_EXTENDED_PROCEDURE ( **sp_dropextendedproc**に適用されます。)
+        DROP_EXTENDED_PROCEDURE ( **sp_dropextendedproc** に適用されます。)
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_LINKED_SERVER ( **sp_addlinkedserver**に適用されます。)
+        CREATE_LINKED_SERVER ( **sp_addlinkedserver** に適用されます。)
     :::column-end:::
     :::column:::
-        ALTER_LINKED_SERVER ( **sp_serveroption**に適用されます。)
+        ALTER_LINKED_SERVER ( **sp_serveroption** に適用されます。)
     :::column-end:::
     :::column:::
         DROP_LINKED_SERVER (リンク サーバーが指定されている場合の **sp_dropserver** に適用されます。)
@@ -714,10 +714,10 @@ ms.locfileid: "88463804"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_LINKED_SERVER_LOGIN ( **sp_addlinkedsrvlogin**に適用されます。)
+        CREATE_LINKED_SERVER_LOGIN ( **sp_addlinkedsrvlogin** に適用されます。)
     :::column-end:::
     :::column:::
-        DROP_LINKED_SERVER_LOGIN ( **sp_droplinkedsrvlogin**に適用されます。)
+        DROP_LINKED_SERVER_LOGIN ( **sp_droplinkedsrvlogin** に適用されます。)
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -727,29 +727,29 @@ ms.locfileid: "88463804"
         CREATE_LOGIN (暗黙的に作成する必要がある存在しないログインで使用される場合の CREATE_LOGIN ステートメント、 **sp_addlogin**、 **sp_grantlogin**、 **xp_grantlogin**、および **sp_denylogin** に適用されます。)
     :::column-end:::
     :::column:::
-        ALTER_LOGIN ( **Auto_Fix**が指定されている場合の ALTER LOGIN ステートメント、 **sp_defaultdb**、 **sp_defaultlanguage**、 **sp_password** 、および *sp_change_users_login* に適用されます。)
+        ALTER_LOGIN ( **Auto_Fix** が指定されている場合の ALTER LOGIN ステートメント、 **sp_defaultdb**、 **sp_defaultlanguage**、 **sp_password** 、および *sp_change_users_login* に適用されます。)
     :::column-end:::
     :::column:::
-        DROP_LOGIN (DROP LOGIN ステートメント、 **sp_droplogin**、 **sp_revokelogin**、および **xp_revokelogin**に適用されます。)
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        CREATE_MESSAGE ( **sp_addmessage**に適用されます。)
-    :::column-end:::
-    :::column:::
-        ALTER_MESSAGE ( **sp_altermessage**に適用されます。)
-    :::column-end:::
-    :::column:::
-        DROP_MESSAGE ( **sp_dropmessage**に適用されます。)
+        DROP_LOGIN (DROP LOGIN ステートメント、 **sp_droplogin**、 **sp_revokelogin**、および **xp_revokelogin** に適用されます。)
     :::column-end:::
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_REMOTE_SERVER ( **sp_addserver**に適用されます。)
+        CREATE_MESSAGE ( **sp_addmessage** に適用されます。)
     :::column-end:::
     :::column:::
-        ALTER_REMOTE_SERVER ( **sp_setnetname**に適用されます。)
+        ALTER_MESSAGE ( **sp_altermessage** に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_MESSAGE ( **sp_dropmessage** に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_REMOTE_SERVER ( **sp_addserver** に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_REMOTE_SERVER ( **sp_setnetname** に適用されます。)
     :::column-end:::
     :::column:::
         DROP_REMOTE_SERVER (リモート サーバーが指定されている場合の **sp_dropserver** に適用されます。)

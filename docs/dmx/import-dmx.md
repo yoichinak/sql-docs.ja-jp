@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5da00163792b18bfd62ed0db4be0945f358115e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc96fb7dad5d7f6c4e555b133a0b3eaa02f91025
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352688"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726173"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -29,7 +29,7 @@ IMPORT FROM <filename>
 ```  
   
 ## <a name="arguments"></a>引数  
- *ファイル名*  
+ *filename*  
  インポートするファイルの名前と場所を表す文字列。  
   
 ## <a name="remarks"></a>解説  
@@ -49,6 +49,5 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX&#41;のエクスポート &#40;](../dmx/export-dmx.md)   
- [データ マイニング オブジェクトのエクスポートおよびインポート](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
-  
+ [データ マイニング オブジェクトのエクスポートおよびインポート](/analysis-services/data-mining/export-and-import-data-mining-objects)  
   

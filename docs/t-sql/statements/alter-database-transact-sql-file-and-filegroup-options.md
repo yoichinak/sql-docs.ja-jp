@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8baedeb74c111207f55e7d2c77ee44a9c6eef27a
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d749835aa5a71aa99cd0f8f417b7e0ace68b467f
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688285"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496858"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) の File および Filegroup オプション
 
@@ -66,7 +66,7 @@ ms.locfileid: "90688285"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
     :::column-end:::
 :::row-end:::
 
@@ -126,7 +126,7 @@ ALTER DATABASE database_name
 
 追加、削除、または変更するファイルを指定します。
 
-*database_name*: 変更するデータベースの名前です。
+*database_name* : 変更するデータベースの名前です。
 
 ADD FILE: データベースにファイルを追加します。
 
@@ -134,12 +134,12 @@ TO FILEGROUP { *filegroup_name* }: 指定されたファイルを追加するフ
 
 ADD LOG FILE: 指定されたデータベースにログ ファイルを追加します。
 
-REMOVE FILE *logical_file_name*: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから論理ファイルの説明を削除し、物理ファイルを削除します。 ファイルが空でない場合は削除できません。
+REMOVE FILE *logical_file_name* : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから論理ファイルの説明を削除し、物理ファイルを削除します。 ファイルが空でない場合は削除できません。
 
-*logical_file_name*: ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される論理名を指定します。
+*logical_file_name* : ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される論理名を指定します。
 
 > [!WARNING]
-> `FILE_SNAPSHOT` のあるデータベース ファイルを削除する関連付けられているバックアップは成功しますが、関連付けられたスナップショットを参照するデータベース ファイルのバックアップを無効化を回避するのには削除されません。 ファイルは切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的には削除されません。 詳細については、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。
+> `FILE_SNAPSHOT` のあるデータベース ファイルを削除する関連付けられているバックアップは成功しますが、関連付けられたスナップショットを参照するデータベース ファイルのバックアップを無効化を回避するのには削除されません。 ファイルは切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的には削除されません。 詳細については、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。
 
 変更するファイルを指定します。 一度に 1 つの \<filespec> プロパティだけを変更できます。 変更するファイルを識別するには、\<filespec> に NAME を指定する必要があります。 SIZE を指定する場合、ファイルの現在のサイズより新しいサイズの方が大きくなければなりません。
 
@@ -172,11 +172,11 @@ FILESTREAM ファイルを OFFLINE に設定できます。 FILESTREAM ファイ
 
 NAME: *logical_file_name* ファイルの論理名を指定します。
 
-*logical_file_name*: ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される論理名を指定します。
+*logical_file_name* : ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される論理名を指定します。
 
-NEWNAME *new_logical_file_name*: ファイルの新しい論理名を指定します。
+NEWNAME *new_logical_file_name* : ファイルの新しい論理名を指定します。
 
-*new_logical_file_name*: 既存の論理ファイル名と置換する新しい名前を指定します。 論理ファイル名は、データベース内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 この名前は、文字定数、Unicode 定数、標準の識別子、区切られた識別子のいずれでもかまいません。
+*new_logical_file_name* : 既存の論理ファイル名と置換する新しい名前を指定します。 論理ファイル名は、データベース内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 この名前は、文字定数、Unicode 定数、標準の識別子、区切られた識別子のいずれでもかまいません。
 
 FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'** _memory\_optimized\_data\_path_ **'** }: オペレーティング システムの (物理) ファイル名を指定します。
 
@@ -189,7 +189,7 @@ FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'**
 
 データ ファイルが読み取り専用のセカンダリ ファイルであるか、データベースが読み取り専用である場合を除き、データ ファイルを圧縮ファイル システム上には置かないでください。 ログ ファイルは、圧縮ファイル システム上に置くことはできません。
 
-ファイルが未処理のパーティション上にある場合、*os_file_name* には、未処理になっている既存のパーティションのドライブ文字のみを指定する必要があります。 未処理の各パーティションに配置できるファイルは、それぞれ 1 ファイルだけです。
+ファイルが未処理のパーティション上にある場合、 *os_file_name* には、未処理になっている既存のパーティションのドライブ文字のみを指定する必要があります。 未処理の各パーティションに配置できるファイルは、それぞれ 1 ファイルだけです。
 
 **'** *filestream_path* **'** : FILESTREAM ファイル グループの場合、FILENAME は FILESTREAM データが格納されるパスを参照します。 最後のフォルダーまでのパスが存在する必要がありますが、最後のフォルダーは存在できません。 たとえば、パス `C:\MyFiles\MyFilestreamData` を指定する場合は、ALTER DATABASE を実行する前に、`C:\MyFiles` が存在している必要がありますが、`MyFilestreamData` フォルダーは存在できません。
 
@@ -205,13 +205,13 @@ FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'**
 
 メモリ最適化ファイル グループの詳細については、「[メモリ最適化ファイル グループ](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)」を参照してください。
 
-SIZE *size*: ファイルのサイズを指定します。 SIZE は、FILESTREAM ファイル グループには適用されません。
+SIZE *size* : ファイルのサイズを指定します。 SIZE は、FILESTREAM ファイル グループには適用されません。
 
-*size*: ファイルのサイズです。
+*size* : ファイルのサイズです。
 
-ADD FILE と共に指定する場合、*size* はファイルの初期サイズになります。 MODIFY FILE と共に指定する場合、*size* はファイルの新しいサイズになります。この値には、ファイルの現在のサイズより大きい値を指定する必要があります。
+ADD FILE と共に指定する場合、 *size* はファイルの初期サイズになります。 MODIFY FILE と共に指定する場合、 *size* はファイルの新しいサイズになります。この値には、ファイルの現在のサイズより大きい値を指定する必要があります。
 
-プライマリ ファイルに *size* が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**model** データベースのプライマリ ファイルのサイズを使用します。 セカンダリ データ ファイルまたはログ ファイルが指定されているにもかかわらず、そのファイルに対して *size* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、そのファイルのサイズが 1 MB になります。
+プライマリ ファイルに *size* が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **model** データベースのプライマリ ファイルのサイズを使用します。 セカンダリ データ ファイルまたはログ ファイルが指定されているにもかかわらず、そのファイルに対して *size* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、そのファイルのサイズが 1 MB になります。
 
 KB、MB、GB、および TB の各サフィックスを使用して、キロバイト、メガバイト、ギガバイト、またはテラバイトを指定できます。 既定値は MB です。 整数を指定します。小数は含めないでください。 小数部を持つメガバイトの値を指定するには、その値に 1024 を乗算することによって、キロバイトの単位に変換します。 たとえば、1.5 MB ではなく 1536 KB と指定します (1.5 × 1024 = 1536)。
 
@@ -221,18 +221,18 @@ KB、MB、GB、および TB の各サフィックスを使用して、キロバ�
 > - ファイルに UNC パスが指定されている場合
 > - `FILESTREAM` および `MEMORY_OPTIMIZED_DATA` のファイル グループ
 
-MAXSIZE { *max_size*| UNLIMITED }: ファイルのサイズの上限を指定します。
+MAXSIZE { *max_size* | UNLIMITED }: ファイルのサイズの上限を指定します。
 
-*max_size*: ファイルの最大サイズです。 KB、MB、GB、および TB の各サフィックスを使用して、キロバイト、メガバイト、ギガバイト、またはテラバイトを指定できます。 既定値は MB です。 整数を指定します。小数は含めないでください。 *max_size* を指定しない場合、ファイル サイズはディスクがいっぱいになるまで拡張されます。
+*max_size* : ファイルの最大サイズです。 KB、MB、GB、および TB の各サフィックスを使用して、キロバイト、メガバイト、ギガバイト、またはテラバイトを指定できます。 既定値は MB です。 整数を指定します。小数は含めないでください。 *max_size* を指定しない場合、ファイル サイズはディスクがいっぱいになるまで拡張されます。
 
 UNLIMITED: ディスクがいっぱいになるまでファイルを拡張するように指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、無制限に拡張するファイル固有のログの最大サイズは 2 TB で、データ ファイルの最大サイズは 16 TB です。 FILESTREAM コンテナーに対してこのオプションを指定した場合、最大サイズはありません。 ディスクがいっぱいになるまでファイル サイズが拡張します。
 
 > [!NOTE]
 > ファイルに UNC パスが指定されている場合、`MAXSIZE` は設定できません。
 
-FILEGROWTH *growth_increment*: ファイルを自動拡張するときの増加量を指定します。 ファイルの FILEGROWTH の設定を MAXSIZE の設定より大きくすることはできません。 FILEGROWTH は、FILESTREAM ファイル グループには適用されません。
+FILEGROWTH *growth_increment* : ファイルを自動拡張するときの増加量を指定します。 ファイルの FILEGROWTH の設定を MAXSIZE の設定より大きくすることはできません。 FILEGROWTH は、FILESTREAM ファイル グループには適用されません。
 
-*growth_increment*: 新しい領域が必要とされるたびにファイルに追加される領域の容量です。
+*growth_increment* : 新しい領域が必要とされるたびにファイルに追加される領域の容量です。
 
 値は MB、KB、GB、TB または % の単位で指定できます。 サフィックス MB、KB、または % を付けないで数値を指定した場合の既定値は MB です。 % を指定すると、1 回の増加量は、増加時のファイル サイズに指定されたパーセンテージを掛けた値になります。 指定されたサイズは、最も近い 64 KB 単位の値に切り上げられます。
 
@@ -263,17 +263,17 @@ OFFLINE: ファイルをオフラインに設定し、ファイル グループ�
 
 データベースに対してファイル グループの追加、変更、または削除を行います。
 
-ADD FILEGROUP *filegroup_name*: データベースにファイル グループを追加します。
+ADD FILEGROUP *filegroup_name* : データベースにファイル グループを追加します。
 
 CONTAINS FILESTREAM: ファイル グループで FILESTREAM バイナリ ラージ オブジェクト (BLOB) をファイル システムに格納することを指定します。
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
+**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
 
 ファイル グループでメモリ最適化データをファイル システムに格納することを指定します。 詳細については、「 [インメモリ OLTP - インメモリ最適化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。 データベースあたり 1 つの `MEMORY_OPTIMIZED_DATA` ファイル グループのみが許可されます。 メモリ最適化テーブルを作成する場合は、ファイル グループを空にすることはできません。 ファイルが少なくとも 1 つ必要です。 *filegroup_name* パスを参照します。 最後のフォルダーまでのパスが存在する必要がありますが、最後のフォルダーは存在できません。
 
-REMOVE FILEGROUP *filegroup_name*: データベースからファイルグループを削除します。 ファイル グループが空でない場合は削除できません。 最初に、ファイル グループからすべてのファイルを削除してください。 詳細については、前の「REMOVE FILE *logical_file_name*」を参照してください。
+REMOVE FILEGROUP *filegroup_name* : データベースからファイルグループを削除します。 ファイル グループが空でない場合は削除できません。 最初に、ファイル グループからすべてのファイルを削除してください。 詳細については、前の「REMOVE FILE *logical_file_name* 」を参照してください。
 
 > [!NOTE]
 > FILESTREAM ガベージ コレクターによって FILESTREAM コンテナーからすべてのファイルが削除されない限り、`ALTER DATABASE REMOVE FILE` 操作で FILESTREAM コンテナーを削除する試みは失敗し、エラーが返されます。 このトピックの「[FILESTREAM コンテナーの削除](#removing-a-filestream-container)」セクションを参照してください。
@@ -284,15 +284,15 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
 
 DEFAULT: 既定のデータベース ファイル グループを *filegroup_name* に変更します。 データベース内の 1 つのファイル グループだけを、既定のファイル グループにすることができます。 詳細については、「 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)」を参照してください。
 
-NAME = *new_filegroup_name*: ファイル グループ名を *new_filegroup_name* に変更します。
+NAME = *new_filegroup_name* : ファイル グループ名を *new_filegroup_name* に変更します。
 
-AUTOGROW_SINGLE_FILE **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+AUTOGROW_SINGLE_FILE **適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 ファイル グループ内のファイルが自動拡張のしきい値を満たす場合は、そのファイルのみが拡張されます。 これは既定値です。
 
 AUTOGROW_ALL_FILES
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 ファイル グループ内のファイルが自動拡張のしきい値を満たすときに、ファイル グループ内のすべてのファイルを拡張します。
 
@@ -319,7 +319,7 @@ READ_WRITE | READWRITE: ファイル グループを READ_WRITE に指定しま�
 > [!NOTE]
 > キーワード `READWRITE` は、将来のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、`READWRITE` の使用は避け、現在 `READWRITE` を使用しているアプリケーションは `READ_WRITE` を使用するように修正することを計画してください。
 > [!TIP]
-> これらのオプションの状態を確認するには、**sys.databases** カタログ ビューの **is_read_only** 列、または `DATABASEPROPERTYEX` 関数の **Updateability** プロパティを調べてください。
+> これらのオプションの状態を確認するには、 **sys.databases** カタログ ビューの **is_read_only** 列、または `DATABASEPROPERTYEX` 関数の **Updateability** プロパティを調べてください。
 
 ## <a name="remarks"></a>解説
 
@@ -686,7 +686,7 @@ GO
         [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_**<br />&nbsp;
+        **_\* SQL Managed Instance \*_**<br />&nbsp;
     :::column-end:::
 :::row-end:::
 
@@ -746,15 +746,15 @@ ALTER DATABASE database_name
 
 追加、削除、または変更するファイルを指定します。
 
-*database_name*: 変更するデータベースの名前です。
+*database_name* : 変更するデータベースの名前です。
 
 ADD FILE: データベースにファイルを追加します。
 
 TO FILEGROUP { *filegroup_name* }: 指定されたファイルを追加するファイル グループを指定します。 現在のファイル グループ、および現在の既定のファイル グループを表示するには、[sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) カタログ ビューを使用してください。
 
-REMOVE FILE *logical_file_name*: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから論理ファイルの説明を削除し、物理ファイルを削除します。 ファイルが空でない場合は削除できません。
+REMOVE FILE *logical_file_name* : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから論理ファイルの説明を削除し、物理ファイルを削除します。 ファイルが空でない場合は削除できません。
 
-*logical_file_name*: ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される論理名を指定します。
+*logical_file_name* : ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される論理名を指定します。
 
 変更するファイルを指定します。 一度に 1 つの \<filespec> プロパティだけを変更できます。 変更するファイルを識別するには、\<filespec> に NAME を指定する必要があります。 SIZE を指定する場合、ファイルの現在のサイズより新しいサイズの方が大きくなければなりません。
 
@@ -764,31 +764,31 @@ REMOVE FILE *logical_file_name*: [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 
 NAME: *logical_file_name* ファイルの論理名を指定します。
 
-*logical_file_name*: ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される論理名を指定します。
+*logical_file_name* : ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される論理名を指定します。
 
-NEWNAME *new_logical_file_name*: ファイルの新しい論理名を指定します。
+NEWNAME *new_logical_file_name* : ファイルの新しい論理名を指定します。
 
-*new_logical_file_name*: 既存の論理ファイル名と置換する新しい名前を指定します。 論理ファイル名は、データベース内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 この名前は、文字定数、Unicode 定数、標準の識別子、区切られた識別子のいずれでもかまいません。
+*new_logical_file_name* : 既存の論理ファイル名と置換する新しい名前を指定します。 論理ファイル名は、データベース内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 この名前は、文字定数、Unicode 定数、標準の識別子、区切られた識別子のいずれでもかまいません。
 
-SIZE *size*: ファイルのサイズを指定します。
+SIZE *size* : ファイルのサイズを指定します。
 
-*size*: ファイルのサイズです。
+*size* : ファイルのサイズです。
 
-ADD FILE と共に指定する場合、*size* はファイルの初期サイズになります。 MODIFY FILE と共に指定する場合、*size* はファイルの新しいサイズになります。この値には、ファイルの現在のサイズより大きい値を指定する必要があります。
+ADD FILE と共に指定する場合、 *size* はファイルの初期サイズになります。 MODIFY FILE と共に指定する場合、 *size* はファイルの新しいサイズになります。この値には、ファイルの現在のサイズより大きい値を指定する必要があります。
 
-プライマリ ファイルに *size* が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**model** データベースのプライマリ ファイルのサイズを使用します。 セカンダリ データ ファイルまたはログ ファイルが指定されているにもかかわらず、そのファイルに対して *size* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、そのファイルのサイズが 1 MB になります。
+プライマリ ファイルに *size* が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **model** データベースのプライマリ ファイルのサイズを使用します。 セカンダリ データ ファイルまたはログ ファイルが指定されているにもかかわらず、そのファイルに対して *size* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、そのファイルのサイズが 1 MB になります。
 
 KB、MB、GB、および TB の各サフィックスを使用して、キロバイト、メガバイト、ギガバイト、またはテラバイトを指定できます。 既定値は MB です。 整数を指定します。小数は含めないでください。 小数部を持つメガバイトの値を指定するには、その値に 1024 を乗算することによって、キロバイトの単位に変換します。 たとえば、1.5 MB ではなく 1536 KB と指定します (1.5 × 1024 = 1536)。
 
-MAXSIZE { *max_size*| UNLIMITED }: ファイルのサイズの上限を指定します。
+MAXSIZE { *max_size* | UNLIMITED }: ファイルのサイズの上限を指定します。
 
-*max_size*: ファイルの最大サイズです。 KB、MB、GB、および TB の各サフィックスを使用して、キロバイト、メガバイト、ギガバイト、またはテラバイトを指定できます。 既定値は MB です。 整数を指定します。小数は含めないでください。 *max_size* を指定しない場合、ファイル サイズはディスクがいっぱいになるまで拡張されます。
+*max_size* : ファイルの最大サイズです。 KB、MB、GB、および TB の各サフィックスを使用して、キロバイト、メガバイト、ギガバイト、またはテラバイトを指定できます。 既定値は MB です。 整数を指定します。小数は含めないでください。 *max_size* を指定しない場合、ファイル サイズはディスクがいっぱいになるまで拡張されます。
 
 UNLIMITED: ディスクがいっぱいになるまでファイルを拡張するように指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、無制限に拡張するファイル固有のログの最大サイズは 2 TB で、データ ファイルの最大サイズは 16 TB です。
 
-FILEGROWTH *growth_increment*: ファイルを自動拡張するときの増加量を指定します。 ファイルの FILEGROWTH の設定を MAXSIZE の設定より大きくすることはできません。
+FILEGROWTH *growth_increment* : ファイルを自動拡張するときの増加量を指定します。 ファイルの FILEGROWTH の設定を MAXSIZE の設定より大きくすることはできません。
 
-*growth_increment*: 新しい領域が必要とされるたびにファイルに追加される領域の容量です。
+*growth_increment* : 新しい領域が必要とされるたびにファイルに追加される領域の容量です。
 
 値は MB、KB、GB、TB または % の単位で指定できます。 サフィックス MB、KB、または % を付けないで数値を指定した場合の既定値は MB です。 % を指定すると、1 回の増加量は、増加時のファイル サイズに指定されたパーセンテージを掛けた値になります。 指定されたサイズは、最も近い 64 KB 単位の値に切り上げられます。
 
@@ -803,7 +803,7 @@ FILEGROWTH が指定されていない場合、既定値は次のとおりです
 
 データベースに対してファイル グループの追加、変更、または削除を行います。
 
-ADD FILEGROUP *filegroup_name*: データベースにファイル グループを追加します。
+ADD FILEGROUP *filegroup_name* : データベースにファイル グループを追加します。
 
 次の例では、sql_db_mi というデータベースに追加するファイル グループを作成し、そのファイル グループにファイルを追加します。
 
@@ -813,7 +813,7 @@ GO
 ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_fg;
 ```
 
-REMOVE FILEGROUP *filegroup_name*: データベースからファイルグループを削除します。 ファイル グループが空でない場合は削除できません。 最初に、ファイル グループからすべてのファイルを削除してください。 詳細については、前の「REMOVE FILE *logical_file_name*」を参照してください。
+REMOVE FILEGROUP *filegroup_name* : データベースからファイルグループを削除します。 ファイル グループが空でない場合は削除できません。 最初に、ファイル グループからすべてのファイルを削除してください。 詳細については、前の「REMOVE FILE *logical_file_name* 」を参照してください。
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。
 
@@ -821,7 +821,7 @@ MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT 
 
 DEFAULT: 既定のデータベース ファイル グループを *filegroup_name* に変更します。 データベース内の 1 つのファイル グループだけを、既定のファイル グループにすることができます。 詳細については、「 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)」を参照してください。
 
-NAME = *new_filegroup_name*: ファイル グループ名を *new_filegroup_name* に変更します。
+NAME = *new_filegroup_name* : ファイル グループ名を *new_filegroup_name* に変更します。
 
 AUTOGROW_SINGLE_FILE
 
@@ -851,7 +851,7 @@ READ_WRITE | READWRITE: ファイル グループを READ_WRITE に指定しま�
 > [!NOTE]
 > キーワード `READWRITE` は、将来のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、`READWRITE` の使用は避け、現在 `READWRITE` を使用しているアプリケーションは `READ_WRITE` を使用するように修正することを計画してください。
 
-これらのオプションの状態を確認するには、**sys.databases** カタログ ビューの **is_read_only** 列、または `DATABASEPROPERTYEX` 関数の **Updateability** プロパティを調べてください。
+これらのオプションの状態を確認するには、 **sys.databases** カタログ ビューの **is_read_only** 列、または `DATABASEPROPERTYEX` 関数の **Updateability** プロパティを調べてください。
 
 ## <a name="remarks"></a>解説
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb313ceb6217bf9400fda05622c7505c8067d2c1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a63b254397e45fdba56f3d86cdcf45069f9265fb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977353"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721243"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -42,7 +42,7 @@ ActiveX データオブジェクトは、特定のバックエンドエンジン
  リモートデータサービス (RDS) は ADO の機能の1つです。この機能を使用すると、サーバーからクライアントアプリケーションまたは Web ページにデータを移動し、クライアント上のデータを操作して、1回のラウンドトリップでサーバーに更新を返すことができます。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、  [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
 ## <a name="adox"></a>ADOX  
  データ定義言語およびセキュリティ用の Microsoft ActiveX データオブジェクト拡張機能 (ADOX) は、ADO オブジェクトとプログラミングモデルの拡張機能です。 ADOX には、スキーマの作成と変更、およびセキュリティのためのオブジェクトが含まれています。 スキーマ操作に対するオブジェクトベースのアプローチであるため、ネイティブ構文の違いに関係なく、さまざまなデータソースに対して機能するコードを記述できます。  

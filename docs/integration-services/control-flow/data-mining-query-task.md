@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1af5f497be96f5c8b9808878aea9e5275c77ddf7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431024"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123547"
 ---
 # <a name="data-mining-query-task"></a>データ マイニング クエリ タスク
 
@@ -44,9 +44,9 @@ ms.locfileid: "88431024"
 ## <a name="prediction-queries"></a>予測クエリ  
  予測クエリは、データ マイニング拡張機能 (DMX) ステートメントです。 DMX 言語は、マイニング モデルでの作業をサポートするための SQL 言語の拡張機能です。 DMX 言語の使用方法の詳細については、「[データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)」を参照してください。  
   
- このタスクは、同じマイニング構造で構築された複数のマイニング モデルに対してクエリを実行できます。 マイニング モデルは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供するデータ マイニング アルゴリズムのいずれかを使用して構築されます。 データ マイニング クエリ タスクが参照するマイニング構造には、異なるアルゴリズムを使用して構築された複数のマイニング モデルを含めることができます。 詳細については、「[マイニング構造 &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)」および「[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)」を参照してください。  
+ このタスクは、同じマイニング構造で構築された複数のマイニング モデルに対してクエリを実行できます。 マイニング モデルは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供するデータ マイニング アルゴリズムのいずれかを使用して構築されます。 データ マイニング クエリ タスクが参照するマイニング構造には、異なるアルゴリズムを使用して構築された複数のマイニング モデルを含めることができます。 詳細については、「[マイニング構造 &#40;Analysis Services - データ マイニング&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining)」および「[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)」を参照してください。  
   
- データ マイニング クエリ タスクが実行する予測クエリは、単一行または 1 つのデータセットを結果として返します。 単一行を返すクエリは、単一クエリと呼ばれます。たとえば、夏季のヨット販売数を予想するクエリは、1 つの数値を返します。 単一行を返す予測クエリの詳細については、「 [データ マイニング クエリ ツール](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)」を参照してください。  
+ データ マイニング クエリ タスクが実行する予測クエリは、単一行または 1 つのデータセットを結果として返します。 単一行を返すクエリは、単一クエリと呼ばれます。たとえば、夏季のヨット販売数を予想するクエリは、1 つの数値を返します。 単一行を返す予測クエリの詳細については、「 [データ マイニング クエリ ツール](/analysis-services/data-mining/data-mining-query-tools)」を参照してください。  
   
  クエリ結果は、テーブルに保存されます。 データ マイニング クエリ タスクで指定された名前のテーブルが既に存在している場合、タスクで同じ名前の末尾に番号を追加して新しいテーブルを作成することも、テーブルの内容を上書きすることもできます。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "88431024"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-data-mining-query-task"></a>プログラムによるデータ マイニング クエリ タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
@@ -72,7 +72,7 @@ ms.locfileid: "88431024"
 ## <a name="data-mining-query-task-editor-mining-model-tab"></a>[データ マイニング クエリ タスク エディター] ([マイニング モデル] タブ)
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、使用するマイニング構造とマイニング モデルを指定できます。  
   
- パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
+ パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
 ### <a name="general-options"></a>[全般] のオプション  
  **名前**  
@@ -104,7 +104,7 @@ ms.locfileid: "88431024"
 ## <a name="data-mining-query-task-editor-query-tab"></a>[データ マイニング クエリ タスク エディター] ([クエリ] タブ)
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[クエリ]** タブを使用すると、マイニング モデルに基づいて予測クエリを作成できます。 このダイアログ ボックスでは、パラメーターおよび結果セットを変数にバインドすることもできます。  
   
- パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
+ パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
 ### <a name="general-options"></a>[全般] のオプション  
  **名前**  
@@ -160,7 +160,7 @@ ms.locfileid: "88431024"
 ## <a name="data-mining-query-task-editor-output-tab"></a>[データ マイニング クエリ タスク エディター] ([出力] タブ)
   **[データ マイニング クエリ タスク エディター]** ダイアログ ボックスの **[出力]** タブを使用すると、予測クエリの出力先を指定できます。  
   
- パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
+ パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
 ### <a name="general-options"></a>[全般] のオプション  
  **名前**  
@@ -184,4 +184,3 @@ ms.locfileid: "88431024"
   
  **[出力テーブルを削除して、再作成する]**  
  予測クエリで、出力先のテーブルを削除して再作成することにより、テーブルの内容を上書きするかどうかを指定します。  
-  

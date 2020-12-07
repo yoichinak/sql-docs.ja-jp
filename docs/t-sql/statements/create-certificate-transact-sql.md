@@ -28,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ae27e25e16022aa1ec497188bee7fde68a9bca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458825"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124142"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -112,6 +112,7 @@ CREATE CERTIFICATE certificate_name
 <date_options> ::=  
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

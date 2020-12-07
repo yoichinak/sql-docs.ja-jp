@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d91801bd8fa23cdb14112c98af6584d9a7b9250
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c5d469cdf48a6c03a332a370e4c2b173ae7d18d1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934252"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934683"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Reporting Services レポート サーバーのネイティブ モードと SharePoint モードを比較する
 
@@ -40,7 +40,7 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
   
  Reporting Services レポート サーバーでは、レポート サーバー インスタンス用に次の 2 つの配置モードがサポートされています。  
   
--   **ネイティブ モード**(SharePoint Web パーツ対応ネイティブ モードを含む)。レポート サーバーはアプリケーション サーバーとして実行され、 Reporting Services コンポーネントのみを通じてすべての処理機能と管理機能が提供されます。 ネイティブ モードのレポート サーバーは、Reporting Services 構成マネージャーと SQL Server Management Studio を使って構成します。  
+-   **ネイティブ モード**(SharePoint Web パーツ対応ネイティブ モードを含む)。レポート サーバーはアプリケーション サーバーとして実行され、 Reporting Services コンポーネントのみを通じてすべての処理機能と管理機能が提供されます。 ネイティブ モードのレポート サーバーは、レポート サーバー構成マネージャーと SQL Server Management Studio を使用して構成します。  
   
 -   **SharePoint モード**。レポート サーバーは SharePoint サーバー ファームの一部としてインストールされます。  SharePoint モードの配置と構成には、PowerShell コマンドまたは SharePoint コンテンツ管理ページを使用します。  
   
@@ -137,8 +137,8 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
   
 |タスク|Link|  
 |----------|----------|  
-|ハードウェアおよびソフトウェアの要件を確認します。|「[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)」を参照してください。|  
-|SharePoint モードで Reporting Services をインストールします。|[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)|  
+|ハードウェアおよびソフトウェアの要件を確認します。|「[Hardware and Software Requirements for Reporting Services in SharePoint Mode](/previous-versions/sql/sql-server-2016/jj714188(v=sql.130))」を参照してください。|  
+|SharePoint モードで Reporting Services をインストールします。|[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)|  
 |レポート サーバー Web サービスおよび Windows サービスに対するメモリ設定を調整する方法について説明します。|[レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |リモート管理用にレポート サーバーを構成するための推奨されている手順について説明します。|[リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |ネイティブのレポート サーバー インスタンスで **個人用レポート** を使用できるかどうかを構成する方法について説明します。|[個人用レポートの有効化と無効化](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

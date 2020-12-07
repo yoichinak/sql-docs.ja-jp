@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472451"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866552"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>セカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)
 
@@ -89,7 +89,7 @@ ms.locfileid: "87472451"
 
 次の図は、可用性グループを表しています。
 
-![元の可用性グループ](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![プライマリ、セカンダリ、および非同期セカンダリを含む可用性グループ](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 この AG は、次の Transact-SQL スクリプトによって作成されています。 この例では、各レプリカに `READ_WRITE_ROUTING_URL` が指定されています。
 ```sql
@@ -144,18 +144,13 @@ GO
 
 次の図では、クライアント アプリケーションが `ApplicationIntent=ReadWrite` で COMPUTER02 に接続します。 この接続は、プライマリ レプリカにリダイレクトされます。 
 
-![元の可用性グループ](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![コンピューター 2 への接続がプライマリ レプリカにリダイレクトされる](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 セカンダリ レプリカでは、読み取り/書き込み呼び出しがプライマリ レプリカにリダイレクトされます。 どちらのレプリカへの読み取り/書き込み接続も、プライマリ レプリカにリダイレクトされます。 
 
 次の図では、プライマリ レプリカが手動で COMPUTER02 にフェールオーバーされています。 クライアント アプリケーションは、`ApplicationIntent=ReadWrite` で COMPUTER01 に接続します。 この接続は、プライマリ レプリカにリダイレクトされます。 
 
-![元の可用性グループ](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
-
-## <a name="sql-server-instance-offline"></a>SQL Server インスタンスのオフライン状態
-
-接続文字列に指定された SQL Server インスタンスを利用できない場合 (インスタンスが停止している) 場合、ターゲット サーバー上のレプリカに割り当てられているロールに関係なく、接続は失敗します。 長時間にわたるアプリケーションのダウンタイムを避けるには、接続文字列内に代替の `FailoverPartner` を構成します。 アプリケーションでは、フェールオーバーの実行中はオフライン状態になるプライマリ レプリカとセカンダリ レプリカに対応するための再試行ロジックを実装する必要があります。 接続文字列については、「[SqlConnection.ConnectionString プロパティ](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)」を参照してください。
+![computer2 の新しいプライマリ レプリカにリダイレクトされた接続](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## <a name="see-also"></a>参照
 
@@ -163,4 +158,4 @@ GO
  
 [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

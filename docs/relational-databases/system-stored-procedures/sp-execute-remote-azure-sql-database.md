@@ -16,19 +16,19 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1fbd97400ced46a70026b832ad4721d9f33cf690
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543463"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810248"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)]シャードとして機能する単一のリモート Azure SQL Database またはデータベースのセットに対して、行方向のパーティション構成でステートメントを実行します。  
   
- このストアドプロシージャは、エラスティッククエリ機能の一部です。  「 [エラスティックデータベースクエリの概要](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) 」および「 [シャーディングのエラスティックデータベースクエリ (行方向のパーティション分割)」を](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/)参照して Azure SQL Database ください。  
+ このストアドプロシージャは、エラスティッククエリ機能の一部です。  「 [エラスティックデータベースクエリの概要](/azure/azure-sql/database/elastic-query-overview) 」および「 [シャーディングのエラスティックデータベースクエリ (行方向のパーティション分割)」を](/azure/azure-sql/database/elastic-query-horizontal-partitioning)参照して Azure SQL Database ください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +73,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>アクセス許可  
  `ALTER ANY EXTERNAL DATA SOURCE` 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  `sp_execute_remote` パラメーターは、前の「構文」セクションで説明されているように、特定の順序で入力する必要があります。 パラメーターが順序どおりに入力されていない場合は、エラーメッセージが表示されます。  
   
  `sp_execute_remote` には、バッチと名前のスコープに関して、 [transact-sql&#41;の実行 &#40;](../../t-sql/language-elements/execute-transact-sql.md) と同じ動作があります。 Sp_execute_remote * \@ stmt*パラメーター内の transact-sql ステートメントまたはバッチは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  
@@ -106,4 +106,3 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-    

@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fea0c2df2ec25493e09214289802824ffe5f93ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19111422e69b2ce77f53e13bb6d1a450b4ef7692
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430244"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243686"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>関数 - dm_execution_performance_counters
 
@@ -35,7 +35,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
  [ @execution_id = ] *execution_id*  
  1 つまたは複数のパッケージを含む実行の一意識別子。 パッケージ実行タスクで実行されるパッケージは、親パッケージと同じ実行で実行されます。  
   
- 実行 ID が指定されていない場合は、複数の実行のパフォーマンス統計が返されます。 メンバーである場合、 **ssis_admin** データベース ロール、実行中のすべての実行のパフォーマンス統計が返されます。  メンバーでない場合、 **ssis_admin** データベース ロール、実行中に、アクセス許可を参照する実行のパフォーマンス統計が返されます。 *execution_id* は、**Bigint** です。  
+ 実行 ID が指定されていない場合は、複数の実行のパフォーマンス統計が返されます。 メンバーである場合、 **ssis_admin** データベース ロール、実行中のすべての実行のパフォーマンス統計が返されます。  メンバーでない場合、 **ssis_admin** データベース ロール、実行中に、アクセス許可を参照する実行のパフォーマンス統計が返されます。 *execution_id* は、 **Bigint** です。  
   
 ## <a name="remarks"></a>解説  
  次の表に、dm_execution_performance_counter 関数によって返されるカウンター名の値を一覧で示します。  
@@ -61,17 +61,21 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |列名|列の型|説明|解説|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** は無効な値です。|パッケージを含む実行の一意識別子。||  
-|counter_name|**nvarchar(128)**|カウンターの名前。|値の「**解説**」セクションを参照してください。|  
+|counter_name|**nvarchar(128)**|カウンターの名前。|値の「 **解説** 」セクションを参照してください。|  
 |counter_value|**BigInt**|カウンターによって返される値です。||  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例  
+
+### <a name="a-return-statistics-for-a-running-execution"></a>A. 実行中の実行の統計を返す
+
  次の例では、ID が 34 である処理中の実行の統計を関数で返します。  
   
 ```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
-## <a name="example"></a>例  
+### <a name="b-return-statistics-for-all-running-executions"></a>B. 実行中のすべての実行の統計を返す
+
  次の例では、権限に応じて、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーで処理中のすべての実行の統計を関数で返します。  
   
 ```sql

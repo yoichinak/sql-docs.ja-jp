@@ -15,11 +15,11 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae8fa8bb0aae6700d1082e52385c7d162c193b84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430614"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127155"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (ビット演算 Not) (SSIS 式)
 
@@ -38,10 +38,10 @@ ms.locfileid: "88430614"
   
 ## <a name="arguments"></a>引数  
  *integer_expression*  
- 整数データ型の任意の有効な式を指定します。 *integer*_*expression* は整数で、ビット演算用に 2 進数に変換されます。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+ 整数データ型の任意の有効な式を指定します。 *integer* _ *expression* は整数で、ビット演算用に 2 進数に変換されます。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
 ## <a name="result-types"></a>戻り値の型  
- データ型を返す *integer_expression*です。  
+ データ型を返す *integer_expression* です。  
   
 ## <a name="remarks"></a>解説  
  なし  

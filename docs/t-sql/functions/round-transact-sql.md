@@ -20,12 +20,12 @@ ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36917cc26189938e06f36d41559b2339344217c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bafff2cafe25587ae65c519bfc2e1896b34117d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445619"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379995"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "88445619"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 ROUND ( numeric_expression , length [ ,function ] )  
 ```  
   
@@ -45,7 +44,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 
 ## <a name="arguments"></a>引数
  *numeric_expression*  
- **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ **bit** データ型を除く、真数または概数データ型カテゴリの [式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  *length*  
  *numeric_expression* を丸める際の有効桁数です。 *length* には、**tinyint**、**smallint**、または **int** 型の式を指定する必要があります。*length* に正の値を指定した場合、*numeric_expression* は *length* で指定した小数点以下桁数に丸められます。 *length* に負の値を指定した場合、*numeric_expression* の小数点の左側が *length* で指定した桁数に丸められます。  
@@ -87,7 +86,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 ### <a name="a-using-round-and-estimates"></a>A. ROUND と概数を使用する  
  次の例では、`ROUND` を使用することにより最後の桁が常に概数になることを表す 2 つの式を示します。  
   
-```  
+```sql  
 SELECT ROUND(123.9994, 3), ROUND(123.9995, 3);  
 GO  
 ```  
@@ -116,7 +115,7 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ### <a name="c-using-round-to-truncate"></a>C. ROUND を使用して切り捨てを行う  
  次の例では、2 つの `SELECT` ステートメントを使用して、丸め処理と切り捨て処理の違いを示します。 最初のステートメントは、結果を丸めます。 2 番目のステートメントは、結果を切り捨てます。  
   
-```  
+```sql  
 SELECT ROUND(150.75, 0);  
 GO  
 SELECT ROUND(150.75, 0, 1);  

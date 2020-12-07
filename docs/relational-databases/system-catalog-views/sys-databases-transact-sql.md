@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e298052726e033724d20d6b1695b1accda4c6ec
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 77b8f5845f8fb3aea8712b6b63e54e10e62e2c6a
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227133"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081731"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "91227133"
 |**is_read_only**|**bit**|1 = データベースは READ_ONLY です。<br /> 0 = データベースは READ_WRITE です。|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE は ON です。<br /> 0 = AUTO_CLOSE は OFF です。|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK は ON です。<br /> 0 = AUTO_SHRINK は OFF です。|  
-|**状態**|**tinyint**|**Value**<br /> 0 = ONLINE <br /> 1 = 復元中 <br /> 2 = 回復 <sup>1</sup><br /> 3 = RECOVERY_PENDING <sup>1</sup><br /> 4 = 問題あり <br /> 5 = 緊急 <sup>1</sup><br /> 6 = オフライン <sup>1</sup><br /> 7 = コピー <sup>2</sup> <br /> 10 = OFFLINE_SECONDARY <sup>2</sup> <br /><br /> **注:** Always On データベースの場合は、 `database_state` `database_state_desc` [dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)の列または列に対してクエリを実行します。<br /><br /><sup>1</sup> **に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><sup>2</sup> **に適用さ**れます。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]|  
+|**state**|**tinyint**|**Value**<br /> 0 = ONLINE <br /> 1 = 復元中 <br /> 2 = 回復 <sup>1</sup><br /> 3 = RECOVERY_PENDING <sup>1</sup><br /> 4 = 問題あり <br /> 5 = 緊急 <sup>1</sup><br /> 6 = オフライン <sup>1</sup><br /> 7 = コピー <sup>2</sup> <br /> 10 = OFFLINE_SECONDARY <sup>2</sup> <br /><br /> **注:** Always On データベースの場合は、 `database_state` sys.dm_hadr_database_replica_states の列または列に対してクエリを実行 `database_state_desc` します。 [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /><sup>1</sup> **に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><sup>2</sup> **に適用さ**れます。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]|  
 |**state_desc**|**nvarchar(60)**|データベースの状態の説明。 「状態」を参照してください。|  
 |**is_in_standby**|**bit**|データベースは、復元ログに対し、読み取り専用です。|  
 |**is_cleanly_shutdown**|**bit**|1 = データベースはクリーンにシャットダウンされ、起動時に復旧処理は必要ありません。<br /> 0 = データベースはクリーンにシャットダウンされなかったため、起動時に復旧処理が必要です。|  
@@ -82,7 +82,7 @@ ms.locfileid: "91227133"
 |**is_db_chaining_on**|**bit**|1 = 複数データベースの組み合わせ所有権は ON です。<br /> 0 = 複数データベースの組み合わせ所有権は OFF です。|  
 |**is_parameterization_forced**|**bit**|1 = パラメーター化は FORCED です。<br /> 0 = パラメーター化は SIMPLE です。|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = データベースは暗号化されたマスター キーを保有しています。<br /> 0 = データベースは暗号化されたマスター キーを保有していません。|  
-|**is_query_store_on**|**bit**|1 = このデータベースに対してクエリストアが有効になっています。 クエリストアの状態を表示するには、 [database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) を確認してください。<br /> 0 = クエリストアが有効になっていません<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。|  
+|**is_query_store_on**|**bit**|1 = このデータベースに対してクエリストアが有効になっています。 [Sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)をオンにして、クエリのストアの状態を表示します。<br /> 0 = クエリストアが有効になっていません<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。|  
 |**is_published**|**bit**|1 = データベースは、トランザクション レプリケーション トポロジまたはスナップショット レプリケーション トポロジにおけるパブリケーション データベースです。<br /> 0 = パブリケーション データベースではありません。|  
 |**is_subscribed**|**bit**|この列は使用されません。 データベースのサブスクライバーの状態に関係なく、常に 0 を返します。|  
 |**is_merge_published**|**bit**|1 = データベースは、マージ レプリケーション トポロジにおけるパブリケーション データベースです。<br /> 0 = マージ レプリケーション トポロジにおけるパブリケーション データベースではありません。|  
@@ -93,8 +93,8 @@ ms.locfileid: "91227133"
 |**log_reuse_wait**|**tinyint**|トランザクションログ領域の再利用は、現在、最後のチェックポイントの時点で、次のいずれかを待機しています。 これらの値の詳細については、 [トランザクションログ](../../relational-databases/logs/the-transaction-log-sql-server.md)を参照してください。<br /> **Value**<br /> 0 = なし<br /> 1 = チェックポイント (データベースが復旧モデルを使用していて、メモリ最適化データファイルグループがある場合、列がまたはであることを確認する必要があります `log_reuse_wait` `checkpoint` `xtp_checkpoint` ) <sup>1</sup><br /> 2 = ログバックアップ <sup>1</sup><br /> 3 = アクティブなバックアップまたは復元 <sup>1</sup><br /> 4 = アクティブなトランザクション <sup>1</sup><br /> 5 = データベースミラーリング <sup>1</sup><br /> 6 = レプリケーション <sup>1</sup><br /> 7 = データベーススナップショットの作成 <sup>1</sup><br /> 8 = ログスキャン <br /> 9 = Always On 可用性グループセカンダリレプリカは、このデータベースのトランザクションログレコードを対応するセカンダリデータベースに適用します。 <sup>2</sup><br /> 9 = その他 (一時的) <sup>3</sup><br /> 10 = 内部使用のみ <sup>2</sup><br /> 11 = 内部使用のみ <sup>2</sup><br /> 12 = 内部使用のみ <sup>2</sup><br /> 13 = 最も古いページ <sup>2</sup><br /> 14 = その他 <sup>2</sup><br />  16 = XTP_CHECKPOINT (データベースが復旧モデルを使用していて、メモリ最適化データファイルグループがある場合、列がまたはであることを確認する必要があります `log_reuse_wait` `checkpoint` `xtp_checkpoint` ) <sup>4</sup><br /><br /><sup>1</sup> **に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] )<br /><sup>2</sup> **に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] )<br /><sup>3</sup> **に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (およびを含む [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] )<br /><sup>4</sup> **に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] )|  
 |**log_reuse_wait_desc**|**nvarchar(60)**|前回のチェックポイントの時点で現在待機中の、トランザクション ログ領域の再利用の理由の説明です。|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION は ON です。<br /> 0 = DATE_CORRELATION_OPTIMIZATION は OFF です。|  
-|**is_cdc_enabled**|**bit**|1 = データベースで変更データ キャプチャが有効になっています。 詳細については、「 [sys. sp_cdc_enable_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)」を参照してください。|  
-|**is_encrypted**|**bit**|データベースが暗号化されているかどうかを示します (は、句を使用して最後に設定された状態を反映し `ALTER DATABASE SET ENCRYPTION` ます)。 次の値のいずれかです。<br /> 1 = 暗号化<br /> 0 = 暗号化されていない<br /> データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。<br /> データベースの暗号化が解除されている場合、には `is_encrypted` 値0が表示されます。 [Dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)動的管理ビューを使用すると、暗号化プロセスの状態を確認できます。|  
+|**is_cdc_enabled**|**bit**|1 = データベースで変更データ キャプチャが有効になっています。 詳細については、「 [sys.sp_cdc_enable_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)」を参照してください。|  
+|**is_encrypted**|**bit**|データベースが暗号化されているかどうかを示します (は、句を使用して最後に設定された状態を反映し `ALTER DATABASE SET ENCRYPTION` ます)。 次の値のいずれかです。<br /> 1 = 暗号化<br /> 0 = 暗号化されていない<br /> データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。<br /> データベースの暗号化が解除されている場合、には `is_encrypted` 値0が表示されます。 [動的管理ビューの [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) ] を使用すると、暗号化プロセスの状態を確認できます。|  
 |**is_honor_broker_priority_on**|**bit**|データベースがメッセージ交換の優先度を優先するかどうかを示します (句を使用して最後に設定された状態を反映し `ALTER DATABASE SET HONOR_BROKER_PRIORITY` ます)。 次の値のいずれかです。<br /> 1 = HONOR_BROKER_PRIORITY は ON です。<br /> 0 = HONOR_BROKER_PRIORITY は OFF です。<br /> 既定では、復元またはアタッチされたデータベースの broker の優先度はオフになっています。|  
 |**replica_id**|**uniqueidentifier**|データベースが参加している可用性グループ (存在する場合) のローカル [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性レプリカの一意の識別子です。<br /> NULL = データベースは可用性グループの可用性レプリカの一部ではありません。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|データベースが参加している Always On 可用性グループ (存在する場合) 内のデータベースの一意識別子。 **group_database_id** は、プライマリレプリカのこのデータベースと、データベースが可用性グループに参加しているすべてのセカンダリレプリカで同じです。<br /> NULL = データベースは、どの可用性グループの可用性レプリカの一部でもありません。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -123,7 +123,7 @@ ms.locfileid: "91227133"
 |**is_accelerated_database_recovery_on**|**bit**|高速データベース回復 (ADR) が有効かどうかを示します。<br />1 = ADR が有効<br />0 = ADR は無効です。<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**is_tempdb_spill_to_remote_store**|**bit**|リモートストアへの tempdb の書き込みが有効になっているかどうかを示します。<br />1 = 有効<br />0 = 無効<br />**適用対象**: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gen2。 この機能はすべてのリージョンにロールアウトされていますが、ご使用のインスタンスにデプロイされているバージョンと、利用可能な機能については、最新の [Azure Synapse リリースノート](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) と [Gen2 アップグレードスケジュール](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) をご確認ください。|
 |**is_stale_page_detection_on**|**bit**|古いページ検出が有効になっているかどうかを示します。<br />1 = 古いページ検出が有効になっている<br />0 = 古いページ検出は無効になっています<br />**適用対象**: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gen2。 この機能はすべてのリージョンにロールアウトされていますが、ご使用のインスタンスにデプロイされているバージョンと、利用可能な機能については、最新の [Azure Synapse リリースノート](/azure/synapse-analytics/sql-data-warehouse/release-notes-10-0-10106-0) と [Gen2 アップグレードスケジュール](/azure/synapse-analytics/sql-data-warehouse/gen2-migration-schedule) をご確認ください。|
-|**is_memory_optimized_enabled**|**bit**|[ハイブリッドバッファープール](../../database-engine/configure-windows/hybrid-buffer-pool.md)などの特定のインメモリ機能がデータベースに対して有効かどうかを示します。 [インメモリ OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)の可用性または構成の状態は反映されません。 <br />1 = メモリ最適化機能が有効になっている<br />0 = メモリ最適化機能は無効です。<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_memory_optimized_enabled**|**bit**|[ハイブリッドバッファープール](../../database-engine/configure-windows/hybrid-buffer-pool.md)などの特定の In-Memory 機能がデータベースに対して有効かどうかを示します。 [インメモリ OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)の可用性または構成の状態は反映されません。 <br />1 = メモリ最適化機能が有効になっている<br />0 = メモリ最適化機能は無効です。<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -157,7 +157,7 @@ FROM sys.databases;
   
 ```sql
 -- Execute from the master database.  
-SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
+SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percent_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  
@@ -175,10 +175,10 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)
 - [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
-- [database_recovery_status &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
+- [sys.database_recovery_status &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
 - [データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
 - [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  

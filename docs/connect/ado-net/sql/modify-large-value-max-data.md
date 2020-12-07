@@ -9,25 +9,25 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 9acbd8fb795fe1a14e77e5d746f729d37c11cc8d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f55cb14a95844558e4a759a4acce71509d62d4ba
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896681"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725623"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET での大きな値 (max) データの変更
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-ラージ オブジェクト (LOB) データ型は、最大行サイズが 8 KB を超えるデータ型です。 SQL Server からは、`varchar` データ型、`nvarchar` データ型、`varbinary` データ型に `max` 指定子が提供され、2^32 バイトもの大きさの値を格納することができます。 テーブルの列と Transact-SQL 変数では、`varchar(max)`、`nvarchar(max)`、または `varbinary(max)` データ型を指定できます。 .NET では、`DataReader` によって `max` データ型をフェッチでき、特殊な処理を行うことなく入力および出力両方のパラメーター値として指定することもできます。 大きな `varchar` データ型の場合は、データを段階的に取得および更新できます。  
+ラージ オブジェクト (LOB) データ型は、最大行サイズが 8 KB を超えるデータ型です。 SQL Server からは、`max` データ型、`varchar` データ型、`nvarchar` データ型に `varbinary` 指定子が提供され、2^32 バイトもの大きさの値を格納することができます。 テーブルの列と Transact-SQL 変数では、`varchar(max)`、`nvarchar(max)`、または `varbinary(max)` データ型を指定できます。 .NET では、`max` によって `DataReader` データ型をフェッチでき、特殊な処理を行うことなく入力および出力両方のパラメーター値として指定することもできます。 大きな `varchar` データ型の場合は、データを段階的に取得および更新できます。  
   
 Transact-SQL 変数としての比較、および連結に `max` データ型を使用できます。 このデータ型は、SELECT ステートメントの DISTINCT 句、ORDER BY 句、GROUP BY 句のほか、集約、結合、およびサブクエリでも使用できます。
 
-大きな値のデータ型の詳細については、SQL Server オンライン ブックの「[大きな値のデータ型の使用](https://go.microsoft.com/fwlink/?LinkId=120498)」を参照してください。
+大きな値のデータ型の詳細については、SQL Server オンライン ブックの「[大きな値のデータ型の使用](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))」を参照してください。
   
 ## <a name="large-value-type-restrictions"></a>大きい値型の制限事項  
 次の制限は、`max` データ型に適用されますが、これは小さいデータ型に対しては存在しません。  
@@ -76,7 +76,7 @@ WRITE メソッドは、*column_name* の値のセクションが変更される
 |式が NULL に設定されています|`@Length` は無視され、*column_name* の値は指定された `@Offset` で切り捨てられます。|  
 |`@Offset` は NULL です|更新操作によって既存の *column_name* の値の最後に式が追加され、`@Length` が無視されます。|  
 |`@Offset` が column_name 値の長さを超えています|SQL Server はエラーを返します。|  
-|`@Length` は NULL です|更新操作により、`column_name` 値の終わりまですべてのデータが `@Offset` から削除されます。|  
+|`@Length` は NULL です|更新操作により、`@Offset` 値の終わりまですべてのデータが `column_name` から削除されます。|  
   
 > [!NOTE]
 >  `@Offset` も `@Length` も負の数にすることはできません。  
@@ -110,10 +110,10 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>ADO.NET での大きい値型の使用  
-大きい値型を ADO.NET で使用するには、大きい値型を <xref:Microsoft.Data.SqlClient.SqlDataReader> で <xref:Microsoft.Data.SqlClient.SqlParameter> オブジェクトとして指定して結果セットを返すようにするか、<xref:Microsoft.Data.SqlClient.SqlDataAdapter> を使用して `DataSet`/`DataTable` に入力します。 大きな値の型と、それに関連する小さい値のデータ型の操作方法に違いはありません。  
+大きい値型を ADO.NET で使用するには、大きい値型を <xref:Microsoft.Data.SqlClient.SqlParameter> で <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトとして指定して結果セットを返すようにするか、<xref:Microsoft.Data.SqlClient.SqlDataAdapter> を使用して `DataSet`/`DataTable` に入力します。 大きな値の型と、それに関連する小さい値のデータ型の操作方法に違いはありません。  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>GetSqlBytes を使用したデータ取得  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> の `GetSqlBytes` メソッドを使用して、`varbinary(max)` 列の内容を取得できます。 次のコード フラグメントは、テーブルから `varbinary(max)` データを選択する `cmd` という名前の <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトと、データを <xref:System.Data.SqlTypes.SqlBytes> として取得する `reader` という名前の <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトがあることを前提としています。  
+`GetSqlBytes` の <xref:Microsoft.Data.SqlClient.SqlDataReader> メソッドを使用して、`varbinary(max)` 列の内容を取得できます。 次のコード フラグメントは、テーブルから <xref:Microsoft.Data.SqlClient.SqlCommand> データを選択する `cmd` という名前の `varbinary(max)` オブジェクトと、データを <xref:Microsoft.Data.SqlClient.SqlDataReader> として取得する `reader` という名前の <xref:System.Data.SqlTypes.SqlBytes> オブジェクトがあることを前提としています。  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -124,7 +124,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getsqlchars-to-retrieve-data"></a>GetSqlChars を使用したデータ取得  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> の `GetSqlChars` メソッドを使用して、`varchar(max)` 列または `nvarchar(max)` 列の内容を取得できます。 次のコード フラグメントは、テーブルから `nvarchar(max)` データを選択する `cmd` という名前の <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトと、データを取得する `reader` という名前の <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトがあることを前提としています。   
+`GetSqlChars` の <xref:Microsoft.Data.SqlClient.SqlDataReader> メソッドを使用して、`varchar(max)` 列または `nvarchar(max)` 列の内容を取得できます。 次のコード フラグメントは、テーブルから <xref:Microsoft.Data.SqlClient.SqlCommand> データを選択する `cmd` という名前の `nvarchar(max)` オブジェクトと、データを取得する <xref:Microsoft.Data.SqlClient.SqlDataReader> という名前の `reader` オブジェクトがあることを前提としています。   
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -135,7 +135,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getsqlbinary-to-retrieve-data"></a>GetSqlBinary を使用したデータ取得  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> の `GetSqlBinary` メソッドを使用して、`varbinary(max)` 列の内容を取得できます。 次のコード フラグメントは、テーブルから `varbinary(max)` データを選択する `cmd` という名前の <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトと、データを <xref:System.Data.SqlTypes.SqlBinary> ストリームとして取得する `reader` という名前の <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトがあることを前提としています。  
+`GetSqlBinary` の <xref:Microsoft.Data.SqlClient.SqlDataReader> メソッドを使用して、`varbinary(max)` 列の内容を取得できます。 次のコード フラグメントは、テーブルから <xref:Microsoft.Data.SqlClient.SqlCommand> データを選択する `cmd` という名前の `varbinary(max)` オブジェクトと、データを <xref:Microsoft.Data.SqlClient.SqlDataReader> ストリームとして取得する `reader` という名前の <xref:System.Data.SqlTypes.SqlBinary> オブジェクトがあることを前提としています。  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -146,7 +146,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getbytes-to-retrieve-data"></a>GetBytes を使用したデータ取得  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> の `GetBytes` メソッドでは、バイトのストリームを、指定した列オフセットから、指定した配列オフセットから始まるバイト配列に読み取ります。 次のコード フラグメントは、バイト配列に対するバイトを取得する `reader` という名前の <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトがあることを前提としています。 `GetSqlBytes` とは異なり、`GetBytes` には配列バッファーのサイズを必要とすることに注意してください。  
+`GetBytes` の <xref:Microsoft.Data.SqlClient.SqlDataReader> メソッドでは、バイトのストリームを、指定した列オフセットから、指定した配列オフセットから始まるバイト配列に読み取ります。 次のコード フラグメントは、バイト配列に対するバイトを取得する <xref:Microsoft.Data.SqlClient.SqlDataReader> という名前の `reader` オブジェクトがあることを前提としています。 `GetSqlBytes` とは異なり、`GetBytes` には配列バッファーのサイズを必要とすることに注意してください。  
   
 ```csharp  
 while (reader.Read())  
@@ -157,7 +157,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getvalue-to-retrieve-data"></a>GetValue を使用したデータ取得  
-<xref:Microsoft.Data.SqlClient.SqlDataReader> の `GetValue` メソッドは、指定した列オフセットから配列に値を読み取ります。 次のコード フラグメントは、最初の列オフセットからバイナリ データを取得した後、2 番目の列オフセットから文字列データを取得する `reader` という名前の <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトがあることを前提としています。  
+`GetValue` の <xref:Microsoft.Data.SqlClient.SqlDataReader> メソッドは、指定した列オフセットから配列に値を読み取ります。 次のコード フラグメントは、最初の列オフセットからバイナリ データを取得した後、2 番目の列オフセットから文字列データを取得する <xref:Microsoft.Data.SqlClient.SqlDataReader> という名前の `reader` オブジェクトがあることを前提としています。  
   
 ```csharp  
 while (reader.Read())  
@@ -171,7 +171,7 @@ while (reader.Read())
 ```  
   
 ## <a name="converting-from-large-value-types-to-clr-types"></a>大きな値型から CLR 型への変換  
-`ToString` などの任意の文字列変換メソッドを使用して、`varchar(max)` 列または `nvarchar(max)` 列の内容を変換できます。 次のコード フラグメントは、データを取得する `reader` という名前の <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトがあることを前提としています。  
+`varchar(max)` などの任意の文字列変換メソッドを使用して、`nvarchar(max)` 列または `ToString` 列の内容を変換できます。 次のコード フラグメントは、データを取得する <xref:Microsoft.Data.SqlClient.SqlDataReader> という名前の `reader` オブジェクトがあることを前提としています。  
   
 ```csharp  
 while (reader.Read())  
@@ -182,7 +182,7 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>例  
-次のコードでは、`AdventureWorks` データベースの `ProductPhoto` テーブルから名前と `LargePhoto` オブジェクトを取得し、ファイルに保存します。 アセンブリは、<xref:System.Drawing> 名前空間への参照を使用してコンパイルする必要があります。  <xref:Microsoft.Data.SqlClient.SqlDataReader> の <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> メソッドは、`Stream` プロパティを公開する <xref:System.Data.SqlTypes.SqlBytes> オブジェクトを返します。 コードではこのオブジェクトを使用して新しい `Bitmap` オブジェクトが作成され、Gif `ImageFormat` に保存されます。  
+次のコードでは、`LargePhoto` データベースの `ProductPhoto` テーブルから名前と `AdventureWorks` オブジェクトを取得し、ファイルに保存します。 アセンブリは、<xref:System.Drawing> 名前空間への参照を使用してコンパイルする必要があります。  <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> の <xref:Microsoft.Data.SqlClient.SqlDataReader> メソッドは、<xref:System.Data.SqlTypes.SqlBytes> プロパティを公開する `Stream` オブジェクトを返します。 コードではこのオブジェクトを使用して新しい `Bitmap` オブジェクトが作成され、Gif `ImageFormat` に保存されます。  
   
 [!code-csharp[DataWorks SqlBytes_Stream#1](~/../sqlclient/doc/samples/SqlBytes_Stream.cs#1)]
   

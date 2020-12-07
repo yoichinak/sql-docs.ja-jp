@@ -15,11 +15,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15f45d404a21345cec76b975054c1ecdbcb63c0f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 03dd345e2b7fc3be27b9bd1c61f3d252d7afb229
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012424"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867811"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -74,7 +75,7 @@ ms.locfileid: "86012424"
 |SQL_COPT_SS_USER_DATA|接続前/接続後|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|以前|  
   
- 同じセッション、データベース、または [!INCLUDE[tsql](../../includes/tsql-md.md)] の状態に対して接続前の属性および同等の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドを使用すると、予期しない動作が発生する場合があります。 例:  
+ 同じセッション、データベース、または [!INCLUDE[tsql](../../includes/tsql-md.md)] の状態に対して接続前の属性および同等の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドを使用すると、予期しない動作が発生する場合があります。 たとえば、次のように入力します。  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -96,7 +97,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 
 <a name="sqlcoptssapplicationintent"></a>
 ## <a name="sql_copt_ss_application_intent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 使用できる値は、 **Readonly**と**ReadWrite**です。 次に例を示します。  
+ アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 使用できる値は、 **Readonly** と **ReadWrite**です。 次に例を示します。  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -114,7 +115,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssbcp"></a>
 ## <a name="sql_copt_ss_bcp"></a>SQL_COPT_SS_BCP  
- SQL_COPT_SS_BCP 属性は、接続で一括コピー関数を有効にします。 詳細については、「[一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)」を参照してください。  
+ SQL_COPT_SS_BCP 属性は、接続で一括コピー関数を有効にします。 詳細については、「 [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)」を参照してください。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -128,16 +129,16 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |値|説明|  
 |-----------|-----------------|  
 |SQL_MORE_INFO_NO|既定値。 サーバーの一覧を返します。|  
-|SQL_MORE_INFO_YES|**SQLBrowseConnect**は、サーバープロパティの拡張文字列を返します。|  
+|SQL_MORE_INFO_YES|**SQLBrowseConnect** は、サーバープロパティの拡張文字列を返します。|  
 
 <a name="sqlcoptssbrowseserver"></a>
 ## <a name="sql_copt_ss_browse_server"></a>SQL_COPT_SS_BROWSE_SERVER  
- この属性は、 **SQLBrowseConnect**によって返される結果セットをカスタマイズするために使用されます。 SQL_COPT_SS_BROWSE_SERVER では、 **SQLBrowseConnect**が情報を返す対象のサーバー名を指定します。  
+ この属性は、 **SQLBrowseConnect**によって返される結果セットをカスタマイズするために使用されます。 SQL_COPT_SS_BROWSE_SERVER では、 **SQLBrowseConnect** が情報を返す対象のサーバー名を指定します。  
   
 |値|説明|  
 |-----------|-----------------|  
-|computername|**SQLBrowseConnect**は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、指定されたコンピューター上ののインスタンスの一覧を返します。 サーバー名には二重の円記号 ( \\ \\ ) を使用しないでください (たとえば、 \\ \ myserver ではなく、myserver を使用する必要があります)。|  
-|NULL|既定値。 **SQLBrowseConnect**は、ドメイン内のすべてのサーバーに関する情報を返します。|  
+|computername|**SQLBrowseConnect** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、指定されたコンピューター上ののインスタンスの一覧を返します。 サーバー名には二重の円記号 ( \\ \\ ) を使用しないでください (たとえば、 \\ \ myserver ではなく、myserver を使用する必要があります)。|  
+|NULL|既定値。 **SQLBrowseConnect** は、ドメイン内のすべてのサーバーに関する情報を返します。|  
 
 <a name="sqlcoptssconcatnull"></a>
 ## <a name="sql_copt_ss_concat_null"></a>SQL_COPT_SS_CONCAT_NULL  
@@ -157,11 +158,11 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |値|説明|  
 |-----------|-----------------|  
 |SQL_EN_ON|接続が暗号化されます。|  
-|SQL_EN_OFF|接続は暗号化されません。 これは既定値です。|  
+|SQL_EN_OFF|接続は暗号化されません。 既定値です。|  
 
 <a name="sqlcoptssenlistindtc"></a>
 ## <a name="sql_copt_ss_enlist_in_dtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  
- クライアントは、Microsoft 分散トランザクションコーディネーター (MS DTC) OLE DB **ITransactionDispenser:: BeginTransaction**メソッドを呼び出して ms dtc トランザクションを開始し、トランザクションを表す ms dtc トランザクションオブジェクトを作成します。 次に、アプリケーションは、SQL_COPT_SS_ENLIST_IN_DTC オプションを指定して**SQLSetConnectAttr**を呼び出し、トランザクションオブジェクトを ODBC 接続に関連付けます。 関連のあるすべてのデータベース操作は、MS DTC トランザクションで保護されます。 アプリケーションは SQL_DTC_DONE を使用して**SQLSetConnectAttr**を呼び出し、接続の DTC 関連付けを終了します。  
+ クライアントは、Microsoft 分散トランザクションコーディネーター (MS DTC) OLE DB **ITransactionDispenser:: BeginTransaction** メソッドを呼び出して ms dtc トランザクションを開始し、トランザクションを表す ms dtc トランザクションオブジェクトを作成します。 次に、アプリケーションは、SQL_COPT_SS_ENLIST_IN_DTC オプションを指定して **SQLSetConnectAttr** を呼び出し、トランザクションオブジェクトを ODBC 接続に関連付けます。 関連のあるすべてのデータベース操作は、MS DTC トランザクションで保護されます。 アプリケーションは SQL_DTC_DONE を使用して **SQLSetConnectAttr** を呼び出し、接続の DTC 関連付けを終了します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -170,7 +171,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssenlistinxa"></a>
 ## <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA  
- Xa 準拠トランザクションプロセッサ (TP) で XA トランザクションを開始するには、クライアントは Open Group **tx_begin**関数を呼び出します。 次に、アプリケーションは SQL_COPT_SS_ENLIST_IN_XA パラメーターを TRUE にして**SQLSetConnectAttr**を呼び出し、XA トランザクションを ODBC 接続に関連付けます。 関連のあるすべてのデータベース操作は、XA トランザクションで保護されます。 XA と ODBC 接続の関連付けを終了するには、クライアントは SQL_COPT_SS_ENLIST_IN_XA パラメーターが FALSE の**SQLSetConnectAttr**を呼び出す必要があります。 詳細については、分散トランザクション コーディネーターのマニュアルを参照してください。  
+ Xa 準拠トランザクションプロセッサ (TP) で XA トランザクションを開始するには、クライアントは Open Group **tx_begin** 関数を呼び出します。 次に、アプリケーションは SQL_COPT_SS_ENLIST_IN_XA パラメーターを TRUE にして **SQLSetConnectAttr** を呼び出し、XA トランザクションを ODBC 接続に関連付けます。 関連のあるすべてのデータベース操作は、XA トランザクションで保護されます。 XA と ODBC 接続の関連付けを終了するには、クライアントは SQL_COPT_SS_ENLIST_IN_XA パラメーターが FALSE の **SQLSetConnectAttr** を呼び出す必要があります。 詳細については、分散トランザクション コーディネーターのマニュアルを参照してください。  
   
 ## <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT  
  この属性は現在サポートされていません。  
@@ -179,13 +180,13 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sql_copt_ss_failover_partner"></a>SQL_COPT_SS_FAILOVER_PARTNER  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングで使用するフェールオーバー パートナーの名前を指定または取得する場合に使用します。この属性値には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への最初の接続を確立する前に、NULL で終わる文字列を指定する必要があります。  
   
- 接続を確立した後、アプリケーションは[Sqlgetconnectattr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)を使用してこの属性を照会し、フェールオーバーパートナーの id を確認できます。 プライマリ サーバーのフェールオーバー パートナーが存在しないと、この属性は空文字列を返します。 アプリケーションでは最後に判別したバックアップ サーバーをキャッシュできますが、この情報は最初に接続を確立したとき、または接続がリセットされたとき (接続がプールされている場合) にだけ更新されることに注意する必要があります。接続が長期にわたると、この情報は古くなることがあります。  
+ 接続を確立した後、アプリケーションは [Sqlgetconnectattr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) を使用してこの属性を照会し、フェールオーバーパートナーの id を確認できます。 プライマリ サーバーのフェールオーバー パートナーが存在しないと、この属性は空文字列を返します。 アプリケーションでは最後に判別したバックアップ サーバーをキャッシュできますが、この情報は最初に接続を確立したとき、または接続がリセットされたとき (接続がプールされている場合) にだけ更新されることに注意する必要があります。接続が長期にわたると、この情報は古くなることがあります。  
   
  詳細については、「[データベース ミラーリングの使用](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。  
 
 <a name="sqlcoptssintegratedsecurity"></a>
 ## <a name="sql_copt_ss_integrated_security"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
- SQL_COPT_SS_INTEGRATED_SECURITY 属性は、サーバー ログインでアクセス違反を検出するために Windows 認証を使用することを強制します。 Windows 認証を使用する場合、 **SQLConnect**、 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)、または[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) processing の一部として指定されたユーザー識別子とパスワードの値は、ドライバーによって無視されます。  
+ SQL_COPT_SS_INTEGRATED_SECURITY 属性は、サーバー ログインでアクセス違反を検出するために Windows 認証を使用することを強制します。 Windows 認証を使用する場合、 **SQLConnect**、 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)、または [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) processing の一部として指定されたユーザー識別子とパスワードの値は、ドライバーによって無視されます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -201,7 +202,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_MARS_ENABLED_NO|既定値。 複数のアクティブな結果セット (MARS) を無効にします。|  
 |SQL_MARS_ENABLED_YES|MARS を有効にします。|  
   
- MARS の詳細については、「 [mars&#41;&#40;複数のアクティブな結果セットの使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。  
+ MARS の詳細については、「 [mars&#41;&#40;複数のアクティブな結果セットの使用 ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。  
 
 <a name="sqlcoptssmultisubnetfailover"></a>
 ## <a name="sql_copt_ss_multisubnet_failover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
@@ -312,7 +313,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |-----------|-----------------|  
 |SQL_TXN_SS_SNAPSHOT|あるトランザクションで行った変更内容を別のトランザクションから参照できないことを示します。この場合、クエリを再実行しても変更内容を参照することはできません。|  
   
- スナップショット分離の詳細については、「[スナップショット分離の操作](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)」を参照してください。  
+ スナップショット分離の詳細については、「 [スナップショット分離の操作](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)」を参照してください。  
   
 ## <a name="sql_copt_ss_use_proc_for_prep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP
 
@@ -337,13 +338,13 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
  SQLSetConnectAttr を使用して、新しい接続属性の値 SQL_COPT_SS_SERVER_SPN および SQL_COPT_SS_FAILOVER_PARTNER_SPN を設定できます。 接続が開いている場合、これらの属性を設定することはできません。接続が開いているときにこれらの属性を設定しようとすると、"現時点での操作は正しくありません。" というメッセージと共に、エラー HY011 が返されます (SQLSetConnectOption を使用してこれらの値を設定することもできます)。  
   
- Spn の詳細については、「[クライアント接続 &#40;ODBC&#41;のサービスプリンシパル名 &#40;spn&#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)」を参照してください。  
+ Spn の詳細については、「 [クライアント接続 &#40;ODBC&#41;のサービスプリンシパル名 &#40;spn&#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)」を参照してください。  
 
 <a name="sqlcoptssconnectiondead"></a>
 ## <a name="sql_copt_ss_connection_dead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  これは読み取り専用属性です。  
   
- SQL_COPT_SS_CONNECTION_DEAD の詳細については、「 [Sqlgetconnectattr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 」と「[データソースへの接続」 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)を参照してください。  
+ SQL_COPT_SS_CONNECTION_DEAD の詳細については、「 [Sqlgetconnectattr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 」と「 [データソースへの接続」 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)を参照してください。  
   
 ## <a name="example"></a>例
 
@@ -392,15 +393,14 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
   
 ## <a name="see-also"></a>参照
 
- [SQLSetConnectAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59368)   
+ [SQLSetConnectAttr 関数](../../odbc/reference/syntax/sqlsetconnectattr-function.md)   
  [ODBC API の実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   
- [SET ANSI_NULLS &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-sql&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
- [SET QUOTED_IDENTIFIER &#40;Transact-sql&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)   
+ [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
+ [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SQLPrepare 関数](../../odbc/reference/syntax/sqlprepare-function.md)   
  [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
-  
   

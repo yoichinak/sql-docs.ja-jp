@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95390a1eb5418a43883a9605c7498e6a86876e7e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7d3b2da6c649c514dff31225253292642212cd41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178899"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195792"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server で R 開発用のデータ サイエンス クライアントをセットアップする
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) または [SQL Server Machine Learning Services (データベース内)](../install/sql-machine-learning-services-windows-install.md) のインストール時に R 言語オプションを含めた場合、SQL Server 2016 以降で R 統合を使用できます。 
 
-SQL Server 用の R ソリューションを開発してデプロイするには、[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) を開発ワークステーションにインストールし、[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) やその他の R ライブラリを入手します。 リモート SQL Server インスタンスでも必要な RevoScaleR ライブラリは、両方のシステム間での計算要求を調整します。 
+SQL Server 用の R ソリューションを開発してデプロイするには、[Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client) を開発ワークステーションにインストールし、[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) やその他の R ライブラリを入手します。 リモート SQL Server インスタンスでも必要な RevoScaleR ライブラリは、両方のシステム間での計算要求を調整します。 
 
 この記事では、R クライアント開発ワークステーションを構成して、機械学習と R 統合のために有効になっているリモート SQL Server と対話できるようにする方法について説明します。 この記事の手順を完了すると、SQL Server にあるものと同じ R ライブラリが得られます。 また、ローカル R セッションから SQL Server 上のリモート R セッションに計算をプッシュする方法についても説明します。
 
@@ -34,7 +34,7 @@ SQL Server 用の R ソリューションを開発してデプロイするには
 
 ## <a name="commonly-used-tools"></a>一般的に使用されるツール
 
-SQL を初めて使用する R 開発者、または R とデータベース内分析を初めて使用する SQL 開発者である場合、データベース内分析のすべての機能を実行するには、R 開発ツールと [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) などの T-SQL クエリ エディターの両方が必要になります。
+SQL を初めて使用する R 開発者、または R とデータベース内分析を初めて使用する SQL 開発者である場合、データベース内分析のすべての機能を実行するには、R 開発ツールと [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) などの T-SQL クエリ エディターの両方が必要になります。
 
 単純な R 開発シナリオでは、RGUI 実行可能ファイルを使用できます。これは、MRO および SQL Server の R 基本ディストリビューションにバンドルされています。 この記事では、ローカルとリモートの R セッションの両方で RGUI を使用する方法について説明します。 生産性を向上させるには、[RStudio や Visual Studio](#install-ide) などの完全な機能を備えた IDE を使用する必要があります。
 
@@ -42,7 +42,7 @@ SSMS は個別にダウンロードします。これは、R コードが含ま�
 
 ## <a name="1---install-r-packages"></a>1 - R パッケージをインストールする
 
-Microsoft の R パッケージは、複数の製品およびサービスで利用できます。 ローカル ワークステーションでは、Microsoft R Client をインストールすることをお勧めします。 R Client には、[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)、[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)、[SQLRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)、およびその他の R パッケージが用意されています。
+Microsoft の R パッケージは、複数の製品およびサービスで利用できます。 ローカル ワークステーションでは、Microsoft R Client をインストールすることをお勧めします。 R Client には、[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler)、[MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package)、[SQLRUtils](/machine-learning-server/r-reference/sqlrutils/sqlrutils)、およびその他の R パッケージが用意されています。
 
 1. [Microsoft R Client をダウンロードします](https://aka.ms/rclient/download)。
 
@@ -103,7 +103,7 @@ SQL Server と共に既定でインストールされないパッケージをコ
 
 ## <a name="5---test-connections"></a>5 - 接続のテスト
 
-検証手順として、**RGUI** と RevoScaleR を使用して、リモート サーバーへの接続性を確認します。 SQL Server が[リモート接続](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)に対して有効になっている必要があります。また、接続先のユーザー ログインやデータベースなどのアクセス許可が必要です。 
+検証手順として、**RGUI** と RevoScaleR を使用して、リモート サーバーへの接続性を確認します。 SQL Server が[リモート接続](../../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)に対して有効になっている必要があります。また、接続先のユーザー ログインやデータベースなどのアクセス許可が必要です。 
 
 次の手順では、[NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) のデモ データベース、および Windows 認証を想定しています。
 
@@ -219,8 +219,8 @@ RStudio を再度開くと、R クライアント (またはスタンドアロ�
 希望する R 用の IDE がまだない場合は、**R Tools for Visual Studio** をお勧めします。
 
 + [R Tools for Visual Studio (RTVS) をダウンロードする](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)
-+ [インストール手順](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS は、いくつかのバージョンの Visual Studio で使用できます。
-+ [R Tools for Visual Studio を使用して作業を開始する](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
++ [インストール手順](/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS は、いくつかのバージョンの Visual Studio で使用できます。
++ [R Tools for Visual Studio を使用して作業を開始する](/visualstudio/rtvs/getting-started-with-r)
 
 ### <a name="connect-to-sql-server-from-rtvs"></a>RTVS から SQL Server への接続
 

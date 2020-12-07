@@ -14,11 +14,11 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c4da6f54ead49d01d9d691cc081ac9b9955c693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425474"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123247"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 式)
 
@@ -69,7 +69,7 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- この例では、 **Name** 列を使用します。 **Name** 列にある 2 番目の n の場所が返されます。 返される結果は、 **Name**の値によって異なります。 **Name** に Anderson が含まれる場合は、次の関数では 8 が返されます。  
+ この例では、 **Name** 列を使用します。 **Name** 列にある 2 番目の n の場所が返されます。 返される結果は、 **Name** の値によって異なります。 **Name** に Anderson が含まれる場合は、次の関数では 8 が返されます。  
   
 ```  
 FINDSTRING(Name, "n", 2)   

@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19eb6e3c43ce404770d641bc33bf663ad12a4b61
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 5708feb796315c2904b1ba0a178eb5589e6bb3a7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115823"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724553"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>グループ ポリシーを使用した Always On 可用性グループの正常性の評価
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,6 +33,5 @@ ms.locfileid: "91115823"
 3.  すべての可用性グループのシステム ポリシーを表示するには、 **[ページの選択]** ウィンドウで **[ポリシーの選択]** をクリックします。  
   
 ## <a name="next-steps"></a>次のステップ  
- [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)   
-  
+ [AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)   
   

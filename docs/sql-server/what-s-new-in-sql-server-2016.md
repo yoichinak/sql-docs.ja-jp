@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 24cf362c711abd450533b218c699fc7f2bc1dd18
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967553"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987258"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
@@ -59,10 +59,10 @@ SQL Server 2016 Analysis Services では、**1200 互換性レベル**に基づ�
 - 新しい **Database Consistency Checker (DBCC)** は、潜在的なデータの破損の問題を検出するために、内部的に実行されます。
 - **直接クエリ**は、最初に外部データをインポートするのではなく、ライブの外部データにクエリを実行します。直接クエリでは、Azure SQL、Oracle、Teradata を含む、より多くのデータ ソースがサポートされるようになりました。 
 - 多数の新しい **DAX (Data Access Expressions) 関数**が追加されています。
-- 新しい **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** 名前空間は、表形式モードのインスタンスとモデルを管理します。 
-- [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) は、2 つ目のアセンブリ (**Microsoft.AnalysisServices.Core.dll**) を含めるためにリファクタリングされます。
+- 新しい **[Microsoft.AnalysisServices.Tabular](/dotnet/api/microsoft.analysisservices.tabular)** 名前空間は、表形式モードのインスタンスとモデルを管理します。 
+- [Analysis Services Management Objects (AMO)](/dotnet/api/) は、2 つ目のアセンブリ (**Microsoft.AnalysisServices.Core.dll**) を含めるためにリファクタリングされます。
 
-[Analysis Services エンジン (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services) に関する記事を参照してください。 
+[Analysis Services エンジン (SSAS)](/analysis-services/what-s-new-in-analysis-services) に関する記事を参照してください。 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
 - **Always On 可用性グループ**のサポート
@@ -97,13 +97,13 @@ Microsoft は、このリリースで Reporting Services を全面的に改良�
 [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) に関する記事を参照してください。
 
 ## <a name="next-steps"></a>次のステップ   
-- [SQL Server セットアップ](../database-engine/install-windows/installation-for-sql-server-2016.md)   
+- [SQL Server セットアップ](../database-engine/install-windows/install-sql-server.md)   
 - [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md) 
 - [SQL Server 2016 データシート](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
-- [SQL Server の各エディションがサポートする機能](https://msdn.microsoft.com/library/cc645993.aspx)
+- [SQL Server の各エディションがサポートする機能](./editions-and-components-of-sql-server-2016.md)
 - [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [インストール ウィザードからの SQL Server 2016 のインストール](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [セットアップとサービスのインストール](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [セットアップとサービスのインストール](../database-engine/install-windows/install-sql-server-servicing-updates.md)
 - [新しい SQL PowerShell モジュール](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

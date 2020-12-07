@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e4ee6d69057745486ed72f00721f9ab38833ca2e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480672"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196977"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX データ操作 - UPDATE CUBE
 
 
-  UPDATE CUBE ステートメントは、SUM 集計によって親に対して集計を行うキューブ内の任意のセルにデータを書き戻すために使用します。 詳細と例については、このブログの投稿「 [Analysis Services を使用した書き戻しアプリケーションの構築 (ブログ)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)」の「割り当てについて」を参照してください。  
+  UPDATE CUBE ステートメントは、SUM 集計によって親に対して集計を行うキューブ内の任意のセルにデータを書き戻すために使用します。 詳細と例については、このブログの投稿「 [Analysis Services を使用した書き戻しアプリケーションの構築 (ブログ)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)」の「割り当てについて」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -107,8 +107,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!IMPORTANT]  
 >  更新されるセルが重ならない場合は、 **Update Isolation Level** 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Mdx&#41;&#40;MDX データ操作ステートメント ](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

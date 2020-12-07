@@ -22,14 +22,14 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d8dd7099a8460d72104a3e6616d75bc5586c82c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d9a264d6b5248f4033dd1bd3e282de4872cd2eb6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718056"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130395"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)
 
@@ -64,11 +64,11 @@ ms.locfileid: "85718056"
 
   
 ## <a name="media-families"></a>メディア ファミリ  
- *メディア ファミリ*とは、ミラー化されていない単一のデバイスまたはメディア セット内のミラー化されている一連のデバイスで作成されたバックアップの集合です。 メディア セット用に使用されているバックアップ デバイスの数によって、メディア セット内のメディア ファミリの数が決まります。 たとえば、ミラー化されていない 2 つのバックアップ デバイスを使用しているメディア セットには、2 つのメディア ファミリが含まれます。  
+ *メディア ファミリ* とは、ミラー化されていない単一のデバイスまたはメディア セット内のミラー化されている一連のデバイスで作成されたバックアップの集合です。 メディア セット用に使用されているバックアップ デバイスの数によって、メディア セット内のメディア ファミリの数が決まります。 たとえば、ミラー化されていない 2 つのバックアップ デバイスを使用しているメディア セットには、2 つのメディア ファミリが含まれます。  
   
 ミラー化メディア セットでは、各メディア ファミリがミラー化されます。 たとえば、6 つのバックアップ デバイスを使用して 1 つのメディア セットをフォーマットし、そのメディア セットで 2 つのミラーが使用されている場合は、3 つのメディア ファミリがあります。各ファミリには、2 つの同等のバックアップ データ コピーが含まれています。 ミラー化メディア セットの詳細については、[ミラー化バックアップ メディア セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」を参照してください。  
   
- メディア ファミリ内の各テープまたはディスクには、 *メディア シーケンス番号*が割り当てられています。 ディスクのメディア シーケンス番号は常に 1 です。 テープ メディア ファミリでは、先頭テープのシーケンス番号が 1、2 番目のテープのシーケンス番号が 2 のように割り当てられます。 詳細については、このトピックの「 [メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。
+ メディア ファミリ内の各テープまたはディスクには、 *メディア シーケンス番号* が割り当てられています。 ディスクのメディア シーケンス番号は常に 1 です。 テープ メディア ファミリでは、先頭テープのシーケンス番号が 1、2 番目のテープのシーケンス番号が 2 のように割り当てられます。 詳細については、このトピックの「 [メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。
   
 ## <a name="the-media-header"></a>メディア ヘッダー  
  バックアップ メディアの各ボリューム (ディスク ファイルまたはテープ) には、メディア ヘッダーが含まれています。メディア ヘッダーは、そのテープ (またはディスク) を使用する最初のバックアップ操作によって作成されます。 このヘッダーは、メディアが再フォーマットされるまでそのままの状態で維持されます。  
@@ -217,7 +217,7 @@ GO
   
 -   メディア上の既存のバックアップ セットが失効していない (SKIP が指定されている場合、有効期限はチェックされません)。  
   
-     有効期限は、バックアップの有効期間の完了日を指定しており、期限を過ぎると別のバックアップで上書きできるようになります。 有効期限はバックアップの作成時に指定できます。 既定では、有効期限は **sp_configure** で設定された **media retention**オプションによって決まります。 詳細については、「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」を参照してください。  
+     有効期限は、バックアップの有効期間の完了日を指定しており、期限を過ぎると別のバックアップで上書きできるようになります。 有効期限はバックアップの作成時に指定できます。 既定では、有効期限は **sp_configure** で設定された **media retention** オプションによって決まります。 詳細については、「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」を参照してください。  
   
 -   メディア名が指定されても、バックアップ メディア上の名前とは一致していない。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 544d64a8c81342fbb3592371098a5e2ddec60ee5
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 11ca08618f0b8d7675e8ec74ec259d4225d44aba
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680697"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080621"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>方法:複数のアクティブな結果セット (MARS) を無効にする
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88680697"
   
     接続は、結果が保留中のステートメントがあるために、この操作を処理できません。  他のクエリが接続を使用できるようにするには、すべての結果をフェッチするか、ステートメントをキャンセルまたは解放します。 MultipleActiveResultSets 接続オプションの詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="sqlsrv-example"></a>SQLSRV の例  
 次の例は [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の SQLSRV ドライバーを使用して、MARS サポートを無効にする方法を示しています。  
   
 ```  
@@ -60,7 +60,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="pdo_sqlsrv-example"></a>PDO_SQLSRV の例  
 次の例は、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の PDO_SQLSRV ドライバーを使用して、MARS サポートを無効にする方法を示しています。  
   
 ```  

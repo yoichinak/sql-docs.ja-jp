@@ -21,10 +21,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cd88a7f40787ecc33d99fe0c749c477f23b526a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88496145"
 ---
 # <a name="http-connection-manager"></a>HTTP 接続マネージャー
@@ -36,7 +36,7 @@ ms.locfileid: "88496145"
   
  HTTP 接続マネージャーをパッケージに追加するときは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、実行時に HTTP 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの **Connections** コレクションに追加します。  
   
- 接続マネージャーの **ConnectionManagerType** プロパティは、 **HTTP**に設定されます。  
+ 接続マネージャーの **ConnectionManagerType** プロパティは、 **HTTP** に設定されます。  
   
  HTTP 接続マネージャーは、次の方法で構成できます。  
   

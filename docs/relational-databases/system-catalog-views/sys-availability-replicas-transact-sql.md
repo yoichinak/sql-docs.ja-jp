@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 645d927a66deba3d19c44872a28abc16b2054fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc41c7e1a848ffd7b57012f0fbb1093a9115da3e
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539739"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498264"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,10 +57,10 @@ WSFC フェールオーバー クラスター内の AlwaysOn 可用性グルー�
 |**modify_date**|**datetime**|レプリカが最後に変更された日付。<br /><br /> NULL = このサーバーインスタンスにレプリカがありません。|  
 |**backup_priority**|**int**|同じ可用性グループ内の他のレプリカと比較して、このレプリカでバックアップを実行する優先順位を表す、ユーザー指定の値。 値は 0 ～ 100 の範囲の整数です。<br /><br /> 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。|  
 |**read_only_routing_url**|**nvarchar (256)**|読み取り専用可用性レプリカの接続エンドポイント (URL) です。 詳細については、このトピックの後の「 [可用性グループの読み取り専用ルーティングの構成 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)など) を含め、セカンダリ レプリカをホストするサーバー インスタンス上の読み書き可能なデータベースには書き込むことができます。|  
-|**seeding_mode**|**tinyint**|つぎのいずれかです。 </br></br> 0: 手動 </br></br> 1: 自動|
-|**seeding_mode_desc**|**nvarchar(60)**|シード処理モードについて説明します。 </br></br> MANUAL </br></br> AUTOMATIC|
+|**seeding_mode**|**tinyint**|つぎのいずれかです。 </br></br> 0: 自動 </br></br> 1: 手動|
+|**seeding_mode_desc**|**nvarchar(60)**|シード処理モードについて説明します。 </br></br> AUTOMATIC </br></br>MANUAL|
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバー インスタンスに対する VIEW ANY DEFINITION 権限が必要です。  

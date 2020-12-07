@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: 0437880dbcf3bef50184daa9e52f8eba2a7e31b4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875561"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257182"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのオフライン展開を実行する
 
@@ -77,7 +77,6 @@ ms.locfileid: "89875561"
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server-controller**
@@ -121,7 +120,7 @@ ms.locfileid: "89875561"
 
 ## <a name="install-tools-offline"></a>ツールをオフラインでインストールする
 
-ビッグ データ クラスターの展開には、**Python**、`azdata`、および **kubectl** など、いくつかのツールが必要です。 これらのツールをオフライン サーバーにインストールするには、次の手順に従います。
+ビッグ データ クラスターの展開には、**Python**、[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]、および **kubectl** など、いくつかのツールが必要です。 これらのツールをオフライン サーバーにインストールするには、次の手順に従います。
 
 ### <a name="install-python-offline"></a><a id="python"></a> Python をオフラインでインストールする
 
@@ -143,7 +142,7 @@ ms.locfileid: "89875561"
 
 ### <a name="install-azdata-offline"></a><a id="azdata"></a> azdata をオフラインでインストールする
 
-1. インターネットにアクセスでき、[Python](https://wiki.python.org/moin/BeginnersGuide/Download) があるコンピューターで、次のコマンドを実行し、すべての `azdata` パッケージを現在のフォルダーにダウンロードします。
+1. インターネットにアクセスでき、[Python](https://wiki.python.org/moin/BeginnersGuide/Download) があるコンピューターで、次のコマンドを実行し、すべての [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] パッケージを現在のフォルダーにダウンロードします。
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -167,7 +166,7 @@ ms.locfileid: "89875561"
 
 ## <a name="deploy-from-private-repository"></a>プライベート リポジトリから展開する
 
-プライベート リポジトリから展開するには、[展開ガイド](deployment-guidance.md)に記載されている手順を使用しますが、プライベート Docker リポジトリ情報を指定するカスタムの展開構成ファイルを使用します。 次の `azdata` コマンドは、`control.json` という名前のカスタム展開構成ファイルの Docker 設定を変更する方法を示しています。
+プライベート リポジトリから展開するには、[展開ガイド](deployment-guidance.md)に記載されている手順を使用しますが、プライベート Docker リポジトリ情報を指定するカスタムの展開構成ファイルを使用します。 次の [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] コマンドは、`control.json` という名前のカスタム展開構成ファイルの Docker 設定を変更する方法を示しています。
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

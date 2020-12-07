@@ -1,6 +1,6 @@
 ---
-description: dm_os_sys_info (Transact-sql)
-title: dm_os_sys_info (Transact-sql) |Microsoft Docs
+description: sys.dm_os_sys_info (Transact-sql)
+title: sys.dm_os_sys_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56df59d84dafd1f19e74cadcca586e4da9e1c084
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5419919b14c15615cb84d124387c98e9ba2e90a5
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539355"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834432"
 ---
-# <a name="sysdm_os_sys_info-transact-sql"></a>dm_os_sys_info (Transact-sql)
+# <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   コンピューターに関する有用な情報のその他のセット、およびによって使用および使用されるリソースについての情報を返し [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ます。  
   
-> **注:** またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_sys_info**という名前を使用します。  
+> **注:** またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **sys.dm_pdw_nodes_os_sys_info**という名前を使用します。  
   
 |列名|データ型|説明とバージョン固有の注意事項 |  
 |-----------------|---------------|-----------------|  
@@ -68,7 +68,7 @@ ms.locfileid: "89539355"
 |**process_kernel_time_ms**|**bigint**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> すべて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスレッドがカーネルモードで費やした合計時間 (ミリ秒単位)。 この値にはサーバー上のすべてのプロセッサの時間が含まれるため、単一のプロセッサ クロックより大きくなる場合があります。 NULL 値は許可されません。|  
 |**process_user_time_ms**|**bigint**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドがユーザー モードで費やした合計時間 (ミリ秒)。 この値にはサーバー上のすべてのプロセッサの時間が含まれるため、単一のプロセッサ クロックより大きくなる場合があります。 NULL 値は許可されません。|  
 |**time_source**|**int**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ウォールクロック時間を取得するために使用している API を示します。 NULL 値は許可されません。<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
-|**time_source_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> **Time_source**列について説明します。 NULL 値は許可されません。<br /><br /> QUERY_PERFORMANCE_COUNTER = [Queryperformancecounter](https://go.microsoft.com/fwlink/?LinkId=163095) API は、ウォールクロック時間を取得します。<br /><br /> MULTIMEDIA_TIMER = ウォールクロック時間を取得する [マルチメディアタイマー](https://go.microsoft.com/fwlink/?LinkId=163094) API。|  
+|**time_source_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> **Time_source**列について説明します。 NULL 値は許可されません。<br /><br /> QUERY_PERFORMANCE_COUNTER = [Queryperformancecounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) API は、ウォールクロック時間を取得します。<br /><br /> MULTIMEDIA_TIMER = ウォールクロック時間を取得する [マルチメディアタイマー](/previous-versions//ms713418(v=vs.85)) API。|  
 |**virtual_machine_type**|**int**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が仮想化環境で実行されているかどうかを示します。  NULL 値は許可されません。<br /><br /> 0 = NONE<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
 |**virtual_machine_type_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> **Virtual_machine_type**列について説明します。 NULL 値は許可されません。<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は仮想マシン内で実行されていません。<br /><br /> ハイパーバイザー = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ハイパーバイザーを実行する os によってホストされる仮想マシン内で実行されている (ハードウェア支援による仮想化を採用したホスト os)。<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Microsoft VIRTUAL PC などのハードウェアアシスタントを使用しない OS によってホストされる仮想マシン内で実行されています。|  
 |**softnuma_configuration**|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> NUMA ノードの構成方法を指定します。 NULL 値は許可されません。<br /><br /> 0 = OFF はハードウェアの既定値を示します。<br /><br /> 1 = 自動ソフト NUMA<br /><br /> 2 = レジストリを使用した手動ソフト NUMA|  
@@ -90,7 +90,3 @@ ms.locfileid: "89539355"
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
-  
-
-
-

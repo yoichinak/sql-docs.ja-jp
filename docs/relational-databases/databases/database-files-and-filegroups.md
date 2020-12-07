@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 58c4cd1b0f3df19365772aa3bee751ac73a7cd1a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756264"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497003"
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "85756264"
 |セカンダリ|省略可能なユーザー定義データ ファイル。 各ファイルを異なるディスク ドライブに配置することにより、複数のディスクにデータを分散できます。 セカンダリ データ ファイルに推奨されるファイル名拡張子は .ndf です。|  
 |トランザクション ログ|このログには、データベースの復旧に使用するログ情報が格納されます。 1 つのデータベースにトランザクション ログ ファイルが少なくとも 1 つ必要です。 トランザクション ログに推奨されるファイル名拡張子は .ldf です。|  
   
- たとえば、**Sales** という単純なデータベースには、データとオブジェクトをすべて格納するプライマリ ファイルが 1 つと、トランザクション ログ情報を格納するログ ファイルが 1 つ含まれます。 プライマリ ファイルを 1 つとセカンダリ ファイルを 5 つ含む **Orders** というより複雑なデータベースを作成できます。 データベース内のデータとオブジェクトは 6 つすべてのファイルに分散され、4 つのログ ファイルにトランザクション ログ情報が含まれます。  
+ たとえば、 **Sales** という単純なデータベースには、データとオブジェクトをすべて格納するプライマリ ファイルが 1 つと、トランザクション ログ情報を格納するログ ファイルが 1 つ含まれます。 プライマリ ファイルを 1 つとセカンダリ ファイルを 5 つ含む **Orders** というより複雑なデータベースを作成できます。 データベース内のデータとオブジェクトは 6 つすべてのファイルに分散され、4 つのログ ファイルにトランザクション ログ情報が含まれます。  
   
  既定では、単一ディスク システムを処理するため、データとトランザクション ログは同一のドライブおよびパス上に配置されます。 この選択は、実稼働環境では最適ではない場合があります。 そのため、データとログ ファイルは別のディスクに配置することをお勧めします。  
 
@@ -212,13 +212,14 @@ GO
 - 同じ結合クエリで使用する各テーブルは別のファイル グループに配置してください。 この手順により、結合されるデータが並列ディスク I/O によって検索されるので、パフォーマンスが向上します。
 - アクセス頻度が高いテーブルとそれらのテーブルに属する非クラスター化インデックスは、別々のファイル グループに配置してください。 異なるファイル グループを使用すると、ファイルが別の物理ディスク上にある場合に並列 I/O が行われるので、パフォーマンスが向上します。
 - トランザクション ログ ファイルは、他のファイルやファイル グループと同じ物理ディスク上に配置しないでください。
+- [Diskpart](/windows-server/administration/windows-commands/diskpart) などのツールを使用して、データベース ファイルが存在するボリュームまたはパーティションを拡張する必要がある場合は、まずすべてのシステム データベースとユーザー データベースをバックアップし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを停止してください。 また、ディスク ボリュームが正常に拡張されたら、[`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) コマンドを実行して、ボリューム上にあるすべてのデータベースの物理的な整合性を確保することを検討してください。
 
 トランザクション ログ ファイル管理の推奨事項については、「[トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)」を参照してください。   
 
 ## <a name="related-content"></a>関連コンテンツ  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)    
  [ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
  [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
  [ページとエクステントのアーキテクチャ ガイド](../../relational-databases/pages-and-extents-architecture-guide.md)    
- [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     
+ [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)

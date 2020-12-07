@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216770"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810008"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 - `ROWGUIDCOL` プロパティを持つ列。  
 - 非 BIN2 照合順序を持つ文字列 (`varchar`、`char` など) 列。  
 - ランダム化された暗号化を使用するときのクラスター化インデックスおよび非クラスター化インデックスのキーである列 (決定論的な暗号化がサポートされています)。
-- ランダム化された暗号化を使用するときのフルテキスト インデックスのキーである列 (決定論的な暗号化がサポートされています)。  
+- フルテキスト インデックスに含まれる列 (Always Encrypted で[フルテキスト検索](../../../relational-databases/search/full-text-search.md)はサポートされていません)。  
 - 計算列。
 - 計算列によって参照される列 (式が Always Encrypted でサポート外の演算を実行するとき)。  
 - スパース列セット。  

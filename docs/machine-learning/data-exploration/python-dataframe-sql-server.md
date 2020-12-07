@@ -2,19 +2,19 @@
 title: Python データフレームを SQL テーブルに挿入する
 titleSuffix: SQL machine learning
 description: データフレームから SQL テーブルにデータを挿入する方法。
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2700e40bafa2d1283b4a998362eca88f9bbf0459
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 85980bf7bc69190a0e7ae75ee74336a62afd12c6
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226850"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870247"
 ---
 # <a name="insert-python-dataframe-into-sql-table"></a>Python データフレームを SQL テーブルに挿入する
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ ms.locfileid: "91226850"
 ## <a name="prerequisites"></a>前提条件
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server : インストール方法については、[Windows 用](../../database-engine/install-windows/install-sql-server.md)または[Linux 用](../../linux/sql-server-linux-overview.md)の SQL Server に関するページを参照してください。
+* [Windows 用](../../database-engine/install-windows/install-sql-server.md)または [Linux 用の SQL Server](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database。 サインアップ方法については、[Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal) に関するページを参照してください
+* [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance。 サインアップ方法については、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart) に関するページを参照してください。
+* [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * サンプル データベースを Azure SQL Managed Instance に復元するための [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
-* Azure Data Studio。 インストール方法については、[Azure Data Studio](../../azure-data-studio/what-is.md) に関するページを参照してください。
+* Azure Data Studio。 インストールするには、[Azure Data Studio](../../azure-data-studio/what-is.md) に関するページを参照してください。
 
 * この記事で使用されているサンプル データを取得するために、[サンプル データベースを復元](../../samples/adventureworks-install-configure.md)します。
 

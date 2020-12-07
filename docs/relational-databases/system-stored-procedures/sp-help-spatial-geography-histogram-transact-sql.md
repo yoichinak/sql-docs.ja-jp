@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e1ba161b0baefa42b68960c26941926fb226288
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0c7368b8991fe442cab30b724532e8899502e18f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546103"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809393"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public** ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SSMS 空間タブでは、結果がグラフィカルに表示されます。 空間ウィンドウに対して結果にクエリを実行すると、結果項目の概数を取得できます。  
   
 > [!NOTE]  
@@ -79,6 +79,5 @@ EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = S
 ```  
   
 ## <a name="see-also"></a>参照  
- [空間インデックスストアドプロシージャ &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
-  
+ [空間インデックスストアドプロシージャ &#40;Transact-sql&#41;](./spatial-index-stored-procedures-arguments-and-properties.md)  
   

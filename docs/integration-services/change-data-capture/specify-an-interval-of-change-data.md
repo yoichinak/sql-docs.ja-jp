@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f82a0fe161a12f4a7d20b24218bd0347cdf6187
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960567c1278f1ed4e5da60a018c330591cd3627d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457646"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91724976"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
 
@@ -113,9 +113,8 @@ ms.locfileid: "88457646"
  **次のトピック:** [データの変更の準備ができているかどうかを判断する](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>関連項目  
- [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [パッケージで変数を使用する](../integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md)   
  [スクリプト タスク](../../integration-services/control-flow/script-task.md)  
-  
   

@@ -20,11 +20,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43b05f32ecaf1cb1554180fce9b1591dc02c7358
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115556"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118947"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 
 ## <a name="arguments"></a>引数
 *string_value*  
-他の値に連結する文字列値です。 `CONCAT` 関数では、2 個以上、254 個未満の *string_value*引数が必要です *。*
+他の値に連結する文字列値です。 `CONCAT` 関数では、2 個以上、254 個未満の *string_value* 引数が必要です *。*
   
 ## <a name="return-types"></a>戻り値の型  
 *string_value*  

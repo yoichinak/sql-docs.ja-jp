@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178710"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196251"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R モデルを構築して SQL Server に保存する (チュートリアル)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-このステップでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で機械学習モデルを構築し、モデルを保存する方法について説明します。 モデルを保存することにより、システム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) または [PREDICT (T-SQL) 関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードから直接呼び出すことができます。
+このステップでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で機械学習モデルを構築し、モデルを保存する方法について説明します。 モデルを保存することにより、システム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) または [PREDICT (T-SQL) 関数](../../t-sql/queries/predict-transact-sql.md)を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードから直接呼び出すことができます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -67,7 +67,7 @@ GO
 
 このモデルは、タクシー運転手が特定の乗車でチップを受け取る可能性が高いかどうかを予測する二項分類子です。 前のレッスンで作成したデータ ソースを使用し、ロジスティック回帰を使用してチップ分類子をトレーニングします。
 
-1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) パッケージに含まれる **rxLogit** 関数を呼び出し、ロジスティック回帰モデルを作成します。 
+1. [RevoScaleR](/r-server/r-reference/revoscaler/rxlogit) パッケージに含まれる **rxLogit** 関数を呼び出し、ロジスティック回帰モデルを作成します。 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -109,7 +109,7 @@ GO
 
 モデルが構築されたので、そのモデルを使用して運転手が特定のドライブでチップを受け取る可能性が高いかどうかを予測できます。
 
-1. 最初に、[RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 関数を使用して、スコアリング結果を格納するためのデータ ソース オブジェクトを定義します。
+1. 最初に、[RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) 関数を使用して、スコアリング結果を格納するためのデータ ソース オブジェクトを定義します。
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -123,7 +123,7 @@ GO
   
     + 予測値を格納するテーブルを作成するには、rxSqlServer データ関数を実行する SQL ログインが、データベースの DDL 権限を持っている必要があります。 ログインでテーブルを作成できない場合、ステートメントは失敗します。
 
-2. [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 関数を呼び出して結果を生成します。
+2. [rxPredict](/r-server/r-reference/revoscaler/rxpredict) 関数を呼び出して結果を生成します。
 
     ```R
     rxPredict(modelObject = logitObj,
@@ -138,7 +138,7 @@ GO
 
 ## <a name="plot-model-accuracy"></a>モデル精度のプロット
 
-モデルの精度を把握するには、[rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 関数を使用して受信者側の動作曲線をプロットします。 rxRoc は、リモート コンピューティング コンテキストをサポートする RevoScaleR パッケージが提供する新しい関数の 1 つなので、2 つのオプションがあります。
+モデルの精度を把握するには、[rxRoc](/r-server/r-reference/revoscaler/rxroc) 関数を使用して受信者側の動作曲線をプロットします。 rxRoc は、リモート コンピューティング コンテキストをサポートする RevoScaleR パッケージが提供する新しい関数の 1 つなので、2 つのオプションがあります。
 
 + rxRoc 関数を使用してリモート コンピューティング コンテキストでプロットを実行し、プロットをローカル クライアントに返すことができます。
 
@@ -173,7 +173,7 @@ GO
 
 コマンド プロンプトで `rxGetComputeContext()` を実行することで、コンピューティング コンテキストがローカルであることを確認できます。 戻り値は "RxLocalSeq コンピューティング コンテキスト" にする必要があります。
 
-1. ローカル コンピューティング コンテキストでは、プロセスはほぼ同じです。 [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) 関数を使用して、指定したデータをローカルの R 環境に読み込みます。
+1. ローカル コンピューティング コンテキストでは、プロセスはほぼ同じです。 [rxImport](/r-server/r-reference/revoscaler/rximport) 関数を使用して、指定したデータをローカルの R 環境に読み込みます。
 
     ```R
     scoredOutput = rxImport(scoredOutput)

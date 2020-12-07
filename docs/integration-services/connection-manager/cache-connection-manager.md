@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074aa791a20eed06241aef1087f5ac355f8ea493
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477948"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123711"
 ---
 # <a name="cache-connection-manager"></a>キャッシュ接続マネージャー
 
@@ -32,7 +32,7 @@ ms.locfileid: "88477948"
  キャッシュ変換を使用して、データ フロー内の接続されているデータ ソースのデータをキャッシュ接続マネージャーに書き込みます。 パッケージ内の参照変換は、データに対する参照を実行します。  
   
 > [!NOTE]  
->  キャッシュ接続マネージャーでは、バイナリ ラージ オブジェクト (BLOB) データ型 DT_TEXT、DT_NTEXT、および DT_IMAGE はサポートされません。 参照データセットに BLOB データ型が含まれている場合、パッケージを実行するとコンポーネントは失敗します。 **[キャッシュ接続マネージャー エディター]** を使用して、列のデータ型を変更できます。 詳細については、「 [キャッシュ接続マネージャー エディター](cache-connection-manager-editor.md)」を参照してください。  
+>  キャッシュ接続マネージャーでは、バイナリ ラージ オブジェクト (BLOB) データ型 DT_TEXT、DT_NTEXT、および DT_IMAGE はサポートされません。 参照データセットに BLOB データ型が含まれている場合、パッケージを実行するとコンポーネントは失敗します。 **[キャッシュ接続マネージャー エディター]** を使用して、列のデータ型を変更できます。 詳細については、「 [キャッシュ接続マネージャー エディター]()」を参照してください。  
   
 > [!NOTE]  
 >  パッケージの保護レベルは、キャッシュ ファイルに適用されません。 キャッシュ ファイルに機密情報が含まれている場合は、アクセス制御リスト (ACL) を使用して、ファイルを格納している場所またはフォルダーへのアクセスを制限します。 特定のアカウントに対してのみアクセスを有効にする必要があります。 詳細については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」を参照してください。  
@@ -133,5 +133,4 @@ ms.locfileid: "88477948"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
-  
   

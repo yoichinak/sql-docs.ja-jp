@@ -19,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dd9ba41579e8d1c0bac76bb634e9074bf9e5c670
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536642"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955863"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -83,9 +83,9 @@ RECONFIGURE
 |**minimum**|**int**|構成オプションの最小値。|  
 |**maximum**|**int**|構成オプションの最大値。|  
 |**config_value**|**int**|**Sp_configure** ( **sys.configurations**値) を使用して構成オプションが設定された値。 これらのオプションの詳細については、次を参照してください。 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) および [sys.configUrations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)です。|  
-|**run_value**|**int**|構成オプションの現在実行中の値 ( **sys.configurations 値 value_in_use**)。<br /><br /> 詳細については、「 [ transact-sql&#41;&#40;sys.configurations ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)を参照してください。|  
+|**run_value**|**int**|構成オプションの現在実行中の値 ( **sys.configurations.value_in_use**)。<br /><br /> 詳細については、「 [ transact-sql&#41;&#40;sys.configurations ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)を参照してください。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  サーバーレベルの設定を表示または変更するには、 **sp_configure** を使用します。 データベースレベルの設定を変更するには、ALTER DATABASE を使用します。 現在のユーザー セッションのみに影響する設定を変更するには、SET ステートメントを使用します。  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -112,7 +112,10 @@ RECONFIGURE
  詳細については、「 [transact-sql&#41;の再構成 &#40;](../../t-sql/language-elements/reconfigure-transact-sql.md)」を参照してください。  
   
 ## <a name="advanced-options"></a>詳細オプション  
- **Affinity mask**や**recovery interval**などの一部の構成オプションは、詳細設定オプションとして指定されています。 既定では、これらのオプションを表示および変更することはできません。 使用できるようにするには、 **ShowAdvancedOptions** 構成オプションを1に設定します。  
+ **Affinity mask**や**recovery interval**などの一部の構成オプションは、詳細設定オプションとして指定されています。 既定では、これらのオプションを表示および変更することはできません。 使用できるようにするには、 **[詳細オプションの表示** ] 構成オプションを1に設定します。 
+ 
+> [!CAUTION]  
+> **[詳細オプションを表示**する] オプションが1に設定されている場合、この設定はすべてのユーザーに適用されます。 この状態は一時的に使用することをお勧めします。また、詳細オプションの表示が必要なタスクが完了したら、0に戻すことをお勧めします。  
   
  構成オプションとその設定の詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   

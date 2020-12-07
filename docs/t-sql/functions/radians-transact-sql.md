@@ -19,12 +19,12 @@ ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a85032d93f1326bacca6727c1923c70e6824eff7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c372955137f2a7aa1e99814aef2dbd0284d15a95
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88309868"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380690"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,17 +43,17 @@ RADIANS ( numeric_expression )
 
 ## <a name="arguments"></a>引数
  *numeric_expression*  
- **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ **bit** データ型を除く、真数または概数データ型カテゴリの [式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="return-types"></a>戻り値の型  
- *numeric_expression*と同じ型を返します。  
+ *numeric_expression* と同じ型を返します。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-radians-to-show-00"></a>A. RADIANS を使用して 0.0 を表示する  
  次の例では、ラジアンに変換する数値式が `RADIANS` 関数にとって小さすぎる値であるため、`0.0` という結果を返します。  
   
-```  
+```sql  
 SELECT RADIANS(1e-307)  
 GO  
 ```  
@@ -69,7 +69,7 @@ GO
 ### <a name="b-using-radians-to-return-the-equivalent-angle-of-a-float-expression"></a>B. RADIANS を使って float 式と同等の角度を返す。  
  次の例では `float` 式を取得し、指定した角度の `RADIANS` を返します。  
   
-```  
+```sql  
 -- First value is -45.01.  
 DECLARE @angle FLOAT  
 SET @angle = -45.01  

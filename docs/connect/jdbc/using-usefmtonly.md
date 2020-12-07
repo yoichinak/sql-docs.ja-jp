@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: da61e1881d4c7df01cdc92ad41f6a78c95dda8b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 509c88230b8a09933291e5c09d528370cf06caca
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450042"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081531"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>UseFmtOnly を使用した ParameterMetaData の取得
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -91,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  この機能では、`SELECT/INSERT/UPDATE/DELETE` クエリのみサポートされます。 クエリは、サポートされている 4 つのキーワードのいずれか、または[共通テーブル式](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)で始まり、サポートされているいずれかのクエリがその後ろに続く必要があります。 共通テーブル式内のパラメーターはサポートされていません。
+>  この機能では、`SELECT/INSERT/UPDATE/DELETE` クエリのみサポートされます。 クエリは、サポートされている 4 つのキーワードのいずれか、または[共通テーブル式](../../t-sql/queries/with-common-table-expression-transact-sql.md)で始まり、サポートされているいずれかのクエリがその後ろに続く必要があります。 共通テーブル式内のパラメーターはサポートされていません。
 
 ## <a name="known-issues"></a>既知の問題
   現在、機能には、SQL の解析ロジックの欠陥が原因である問題がいくつかあります。 これらの問題は、機能の今後の更新プログラムで解決される可能性があります。回避策と合わせて以下に説明します。
@@ -141,5 +141,4 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 
 ## <a name="see-also"></a>関連項目  
  [接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)  
-  
   

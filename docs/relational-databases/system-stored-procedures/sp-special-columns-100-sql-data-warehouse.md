@@ -1,6 +1,6 @@
 ---
-description: sp_special_columns_100 (SQL Data Warehouse)
-title: sp_special_columns_100 (SQL Data Warehouse) |Microsoft Docs
+description: sp_special_columns_100 (Azure Synapse Analytics)
+title: sp_special_columns_100 (Azure Synapse Analytics)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
@@ -14,24 +14,24 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 002524d834b8036c353b096b0a4fa1fa37875b4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03397db88a1a99e2fbf661662311537671bfa862
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473805"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059450"
 ---
-# <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
+# <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   テーブル内の行を一意に識別する、最適な列のセットを返します。 では、トランザクションによって行の値が更新されると、自動的に更新される列も返されます。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
      [ , [ @table_owner = ] 'table_owner' ]   
@@ -41,7 +41,9 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
      [ , [ @nullable = ] 'nullable' ]   
      [ , [ @ODBCVer = ] 'ODBCVer' ]   
 [ ; ]  
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>引数  
  [ @table_name =] '*table_name*'  
@@ -68,14 +70,14 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  使用する ODBC のバージョンを指定します。 *Odbcver* は **int (** 4 **)**,、既定値は2です。 既定値は ODBC Version 2.0 を示します。 Odbc バージョン2.0 と ODBC バージョン3.0 の相違点の詳細については、odbc version 3.0 の ODBC Sqlsee Columns の仕様を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|行 ID の実際のスコープ。 0、1、または2を指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に0を返します。 このフィールドは常に値を返します。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID は、その行に位置している場合にのみ有効であることが保証されます。 その行が別のトランザクションによって更新または削除された場合は、後でその行 ID を使って再度選択しても行は返されません。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID は、現在のトランザクションの間有効であることが保証されます。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID は、セッションの間 (トランザクションの境界を越えて) 有効であることが保証されます。|  
-|COLUMN_NAME|**sysname**|返された *テーブル*の各列の列名。 このフィールドは常に値を返します。|  
+|COLUMN_NAME|**sysname**|返された *テーブル* の各列の列名。 このフィールドは常に値を返します。|  
 |DATA_TYPE|**smallint**|ODBC SQL データ型。|  
 |TYPE_NAME|**sysname**|データソースに依存するデータ型の名前。たとえば、 **char**、 **varchar**、 **money**、 **text**などです。|  
 |PRECISION|**Int**|データソースの列の有効桁数。 このフィールドは常に値を返します。|  
@@ -98,8 +100,8 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 EXEC sp_special_columns_100 @table_name = 'FactFinance';  
 ```  
   
-## <a name="see-also"></a>参照  
- [ストアドプロシージャの SQL Data Warehouse](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
+## <a name="see-also"></a>関連項目  
+ [Azure Synapse Analytics ストアドプロシージャ](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
   
   
 

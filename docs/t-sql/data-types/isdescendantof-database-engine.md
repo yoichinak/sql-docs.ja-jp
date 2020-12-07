@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b6d9d75083472b347a7cf78641aeb1bbe202dae2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 8223928a7c0b537a26084eaa434567845e521719
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111271"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92037487"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (データベース エンジン)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -101,8 +101,7 @@ this.IsDescendantOf(Parent)
 ```  
   
 ## <a name="see-also"></a>参照
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

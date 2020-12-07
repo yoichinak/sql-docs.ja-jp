@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5799d85c7978505503fcbd56aa85eb693da6665e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 69e968fbeb5f02b98393a466eadb96922b581916
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346438"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195870"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードの手順
 
@@ -60,6 +60,4 @@ ms.locfileid: "88346438"
 
 -   **ウィザードを起動します。** ウィザードを実行する準備が整い、開始方法について知りたい場合は、「[SQL Server インポートおよびエクスポート ウィザードを起動する](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)」を参照してください。
 
--   **ウィザードを取得します。** ウィザードを実行する必要はあるが、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしていない場合は、SQL Server Data Tools (SSDT) をインストールすることで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードをインストールできます。 詳細については、「 [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)」を参照してください。
-
-
+-   **ウィザードを取得します。** ウィザードを実行する必要はあるが、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしていない場合は、SQL Server Data Tools (SSDT) をインストールすることで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードをインストールできます。 詳細については、「 [SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。

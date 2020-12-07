@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cb55f49a063ba58b526cccafbd2f400f4f889f17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57cf454c5d13bf4a40325024e51bd19c4d56c446
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454284"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985125"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>SSMA for DB2 Console (DB2ToSQL) を使用したはじめに
 このセクションでは、DB2 コンソールアプリケーションを起動して開始する手順について説明します。 また、ここでは、一般的な SSMA コンソールの出力ウィンドウで使用される規則についても説明します。  
@@ -42,9 +42,9 @@ Windows システムでコンソールが正常に起動したら、次の手順
   
 追加機能:  
   
-1.  [パスワードを管理](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) し、他のウィンドウコンピューターにエクスポート/インポートする  
+1.  [パスワードを管理](./managing-passwords-db2tosql.md) し、他のウィンドウコンピューターにエクスポート/インポートする  
   
-2.  [レポートを生成](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) して、評価/変換とデータ移行のための詳細な xml 出力レポートを表示します。 更新および同期コマンドについては、詳細なエラーレポートを生成することもできます。  
+2.  [レポートを生成](./generating-reports-db2tosql.md) して、評価/変換とデータ移行のための詳細な xml 出力レポートを表示します。 更新および同期コマンドについては、詳細なエラーレポートを生成することもできます。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA コンソールの出力規則  
 SSMA スクリプトコマンドとオプションを実行すると、コンソールプログラムによって結果とメッセージ (情報、エラーなど) がコンソールに表示されるか、必要に応じて xml 出力ファイルにリダイレクトされます。 出力の各種類のメッセージは、一意の色で表されます。 たとえば、ホワイトカラーのテキストメッセージは、スクリプトファイルのコマンドを表します。緑色の色は、ユーザー入力のプロンプトを表します。  
@@ -57,11 +57,10 @@ SSMA スクリプトコマンドとオプションを実行すると、コンソ
 |---------|---------------|  
 |[赤]|実行中に致命的なエラーが発生した|  
 |グレー|日付と時刻のタイムスタンプ、ユーザーへのメッセージ|  
-|White|スクリプトファイルのコマンド、メッセージの種類|  
+|白|スクリプトファイルのコマンド、メッセージの種類|  
 |黄|警告|  
 |[緑]|ユーザー入力を要求する|  
 |シアン|操作の開始、終了、および結果|  
   
 ## <a name="see-also"></a>参照  
-[SSMA for DB2 のインストール](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
-  
+[SSMA for DB2 のインストール](./installing-ssma-for-db2-db2tosql.md)  

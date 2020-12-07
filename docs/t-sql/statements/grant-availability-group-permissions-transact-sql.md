@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c25b8f0395694bdb85cddbb5ec1bf0abf86c9d4
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ddfdccc63f826fb634edb4fcb2d75c0fa188ecfb
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483600"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498176"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>可用性グループの権限の許可 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. 可用性グループの VIEW DEFINITION 権限を許可する  
  次の例では、可用性グループ `MyAg` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して許可します。  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -113,7 +113,7 @@ GO
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. GRANT OPTION を指定して TAKE OWNERSHIP 権限を許可する  
  次の例では、可用性グループ `TAKE OWNERSHIP` での `MyAg` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` に許可します。ここでは `GRANT OPTION` を使用します。  
   
-```  
+```sql  
 USE master;  
 GRANT TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     WITH GRANT OPTION;  
@@ -123,7 +123,7 @@ GO
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>C. 可用性グループの CONTROL 権限を許可する  
  次の例では、可用性グループ `CONTROL` での `MyAg` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` に対して許可します。 CONTROL によって、ログインは可用性グループを (その可用性グループの所有者でない場合でも) 完全に制御できます。 所有権の変更については、「[ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)」をご覧ください。  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL ON AVAILABILITY GROUP::MyAg TO PKomosinski;  
 GO  

@@ -106,4 +106,4 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 
 ファイアウォールの TCP ポートをリスナー ポート用に開く必要があります。
 
-詳細については、「[データベース ミラーリング エンドポイント (SQL Server)](https://docs.microsoft.com/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017)」を参照してください。
+詳細については、「[データベース ミラーリング エンドポイント (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md?view=sql-server-2017)」を参照してください。

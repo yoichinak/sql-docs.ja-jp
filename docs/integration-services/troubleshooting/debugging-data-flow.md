@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 227414c3527633c941f7db123cd75083e1b6207b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc8ff10121320da5b291c3c10cdcdac36f0cc364
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495184"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194061"
 ---
 # <a name="debugging-data-flow"></a>データ フローのデバッグ
 
@@ -214,7 +214,7 @@ order by source_component_name desc
 9. [表示する列] 領域で、データ ビューアーに表示する列を選択します。 既定では、表示可能なすべての列が選択され、 **[表示する列]** の一覧に表示されます。 表示しない列は、選択してから左矢印をクリックして、 **[未使用の列]** の一覧に移動させます。  
   
     > [!NOTE]  
-    >  グリッドでは、DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET の各データ型を表す値は、ISO 8601 に従って書式設定された文字列として表示され、 **T** 区切りが空白区切りに置き換わります。 DT_DATE データ型および DT_FILETIME データ型を表す値には、秒の小数部を表す 7 桁が含まれています。 DT_FILETIME データ型では秒の小数部が 3 桁のみ格納されるため、残りの 4 桁についてはグリッドに 0 が表示されます。 DT_DBTIMESTAMP データ型を表す値には、秒の小数部を表す 3 桁が含まれています。 DT_DBTIME2、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET の各データ型を表す値については、秒を表す小数点以下桁数が、列のデータ型で指定された小数点以下桁数と一致します。 ISO 8601 形式の詳細については、「 [日付および時刻の形式](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)」を参照してください。 データ型について詳しくは、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」をご覧ください。  
+    >  グリッドでは、DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET の各データ型を表す値は、ISO 8601 に従って書式設定された文字列として表示され、 **T** 区切りが空白区切りに置き換わります。 DT_DATE データ型および DT_FILETIME データ型を表す値には、秒の小数部を表す 7 桁が含まれています。 DT_FILETIME データ型では秒の小数部が 3 桁のみ格納されるため、残りの 4 桁についてはグリッドに 0 が表示されます。 DT_DBTIMESTAMP データ型を表す値には、秒の小数部を表す 3 桁が含まれています。 DT_DBTIME2、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET の各データ型を表す値については、秒を表す小数点以下桁数が、列のデータ型で指定された小数点以下桁数と一致します。 ISO 8601 形式の詳細については、「 [日付および時刻の形式](../data-flow/parsing-data.md)」を参照してください。 データ型について詳しくは、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」をご覧ください。  
   
 10. **[OK]** をクリックします。  
 
@@ -274,9 +274,8 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  詳細なログ記録レベルを有効にしてデータ タップを追加すると、データ統合ソリューションが実行する I/O 操作が増大します。 そのためデータ タップは、トラブルシューティングの場合に限り追加することをお勧めします  
   
 ### <a name="video"></a>ビデオ  
- この [TechNet のビデオ](https://technet.microsoft.com/sqlserver/dn600163) は、データ タップを SQL Server 2012 SSISDB カタログに追加、使用する方法を紹介しています。パッケージをプログラム処理によってデバッグし、実行時に結果の一部をキャプチャしています。 また、データ タップの一覧および削除の方法、SSIS パッケージ内でのデータ タップの使用に関するベスト プラクティスについても説明しています。  
+ この [TechNet のビデオ](../../sql-server/index.yml) は、データ タップを SQL Server 2012 SSISDB カタログに追加、使用する方法を紹介しています。パッケージをプログラム処理によってデバッグし、実行時に結果の一部をキャプチャしています。 また、データ タップの一覧および削除の方法、SSIS パッケージ内でのデータ タップの使用に関するベスト プラクティスについても説明しています。  
  
 ## <a name="see-also"></a>参照  
  [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d087a160324ec84cbb94a73cba3ab45f36dfc29e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 62a4904a608ccfd5ed02cbf21c3342619ea32e8f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536678"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810168"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89536678"
   
 ||  
 |-|  
-|**適用対象**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
+|**適用対象**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  カーソルが実行する操作を指定する必須のパラメーターです。 *optype* には、次のいずれかの **int** 入力値が必要です。  
   
-|[値]|名前|説明|  
+|Value|名前|説明|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|は、フェッチバッファー内の1つ以上の行を更新するために使用されます。  *Rownum*で指定した行には、再度アクセスして更新します。|  
 |0x0002|DELETE|は、フェッチバッファー内の1つ以上の行を削除するために使用されます。 *Rownum*で指定した行には、再度アクセスして削除します。|  
@@ -99,7 +99,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>リターン コードの値  
  RPC を使用する場合、位置指定の DELETE または UPDATE 操作にバッファー番号0を指定すると、フェッチバッファー内のすべての行について、 *行数* が 0 (失敗) または 1 (成功) の完了メッセージが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="optype-parameter"></a>optype パラメーター  
  SETPOSITION と UPDATE、DELETE、REFRESH、または LOCK の組み合わせを除きます。または、UPDATE または DELETE のいずれかを使用する場合、 *optype* 値は相互に排他的です。  
@@ -178,5 +178,4 @@ sp_cursor  cursor, optype, rownum, table
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

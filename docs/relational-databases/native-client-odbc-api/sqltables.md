@@ -15,12 +15,12 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 735a0fa33e894f6642b6183a517da0d61123a6a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 141eca7a03b2bb6339712a2b9a1aa459b0c09ada
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420746"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868444"
 ---
 # <a name="sqltables"></a>SQLTables
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88420746"
   
  使用可能なカタログ、スキーマ、およびテーブルの種類をレポートするために、SQLTables は空の文字列 (長さゼロのバイトポインター) を特別に使用します。 空文字列は、既定値 (NULL ポインター) ではありません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 *CatalogName*パラメーターに2つの部分で構成される名前を使用して、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。 *Linked_Server_Name Catalog_Name*。  
+ > Native Client ODBC ドライバーでは、 *CatalogName*パラメーターの2部構成の名前 ( *Linked_Server_Name*) を受け入れることによって、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。  
   
  SQLTables は、名前が *TableName* に一致し、現在のユーザーが所有しているテーブルに関する情報を返します。  
   
@@ -57,7 +57,6 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQLTables 関数](https://go.microsoft.com/fwlink/?LinkId=59374)   
+ [SQLTables 関数](../../odbc/reference/syntax/sqltables-function.md)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

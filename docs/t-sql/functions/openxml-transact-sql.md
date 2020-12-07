@@ -21,10 +21,10 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ee78ea030b50ee6ab90c5df616f2bd49f163ded2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115894"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
@@ -55,9 +55,9 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
 |バイト値|説明|  
 |----------------|-----------------|  
-|**0**|既定では、**属性中心**のマッピングが使用されます。|  
-|**1**|**属性中心**のマッピングを使用します。 XML_ELEMENTS と組み合わせることができます。 この場合、最初に**属性中心**のマッピングが適用されます。 次に、**要素中心**のマッピングが残りの列に適用されます。|  
-|**2**|**要素中心**のマッピングを使用します。 XML_ATTRIBUTES と組み合わせることができます。 この場合、最初に**属性中心**のマッピングが適用されます。 次に、**要素中心**のマッピングが残りの列に適用されます。|  
+|**0**|既定では、**属性中心** のマッピングが使用されます。|  
+|**1**|**属性中心** のマッピングを使用します。 XML_ELEMENTS と組み合わせることができます。 この場合、最初に **属性中心** のマッピングが適用されます。 次に、**要素中心** のマッピングが残りの列に適用されます。|  
+|**2**|**要素中心** のマッピングを使用します。 XML_ATTRIBUTES と組み合わせることができます。 この場合、最初に **属性中心** のマッピングが適用されます。 次に、**要素中心** のマッピングが残りの列に適用されます。|  
 |**8**|XML_ATTRIBUTES または XML_ELEMENTS と組み合わせる (論理和) ことができます。 取得のコンテキストにおいて、このフラグは、使用したデータをオーバーフロー プロパティ **\@mp:xmltext** にコピーしないことを示します。|  
   
  _SchemaDeclaration_  
@@ -70,9 +70,9 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  行セット内の列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定します。 列のデータ型が、基になる属性の **xml** データ型とは異なる場合、強制型変換が行われます。  
   
  *ColPattern*  
- XML ノードを列へマップする方法を表す標準 XPath パターンを指定します (省略可能)。 *ColPattern* を指定しない場合、既定のマッピング (*flags* で指定した**属性中心**または**要素中心**のマッピング) が適用されます。  
+ XML ノードを列へマップする方法を表す標準 XPath パターンを指定します (省略可能)。 *ColPattern* を指定しない場合、既定のマッピング (*flags* で指定した **属性中心** または **要素中心** のマッピング) が適用されます。  
   
- *ColPattern* として指定した XPath パターンは、**属性中心**および**要素中心**のマッピングの場合に、*flags* で指定される既定のマッピングを上書きまたは拡張する、特殊なマッピング特性を指定するときに使用されます。  
+ *ColPattern* として指定した XPath パターンは、**属性中心** および **要素中心** のマッピングの場合に、*flags* で指定される既定のマッピングを上書きまたは拡張する、特殊なマッピング特性を指定するときに使用されます。  
   
  *ColPattern* で指定する標準 XPath パターンでは、メタプロパティもサポートされます。  
   
@@ -83,7 +83,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  目的のスキーマを備えたテーブルが既に存在し、列パターンが必要ない場合は、*SchemaDeclaration* の代わりにテーブル名を指定できます。  
   
 ## <a name="remarks"></a>注釈  
- WITH 句を、*SchemaDeclaration*、または既存の *TableName* と共に使用すると、行セットの形式、および必要に応じて追加のマッピング情報を指定できます。 WITH 句の指定を省略すると、結果は**エッジ** テーブル形式で返されます。 エッジ テーブルでは、1 つのテーブル内での詳細な XML ドキュメントの構造 (要素/属性名、ドキュメント階層、名前空間、PI など) が表されます。  
+ WITH 句を、*SchemaDeclaration*、または既存の *TableName* と共に使用すると、行セットの形式、および必要に応じて追加のマッピング情報を指定できます。 WITH 句の指定を省略すると、結果は **エッジ** テーブル形式で返されます。 エッジ テーブルでは、1 つのテーブル内での詳細な XML ドキュメントの構造 (要素/属性名、ドキュメント階層、名前空間、PI など) が表されます。  
   
  次の表で、**エッジ** テーブルの構造について説明します。  
   
@@ -104,7 +104,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. OPENXML と共に単純な SELECT ステートメントを使用する  
  次の例では、`sp_xml_preparedocument` を使用して XML イメージの内部表現を作成します。 次に、XML ドキュメントの内部表現に対して、`SELECT` 行セット プロバイダーを使用して `OPENXML` ステートメントを実行します。  
   
- *flag* の値は、`1` に設定されています。 この値は**属性中心**のマッピングを示します。 したがって、XML 属性は行セット内の列にマップされます。 *rowpattern* は `/ROOT/Customer` として指定します。これは `<Customers>` ノードを処理することを示します。  
+ *flag* の値は、`1` に設定されています。 この値は **属性中心** のマッピングを示します。 したがって、XML 属性は行セット内の列にマップされます。 *rowpattern* は `/ROOT/Customer` として指定します。これは `<Customers>` ノードを処理することを示します。  
   
  列名が XML 属性名と一致しているので、省略可能な *ColPattern* (列パターン) パラメーターは指定しません。  
   
@@ -144,7 +144,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- *flags* を `2` に設定して (**要素中心**のマッピングを示します) 同じ `SELECT` ステートメントを実行すると、XML ドキュメント内の両方の顧客に対する `CustomerID` および `ContactName` の値が NULL として返されます。これは、`CustomerID` または `ContactName` という名前の要素が XML ドキュメント内に存在しないためです。  
+ *flags* を `2` に設定して (**要素中心** のマッピングを示します) 同じ `SELECT` ステートメントを実行すると、XML ドキュメント内の両方の顧客に対する `CustomerID` および `ContactName` の値が NULL として返されます。これは、`CustomerID` または `ContactName` という名前の要素が XML ドキュメント内に存在しないためです。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -164,7 +164,7 @@ NULL       NULL
   
 -   行セット内の `ProdID` 列は `ProductID` 属性にマップされます。行セット内の `Qty` 列は *rowpattern* によって識別されるノードの `Quantity` 属性にマップされます。  
   
- *flags* パラメーターでは**要素中心**のマッピングを指定しますが、これは *ColPattern* で指定するマッピングで上書きされます。  
+ *flags* パラメーターでは **要素中心** のマッピングを指定しますが、これは *ColPattern* で指定するマッピングで上書きされます。  
   
 ```sql  
 DECLARE @idoc INT, @doc VARCHAR(1000);   
@@ -212,7 +212,7 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 ### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. エッジ テーブル形式で結果を取得する  
  次の例の XML ドキュメントは、`<Customers>`、`<Orders>`、および `<Order_0020_Details>` 要素で構成されています。 まず、**sp_xml_preparedocument** を呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルは `OPENXML` に引き渡されます。  
   
- `OPENXML` ステートメントの *rowpattern* (`/ROOT/Customers`) によって、処理する `<Customers>` ノードが識別されます。 WITH 句を指定しないため、`OPENXML` では行セットが**エッジ** テーブル形式で返されます。  
+ `OPENXML` ステートメントの *rowpattern* (`/ROOT/Customers`) によって、処理する `<Customers>` ノードが識別されます。 WITH 句を指定しないため、`OPENXML` では行セットが **エッジ** テーブル形式で返されます。  
   
  最後に、`SELECT` ステートメントで、**エッジ** テーブルに含まれるすべての列を取得します。  
   

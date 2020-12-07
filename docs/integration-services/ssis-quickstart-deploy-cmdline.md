@@ -10,11 +10,11 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495484"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130002"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe を使用して、コマンド プロンプトから SSIS プロジェクトを配置する
 

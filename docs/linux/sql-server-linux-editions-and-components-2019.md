@@ -24,13 +24,13 @@ helpviewer_keywords:
 - Setup [SQL Server]
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mikeray
-ms.openlocfilehash: aca10f1cb7d6b3bef1cd44b58f2f68ba01d57a22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.reviewer: vanto
+ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456847"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674204"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux のエディションとサポートされる機能
 
@@ -225,6 +225,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | &nbsp; | Filetable、FILESTREAM |
 | &nbsp; | EXTERNAL_ACCESS 権限または UNSAFE 権限が設定された CLR アセンブリ |
 | &nbsp; | バッファー プール拡張 |
+| &nbsp; | URL へのバックアップ - ページ BLOB <sup>2</sup> |
 | **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
 | &nbsp; | 警告 |
 | &nbsp; | 管理対象のバックアップ |
@@ -241,13 +242,13 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | &nbsp; | マスター データ サービス |
 
 <sup>1</sup> SQL Server 内では SQL Server R がサポートされていますが、個別のパッケージとしての SQL Server R サービスはサポートされていません。
-  
+
+<sup>2</sup> URL へのバックアップは、[Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) を使用して、ブロック BLOB に対してサポートされています。
+
 ## <a name="next-steps"></a>次のステップ
  [SQL Server 2017 の各エディションとサポートされる機能 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [SQL Server 2019 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [SQL Server をインストールする](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [SQL Server の製品仕様](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
-
-
+ [SQL Server をインストールする](../database-engine/install-windows/install-sql-server.md)  
+ [SQL Server の製品仕様](../sql-server/index.yml)

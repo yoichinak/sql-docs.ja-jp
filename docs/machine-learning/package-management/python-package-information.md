@@ -8,14 +8,13 @@ ms.date: 06/03/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2232b844fc6955118e2da878caf9ff425f160c55
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9bb55bf9bac934f78b0a309663ced729a8ef6534
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178949"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869833"
 ---
 # <a name="get-python-package-information"></a>Python パッケージ情報の取得
 
@@ -61,6 +60,11 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> Azure SQL Managed Instance 上で、sp_configure および RECONFIGURE コマンドを実行すると、SQL サーバーの再起動がトリガーされ、RG 設定が有効になります。 これにより、使用不可の状態が数秒間生じる可能性があります。
+::: moniker-end
+
 現在のインスタンスの既定のライブラリを確認する場合は、次の SQL ステートメントを実行します。 この例では、Python の `sys.path` 変数に含まれるフォルダーの一覧が返されます。 一覧には、現在のディレクトリと標準ライブラリ パスが含まれています。
 
 ```sql
@@ -82,8 +86,8 @@ EXECUTE sp_execute_external_script
 
 | パッケージ | Version |  説明 |
 | ---------|---------|--------------|
-| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.4.7 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
-| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.4.7 | Python に機械学習アルゴリズムを追加します。 |
+| [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.4.7 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
+| [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.4.7 | Python に機械学習アルゴリズムを追加します。 |
 
 含まれている Python のバージョンの詳細については、「[Python および R のバージョン](../sql-server-machine-learning-services.md#versions)」を参照してください。
 
@@ -105,17 +109,13 @@ EXECUTE sp_execute_external_script
 次のスクリプトの例では、SQL Server インスタンスにインストールされているすべての Python パッケージの一覧を表示します。
 
 ```sql
-EXECUTE sp_execute_external_script 
-  @language = N'Python', 
+EXECUTE sp_execute_external_script
+  @language = N'Python',
   @script = N'
 import pkg_resources
-import pandas as pd
-installed_packages = pkg_resources.working_set
-installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
-df = pd.DataFrame(installed_packages_list)
-OutputDataSet = df
-'
-WITH RESULT SETS (( PackageVersion nvarchar (150) ))
+import pandas
+OutputDataSet = pandas.DataFrame(sorted([(i.key, i.version) for i in pkg_resources.working_set]))'
+WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128)));
 ```
 
 ## <a name="find-a-single-python-package"></a>1 つの Python パッケージの検索

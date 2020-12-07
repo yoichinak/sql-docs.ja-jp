@@ -14,15 +14,15 @@ ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2c7be1815002208ffea6e08ea4b7200579a78e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8af9fceff99881b5b6d2ddaa343adba949b70853
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455404"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92006322"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **GeometryCollection** は、ゼロ以上の **geometry** インスタンスまたは **geography** インスタンスからなるコレクションです。 **GeometryCollection** は空にすることができます。  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection インスタンス  

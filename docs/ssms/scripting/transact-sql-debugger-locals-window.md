@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60c533d241353c2147cfc9b473e3531364f95496
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 20246ae24d3b8916537e041218dadf4bf1e3a042
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901169"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036165"
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Transact-SQL デバッガー - [ローカル] ウィンドウ
 
@@ -54,9 +54,9 @@ ms.locfileid: "88901169"
  式のデータ型を表示します。  
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [[ウォッチ] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [[呼び出し履歴] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [[クイック ウォッチ] ダイアログ ボックス](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Transact-SQL デバッガー](./transact-sql-debugger.md)   
+ [Transact-SQL デバッガー情報](./transact-sql-debugger-information.md)   
+ [[ウォッチ] ウィンドウ](./transact-sql-debugger-watch-window.md)   
+ [[呼び出し履歴] ウィンドウ](./transact-sql-debugger-call-stack-window.md)   
+ [[クイック ウォッチ] ダイアログ ボックス](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

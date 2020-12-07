@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: ad98cd8d9cdeb282a13ff35c278fd1c2a26df2b4
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 2b68f15f69d3efb0a773022e87615d298da07706
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137022"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725158"
 ---
 # <a name="make-predictions-with-machine-learning-extension-for-azure-data-studio-preview"></a>Azure Data Studio の Machine Learning 拡張機能を使用して予測を行う (プレビュー)
 
@@ -55,7 +55,7 @@ Azure Data Studio によって、[PREDICT](../../t-sql/queries/predict-transact-
 - [Azure Data Studio の Machine Learning 拡張機能](machine-learning-extension.md)
 - [データベースでのパッケージの管理](machine-learning-extension-manage-packages.md)
 - [モデルのインポートまたは表示](machine-learning-extension-import-view-models.md)
-- [Azure Data Studio のノートブック](../notebooks-guidance.md)
+- [Azure Data Studio のノートブック](../notebooks/notebooks-guidance.md)
 - [SQL の機械学習のドキュメント](../../machine-learning/index.yml)
 - [Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)
 - [SQL Edge (プレビュー) での ONNX を使用した機械学習と AI](/azure/azure-sql-edge/onnx-overview)

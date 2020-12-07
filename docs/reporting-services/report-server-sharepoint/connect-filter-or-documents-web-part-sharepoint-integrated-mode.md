@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f0e28fe003407c2f60792bcb9df09dc5d3cc6db0
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: ed8aa919129d8ece0d0618fdd14f6309080a812d
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767090"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935081"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>フィルター Web パーツまたはドキュメント Web パーツを Reporting Services レポート ビューアー Web パーツと接続する
 
@@ -79,7 +79,7 @@ SharePoint 製品を使用している場合、フィルター Web パーツま�
 ## <a name="see-also"></a>関連項目
 
  [レポート ビューアー Web パーツを Web ページに追加する](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
- [SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [SharePoint サイトのレポート ビューアー Web パーツ](./report-viewer-web-part-sharepoint-site.md)   
  [レポート ビューアー Web パーツのカスタマイズ](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1259cc5d536e66b95db4e6575237484efafcc581
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 95b00aff6a4a42ff0bc0cc01d6e4933f8ef6ceae
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179963"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793799"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>SQL Server でのスタンドアロン Machine Learning Server または R Server とは
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -24,7 +24,7 @@ SQL Server では、SQL Server とは別に実行されるスタンドアロン 
 SQL Server 2016 では、この機能は **R Server (スタンドアロン)** と呼ばれ、R のみでした。 SQL Server 2017 では、これは **Machine Learning Server (スタンドアロン)** と呼ばれ、R と Python の両方が含まれています。  
 
 > [!Note]
-> SQL Server のセットアップによってインストールされたスタンドアロン サーバーは、SQL の名前のないバージョンの [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) と機能的に同等であり、リモート実行、操作化と Web サービス、R および Python ライブラリの完全なコレクションなど、同じユーザー シナリオをサポートします。
+> SQL Server のセットアップによってインストールされたスタンドアロン サーバーは、SQL の名前のないバージョンの [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) と機能的に同等であり、リモート実行、操作化と Web サービス、R および Python ライブラリの完全なコレクションなど、同じユーザー シナリオをサポートします。
 
 ## <a name="components"></a>Components
 
@@ -48,7 +48,7 @@ R と Python の開発者は、通常、オープンソースの R および Pyt
 
 SQL Server から切り離された独立したサーバーとして、R および Python 環境は、SQL Server ではなくスタンドアロン サーバーに用意されているオペレーティング システム基盤と標準ツールを使用して構成、セキュリティ保護、およびアクセスされます。 SQL Server リレーショナル データの組み込みサポートはありません。 SQL Server データを使用する場合は、任意のクライアントからの場合と同様に、データ ソース オブジェクトおよび接続を作成できます。
 
-SQL Server の付属物として、スタンドアロン サーバーは、ローカルとリモートの両方のコンピューティングが必要な場合に、強力な開発環境としても役立ちます。 スタンドアロン サーバー上の R および Python パッケージは、データベース エンジンのインストールで提供されるものと同じであり、コードの移植性を確保して、[コンピューティング コンテキストの切り替え](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)を可能にします。
+SQL Server の付属物として、スタンドアロン サーバーは、ローカルとリモートの両方のコンピューティングが必要な場合に、強力な開発環境としても役立ちます。 スタンドアロン サーバー上の R および Python パッケージは、データベース エンジンのインストールで提供されるものと同じであり、コードの移植性を確保して、[コンピューティング コンテキストの切り替え](/machine-learning-server/r/concept-what-is-compute-context)を可能にします。
 
 ## <a name="how-to-get-started"></a>ファースト ステップ
 
@@ -72,15 +72,15 @@ SQL Server の付属物として、スタンドアロン サーバーは、ロ�
 
 RevoScaleR、revoscalepy、および機械学習アルゴリズムの関数を使用して、R または Python スクリプトを記述します。
   
-  + [25 個の関数で R と RevoScaleR を探索する](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler):基本的な R コマンドから始めて、R ソリューションにハイ パフォーマンスとスケーリングを提供する、RevoScaleR の再頒布可能な分析関数に進みます。 最も一般的な R モデリング パッケージ (K-平均法クラスタリング、デシジョン ツリー、デシジョン フォレストなど) の並列化可能なバージョンの多くと、データ操作のツールを含みます。
+  + [25 個の関数で R と RevoScaleR を探索する](/machine-learning-server/r/tutorial-r-to-revoscaler):基本的な R コマンドから始めて、R ソリューションにハイ パフォーマンスとスケーリングを提供する、RevoScaleR の再頒布可能な分析関数に進みます。 最も一般的な R モデリング パッケージ (K-平均法クラスタリング、デシジョン ツリー、デシジョン フォレストなど) の並列化可能なバージョンの多くと、データ操作のツールを含みます。
 
-  + [クイック スタート: microsoftml Python パッケージを使用した二項分類の例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml):microsoftml の関数と周知の乳がんデータセットを使用して、二項分類モデルを作成します。
+  + [クイック スタート: microsoftml Python パッケージを使用した二項分類の例](/machine-learning-server/python/quickstart-binary-classification-with-microsoftml):microsoftml の関数と周知の乳がんデータセットを使用して、二項分類モデルを作成します。
 
 タスクに最適な言語を選択します。 R は、SQL を使用して実装するのが困難な統計計算に最適です。 データに対するセット ベースの処理の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を活用して最大のパフォーマンスを実現します。 列の計算を非常に高速で行うには、メモリ内データベース エンジンを使用します。
 
 ### <a name="step-4-operationalize-your-solution"></a>手順 4:ソリューションを操作化する
 
-スタンドアロン サーバーでは、SQL 以外の [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) の[操作化](https://docs.microsoft.com//machine-learning-server/what-is-operationalization)機能を使用できます。 操作化のためのスタンドアロン サーバーを構成できます。これにより、コードを Web サービスとしてデプロイしてホストし、診断を実行し、Web サービスのキャパシティをテストするという利点が得られます。
+スタンドアロン サーバーでは、SQL 以外の [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) の[操作化](/machine-learning-server/what-is-operationalization)機能を使用できます。 操作化のためのスタンドアロン サーバーを構成できます。これにより、コードを Web サービスとしてデプロイしてホストし、診断を実行し、Web サービスのキャパシティをテストするという利点が得られます。
 
 ### <a name="step-5-maintain-your-server"></a>手順 5:サーバーの保守
 
@@ -93,4 +93,3 @@ SQL Server は、累積的な更新プログラムを定期的にリリースし
 ## <a name="see-also"></a>関連項目
 
  [R Server (スタンドアロン) または Machine Learning Server (スタンドアロン) のインストール](../install/sql-machine-learning-standalone-windows-install.md)に関する記事
-

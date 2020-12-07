@@ -20,12 +20,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71985db395bd1574e40e1769093c30ec972f90a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: aad968588ff8e7ed454b35d74ce992cae0f9d836
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536843"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753994"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "89536843"
 |MAXIMUM_CARDINALITY|**bigint**|NULL。 将来使用するために予約されています。|  
 |DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|外部で記述された関数の場合は、関数の場合は SQL を返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。<br /><br /> 関数は常に SQL です。|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|関数またはストアドプロシージャが暗号化されていない場合、関数またはストアドプロシージャの定義テキストの最初の4000文字を返します。 その他の場合は NULL が返されます。<br /><br /> 完全な定義を確実に取得するには、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 関数または [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) カタログビューの定義列に対してクエリを実行します。|  
+|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|関数またはストアドプロシージャが暗号化されていない場合、関数またはストアドプロシージャの定義テキストの最初の4000文字を返します。 その他の場合は NULL が返されます。<br /><br /> 完全な定義を確実に取得するには、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログビューの[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)関数または定義列に対してクエリを実行します。|  
 |EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL。 将来使用するために予約されています。|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL。 将来使用するために予約されています。|  
@@ -92,11 +92,10 @@ ms.locfileid: "89536843"
 |LAST_ALTERED|**datetime**|関数が最後に変更された時刻。|  
   
 ## <a name="see-also"></a>参照  
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
-  
   

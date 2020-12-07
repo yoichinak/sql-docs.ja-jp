@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d95c22ef26f7e0cbecad3c0f2e6b04f2ac8c8b37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eab9aaf31173a9aaa40b6cfb32c27dbaf6474428
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467579"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187357"
 ---
 # <a name="operator-precedence-transact-sql"></a>演算子の優先順位 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88467579"
  式の中の 2 つの演算子が同じ優先順位レベルの場合は、式の中での位置に従って演算子は左から右へと評価されます。 たとえば、次の `SET` ステートメントで使用される式では、減算演算子が加算演算子よりも前に評価されます。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 4 - 2 + 27;  
 -- Evaluates to 2 + 27 which yields an expression result of 29.  
 SELECT @MyNumber;  
@@ -57,7 +57,7 @@ SELECT @MyNumber;
  たとえば、次の `SET` ステートメントで使用される式では、乗算演算子の優先順位は加算演算子よりも高くなります。 乗算演算が最初に評価され、式の結果は `13` です。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * 4 + 5;  
 -- Evaluates to 8 + 5 which yields an expression result of 13.  
 SELECT @MyNumber;  
@@ -66,7 +66,7 @@ SELECT @MyNumber;
  次の `SET` ステートメントで使用される式では、かっこにより、加算が先に評価されます。 式の結果は `18` になります。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * (4 + 5);  
 -- Evaluates to 2 * 9 which yields an expression result of 18.  
 SELECT @MyNumber;  
@@ -75,7 +75,7 @@ SELECT @MyNumber;
  式の中でかっこが入れ子になっている場合は、最も深い入れ子になった式が先に評価されます。 次の例ではかっこが入れ子になっており、かっこで囲まれている `5 - 3` という式が最も深い入れ子になっています。 この式の結果は `2` になります。 次に、加算演算子 (`+`) によって、この結果が `4` に加算され、結果は `6` の値になります。 最後に `6` に `2` が乗算され、式の最終的な結果は `12` になります。  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * (4 + (5 - 3) );  
 -- Evaluates to 2 * (4 + 2) which then evaluates to 2 * 6, and   
 -- yields an expression result of 12.  

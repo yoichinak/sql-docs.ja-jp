@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5f1058947591fdd454ce181b2d098f88b183cbe1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c747f50c9216626e710318175cf5e53a0624d7a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497828"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987658"
 ---
 # <a name="assessment-report-accesstosql"></a>評価レポート (Sql server による)
 [評価レポート] ウィンドウには、データベースオブジェクトを構文に変換した結果が表示され [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。また、移行プロジェクトの複雑さとコストを見積もるのにも役立ちます。  
   
-評価レポートを作成するには、ソースメタデータエクスプローラーで変換するオブジェクトを選択し、[ **データベース**] を右クリックして、[ **レポートの作成**] を選択します。 スキーマを変換した後に、このレポートを自動的に表示することもできます。 ただし、レポート名は変換レポートになります。 詳細については、「 [プロジェクトの設定 (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)」を参照してください。  
+評価レポートを作成するには、ソースメタデータエクスプローラーで変換するオブジェクトを選択し、[ **データベース**] を右クリックして、[ **レポートの作成**] を選択します。 スキーマを変換した後に、このレポートを自動的に表示することもできます。 ただし、レポート名は変換レポートになります。 詳細については、「 [プロジェクトの設定 (GUI) (SSMA Common)](../sybase/project-settings-gui-sybasetosql.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
 **エクスプローラー ペイン**  
@@ -37,6 +37,5 @@ ms.locfileid: "88497828"
   
 メッセージの詳細を表示するには、[ **エラー**]、[ **警告**]、または [ **メッセージ**] をクリックし、メッセージを展開します。 SSMA には、このエラーが発生したオブジェクトの一覧が表示されます。 オブジェクトをクリックすると、そのオブジェクトのすべての変換の詳細が表示されます。  
   
-## <a name="see-also"></a>関連項目  
-[ユーザーインターフェイスリファレンス (アクセス)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+## <a name="see-also"></a>参照  
+[ユーザーインターフェイスリファレンス (アクセス)](./user-interface-reference-accesstosql.md)  

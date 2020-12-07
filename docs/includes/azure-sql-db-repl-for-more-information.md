@@ -1,1 +1,1 @@
-詳細については、Azure SQL Database のパブリッシャーおよびディストリビューターデータベースに[Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)が必要です。 [Azure SQL Database でのレプリケーション](https://docs.microsoft.com/sql/relational-databases/replication/replication-to-sql-database)
+詳細については、Azure SQL Database のパブリッシャーおよびディストリビューターデータベースに[Managed Instance](/azure/sql-database/sql-database-managed-instance)が必要です。 [Azure SQL Database でのレプリケーション](/azure/azure-sql/database/replication-to-sql-database)

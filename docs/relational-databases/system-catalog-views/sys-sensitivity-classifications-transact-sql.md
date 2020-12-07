@@ -1,6 +1,6 @@
 ---
 description: sys.sensitivity_classifications (Transact-SQL)
-title: sensitivity_classifications (Transact-sql) |Microsoft Docs
+title: sys.sensitivity_classifications (Transact-sql) |Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f1dfa43dba7848732e57acf4abf8cfa915be255
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4021751337e7c49b22d6ec8bc2d24cc4e144e763
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475318"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006010"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "88475318"
 |-----------------|---------------|-----------------|  
 |**class**|**int**|分類が存在する項目のクラスを識別します。 の値は常に 1 (列を表す) になります。|  
 |**class_desc**|**varchar (16)**|分類が存在する項目のクラスの説明。 の値は常にになり *OBJECT_OR_COLUMN*|  
-|**major_id**|**int**|All_objects に対応する、分類された列を含むテーブルの ID を表します。 object_id|  
-|**minor_id**|**int**|All_columns に対応する、分類が存在する列の ID を表します。 column_id|   
+|**major_id**|**int**|システムに対応する、分類された列を含むテーブルの ID を表します。 object_id|  
+|**minor_id**|**int**|Column_id に対応する、分類が存在する列の ID を表します。|   
 |**label**|**sysname**|秘密度の分類に割り当てられたラベル (人間が判読可能)|  
 |**label_id**|**sysname**|ラベルに関連付けられた ID。 Azure Information Protection (AIP) などの情報保護システムで使用できます。|  
 |**information_type**|**sysname**|秘密度の分類に割り当てられた情報の種類 (人間が判読可能)|  
@@ -62,7 +62,7 @@ ms.locfileid: "88475318"
 次の例では、データベース内の分類された各列について、テーブル名、列名、ラベル、ラベル ID、情報の種類、情報の種類の ID、順位、およびランクの説明を一覧表示するテーブルを返します。
 
 > [!NOTE]
-> Label は Azure SQL Data Warehouse のキーワードです。
+> Label は、Azure Synapse Analytics のキーワードです。
 
 ```sql
 SELECT
@@ -87,4 +87,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[SQL Information Protection の概要](https://aka.ms/sqlip)
+[SQL Information Protection の概要](/azure/azure-sql/database/data-discovery-and-classification-overview)

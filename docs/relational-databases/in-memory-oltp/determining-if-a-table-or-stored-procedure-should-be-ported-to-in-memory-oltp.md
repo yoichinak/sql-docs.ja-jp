@@ -15,17 +15,17 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a445b423375a9ca577435424c0bd89016cd53f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e484cfef4f805f1456101ad966ddf64912daca5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723271"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867186"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のトランザクション パフォーマンス分析レポートは、インメモリ OLTP によりデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。 また、このレポートを使用すると、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のトランザクション パフォーマンス分析レポートは、インメモリ OLTP によりデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。 また、このレポートを使用すると、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10))」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
   
  トランザクション パフォーマンス分析レポートは、実稼働データベースに対して、または実稼働ワークロードに類似したアクティブなワークロードを持つテスト データベースに対して直接実行されます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85723271"
     > [!IMPORTANT]  
     >  データベース システムのパフォーマンスはさまざまな要因に左右されますが、そのすべてをトランザクション パフォーマンス コレクターで観察および測定できるわけではありません。 したがって、トランザクション パフォーマンス分析レポートは、作成した予測が実際のパフォーマンスの向上と一致することを保証するものではありません。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール時に **[管理ツール - 基本]** または **[管理ツール - 詳細]** を選択するか、または [SQL Server Management Studio をダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)すると、トランザクション パフォーマンス分析レポートと移行アドバイザーが SQL Server Management Studio (SSMS) の一部としてインストールされます。    
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール時に **[管理ツール - 基本]** または **[管理ツール - 詳細]** を選択するか、または [SQL Server Management Studio をダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)すると、トランザクション パフォーマンス分析レポートと移行アドバイザーが SQL Server Management Studio (SSMS) の一部としてインストールされます。    
   
 ## <a name="transaction-performance-analysis-reports"></a>トランザクション パフォーマンス分析レポート  
  **オブジェクト エクスプローラー** でトランザクション パフォーマンス分析レポートを生成するには、データベースを右クリックし、 **[レポート]** 、 **[標準レポート]** 、 **[トランザクション パフォーマンス分析の概要]** の順にクリックします。 有意義な分析レポートを生成するには、データベースにアクティブなワークロード、または最近実行されたワークロードがある必要があります。  
@@ -174,6 +174,5 @@ ms.locfileid: "85723271"
     -   <object_name> の移行チェックリスト レポートが、folder_path2 で指定された場所にある唯一のレポートである。  
   
 ## <a name="see-also"></a>参照  
- [インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [インメモリ OLTP への移行](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

@@ -9,15 +9,14 @@ ms.date: 05/26/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b6e6b67a73fe61997c847b33e66400855e80a50
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a347a4231203761bae260bd7f32252f058bb44d2
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173437"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870439"
 ---
 # <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習で K-Means クラスタリングを使用して顧客を分類する
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "88173437"
 
 このシリーズの第 2 部と第 3 部では、Azure Data Studio ノートブックでいくつかの Python スクリプトを開発して、データを準備し、機械学習モデルをトレーニングします。 次にパート 4 では、ストアド プロシージャを使用して、データベース内でこれらの Python スクリプトを実行します。
 
-*クラスター化*は、グループのメンバーにある意味で類似点があるグループにデータを編成すること、として説明できます。 このチュートリアル シリーズでは、小売事業を営んでいる場合を想定しています。 **K-Means** アルゴリズムを使用して、製品の購入と返品のデータセット内で、顧客のクラスタリングを実行します。 顧客をクラスタリングすることで、特定のグループをターゲットして、マーケティングの取り組みをより効果的に進めることができます。 K-Means クラスタリングは、類似性に基づいてデータのパターンを探す*教師なし学習*アルゴリズムです。
+*クラスター化* は、グループのメンバーにある意味で類似点があるグループにデータを編成すること、として説明できます。 このチュートリアル シリーズでは、小売事業を営んでいる場合を想定しています。 **K-Means** アルゴリズムを使用して、製品の購入と返品のデータセット内で、顧客のクラスタリングを実行します。 顧客をクラスタリングすることで、特定のグループをターゲットして、マーケティングの取り組みをより効果的に進めることができます。 K-Means クラスタリングは、類似性に基づいてデータのパターンを探す *教師なし学習* アルゴリズムです。
 
 この記事では、次の方法について学習します。
 
@@ -52,22 +51,22 @@ ms.locfileid: "88173437"
 ## <a name="prerequisites"></a>前提条件
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) に Python 言語オプションがあること。[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15)に記載されているインストール手順に従ってください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) に Python 言語オプションがあること。[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver15&preserve-view=true)に記載されているインストール手順に従ってください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) に Python 言語オプションがあること。[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に記載されているインストール手順に従ってください。
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance の Machine Learning Services。 サインアップ方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
+* Azure SQL Managed Instance の Machine Learning Services。 詳細については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
 
 * サンプル データベースを Azure SQL Managed Instance に復元するための [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is.md) Azure Data Studio では、Python と SQL の両方にノートブックを使用します。 ノードブックの詳細については、「[Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/sql-notebooks.md)」を参照してください。
+* [Azure Data Studio](../../azure-data-studio/what-is.md) Azure Data Studio では、Python と SQL の両方にノートブックを使用します。 ノードブックの詳細については、「[Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/notebooks/notebooks-guidance.md)」を参照してください。
 
 * 追加の Python パッケージ - このチュートリアル シリーズの例では、インストールされていない Python パッケージを使用する可能性があります。
 
-  **コマンド プロンプト**を開き、Azure Data Studio で使用する Python のバージョンのインストール パスに変更します。 たとえば、「 `cd %LocalAppData%\Programs\Python\Python37-32` 」のように入力します。 さらに次のコマンドを実行して、まだインストールされていないすべてのパッケージをインストールします。
+  **コマンド プロンプト** を開き、Azure Data Studio で使用する Python のバージョンのインストール パスに変更します。 たとえば、「 `cd %LocalAppData%\Programs\Python\Python37-32` 」のように入力します。 さらに次のコマンドを実行して、まだインストールされていないすべてのパッケージをインストールします。
 
   ```console
   pip install matplotlib

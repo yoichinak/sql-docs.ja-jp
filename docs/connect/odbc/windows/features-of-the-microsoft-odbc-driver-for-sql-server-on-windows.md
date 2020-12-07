@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 4a692483bc07ee6de0aa2a6793790ecf336f1f0a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 5fc07a171e42338ca76d51d66c04af187cb6beda
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922091"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005912"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows の機能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -42,7 +42,7 @@ ODBC Driver 13.1 for SQL Server には、以前のバージョン (11) のすべ
   
 Always Encrypted を使用すると、クライアントは SQL Server に暗号化キーを開示することなく、クライアント アプリケーション内の機密データを暗号化することができます。 クライアント コンピューターにインストールされている、Always Encrypted が有効のドライバーは、SQL Server クライアント アプリケーション内の機密データを自動的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、SQL Server にデータを渡す前に機密性の高い列のデータを暗号化し、アプリケーションに対するセマンティクスが維持されるように自動的にクエリを書き換えます。 同様に、ドライバーはクエリ結果に含まれている暗号化されたデータベース列に格納されているデータを透過的に暗号化解除します。 詳しくは、「[Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)」(ODBC ドライバーでの Always Encrypted の使用) をご覧ください。
  
-Azure Active Directory を利用すると、ユーザー、DBA、およびアプリケーション プログラマーが Azure Active Directory (Azure AD) 内の ID を使用して、Microsoft Azure SQL Database と Microsoft SQL Server 2016 に接続するメカニズムとして Azure Active Directory 認証を使用できます。 詳細については、「[ODBC ドライバーでの Azure Active Directory の使用](../using-azure-active-directory.md)」と [Azure Active Directory 認証を使用して SQL Database または SQL Data Warehouse に接続する方法](/azure/sql-database/sql-database-aad-authentication)に関するページを参照してください。   
+Azure Active Directory を利用すると、ユーザー、DBA、およびアプリケーション プログラマーが Azure Active Directory (Azure AD) 内の ID を使用して、Microsoft Azure SQL Database と Microsoft SQL Server 2016 に接続するメカニズムとして Azure Active Directory 認証を使用できます。 詳細については、「[ODBC ドライバーでの Azure Active Directory の使用](../using-azure-active-directory.md)」、および [Azure Active Directory 認証を使用した SQL Database または Azure Synapse Analytics への接続](/azure/sql-database/sql-database-aad-authentication)に関する記事を参照してください。   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Windows の Microsoft ODBC Driver 11 for SQL Server  
 

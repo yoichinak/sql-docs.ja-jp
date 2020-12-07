@@ -15,12 +15,12 @@ helpviewer_keywords:
 - bulk copy [OLE DB], about bulk copy
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 42b3860be78028b89531ce5490877f06c388f942
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 96e80fe8d0c30c217a4f3bbe324c7ebccbca6b3b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862390"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727167"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad を使用したデータの一括コピー (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88862390"
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>SQL Server テーブルにデータを一括コピーするには  
   
@@ -432,5 +432,4 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'IRFLTable')
      DROP TABLE IRFLTable  
 GO  
 ```  
-  
   

@@ -17,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f37e26803ebc57479d0c70dcd69dc951881c119a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923938"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868590"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "86923938"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべてのエディションでサーバー レベルの監査がサポートされます。 [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 以降のすべてのエディションで、データベース レベルの監査がサポートされます。 これより前のデータベース レベルの監査は、Enterprise、Developer、および Evaluation Edition に限定されています。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 > [!NOTE]  
->  このトピックの対象は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]については、「 [SQL Database 監査の使用](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)」を参照してください。  
+>  このトピックの対象は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]については、「 [SQL Database 監査の使用](/azure/azure-sql/database/auditing-overview)」を参照してください。  
   
 ## <a name="sql-server-audit-components"></a>SQL Server 監査のコンポーネント  
  *監査* では、複数の要素が、サーバー アクションやデータベース アクションの特定のグループのための 1 つのパッケージに組み合わされています。 レポート定義がグラフィックやデータ要素と組み合わされてレポートが生成されるように、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査の複数のコンポーネントが組み合わされて、監査と呼ばれる出力が生成されます。  
@@ -70,7 +70,7 @@ ms.locfileid: "86923938"
 > [!IMPORTANT]  
 >  Windows アプリケーション イベント ログの読み取りおよび書き込みは、認証されているユーザーならば、だれでも行うことができます。 アプリケーション イベント ログでは、Windows セキュリティ イベント ログほど高いアクセス許可は要求されません。したがって、Windows セキュリティ イベント ログに比べてセキュリティが低くなります。  
   
- Windows セキュリティ ログへの書き込みを行うには、"セキュリティ監査の生成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **" ポリシーに** サービス アカウントを追加する必要があります。 既定では、ローカル システム、ローカル サービス、およびネットワーク サービスがこのポリシーに追加されています。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 さらに、 **オブジェクト アクセスの監査** セキュリティ ポリシーを、 **成功** と **失敗**の両方について有効にする必要があります。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] または Windows Server 2008 では、コマンド ラインから監査ポリシー プログラム ( **AuditPol.exe** ) を使用して、より細かい**application generated**ポリシーを設定できます。 Windows セキュリティ ログへの書き込みを有効にする手順の詳細については、「 [セキュリティ ログへの SQL サーバー監査イベントの書き込み](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)」を参照してください。 Auditpol.exe プログラムの詳細については、 [グループ ポリシーを使用して詳細なセキュリティの監査を構成する方法](https://support.microsoft.com/kb/921469/)に関するサポート技術情報の記事 921469 を参照してください。 Windows イベント ログは、すべての Windows オペレーティング システムで使用できます。 Windows イベント ログの詳細については、「 [イベント ビューアーの概要](https://go.microsoft.com/fwlink/?LinkId=101455)」を参照してください。 監査でより厳密なアクセス許可が必要な場合は、バイナリ ファイル ターゲットを使用します。  
+ Windows セキュリティ ログへの書き込みを行うには、"セキュリティ監査の生成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **" ポリシーに** サービス アカウントを追加する必要があります。 既定では、ローカル システム、ローカル サービス、およびネットワーク サービスがこのポリシーに追加されています。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 さらに、 **オブジェクト アクセスの監査** セキュリティ ポリシーを、 **成功** と **失敗**の両方について有効にする必要があります。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] または Windows Server 2008 では、コマンド ラインから監査ポリシー プログラム ( **AuditPol.exe** ) を使用して、より細かい**application generated**ポリシーを設定できます。 Windows セキュリティ ログへの書き込みを有効にする手順の詳細については、「 [セキュリティ ログへの SQL サーバー監査イベントの書き込み](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)」を参照してください。 Auditpol.exe プログラムの詳細については、 [グループ ポリシーを使用して詳細なセキュリティの監査を構成する方法](https://support.microsoft.com/kb/921469/)に関するサポート技術情報の記事 921469 を参照してください。 Windows イベント ログは、すべての Windows オペレーティング システムで使用できます。 Windows イベント ログの詳細については、「 [イベント ビューアーの概要](/previous-versions/windows/it-pro/windows-server-2003/cc737015(v=ws.10))」を参照してください。 監査でより厳密なアクセス許可が必要な場合は、バイナリ ファイル ターゲットを使用します。  
   
  改ざんを防止するために監査情報をファイルに保存している場合、次の方法でそのファイルの場所へのアクセスを制限できます。  
   
@@ -215,12 +215,10 @@ ms.locfileid: "86923938"
  [DDL トリガー](../../../relational-databases/triggers/ddl-triggers.md)  
  データ定義言語 (DDL) トリガーを使用してデータベースの変更を追跡する方法について説明します。  
   
- [Microsoft TechNet:SQL Server TechCenter:SQL Server 2005 - セキュリティと保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet:SQL Server TechCenter:SQL Server 2005 - セキュリティと保護](../../../sql-server/index.yml)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティに関する最新の情報を提供します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 監査のアクション グループとアクション](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [SQL Server 監査レコード](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
-  
-

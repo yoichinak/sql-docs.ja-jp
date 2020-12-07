@@ -25,12 +25,12 @@ ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12b531d2f8615e9ff2cb9bbfc33973e6aab5d33f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28cca0a52c68716f363003d486f4c2f6a199fd16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361878"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197006"
 ---
 # <a name="-addition-transact-sql"></a>+ (加算) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88361878"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 expression + expression  
 ```  
   
@@ -59,7 +59,7 @@ expression + expression
 ### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. 加算演算子を使用して各従業員の不就労の合計時間数を計算する  
  次の例では、休暇を取得した時間数と病気休暇の時間数を加算することによって、各従業員の不就労の合計時間数を計算しています。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, VacationHours, SickLeaveHours,   
@@ -73,10 +73,9 @@ GO
 ### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>B. 加算演算子を使用して日付時刻値に日数を加算する  
  この例では、`datetime` 型の日付に日数を加算します。  
   
-```  
-  
+```sql
 SET NOCOUNT ON  
-DECLARE @startdate datetime, @adddays int;  
+DECLARE @startdate DATETIME, @adddays INT;  
 SET @startdate = 'January 10, 1900 12:00 AM';  
 SET @adddays = 5;  
 SET NOCOUNT OFF;  
@@ -97,8 +96,8 @@ Start Date                  Add Date
 ### <a name="c-adding-character-and-integer-data-types"></a>C. 文字型と整数型を加算する  
  次の例では、文字型を **int** 型に変換してこの値と **int** 型の値を加算します。有効でない文字が **char** 文字列内にあると、[!INCLUDE[tsql](../../includes/tsql-md.md)] はエラーを返します。  
   
-```  
-DECLARE @addvalue int;  
+```sql  
+DECLARE @addvalue INT;  
 SET @addvalue = 15;  
 SELECT '125127' + @addvalue;  
 ```  
@@ -117,7 +116,7 @@ SELECT '125127' + @addvalue;
 ### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D. 加算演算子を使用して各従業員の不就労の合計時間数を計算する  
  次の例では、休暇を取得した時間数と病気休暇の時間数を加算することによって、各従業員の不就労の合計時間数を計算し、結果を昇順で並べ替えています。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, VacationHours, SickLeaveHours,   

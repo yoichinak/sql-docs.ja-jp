@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 2c0b42a27fcb49835c33b45ee73a9d31151a5e28
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472338"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257162"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>python スクリプトを使用して SQL Server ビッグ データ クラスターを Azure Red Hat OpenShift (ARO) に展開する
 
@@ -37,7 +37,7 @@ ms.locfileid: "87472338"
 - [oc](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
 - [Python 最小バージョン 3.0](https://www.python.org/downloads)
 - [`az` CLI](/cli/azure/install-azure-cli/)
-- [`azdata` CLI](deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 - **Azure Data Studio**
 
 ## <a name="log-in-to-your-azure-account"></a>Azure アカウントにログインする
@@ -94,7 +94,7 @@ az group delete -n <resource group name>
 #
 # Prerequisites: 
 # 
-# Azure CLI (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli), azdata CLI (https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-install-azdata?view=sql-server-ver15), oc CLI (https://www.openshift.com/blog/installing-oc-tools-windows)
+# Azure CLI (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli), Azure Data CLI (`azdata`) (https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-install-azdata?view=sql-server-ver15), oc CLI (https://www.openshift.com/blog/installing-oc-tools-windows)
 #
 # Run `az login` at least once BEFORE running this script
 #

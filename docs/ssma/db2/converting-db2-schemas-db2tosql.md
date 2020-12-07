@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418558"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985124"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマの変換 (DB2ToSQL)
 DB2 に接続し、に接続して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトとデータのマッピングオプションを設定したら、db2 データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースオブジェクトに変換できます。  
@@ -70,7 +70,7 @@ DB2 に接続し、に接続して、 [!INCLUDE[ssNoVersion](../../includes/ssno
 |変数|マップされます。|  
 |例外、ハンドラー、および条件|**SSMA は、"例外処理" を次の例外と共にマップします。**<br /><br />終了ハンドラー-マップされます。<br /><br />元に戻すハンドラー-マップされます。<br /><br />CONTINUE ハンドラー-マップされていません。<br /><br />条件-SQL server のセマンティクスにはマップされません。|  
 |動的 SQL|マップされていません。|  
-|Aliases|マップされます。|  
+|エイリアス|マップされます。|  
 |ニックネーム|部分マッピング。 基になるオブジェクトには手動処理が必要です|  
 |シノニム|マップされます。|  
 |DB2 の標準関数|SSMA maps DB2 standard 関数は、SQL Server で同等の関数を使用できる場合に使用できます。|  
@@ -147,8 +147,7 @@ DB2 データベースオブジェクトを変換するには、まず変換す�
 -   オブジェクトを移行から除外することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータエクスプローラーおよび Db2 メタデータエクスプローラーで、オブジェクトを db2 に読み込んでデータを移行する前に、項目の横のチェックボックスをオフにし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順では、 [変換されたオブジェクトを SQL Server に読み込み](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)ます。  
+移行プロセスの次の手順では、 [変換されたオブジェクトを SQL Server に読み込み](./loading-converted-database-objects-into-sql-server-db2tosql.md)ます。  
   
 ## <a name="see-also"></a>参照  
 [DB2 データの SQL Server &#40;DB2ToSQL&#41;への移行 ](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

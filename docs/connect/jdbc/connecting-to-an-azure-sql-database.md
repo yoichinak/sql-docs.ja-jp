@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52821d92728e5d54f98e6d977e7829dd13ed5bf0
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: bda9c33588c8248d0aff62f555ec46451d0e9e78
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988593"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725493"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL Database への接続
 
@@ -24,9 +24,9 @@ ms.locfileid: "87988593"
 
 この記事では、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際の問題について説明します。 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] への接続に関する詳細については、次をご覧ください。  
   
-- [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
+- [Azure SQL Database](/azure/sql-database/sql-database-technical-overview)  
   
-- [方法: JDBC を使用して Azure SQL に接続する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [方法: JDBC を使用して Azure SQL に接続する](/azure/sql-database/sql-database-connect-query-java)  
 
 - [Azure Active Directory 認証を利用した接続](connecting-using-azure-active-directory-authentication.md)  
   
@@ -91,4 +91,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## <a name="see-also"></a>関連項目
 
-[JDBC ドライバーによる SQL Server への接続](connecting-to-sql-server-with-the-jdbc-driver.md)  
+[JDBC ドライバーによる SQL Server への接続](connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: eeef45e1678a1770f2dd0fc89c38943fa76cef72
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88655169"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726433"
 ---
 各可用性グループにはプライマリ レプリカが 1 つだけあります。 プライマリ レプリカは読み書きができます。 プライマリになっているレプリカの変更は、フェールオーバーで行うことができます。 高可用性の可用性グループでは、クラスター マネージャーによってフェールオーバー プロセスが自動化されます。 クラスターの種類が NONE の可用性グループでは、フェールオーバー プロセスは手動です。 
 
@@ -98,7 +98,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ```
 
    > [!NOTE] 
-   > 可用性グループを削除するには、[DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql) を使います。 種類が NONE または EXTERNAL のクラスターを使って作成された可用性グループでは、可用性グループに含まれるすべてのレプリカでコマンドを実行する必要があります。
+   > 可用性グループを削除するには、[DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md) を使います。 種類が NONE または EXTERNAL のクラスターを使って作成された可用性グループでは、可用性グループに含まれるすべてのレプリカでコマンドを実行する必要があります。
 
 1. データ移動を再開し、プライマリ レプリカがホストされている SQL Server インスタンス上の可用性グループ内のすべてのデータベースに対して、次のコマンドを実行します。 
 

@@ -12,10 +12,10 @@ ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025e601dfb6f062246d1edcb1799c1daf2b69886
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449694"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>レッスン 1-2 - 配置プロジェクトの作成

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b7d0f0a75c924151b2548a71a2f52389abc95577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456901"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193726"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 の Integration Services の新機能
 
@@ -78,7 +78,7 @@ Visual Studio 2017 または Visual Studio 2015 で SQL Server バージョン 2
 -   Scale Out でのパッケージ実行に対する SSISDB へのログ記録のパフォーマンスが向上しました。 イベント メッセージとメッセージ コンテキストのログが、1 つずつではなくバッチ モードで SSISDB に書き込まれるようになりました。 この機能強化についての追加の注意事項を次に示します。        
     - 現在のバージョンの SQL Server Management Studio (SSMS) での一部のレポートでは、現在、Scale Out での実行に対するこれらのログが表示されません。SSMS の次のリリースではサポートされる予定です。 影響を受けるレポートは、"*すべての接続*" レポート、"*エラー コンテキスト*" レポート、Integration Service ダッシュボードの "*接続情報*" セクションなどです。
     - 新しい列 **event_message_guid** が追加されました。 Scale Out でこれらの実行ログのクエリを行うときは、**event_message_id** を使うのではなく、この列を使って [catalog].[event_message_context] ビューと [catalog].[event_messages] ビューを結合します。
--   SSIS Scale Out 用の管理アプリケーションを入手するには、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 以降をダウンロードしてください。
+-   SSIS Scale Out 用の管理アプリケーションを入手するには、[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 以降をダウンロードしてください。
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>SQL Server 2017 CTP 2.0 での SSIS の新機能
 
@@ -113,4 +113,3 @@ Scale Out Master と Scale Out Worker をインストールすると、パッケ
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Microsoft Dynamics オンライン リソースのサポート
 
 OData ソースと OData 接続マネージャーで、Microsoft Dynamics AX Online と Microsoft Dynamics CRM Online の OData フィードに接続できるようになりました。
-

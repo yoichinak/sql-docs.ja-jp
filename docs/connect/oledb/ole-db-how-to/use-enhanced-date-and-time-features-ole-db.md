@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25fe260204a1cf95f5d6a1ed93c0b2fb1b0bab06
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 2e3b0f8be8bccfe9c6ecb74252a12d2bc80619e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861980"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727063"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>強化された日付/時刻機能の使用 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88861980"
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
  1 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストは、サンプルで使用するストアド プロシージャを作成します。  
@@ -652,5 +652,4 @@ int main() {
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'sp_datetimetypes')  
      DROP PROCEDURE sp_datetimetypes  
 ```  
-  
   

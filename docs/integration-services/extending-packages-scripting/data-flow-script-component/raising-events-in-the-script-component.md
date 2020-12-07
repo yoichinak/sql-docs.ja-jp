@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa7e77defb74e1bd606536064788c4430322a6ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 812a2db47243f48d13dd2adf6f5b8098046f1c40
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430264"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193072"
 ---
 # <a name="raising-events-in-the-script-component"></a>スクリプト コンポーネントでのイベントの発生
 
@@ -49,6 +49,5 @@ ms.locfileid: "88430264"
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [パッケージにイベント ハンドラーを追加する](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
-  
+ [パッケージにイベント ハンドラーを追加する](../../integration-services-ssis-event-handlers.md)  
   

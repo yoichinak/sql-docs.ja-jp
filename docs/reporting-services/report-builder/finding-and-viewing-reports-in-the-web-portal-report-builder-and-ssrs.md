@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3bd5691a31ebaaaf49bb5c2f8eb1357b60f6551
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bc56cee0c65a02603649e81e9fba8d88fd31b503
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342816"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892062"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Web ポータルを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
-  レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../../reporting-services/report-server/configure-report-manager-native-mode.md)」を参照してください。  
+  レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../report-server/configure-web-portal.md)」を参照してください。  
   
  レポート マネージャーを使用するときに表示される内容は、レポート サーバーに対してシステム管理者が設定した権限によって決まります。 権限はロールの割り当てによって与えられます。 レポートを検索および表示するには、ロールの割り当てに "レポートの表示" タスクが含まれている必要があります。 レポート サーバーでレポートを検索するには、名前または説明からレポートを検索するか、レポート サーバーのフォルダーを参照します。 検索または参照できるのは、レポート サーバーにパブリッシュまたはアップロードされたレポートのみです。  
   
@@ -55,5 +55,4 @@ ms.locfileid: "80342816"
   
 ## <a name="see-also"></a>参照  
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
-  
   

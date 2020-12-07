@@ -21,12 +21,12 @@ ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c19d7f874b17009d28ce3c41a1fb468454cd1fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c30468f62758e0483b339baf436a788c2cdcabf
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422646"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380645"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88422646"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 REVERSE ( string_expression )  
 ```  
   
@@ -45,7 +45,7 @@ REVERSE ( string_expression )
 
 ## <a name="arguments"></a>引数
  *string_expression*  
- *string_expression* は文字列またはバイナリ データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *string_expression* には、文字データまたはバイナリ データの定数、変数、または列を使用できます。  
+ *string_expression* は文字列またはバイナリ データ型の [式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *string_expression* には、文字データまたはバイナリ データの定数、変数、または列を使用できます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varchar** または **nvarchar**  
@@ -59,7 +59,7 @@ REVERSE ( string_expression )
 ## <a name="examples"></a>例  
  次の例では、すべての連絡先の名前の文字を、逆に並べ替えて返します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。  
   
-```  
+```sql  
 SELECT FirstName, REVERSE(FirstName) AS Reverse  
 FROM Person.Person  
 WHERE BusinessEntityID < 5  
@@ -82,8 +82,8 @@ Terri          irreT
   
  次の例では、変数内の文字を反転します。  
   
-```  
-DECLARE @myvar varchar(10);  
+```sql
+DECLARE @myvar VARCHAR(10);  
 SET @myvar = 'sdrawkcaB';  
 SELECT REVERSE(@myvar) AS Reversed ;  
 GO  
@@ -91,7 +91,7 @@ GO
   
  次の例では、**int** データ型を **varchar** データ型に暗黙的に変換し、結果を逆に並べ替えます。  
   
-```  
+```sql
 SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
@@ -99,7 +99,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、すべてのデータベースの名前と、文字を逆に並べ替えた名前を返します。  
   
-```  
+```sql
 SELECT name, REVERSE(name) FROM sys.databases;  
 GO  
 ```  

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98269d555a7cd639589544dbf8c645eb08ed5cb7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88427354"
 ---
 # <a name="specify-first-and-last-triggers"></a>最初と最後のトリガーの指定
@@ -36,7 +36,7 @@ ms.locfileid: "88427354"
 |**Last**|DML トリガーが、トリガー動作に対して起動される最後の AFTER トリガーであることを指定します。|  
 |**なし**|DML トリガーを起動する特定の順番がないことを指定します。 主に最初または最後のトリガーのいずれかの順序をリセットするときに使用します。|  
   
- 次の例は、 **sp_settriggerorder**を使用する例を示しています。  
+ 次の例は、 **sp_settriggerorder** を使用する例を示しています。  
   
 ```  
 sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UPDATE'  
@@ -51,7 +51,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  INSTEAD OF トリガーは最初のトリガーまたは最後のトリガーとして指定できません。 INSTEAD OF トリガーは基になるテーブルが更新される前に起動されるためです。 INSTEAD OF トリガーによって基になるテーブルが更新された場合、テーブルで定義された AFTER トリガーが起動される前に更新が発生します。 たとえば、ビュー上の INSTEAD OF INSERT トリガーによってベース テーブルにデータが挿入され、ベース テーブル自体に INSTEAD OF INSERT トリガーおよび 3 つの AFTER INSERT トリガーが含まれる場合、挿入操作の代わりに、ベース テーブルにある INSTEAD OF INSERT トリガーが起動されます。また、ベース テーブルでの挿入操作の後、ベース テーブルにある AFTER トリガーが起動されます。 詳しくは、「 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)」をご覧ください。  
   
- ALTER TRIGGER ステートメントによって最初のトリガーまたは最後のトリガーが変更された場合、 **First** 属性または **Last** 属性が削除され、順序の値が **None**に設定されます。 **sp_settriggerorder**を使用して順序をリセットする必要があります。  
+ ALTER TRIGGER ステートメントによって最初のトリガーまたは最後のトリガーが変更された場合、 **First** 属性または **Last** 属性が削除され、順序の値が **None** に設定されます。 **sp_settriggerorder** を使用して順序をリセットする必要があります。  
   
  OBJECTPROPERTY 関数では次のプロパティを使用してトリガーが最初のトリガーまたは最後のトリガーのいずれであるかをレポートします: **ExecIsFirstInsertTrigger**、**ExecIsFirstUpdateTrigger**、**ExecIsFirstDeleteTrigger**、**ExecIsLastInsertTrigger**、**ExecIsLastUpdateTrigger**、**ExecIsLastDeleteTrigger**。  
   

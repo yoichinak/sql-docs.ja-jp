@@ -16,11 +16,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d713b4eb49a527f2cbbbf871cce9d01d4449443d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465074"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130943"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88465074"
   
 この既定の場所には、次のファイルが格納されています。  
   
--   **言語固有の**類義語辞典ファイル  
+-   **言語固有の** 類義語辞典ファイル  
 
     セットアップでは、空の類義語辞典ファイルが前述の場所にインストールされます。 サポートされている言語ごとに個別のファイルが用意されています。 システム管理者は、これらのファイルをカスタマイズできます。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "88465074"
      
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
--   **グローバル**類義語辞典ファイル  
+-   **グローバル** 類義語辞典ファイル  
   
     tsGlobal.xml は空のグローバル類義語辞典ファイルです。  
 

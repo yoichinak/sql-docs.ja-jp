@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0cba55e7c9f979098b9f761fbc43cad7a8edc2b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be606f7aa8f42b9966f6b1a2d1e3e21095b03916
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386448"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92196223"
 ---
 # <a name="upgrade-a-data-tier-application"></a>データ層アプリケーションのアップグレード
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "88386448"
 ###  <a name="choosing-dac-upgrade-options"></a><a name="ChoseDACUpgOptions"></a> DAC アップグレード オプションの選択  
  インプレース アップグレードには 4 つのアップグレード オプションがあります。  
   
--   **[データ損失を無視する]** : **True** の場合、一部の操作によってデータが失われても、アップグレードは続行されます。 **False**の場合、これらの操作によってアップグレードは終了します。 たとえば、現在のデータベースにあるテーブルが新しい DAC のスキーマにない場合は、 **True** が指定されていると、テーブルは削除されます。 既定値の設定は **True**です。  
+-   **[データ損失を無視する]** : **True** の場合、一部の操作によってデータが失われても、アップグレードは続行されます。 **False** の場合、これらの操作によってアップグレードは終了します。 たとえば、現在のデータベースにあるテーブルが新しい DAC のスキーマにない場合は、 **True** が指定されていると、テーブルは削除されます。 既定値の設定は **True** です。  
   
--   **[変更時にブロック]** : **True** の場合、データベース スキーマが前の DAC で定義したものと異なっていると、アップグレードは終了します。 **False**の場合、変更が検出されても、アップグレードは続行されます。 既定の設定は **False** です。  
+-   **[変更時にブロック]** : **True** の場合、データベース スキーマが前の DAC で定義したものと異なっていると、アップグレードは終了します。 **False** の場合、変更が検出されても、アップグレードは続行されます。 既定の設定は **False** です。  
   
--   **[失敗時にロールバック]** : **True** の場合、アップグレードはトランザクションに含まれ、エラーが発生すると、ロールバックが試行されます。 **False**の場合、すべての変更が実行時にコミットされます。エラーが発生する場合は、データベースの前のバックアップの復元が必要になる場合があります。 既定の設定は **False** です。  
+-   **[失敗時にロールバック]** : **True** の場合、アップグレードはトランザクションに含まれ、エラーが発生すると、ロールバックが試行されます。 **False** の場合、すべての変更が実行時にコミットされます。エラーが発生する場合は、データベースの前のバックアップの復元が必要になる場合があります。 既定の設定は **False** です。  
   
--   **[ポリシーの検証をスキップ]** : **True** の場合、DAC サーバー選択ポリシーは評価されません。 **False**の場合は、ポリシーが評価され、検証エラーがあるとアップグレードは終了します。 既定の設定は **False** です。  
+-   **[ポリシーの検証をスキップ]** : **True** の場合、DAC サーバー選択ポリシーは評価されません。 **False** の場合は、ポリシーが評価され、検証エラーがあるとアップグレードは終了します。 既定の設定は **False** です。  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC アップグレードは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降でのみ実行できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "88386448"
   
 -   アップグレードによって実行されるスキーマの変更内容のリストを生成し、問題がないかどうかを確認してください。  
   
- DAC パッケージ内のアプリケーション名は、現在配置されている DAC のアプリケーション名と一致している必要があります。 たとえば、現在の DAC のアプリケーション名が **GeneralLedger**の場合、アップグレードできるのは、アプリケーション名が **GeneralLedger**の DAC パッケージを使用する場合だけです。  
+ DAC パッケージ内のアプリケーション名は、現在配置されている DAC のアプリケーション名と一致している必要があります。 たとえば、現在の DAC のアプリケーション名が **GeneralLedger** の場合、アップグレードできるのは、アプリケーション名が **GeneralLedger** の DAC パッケージを使用する場合だけです。  
   
  すべての変更をログ記録するための十分なトランザクション ログ領域があることを確認します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88386448"
 ##  <a name="using-the-upgrade-data-tier-application-wizard"></a><a name="UsingDACUpgradeWizard"></a> データ層アプリケーションのアップグレード ウィザードの使用  
  **ウィザードを使用して、DAC をアップグレードするには**  
   
-1.  **オブジェクト エクスプローラー**で、アップグレードする DAC を含んだインスタンスのノードを展開します。  
+1.  **オブジェクト エクスプローラー** で、アップグレードする DAC を含んだインスタンスのノードを展開します。  
   
 2.  **[管理]** ノードを展開し、 **[データ層のアプリケーション]** ノードを展開します。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "88386448"
  **[キャンセル]** : DAC をアップグレードせずにウィザードを終了します。  
   
 ##  <a name="detect-change-page"></a><a name="Detect_change"></a> [変更の検出] ページ  
- このページでは、 **msdb**内の DAC メタデータに格納されているスキーマ定義とは異なるスキーマを作成する、データベースへの変更についてウィザードで確認した結果がレポートされます。 たとえば、最初に DAC が配置された後に、CREATE、ALTER または DROP ステートメントを使用してデータベースでオブジェクトを追加、変更、または削除した場合です。 このページでは、まず進捗状況バーが表示されてから、分析結果が表示されます。  
+ このページでは、 **msdb** 内の DAC メタデータに格納されているスキーマ定義とは異なるスキーマを作成する、データベースへの変更についてウィザードで確認した結果がレポートされます。 たとえば、最初に DAC が配置された後に、CREATE、ALTER または DROP ステートメントを使用してデータベースでオブジェクトを追加、変更、または削除した場合です。 このページでは、まず進捗状況バーが表示されてから、分析結果が表示されます。  
   
  **[変更を検出しています。これには、数分間かかることがあります]** : ウィザードでデータベースの現在のスキーマと DAC 定義のオブジェクトの間で相違点がチェックされるときに、進捗状況バーが表示されます。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "88386448"
   
 4.  **add_DacActionStarted** と **add_DacActionFinished** を使用して、DAC アップグレード イベントをサブスクライブします。  
   
-5.  **DacUpgradeOptions**を設定します。  
+5.  **DacUpgradeOptions** を設定します。  
   
 6.  **IncrementalUpgrade** メソッドを使用して DAC をアップグレードします。  
   
@@ -286,6 +286,5 @@ $fileStream.Close()
   
 ## <a name="see-also"></a>参照  
  [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
-  
+ [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   

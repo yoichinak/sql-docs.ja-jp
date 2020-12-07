@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a8c086e5d9cc08af95b027e4ea986845861005a5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2acd26b8fb88fa6cf51c6b8715eee9cdfca8ad49
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544886"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834303"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>実行関連の動的管理ビューおよび関数 (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,11 +117,9 @@ ms.locfileid: "89544886"
 :::row-end:::
 
 > [!NOTE]  
->  **Dm_exec_query_transformation_stats**動的管理ビューは、情報提供のみを目的としています。 サポートされていません。 将来の互換性は保証されません。  
+>  **Sys.dm_exec_query_transformation_stats**動的管理ビューは、情報提供のみを目的としています。 サポートされていません。 将来の互換性は保証されません。  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)  
   
-  
-

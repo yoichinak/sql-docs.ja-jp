@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042853"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935450"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (レポート サーバーの構成マネージャー)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート サーバー Web サービス、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]、およびスケジュールされたレポート処理とサブスクリプションの配信に使用されるバックグラウンド処理アプリケーションを含んだ単一のサービスとして実装されます。 このトピックでは、サービス アカウントを最初に構成する方法と、Reporting Services 構成ツールを使用してアカウントやパスワードを変更する方法について説明します。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "90042853"
   
 ## <a name="updating-an-expired-password"></a>期限切れのパスワードの更新
 
- レポート サーバー サービスがドメイン アカウントで実行されている場合に、Reporting Services 構成マネージャーでパスワードを更新する前にパスワードの有効期限が切れると、新しいパスワードを指定するまでこのサービスが開始されなくなります。  
+ レポート サーバー サービスがドメイン アカウントで実行されている場合に、レポート サーバーの構成マネージャーでパスワードを更新する前に有効期限が切れると、新しいパスワードを指定するまでこのサービスは開始されません。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のサービス アカウントのパスワードの有効期限が切れると、レポート サーバーへの接続時に **rsReportServerDatabaseUnavailable** エラーが発生します。 パスワードを再設定すると、このエラーは解決されます。  
   
@@ -115,5 +115,4 @@ ms.locfileid: "90042853"
   
 ## <a name="next-steps"></a>次の手順
 
- [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [レポート サーバー URL の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [レポート サーバーの構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

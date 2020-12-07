@@ -1,6 +1,6 @@
 ---
-description: dm_exec_distributed_requests (Transact-sql)
-title: dm_exec_distributed_requests (Transact-sql) |Microsoft Docs
+description: sys.dm_exec_distributed_requests (Transact-sql)
+title: sys.dm_exec_distributed_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2794dfd106c00531c1c1cff96571dbb59c0b67a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ceec8dbac1d66a516ad80e2e029fce2d5f405fc
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548597"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834371"
 ---
-# <a name="sysdm_exec_distributed_requests-transact-sql"></a>dm_exec_distributed_requests (Transact-sql)
+# <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-sql)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   PolyBase クエリで現在または最近アクティブになっているすべての要求に関する情報を保持します。 要求/クエリごとに1行が一覧表示されます。  
   
- ユーザーは、セッションと要求 ID に基づいて、実行されるように生成された実際の分散要求を取得できます。そのためには、dm_exec_distributed_requests を使用します。 たとえば、通常の SQL テーブルと外部 SQL テーブルを使用するクエリは、さまざまなコンピューティングノードに対して実行されるさまざまなステートメント/要求に分解されます。 すべてのコンピューティングノードの分散された手順を追跡するには、"グローバル" 実行 ID を導入します。これを使用すると、1つの特定の要求と演算子に関連付けられた計算ノードで、すべての操作を追跡できます。  
+ ユーザーは、セッションと要求 ID に基づいて、実行するように生成された実際の分散要求を sys.dm_exec_distributed_requests 経由で取得できます。 たとえば、通常の SQL テーブルと外部 SQL テーブルを使用するクエリは、さまざまなコンピューティングノードに対して実行されるさまざまなステートメント/要求に分解されます。 すべてのコンピューティングノードの分散された手順を追跡するには、"グローバル" 実行 ID を導入します。これを使用すると、1つの特定の要求と演算子に関連付けられた計算ノードで、すべての操作を追跡できます。  
   
 |列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
@@ -48,8 +48,7 @@ ms.locfileid: "89548597"
 |total_elapsed_time|**int**|要求が開始されてから経過した時間 (ミリ秒単位)。|0 ~ start_time と end_time の差。Total_elapsed_time が整数の最大値を超えた場合、total_elapsed_time は引き続き最大値になります。 この条件により、"最大値を超えました。" という警告が生成されます。 ミリ秒単位の最大値は24.8 日に相当します。|  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [動的管理ビューを使用した PolyBase のトラブルシューティング](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;データベース関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

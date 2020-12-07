@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5696075b36f09a57e4de06bebdd4f228ee8e4364
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392278"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194671"
 ---
 # <a name="audit-transformation"></a>監査変換
 
@@ -55,7 +55,7 @@ ms.locfileid: "88392278"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -82,5 +82,4 @@ ms.locfileid: "88392278"
 |**ユーザー名**|パッケージを起動したユーザーのログイン名を挿入します。|  
 |**タスク名**|監査変換が関連付けられているデータ フロー タスクの名前を挿入します。|  
 |**タスク ID**|監査変換が関連付けられているデータ フロー タスクを個別に識別する GUID を挿入します。|  
-  
   

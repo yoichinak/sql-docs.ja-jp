@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569924"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196336"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>SQL Server での一般的な R スクリプト エラー
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89569924"
 
 2. メッセージを調べて、入力データまたは出力データに互換性のないデータ型またはサポートされていないデータ型の列が含まれているかどうかを確認します。 たとえば、SQL データベースに対するクエリでは、GUID または RowGUID が返されることがよくありますが、これらはどちらもサポートされていません。 詳しくは、[R のライブラリとデータ型](../r/r-libraries-and-data-types.md)に関する記事をご覧ください。
 
-3. 個々の R 関数のヘルプ ページを参照して、SQL Server 計算コンテキストですべてのパラメーターがサポートされているかどうかを確認します。 ScaleR のヘルプについては、インライン R ヘルプ コマンドを使用するか、[パッケージ リファレンス](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)を参照してください。
+3. 個々の R 関数のヘルプ ページを参照して、SQL Server 計算コンテキストですべてのパラメーターがサポートされているかどうかを確認します。 ScaleR のヘルプについては、インライン R ヘルプ コマンドを使用するか、[パッケージ リファレンス](/r-server/r-reference/revoscaler/revoscaler)を参照してください。
 
 R ランタイムが機能していても、スクリプトからエラーが返された場合は、R Tools for Visual Studio などの専用の R 開発環境でスクリプトをデバッグしてみることをお勧めします。
 

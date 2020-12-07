@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ed1d15e3a8b1e98e58290e42c47362b188d10d19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7c1d053bbe680ba7dd78939ab4b4c485510660f3
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542370"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834133"
 ---
 # <a name="service-broker-related-dynamic-management-views-transact-sql"></a>Service Broker 関連の動的管理ビュー (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,6 +43,5 @@ ms.locfileid: "89542370"
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fae846be15fd8606315aa0e66efeb25c745ff98a
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866295"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384541"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 製品用 Reporting Services アドインの検索場所
 
@@ -53,13 +53,13 @@ SharePoint 製品およびテクノロジ (rssharepoint.msi) 用 [!INCLUDE[msCoN
   
  アドインをダウンロードしてインストールするには、以下の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターを参照してください。  
   
--   **SP1 アドイン:** [Microsoft® SharePoint® 用 Microsoft® SQL Server® 2012 SP1 Reporting Services アドイン ](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583) 。  
+-   **SP1 アドイン:** [Microsoft® SharePoint® 用 Microsoft® SQL Server® 2012 SP1 Reporting Services アドイン](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583) 。  
   
 -   **SP1:** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575) 。  
 
 ##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a>SharePoint 2010 製品用 <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services アドイン
 
-SQL Server 2016 リリースでは、[機能の選択] ページで SQL Server インストール ウィザードの一部としてアドインをインストールできるようになりました。 アドインを別途ダウンロードしてインストールする場合、このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft® SharePoint® テクノロジ 2010 用 Microsoft® SQL Server® 2012 Reporting Services アドイン](https://go.microsoft.com/fwlink/?LinkID=207242) 」ページからオンラインで入手できます。
+SQL Server 2016 リリースでは、[機能の選択] ページで SQL Server インストール ウィザードの一部としてアドインをインストールできるようになりました。 アドインを別途ダウンロードしてインストールする場合、このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft® SharePoint® テクノロジ 2010 用 Microsoft® SQL Server® 2012 Reporting Services アドイン](https://www.microsoft.com/download/details.aspx?id=56052) 」ページからオンラインで入手できます。
 
 ## <a name="next-steps"></a>次のステップ
 

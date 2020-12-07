@@ -20,11 +20,12 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ebd8eb539190c65e1e1a97ce55579eb93f180
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2b96446e0d73da09bb6dbbb547c6a0171cb20170
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004653"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867037"
 ---
 # <a name="calling-a-stored-procedure"></a>ストアド プロシージャの呼び出し
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,15 +33,15 @@ ms.locfileid: "86004653"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーでは、ストアドプロシージャを実行するための ODBC call エスケープシーケンスと EXECUTE ステートメントの両方がサポートされています [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 。 odbc call エスケープシーケンスを使用する方法をお勧めします。 ODBC 構文を使用すると、アプリケーションでストアド プロシージャのリターン コードを取得できます。また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するコンピューター間のリモート プロシージャ コール (RPC) の送信向けに開発されているプロトコルを使用するように最適化されます。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC で名前付きパラメーターを使用してストアドプロシージャを呼び出す場合 (詳細については、「[名前によるパラメーターのバインド (名前付きパラメーター)](https://go.microsoft.com/fwlink/?LinkID=209721)」を参照)、パラメーター名は ' ' 文字で始める必要があり \@ ます。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の制限です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、Microsoft Data Access Components (MDAC) の場合よりも厳密にこの制限が適用されます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC で名前付きパラメーターを使用してストアドプロシージャを呼び出す場合 (詳細については、「[名前によるパラメーターのバインド (名前付きパラメーター)](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)」を参照)、パラメーター名は ' ' 文字で始める必要があり \@ ます。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の制限です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、Microsoft Data Access Components (MDAC) の場合よりも厳密にこの制限が適用されます。  
   
  プロシージャを呼び出す ODBC CALL エスケープ シーケンスは、次の構文を使用します。  
   
  {[**? =**]**呼び出し**_procedure_name_[([*parameter*] [**,**[*parameter*]]...)]}  
   
- ここで*procedure_name*プロシージャの名前を指定し、*パラメーター*はプロシージャパラメーターを指定します。 名前付きパラメーターは、ODBC CALL エスケープ シーケンスを使用するステートメントでのみサポートされます。  
+ ここで *procedure_name* プロシージャの名前を指定し、 *パラメーター* はプロシージャパラメーターを指定します。 名前付きパラメーターは、ODBC CALL エスケープ シーケンスを使用するステートメントでのみサポートされます。  
   
- プロシージャには、0 個以上のパラメーターを指定できます。 また、構文の先頭に省略可能なパラメーター マーカー ?= を指定することによって値を返すこともできます。 パラメーターが入力パラメーターまたは入出力パラメーターの場合は、リテラルまたはパラメーター マーカーを使用できます。 パラメーターが出力パラメーターの場合、出力は不明なので、パラメーター マーカーを使用する必要があります。 プロシージャ呼び出しステートメントを実行する前に、パラメーターマーカーを[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)にバインドする必要があります。  
+ プロシージャには、0 個以上のパラメーターを指定できます。 また、構文の先頭に省略可能なパラメーター マーカー ?= を指定することによって値を返すこともできます。 パラメーターが入力パラメーターまたは入出力パラメーターの場合は、リテラルまたはパラメーター マーカーを使用できます。 パラメーターが出力パラメーターの場合、出力は不明なので、パラメーター マーカーを使用する必要があります。 プロシージャ呼び出しステートメントを実行する前に、パラメーターマーカーを [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) にバインドする必要があります。  
   
  プロシージャ呼び出しでは、入力パラメーターと入出力パラメーターを省略できます。 かっこだけを指定し、パラメーターを指定しないでプロシージャを呼び出した場合、ドライバーは最初のパラメーターの既定値を使用するように、データ ソースに指示します。 次に例を示します。  
   
@@ -85,7 +86,7 @@ ms.locfileid: "86004653"
 { CALL MyDB.MyOwner.My.Proc }  
 ```  
   
- サーバーでは、 **MyDB**という名前のリンクサーバーが存在しないというエラーが発生します。  
+ サーバーでは、 **MyDB** という名前のリンクサーバーが存在しないというエラーが発生します。  
   
  この問題は、角かっこで囲まれる識別子を使用すると発生しません。つまり、次のステートメントは正しく解釈されます。  
   
@@ -95,5 +96,4 @@ ms.locfileid: "86004653"
   
 ## <a name="see-also"></a>参照  
  [ストアド プロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
-  
   

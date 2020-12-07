@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8d137a12cdb11fc0f5d5cd9065db9a758de57154
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902343"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115736"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>SQL Server on Linux の使用状況と診断データの収集を構成する
 
@@ -21,7 +21,7 @@ ms.locfileid: "85902343"
 
 Microsoft SQL Server は既定で、お客様のアプリケーションの使用状態に関する情報を収集します。 具体的には、SQL Server はインストール エクスペリエンス、利用状況、およびパフォーマンスに関する情報を収集します。 この情報は、Microsoft が製品の向上を図り、お客様のニーズをさらに満たすのに役立ちます。 たとえば Microsoft では、お客様が受け取るエラー コードの種類に関する情報を収集して、関連するバグの修正、SQL Server の使用方法に関するドキュメントの改善、より良いサービスのために製品に機能を追加すべきかどうかの判断を行います。
 
-このドキュメントでは、収集される情報の種類と、収集した情報を Microsoft に送信するように Microsoft SQL Server on Linux を構成する方法について詳しく説明します。 SQL Server 2017 にはプライバシーに関する声明が含まれています。この声明では、ユーザーから収集される情報と収集されない情報について説明します。 詳しくは、[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)をご覧ください。
+このドキュメントでは、収集される情報の種類と、収集した情報を Microsoft に送信するように Microsoft SQL Server on Linux を構成する方法について詳しく説明します。 SQL Server 2017 にはプライバシーに関する声明が含まれています。この声明では、ユーザーから収集される情報と収集されない情報について説明します。 詳しくは、[プライバシーに関する声明](../sql-server/sql-server-privacy.md)をご覧ください。
 
 具体的には、Microsoft はこのメカニズムでは次の種類の情報は送信しません。
 
@@ -56,7 +56,7 @@ SQL Server 2017 は、インストール エクスペリエンスに関する情
    ```
    
 ### <a name="on-docker"></a>Docker の場合
-Docker 上で使用状況と診断データの収集を無効にするには、Docker によって[データが保持される](sql-server-linux-configure-docker.md)必要があります。 
+Docker 上で使用状況と診断データの収集を無効にするには、Docker によって[データが保持される](./sql-server-linux-docker-container-deployment.md)必要があります。 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -143,7 +143,7 @@ SQL Server on Linux では、Local Audit は SQL Server Database Engine のイ�
    ```
    
 ### <a name="on-docker"></a>Docker の場合
-Docker 上で Local Audit を有効にするには、Docker で[データを保持](sql-server-linux-configure-docker.md)する必要があります。 
+Docker 上で Local Audit を有効にするには、Docker で[データを保持](./sql-server-linux-docker-container-deployment.md)する必要があります。 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

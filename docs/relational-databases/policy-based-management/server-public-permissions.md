@@ -14,10 +14,10 @@ ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4abf2fd4068f19befd2896a27b9b214fee95dec0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88482560"
 ---
 # <a name="server-public-permissions"></a>サーバーのパブリック権限
@@ -28,7 +28,7 @@ ms.locfileid: "88482560"
  public サーバー ロールにサーバー権限を付与しないでください。  
   
 > [!IMPORTANT]  
->  セットアップの完了後、 **PUBLIC** ロールには、 **専用管理者接続** 以外のすべてのエンドポイントに対する **CONNECT**権限が付与されます。 これは正常な動作です。通常は変更しないでください (アクセスの制御には、新しいログインの作成時に自動的に付与される **CONNECT SQL** 権限が使用されます)。  
+>  セットアップの完了後、 **PUBLIC** ロールには、 **専用管理者接続** 以外のすべてのエンドポイントに対する **CONNECT** 権限が付与されます。 これは正常な動作です。通常は変更しないでください (アクセスの制御には、新しいログインの作成時に自動的に付与される **CONNECT SQL** 権限が使用されます)。  
   
 ### <a name="for-more-information"></a>詳細情報  
  [SQL Server の保護](../../relational-databases/security/securing-sql-server.md)  

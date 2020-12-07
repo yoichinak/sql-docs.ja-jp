@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45e439343713ac98dfd293a21af90d75e1275847
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b1b7f0e1416b20ce641848abe47d3497f7c7b7f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457280"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92196404"
 ---
 # <a name="raw-file-custom-properties"></a>RAW ファイルのカスタム プロパティ
 
@@ -58,6 +58,5 @@ ms.locfileid: "88457280"
  詳細については、「 [RAW ファイル変換先](../../integration-services/data-flow/raw-file-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b18fbdd0a4c59b8458b2bc1f757ef189db5de3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7bf4385405c227fb337dda910c3f1ef158eff223
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178779"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195144"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>コンピューティング コンテキストの定義と使用 (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 4 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 4 です。
 
-前のチュートリアルでは、**RevoScaleR** 関数を使用してデータ オブジェクトを検査しました。 このチュートリアルでは、リモート SQL Server のコンピューティング コンテキストを定義できる、[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 関数について説明します。 リモートのコンピューティング コンテキストを使用すると、ローカル セッションからサーバー上のリモート セッションに R の実行をシフトできます。 
+前のチュートリアルでは、**RevoScaleR** 関数を使用してデータ オブジェクトを検査しました。 このチュートリアルでは、リモート SQL Server のコンピューティング コンテキストを定義できる、[RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 関数について説明します。 リモートのコンピューティング コンテキストを使用すると、ローカル セッションからサーバー上のリモート セッションに R の実行をシフトできます。 
 
 > [!div class="checklist"]
 > * リモート SQL Server のコンピューティング コンテキストの要素について学ぶ
@@ -63,7 +63,7 @@ SQL Server コンピューティング コンテキストを作成する **RxInS
   
     *RxInSqlServer* に渡す **wait** 引数は、次のオプションをサポートします。
   
-    -   **TRUE**。 ジョブはブロック中として構成され、制御は完了するか失敗するまで戻りません。  詳細については、「[Machine Learning Server での分散コンピューティングと並列コンピューティング](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)」に関するページを参照してください。
+    -   **TRUE**。 ジョブはブロック中として構成され、制御は完了するか失敗するまで戻りません。  詳細については、「[Machine Learning Server での分散コンピューティングと並列コンピューティング](/machine-learning-server/r/how-to-revoscaler-distributed-computing)」に関するページを参照してください。
   
     -   **FALSE**。 ジョブは非ブロックとして構成され、制御は直ちに戻ります。これにより、引き続き他の R コードを実行することができます。 ただし、非ブロック モードであっても、ジョブの実行中は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とのクライアント接続を維持する必要があります。
 
@@ -90,9 +90,9 @@ SQL Server コンピューティング コンテキストを作成する **RxInS
     
     **RxInSqlServer** の構文は、前にデータソースを定義するために使用した **RxSqlServerData** 関数とほぼ同じです。 しかし、次に示すいくつかの重要な相違点があります。
       
-    - [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)関数を使用して定義するデータ ソース オブジェクトは、データの保存場所を指定します。
+    - [RxSqlServerData](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)関数を使用して定義するデータ ソース オブジェクトは、データの保存場所を指定します。
     
-    - これに対し、関数 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) を使用して定義されたコンピューティング コンテキストは、集計やその他の計算を実行する場所を指定します。
+    - これに対し、関数 [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) を使用して定義されたコンピューティング コンテキストは、集計やその他の計算を実行する場所を指定します。
     
     計算コンテキストを定義しても、ワークステーションで実行されるその他の一般的な R 計算に影響なく、データのソースは変わりません。 たとえば、データ ソースとしてローカル テキスト ファイルを定義できますが、計算コンテキストを SQL Server に変更し、すべての読み取りと集計を SQL Server コンピューター上のデータに対して行うことができます。
 
@@ -135,7 +135,7 @@ SQL Server コンピューティング コンテキストを作成する **RxInS
   
    この例では、*traceLevel* プロパティを 7 に設定してあります。これは、"すべてのトレース情報を表示する" ことを意味します。
 
-2. トレースが有効なコンピューティング コンテキストを名前で指定するには、[rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 関数を使用します。
+2. トレースが有効なコンピューティング コンテキストを名前で指定するには、[rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 関数を使用します。
 
     ```R
     rxSetComputeContext(sqlComputeTrace)

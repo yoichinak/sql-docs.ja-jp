@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 4539ce49614004d9187d8f503fe165eb14bee2b0
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 89f048ea2caf80412d3b8d607582016d8a88f8b7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088882"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115636"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の PowerShell を使用して SQL Server on Linux を管理する
 
@@ -92,7 +92,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーの使用
 
-SQL Server インスタンスに接続するもう 1 つの方法は、[SQL Server PowerShell プロバイダー](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)を使用することです。  このプロバイダーを使用すると、オブジェクト エクスプローラーのツリー構造の中を移動するように (ただし、コマンド ラインで) SQL Server インスタンスの中を移動できます。  既定では、このプロバイダーは `SQLSERVER:\` という名前の PSDrive として表示されます。これを使用し、ドメイン アカウントでアクセスできる SQL Server インスタンスを接続し、その中を移動できます。  SQL Server on Linux 用に Active Directory 認証を設定する方法については、「[構成手順](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps)」を参照してください。
+SQL Server インスタンスに接続するもう 1 つの方法は、[SQL Server PowerShell プロバイダー](../powershell/sql-server-powershell-provider.md)を使用することです。  このプロバイダーを使用すると、オブジェクト エクスプローラーのツリー構造の中を移動するように (ただし、コマンド ラインで) SQL Server インスタンスの中を移動できます。  既定では、このプロバイダーは `SQLSERVER:\` という名前の PSDrive として表示されます。これを使用し、ドメイン アカウントでアクセスできる SQL Server インスタンスを接続し、その中を移動できます。  SQL Server on Linux 用に Active Directory 認証を設定する方法については、「[構成手順](./sql-server-linux-active-directory-auth-overview.md#configuration-steps)」を参照してください。
 
 SQL Server PowerShell プロバイダーで SQL 認証を使用することもできます。 これを行うには、`New-PSDrive` コマンドレットを使用して新しい PSDrive を作成し、正しい資格情報を指定して接続します。
 
@@ -128,7 +128,7 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-インスタンス上のすべてのデータベースを表示する必要がある場合、1 つの方法は [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase) コマンドレットを使うことです。
+インスタンス上のすべてのデータベースを表示する必要がある場合、1 つの方法は [Get-SqlDatabase](/powershell/module/sqlserver/Get-SqlDatabase) コマンドレットを使うことです。
 
 ## <a name="examine-sql-server-error-logs"></a>SQL Server エラー ログを調べる
 
@@ -152,5 +152,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>参照
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
-- [SqlServer のコマンドレット](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)
+- [SqlServer のコマンドレット](/powershell/module/sqlserver)

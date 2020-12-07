@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 66abbc624cfb4126a55ce36b9ea67cbdd9aaeff2
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 12839d5c10e5ba50cc1b57b297ee1afa9569fe15
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860025"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115715"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベントで Python および R のスクリプトを監視する
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 拡張イベントを使用して、SQL Server Machine Learning Services、SQL Server Launchpad、Python または R のジョブの外部スクリプトに関連する操作を監視およびトラブルシューティングする方法について説明します。
 
@@ -34,7 +34,7 @@ WHERE o.object_type = 'event'
 AND p.name = 'SQLSatellite';
 ```
 
-拡張イベントの使用法の詳細については、「[拡張イベント ツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)」を参照してください。
+拡張イベントの使用法の詳細については、「[拡張イベント ツール](../../relational-databases/extended-events/extended-events-tools.md)」を参照してください。
 
 ## <a name="additional-events-specific-to-machine-learning-services"></a>Machine Learning Services 固有のその他のイベント
 

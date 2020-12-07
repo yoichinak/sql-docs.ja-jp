@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fe8494558f7026355cb25e1415f9269fbeb1bed3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 489829468d9f30d54c7b76c0d1d10cce9142d9d1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387498"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194386"
 ---
 # <a name="identifiers-mdx"></a>識別子 (MDX)
 
@@ -125,7 +125,6 @@ ms.locfileid: "88387498"
   
 ## <a name="see-also"></a>参照  
  [Mdx 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX クエリの基礎 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
  [MDX 構文の要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

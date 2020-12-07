@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
-ms.openlocfilehash: 0a05f23265bd6e81c639bc8342699bf3bb8ab661
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: b0174f0b7705c9a7c7c678782a4b17fb4a1a74af
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742189"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985908"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>サブスクリプション所有者の管理とサブスクリプションの実行 - PowerShell
 
@@ -23,7 +23,7 @@ ms.locfileid: "80742189"
 
 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの所有権をプログラムによってユーザー間で譲渡できます。 このトピックでは、サブスクリプションの所有権を変更または単純に一覧表示するために使用可能な、いくつかの Windows PowerShell スクリプトを説明します。 各サンプルには、ネイティブ モードと SharePoint モードの両方のサンプル構文が含まれています。 サブスクリプションの所有者を変更した後で、サブスクリプションは新しい所有者のセキュリティ コンテキストで実行され、レポート内の User!UserID フィールドには新しい所有者の値が表示されます。 PowerShell のサンプルが呼び出すオブジェクト モデルの詳細については、「 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")
+![PowerShell 関連コンテンツ](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")
 
 ##  <a name="in-this-topic"></a><a name="bkmk_top"></a> このトピックの内容:
   
@@ -47,17 +47,17 @@ ms.locfileid: "80742189"
 
 このセクションでは、ネイティブ モードと SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]向けの各メソッドを使用するのに必要な権限レベルを要約します。 このトピック内のスクリプトは次の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] メソッドを使用します。  
   
-- [ReportingService2010.ListSubscriptions メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.ListSubscriptions メソッド](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
   
-- [ReportingService2010.ChangeSubscriptionOwner メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+- [ReportingService2010.ChangeSubscriptionOwner メソッド](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)  
   
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
   
-- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) メソッドは、特定のサブスクリプションをトリガーして実行するために、最後のスクリプトでのみ使用されます。 そのスクリプトを使用する計画がない場合、FireEvent メソッドの権限要件を無視できます。  
+- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent) メソッドは、特定のサブスクリプションをトリガーして実行するために、最後のスクリプトでのみ使用されます。 そのスクリプトを使用する計画がない場合、FireEvent メソッドの権限要件を無視できます。  
   
 **ネイティブ モード:**
   
-- サブスクリプションを一覧表示する:レポートに対する [ReportOperation](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) 列挙値かつユーザーがサブスクリプションの所有者であること、または ReadAnySubscription。  
+- サブスクリプションを一覧表示する:レポートに対する [ReportOperation](/dotnet/api/microsoft.reportingservices.interfaces.reportoperation) 列挙値かつユーザーがサブスクリプションの所有者であること、または ReadAnySubscription。  
   
 - サブスクリプションを変更する:ユーザーは、BUILTIN\Administrators グループのメンバーである必要があります。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "80742189"
   
  **SharePoint モード:**
   
-- サブスクリプションを一覧表示する:ManageAlerts または (レポートに対する [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx)、およびユーザーがサブスクリプションの所有者であり、サブスクリプションが時刻指定のサブスクリプションであること)  
+- サブスクリプションを一覧表示する:ManageAlerts または (レポートに対する [CreateAlerts](/previous-versions/office/sharepoint-server/ms412690(v=office.15))、およびユーザーがサブスクリプションの所有者であり、サブスクリプションが時刻指定のサブスクリプションであること)  
   
 - サブスクリプションを変更する:ManageWeb  
   
@@ -387,10 +387,10 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 
 ## <a name="see-also"></a>関連項目  
 
-- [ReportingService2010.ListSubscriptions メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.ListSubscriptions メソッド](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
 
-- [ReportingService2010.ChangeSubscriptionOwner メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+- [ReportingService2010.ChangeSubscriptionOwner メソッド](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)   
 
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
 
-- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8737057e0e4b291abf6530f5f6f74ce145dc84d7
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 9b659b901764b48bd8db80c1e34ab58bb3897325
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779110"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934618"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>式で使用される定数 (レポート ビルダーおよび SSRS)
   定数は、リテラル テキストまたは定義済みのテキストです。 レポート プロセッサは定義済みの定数にアクセスできるので、このような定数を式に含めると、式が評価される前に、このような定数が表す値が式に代入されます。  
@@ -52,10 +52,9 @@ ms.locfileid: "84779110"
 |MistyRose|背景色に基づいたレポート プロパティの式を作成する場合は、色を名前で指定できます。 有効な名前は、 **[式]** ダイアログ ボックスに表示されます。|  
   
 ## <a name="see-also"></a>参照  
- [[式] ダイアログ ボックス](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
+ [[式] ダイアログ ボックス](/previous-versions/sql/)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [[式] ダイアログ ボックス &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
-  
+ [[式] ダイアログ ボックス &#40;レポート ビルダー&#41;](./expressions-report-builder-and-ssrs.md)  
   

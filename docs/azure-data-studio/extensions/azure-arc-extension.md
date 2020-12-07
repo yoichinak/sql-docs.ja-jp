@@ -9,16 +9,16 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: a541b994b33355fb5df8ebf856681d588e82cc2d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3bcdd76cf143c94dc1e200a21972d00419f26b96
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111745"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725213"
 ---
 # <a name="azure-arc-extension-for-azure-data-studio-preview"></a>Azure Data Studio 用の Azure Arc 拡張機能 (プレビュー)
 
-[Azure Arc 拡張機能 (プレビュー)](https://aka.ms/azurearcdata-docs) は、Azure Arc data services リソースを作成および管理するための拡張機能です。
+[Azure Arc 拡張機能 (プレビュー)](/azure/azure-arc/data/) は、Azure Arc data services リソースを作成および管理するための拡張機能です。
 
 **主要なアクションには、次のようなものがあります。**
 - リソースの作成
@@ -61,4 +61,4 @@ azdata、Azure portal、または Azure Data Studio から Azure Arc データ �
 これらのダッシュボードには、Azure portal で開くオプションなど、リソースに関する追加情報が表示されます。
 
 ## <a name="next-steps"></a>次のステップ
-Azure Arc data services の詳細については、[Microsoft のドキュメントをご確認ください](https://aka.ms/azurearcdata-docs)。
+Azure Arc data services の詳細については、[Microsoft のドキュメントをご確認ください](/azure/azure-arc/data/)。

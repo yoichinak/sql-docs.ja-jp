@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47eb4bb9e66f7f4fa9a84b694ebd8915f0c60d31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 510c39bb15235b37a23894a4ff5e3bef9c2f51f5
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459721"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081791"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88459721"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )  
+FORMATMESSAGE ( { msg_number  | ' msg_string ' | @msg_variable} , [ param_value [ ,...n ] ] )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -52,6 +52,11 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  単一引用符で囲まれた、パラメーターの値のプレース ホルダーを含む文字列です。 エラー メッセージの長さは最大 2,047 文字です。 メッセージの文字数が 2,048 文字を超えると、2,044 文字までだけ表示され、メッセージが途中で切れていることを示す省略記号が追加されます。 内部的な記憶動作が原因で、書式引数は出力として表示されるより多くの文字を使用することに注意してください。  メッセージ文字列の構造と文字列内のパラメーターの使用については、「[RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)」の *msg_str* 引数の説明を参照してください。  
+
+ *@msg_variable*  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+  
+ 上記の *msg_string* の条件に適合する文字列を含んだ、nvarchar または varchar 変数です。  
   
  *param_value*  
  メッセージで使用するパラメーター値です。 複数のパラメーター値を指定することもできます。 メッセージに指定されているプレースホルダー変数の順序で、値を指定する必要があります。 値の最大個数は 20 です。  

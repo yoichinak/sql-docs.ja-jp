@@ -18,12 +18,12 @@ ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9fcf805dc2c4ff9e639b43e0d6ea455d3aa439fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 73f2e9153ebfc204a0f63a6f8aea305815da4e59
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915711"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810740"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>中央管理サーバーを使用した複数のサーバーの管理
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,8 @@ ms.locfileid: "86915711"
 ## <a name="create-central-management-server-and-server-groups"></a>中央管理サーバーおよびサーバー グループを作成する 
  中央管理サーバーとサーバー グループを作成するには、 **の** [登録済みサーバー] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ウィンドウを使用します。 中央管理サーバーを、それ自体が管理するグループのメンバーにすることはできません。 
  
- 中央管理サーバーとサーバー グループの作成方法については、「[中央管理サーバーおよびサーバー グループの作成 &#40;SQL Server Management Studio&#41;](../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)」をご覧ください。  
+ 中央管理サーバーとサーバー グループの作成方法については、「[中央管理サーバーおよびサーバー グループの作成 &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
   

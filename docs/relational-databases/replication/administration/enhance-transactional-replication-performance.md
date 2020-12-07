@@ -23,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3af77a60678e8286fadfbafcf46f742439e9bf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902528"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891122"
 ---
 # <a name="enhance-transactional-replication-performance"></a>トランザクション レプリケーションのパフォーマンスの向上
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "86902528"
     - **SubscriptionStreams** の値を大きくすると、サブスクライバーへの複数の接続が変更のバッチを並列で適用するため、ディストリビューション エージェントの全体的なスループットの向上に役立ちます。 ただし、プロセッサの数および他のメタデータの条件 (主キー、外部キー、一意制約、インデックスなど) によっては、SubscriptionStreams の値を高くすると悪影響がある可能性があります。 さらに、ストリームの実行またはコミットが失敗した場合、ディストリビューション エージェントはフォールバックし、単一のストリームで失敗したバッチを再試行します。
 
 
-このテストについて詳しくは、ブログ「[レプリケーションエージェントのプロファイルパラメータを最適化してパフォーマンスを向上させる](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/)」(パフォーマンス向上のためのレプリケーション エージェントのプロファイル パラメーターの最適化) をご覧ください。
+このテストについて詳しくは、ブログ「[レプリケーションエージェントのプロファイルパラメータを最適化してパフォーマンスを向上させる](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance)」(パフォーマンス向上のためのレプリケーション エージェントのプロファイル パラメーターの最適化) をご覧ください。
 
 
 ### <a name="log-reader-agent"></a>ログ リーダー エージェント (Log Reader Agent)
@@ -162,5 +162,4 @@ SQL Server オンライン ブックの "ディストリビューション エ�
 [レプリケーション エージェント プロファイルの操作](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   

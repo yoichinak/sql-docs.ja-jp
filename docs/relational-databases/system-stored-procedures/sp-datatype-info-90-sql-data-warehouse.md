@@ -1,6 +1,6 @@
 ---
-description: sp_datatype_info_90 (SQL Data Warehouse)
-title: sp_datatype_info_90 (SQL Data Warehouse) |Microsoft Docs
+description: sp_datatype_info_90 (Azure Synapse Analytics)
+title: sp_datatype_info_90 (Azure Synapse Analytics)
 ms.custom: ''
 ms.date: 03/13/2017
 ms.service: sql-data-warehouse
@@ -12,28 +12,30 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d86602d1bbbc308abe13cf2daac8429207d28d4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c9d03578a2eab318be1669303e9a8b741eb3779
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447326"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059440"
 ---
-# <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
+# <a name="sp_datatype_info_90-azure-synapse-analytics"></a>sp_datatype_info_90 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   現在の環境でサポートされているデータ型に関する情報を返します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_datatype_info_90 [ [ @data_type = ] data_type ]   
      [ , [ @ODBCVer = ] odbc_version ]   
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>引数  
 `[ @data_type = ] data_type` 指定されたデータ型のコード番号です。 すべてのデータ型の一覧を表示するには、このパラメーターを省略します。 *data_type* は **int**,、既定値は0です。  
@@ -41,7 +43,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version` 使用する ODBC のバージョンを示します。 *odbc_version* は **tinyint**,、既定値は2です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -55,7 +57,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**varchar (** 32 **)**|このデータ型の作成パラメーターの説明です。 たとえば、 **decimal** は "precision, scale"、 **float** は NULL、 **varchar** は "max_length" です。|  
 |NULLABLE|**smallint**|Null 値の許容属性を指定します。<br /><br /> 1 = null 値を許容します。<br /><br /> 0 = null 値は許可されません。|  
 |CASE_SENSITIVE|**smallint**|大文字と小文字を区別するかどうかを示します。<br /><br /> 1 = この型のすべての列では、大文字と小文字を区別します (照合の場合)。<br /><br /> 0 = この型のすべての列では、大文字と小文字が区別されません。|  
-|検索可能|**smallint**|列の型の検索機能を示します。<br /><br /> 1 = 検索できません。<br /><br /> 2 = LIKE で検索できます。<br /><br /> 3 = WHERE で検索できます。<br /><br /> 4 = WHERE または LIKE で検索できます。|  
+|SEARCHABLE|**smallint**|列の型の検索機能を示します。<br /><br /> 1 = 検索できません。<br /><br /> 2 = LIKE で検索できます。<br /><br /> 3 = WHERE で検索できます。<br /><br /> 4 = WHERE または LIKE で検索できます。|  
 |UNSIGNED_ATTRIBUTE|**smallint**|データ型の符号を示します。<br /><br /> 1 = 符号なしのデータ型。<br /><br /> 0 = 符号付きデータ型。|  
 |MONEY|**smallint**|**Money**データ型を指定します。<br /><br /> 1 = **money** データ型。<br /><br /> 0 = **money** データ型ではありません。|  
 |AUTO_INCREMENT|**smallint**|自動増分を指定します。<br /><br /> 1 = 自動増分。<br /><br /> 0 = Not 自動増分。<br /><br /> NULL = この属性は適用できません。<br /><br /> アプリケーションは、この属性を持つ列に値を挿入することはできますが、その列の値を更新することはできません。 **Bit**データ型を除き、AUTO_INCREMENT は、真数データ型および概数データ型のカテゴリに属するデータ型に対してのみ有効です。|  
@@ -84,8 +86,8 @@ EXEC sp_datatype_info_90 -9;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [ストアドプロシージャの SQL Data Warehouse](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
+## <a name="see-also"></a>関連項目  
+ [Azure Synapse Analytics ストアドプロシージャ](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

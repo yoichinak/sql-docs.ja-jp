@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ebbd18eda53dcedcfd0118c16bb5b16066c8fa7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d800de4adea71523c3ae05bed53c97697c718d70
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539899"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131074"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ ON ALL SERVER
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで、[!INCLUDE[sssds](../../includes/sssds-md.md)])。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで、[!INCLUDE[sssds](../../includes/sssds-md.md)])。  
   
  条件付きでは既に存在する場合にのみ、トリガーを削除します。  
   
@@ -109,7 +109,7 @@ ON ALL SERVER
 ### <a name="a-dropping-a-dml-trigger"></a>A. DML トリガーを削除する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `employee_insupd` トリガーを削除します ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、DROP TRIGGER IF EXISTS 構文を使うことができます)。  
   
-```  
+```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
    DROP TRIGGER employee_insupd;  
 ```  
@@ -120,7 +120,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
 > [!IMPORTANT]  
 >  DDL トリガーはスキーマ スコープではないため、**sys.objects** カタログ ビューには表示されません。そのため、それらのトリガーがデータベース内に存在するかどうかを、OBJECT_ID 関数を使用してクエリすることはできません。 スキーマ スコープでないオブジェクトをクエリするには、適切なカタログ ビューを使用する必要があります。 DDL トリガーの場合は、**sys.triggers** を使ってください。  
   
-```  
+```sql  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  

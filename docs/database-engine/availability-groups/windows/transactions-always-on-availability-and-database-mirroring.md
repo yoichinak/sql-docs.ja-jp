@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 10e0f4355f3415708e5783595b048f7ae3b540d0
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500939"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583754"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>トランザクション - 可用性グループとデータベース ミラーリング
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ SQL Server 2017 では、可用性グループのデータベースに対して�
 
 詳細については、次を参照してください。
 
-- [DTC 管理ガイド](https://msdn.microsoft.com/library/ms681291.aspx)
-- [DTC 開発者ガイド](https://msdn.microsoft.com/library/ms679938.aspx)
-- [DTC プログラマ リファレンス](https://msdn.microsoft.com/library/ms686108.aspx)
+- [DTC 管理ガイド](/previous-versions/windows/desktop/ms681291(v=vs.85))
+- [DTC 開発者ガイド](/previous-versions/windows/desktop/ms679938(v=vs.85))
+- [DTC プログラマ リファレンス](/previous-versions/windows/desktop/ms686108(v=vs.85))
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 以前: 同じ SQL Server インスタンス内での複数データベースにまたがるトランザクションのサポート  
 
@@ -93,5 +93,4 @@ SQL Server 2016 では、トランザクションの 1 つ以上のデータベ�
   
 ## <a name="next-steps"></a>次のステップ  
  [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
   

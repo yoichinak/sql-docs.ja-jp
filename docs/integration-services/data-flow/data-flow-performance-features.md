@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf9cc8d20f6cf8c380524806700373229cf22995
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480884"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196440"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
 
@@ -139,7 +139,7 @@ ms.locfileid: "89480884"
  データ フロー内に複数の集計を作成する必要がある場合は、複数の変換を作成する代わりに、1 つの集計変換を使用した複数の集計を作成することを検討してください。 この方法は、集計が別の集計のサブセットである場合にパフォーマンスを向上させます。変換により内部ストレージを最適化でき、入力データのスキャンを一度だけ行えば済むためです。 たとえば、集計で GROUP BY 句と AVG 集計を使用する場合は、それらを 1 つの変換に結合することでパフォーマンスを向上させることができます。 ただし、1 つの集計変換内で複数の集計を実行すると集計操作がシリアル化されるので、複数の集計を個別に計算する必要がある場合は、パフォーマンスが向上しない可能性があります。  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>あいまい参照変換とあいまいグループ化変換  
- あいまい参照変換とあいまいグループ化変換のパフォーマンスの最適化については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](https://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
+ あいまい参照変換とあいまいグループ化変換のパフォーマンスの最適化については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))」を参照してください。  
   
 #### <a name="lookup-transformation"></a>参照変換  
  必要な列のみを参照する SELECT ステートメントを入力することによって、メモリ内の参照データのサイズを最小限に抑えます。 この方法は、テーブルまたはビュー全体を選択して大量の不要なデータを返す場合に比べてパフォーマンスに優れています。  
@@ -175,15 +175,15 @@ ms.locfileid: "89480884"
 ## <a name="related-content"></a>関連コンテンツ  
  **記事とブログ投稿**  
   
--   technet.microsoft.com の技術記事、「 [SQL Server 2005 Integration Services: パフォーマンスに関する戦略](https://go.microsoft.com/fwlink/?LinkId=98899)」。  
+-   technet.microsoft.com の技術記事、「 [SQL Server 2005 Integration Services: パフォーマンスに関する戦略](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10))」。  
   
--   technet.microsoft.com の技術記事、「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)」。  
+-   technet.microsoft.com の技術記事、「 [Integration Services のパフォーマンス チューニング技法](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10))」。  
   
 -   _BI と分析に関する SQLCAT のガイド_の技術資料「[同期変換を複数タスクに分割してパイプラインのスループットを向上](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)」
   
--   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)  
+-   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))  
   
--   msdn.microsoft.com の技術記事「 [SSIS なら 1 TB を 30 分で読み込むことが可能](https://go.microsoft.com/fwlink/?LinkId=220817)」  
+-   msdn.microsoft.com の技術記事「 [SSIS なら 1 TB を 30 分で読み込むことが可能](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100))」  
   
 -   sqlcat.com の技術記事「 [SQL Server Integration Services のベスト プラクティス ベスト 10](https://go.microsoft.com/fwlink/?LinkId=220818)」  
   
@@ -195,18 +195,17 @@ ms.locfileid: "89480884"
   
 -   ビデオ シリーズ [「Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series) (企業における SSIS パッケージの設計とパフォーマンス チューニング (SQL ビデオ シリーズ))](https://go.microsoft.com/fwlink/?LinkId=400878)」  
   
--   mssqltips.com のビデオ「 [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video) (企業での SSIS パッケージ データ フローのチューニング (SQL Server ビデオ))](https://technet.microsoft.com/sqlserver/ff686901.aspx)」  
+-   mssqltips.com のビデオ「 [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video) (企業での SSIS パッケージ データ フローのチューニング (SQL Server ビデオ))](/previous-versions/ff686901(v=msdn.10))」  
   
--   mssqltips.com のビデオ「 [Understanding SSIS Data Flow Buffers (SQL Server Video) (SSIS データ フロー バッファーについて (SQL Server ビデオ))](https://technet.microsoft.com/sqlserver/ff686905.aspx)」  
+-   mssqltips.com のビデオ「 [Understanding SSIS Data Flow Buffers (SQL Server Video) (SSIS データ フロー バッファーについて (SQL Server ビデオ))](/previous-versions/ff686905(v=msdn.10))」  
   
 -   channel9.msdn.com のビデオ「 [Microsoft SQL Server Integration Services パフォーマンス デザイン パターン](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)」  
   
 -   sqlcat.com のプレゼンテーション「 [Microsoft IT による SQL Server 2008 SSIS データ フロー エンジンの機能強化の利用方法](https://go.microsoft.com/fwlink/?LinkId=217660)」  
   
--   technet.microsoft.com のビデオ「 [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
+-   technet.microsoft.com のビデオ「 [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10))」  
   
 ## <a name="see-also"></a>参照  
  [パッケージ開発のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
   

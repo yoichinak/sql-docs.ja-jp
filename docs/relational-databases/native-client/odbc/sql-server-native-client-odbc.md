@@ -20,11 +20,12 @@ ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f5e0cb4acb7be267d54318dff55526c1dd0de84
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 767669b2aec77e689fa9191c013968610f9a9823
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85979373"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892252"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,15 +42,15 @@ ms.locfileid: "85979373"
   
 -   [SQL Server Native Client ODBC ドライバー アプリケーションの作成](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
--   [ODBC&#41;&#40;SQL Server との通信](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+-   [ODBC&#41;&#40;SQL Server との通信 ](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
--   [ODBC&#41;&#40;クエリの実行](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+-   [ODBC&#41;&#40;クエリの実行 ](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
--   [ODBC&#41;&#40;結果の処理](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+-   [ODBC&#41;&#40;結果の処理 ](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
--   [ODBC&#41;&#40;カーソルの使用](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+-   [ODBC&#41;&#40;カーソルの使用 ](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [ODBC&#41;&#40;のトランザクションの実行](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+-   [ODBC&#41;&#40;のトランザクションの実行 ](./performing-transactions-in-odbc.md)  
   
 -   [エラーとメッセージの処理](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
@@ -57,7 +58,7 @@ ms.locfileid: "85979373"
   
 -   [カタログ関数の使用](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
   
--   [ODBC&#41;&#40;の一括コピー操作の実行](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [ODBC&#41;&#40;の一括コピー操作の実行 ](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
 -   [text 列と image 列の管理](../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
@@ -65,22 +66,21 @@ ms.locfileid: "85979373"
   
 -   [テーブル値パラメーター &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [ODBC&#41;&#40;の日付と時刻の改善](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [ODBC&#41;&#40;の日付と時刻の改善 ](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [大きな CLR ユーザー定義型 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [大きな CLR User-Defined 型 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
 -   [FILESTREAM のサポート &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
 -   [クライアント接続 &#40;ODBC&#41; でのサービス プリンシパル名 &#40;SPNs&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [スパース列は &#40;ODBC&#41;をサポートしています](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
+-   [スパース列は &#40;ODBC&#41;をサポートしています ](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;ODBC&#41; リファレンス](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
+-   [SQL Server Native Client &#40;ODBC&#41; リファレンス]()  
   
 -   [ODBC の使用法に関するトピック](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [SQL Server Native Client のインストール](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
-  
   

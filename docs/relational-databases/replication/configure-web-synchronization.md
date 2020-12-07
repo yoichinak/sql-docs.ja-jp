@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0c28163aab72b8011bb4fdf4984813cbd026091
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 797c213fcba4e74cc9fe2a376985352120d5898b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455619"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868133"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "88455619"
   
  **Web 同期用に IIS を構成するには**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS の構成](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS の構成](./configure-iis-7-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -160,7 +160,7 @@ ms.locfileid: "88455619"
   
 -   各パブリケーションでは、IIS 用に個別の仮想ディレクトリを使用する必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナー (Replisapi.dll) の実行に使用するアカウントは、同期の際にパブリッシャーとディストリビューターに接続するアカウントでもあります。 したがって、パブリッシャーとディストリビューターで SQL ログイン アカウントにマップされている必要があります。 詳細については、「[Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md)」(Web 同期用の IIS の構成) の「Setting Permissions for the SQL Server Replication Listener」(SQL Server レプリケーション リスナーの権限の設定) セクションをご覧ください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナー (Replisapi.dll) の実行に使用するアカウントは、同期の際にパブリッシャーとディストリビューターに接続するアカウントでもあります。 したがって、パブリッシャーとディストリビューターで SQL ログイン アカウントにマップされている必要があります。 詳細については、「[Configure IIS for Web Synchronization](./configure-iis-7-for-web-synchronization.md)」(Web 同期用の IIS の構成) の「Setting Permissions for the SQL Server Replication Listener」(SQL Server レプリケーション リスナーの権限の設定) セクションをご覧ください。  
   
 -   IIS を実行しているコンピューターにパブリッシャーからスナップショットを配信するときに、FTP を使用できます。 IIS を実行しているコンピューターからサブスクライバーにスナップショットを配信するときには、常に HTTPS が使用されます。 詳細については、「[FTP によるスナップショットの転送](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
@@ -177,5 +177,4 @@ ms.locfileid: "88455619"
   
 ## <a name="see-also"></a>参照  
  [マージ レプリケーションの Web 同期](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
   

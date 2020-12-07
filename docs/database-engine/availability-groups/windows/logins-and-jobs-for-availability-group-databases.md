@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 35ea24eb9d4f5007bf45602cceca97811ef282fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 59d07b5a3f469e6c25056b47c5ea859dd6e23afc
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116960"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584189"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Always On 可用性グループのデータベースを使用するジョブのログインを管理する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "91116960"
 > [!NOTE]  
 >  この問題は、さまざまなコンピューターの Windows ローカル アカウントに影響します。 ただし、各コンピューターの SID は同じであるため、この問題はドメイン アカウントでは発生しません。  
   
- 詳細については、「 [Orphaned Users with Database Mirroring and Log Shipping](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) 」(データベース ミラーリングとログ配布での孤立ユーザー) (データベース エンジンのブログ) を参照してください。  
+ 詳細については、「 [Orphaned Users with Database Mirroring and Log Shipping](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) 」(データベース ミラーリングとログ配布での孤立ユーザー) (データベース エンジンのブログ) を参照してください。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
@@ -70,5 +70,4 @@ ms.locfileid: "91116960"
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [包含データベース](../../../relational-databases/databases/contained-databases.md)   
  [ジョブの作成](../../../ssms/agent/create-jobs.md)  
-  
   

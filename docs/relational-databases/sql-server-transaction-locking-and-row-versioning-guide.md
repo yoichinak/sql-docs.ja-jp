@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 07c59ceb0ec51d4d9fd357fcc154892091c3caaf
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480952"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631768"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>トランザクションのロックおよび行のバージョン管理ガイド
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -338,11 +338,11 @@ GO
   
  コンカレンシー制御の原理は、制御方法によって次の 2 種類に分類されます。  
   
--   **ペシミスティック**コンカレンシー制御  
+-   **ペシミスティック** コンカレンシー制御  
   
      ロック機構により、ユーザーが他のユーザーに影響するデータの変更を行うことを防ぎます。 あるユーザーによる操作でロックがかかると、そのユーザーがロックを解放するまで他のユーザーはロックと競合する操作を実行できません。 この方式は、データの競合が多く、コンカレンシーによる競合が発生した場合にトランザクションをロールバックするコストに比べデータをロックして保護するコストの方が低い環境で主に使用されるので、ペシミスティック コンカレンシー制御と呼ばれます。  
   
--   **オプティミスティック**コンカレンシー制御  
+-   **オプティミスティック** コンカレンシー制御  
   
      オプティミスティック コンカレンシーでは、データを読み取る時点ではロックがかかりません。 データを更新するときに、そのユーザーが読み取ってから他のユーザーによる変更がなかったかが確認されます。 他のユーザーがデータを更新していた場合、エラーが発生します。 通常は、エラーが報告されたユーザーがトランザクションをロールバックして再実行します。 この方式は、データの競合が少なく、データを読み取るときにロックして保護するコストに比べトランザクションを必要に応じてロールバックするコストの方が低い環境で主に使用されるので、オプティミスティック同時実行制御と呼ばれます。  
   
@@ -550,7 +550,7 @@ GO
   
 -   範囲は 2 つの連続したインデックス エントリ間の範囲を保護するロック モードを表します。  
 -   行はインデックス エントリを保護するロック モードを表します。  
--   モードは使用する組み合わされたロック モードを表します。 キー範囲ロック モードは 2 つの部分から成ります。 最初の部分はインデックス範囲 (Range*T*) をロックするのに使用するロックの種類を表し、その次の部分は特定のキー (*K*) をロックするのに使用するロックの種類を表します。 Range*T*-*K* のように、2 つの部分はハイフン (-) で連結されます。  
+-   モードは使用する組み合わされたロック モードを表します。 キー範囲ロック モードは 2 つの部分から成ります。 最初の部分はインデックス範囲 (Range *T*) をロックするのに使用するロックの種類を表し、その次の部分は特定のキー (*K*) をロックするのに使用するロックの種類を表します。 Range *T*-*K* のように、2 つの部分はハイフン (-) で連結されます。  
   
     |Range|行|モード|説明|  
     |-----------|---------|----------|-----------------|  
@@ -810,7 +810,7 @@ GO
 ## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> 動的ロック
  行ロックなど、レベルの低いロックを使用すると、2 つのトランザクションが同時にデータの同じ部分に対するロックを要求する可能性が減ってコンカレンシーが高まります。 同時に、ロックの数も増えるので、ロックを管理するために多くのリソースが必要になります。 テーブルまたはページに対する高レベルのロックはオーバーヘッドが減りますが、コンカレンシーは低下します。  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![ロック コストとコンカレンシー コスト](../relational-databases/media/lockcht.png) 
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] は、動的ロック ストラテジによって最もコストの低いロックを判断します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]はクエリを実行する際に、スキーマおよびクエリの特性に基づいて最適なロックを自動的に判断します。 たとえば、インデックス スキャンの実行時に、インデックス内でのページレベルのロックが選択されます。これにより、ロックのオーバーヘッドを減少させることができます。  
   
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> デッドロック拡張イベント
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降、SQL トレースまたは SQL Profiler ではデッドロック グラフ イベント クラスではなく `xml_deadlock_report` 拡張イベント (xEvent) を使用する必要があります。
 
-また、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、デッドロックが発生したときに、デッドロック グラフを含むすべての `xml_deadlock_report` xEvent は ***system\_health*** セッションによって既にキャプチャされています。 *system\_health* セッションは既定で有効になっているため、デッドロック情報をキャプチャするように別の xEvent セッションを構成する必要はありません。 
+また、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、デッドロックが発生したときに、デッドロック グラフを含むすべての `xml_deadlock_report` xEvents は **_system\_health_* _ セッションによって既にキャプチャされています。 _system\_health* セッションは既定で有効になっているため、デッドロック情報をキャプチャするように別の xEvent セッションを構成する必要はありません。 
 
 通常キャプチャされる Deadlock Graph には、3 つの個別のノードがあります。
 -   **victim-list**。 デッドロック犠牲者プロセス識別子。
@@ -940,7 +940,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 次の例では、上の結果の最初のリンクをクリックした後の出力を示します。
 
@@ -1022,7 +1022,7 @@ END
 |プロパティ|トレース フラグ 1204 およびトレース フラグ 1222|トレース フラグ 1204 のみ|トレース フラグ 1222 のみ|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |出力形式|出力は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエラー ログにキャプチャされます。|デッドロックに関係するノードだけが表示されます。 各ノードには専用のセクションがあり、最後のセクションではデッドロック対象が示されます。|XML スキーマ定義 (XSD) スキーマには準拠していない、XML に似た形式で情報を返します。 この形式には、3 つの主要なセクションがあります。 最初のセクションでは、デッドロック対象が宣言されます。 2 番目のセクションでは、デッドロックに関係する各プロセスが示されます。 3 番目のセクションでは、トレース フラグ 1204 のノードと同義のリソースが示されます。|  
-|識別属性|**SPID:<x\> ECID:<x\>。** 並列処理を行う場合に、システム プロセス ID のスレッドを識別します。 エントリ `SPID:<x> ECID:0` (<x\> は SPID 値に置き換えられます) は、メイン スレッドを表します。 エントリ `SPID:<x> ECID:<y>` (<x\> は SPID 値に置き換えられ、<y\> は 0 よりも大きくなります) は、同じ SPID のサブスレッドを表します。<br /><br /> **BatchID** (トレース フラグ 1222 の **sbid**)。 コードの実行でロックを要求または保持しているバッチを識別します。 複数のアクティブな結果セット (MARS) が無効になっている場合、BatchID の値は 0 になります。 MARS が有効になっている場合、アクティブなバッチの値は 1 から *n* になります。 セッションにアクティブなバッチが存在しない場合、BatchID は 0 になります。<br /><br /> **モード**。 スレッドによって要求、許可、または待機される特定のリソースに対して、ロックの種類を指定します。 モードには、IS (インテント共有)、S (共有)、U (更新)、IX (インテント排他)、SIX (インテント排他付き共有)、および X (排他) があります。<br /><br /> **Line #** (トレース フラグ 1222 の**行**)。 デッドロックが発生したときに実行されていた、現在のステートメントのバッチの行番号が表示されます。<br /><br /> **Input Buf** (トレース フラグ 1222 の **inputbuf**)。 現在のバッチに含まれるステートメントをすべて表示します。|**Node**。 デッドロック チェーンに含まれるエントリ番号を表します。<br /><br /> **Lists**。 次の一覧にロックの所有者が含まれる場合があります。<br /><br /> **Grant List**。 リソースの現在の所有者を列挙します。<br /><br /> **Convert List**。 ロックを高いレベルに変換しようとしている現在の所有者を列挙します。<br /><br /> **Wait List**。 リソースに対する現在の新しいロック要求を列挙します。<br /><br /> **Statement Type**。 権限を持つスレッドにおける DML ステートメントの種類 (SELECT、INSERT、UPDATE、または DELETE) を示します。<br /><br /> **Victim Resource Owner**。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がデッドロック サイクルを解除する対象として選択する、参加スレッドを指定します。 選択したスレッドと既存のすべてのサブスレッドを終了します。<br /><br /> **Next Branch**。 デッドロック サイクルに関係する、同じ SPID からの 2 つ以上のサブスレッドを表します。|**deadlock victim**。 デッドロックの対象として選択されたタスクの物理メモリ アドレス (「[sys.dm_os_tasks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)」を参照) を表します。 デッドロックが未解決の場合は、0 になることがあります。 ロールバックを実行中のタスクは、デッドロックの対象として選択できません。<br /><br /> **executionstack**。 デッドロックの発生時に実行されている [!INCLUDE[tsql](../includes/tsql-md.md)] コードを表します。<br /><br /> **priority**。 デッドロックの優先度を表します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、コンカレンシーを向上させるために、短期間でデッドロックの優先度が変更されることがあります。<br /><br /> **logused**。 タスクで使用されているログ領域です。<br /><br /> **owner id**。要求を制御するトランザクションの ID です。<br /><br /> **status**。 タスクの状態です。 次のいずれかの値です。<br /><br /> >> **pending**。 ワーカー スレッドを待機しています。<br /><br /> >> **runnable**。 実行できる状態ですが、クォンタムを待機しています。<br /><br /> >> **running**。 スケジューラで現在実行中です。<br /><br /> >> **suspended**。 実行は中断されます。<br /><br /> >> **done**。 タスクが完了しました。<br /><br /> >> **spinloop**。 スピンロックが解放されるのを待機しています。<br /><br /> **waitresource**。 タスクで必要なリソースです。<br /><br /> **waittime**。 リソースを待機する時間 (ミリ秒単位) です。<br /><br /> **schedulerid**。 このタスクに関連付けられたスケジューラです。 「[sys.dm_os_schedulers &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)」をご覧ください。<br /><br /> **hostname**。 ワークステーションの名前です。<br /><br /> **isolationlevel**。 現在のトランザクション分離レベルです。<br /><br /> **Xactid**。 要求を制御するトランザクションの ID です。<br /><br /> **currentdb**。 データベースの ID です。<br /><br /> **lastbatchstarted**。 クライアント プロセスで最後にバッチ実行が開始した時刻です。<br /><br /> **lastbatchcompleted**。 クライアント プロセスで最後にバッチ実行が完了した時刻です。<br /><br /> **clientoption1 and clientoption2**。 このクライアント接続にオプションを設定します。 これは、通常 SET NOCOUNT や SET XACTABORT などの SET ステートメントで制御されているオプションに関する情報を含むビットマスクです。<br /><br /> **associatedObjectId**。 HoBT (ヒープまたは B-Tree) の ID を表します。|  
+|識別属性|**SPID:<x\> ECID:<x\>。** 並列処理を行う場合に、システム プロセス ID のスレッドを識別します。 エントリ `SPID:<x> ECID:0` (<x\> は SPID 値に置き換えられます) は、メイン スレッドを表します。 エントリ `SPID:<x> ECID:<y>` (<x\> は SPID 値に置き換えられ、<y\> は 0 よりも大きくなります) は、同じ SPID のサブスレッドを表します。<br /><br /> **BatchID** (トレース フラグ 1222 の **sbid**)。 コードの実行でロックを要求または保持しているバッチを識別します。 複数のアクティブな結果セット (MARS) が無効になっている場合、BatchID の値は 0 になります。 MARS が有効になっている場合、アクティブなバッチの値は 1 から *n* になります。 セッションにアクティブなバッチが存在しない場合、BatchID は 0 になります。<br /><br /> **モード**。 スレッドによって要求、許可、または待機される特定のリソースに対して、ロックの種類を指定します。 モードには、IS (インテント共有)、S (共有)、U (更新)、IX (インテント排他)、SIX (インテント排他付き共有)、および X (排他) があります。<br /><br /> **Line #** (トレース フラグ 1222 の **行**)。 デッドロックが発生したときに実行されていた、現在のステートメントのバッチの行番号が表示されます。<br /><br /> **Input Buf** (トレース フラグ 1222 の **inputbuf**)。 現在のバッチに含まれるステートメントをすべて表示します。|**Node**。 デッドロック チェーンに含まれるエントリ番号を表します。<br /><br /> **Lists**。 次の一覧にロックの所有者が含まれる場合があります。<br /><br /> **Grant List**。 リソースの現在の所有者を列挙します。<br /><br /> **Convert List**。 ロックを高いレベルに変換しようとしている現在の所有者を列挙します。<br /><br /> **Wait List**。 リソースに対する現在の新しいロック要求を列挙します。<br /><br /> **Statement Type**。 権限を持つスレッドにおける DML ステートメントの種類 (SELECT、INSERT、UPDATE、または DELETE) を示します。<br /><br /> **Victim Resource Owner**。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がデッドロック サイクルを解除する対象として選択する、参加スレッドを指定します。 選択したスレッドと既存のすべてのサブスレッドを終了します。<br /><br /> **Next Branch**。 デッドロック サイクルに関係する、同じ SPID からの 2 つ以上のサブスレッドを表します。|**deadlock victim**。 デッドロックの対象として選択されたタスクの物理メモリ アドレス (「[sys.dm_os_tasks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)」を参照) を表します。 デッドロックが未解決の場合は、0 になることがあります。 ロールバックを実行中のタスクは、デッドロックの対象として選択できません。<br /><br /> **executionstack**。 デッドロックの発生時に実行されている [!INCLUDE[tsql](../includes/tsql-md.md)] コードを表します。<br /><br /> **priority**。 デッドロックの優先度を表します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、コンカレンシーを向上させるために、短期間でデッドロックの優先度が変更されることがあります。<br /><br /> **logused**。 タスクで使用されているログ領域です。<br /><br /> **owner id**。要求を制御するトランザクションの ID です。<br /><br /> **status**。 タスクの状態です。 次のいずれかの値です。<br /><br /> >> **pending**。 ワーカー スレッドを待機しています。<br /><br /> >> **runnable**。 実行できる状態ですが、クォンタムを待機しています。<br /><br /> >> **running**。 スケジューラで現在実行中です。<br /><br /> >> **suspended**。 実行は中断されます。<br /><br /> >> **done**。 タスクが完了しました。<br /><br /> >> **spinloop**。 スピンロックが解放されるのを待機しています。<br /><br /> **waitresource**。 タスクで必要なリソースです。<br /><br /> **waittime**。 リソースを待機する時間 (ミリ秒単位) です。<br /><br /> **schedulerid**。 このタスクに関連付けられたスケジューラです。 「[sys.dm_os_schedulers &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)」をご覧ください。<br /><br /> **hostname**。 ワークステーションの名前です。<br /><br /> **isolationlevel**。 現在のトランザクション分離レベルです。<br /><br /> **Xactid**。 要求を制御するトランザクションの ID です。<br /><br /> **currentdb**。 データベースの ID です。<br /><br /> **lastbatchstarted**。 クライアント プロセスで最後にバッチ実行が開始した時刻です。<br /><br /> **lastbatchcompleted**。 クライアント プロセスで最後にバッチ実行が完了した時刻です。<br /><br /> **clientoption1 and clientoption2**。 このクライアント接続にオプションを設定します。 これは、通常 SET NOCOUNT や SET XACTABORT などの SET ステートメントで制御されているオプションに関する情報を含むビットマスクです。<br /><br /> **associatedObjectId**。 HoBT (ヒープまたは B-Tree) の ID を表します。|  
 |リソース属性|**RID**。 ロックが保持または要求されているテーブル内の単一行を識別します。 RID は、RID: *db_id:file_id:page_no:row_no* として表されます。 たとえば、「 `RID: 6:1:20789:0` 」のように入力します。<br /><br /> **OBJECT**。 ロックが保持または要求されているテーブルを識別します。 OBJECT は、OBJECT: *db_id:object_id* として表されます。 たとえば、「 `TAB: 6:2009058193` 」のように入力します。<br /><br /> **KEY**。 ロックが保持または要求されているインデックス内のキー範囲を識別します。 KEY は、KEY: *db_id:hobt_id* (*インデックス キー ハッシュ値*) として表されます。 たとえば、「 `KEY: 6:72057594057457664 (350007a4d329)` 」のように入力します。<br /><br /> **PAG**。 ロックが保持または要求されているページ リソースを識別します。 PAG は、PAG: *db_id:file_id:page_no* として表されます。 たとえば、「 `PAG: 6:1:20789` 」のように入力します。<br /><br /> **EXT**。 エクステント構造を識別します。 EXT は、EXT: *db_id:file_id:extent_no* として表されます。 たとえば、「 `EXT: 6:1:9` 」のように入力します。<br /><br /> **DB**。 データベース ロックを識別します。 **DB は次のいずれかで表されます。**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]。データベースのバックアップに使用されたデータベース ロックを識別します。<br /><br /> DB: *db_id*[BULK-OP-LOG]。特定のデータベースのバックアップ ログに使用されたロックを識別します。<br /><br /> **APP**。 アプリケーション リソースに使用されたロックを識別します。 APP は、APP: *lock_resource* として表されます。 たとえば、「 `APP: Formf370f478` 」のように入力します。<br /><br /> **METADATA**。 デッドロックに関係するメタデータ リソースを表します。 METADATA には多数のサブリソースがあるため、返される値はデッドロックされたサブリソースに依存します。 たとえば、METADATA.USER_TYPE は `user_type_id =` <*integer_value*> を返します。 METADATA のリソースおよびサブリソースについて詳しくは、「[sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)」をご覧ください。<br /><br /> **HOBT**。 デッドロックに関係するヒープまたは B-Tree を表します。|このトレース フラグに限定されるリソース属性はありません。|このトレース フラグに限定されるリソース属性はありません。|  
   
 ##### <a name="trace-flag-1204-example"></a>トレース フラグ 1204 の例  
@@ -1313,7 +1313,7 @@ BEGIN TRANSACTION
   
  行のバージョン管理とは、行が変更または削除されると書き込み時コピーのメカニズムを起動する、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の一般的なフレームワークです。 このフレームワークでは、トランザクション内の一貫性に関する以前の状態を必要とするようなトランザクションの実行中に、行の古いバージョンをそのトランザクションで使用できることが求められます。 行のバージョン管理は、次の目的で使用されます。  
   
--   トリガーで**挿入**されたテーブルまたは**削除**されたテーブルを作成する。 トリガーによって変更された行はすべて、バージョン化されます。 これには、トリガーによりデータが変更された行だけでなく、トリガーを起動したステートメントにより変更された行も含まれます。  
+-   トリガーで **挿入** されたテーブルまたは **削除** されたテーブルを作成する。 トリガーによって変更された行はすべて、バージョン化されます。 これには、トリガーによりデータが変更された行だけでなく、トリガーを起動したステートメントにより変更された行も含まれます。  
 -   複数のアクティブな結果セット (MARS) をサポートする。 アクティブな結果セットが存在するときに、MARS セッションでデータ変更ステートメント (`INSERT`、`UPDATE`、`DELETE` など) が実行された場合、その変更ステートメントの影響を受けた行はバージョン化されます。  
 -   ONLINE オプションを指定するインデックス操作をサポートする。  
 -   次の行バージョン ベースのトランザクション分離レベルをサポートする。  
@@ -2080,8 +2080,15 @@ GO
   
 -   トランザクション中は、アクセスするデータ量をできるだけ少なくします。  
     アクセスするデータ量が少なければ、ロックされる行数が減るので、トランザクション間の競合が減少します。  
+    
+-   可能な限り、holdlock などのペシミスティック ロック ヒントは避けてください。 
+    HOLDLOCK や SERIALIZABLE 分離レベルのようなヒントを使用すると、共有ロックでもプロセスが待機状態となり、コンカレンシーが低下する可能性があります
+
+-   可能な限り、暗黙のトランザクションの使用は避けてください。暗黙のトランザクションを使用すると、その性質により、予期しない動作となる可能性があります。 [暗黙のトランザクションとコンカレンシーの問題](#implicit-transactions-and-avoiding-concurrency-and-resource-problems)に関する記述を参照してください
+
+-   [FILL FACTOR](indexes/specify-fill-factor-for-an-index.md) を減らしてインデックスを設計します。FILL FACTOR を減らすと、インデックス ページの断片化を防いだり、減らしたりすることができるため、特にディスクから取得した場合にインデックスのシーク時間を短縮するのに役立つことがあります。 テーブルまたはビューのデータとインデックスに関する断片化情報を表示するために、sys.dm_db_index_physical_stats を使用できます。 
   
-#### <a name="avoiding-concurrency-and-resource-problems"></a>コンカレンシーとリソースの問題の回避  
+#### <a name="implicit-transactions-and-avoiding-concurrency-and-resource-problems"></a>暗黙のトランザクションおよびコンカレンシーとリソースの問題の回避  
  コンカレンシーおよびリソースの問題を防ぐには、暗黙のトランザクションを注意深く管理します。 暗黙のトランザクションを使用する場合、[!INCLUDE[tsql](../includes/tsql-md.md)] または `COMMIT` の直後の `ROLLBACK` ステートメントから新しいトランザクションが自動的に開始されます。 その結果、アプリケーションでデータが参照されている間や、ユーザーからの入力を要求している間にも新しいトランザクションが開くことができます。 データの変更を防ぐことが必要な最後のトランザクションが完了した後、データの変更を防ぐことが必要な次のトランザクションまでは暗黙のトランザクションを無効にしてください。 そうすることで、アプリケーションでデータが参照されている間やユーザーが入力している間は、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が自動コミット モードになります。  
   
  スナップショット分離レベルが有効である場合、新しいトランザクションがロックをかけることはありませんが、実行時間の長いトランザクションを実行する間はそれ以前のトランザクションが `tempdb` から削除されません。  
@@ -2112,8 +2119,8 @@ GO
  KILL ステートメントの使用が必要になる場合もあります。 ただし、重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳しくは、「[KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md)」をご覧ください。  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> その他の情報   
-[行のバージョン管理のオーバーヘッド](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
+[行のバージョン管理のオーバーヘッド](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [拡張イベント](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

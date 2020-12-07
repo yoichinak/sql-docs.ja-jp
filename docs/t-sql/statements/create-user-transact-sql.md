@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df52bae9824dabc0a3c40ac9f301f2429c54e930
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 43214b8f1e0b81b75c34c33b8b8b7df53bdd8d03
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990219"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131393"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -206,7 +206,7 @@ CREATE USER user_name
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
- 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)に関するページを参照してください。  
+ 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](/azure/azure-sql/database/authentication-aad-overview)に関するページを参照してください。  
   
 WITH PASSWORD = '*password*'  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
@@ -471,7 +471,7 @@ WITH
 
  Azure AD ログインから Azure AD ユーザーを作成するには、次の構文を使用します。
 
- `sysadmin` ロールで付与された Azure AD ログインを使用してマネージド インスタンスにサインインします。 次の命令文ではログイン bob@contoso.com から Azure AD ユーザー bob@contoso.com が作成されます。 このログインは [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql#examples) 例で作成されました。
+ `sysadmin` ロールで付与された Azure AD ログインを使用してマネージド インスタンスにサインインします。 次の命令文ではログイン bob@contoso.com から Azure AD ユーザー bob@contoso.com が作成されます。 このログインは [CREATE LOGIN](./create-login-transact-sql.md#examples) 例で作成されました。
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -516,5 +516,5 @@ GO
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [包含データベース](../../relational-databases/databases/contained-databases.md)   
- [Azure Active Directory の認証を使用して、SQL データベースに接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
- [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
+ [Azure Active Directory の認証を使用して、SQL データベースに接続する](/azure/azure-sql/database/authentication-aad-overview)   
+ [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)

@@ -10,14 +10,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 41c11b596017f9dfeab7d62cfbe517e764f733ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d28d41c85b267d3920e62773f3694cabb252c64b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428924"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125458"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88428924"
   
  SQL Server では、次の方法で Microsoft Azure Blob ストレージ サービスにバックアップを格納できます。  
   
--   **Microsoft Azure へのバックアップを管理する方法:** ディスクまたはテープにバックアップする場合と同じ方法を使用して、バックアップ先として URL を指定することにより、Microsoft Azure ストレージにバックアップできます。 この機能を使用すると、手動でバックアップすることも、ローカル ストレージまたはその他のオフサイト オプションの場合と同じように独自のバックアップ方法を構成することもできます。 この機能は、 **SQL Server Backup to URL**とも呼ばれます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。 この機能は、SQL Server 2012 SP1 CU2 以降で使用できます。 この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で強化され、ブロック BLOB、Shared Access Signature、ストライピングを使用してパフォーマンスと機能が向上しました。  
+-   **Microsoft Azure へのバックアップを管理する方法:** ディスクまたはテープにバックアップする場合と同じ方法を使用して、バックアップ先として URL を指定することにより、Microsoft Azure ストレージにバックアップできます。 この機能を使用すると、手動でバックアップすることも、ローカル ストレージまたはその他のオフサイト オプションの場合と同じように独自のバックアップ方法を構成することもできます。 この機能は、 **SQL Server Backup to URL** とも呼ばれます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。 この機能は、SQL Server 2012 SP1 CU2 以降で使用できます。 この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で強化され、ブロック BLOB、Shared Access Signature、ストライピングを使用してパフォーマンスと機能が向上しました。  
   
     > [!NOTE]  
     >  SQL Server 2012 SP1 CU2 より前の SQL Server バージョンでは、Microsoft Azure への SQL Server バックアップ ツール アドインを使用して、Microsoft Azure Storage へのバックアップをすばやく簡単に作成できます。 詳細については、 [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=324399)を参照してください。  

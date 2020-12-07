@@ -25,12 +25,12 @@ ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 465398c82d3720b3af19750aaa8c4cefeaa09665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88cdc4c31f94e4f09f73c37993005acb80e5942b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422676"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124601"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88422676"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 @@SPID  
 ```  
   
@@ -56,7 +56,7 @@ ms.locfileid: "88422676"
 ## <a name="examples"></a>例  
  次の例では、現在のユーザー プロセスに対応するセッション ID、ログイン名、およびユーザー名を返します。  
   
-```  
+```sql  
 SELECT @@SPID AS 'ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
@@ -71,7 +71,7 @@ ID     Login Name                     User Name
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、現在のユーザー プロセスに対応する [!INCLUDE[ssDW](../../includes/ssdw-md.md)] セッション ID、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 制御ノード、セッション ID、ログイン名、ユーザー名を返します。  
   
-```  
+```sql  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 887ed2fd171dc6164a9af45cfc4af3e0992c166f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f9c5d6fcb92c7b090c19d70969dfd37dc405e868
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497320"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036020"
 ---
 # <a name="manage-files-with-encoding"></a>エンコーディングによるファイルの管理
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,5 +65,4 @@ Visual SourceSafe を使用して ANSI、UTF8、または Unicode のファイ�
   
 ## <a name="see-also"></a>参照  
 [ソリューションとプロジェクトを管理するためのファイル](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
-[ファイル拡張子をコード エディターに関連付ける](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  
+[ファイル拡張子をコード エディターに関連付ける](../scripting/associate-file-extensions-to-a-code-editor.md)  

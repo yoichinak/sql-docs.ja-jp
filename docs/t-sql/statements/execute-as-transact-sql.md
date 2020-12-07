@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8f7b4ad559ccafbfd9ac43304a9f1ad6da73b6bd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227331"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497905"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -146,6 +146,7 @@ ms.locfileid: "91227331"
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. EXECUTE AS と REVERT を使用してコンテキストを切り替える  
  次の例では、複数のプリンシパルを使用してコンテキスト実行スタックを作成した後、 `REVERT` ステートメントを使用して実行コンテキストを以前のコンテキストに戻します。 `REVERT` ステートメントは、実行コンテキストが最初の呼び出し元に設定されるまで、スタックの上層に向かって複数回実行されます。  
   
+
 ```sql
 USE AdventureWorks2012;  
 GO  
@@ -190,8 +191,9 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 句を使用する  
  次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`EXECUTE AS` ステートメントの `@cookie` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
   
-```sql
-DECLARE @cookie varbinary(8000);  
+
+```sql 
+DECLARE @cookie VARBINARY(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  
 -- Verify the context switch.  
@@ -200,7 +202,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(8000);  
+DECLARE @cookie VARBINARY(8000);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

@@ -15,18 +15,18 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7862fa1b8454fba689edda2f8a451320315c1021
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3621fcc105d7b03d2347bc723f2ddb552bc9e81
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499320"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765711"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-クエリ結果を JSON として書式設定するか、SQL Server のデータを JSON としてエクスポートするには、**FOR JSON** 句を **SELECT** ステートメントに追加します。 **FOR JSON** 句を使用して、JSON 出力の書式設定をアプリから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に委任することによって、クライアント アプリケーションを簡素化します。
+クエリ結果を JSON として書式設定するか、SQL Server のデータを JSON としてエクスポートするには、**FOR JSON** 句を **SELECT** ステートメントに追加します。 **FOR JSON** 句を使用して、JSON 出力の書式設定をアプリから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に委任することによって、クライアント アプリケーションを簡素化します。 [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) は、フラット文字列を表示するのではなく、(この記事に示されているように) JSON の結果を自動的に書式設定するので、JSON クエリ用に推奨されるクエリ エディターです。
   
  **FOR JSON** 句を使用すると、JSON 出力の構造を明示的に指定したり、SELECT ステートメントの構造によって出力を決定したりできます。  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 67a68c2827fffcfd5be0af38cbc38f33fd9a09dd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 321c56d6e528586a44e4f94619e7c28709ab6998
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900194"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125729"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>SQL Server の別のエディションへのアップグレード (セットアップ)
 
@@ -90,6 +90,5 @@ setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriateP
 
 ## <a name="see-also"></a>参照  
  [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)   
- [旧バージョンとの互換性_削除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [旧バージョンとの互換性_削除](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

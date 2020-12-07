@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fa55524aa371e65f747ee0f53d6ef2b666f8519
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 9d445092d609be13cca75c06e49f3ae76b51851b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458174"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935497"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 並列データ ウェアハウスの接続の種類 (SSRS)
 
@@ -49,7 +49,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   保存されているユーザー名とパスワードを使用する。 レポート データを格納するデータベースがレポート サーバーとは別のサーバーに存在する場合に発生するダブル ホップに対処するには、資格情報を Windows 資格情報として使用するオプションを選択します。 データ ソースに接続した後に、認証されているユーザーの権限を借用するオプションもあります。  
   
--   資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。 
+-   資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、「[自動実行アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。 
   
  詳細については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
@@ -79,7 +79,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] で使用されるグラフィカル クエリ デザイナーには、要約データのみを取得するクエリの作成に役立つグループ化と集計のサポートが組み込まれています。 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 言語の機能には、GROUP BY 句、DISTINCT キーワード、および集計 (SUM、COUNT など) があります。 テキスト ベースのクエリ デザイナーでは、グループ化と集計が含まれている [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 言語が完全にサポートされています。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/language-reference.md)」を参照してください。  
   
 ###  <a name="using-query-type-text"></a><a name="QueryText"></a> Text の種類のクエリの使用  
  テキスト ベースのクエリ デザイナーでは、 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] コマンドを入力して、データセット内のデータを定義します。 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] からデータを取得するときに使用するクエリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーション内で実行されていない [!INCLUDE[ssDW](../../includes/ssdw-md.md)] のインスタンスからデータを取得するときに使用するクエリと同じです。 たとえば、次の [!INCLUDE[DWsql](../../includes/dwsql-md.md)] クエリでは、マーケティング アシスタントであるすべての従業員の名前を選択します。  

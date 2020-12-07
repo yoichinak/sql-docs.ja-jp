@@ -23,11 +23,11 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: eac401156014952142c39851b1e703605997c245
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549420"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128005"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ CREATE FULLTEXT INDEX ON table_name
 CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
 TYPE COLUMN *type_column_name*       
-**varbinary(max)** または **image** ドキュメントのドキュメント型を保持するために使用されているテーブル列 *type_column_name* の名前を指定します。 型列と呼ばれるこの列には、ユーザー指定のファイル拡張子 (.doc、.pdf、.xls など) が格納されます。 型列は、 **char**型、 **nchar**型、 **varchar**型、 **nvarchar**型にする必要があります。  
+**varbinary(max)** または **image** ドキュメントのドキュメント型を保持するために使用されているテーブル列 *type_column_name* の名前を指定します。 型列と呼ばれるこの列には、ユーザー指定のファイル拡張子 (.doc、.pdf、.xls など) が格納されます。 型列は、 **char** 型、 **nchar** 型、 **varchar** 型、 **nvarchar** 型にする必要があります。  
   
 TYPE COLUMN *type_column_name* を指定できるのは、*column_name* で、データがバイナリ データとして格納される **varbinary(max)** または **image** 列を指定した場合のみです。それ以外の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが返されます。  
   

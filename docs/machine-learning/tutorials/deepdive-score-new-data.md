@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee2a12b8b45169d43b9dc86077fb0879c7413226
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e3204c5ba30831f0355113f7882727decad08866
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178622"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195086"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>新しいデータのスコア付け (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 8 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 8 です。
 
 このチュートリアルでは、前のチュートリアルで作成したロジスティック回帰モデルを使用して、同じ独立変数を入力として使用する別のデータセットをスコア付けします。
 
@@ -59,7 +59,7 @@ ms.locfileid: "88178622"
   
 4. 念のため、出力テーブルが存在するかどうかを確認してください。 同じ名前のものが既に存在する場合は、新しいテーブルを書き込もうとしたときにエラーが表示されます。
   
-    この処理を実行するには、入力としてテーブル名を渡して、関数 [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) と [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)を呼び出します。
+    この処理を実行するには、入力としてテーブル名を渡して、関数 [rxSqlServerTableExists](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) と [rxSqlServerDropTable](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)を呼び出します。
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
@@ -68,7 +68,7 @@ ms.locfileid: "88178622"
     + **rxSqlServerTableExists** は ODBC ドライバーに対してクエリを行い、テーブルが存在する場合は TRUE、それ以外の場合は FALSE を返します。
     + **rxSqlServerDropTable** は DDL を実行し、テーブルが正常にドロップされた場合は TRUE、それ以外の場合は FALSE を返します。
 
-5. [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) を実行してスコアを作成し、データ ソース sqlScoreDS で定義されている新しいテーブルに保存します。
+5. [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) を実行してスコアを作成し、データ ソース sqlScoreDS で定義されている新しいテーブルに保存します。
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -80,7 +80,7 @@ ms.locfileid: "88178622"
         overwrite = TRUE)
     ```
   
-    **rxPredict** 関数も、リモート計算コンテキストでの実行をサポートする関数です。 **rxPredict** 関数を使用すると、[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)、または [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) に基づくモデルからスコアを作成できます。
+    **rxPredict** 関数も、リモート計算コンテキストでの実行をサポートする関数です。 **rxPredict** 関数を使用すると、[rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod)、[rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit)、または [rxGlm](/machine-learning-server/r-reference/revoscaler/rxglm) に基づくモデルからスコアを作成できます。
   
     - ここで *writeModelVars* パラメーターは **TRUE** に設定されます。 これは見積もりに使用された変数が新しいテーブルに追加されることを意味します。
   
@@ -118,7 +118,7 @@ ms.locfileid: "88178622"
 
      この例を見ると、 **RxSqlServerData** データ ソース オブジェクトを使用して SQL クエリ、関数、またはストアド プロシージャに基づいて任意のデータセットを定義し、それを R コードで使用するのが簡単だということがわかります。 この変数には実際の値は格納されず、データ ソースの定義のみが格納されます。 **rxImport**など関数で使用する場合にのみ、このクエリを実行して値を生成します。
       
-2. [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 関数を呼び出して、コンピューティング コンテキスト全体で共有できるデータ フレームに値を配置します。
+2. [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) 関数を呼び出して、コンピューティング コンテキスト全体で共有できるデータ フレームに値を配置します。
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)

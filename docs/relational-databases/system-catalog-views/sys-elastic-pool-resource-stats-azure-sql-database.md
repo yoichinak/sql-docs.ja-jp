@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 485ba65479e002a960e3e15bf7ce8d0cc9032e0b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990165"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809868"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -48,17 +48,17 @@ ms.locfileid: "90990165"
 |**max_session_percent**|**decimal (5, 2)**|プールの限度に対する割合で表した最大同時実行セッション数。|  
 |**elastic_pool_dtu_limit**|**int**|この期間中のこのエラスティック プールに対する現在の最大エラスティック プール DTU 設定。|  
 |**elastic_pool_storage_limit_mb**|**bigint**|この期間中のこのエラスティック プールに対する現在の最大エラスティック プール ストレージ制限 (メガバイト単位)。|
-|**avg_allocated_storage_percent**|**decimal (5, 2)**|エラスティックプール内のすべてのデータベースによって割り当てられたデータ領域の割合。  これは、エラスティックプールのデータの最大サイズに割り当てられたデータ領域の比率です。  詳細については[、「SQL Database でのファイル領域管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|  
+|**avg_allocated_storage_percent**|**decimal (5, 2)**|エラスティックプール内のすべてのデータベースによって割り当てられたデータ領域の割合。  これは、エラスティックプールのデータの最大サイズに割り当てられたデータ領域の比率です。  詳細については[、「SQL Database でのファイル領域管理](/azure/sql-database/sql-database-file-space-management)」を参照してください。|  
   
 ## <a name="remarks"></a>注釈
 
- このビューは、SQL Database サーバーの master データベースに存在します。 **Elastic_pool_resource_stats**を照会するには、master データベースに接続している必要があります。  
+ このビューは、SQL Database サーバーの master データベースに存在します。 **Sys.elastic_pool_resource_stats**を照会するには、master データベースに接続している必要があります。  
   
 ## <a name="permissions"></a>アクセス許可
 
  **Dbmanager**ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
  次の例では、現在の SQL Database サーバーのすべてのエラスティックデータベースプールについて、最新の時刻によって並べ替えられたリソース使用率データを返します。  
   
@@ -80,9 +80,8 @@ ORDER BY end_time DESC;
 
 ## <a name="see-also"></a>参照
 
- [エラスティックデータベースによる爆発的な成長の緩和](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [SQL Database エラスティックデータベースプールの作成と管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
-  
+ [エラスティックデータベースによる爆発的な成長の緩和](/azure/azure-sql/database/elastic-pool-overview)   
+ [SQL Database エラスティックデータベースプールの作成と管理](/azure/azure-sql/database/elastic-pool-overview)   
+ [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   

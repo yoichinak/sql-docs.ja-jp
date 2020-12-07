@@ -16,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6520e44a9a351c2cc2e433397575b90cc641e42f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6ba22ed5ef08a90bd0726dfefb1f748da0588cb1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465563"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91810037"
 ---
 # <a name="increase-the-size-of-a-database"></a>データベースのサイズを大きくする
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、データベースのサイズを大きくする方法について説明します。 既存のデータ ファイルまたはログ ファイルのサイズを大きくするか、データベースに新しいファイルを追加することで、データベースを拡張します。  
   
  **このトピックの内容**  
@@ -57,7 +58,7 @@ ms.locfileid: "88465563"
   
 #### <a name="to-increase-the-size-of-a-database"></a>データベースのサイズを大きくするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  [ **データベース**] を展開し、サイズを大きくするデータベースを右クリックして、[ **プロパティ**] をクリックします。  
   

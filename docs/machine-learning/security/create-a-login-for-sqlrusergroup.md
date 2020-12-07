@@ -8,19 +8,19 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8273250360c9e60aae8ac1ae19ccebf4d76d8598
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180430"
+ms.lasthandoff: 11/01/2020
+ms.locfileid: "92195756"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup のログインｎ作成
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-スクリプト内の[ループ バック接続](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)が[信頼関係接続](../concepts/security.md#sqlrusergroup)を指定するとき、[SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) のための *SQL Server へのログイン*を作成すると、あなたのコードを含むオブジェクトの実行に使用される ID は Windows のユーザー アカウントです。
+スクリプト内の [ループ バック接続](../../relational-databases/security/authentication-access/create-a-login.md)が [信頼関係接続](../concepts/security.md#sqlrusergroup)を指定するとき、 [SQLRUserGroup](../../machine-learning/concepts/security.md#implied-authentication) のための *SQL Server へのログイン* を作成すると、あなたのコードを含むオブジェクトの実行に使用される ID は Windows のユーザー アカウントです。
 
-信頼関係接続とは、接続文字列に `Trusted_Connection=True` を持つ接続のことです。 SQL Server が信頼関係接続を指定する要求を受信すると、現在の Windows ユーザーの ID にログインがあるかどうかを確認します。 ワーカー アカウント (**SQLRUserGroup** からの MSSQLSERVER01 など) として実行されている外部プロセスの場合、既定ではこれらのアカウントにはログインがないため、要求は失敗します。
+信頼関係接続とは、接続文字列に `Trusted_Connection=True` を持つ接続のことです。 SQL Server が信頼関係接続を指定する要求を受信すると、現在の Windows ユーザーの ID にログインがあるかどうかを確認します。 ワーカー アカウント ( **SQLRUserGroup** からの MSSQLSERVER01 など) として実行されている外部プロセスの場合、既定ではこれらのアカウントにはログインがないため、要求は失敗します。
 
 **SQLServerRUserGroup** のログインを作成することによって、接続エラーを回避できます。 ID と外部プロセスの詳細については、「[機能拡張フレームワークのセキュリティの概要](../concepts/security.md)」を参照してください。
 
@@ -49,8 +49,8 @@ ms.locfileid: "88180430"
 
 5. サーバー上のグループ アカウントの一覧を、`SQLRUserGroup` で始まるものが見つかるまでスクロールします。
     
-    + Launchpad サービスの_既定のインスタンス_に関連付けられているグループの名前は、R または Python もしくはその両方のどれをインストールしたかにかかわらず、常に **SQLRUserGroup** です。 既定のインスタンスに対してのみ、このアカウントを選択します。
-    + _名前付きインスタンス_を使用している場合、インスタンス名は、既定のワーカー グループ名である `SQLRUserGroup` に追加されます。 たとえば、インスタンスの名前が "MLTEST" の場合、このインスタンスの既定のユーザー グループ名は **SQLRUserGroupMLTest** となります。
+    + Launchpad サービスの _既定のインスタンス_ に関連付けられているグループの名前は、R または Python もしくはその両方のどれをインストールしたかにかかわらず、常に **SQLRUserGroup** です。 既定のインスタンスに対してのみ、このアカウントを選択します。
+    + _名前付きインスタンス_ を使用している場合、インスタンス名は、既定のワーカー グループ名である `SQLRUserGroup` に追加されます。 たとえば、インスタンスの名前が "MLTEST" の場合、このインスタンスの既定のユーザー グループ名は **SQLRUserGroupMLTest** となります。
  
     ![サーバー上のグループ例](media/implied-auth-login5.png "サーバー上のグループ例")
    

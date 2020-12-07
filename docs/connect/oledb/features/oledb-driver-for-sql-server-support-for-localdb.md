@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c7f5ac94ff64ef32aaee793c59529ad0377b2f5
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: bcb768c0beea3ce836586bc718e1b7757da7ce72
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860680"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727316"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>LocalDB 用 OLE DB Driver for SQL Server のサポート
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860680"
   
 -   [SQL Server Express LocalDB リファレンス](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
--   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+-   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-express-localdb.md)  
   
  要約すると、LocalDB では次の操作を実行できます。  
   
@@ -47,5 +47,4 @@ SERVER=(localdb)\v11.0
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server の機能](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
   

@@ -19,12 +19,12 @@ ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e68915b7a1b82f736e152a2b31cf822214fe62c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6ae1434ea9ec664481d233c4e38be7b0ada7389
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459550"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380468"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88459550"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )  
 ```  
   
@@ -61,7 +61,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
  **time(** *precision* **)**  
   
 ## <a name="remarks"></a>解説  
- TIMEROMPARTS では、完全に初期化された time 値が返されます。 引数が無効な場合は、エラーが発生します。 パラメーターのいずれかが NULL の場合、NULL が返されます。 ただし場合、 *有効桁数 *引数が null の場合、エラーが発生します。  
+ TIMEROMPARTS では、完全に初期化された time 値が返されます。 引数が無効な場合は、エラーが発生します。 パラメーターのいずれかが NULL の場合、NULL が返されます。 ただし場合、 *有効桁数* 引数が null の場合、エラーが発生します。  
   
  *分数* 引数によって異なります、 *有効桁数* 引数。 たとえば、*precision* が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。*precision* が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 場合の値 *有効桁数* が 0 の場合、値の *分数* もする必要があります。 0 にするそれ以外の場合、エラーが発生します。  
   
@@ -71,7 +71,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
   
 ### <a name="a-simple-example-without-fractions-of-a-second"></a>A. 秒の小数部を使用しない場合の簡単な例  
   
-```  
+```sql
 SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;  
 ```  
   

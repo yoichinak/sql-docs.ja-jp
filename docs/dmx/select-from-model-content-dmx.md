@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df70a8726e9abc56d677c48ba8f3f995814866d4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496292"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727643"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>[モデルから] を選択し &lt; &gt; ます。コンテンツ (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>引数  
  *n*  
- 任意。 返す行数を指定する整数値です。  
+ 省略可能。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  コンテンツスキーマ行セットから派生した列のコンマ区切りのリスト。  
@@ -41,10 +41,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  モデル識別子。  
   
  *条件式*  
- 任意。 列リストから返される値を制限する条件。  
+ 省略可能。 列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 任意。 スカラー値を返す式。  
+ 省略可能。 スカラー値を返す式。  
   
 ## <a name="remarks"></a>解説  
  **SELECT FROM** _\<model>_ **です。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタムアプリケーションでのアソシエーションルールモデルのすべてのルールの説明を使用することができます。 SELECT FROM を使用でき ** \<model> ます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  次の表に、マイニングモデルコンテンツに含まれる列を示します。  
   
 > [!NOTE]  
->  アルゴリズムでは、コンテンツを正しく表現するために、列の解釈が異なる場合があります。 各アルゴリズムのマイニングモデルコンテンツの説明、および各種類のモデルのマイニングモデルコンテンツの解釈とクエリの方法に関するヒントについては、「 [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」を参照してください。  
+>  アルゴリズムでは、コンテンツを正しく表現するために、列の解釈が異なる場合があります。 各アルゴリズムのマイニングモデルコンテンツの説明、および各種類のモデルのマイニングモデルコンテンツの解釈とクエリの方法に関するヒントについては、「 [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」を参照してください。  
   
 |コンテンツ行セット列|説明|  
 |---------------------------|-----------------|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  期待される結果:  
   
- モデルはデシジョンツリーモデルであるため、モデルの親ノードの子孫には、1つの限界の統計ノード、予測可能な属性を表すノード、入力属性と値を含む複数のノードが含まれます。 詳細については、「 [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)」を参照してください。  
+ モデルはデシジョンツリーモデルであるため、モデルの親ノードの子孫には、1つの限界の統計ノード、予測可能な属性を表すノード、入力属性と値を含む複数のノードが含まれます。 詳細については、「 [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)」を参照してください。  
   
 ## <a name="using-the-flattened-keyword"></a>FLATTENED キーワードの使用  
  多くの場合、マイニング モデル コンテンツには、入れ子になったテーブル列のモデルに関する有用な情報が含まれています。 フラット化されたキーワードを使用すると、階層的な行セットをサポートするプロバイダーを使用せずに、入れ子になったテーブルの列からデータを取得できます。  
@@ -147,5 +147,4 @@ WHERE NODE_TYPE = 26
  [DMX&#41;を選択 &#40;](../dmx/select-dmx.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

@@ -5,16 +5,16 @@ description: この記事では、SQL Server ビッグ データ クラスター
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 09/02/2020
+ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c08893006e0b2edf093477259ebed788d49097
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989995"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631688"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -38,7 +38,7 @@ ms.locfileid: "90989995"
 ### <a name="host-os-for-kubernetes"></a>Kubernetes のホスト OS
 
 |プラットフォーム|ホスト OS|サポートされているバージョン|
-|---------|---------|
+|---------|---------|---------|
 |Kubernetes|Ubuntu|16.04|
 |Kubernetes|Red Hat Enterprise Linux|7.3、7.4、7.5、7.6|
 |OpenShift|Red Hat Enterprise Linux または CoreOS |[OpenShift のリリース ノート](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)を参照してください|
@@ -53,8 +53,8 @@ ms.locfileid: "90989995"
 
 |プラットフォーム|サポートされているバージョン|
 |---------|---------|
-|`azdata`|ベスト プラクティスとして、利用可能な最新バージョンを使用します。 SQL Server 2019 CU5 リリース以降では、`azdata` にサーバーから独立したセマンティック バージョンがあります。 <br/><br/>`azdata –-version` を実行して、バージョンを検証します。<br/><br/>最新バージョンについては、「[リリース履歴](#release-history)」を参照してください。|
-|Azure Data Studio|[Azure Data Studio](https://aka.ms/getazuredatastudio) の最新のビルドを取得します。|
+|[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]|ベスト プラクティスとして、利用可能な最新バージョンを使用します。 SQL Server 2019 CU5 リリース以降では、[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] にサーバーから独立したセマンティック バージョンがあります。 <br/><br/>`azdata –-version` を実行して、バージョンを検証します。<br/><br/>最新バージョンについては、「[リリース履歴](#release-history)」を参照してください。|
+|Azure Data Studio|[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) の最新のビルドを取得します。|
 
 完全な一覧については、「[必要なツール](deploy-big-data-tools.md#which-tools-are-required)」を参照してください
 
@@ -62,23 +62,43 @@ ms.locfileid: "90989995"
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のリリース履歴の一覧を次の表に示します。
 
-| リリース <sup>1</sup> | BDC のバージョン  | `azdata` バージョン <sup>2</sup> | リリース日 |
-|----------------------|--------------|-------------------------------|--------------|
-| [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 2020-08-04   |
-| [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
-| [CU4](#cu4)          | 15.0.4033.1  | 15.0.4033                     | 2020-03-31   |
-| [CU3](#cu3)          | 15.0.4023.6  | 15.0.4023                     | 2020-03-12   |
-| [CU2](#cu2)          | 15.0.4013.40 | 15.0.4013                     | 2020-02-13   |
-| [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 2020-01-07   |
-| [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
+| リリース <sup>1</sup> | BDC のバージョン    | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] バージョン <sup>2</sup>| リリース日 |
+|------------------|----------------|-----------------|--------------|
+| [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 2020-10-19   |
+| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
+| [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
+| [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
+| [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
+| [CU2](#cu2)      | 15.0.4013.40   | 15.0.4013       | 2020-02-13   |
+| [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
+| [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
-<sup>1</sup> CU7 の SQL Server 2019 ビッグ データ クラスター更新プログラムはありません。
+<sup>1</sup> CU7 は BDC では使用できません。
 
-<sup>2</sup> `azdata` バージョンは、CU リリース時のツールのバージョンを反映しています。 `azdata` はサーバー リリースとは無関係でリリースされることもあります。そのため、最新のパッケージをインストールするとき、新しいバージョンが取得されることがあります。 新しいバージョンは、前にリリースされた CU との間に互換性があります。
+<sup>2</sup> [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] バージョンは、CU リリース時のツールのバージョンを反映しています。 `azdata` はサーバー リリースとは無関係でリリースされることもあります。そのため、最新のパッケージをインストールするとき、新しいバージョンが取得されることがあります。 新しいバージョンは、前にリリースされた CU との間に互換性があります。
 
 ## <a name="how-to-install-updates"></a>更新プログラムのインストール方法
 
 更新プログラムをインストールする方法については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法](deployment-upgrade.md)」を参照してください。
+
+## <a name="cu8-september-2020"></a><a id="cu8"></a> CU8 (2020 年 9 月)
+
+SQL Server 2019 の累積的な更新プログラム 8 (CU8) リリース。
+
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.4073.23 |[2019-CU8-ubuntu-16.04]
+
+このリリースには、いくつかの修正といくつかの機能強化が含まれています。
+
+### <a name="added-capabilities"></a>追加された機能
+
+- システム マネージド キーと証明書を使用した [SQL Server ビッグ データ クラスターの保存時の暗号化](encryption-at-rest-concepts-and-configuration.md)。
+   > [!CAUTION]
+   > これは、SQL Server BDC の保存時の暗号化の最初のリリースです。 以下の記事を確認してください。 
+   > - [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] のセキュリティの概念](concept-security.md)
+   > - [保存時の暗号化の概念と構成ガイド](encryption-at-rest-concepts-and-configuration.md)
+- [Oracle プロキシ ユーザー](tutorial-query-oracle.md)は、データ仮想化シナリオをサポートしています。
 
 ## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (2020 年 7 月)
 
@@ -91,11 +111,12 @@ SQL Server 2019 の累積的な更新プログラム 6 (CU6) リリース。
 このリリースには、軽微な修正と機能強化が含まれています。 次の記事には、これらの更新プログラムに関連する情報が記されています。
 
 - [Active Directory モードでビッグ データ クラスター アクセスを管理する](manage-user-access.md)
-- [Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](deploy-active-directory.md)
-- [高可用性を使用して SQL Server ビッグ データ クラスターを展開する](deployment-high-availability.md)
-- [SQL Server ビッグ データ クラスターを構成する](configure-cluster.md)
+- [Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する](active-directory-deploy.md)
+- [Active Directory モードで AKS に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する](active-directory-deployment-aks.md)
+- [高可用性で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する](deployment-high-availability.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を構成する](configure-cluster.md)
 - [ビッグ データ クラスターで Apache Spark と Apache Hadoop を構成する](configure-spark-hdfs.md)
-- [SQL Server マスター インスタンスの構成プロパティ。](reference-config-master-instance.md)
+- [SQL Server マスター インスタンスの構成プロパティ](reference-config-master-instance.md)
 - [Apache Spark と Apache Hadoop (HDFS) の構成プロパティ](reference-config-spark-hadoop.md)
 - [Kubernetes RBAC モデルと BDC を管理するユーザーおよびサービス アカウントへの影響](kubernetes-rbac.md)
 
@@ -112,8 +133,8 @@ SQL Server 2019 の累積的な更新プログラム 5 (CU5) リリース。
 - Red Hat OpenShift でのビッグ データ クラスターのデプロイのサポート。 サポートには、オンプレミス バージョン 4.3 以降と Azure Red Hat OpenShift にデプロイされる OpenShift コンテナー プラットフォームが含まれます。 [OpenShift への SQL Server ビッグ データ クラスターのデプロイ](deploy-openshift.md)に関するページを参照してください
 - BDC のデプロイ セキュリティ モデルが更新されたため、BDC の一部としてデプロイされた特権コンテナーが "*必要*" なくなりました。 SQL Server 2019 CU5 を使用するすべての新しいデプロイでは、非特権だけでなく、コンテナーも既定では非ルート ユーザーとして実行されます。 
 - Active Directory ドメインに対して複数のビッグ データ クラスターをデプロイするためのサポートが追加されました。
-- `azdata` CLI には、サーバーから独立した独自のセマンティック バージョンがあります。 azdata のクライアントとサーバー バージョンの間の依存関係はすべて削除されます。 最新の拡張機能と修正プログラムの利点が確実に得られるように、クライアントとサーバーの両方に最新バージョンを使用することをお勧めします。
-- 特定の外部データ ソースのイントロスペクションをサポートするために、sp_data_source_objects と sp_data_source_table_columns という 2 つの新しいストアド プロシージャが導入されました。 これらは、お客様が T-SQL を介して直接使用し、スキーマを検出したり、仮想化が可能なテーブルを確認したりすることができます。 これらの変更は、Azure Data Studio 用の[データ仮想化拡張機能](../azure-data-studio/data-virtualization-extension.md)の外部テーブル ウィザードで活用されます。これにより、SQL Server、Oracle、MongoDB、Teradata から外部テーブルを作成することができます。
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] には、サーバーから独立した独自のセマンティック バージョンがあります。 azdata のクライアントとサーバー バージョンの間の依存関係はすべて削除されます。 最新の拡張機能と修正プログラムの利点が確実に得られるように、クライアントとサーバーの両方に最新バージョンを使用することをお勧めします。
+- 特定の外部データ ソースのイントロスペクションをサポートするために、sp_data_source_objects と sp_data_source_table_columns という 2 つの新しいストアド プロシージャが導入されました。 これらは、お客様が T-SQL を介して直接使用し、スキーマを検出したり、仮想化が可能なテーブルを確認したりすることができます。 これらの変更は、Azure Data Studio 用の[データ仮想化拡張機能](../azure-data-studio/extensions/data-virtualization-extension.md)の外部テーブル ウィザードで活用されます。これにより、SQL Server、Oracle、MongoDB、Teradata から外部テーブルを作成することができます。
 - Grafana で実行されたカスタマイズを永続化するためのサポートが追加されました。 CU5 より前のお客様は、Grafana 構成でのすべての編集が、(Grafana ダッシュボードをホストする) `metricsui` ポッドの再起動時に失われることにお気付きかもしれません。 この問題は修正され、すべての構成が永続化されるようになりました。 
 - (`metricsdc` ポッドでホストされている) Telegraf を使ってポッドとノードのメトリックを収集するために使用される、API に関するセキュリティの問題が修正されました。 この変更の結果として、Telegraf を使用する場合、ポッドとノードのメトリックを収集するために必要なアクセス許可をサービス アカウント、クラスター ロールおよびクラスター バインドに付与することが必要になりました。 詳細については、「[ポッドとノードのメトリックの収集に必要なクラスター ロール](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection)」を参照してください。
 - ポッドとノードのメトリックの収集を制御するために、2 つの機能スイッチが追加されました。 Kubernetes インフラストラクチャの監視に別のソリューションを使用する場合は、control.json 展開構成ファイルで *allowNodeMetricsCollection* と *allowPodMetricsCollection* を false に設定し、ポッドとホスト ノードに対する組み込みのメトリック収集を無効にすることができます。 OpenShift 環境の場合、組み込みのデプロイ プロファイルではこれらの設定が既定では false に設定されます。これは、ポッドとノードのメトリックを収集するには特権機能が必要であるためです。
@@ -169,15 +190,27 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
 ## <a name="known-issues"></a>既知の問題
 
+### <a name="ha-sql-server-database-encryption-key-encryptor-rotation"></a>HA SQL Server データベースの暗号化キーの暗号化機能のローテーション
+
+- **影響を受けるリリース**: リリースに関係なく、すべてのビッグ データ クラスター HA のデプロイ。
+
+- **問題およびユーザーへの影響**:SQL Server が HA と共にデプロイされている場合、暗号化されたデータベースの証明書ローテーションは失敗します。 マスター プールで次のコマンドを実行すると、エラー メッセージが表示されます。
+    ```
+    ALTER DATABASE ENCRYPTION KEY
+    ENCRYPTION BY SERVER
+    CERTIFICATE <NewCertificateName>
+    ```
+    影響はなく、コマンドは失敗し、ターゲット データベースの暗号化は以前の証明書を使用して保持されます。
+    
 ### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>累積更新プログラムを適用する前の空の Livy ジョブ
 
-- **影響を受けるリリース**: 現在の累積的な更新プログラム全体
+- **影響を受けるリリース**: CU6 までのすべてのバージョン。 CU8 に対して解決されました。
 
-- **問題およびユーザーへの影響**:アップグレード中、sparkhead は 404 エラーを返します。
+- **問題およびユーザーへの影響**:アップグレード中、`sparkhead` は 404 エラーを返します。
 
 - **回避策**:BDC をアップグレードする前に、アクティブな Livy セッションまたはバッチ ジョブがないことを確認してください。 これを回避するには、「[サポートされているリリースからのアップグレード](deployment-upgrade.md#upgrade-from-supported-release)」の手順に従ってください。 
 
-   アップグレード処理中に Livy から 404 エラーが返された場合は、両方の sparkhead ノードで Livy サーバーを再起動します。 次に例を示します。
+   アップグレード処理中に Livy から 404 エラーが返された場合は、両方の `sparkhead` ノードで Livy サーバーを再起動します。 次に例を示します。
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
@@ -187,7 +220,7 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
 - **影響を受けるリリース**: Active Directory 統合を使用したすべてのビッグ データ クラスターのデプロイ (リリースには無関係)
 
-- **問題およびユーザーへの影響**:ビッグ データ クラスターのデプロイ中に、ワークフローによって一連の[サービス アカウント](active-directory-objects.md)が生成されます。ドメイン コントローラーで設定されているパスワードの有効期限ポリシーによっては、これらのアカウントのパスワードの有効期限が切れることがあります (既定値は 42 日)。 現時点では、BDC 内のすべてのアカウントの資格情報をローテーションするメカニズムはないため、有効期限が切れるとクラスターは動作しなくなります。
+- **問題およびユーザーへの影響**:ビッグ データ クラスターのデプロイ中に、ワークフローによって一連の [サービス アカウント](active-directory-objects.md)が生成されます。ドメイン コントローラーで設定されているパスワードの有効期限ポリシーによっては、これらのアカウントのパスワードの有効期限が切れることがあります (既定値は 42 日)。 現時点では、BDC 内のすべてのアカウントの資格情報をローテーションするメカニズムはないため、有効期限が切れるとクラスターは動作しなくなります。
 
 - **回避策**:ドメイン コントローラーで、BDC サービス アカウントの有効期限ポリシーを "パスワードを無期限にする" に更新します。 これらのアカウントの完全な一覧については、「[Active Directory オブジェクトの自動生成](active-directory-objects.md)」をご覧ください。 この操作は、有効期限の前または後に行うことができます。 後者の場合、Active Directory によって、期限切れのパスワードが再アクティブ化されます。
 
@@ -195,10 +228,10 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
 - **影響を受けるリリース**: CU5 以降にデプロイされた新しいクラスター。
 
-- **問題およびユーザーへの影響**:SQL Server 2019 CU5 を使用してデプロイされた新しいビッグ データ クラスターの場合、ゲートウェイのユーザー名は**ルート**ではありません。 ゲートウェイ エンドポイントへの接続に使用されるアプリケーションで間違った資格情報が使用されている場合、認証エラーが発生します。 この変更は、ビッグ データ クラスター内のアプリケーションを非ルート ユーザーとして実行した結果 (SQL Server 2019 CU5 リリース以降の新しい既定の動作) であり、CU5 を使用して新しいビッグ データ クラスターをデプロイする場合、ゲートウェイ エンドポイントのユーザー名は **AZDATA_USERNAME** 環境変数を介して渡される値に基づくものになります。 これは、コントローラーと SQL Server エンドポイントに使用されるのと同じユーザー名です。 これは新しいデプロイにのみ影響し、以前のリリースのいずれかでデプロイされた既存のビッグ データ クラスターでは引き続き、**ルート**が使用されます。 Active Directory 認証を使用するためにクラスターがデプロイされている場合、資格情報には影響はありません。 
+- **問題およびユーザーへの影響**:SQL Server 2019 CU5 を使用してデプロイされた新しいビッグ データ クラスターの場合、ゲートウェイのユーザー名は **ルート** ではありません。 ゲートウェイ エンドポイントへの接続に使用されるアプリケーションで間違った資格情報が使用されている場合、認証エラーが発生します。 この変更は、ビッグ データ クラスター内のアプリケーションを非ルート ユーザーとして実行した結果 (SQL Server 2019 CU5 リリース以降の新しい既定の動作) であり、CU5 を使用して新しいビッグ データ クラスターをデプロイする場合、ゲートウェイ エンドポイントのユーザー名は **AZDATA_USERNAME** 環境変数を介して渡される値に基づくものになります。 これは、コントローラーと SQL Server エンドポイントに使用されるのと同じユーザー名です。 これは新しいデプロイにのみ影響し、以前のリリースのいずれかでデプロイされた既存のビッグ データ クラスターでは引き続き、**ルート** が使用されます。 Active Directory 認証を使用するためにクラスターがデプロイされている場合、資格情報には影響はありません。 
 
 - **回避策**:ObjectExplorer で HDFS ブラウズ エクスペリエンスを有効にするためにゲートウェイに行われた接続に対する資格情報の変更は、Azure Data Studio によって透過的に処理されます。 このユース ケースに対処する必要な変更を含む、[最新の Azure Data Studio リリース](../azure-data-studio/download-azure-data-studio.md)をインストールする必要があります。
-ゲートウェイ経由でサービスにアクセスするための資格情報を提供する必要があるその他のシナリオ (`azdata` でのログイン、Spark の Web ダッシュボードへのアクセスなど) では、正しい資格情報が確実に使用されるようにする必要があります。 CU5 より前にデプロイされた既存のクラスターを対象とする場合は、クラスターを CU5 にアップグレードした後でも、ゲートウェイへの接続には引き続き**ルート** ユーザー名を使用することになります。 CU5 ビルドを使用して新しいクラスターをデプロイする場合は、**AZDATA_USERNAME** 環境変数に対応するユーザー名を指定してログインします。
+ゲートウェイ経由でサービスにアクセスするための資格情報を提供する必要があるその他のシナリオ ([!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] でのログイン、Spark の Web ダッシュボードへのアクセスなど) では、正しい資格情報が確実に使用されるようにする必要があります。 CU5 より前にデプロイされた既存のクラスターを対象とする場合は、クラスターを CU5 にアップグレードした後でも、ゲートウェイへの接続には引き続き **ルート** ユーザー名を使用することになります。 CU5 ビルドを使用して新しいクラスターをデプロイする場合は、**AZDATA_USERNAME** 環境変数に対応するユーザー名を指定してログインします。
 
 ### <a name="pods-and-nodes-metrics-not-being-collected"></a>ポッドとノードのメトリックが収集されない
 
@@ -210,7 +243,7 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
 ### <a name="azdata-bdc-copy-logs-command-failure"></a>`azdata bdc copy-logs` コマンドの失敗
 
-- **影響を受けるリリース**: `azdata` バージョン *20.0.0*
+- **影響を受けるリリース**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] バージョン *20.0.0*
 
 - **問題およびユーザーへの影響**:*copy-logs* コマンドの実装では、コマンドが発行されるクライアント コンピューターに `kubectl` クライアント ツールがインストールされていることが前提となります。 `oc` ツールのみがインストールされているクライアントから、OpenShift にインストールされている BDC クラスターに対してコマンドを発行する場合、次のようなエラーが表示されます: *ログの収集中にエラーが発生しました: [WinError 2] 指定されたファイルが見つかりません*。
 
@@ -222,7 +255,7 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
 - **問題およびユーザーへの影響**:プライベート リポジトリからアップグレードする場合に特定の要件があります。
 
-- **回避策**:プライベート リポジトリを使用して BDC を展開またはアップグレードするためにイメージを事前にプルする場合は、現在のビルド イメージとターゲット ビルド イメージがプライベート リポジトリ内にあることを確認します。 これにより、必要な場合に正常にロールバックすることが可能になります。 また、最初の展開以降にプライベート リポジトリの資格情報を変更した場合は、アップグレードする前に Kubernetes で対応するシークレットを更新します。 `azdata` では、`AZDATA_PASSWORD` と `AZDATA_USERNAME` の環境変数を使用した資格情報の更新はサポートされていません。 [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) を使用してシークレットを更新します。 
+- **回避策**:プライベート リポジトリを使用して BDC を展開またはアップグレードするためにイメージを事前にプルする場合は、現在のビルド イメージとターゲット ビルド イメージがプライベート リポジトリ内にあることを確認します。 これにより、必要な場合に正常にロールバックすることが可能になります。 また、最初の展開以降にプライベート リポジトリの資格情報を変更した場合は、アップグレードする前に Kubernetes で対応するシークレットを更新します。 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] では、`AZDATA_PASSWORD` と `AZDATA_USERNAME` の環境変数を使用した資格情報の更新はサポートされていません。 [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) を使用してシークレットを更新します。 
 
 別のリポジトリを使用した現在のビルドとターゲット ビルドのアップグレードはサポートされていません。
 

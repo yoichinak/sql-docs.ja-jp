@@ -24,12 +24,12 @@ ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4b1e652bfeff0646fb28da125a46b3ff222f54f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 500010c11f80bf36341631a90cf8dfcf49f49c5b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362638"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380577"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88362638"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 USER  
 ```  
   
@@ -63,8 +63,8 @@ USER
 ### <a name="a-using-user-to-return-the-database-user-name"></a>A. USER を使用してデータベース ユーザー名を返す  
  次の例では、変数を `char` 型として宣言し、USER の現在値をこの変数に割り当てた後、テキストの説明を付けてこの変数を出力します。  
   
-```  
-DECLARE @usr char(30)  
+```sql
+DECLARE @usr CHAR(30)  
 SET @usr = user  
 SELECT 'The current user''s database username is: '+ @usr  
 GO  
@@ -82,14 +82,14 @@ The current user's database username is: dbo
 ### <a name="b-using-user-with-default-constraints"></a>B. USER を DEFAULT 制約と共に使用する  
  次の例では、sales 行の販売員に対する `USER` 制約として `DEFAULT` を使用し、テーブルを作成します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE inventory22  
 (  
- part_id int IDENTITY(100, 1) NOT NULL,  
- description varchar(30) NOT NULL,  
- entry_person varchar(30) NOT NULL DEFAULT USER   
+ part_id INT IDENTITY(100, 1) NOT NULL,  
+ description VARCHAR(30) NOT NULL,  
+ entry_person VARCHAR(30) NOT NULL DEFAULT USER   
 )  
 GO  
 INSERT inventory22 (description)  
@@ -107,7 +107,7 @@ GO
   
  次は、`inventory22` テーブルからすべての情報を選択するクエリです。  
   
-```  
+```sql
 SELECT * FROM inventory22 ORDER BY part_id;  
 GO  
 ```  
@@ -129,7 +129,7 @@ part_id     description                    entry_person
 ### <a name="c-using-user-in-combination-with-execute-as"></a>C. USER を EXECUTE AS と組み合わせて使用する  
  次の例では、権限を借用したセッションを内部で呼び出すときの、`USER` の動作を示します。  
   
-```  
+```sql
 SELECT USER;  
 GO  
 EXECUTE AS USER = 'Mario';  

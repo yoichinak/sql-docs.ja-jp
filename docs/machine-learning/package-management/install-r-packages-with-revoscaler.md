@@ -7,14 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b2dd0f77dcfc8c116bfbf0f4431c2825f6cb9e68
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1526f1c9eaaf4924ec248b523bd44148398e031b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179311"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870116"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>RevoScaleR を使用して R パッケージをインストールする
 
@@ -33,12 +32,12 @@ ms.locfileid: "88179311"
 
 | Function | 説明 |
 |----------|-------------|
-| [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | リモート SQL Server のインスタンス ライブラリのパスを特定します。 |
-| [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | リモート SQL Server にある 1 つ以上のパッケージのパスを取得します。 |
-| [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | リモートの R クライアントからこの関数は呼び出して、指定したリポジトリから、またはローカルに保存されている zip 形式のパッケージを読み取ることで、SQL Server 計算コンテキストにパッケージをインストールします。 この関数では、依存関係をチェックして、ローカル計算コンテキストでの R パッケージのインストールなど、関連するパッケージを SQL Server にインストールできることを確認します。 このオプションを使用するには、サーバーとデータベースでパッケージ管理が有効になっている必要があります。 クライアント環境とサーバー環境の両方に、同じバージョンの RevoScaleR が必要です。 |
-| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | 指定した計算コンテキストにインストールされているパッケージの一覧を取得します。 |
-| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | 指定した計算コンテキストについて、ファイル システムとデータベースの間にあるパッケージ ライブラリに関する情報をコピーします。 |
-| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 指定した計算コンテキストからパッケージを削除します。 また、依存関係を計算し、SQL Server の他のパッケージで使用されなくなったパッケージが削除されていることを確認して、リソースを解放します。 |
+| [rxSqlLibPaths](/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | リモート SQL Server のインスタンス ライブラリのパスを特定します。 |
+| [rxFindPackage](/machine-learning-server/r-reference/revoscaler/rxfindpackage) | リモート SQL Server にある 1 つ以上のパッケージのパスを取得します。 |
+| [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | リモートの R クライアントからこの関数は呼び出して、指定したリポジトリから、またはローカルに保存されている zip 形式のパッケージを読み取ることで、SQL Server 計算コンテキストにパッケージをインストールします。 この関数では、依存関係をチェックして、ローカル計算コンテキストでの R パッケージのインストールなど、関連するパッケージを SQL Server にインストールできることを確認します。 このオプションを使用するには、サーバーとデータベースでパッケージ管理が有効になっている必要があります。 クライアント環境とサーバー環境の両方に、同じバージョンの RevoScaleR が必要です。 |
+| [rxInstalledPackages](/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | 指定した計算コンテキストにインストールされているパッケージの一覧を取得します。 |
+| [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | 指定した計算コンテキストについて、ファイル システムとデータベースの間にあるパッケージ ライブラリに関する情報をコピーします。 |
+| [rxRemovePackages](/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 指定した計算コンテキストからパッケージを削除します。 また、依存関係を計算し、SQL Server の他のパッケージで使用されなくなったパッケージが削除されていることを確認して、リソースを解放します。 |
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -48,22 +47,22 @@ ms.locfileid: "88179311"
 
 + サーバーとデータベースに接続して、R コマンドを実行する権限がある。 また、データベース ロールのメンバーで、指定したインスタンスとデータベースにパッケージをインストールできる。
 
-  + **共有スコープ**のパッケージは、指定したデータベースの `rpkgs-shared` ロールに属しているユーザーがインストールできます。 このロールのユーザーはすべて、共有パッケージをアンインストールできます。
+  + **共有スコープ** のパッケージは、指定したデータベースの `rpkgs-shared` ロールに属しているユーザーがインストールできます。 このロールのユーザーはすべて、共有パッケージをアンインストールできます。
 
-  + **非公開スコープ**のパッケージは、データベースの `rpkgs-private` ロールに属しているすべてのユーザーがインストールできます。 ただし、ユーザーが表示およびアンインストールできるのは自分のパッケージのみです。
+  + **非公開スコープ** のパッケージは、データベースの `rpkgs-private` ロールに属しているすべてのユーザーがインストールできます。 ただし、ユーザーが表示およびアンインストールできるのは自分のパッケージのみです。
 
   + データベース所有者は、共有または非公開パッケージを操作できます。
 
 ## <a name="client-connections"></a>クライアント接続
 
-同じネットワーク上にある [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) または [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) (データ サイエンティストは無料の Developer エディションを使用することが多い) を、クライアント ワークステーションにできます。
+同じネットワーク上にある [Microsoft R Client](/machine-learning-server/r-client/install-on-windows) または [Microsoft Machine Learning Server](/machine-learning-server/install/machine-learning-server-windows-install) (データ サイエンティストは無料の Developer エディションを使用することが多い) を、クライアント ワークステーションにできます。
 
-リモート R クライアントからパッケージ管理関数を呼び出すときは、[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 関数を使用して、最初に計算コンテキスト オブジェクトを作成する必要があります。 その後、使用するパッケージ管理関数それぞれに、計算コンテキストを引数として渡します。
+リモート R クライアントからパッケージ管理関数を呼び出すときは、[RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 関数を使用して、最初に計算コンテキスト オブジェクトを作成する必要があります。 その後、使用するパッケージ管理関数それぞれに、計算コンテキストを引数として渡します。
 
 ユーザー ID は、通常、計算コンテキストを設定するときに指定されます。 計算コンテキストを作成するときにユーザー名とパスワードを指定しない場合は、R コードを実行しているユーザーの ID が使用されます。
 
 1. R コマンド ラインで、インスタンスとデータベースへの接続文字列を定義します。
-2. 接続文字列を使用して、[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) コンストラクターを使って、SQL Server 計算コンテキストを定義します。
+2. 接続文字列を使用して、[RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) コンストラクターを使って、SQL Server 計算コンテキストを定義します。
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -74,7 +73,7 @@ ms.locfileid: "88179311"
     packageList <- c("e1071", "mice")
     ```
 
-4. [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) を呼び出し、計算コンテキストと、パッケージ名を含む文字列変数を渡します。
+4. [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) を呼び出し、計算コンテキストと、パッケージ名を含む文字列変数を渡します。
 
     ```R
     rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)
@@ -111,7 +110,7 @@ connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Fi
 
 ### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>リモート SQL Server 計算コンテキストにあるパッケージ パスを取得する
 
-この例では、計算コンテキスト **にある**RevoScaleR`sqlcc` パッケージのパスを取得します。
+この例では、計算コンテキスト **にある** RevoScaleR`sqlcc` パッケージのパスを取得します。
 
 ```R
 sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
@@ -127,7 +126,7 @@ print(sqlPackagePaths)
 
 ### <a name="get-locations-for-multiple-packages"></a>複数のパッケージの場所を取得する
 
-次の例では、計算コンテキスト **にある**RevoScaleR**および**lattice`sqlcc` パッケージのパスを取得します。 複数のパッケージに関する情報を取得するには、パッケージ名を含む文字列ベクトルを渡します。
+次の例では、計算コンテキスト **にある** RevoScaleR **および** lattice`sqlcc` パッケージのパスを取得します。 複数のパッケージに関する情報を取得するには、パッケージ名を含む文字列ベクトルを渡します。
 
 ```R
 packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlcc)

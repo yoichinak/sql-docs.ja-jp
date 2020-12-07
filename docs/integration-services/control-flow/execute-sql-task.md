@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6138e30bf4794fff847dd7a0750d59c8d8fb884a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8155db361eeffd3b84ba1aadf313ecef4652e9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394168"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196542"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
 
@@ -69,7 +69,7 @@ ms.locfileid: "88394168"
 >  有効な SQL ステートメントが SQL 実行タスクの外部に記述されている場合、SQL 実行タスクは解析に失敗することがあります。  
   
 > [!NOTE]  
->  SQL 実行タスクは **RecognizeAll** ParseMode の列挙値を使用します。 詳細については、「 [ManagedBatchParser 名前空間](https://go.microsoft.com/fwlink/?LinkId=223617)」を参照してください。  
+>  SQL 実行タスクは **RecognizeAll** ParseMode の列挙値を使用します。 詳細については、「 [ManagedBatchParser 名前空間](/dotnet/api/managedbatchparser)」を参照してください。  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>複数のステートメントを一括送信する  
  SQL 実行タスクに複数のステートメントが含まれる場合、それらをグループ化してバッチとして実行できます。 バッチの開始と終了を知らせるには、GO コマンドを使用します。 2 つの GO コマンド間にあるすべての SQL ステートメントは、OLE DB プロバイダーにバッチで送信されて実行されます。 SQL コマンドには、GO コマンドで分割された複数のバッチを含めることができます。  
@@ -115,7 +115,7 @@ ms.locfileid: "88394168"
 ## <a name="general-page---execute-sql-task-editor"></a>[全般] ページ - [SQL 実行タスク エディター]
  **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、SQL 実行タスクを構成したり、タスクが実行する SQL ステートメントを指定したりできます。  
 
-Transact-SQL クエリ言語の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
+Transact-SQL クエリ言語の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/language-reference.md)」を参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
  **名前**  
@@ -186,19 +186,19 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  **[SQLStatement]**  
  実行する SQL ステートメントをオプション ボックスに入力するか、参照ボタン ([...]) をクリックして **[SQL クエリの入力]** ダイアログ ボックスに SQL ステートメントを入力するか、 **[クエリの作成]** をクリックして **[クエリ ビルダー]** ダイアログ ボックスでステートメントを作成します。  
   
- **関連トピック:** [クエリ ビルダー](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **関連トピック:** [クエリ ビルダー](../integration-services-ssis-queries.md)  
   
 #### <a name="sqlsourcetype--file-connection"></a>[SQLSourceType] = [ファイル接続]  
  **[FileConnection]**  
  既存のファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして、新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../connection-manager/file-connection-manager.md)  
   
 #### <a name="sqlsourcetype--variable"></a>[SQLSourceType] = [変数]  
  **[SourceVariable]**  
  既存の変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>[パラメーター マッピング] ページ - [SQL 実行タスク エディター]
 **[SQL 実行タスク エディター]** ダイアログ ボックスの **[パラメーター マッピング]** ページを使用すると、SQL ステートメント内のパラメーターに変数をマップできます。  
@@ -385,7 +385,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 |接続の種類|EXEC 構文|  
 |---------------------|-----------------|  
 |EXCEL および OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「 [プロシージャのパラメーター](https://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「 [プロシージャのパラメーター](../../odbc/reference/develop-app/procedure-parameters.md)」を参照してください。|  
 |ADO (ADO)|IsQueryStoredProcedure が **False** に設定されている場合、`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure が **True** に設定されている場合、`uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|IsQueryStoredProcedure が **False** に設定されている場合、`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure が **True** に設定されている場合、`uspGetBillOfMaterials`|  
   
@@ -448,7 +448,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
     |ODBC|1、2、3、...|  
     |EXCEL および OLE DB|0、1、2、3、…|  
   
-10. **[変数名]** 一覧で、変数を選択します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
+10. **[変数名]** 一覧で、変数を選択します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../integration-services-ssis-variables.md)」を参照してください。  
   
 11. **[方向]** 一覧で、パラメーターが入力、出力、または戻り値のいずれであるかを指定します。  
   
@@ -474,7 +474,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 |接続の種類|EXEC 構文|  
 |---------------------|-----------------|  
 |EXCEL および OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「 [プロシージャのパラメーター](https://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「 [プロシージャのパラメーター](../../odbc/reference/develop-app/procedure-parameters.md)」を参照してください。|  
 |ADO (ADO)|IsQueryStoreProcedure が **False**に設定されている場合、`EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure が **True**に設定されている場合、`myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|IsQueryStoreProcedure を **True**に設定します。<br /><br /> `myStoredProcedure`|  
   
@@ -557,7 +557,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
 8.  結果セット マッピングを追加するには、 **[追加]** をクリックします。  
   
-9. **[変数名]** の一覧で、変数を選択するか、新しい変数を作成します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
+9. **[変数名]** の一覧で、変数を選択するか、新しい変数を作成します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../integration-services-ssis-variables.md)」を参照してください。  
   
 10. **[結果名]** の一覧で、必要に応じて結果セットの名前を変更します。  
   
@@ -579,5 +579,4 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
-|**ExecuteSQLExecutingQuery**|SQL ステートメントの実行フェーズに関する情報を提供します。 タスクがデータベースへの接続を取得したとき、SQL ステートメントの準備が開始されたとき、および SQL ステートメントの実行が完了した後に、ログ エントリが書き込まれます。 準備フェーズのログ エントリには、タスクで使用される SQL ステートメントが含まれます。|  
-
+|**ExecuteSQLExecutingQuery**|SQL ステートメントの実行フェーズに関する情報を提供します。 タスクがデータベースへの接続を取得したとき、SQL ステートメントの準備が開始されたとき、および SQL ステートメントの実行が完了した後に、ログ エントリが書き込まれます。 準備フェーズのログ エントリには、タスクで使用される SQL ステートメントが含まれます。|

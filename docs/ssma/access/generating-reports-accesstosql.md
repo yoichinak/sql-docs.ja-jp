@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b0c97c84282952f8f33aa900a394820830ae8bd5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a39eb77ce3247aa72874ab5f3dfbaa4e80f0050c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488300"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984888"
 ---
 # <a name="generating-reports-accesstosql"></a>レポートの生成
 コマンドを使用して実行される特定のアクティビティのレポートは、SSMA コンソールのオブジェクトツリーレベルで生成されます。  
@@ -139,6 +139,5 @@ ms.locfileid: "88488300"
   
 -   失敗-スクリプト  
   
-## <a name="see-also"></a>関連項目  
-[SSMA コンソール (アクセス) の実行](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+## <a name="see-also"></a>参照  
+[SSMA コンソール (アクセス) の実行](./executing-the-ssma-console-accesstosql.md)  

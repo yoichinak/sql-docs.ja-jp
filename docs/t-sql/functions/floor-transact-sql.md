@@ -22,11 +22,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d952142a989823a96a4edace573c8e097b357c6b
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570696"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128443"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,10 +45,10 @@ FLOOR ( numeric_expression )
 
 ## <a name="arguments"></a>引数
  *numeric_expression*  
- bit データ型を除く、真数または概数データ型カテゴリの**式**です。  
+ bit データ型を除く、真数または概数データ型カテゴリの **式** です。  
   
 ## <a name="return-types"></a>戻り値の型  
- *numeric_expression*と同じ型を返します。  
+ *numeric_expression* と同じ型を返します。  
   
 ## <a name="examples"></a>例  
  この例では、正の数値、負の数値、および通貨値を使った `FLOOR` 関数を示しています。  
@@ -57,7 +57,7 @@ FLOOR ( numeric_expression )
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 結果には、計算値と同じデータ型の整数部分 *numeric_expression*です。  
+ 結果には、計算値と同じデータ型の整数部分 *numeric_expression* です。  
   
 ```  
 ---------      ---------     -----------  
@@ -71,7 +71,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
- 結果には、計算値と同じデータ型の整数部分 *numeric_expression*です。  
+ 結果には、計算値と同じデータ型の整数部分 *numeric_expression* です。  
   
  ```
  -----   ---------    -----------  

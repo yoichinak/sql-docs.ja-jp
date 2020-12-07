@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f77a63b11636f2be16e3d7c81c5b902a95b2a84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8aa4a0c94f0728162230c5a282cbac7410643a4b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425594"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194556"
 ---
 # <a name="xml-source-custom-properties"></a>XML 入力元のカスタム プロパティ
 
@@ -30,7 +30,7 @@ ms.locfileid: "88425594"
 |プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|XML データへのアクセスに使用するモード。|  
-|UseInlineSchema|ブール型|XML ソース内のインライン スキーマ定義を使用するかどうかを示す値。 このプロパティの既定値は **False**です。|  
+|UseInlineSchema|Boolean|XML ソース内のインライン スキーマ定義を使用するかどうかを示す値。 このプロパティの既定値は **False**です。|  
 |XMLData|String|XML データを取得するファイルまたは変数。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。|  
 |XMLSchemaDefinition|String|スキーマ定義ファイル (.xsd) のパスおよびファイル名。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。|  
   
@@ -44,7 +44,6 @@ ms.locfileid: "88425594"
   
  詳細については、「 [XML ソース](../../integration-services/data-flow/xml-source.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+## <a name="see-also"></a>参照  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

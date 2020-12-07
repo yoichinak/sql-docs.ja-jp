@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1eec7f57655dd86ef62ee8cef40f2c2a9454a8f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5459096926d477795edede0666ce27027310f8f7
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349308"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194938"
 ---
 # <a name="select-variables-page"></a>[変数の選択] ページ
 
@@ -43,6 +43,5 @@ ms.locfileid: "88349308"
  変数のデータ型を指定します。  
   
 ## <a name="see-also"></a>参照  
- [[スクリプト タスク エディター] ([スクリプト] ページ)](../../integration-services/control-flow/script-task-editor-script-page.md)  
-  
+ [[スクリプト タスク エディター] ([スクリプト] ページ)](./script-task.md)  
   

@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b425d57a0b1aee0c01db62d3fd1b77eb59c8aed
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4008dd4f023170b50bdf28f1f026da9ee892f970
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632952"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726863"
 ---
 # <a name="idle-connection-resiliency"></a>アイドル状態の接続の回復性
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "81632952"
 
 ## <a name="example"></a>例
 
-次のコードでは、データベースに接続してクエリが実行されます。 接続はセッションを強制終了することによって中断され、切断された接続を使用して新しいクエリが試行されます。 この例では、[AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) サンプル データベースを使用します。
+次のコードでは、データベースに接続してクエリが実行されます。 接続はセッションを強制終了することによって中断され、切断された接続を使用して新しいクエリが試行されます。 この例では、[AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)) サンプル データベースを使用します。
 
 この例では、接続を切断する前にバッファー カーソルを指定します。 バッファー カーソルを指定しない場合、アクティブなサーバー側カーソルが存在し、切断されたときに接続はアイドル状態にならないため、接続は再確立されません。 ただし、その場合でも、接続を断つ前に sqlsrv_free_stmt() を呼び出してカーソルを解放すると、接続が正常に再確立されます。
 

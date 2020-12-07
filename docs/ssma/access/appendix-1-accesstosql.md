@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ea9a89eadfd03f31573fd3a25e41e8bb8c1ed73f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88b8566b0ed3b264f09f0307251dcf9e69270e19
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418578"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987672"
 ---
 # <a name="appendix---1-accesstosql"></a>付録-1 (Sql)
 SSMA コンソールのコマンドラインオプションのクイックビューを次に示します。  
   
-|法. いいえ。|スイッチ|必須|スイッチ引数|許可される値|  
+|法. いいえ。|Switch|必須|スイッチ引数|許可される値|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/スクリプト|はい|scriptfile|有効な XML ファイル名です。<br /><br />コンソールスクリプト定義ファイル。|  
 |2|-v/variable|いいえ|変数 valuefile|有効な XML ファイル名です。 スクリプトファイルで変数を使用する場合は、このファイルを指定する必要があります。|  
@@ -29,8 +29,7 @@ SSMA コンソールのコマンドラインオプションのクイックビュ
 |5|-l/ログ|いいえ|logfile|有効なファイル名です。|  
 |6|-e/projectenvironment|いいえ|project環境フォルダー|SSMA プロジェクト環境ファイルを含む有効なフォルダー名です。|  
 |7|-p/securepassword|いいえ|-a/add {<server_id> [,...n] &#124; すべて}-c&#124;microsoft.sqlserver.management.common.serverconnection> <サーバー接続-ファイル> [-v&#124;variable <variable-file>] [-o/overwrite]<br /><br />or<br /><br />-a/add {<server_id> [,...n] すべての}-s&#124;スクリプトを &#124; <スクリプトファイル> [-v&#124;variable <variable-file>] [-o/overwrite]<br /><br />-r/remove {<server_id> [,...n] &#124; すべて}<br /><br />-l/リスト<br /><br />-e/export {<サーバー id> [,...n] すべてを &#124;} <暗号化されたパスワードファイル><br /><br />-i/インポート {<サーバー id> [,...n] すべてを &#124;} <暗号化されたパスワードファイル>|このオプションを指定する場合は、他のオプションと組み合わせることはできません。<br /><br />サーバー id: サーバー {string} に対して指定された一意の ID<br /><br />サーバー-接続-ファイル: サーバー定義ファイル (serverconnectionfile または scriptfile)。<br /><br />変数-値-ファイル: 変数定義ファイルで、サーバー接続ファイルで使用されます。<br /><br />暗号化-パスワードファイル: ユーザー指定のパスフレーズを使用して暗号化されたサーバーパスワードファイルです。|  
-|8|-?|いいえ|適用できません|適用できません|  
+|8|-?|いいえ|適用しない|適用しない|  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソール (アクセス) の実行](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[SSMA コンソール (アクセス) の実行](./executing-the-ssma-console-accesstosql.md)  

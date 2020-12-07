@@ -17,12 +17,12 @@ ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fdcb446f9f1525db0fa03f5a359ffbe69fc0990
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ef11f5f0f30a6c579666809c877de1a46e065172
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490896"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081601"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-native-client-ole-db-provider"></a>ISQLServerErrorInfo:: GetErrorInfo (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,5 @@ SSERRORINFO;
  構造体内のポインターは、*ppErrorStrings* 引数に返される文字列内のアドレスを指します。  
   
 ## <a name="see-also"></a>参照  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
   

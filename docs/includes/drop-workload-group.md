@@ -1,6 +1,6 @@
 既存のユーザー定義の Resource Governor ワークロード グループを削除します。
 
-![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL 構文表記規則](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>構文
 
@@ -11,7 +11,7 @@ DROP WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>引数
 
-*group_name*: 既存のユーザー定義のワークロード グループの名前を指定します。
+*group_name* : 既存のユーザー定義のワークロード グループの名前を指定します。
 
 ## <a name="remarks"></a>解説
 

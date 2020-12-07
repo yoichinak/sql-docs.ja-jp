@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f275628747d0b17ede6c76f67961fe5233e788c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412865"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243541"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -42,17 +42,20 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>解説  
- **TopPercent**関数は、指定されたセットに対して評価される指定された数値式の合計を計算し、セットを降順に並べ替えます。 次に、合計値の累積割合が指定されている割合以上になるように、最も値の大きい方から要素を返します。 この関数は、累積合計が指定した割合以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
+ **TopPercent** 関数は、指定されたセットに対して評価される指定された数値式の合計を計算し、セットを降順に並べ替えます。 次に、合計値の累積割合が指定されている割合以上になるように、最も値の大きい方から要素を返します。 この関数は、累積合計が指定した割合以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
   
 > [!WARNING]  
->  *Numeric_Expression*が負の値を返す場合、 **TopPercent**は1行だけを返します。  
+>  *Numeric_Expression* が負の値を返す場合、 **TopPercent** は1行だけを返します。  
 >   
 >  この動作の詳細については、2番目の例を参照してください。  
   
 > [!IMPORTANT]  
 >  下位 [パーセント](../mdx/bottompercent-mdx.md) 関数と同様に、 **TopPercent** 関数は常に階層を解除します。  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例  
+
+### <a name="a-return-toppercent"></a>A. TopPercent を返す
+
  次の例では、自転車カテゴリについて、再販業者の売上の上位10% を作成するのに役立つ、最適な都市が返されます。 結果は降順に並べ替えられ、sales の最高値を持つ都市から順に並べ替えられます。  
   
 ```  
@@ -89,8 +92,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## <a name="example"></a>例  
- 次のチュートリアルは、 *Numeric_Expression*での負の値の効果を理解するのに役立ちます。 まず、この動作を実行できる、いくつかのコンテキストを構築します。  
+### <a name="b-understand-the-effect-of-negative-values"></a>B. 負の値の影響を理解する
+
+ 次のチュートリアルは、 *Numeric_Expression* での負の値の効果を理解するのに役立ちます。 まず、この動作を実行できる、いくつかのコンテキストを構築します。  
   
  次のクエリでは、販売店の "Sales Amount"、"Total Product Cost"、および "粗利益" のテーブルを、利益の降順で並べ替えて返します。 利益には負の値しかないので、損失の少ないものが上位に表示されます。  
   

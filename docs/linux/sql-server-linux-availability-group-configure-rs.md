@@ -2,19 +2,19 @@
 title: 読み取りスケール可用性グループを構成する (SQL Server on Linux)
 description: Linux で読み取りスケールのワークロード用に SQL Server Always On 可用性グループ (AG) を構成する方法について説明します。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 332160202b3972339c2d9c668f31e373443d5217
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c0057327466773d759752ad6760b2e736b84ebb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892290"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115959"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux で読み取りスケールの SQL Server 可用性グループを構成する
 
@@ -82,6 +82,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>次のステップ
 
-* [分散型可用性グループを構成する](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [分散型可用性グループを構成する](../database-engine/availability-groups/windows/distributed-availability-groups.md)
 * [可用性グループの詳細](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [強制手動フェールオーバーの実行](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

@@ -23,10 +23,10 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b7b067831ca56d3dc5797aa68e4810a7e9969946
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459964"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext、text、および image (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "88459964"
   
 ## <a name="arguments"></a>引数
 **ntext**  
-文字列の最大長が 2^30 - 1 (1,073,741,823) の可変長の Unicode データを指定します。 ストレージ サイズは、入力する文字列長の 2 倍のバイト長です。 ISO シノニムは、 **ntext** は **national text**です。
+文字列の最大長が 2^30 - 1 (1,073,741,823) の可変長の Unicode データを指定します。 ストレージ サイズは、入力する文字列長の 2 倍のバイト長です。 ISO シノニムは、 **ntext** は **national text** です。
   
 **text**  
 サーバーのコード ページ内の可変長の非 Unicode データを指定します。最大文字列長は 2^31-1 (2,147,483,647) 文字です。 サーバー コード ページで 2 バイト文字が使用されている場合、ストレージのサイズは 2,147,483,647 バイトのままです。 文字列によっては、格納サイズが 2,147,483,647 バイトより少なくなることもあります。

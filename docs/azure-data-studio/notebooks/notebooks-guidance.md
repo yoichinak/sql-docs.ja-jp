@@ -1,7 +1,7 @@
 ---
 title: Azure Data Studio で Jupyter Notebook を使用する
 description: Azure Data Studio での Jupyter Notebook の基本的な使用方法について説明します。
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 author: yualan
@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
-ms.openlocfilehash: 2a89eecf706c3b1bf1d1c0ba445a896ba4d6f96b
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: c9f9e95fd6cd437d74f350afa9cc4ca1399cac16
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136814"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364019"
 ---
 # <a name="use-jupyter-notebooks-in-azure-data-studio"></a>Azure Data Studio で Jupyter Notebook を使用する
 

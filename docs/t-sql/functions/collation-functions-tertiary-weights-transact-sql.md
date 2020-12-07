@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1a6cf4546193b02050c0559765fe3fa4ad368e02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445897"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>照合順序関数 - TERTIARY_WEIGHTS (Transact-SQL)
@@ -45,7 +45,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 
 ## <a name="arguments"></a>引数
 *non_Unicode_character_string_expression*  
-第 3 の SQL 照合順序で定義される **char**、**varchar**、または **varchar(max)** 型の文字列[式](../../t-sql/language-elements/expressions-transact-sql.md) です。 これらの照合順序の一覧については、「解説」を参照してください。
+第 3 の SQL 照合順序で定義される **char**、**varchar**、または **varchar(max)** 型の文字列 [式](../../t-sql/language-elements/expressions-transact-sql.md) です。 これらの照合順序の一覧については、「解説」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
 `TERTIARY_WEIGHTS` は、*non_Unicode_character_string_expression* が **char** または **varchar** であるときに **varbinary** を返し、*non_Unicode_character_string_expression* に **varchar(max)** データ型が含まれるときには **varbinary(max)** を返します。

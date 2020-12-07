@@ -23,12 +23,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7d802b17e338c3cf9c739e493970564fcdb3d51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c45b673424fd20defd40d2b62fab19cded05cbca
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445563"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128336"
 ---
 # <a name="---comment-transact-sql"></a>-- (コメント) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88445563"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 -- text_of_comment  
 ```  
   
@@ -65,7 +64,7 @@ ms.locfileid: "88445563"
 ## <a name="examples"></a>例  
  次の例では、-- コメント文字を使用します。  
   
-```  
+```sql  
 -- Choose the AdventureWorks2012 database.  
 USE AdventureWorks2012;  
 GO  

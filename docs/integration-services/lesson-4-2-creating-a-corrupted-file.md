@@ -12,10 +12,10 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 81bee95c84aabe02f2964f41849051a7c8c7052a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449640"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>レッスン 4-2:破損したファイルを作成する
@@ -32,7 +32,7 @@ ms.locfileid: "88449640"
   
 1.  メモ帳などのテキスト エディターで **Currency_VEB.txt** ファイルを開きます。  
   
-2.  テキスト エディターの検索置換機能を使用し、 **VEB** と表示されているすべての箇所を **BAD**に置換します。  
+2.  テキスト エディターの検索置換機能を使用し、 **VEB** と表示されているすべての箇所を **BAD** に置換します。  
   
 3.  他のサンプル データ ファイルと同じフォルダーに、修正したファイルを保存します。このファイルには「 **Currency_BAD.txt**」という名前を付けてください。  
   

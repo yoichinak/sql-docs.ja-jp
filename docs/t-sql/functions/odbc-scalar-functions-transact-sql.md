@@ -53,12 +53,12 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6cc9b1df996d063a79f19982185950e52c4b059
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: d54867712e48662ebb35d4d278710d06f06732a3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116622"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192262"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "91116622"
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、[ODBC スカラー関数](https://go.microsoft.com/fwlink/?LinkID=88579)を使用できます。 これらのステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解釈されます。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
   
 ## <a name="usage"></a>使用法  
- `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
+ ```syntaxsql
+ SELECT {fn <function_name> [ (<argument>,....n) ] }
+ ```
   
 ## <a name="functions"></a>関数  
  次の表は、同等の機能が [!INCLUDE[tsql](../../includes/tsql-md.md)] に存在しない ODBC スカラー関数をまとめたものです。  
@@ -108,7 +110,8 @@ ms.locfileid: "91116622"
 ### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. ODBC 関数をストアド プロシージャで使用する  
  次の例では、ストアド プロシージャで、ODBC 関数を使用します。  
   
-```sql  
+
+```sql 
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -135,7 +138,6 @@ END ;
   
 SELECT dbo.ODBCudf('Returns the length.');  
 --Returns 38  
-  
 ```  
   
 ### <a name="c-using-an-odbc-functions-in-select-statements"></a>C. ODBC 関数を SELECT ステートメントで使用する  

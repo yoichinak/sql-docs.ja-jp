@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 661dc1ee0e259cc2f1457e555ca685e8e581dc0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53d12c7441b796bf4564bbaf05a84ecfd7aae86a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445964"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934573"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>レポート サーバーの複数インスタンス配置における URL 予約
   同じコンピューターに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の複数のインスタンスをインストールする場合は、インスタンスごとに URL 予約を定義する方法を検討する必要があります。 各インスタンス内のレポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] には、それぞれ 1 つ以上の URL 予約が必要です。 予約はすべて、HTTP.SYS 内で一意にする必要があります。  
@@ -45,8 +45,8 @@ ms.locfileid: "88445964"
 ## <a name="uniqueness-requirements"></a>一意性の要件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の基になるテクノロジには、一意の名前に関する要件があります。 HTTP.SYS のリポジトリ内の URL はすべて一意にする必要があります。 URL は、ポート、ホスト名、または仮想ディレクトリ名を変えることで一意にできます。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では、同一プロセス内の各アプリケーション ID が一意である必要があります。 この要件は、仮想ディレクトリ名に影響します。 この要件では、同一レポート サーバー インスタンス内では重複する仮想ディレクトリ名を使用できないことが規定されています。  
   
-## <a name="see-also"></a>参照  
- [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+## <a name="see-also"></a>関連項目  
+ [レポート サーバー URL の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [URL の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   

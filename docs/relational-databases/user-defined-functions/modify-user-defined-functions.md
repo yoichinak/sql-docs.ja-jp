@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c86496904351d305cdf21af05275f469db689982
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88485309"
 ---
 # <a name="modify-user-defined-functions"></a>ユーザー定義関数の変更
@@ -73,13 +73,13 @@ ms.locfileid: "88485309"
   
 5.  クエリ ウィンドウで、ALTER FUNCTION ステートメントに必要な変更を加えます。  
   
-6.  **ファイル** メニューの **function_name**_の保存_をクリックします。  
+6.  **ファイル** メニューの **function_name**_の保存_ をクリックします。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-modify-a-user-defined-function"></a>ユーザー定義関数を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

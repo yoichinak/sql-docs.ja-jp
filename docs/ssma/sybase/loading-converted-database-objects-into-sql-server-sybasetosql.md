@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8cf1c6af1a526efe771ccbd3b0f02f35670a1130
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b7f9a9a69fd1f5ac685550fb91ab93ad2220f49
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492170"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038263"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>SQL Server への変換されたデータベース オブジェクトの読み込み (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) データベースオブジェクトをまたは SQL Azure に変換した後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、結果として得られるデータベースオブジェクトをまたは SQL Azure に読み込むことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA を使用してオブジェクトを作成するか、オブジェクトのスクリプトを作成して自分でスクリプトを実行することができます。 また、SSMA では、または Azure SQL Database の実際の内容でターゲットメタデータを更新することもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -108,8 +108,7 @@ SSMA を使用してオブジェクトを作成または Azure SQL Database す�
 変換されたデータベースオブジェクトをに読み込むと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、それらのオブジェクトに対する権限を許可および拒否できます。 これは、データをに移行する前に行うことをお勧めし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 でオブジェクトをセキュリティで保護する方法の詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オンラインブックの「データベースおよびデータベースアプリケーションのセキュリティに関する考慮事項」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順では、 [SYBASE ASE データを SQL Server/SQL Azure (SybaseToSQL) に移行](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)します。  
+移行プロセスの次の手順では、 [SYBASE ASE データを SQL Server/SQL Azure (SybaseToSQL) に移行](./migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md)します。  
   
 ## <a name="see-also"></a>参照  
 [Sybase ASE データベースを SQL Server Azure SQL Database &#40;SybaseToSQL&#41;に移行する ](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  

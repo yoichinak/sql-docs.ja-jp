@@ -14,14 +14,14 @@ helpviewer_keywords:
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 984e57d309dbed6a2aeb29dcaa260ae8f07896c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 05f3dd9658ca51e1208476f8d11b387a79eb0234
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429104"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96125565"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88429104"
   
 3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をポイントして、 **[データベース]** をクリックします。  
   
-4.  **[全般]** ページの **復元元**のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
+4.  **[全般]** ページの **復元元** のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
     -   **[データベース]**  
   
@@ -86,7 +86,7 @@ ms.locfileid: "88429104"
   
          **メモ** この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。  
   
-5.  **復元先のセクション**の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
+5.  **復元先のセクション** の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
   
 6.  **[タイムライン]** をクリックして、 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスします。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "88429104"
   
  RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY...  
   
- 復旧ポイントは、 **time** で指定する *datetime*の値以前に行われた最後のトランザクション コミットの時点です。  
+ 復旧ポイントは、 **time** で指定する *datetime* の値以前に行われた最後のトランザクション コミットの時点です。  
   
  特定の時点より前に行われた変更のみを復元するには、復元するバックアップごとに WITH STOPAT **=** _time_ を指定します。 これにより、目的の時点を過ぎる危険性を回避できます。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "88429104"
   
 3.  差分バックアップが存在する場合、データベースを復旧せずに最新のデータベースの差分バックアップを復元します (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  各トランザクション ログ バックアップを作成順に適用して、ログの復元を停止する時点を指定します (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY)。  
+4.  各トランザクション ログ バックアップを作成順に適用して、ログの復元を停止する時点を指定します (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=**_time_**,** RECOVERY)。  
   
     > [!NOTE]  
     >  RECOVERY オプションと STOPAT オプション。 トランザクション ログ バックアップに、要求した時点の情報が格納されていない場合、たとえば、指定した日時がトランザクション ログに記録されている時点より後の場合などに、警告が生成されます。この場合、データベースは復旧されません。  

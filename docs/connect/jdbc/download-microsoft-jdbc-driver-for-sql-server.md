@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d48c3f0384a805debe13472fae1841515207d160
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 1c7d16eeaf72d5faa2c5bad47b8b8331dfdb6b54
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042445"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725483"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Microsoft SQL Server 用 JDBC Driver のダウンロード
 
@@ -36,7 +36,7 @@ Microsoft JDBC Driver for SQL Server は Type 4 JDBC Driver であり、Java Pla
 ドライバーをダウンロードすると、複数の JAR ファイルがあります。 JAR ファイルの名前は、サポートされている Java のバージョンを示します。
 
 > [!Note]
-> 英語以外のバージョンからこのページにアクセスしていて、最新の内容を見たい場合は、[サイトの英語 (米国) 版](https://aka.ms/downloadmssqljdbcenglish)をご覧ください。 [使用できる言語](#available-languages)を選択して、英語 (米国) 版のサイトから別の言語をダウンロードできます。ます。
+> 英語以外のバージョンからこのページにアクセスしていて、最新の内容を見たい場合は、[サイトの英語 (米国) 版]()をご覧ください。 [使用できる言語](#available-languages)を選択して、英語 (米国) 版のサイトから別の言語をダウンロードできます。ます。
 
 ## <a name="available-languages"></a>使用できる言語
 

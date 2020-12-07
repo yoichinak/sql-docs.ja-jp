@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822197"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439406"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 統合サービスの移行評価を実行する
 
@@ -30,7 +30,7 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 - を評価する SSIS パッケージと同じバージョンの統合サービスを SQL Server します。
 - Azure Feature Pack または他のサードパーティ製のコンポーネント (評価する SSIS パッケージにこれらのコンポーネントがある場合)。  
 
-パッケージストアの SSIS パッケージを評価するには、**管理者**アクセス権を使用して DMA を実行する必要があります。
+パッケージストアの SSIS パッケージを評価するには、 **管理者** アクセス権を使用して DMA を実行する必要があります。
 
 ## <a name="performance-assessments"></a>パフォーマンス評価
 
@@ -42,7 +42,7 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 
 1. ソースとターゲットのサーバーの種類を設定します。
 
-    ソースを**SQL Server**として選択し、対象サーバーの種類を**Azure SQL Database**または**Azure SQL Managed Instance**として設定します。
+    ソースを **SQL Server**として選択し、対象サーバーの種類を **Azure SQL Database** または **Azure SQL Managed Instance**として設定します。
 
 1. **Create** をクリックしてください。
 
@@ -54,14 +54,14 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 1. SQL server インスタンス名を入力し、認証の種類を選択して、適切な接続プロパティを設定します。
 1. OptionalSSIS パッケージが格納されているフォルダーパスを入力します。
 1. Optional該当する場合は、パッケージ暗号化パスワードを入力します。
-1. [転送元の SQL server に**接続**する] をクリックします。
-  ![ソースの追加](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+1. [転送元の SQL server に **接続** する] をクリックします。
+  ![[サーバーへの接続] ウィンドウが表示され、[SSIS パッケージを含むフォルダーパスを入力してください] オプションが表示されたスクリーンショット。該当するオプションが呼び出された場合は、パッケージ暗号化パスワードを入力します。](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## <a name="add-sources-to-assess"></a>評価するソースの追加
 
-1. 評価する SSIS パッケージのストレージの種類を選択し、[**追加**] を選択します。
-![ソースの追加](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
-1. [**ソースの追加**] を選択して接続のフライアウトメニューを開きます (複数のフォルダーを評価する必要がある場合)。
+1. 評価する SSIS パッケージのストレージの種類を選択し、[ **追加**] を選択します。
+![[ソースの追加] ペインを示すスクリーンショット。](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+1. [ **ソースの追加** ] を選択して接続のフライアウトメニューを開きます (複数のフォルダーを評価する必要がある場合)。
 1. **[Start Assessment]** (評価の開始) をクリックします。
   ![評価の開始](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
@@ -73,6 +73,6 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 
 ## <a name="next-steps"></a>次のステップ
 
-- [オンプレミスの SSIS ワークロードを ADF の SSIS に移行する方法の概要](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [SQL Server Integration Services パッケージを Azure SQL Managed Instance に移行する](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [SQL Server Integration Services パッケージを Azure SQL Database に再デプロイする](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)
+- [オンプレミスの SSIS ワークロードを ADF の SSIS に移行する方法の概要](/azure/data-factory/scenario-ssis-migration-overview)
+- [SQL Server Integration Services パッケージを Azure SQL Managed Instance に移行する](/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [SQL Server Integration Services パッケージを Azure SQL Database に再デプロイする](/azure/dms/how-to-migrate-ssis-packages)

@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 64a2c7ff06534865c4105ab28c2f3bc42b783de3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b52e3df054a0c13846741237000855c079c842b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462240"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005902"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用 Microsoft ODBC Driver は、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に標準の ODBC インターフェイスを実装するアプリケーション プログラミング インターフェイス (API) を提供するスタンドアロン ODBC ドライバーです。
 
-Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケーションを作成できます。 現在古いバージョンの ODBC ドライバーを使用している古いバージョンのアプリケーションをアップグレードすることもできます。 ODBC Driver for SQL Server を使用すると、Azure SQL Database、Azure SQL Data Warehouse、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続できます。  
+Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケーションを作成できます。 現在古いバージョンの ODBC ドライバーを使用している古いバージョンのアプリケーションをアップグレードすることもできます。 ODBC Driver for SQL Server を使用すると、Azure SQL Database、Azure Synapse Analytics、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続できます。  
 
 ## <a name="summary"></a>まとめ
 
@@ -53,6 +53,6 @@ Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケー�
   
 ## <a name="see-also"></a>参照  
 - [SQL Server Native Client を使用したアプリケーションのビルド](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
-- [SQL Server Native Client に関する FAQ](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
+- [SQL Server Native Client に関する FAQ](/previous-versions/aa937707(v=msdn.10))   
 - [ODBC プログラマー リファレンス](../../../odbc/reference/odbc-programmer-s-reference.md)   
-- [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+- [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)

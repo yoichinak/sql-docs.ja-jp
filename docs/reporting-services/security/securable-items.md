@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fd4b92dcacf94e2a0196f210050954a84c1ac3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f30b82c72a726faf5d2fb0e221fa36f4872acf12
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498015"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987338"
 ---
 # <a name="securable-items"></a>セキュリティ保護可能なアイテム
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバーに保存されているアイテムへのアクセス制御に、ロールベースのセキュリティが使用されます。 レポート サーバーへのユーザー アクセスを許可する場合は、通常次の場所でロールの割り当てのペアを作成します。  
@@ -61,7 +61,6 @@ ms.locfileid: "88498015"
 ## <a name="see-also"></a>参照  
  [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](./grant-user-access-to-a-report-server.md)   
  [ロールの割り当てを変更または削除する (レポート マネージャー)](../../reporting-services/security/role-assignments-modify-or-delete.md)  
-  
   

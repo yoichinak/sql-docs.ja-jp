@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02516b35a75c39c967b916d2e424362114008480
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 431d76d63d08ed23fd62669dc52548082582f2ef
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173276"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956528"
 ---
 # <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の R 言語拡張機能
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88173276"
 
 SQL Server には、オープンソース パッケージと専用パッケージの両方が含まれています。 基本の R ライブラリは、Microsoft のオープンソース R のディストリビューションによってインストールされます (Microsoft R Open (MRO))。 R の現在のユーザーは、R コードを移植し、ほとんどまたはまったく変更することなく、SQL Server 上の外部プロセスとしてそれを実行できます。 MRO は、SQL ツールとは別にインストールされ、機能拡張フレームワークのコア エンジン プロセスの外部で実行されます。 インストール中に、オープンソース ライセンスの条項に同意する必要があります。 その後、R の他のオープンソース ディストリビューションと同じように、標準 R パッケージを変更することなく実行できます。 
 
-SQL Server では、基本の R 実行可能ファイルは変更されませんが、セットアップによってインストールされたバージョンの R を使用する必要があります。これは、専用パッケージがビルドおよびテストされているバージョンであるためです。 CRAN から取得する可能性のある R の基本ディストリビューションと MRO の違いについては、[R 言語との相互運用性と Microsoft R 製品と機能](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)に関するページを参照してください。
+SQL Server では、基本の R 実行可能ファイルは変更されませんが、セットアップによってインストールされたバージョンの R を使用する必要があります。これは、専用パッケージがビルドおよびテストされているバージョンであるためです。 CRAN から取得する可能性のある R の基本ディストリビューションと MRO の違いについては、[R 言語との相互運用性と Microsoft R 製品と機能](/r-server/what-is-r-server-interoperability)に関するページを参照してください。
 
 セットアップでインストールされた R 基本パッケージのディストリビューションは、インスタンスに関連付けられているフォルダーで見つけることができます。 たとえば、既定の SQL Server インスタンスに R Services をインストールした場合、R ライブラリは既定のこのフォルダー `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library` に配置されます。 同様に、既定のインスタンスに関連付けられている R ツールは、既定でこのフォルダー `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin` に配置されます。
 
@@ -40,8 +40,8 @@ Microsoft によって並列ワークロードと分散ワークロードに追�
 
 | ライブラリ | 説明 |
 |---------|-------------|
-| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | データ ソース オブジェクトとデータの探索、操作、変換、視覚化をサポートします。 リモート コンピューティング コンテキスト、およびさまざまなスケーラブルな機械学習モデル (**rxLinMod** など) の作成をサポートします。 これらの API は、大きすぎてメモリに収まらないデータ セットの分析と複数のコアまたはプロセッサでの分散計算を実行するように最適化されています。 RevoScaleR パッケージでは、分析のために使用されるデータの高速移動と格納用の XDF ファイル形式もサポートします。 XDF 形式は、カラム型ストレージを使用する移植可能な形式であり、テキスト、SPSS、ODBC 接続などのさまざまなソースからデータを読み込んで操作するために使用できます。 |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 速度と精度のために最適化された機械学習アルゴリズムに加え、テキストとイメージを操作するためのインライン変換も含まれています。 詳細については、[SQL Server の MicrosoftML](../r/ref-r-microsoftml.md) に関するページを参照してください。 | 
+| [**RevoScaleR**](/machine-learning-server/r-reference/revoscaler/revoscaler) | データ ソース オブジェクトとデータの探索、操作、変換、視覚化をサポートします。 リモート コンピューティング コンテキスト、およびさまざまなスケーラブルな機械学習モデル (**rxLinMod** など) の作成をサポートします。 これらの API は、大きすぎてメモリに収まらないデータ セットの分析と複数のコアまたはプロセッサでの分散計算を実行するように最適化されています。 RevoScaleR パッケージでは、分析のために使用されるデータの高速移動と格納用の XDF ファイル形式もサポートします。 XDF 形式は、カラム型ストレージを使用する移植可能な形式であり、テキスト、SPSS、ODBC 接続などのさまざまなソースからデータを読み込んで操作するために使用できます。 |
+| [**MicrosoftML**](/r-server/r/concept-what-is-the-microsoftml-package) | 速度と精度のために最適化された機械学習アルゴリズムに加え、テキストとイメージを操作するためのインライン変換も含まれています。 詳細については、[SQL Server の MicrosoftML](../r/ref-r-microsoftml.md) に関するページを参照してください。 | 
 
 ## <a name="using-r-in-sql-server"></a>SQL Server での R の使用
 

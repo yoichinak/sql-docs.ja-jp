@@ -14,12 +14,12 @@ ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 88f2c0cff6bd33bf5327c7c919370015873700ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d42c0bb0c18b7917ef0e8c8a29e9522e744ce2d2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88314628"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037777"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>運用されているデータベースを変更するときの問題 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88314628"
   
 データベースのデザインを変更する場合は常に、変更の履歴を残しておく必要があります。 1 つの方法として、実行時用データベースに対して行ったすべての変更について、SQL スクリプトを残しておくことができます。  
   
-## <a name="see-also"></a>参照  
-[制約の使用](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+## <a name="see-also"></a>関連項目  
+[制約の使用](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [マルチユーザー環境 (Visual Database Tools)](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
-  

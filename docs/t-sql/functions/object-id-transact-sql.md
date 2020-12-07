@@ -27,12 +27,12 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0d939b4b198d72722ce5130a3339e299d69f06d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 65161cafb2ef12e2de120b0e0bd402b722447620
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115961"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91670915"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -102,9 +102,11 @@ GO
   
 ### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>C. OBJECT_ID を使用して、システム関数パラメーターの値を指定する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内にある `Person.Address` テーブルのすべてのインデックスとパーティションについて、[sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 関数を使用して情報を返しています。  
+ 
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 > [!IMPORTANT]  
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数 DB_ID および OBJECT_ID を使ってパラメーター値を返すときには、有効な ID が返されることを常に確認してください。 存在しない場合やスペルが正しくない場合など、データベースまたはオブジェクト名が見つからない場合、両方の関数が NULL を返します。 **sys.dm_db_index_operational_stats** 関数では、NULL 値はすべてのデータベースまたはすべてのオブジェクトを指定するワイルドカード値として解釈されます。 これは、意図しない操作である可能性があるため、このセクションの例では、データベースおよびオブジェクト ID を確認する安全な方法を示します。  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数 DB_ID および OBJECT_ID を使ってパラメーター値を返すときには、有効な ID が返されることを常に確認してください。 存在しない場合やスペルが正しくない場合など、データベースまたはオブジェクト名が見つからない場合、両方の関数が NULL を返します。 **sys.dm_db_index_operational_stats** 関数では、NULL 値はすべてのデータベースまたはすべてのオブジェクトを指定するワイルドカード値として解釈されます。 これは、意図しない操作である可能性があるため、このセクションの例では、データベースおよびオブジェクト ID を確認する安全な方法を示します。
   
 ```sql  
 DECLARE @db_id INT;  

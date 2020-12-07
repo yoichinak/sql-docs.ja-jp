@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cf51661228dcb9b6dd5e42ff900b3770b540898
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495784"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194203"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
 
@@ -118,9 +118,9 @@ ms.locfileid: "88495784"
   
  ループの最初の繰り返しでファイルを作成し、ループの以降の繰り返しで行を追加するには、デザイン時に次のことを行う必要があります。  
   
-1.  WriteOption プロパティを **CreateOnce** または **CreateAlways**に設定し、ループの繰り返しを 1 回実行します。 ファイルが作成されます。 これにより、追加するデータのメタデータとファイルが必ず一致するようになります。  
+1.  WriteOption プロパティを **CreateOnce** または **CreateAlways** に設定し、ループの繰り返しを 1 回実行します。 ファイルが作成されます。 これにより、追加するデータのメタデータとファイルが必ず一致するようになります。  
   
-2.  WriteOption プロパティを **Append** にリセットし、ValidateExternalMetadata プロパティを **False**に設定します。  
+2.  WriteOption プロパティを **Append** にリセットし、ValidateExternalMetadata プロパティを **False** に設定します。  
   
  **Append** オプションの代わりに **TruncateAppend** オプションを使用すると、以前の実行で追加された行が切り捨てられ、新しい行が追加されます。 また **TruncateAppend** オプションを使用するには、データがファイル形式に一致している必要があります。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "88495784"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [RAW ファイルのカスタム プロパティ](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -226,5 +226,4 @@ ms.locfileid: "88495784"
 ## <a name="see-also"></a>参照  
  [RAW ファイル ソース](../../integration-services/data-flow/raw-file-source.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  
   

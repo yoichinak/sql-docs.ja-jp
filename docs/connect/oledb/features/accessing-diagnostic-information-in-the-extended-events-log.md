@@ -10,19 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28b07fa4befbae597fd3356d5abe83cf1631763e
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 96873ca61bd7121316d8b7d947443a90d7d953b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480949"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727333"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降では、OLE DB Driver for SQL Server とデータ アクセスのトレース ([データ アクセスのトレース](https://go.microsoft.com/fwlink/?LinkId=125805)) が更新され、接続リング バッファーからの接続エラーに関する診断情報と拡張イベント ログからのアプリケーションのパフォーマンス情報を簡単に取得できるようになりました。  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降では、OLE DB Driver for SQL Server とデータ アクセスのトレース ([データ アクセスのトレース](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))) が更新され、接続リング バッファーからの接続エラーに関する診断情報と拡張イベント ログからのアプリケーションのパフォーマンス情報を簡単に取得できるようになりました。  
   
  拡張イベント ログを表示する方法については、「[イベント セッション データの表示](../../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)」を参照してください。 
 
@@ -31,7 +31,7 @@ ms.locfileid: "89480949"
 >  この機能は、トラブルシューティングおよび診断用であるため、監査やセキュリティの用途には適さない場合があります。  
   
 ## <a name="remarks"></a>解説  
- 接続操作では、OLE DB Driver for SQL Server はクライアント接続 ID を送信します。 接続に失敗した場合は、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) にアクセスし、**ClientConnectionID** フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません。)クライアント接続 ID は 16 バイトの GUID です。 また、**client_connection_id** 操作を拡張イベント セッションのイベントに追加すると、拡張イベントの出力先でクライアント接続 ID を検索することもできます。 詳しい診断サポートが必要な場合は、データ アクセスのトレースを有効にして、接続コマンドを再実行し、失敗した操作のデータ アクセスのトレースで **ClientConnectionID** フィールドを調べます。  
+ 接続操作では、OLE DB Driver for SQL Server はクライアント接続 ID を送信します。 接続に失敗した場合は、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) にアクセスし、**ClientConnectionID** フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません。)クライアント接続 ID は 16 バイトの GUID です。 また、**client_connection_id** 操作を拡張イベント セッションのイベントに追加すると、拡張イベントの出力先でクライアント接続 ID を検索することもできます。 詳しい診断サポートが必要な場合は、データ アクセスのトレースを有効にして、接続コマンドを再実行し、失敗した操作のデータ アクセスのトレースで **ClientConnectionID** フィールドを調べます。  
    
   
  OLE DB Driver for SQL Server からは、スレッド固有のアクティビティ ID も送信されます。 アクティビティ ID は、TRACK_CAUSAILITY オプションを有効にしてセッションを開始した場合、拡張イベント セッションでキャプチャされます。 アクティブな接続に関するパフォーマンスの問題については、クライアントのデータ アクセスのトレース (**ActivityID** フィールド) からアクティビティ ID を取得し、このアクティビティ ID を拡張イベント出力で検索することができます。 拡張イベントのアクティビティ ID は、16 バイトの GUID (クライアント接続 ID の GUID とは異なります) に 4 バイトのシーケンス番号が付加されたものです。 シーケンス番号は、スレッド内で要求の順序を表し、スレッドのバッチと RPC ステートメントの相対的順序を示します。 **ActivityID** は必要に応じて、データ アクセスのトレースが有効であり、データ アクセス トレース構成ワードの 18 番目のビットがオンである場合に、SQL バッチ ステートメントと RPC 要求に送信されます。  
@@ -217,5 +217,4 @@ class Bid2Etw_MSOLEDBSQL_1_Trace_TextW : Bid2Etw_MSOLEDBSQL_1_Trace
   
 ## <a name="see-also"></a>参照  
  [エラーの処理](../../oledb/ole-db-errors/errors.md)  
-  
   

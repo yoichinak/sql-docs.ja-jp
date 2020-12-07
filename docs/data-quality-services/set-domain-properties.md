@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 73ec65fc7de346ada1232bee7a03dce2aedffa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a229aacb9110bdd5eefa9dc3987ce39fec8a1e66
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466641"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726623"
 ---
 # <a name="set-domain-properties"></a>ドメインのプロパティの設定
 
@@ -41,7 +41,7 @@ ms.locfileid: "88466641"
   
 2.  「 [Create a Domain](../data-quality-services/create-a-domain.md)」の説明に従って新しいドメインを作成した後に、そのドメインにプロパティを設定します。  
   
-3.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+3.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="follow-up-after-setting-domain-properties"></a><a name="FollowUp"></a> 補足情報: ドメインのプロパティを設定した後  
  ドメインのプロパティを設定した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
@@ -90,5 +90,4 @@ ms.locfileid: "88466641"
   
 ###  <a name="disable-syntax-error-algorithms"></a><a name="Syntax"></a> 構文エラーのアルゴリズムを無効にする  
  データ型が **[String]** の場合は、このチェック ボックスをオンにして、クレンジング中にドメイン内の構文エラーが DQS で識別されないことを指定します。 このチェック ボックスは、そのドメインで構文エラーの識別が無関係の場合にオンにします。 たとえば、シリアル番号では構文エラーの識別は重要でない場合があります。 このコントロールは、string データ型でのみ使用できます。 DQS では、string 以外のデータ型について構文エラーはチェックされません。  
-  
   

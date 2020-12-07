@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901956"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036393"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL デバッガーの実行
 
@@ -42,7 +42,7 @@ ms.locfileid: "88901956"
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを起動するための要件は次のとおりです。
 
-- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが別のコンピューターの [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続されている場合、デバッガーはリモート デバッグ用に構成されています。 詳細については、「 [Transact-SQL デバッガーの構成](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)」を参照してください。
+- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが別のコンピューターの [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続されている場合、デバッガーはリモート デバッグ用に構成されています。 詳細については、「 [Transact-SQL デバッガーの構成](./configure-firewall-rules-before-running-the-tsql-debugger.md)」を参照してください。
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] が、sysadmin 固定サーバー ロールのメンバーである Windows アカウントで実行されている必要があります。
 
@@ -114,8 +114,8 @@ ms.locfileid: "88901956"
   
 ## <a name="see-also"></a>参照
 
-- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Transact-SQL コードのステップ実行](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Transact-SQL デバッガー](./transact-sql-debugger.md)
+- [Transact-SQL コードのステップ実行](./step-through-transact-sql-code.md)
+- [Transact-SQL デバッガー情報](./transact-sql-debugger-information.md)
+- [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)

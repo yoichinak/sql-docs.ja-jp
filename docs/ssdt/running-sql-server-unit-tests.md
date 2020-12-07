@@ -12,33 +12,33 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d27d25d374d737cc51f7e0a5149556a4d5a92260
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 810010b70a50f51c29b34b917af90127233d622c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883456"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987798"
 ---
 # <a name="running-sql-server-unit-tests"></a>SQL Server の単体テストの実行
 
-コードの品質を向上および維持するために、データベース オブジェクトの動作を検証する SQL Server 単体テストを作成して実行した後、そのテストをバージョン管理にチェックインできます。 データベース スキーマを変更するときは、SQL Server 単体テストとソフトウェア単体テストの両方を実行し、変更によって既存の機能が損なわれないことを確認します。 個々のテストを実行することも、テスト リストと呼ばれるテストのグループを実行することもできます。 詳しくは、「[Using Test Lists](https://msdn.microsoft.com/library/ms182461(VS.100).aspx)」(テスト リストの使用) (Visual Studio 2010) をご覧ください。  
+コードの品質を向上および維持するために、データベース オブジェクトの動作を検証する SQL Server 単体テストを作成して実行した後、そのテストをバージョン管理にチェックインできます。 データベース スキーマを変更するときは、SQL Server 単体テストとソフトウェア単体テストの両方を実行し、変更によって既存の機能が損なわれないことを確認します。 個々のテストを実行することも、テスト リストと呼ばれるテストのグループを実行することもできます。 詳しくは、「[Using Test Lists](/previous-versions/visualstudio/visual-studio-2010/ms182461(v=vs.100))」(テスト リストの使用) (Visual Studio 2010) をご覧ください。  
   
 ## <a name="ways-to-run-sql-server-unit-tests"></a>SQL Server 単体テストを実行する方法  
 次に示すように、インストールされているソフトウェアに応じて異なる複数の方法で、SQL Server 単体テストを実行できます。  
   
--   Visual Studio 2010 の **[テスト ビュー]** ウィンドウを使ってテストを実行します。 詳細については、「[SQL Server 単体テストを実行する方法](../ssdt/how-to-run-sql-server-unit-tests.md)」および「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)」を参照してください。 Visual Studio 2012 については、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182470.aspx)」を参照してください。  
+-   Visual Studio 2010 の **[テスト ビュー]** ウィンドウを使ってテストを実行します。 詳細については、「[SQL Server 単体テストを実行する方法](../ssdt/how-to-run-sql-server-unit-tests.md)」および「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100))」を参照してください。 Visual Studio 2012 については、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](/previous-versions/ms182470(v=vs.140))」を参照してください。  
   
--   コマンド プロンプトで MSTest.exe コマンドを使用してテストを実行します。 詳しくは、「[方法: MSTest を使用してコマンド ラインから自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182487(VS.100).aspx)」または「[方法: MSTest を使用してコマンド ラインから自動テストを実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182487.aspx)」をご覧ください。  
+-   コマンド プロンプトで MSTest.exe コマンドを使用してテストを実行します。 詳しくは、「[方法: MSTest を使用してコマンド ラインから自動テストを実行する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182487(v=vs.100))」または「[方法: MSTest を使用してコマンド ラインから自動テストを実行する (Visual Studio 2012)](/previous-versions/ms182487(v=vs.140))」をご覧ください。  
   
--   **ソリューション エクスプローラー**からテスト プロジェクトを実行することで、テストを実行します。 詳しくは、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)」または「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182470.aspx)」をご覧ください。  
+-   **ソリューション エクスプローラー**からテスト プロジェクトを実行することで、テストを実行します。 詳しくは、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100))」または「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](/previous-versions/ms182470(v=vs.140))」をご覧ください。  
   
--   **[テスト結果]** ウィンドウからテストを再実行します。 詳細については、「[テストを再実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx)」を参照してください。  
+-   **[テスト結果]** ウィンドウからテストを再実行します。 詳細については、「[テストを再実行する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182472(v=vs.100))」を参照してください。  
   
--   **[テスト リスト エディター]** ウィンドウから個々のテストまたはテスト リスト (Visual Studio 2010) を実行します。 詳しくは、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)」または「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182470.aspx)」をご覧ください。  
+-   **[テスト リスト エディター]** ウィンドウから個々のテストまたはテスト リスト (Visual Studio 2010) を実行します。 詳しくは、「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100))」または「[方法: Microsoft Visual Studio から自動テストを実行する (Visual Studio 2012)](/previous-versions/ms182470(v=vs.140))」をご覧ください。  
   
--   Team Foundation ビルドでプロジェクトをビルドするときにテストを実行します。 詳しくは、「[方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)」または「[方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182465.aspx)」をご覧ください。  
+-   Team Foundation ビルドでプロジェクトをビルドするときにテストを実行します。 詳しくは、「[方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100))」または「[方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する (Visual Studio 2012)](/previous-versions/visualstudio/visual-studio-2012/ms182465(v=vs.110))」をご覧ください。  
   
-順序指定テストを使用して、特定の順序で SQL Server 単体テストを実行できます。 詳細については、「[順序指定テストを作成する (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182631(VS.100).aspx)」または「[方法: 順序指定テストを作成する (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182631.aspx)」を参照してください。  
+順序指定テストを使用して、特定の順序で SQL Server 単体テストを実行できます。 詳細については、「[順序指定テストを作成する (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182631(v=vs.100))」または「[方法: 順序指定テストを作成する (Visual Studio 2012)](/previous-versions/ms182631(v=vs.140))」を参照してください。  
   
 ## <a name="interpreting-tests-results"></a>テスト結果の解釈  
 テストを実行した後、 **[テスト結果]** ウィンドウにテストの合格または不合格が示されます。 詳しくは、「[SQL Server の単体テストの結果の解釈](../ssdt/interpreting-sql-server-unit-test-results.md)」をご覧ください。 予期しないエラーを診断する方法の詳細については、「[データベース オブジェクトをデバッグする方法](../ssdt/how-to-debug-database-objects.md)」を参照してください。  
@@ -63,4 +63,3 @@ ms.locfileid: "85883456"
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストを使用したデータベース コードの検証](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40c6b6dcb0d424c8b92f1534423bf0acf667da78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c3a08123af9155789fa2d14e2deac807061bf162
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467778"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380057"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "88467778"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  
   
@@ -81,7 +80,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ### <a name="a-using-suser_sid"></a>A. SUSER_SID を使用する  
  次の例では、現在のセキュリティ コンテキストのセキュリティ ID 番号 (SID) を返します。  
   
-```  
+```sql
 SELECT SUSER_SID();  
 ```  
   
@@ -90,7 +89,7 @@ SELECT SUSER_SID();
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
-```  
+```sql
 SELECT SUSER_SID('sa');  
 GO  
 ```  
@@ -100,7 +99,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
-```  
+```sql
 SELECT SUSER_SID('London\Workstation1');  
 GO  
 ```  
@@ -108,15 +107,15 @@ GO
 ### <a name="d-using-suser_sid-as-a-default-constraint"></a>D. SUSER_SID を DEFAULT 制約として使用する  
  次の例では、`SUSER_SID` ステートメントで `DEFAULT` を `CREATE TABLE` 制約として使用しています。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE sid_example  
 (  
-login_sid   varbinary(85) DEFAULT SUSER_SID(),  
-login_name  varchar(30) DEFAULT SYSTEM_USER,  
-login_dept  varchar(10) DEFAULT 'SALES',  
-login_date  datetime DEFAULT GETDATE()  
+login_sid   VARBINARY(85) DEFAULT SUSER_SID(),  
+login_name  VARCHAR(30) DEFAULT SYSTEM_USER,  
+login_dept  VARCHAR(10) DEFAULT 'SALES',  
+login_date  DATETIME DEFAULT GETDATE()  
 );   
 GO  
 INSERT sid_example DEFAULT VALUES;  
@@ -128,7 +127,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
-```  
+```sql
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
 ```  
   

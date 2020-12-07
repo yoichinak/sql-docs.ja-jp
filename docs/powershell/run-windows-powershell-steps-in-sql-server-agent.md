@@ -4,18 +4,18 @@ description: SQL Server エージェント ジョブで Windows PowerShell の�
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f42e8f23a525e6ebfd71c240c039b67320d9b08e
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.openlocfilehash: 2b303e01ab1dd15401d8ee64f2160f761320616a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714090"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006157"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server エージェントでの Windows PowerShell ステップの実行
 
@@ -25,11 +25,7 @@ SQL Server エージェントを使用して、スケジュールされた時刻
   
 **SQL Server エージェントから PowerShell を実行するには:** [PowerShell ジョブ ステップ](#PShellJob)、[コマンド プロンプト ジョブ ステップ](#CmdExecJob)  
   
-> [!IMPORTANT]
-> SQL Server PowerShell モジュールには **SqlServer** と **SQLPS** の 2 つがあります。 **SQLPS** モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。 **SqlServer** モジュールには **SQLPS** のコマンドレットの更新バージョンだけでなく、最新の SQL 機能をサポートする新しいコマンドレットも含まれています。  
-> SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれて*いました*が、SSMS の 16.x バージョンのみです。 PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを PowerShell ギャラリーからインストールする必要があります。
-> **SqlServer** モジュールをインストールする場合は、「[SQL Server PowerShell のインストール](download-sql-server-ps-module.md)」を参照してください。
-
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントのジョブ ステップにはいくつかの種類があります。 それぞれの種類は、レプリケーション エージェントやコマンド プロンプト環境など、特定の環境を実装するサブシステムに関連付けられています。 Windows PowerShell スクリプトのコードを作成した後、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントを使用して、スケジュールされた時刻に実行されるジョブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] イベントに応答して実行されるジョブにそのスクリプトを含めることができます。 コマンド プロンプト ジョブ ステップまたは PowerShell ジョブ ステップを使用して、Windows PowerShell スクリプトを実行できます。  
 

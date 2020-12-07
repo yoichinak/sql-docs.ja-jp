@@ -38,16 +38,16 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: a63931e71983b0ae5bba99fb13081cc75c93b2cd
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 5e8821b97f504d64d98b181be2e734fcb12f4792
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024532"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067308"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 この記事では、ソリューション開発用の [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] の CREATE MATERIALIZED VIEW AS SELECT T-SQL ステートメントについて説明します。 この記事には、コード例も記載されています。
 
@@ -73,7 +73,10 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 <select_statement> ::=
     SELECT select_criteria
-```  
+
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>引数
 
@@ -109,7 +112,12 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
   
 ## <a name="remarks"></a>注釈
 
-Azure データ ウェアハウスの具体化されたビューは、SQL Server のインデックス付きビューに似ています。具体化されたビューで集計関数がサポートされる点を除き、インデックス付きビューとほぼ同じ制限が共有されています (詳細については、「[Create Indexed Views (インデックス付きビューを作成する)](/sql/relational-databases/views/create-indexed-views)」 を参照してください)。   
+Azure データ ウェアハウスの具体化されたビューは、SQL Server のインデックス付きビューに似ています。具体化されたビューで集計関数がサポートされる点を除き、インデックス付きビューとほぼ同じ制限が共有されています (詳細については、「[Create Indexed Views (インデックス付きビューを作成する)](../../relational-databases/views/create-indexed-views.md)」 を参照してください)。   
+
+>[!Note]
+>CREATE MATERIALIZED VIEW で COUNT、DISTINCT、COUNT (DISTINCT expression)、COUNT_BIG (DISTINCT expression) はサポートされていませんが、これらの関数を指定した SELECT クエリを使用すると、具体化されたビューの利点が得られ、パフォーマンスをより高速化することができます。これは、Synapse SQL オプティマイザーを使用すると、既存の具体化されたビューと一致するようにユーザー クエリの集計を自動的に再作成できるためです。  詳細については、この記事の例のセクションを確認してください。 
+
+CREATE MATERIALIZED VIEW AS SELECT で APPROX_COUNT_DISTINCT はサポートされません。
 
 具体化されたビューでは、CLUSTERED COLUMNSTORE INDEX のみがサポートされます。 
 
@@ -133,29 +141,72 @@ DDM 列が具体化されたビューの一部でない場合でも、動的デ�
 
 具体化されたビューは、一度作成されると、SQL Server Management Studio 内の [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] インスタンスのビュー フォルダーの下に表示されます。
 
-ユーザーは [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) および [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) を実行して、具体化されたビューによって使用されている領域を確認できます。  
+ユーザーは [SP_SPACEUSED](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md?view=azure-sqldw-latest) および [DBCC PDW_SHOWSPACEUSED](../database-console-commands/dbcc-pdw-showspaceused-transact-sql.md?view=azure-sqldw-latest) を実行して、具体化されたビューによって使用されている領域を確認できます。  
 
 具体化されたビューは、DROP VIEW でドロップできます。  ALTER MATERIALIZED VIEW を使用して、具体化されたビューを無効にしたり、リビルドしたりできます。   
 
 SQL Server Management Studio 内の説明プランとグラフィカルな推定実行プランを見ると、クエリ実行の際、具体化されたビューがクエリ オプティマイザーで考慮されるかどうかがわかります。 SQL Server Management Studio 内のグラフィカルな推定実行プランを見ると、クエリ実行の際、具体化されたビューがクエリ オプティマイザーで考慮されるかどうかがわかります。
 
-新しい具体化されたビューから SQL ステートメントでメリットが得られるかどうかを確認するには、`WITH_RECOMMENDATIONS` を指定して `EXPLAIN` コマンドを実行します。  詳細については、「[EXPLAIN (Transact-SQL)](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)」を参照してください。
+新しい具体化されたビューから SQL ステートメントでメリットが得られるかどうかを確認するには、`WITH_RECOMMENDATIONS` を指定して `EXPLAIN` コマンドを実行します。  詳細については、「[EXPLAIN (Transact-SQL)](../queries/explain-transact-sql.md?view=azure-sqldw-latest)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 
 ビューが作成されているスキーマに対する 1) REFERENCES と CREATE VIEW アクセス許可、または 2) CONTROL アクセス許可が必要です。 
 
+## <a name="example"></a>例
+A. この例には、Synapse SQL オプティマイザーで具体化されたビューを自動的に使用してクエリを実行し、パフォーマンスを向上させる方法が示されています。これは、クエリで、COUNT(DISTINCT expression) などの、CREATE MATERIALIZED VIEW でサポートされていない関数を使用する場合でも同様です。 これまで完了するのに数秒かかっていたクエリが、ユーザー クエリに変更を加えることなく 1 秒未満で終了するようになりました。   
+
+``` sql 
+
+-- Create a table with ~536 million rows
+create table t(a int not null, b int not null, c int not null) with (distribution=hash(a), clustered columnstore index);
+
+insert into t values(1,1,1);
+
+declare @p int =1;
+while (@P < 30)
+    begin
+    insert into t select a+1,b+2,c+3 from t;  
+    select @p +=1;
+end
+
+-- A SELECT query with COUNT_BIG (DISTINCT expression) took multiple seconds to complete and it reads data directly from the base table a. 
+select a, count_big(distinct b) from t group by a;
+
+-- Create two materialized views, not using COUNT_BIG(DISTINCT expression).
+create materialized view V1 with(distribution=hash(a)) as select a, b from dbo.t group by a, b;
+
+-- Clear all cache.
+
+DBCC DROPCLEANBUFFERS;
+DBCC freeproccache;
+
+-- Check the estimated execution plan in SQL Server Management Studio.  It shows the SELECT query is first step (GET operator) is to read data from the materialized view V1, not from base table a.
+select a, count_big(distinct b) from t group by a;
+
+-- Now execute this SELECT query.  This time it took sub-second to complete because Synapse SQL engine automatically matches the query with materialized view V1 and uses it for faster query execution.  There was no change in the user query.
+
+DECLARE @timerstart datetime2, @timerend datetime2;
+SET @timerstart = sysdatetime();
+
+select a, count_big(distinct b) from t group by a;
+
+SET @timerend = sysdatetime()
+select DATEDIFF(ms,@timerstart,@timerend);
+
+```
+
   
 ## <a name="see-also"></a>関連項目
 
 [具体化されたビューを使用したパフォーマンス チューニング](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
-[DROP VIEW](/sql/t-sql/statements/drop-view-transact-sql?view=azure-sqldw-latest)  
-[EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
-[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](./alter-materialized-view-transact-sql.md?view=azure-sqldw-latest)      
+[DROP VIEW](./drop-view-transact-sql.md?view=azure-sqldw-latest)  
+[EXPLAIN &#40;Transact-SQL&#41;](../queries/explain-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest)   
+[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest)   
 [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
 [Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でサポートされているシステム ビュー](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
 [Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でサポートされている T-SQL ステートメント](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

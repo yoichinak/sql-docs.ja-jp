@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8a0fcbcee1d17a98025a1c8adbc02c3409b1db06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0b20fde852e02662780f75bd14e4b9023e01d80
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389298"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192410"
 ---
 # <a name="entity-dependencies-explorer"></a>エンティティの依存関係エクスプローラー
 
@@ -29,7 +29,7 @@ ms.locfileid: "88389298"
   
 これは、"自分のエンティティを誰が、どのように使用しているか" という質問に回答するために役立ちます。 このビューは、[派生階層] エクスプローラー ページと同様ですが、さらに包括的です。 ここでは、特定の階層の一部として定義された内容だけでなく、すべての DBA リレーションシップが表示されます。 表示されている階層構造は既存の DBS から単純に推定されるため、階層の定義は必要ありません。  
   
-[エクスプローラー] ページで、[エンティティの依存関係] メニュー項目には、少なくとも 1 つのエンティティが依存する (つまり、少なくとも 1 つのエンティティに一覧されたエンティティを参照する DBA がある) モデルにあるすべてのエンティティが一覧表示されます。 依存関係 (直接と間接の両方) の数は、エンティティ名の横に表示されます。リストはこの数値によって並べ替えられ、最も頻繁に参照されるエンティティが上部に表示されます。 [サンプル データ](https://msdn.microsoft.com/library/master-data-services-sample.aspx)のカスタマー モデルから取得された次のスクリーンショットでは、7 つのエンティティによって (直接または間接的に) 参照される BigArea エンティティを示します。  
+[エクスプローラー] ページで、[エンティティの依存関係] メニュー項目には、少なくとも 1 つのエンティティが依存する (つまり、少なくとも 1 つのエンティティに一覧されたエンティティを参照する DBA がある) モデルにあるすべてのエンティティが一覧表示されます。 依存関係 (直接と間接の両方) の数は、エンティティ名の横に表示されます。リストはこの数値によって並べ替えられ、最も頻繁に参照されるエンティティが上部に表示されます。 [サンプル データ](./sql-server-samples-model-deployment-packages-mds.md)のカスタマー モデルから取得された次のスクリーンショットでは、7 つのエンティティによって (直接または間接的に) 参照される BigArea エンティティを示します。  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -47,5 +47,3 @@ ms.locfileid: "88389298"
   
   
   
-  
-

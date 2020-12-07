@@ -14,12 +14,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37ebb31c408d20708d6398be95a30883cceb04d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68b556070ef8714bc793a333b2a7e6c5d392d882
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496102"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91719818"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
 
@@ -55,7 +55,7 @@ ms.locfileid: "88496102"
 Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、**[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。 現時点では、先進認証はサポートされていません。 
   
 ### <a name="specifying-and-securing-credentials"></a>資格情報の指定とセキュリティ保護  
- OData サービスで基本認証が必要とされる場合は、 [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)でユーザー名とパスワードを指定できます。 エディターに入力した値は、パッケージ内に保存されます。 パスワードの値は、パッケージの保護レベルに応じて暗号化されます。  
+ OData サービスで基本認証が必要とされる場合は、 [OData Connection Manager Editor]()でユーザー名とパスワードを指定できます。 エディターに入力した値は、パッケージ内に保存されます。 パスワードの値は、パッケージの保護レベルに応じて暗号化されます。  
   
  ユーザー名とパスワードの値をパラメーター化またはパッケージ外に保存する方法はいくつかあります。 たとえば、パラメーターを使用するか、SQL Server Management Studio からパッケージを実行するときに接続マネージャーのプロパティを直接設定できます。  
   
@@ -87,9 +87,9 @@ Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続�
 -   **Microsoft Dynamics CRM Online** (Dynamics CRM Online の場合)
 -   **Microsoft Online Services** (Microsoft Online Services の場合)
 
-Windows 認証以外のオプションを選択する場合は、**ユーザー名**と**パスワード**を入力します。 
+Windows 認証以外のオプションを選択する場合は、**ユーザー名** と **パスワード** を入力します。 
 
 Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、**[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。
 
  **[接続テスト]**  
- OData ソースへの接続をテストするには、このボタンをクリックします。  
+ OData ソースへの接続をテストするには、このボタンをクリックします。

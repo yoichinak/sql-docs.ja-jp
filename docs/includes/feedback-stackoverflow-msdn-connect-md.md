@@ -1,1 +1,1 @@
-<Token>![ヘルプが必要ですか?](media/needhelp_person_icon.png)**ヘルプが必要ですか?** [Microsoft Q & A](https://docs.microsoft.com/answers/products/sql-server)、[StackOverflow](https://stackoverflow.com/questions/tagged/sql-server)、[SQL Server 製品フィードバック](https://feedback.azure.com/forums/908035-sql-server)</Token>
+<Token>![ヘルプが必要ですか?](media/needhelp_person_icon.png)**ヘルプが必要ですか?** [Microsoft Q & A](/answers/products/sql-server)、[StackOverflow](https://stackoverflow.com/questions/tagged/sql-server)、[SQL Server 製品フィードバック](https://feedback.azure.com/forums/908035-sql-server)</Token>

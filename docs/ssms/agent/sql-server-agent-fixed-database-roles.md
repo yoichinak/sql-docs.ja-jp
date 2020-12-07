@@ -21,18 +21,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4fbae65eadf48114aff4d8a5ef49e4817f019a47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c59f04c31e6400f58d872a98da8498ca6ec38ff5
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88318238"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235677"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server エージェントの固定データベース ロール
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次の **msdb** データベースの固定データベース ロールが用意されています。これらのロールを使用することで、管理者は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントへのアクセスをより細かく制御できます。 特権レベルの低いロールから順に、次に示します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "88318238"
 **SQLAgentUserRole** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの固定データベース ロールのうち、最も低い特権レベルが設定されています。 オペレーター、ローカル ジョブ、ジョブ スケジュールのみに対する権限があります。 **SQLAgentUserRole** のメンバーは、所有しているローカル ジョブおよびジョブ スケジュールのみに対する権限を持っています。 このメンバーが、マルチサーバー ジョブ (マスター サーバーとターゲット サーバーのジョブ) を使用することはできません。また、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることもできません。 **SQLAgentUserRole** のメンバーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ジョブ ステップのプロパティ]** ダイアログ ボックスでのみ、使用できるプロキシのリストを表示できます。 **SQLAgentUserRole** のメンバーに対しては、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーには **[ジョブ]** ノードだけが表示されます。  
   
 > [!IMPORTANT]  
-> **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentReaderRole** および **SQLAgentOperatorRole** は、自動的に **SQLAgentUserRole**のメンバーになります。 つまり、 **SQLAgentReaderRole** および **SQLAgentOperatorRole** のメンバーは、 **SQLAgentUserRole** に許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **エージェント データベース ロール** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentReaderRole** および **SQLAgentOperatorRole** は、自動的に **SQLAgentUserRole** のメンバーになります。 つまり、 **SQLAgentReaderRole** および **SQLAgentOperatorRole** のメンバーは、 **SQLAgentUserRole** に許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
   
 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オブジェクトに対する **SQLAgentUserRole** の権限の概要を示します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "88318238"
 **SQLAgentReaderRole** には、すべての **SQLAgentUserRole** の権限、および使用できるマルチサーバー ジョブのリスト、ジョブのプロパティ、およびジョブの履歴を表示する権限が含まれています。 このロールのメンバーは、所有しているジョブとジョブ スケジュールだけでなく、使用できるすべてのジョブとジョブ スケジュール、およびそのプロパティのリストを表示することもできます。 **SQLAgentReaderRole** のメンバーは、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることはできません。 **SQLAgentReaderRole** のメンバーに対しては、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーには **[ジョブ]** ノードだけが表示されます。  
   
 > [!IMPORTANT]  
-> **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentReaderRole** のメンバーは、自動的に **SQLAgentUserRole**のメンバーになります。 つまり、 **SQLAgentReaderRole** のメンバーは、 **SQLAgentUserRole** に対して許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentReaderRole** のメンバーは、自動的に **SQLAgentUserRole** のメンバーになります。 つまり、 **SQLAgentReaderRole** のメンバーは、 **SQLAgentUserRole** に対して許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
   
 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オブジェクトに対する **SQLAgentReaderRole** の権限の概要を示します。  
   
@@ -87,14 +87,14 @@ ms.locfileid: "88318238"
 |アタッチ/デタッチ|適用なし|適用なし|適用なし|可 (所有しているスケジュールのみ)|適用なし|  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole の権限  
-**SQLAgentOperatorRole** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの固定データベース ロールのうち、最も高いレベルの特権が設定されています。 これには、 **SQLAgentUserRole** および **SQLAgentReaderRole**のすべての権限が含まれています。 このロールのメンバーは、オペレーターおよびプロキシのプロパティを表示することも、サーバー上で使用できるプロキシおよび警告を列挙することもできます。  
+**SQLAgentOperatorRole** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの固定データベース ロールのうち、最も高いレベルの特権が設定されています。 これには、 **SQLAgentUserRole** および **SQLAgentReaderRole** のすべての権限が含まれています。 このロールのメンバーは、オペレーターおよびプロキシのプロパティを表示することも、サーバー上で使用できるプロキシおよび警告を列挙することもできます。  
   
-**SQLAgentOperatorRole** のメンバーは、ローカル ジョブおよびスケジュールに関する追加の権限を持っています。 すべてのローカル ジョブを実行、停止、または開始したり、サーバー上のローカル ジョブのジョブ履歴を削除できます。 また、サーバー上のすべてのローカル ジョブおよびスケジュールを、有効または無効にすることもできます。 ローカル ジョブまたはスケジュールを有効または無効にするには、このロールのメンバーはストアド プロシージャ **sp_update_job** および **sp_update_schedule**を使用する必要があります。 **SQLAgentOperatorRole** のメンバーは、ジョブまたはスケジュールの名前か ID を指定するパラメーター、および **\@enabled** パラメーターのみを指定できます。 他のパラメーターを指定すると、ストアド プロシージャの実行は失敗します。 **SQLAgentOperatorRole** のメンバーは、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることはできません。  
+**SQLAgentOperatorRole** のメンバーは、ローカル ジョブおよびスケジュールに関する追加の権限を持っています。 すべてのローカル ジョブを実行、停止、または開始したり、サーバー上のローカル ジョブのジョブ履歴を削除できます。 また、サーバー上のすべてのローカル ジョブおよびスケジュールを、有効または無効にすることもできます。 ローカル ジョブまたはスケジュールを有効または無効にするには、このロールのメンバーはストアド プロシージャ **sp_update_job** および **sp_update_schedule** を使用する必要があります。 **SQLAgentOperatorRole** のメンバーは、ジョブまたはスケジュールの名前か ID を指定するパラメーター、および **\@enabled** パラメーターのみを指定できます。 他のパラメーターを指定すると、ストアド プロシージャの実行は失敗します。 **SQLAgentOperatorRole** のメンバーは、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることはできません。  
   
-**SQLAgentOperatorRole**のメンバーに対しては、 **オブジェクト エクスプローラーには**[ジョブ] **ノード、**[警告] **ノード、** [オペレーター] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ノード、および **[プロキシ]** ノードのみが表示されます。 このロールのメンバーに表示されないのは、 **[エラー ログ]** ノードだけです。  
+**SQLAgentOperatorRole** のメンバーに対しては、 **オブジェクト エクスプローラーには** [ジョブ] **ノード、** [警告] **ノード、** [オペレーター] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ノード、および **[プロキシ]** ノードのみが表示されます。 このロールのメンバーに表示されないのは、 **[エラー ログ]** ノードだけです。  
   
 > [!IMPORTANT]  
-> **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentOperatorRole** のメンバーは、自動的に **SQLAgentUserRole** および **SQLAgentReaderRole**のメンバーになります。 つまり、 **SQLAgentOperatorRole** のメンバーは、 **SQLAgentUserRole** または **SQLAgentReaderRole** に対して許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentOperatorRole** のメンバーは、自動的に **SQLAgentUserRole** および **SQLAgentReaderRole** のメンバーになります。 つまり、 **SQLAgentOperatorRole** のメンバーは、 **SQLAgentUserRole** または **SQLAgentReaderRole** に対して許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
   
 次の表に、 **エージェント オブジェクトに対する** SQLAgentOperatorRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の権限の概要を示します。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88318238"
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |作成/変更/削除|いいえ|いいえ|可 (所有しているジョブのみ)<br /><br />ジョブの所有権は変更できません。|いいえ|可 (所有しているスケジュールのみ)|いいえ|  
 |リストの表示 (列挙)|はい|はい<br /><br />**sp_notify_operator** および Management Studio の **[ジョブのプロパティ]** ダイアログ ボックスで使用できるオペレーターのリストを取得できます。|はい|はい|はい|はい|  
-|有効化/無効化|いいえ|いいえ|はい<br /><br />**SQLAgentOperatorRole** のメンバーは、ストアド プロシージャ **sp_update_job** を使用し、 **\@enabled** パラメーターおよび **\@job_id** (または **\@job_name**) パラメーターの値を指定することにより、所有していないローカル ジョブを有効または無効にできます。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。|いいえ|はい<br /><br />**SQLAgentOperatorRole** のメンバーは、ストアド プロシージャ **sp_update_schedule** を使用し、 **\@enabled** パラメーターおよび **\@schedule_id** (または **\@name**) パラメーターの値を指定することにより、所有していないスケジュールを有効または無効にできます。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。|適用なし|  
+|有効化/無効化|いいえ|いいえ|はい<br /><br />**SQLAgentOperatorRole** のメンバーは、ストアド プロシージャ **sp_update_job** を使用し、 **\@enabled** パラメーターおよび **\@job_id** (または **\@job_name** ) パラメーターの値を指定することにより、所有していないローカル ジョブを有効または無効にできます。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。|いいえ|はい<br /><br />**SQLAgentOperatorRole** のメンバーは、ストアド プロシージャ **sp_update_schedule** を使用し、 **\@enabled** パラメーターおよび **\@schedule_id** (または **\@name** ) パラメーターの値を指定することにより、所有していないスケジュールを有効または無効にできます。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。|適用なし|  
 |プロパティの表示|はい|はい|はい|はい|はい|はい|  
 |プロパティの編集|いいえ|いいえ|可 (所有しているジョブのみ)|いいえ|可 (所有しているスケジュールのみ)|いいえ|  
 |実行/停止/開始|適用なし|適用なし|はい|いいえ|適用なし|適用なし|  
@@ -115,8 +115,7 @@ ms.locfileid: "88318238"
   
 ## <a name="see-also"></a>関連項目  
 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)  
-[sp_update_job (Transact-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623)  
-[sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe)  
-[sp_notify_operator (Transact-SQL)](https://msdn.microsoft.com/c440f5c9-9884-4196-b07c-55d87afb17c3)  
-[sp_purge_jobhistory (Transact-SQL)](https://msdn.microsoft.com/237f9bad-636d-4262-9bfb-66c034a43e88)  
-  
+[sp_update_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)  
+[sp_update_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
+[sp_notify_operator (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)  
+[sp_purge_jobhistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)  

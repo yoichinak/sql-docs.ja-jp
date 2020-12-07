@@ -17,12 +17,12 @@ ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b80095978c3369a4aa56c8a7ab64b2c34ab716f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8dcdd69e511b36cce11b596b0fea968d6dd477f5
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428474"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810573"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 実装の詳細
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88428474"
   
  この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー リファレンスは、すべての ODBC 関数呼び出しを記載したものではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと共に使用される、ドライバー固有のパラメーターや動作を備えた ODBC 関数だけについて説明しています。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは ODBC 3.51 仕様に準拠しています。 ODBC 3.51 の総合的なリファレンスについては、 [データアクセスおよびストレージデベロッパーセンター](https://go.microsoft.com/fwlink?linkid=4173)から Microsoft Data ACCESS Components SDK をダウンロードするか、 [odbc プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250) をオンラインで参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは ODBC 3.51 仕様に準拠しています。 ODBC 3.51 の総合的なリファレンスについては、 [データアクセスおよびストレージデベロッパーセンター](https://go.microsoft.com/fwlink?linkid=4173)から Microsoft Data ACCESS Components SDK をダウンロードするか、 [odbc プログラマーズリファレンス](../../odbc/reference/odbc-programmer-s-reference.md) をオンラインで参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -136,7 +136,6 @@ ms.locfileid: "88428474"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client &#40;ODBC&#41; リファレンス](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [SQL Server Native Client &#40;ODBC&#41; リファレンス](../native-client/odbc/sql-server-native-client-odbc.md)   
  [SQL Server Native Client を使用したアプリケーションのビルド](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
-  
   

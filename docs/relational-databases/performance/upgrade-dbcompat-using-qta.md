@@ -21,12 +21,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ed1a88ec860edfc34535bbf812fd51f9930edb11
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: aafbba1fe5c4d7fe8c20b1d50d97bbd8a4277bae
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569927"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890972"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>クエリ調整アシスタントを使用したデータベースのアップグレード
 
@@ -230,4 +230,5 @@ QTA はセッション ベースの機能であり、セッションが初めて
 - [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [カーディナリティ推定機能](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)
+- [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)   
+- [SQL Server クエリ調整アシスタントを使用する](https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/)

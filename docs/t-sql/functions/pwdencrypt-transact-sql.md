@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0b25d123f34de28d64e39e3593f918e01eada30b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 359caf584357994eab4441e345aefdc528cb363b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445594"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380707"
 ---
 # <a name="pwdencrypt-transact-sql"></a>PWDENCRYPT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "88445594"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 PWDENCRYPT ( 'password' )  
 ```  
   
@@ -45,7 +44,7 @@ PWDENCRYPT ( 'password' )
 
 ## <a name="arguments"></a>引数
  *password*  
- 暗号化されるパスワードです。 *パスワード* は **sysname**です。  
+ 暗号化されるパスワードです。 *パスワード* は **sysname** です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varbinary (128)**  

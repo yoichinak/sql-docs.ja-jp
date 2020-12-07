@@ -22,10 +22,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495860"
 ---
 # <a name="integration-services-paths"></a>Integration Services のパス
@@ -159,6 +159,6 @@ ms.locfileid: "88495860"
   
 |プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
-|[PathAnnotation]|Integer (列挙)|注釈をパスと共にデザイナー画面に表示するかどうかを示す値。 指定できる値は、 **AsNeeded**、 **SourceName**、 **PathName**、 **Never**です。 既定値は **AsNeeded**です。|  
+|[PathAnnotation]|Integer (列挙)|注釈をパスと共にデザイナー画面に表示するかどうかを示す値。 指定できる値は、 **AsNeeded**、 **SourceName**、 **PathName**、 **Never** です。 既定値は **AsNeeded** です。|  
 |[DestinationName]|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|パスに関連付けられた入力|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|パスに関連付けられた出力|  

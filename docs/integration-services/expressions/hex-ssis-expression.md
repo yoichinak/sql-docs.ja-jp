@@ -15,10 +15,10 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a2fdba3ec151b363766ffb29e88afbdfc4575bc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484488"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 式)
@@ -68,13 +68,13 @@ HEX(integer_expression)
 HEX(400)   
 ```  
   
- この例では、 **ReorderPoint** 列を使用します。 列のデータ型は **smallint**です。 **ReorderPoint** が 750 の場合、関数は 2EE を返します。  
+ この例では、 **ReorderPoint** 列を使用します。 列のデータ型は **smallint** です。 **ReorderPoint** が 750 の場合、関数は 2EE を返します。  
   
 ```  
 HEX(ReorderPoint)   
 ```  
   
- この例では、システム変数 **LocaleID**を使用しています。 **LocaleID** が 1033 の場合、関数は 409 を返します。  
+ この例では、システム変数 **LocaleID** を使用しています。 **LocaleID** が 1033 の場合、関数は 409 を返します。  
   
 ```  
 HEX(@LocaleID)  

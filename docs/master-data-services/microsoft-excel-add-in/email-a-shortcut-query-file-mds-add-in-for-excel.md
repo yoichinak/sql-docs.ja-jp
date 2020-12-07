@@ -1,5 +1,6 @@
 ---
-title: ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン) | Microsoft Docs
+description: ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン)
+title: ショートカット クエリ ファイルの電子メールでの送信
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a9c800ecf5eabd6c97ab3f0c96dec998d911d11c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9dae0ad64323ea2879f0e752fd8a8d737bf003d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257644"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] で、他のユーザーが確実に自分と同じデータを操作するようにするには、ショートカット クエリ ファイルをそのユーザーに電子メールで送信します。 ワークシートを保存して電子メールで送信するのではなく、クエリを共有する必要があります。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   Outlook 2010 以降がインストールされている必要があります。  
@@ -40,7 +41,7 @@ ms.locfileid: "68092414"
   
 -   ショートカット クエリ ファイルを開くには、電子メールの受信者は [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] をインストールしておく必要があります。 受信者は、ファイルをダブルクリックして開くことができます。  
   
-## <a name="see-also"></a>関連項目  
- [ショートカット クエリ ファイル &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>参照  
+ [ショートカット クエリ ファイル (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

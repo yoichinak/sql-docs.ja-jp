@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c4d2ee21a4b2c2975fcead1e883cb28459c608dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88363378"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
@@ -53,13 +53,13 @@ PATINDEX ( '%pattern%' , expression )
  > 従来の正規表現は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でネイティブにサポートされていませんが、さまざまなワイルドカード表現を使用すると、同様の複雑なパターン マッチングを実現することができます。 ワイルドカード構文の詳細については、ドキュメント「[文字列演算子](../../t-sql/language-elements/string-operators-transact-sql.md)」を参照してください。
   
  *式 (expression)*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)です。通常は、指定したパターンで検索する列です。 *式*は文字列データ型に分類されます。  
+ [式](../../t-sql/language-elements/expressions-transact-sql.md)です。通常は、指定したパターンで検索する列です。 *式* は文字列データ型に分類されます。  
   
 ## <a name="return-types"></a>戻り値の型  
 *expression* が **varchar(max)** または **nvarchar(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
   
 ## <a name="remarks"></a>注釈  
-*pattern* または*式*が NULL の場合、PATINDEX は NULL を返します。  
+*pattern* または *式* が NULL の場合、PATINDEX は NULL を返します。  
  
 PATINDEX の開始位置は 1 です。
  

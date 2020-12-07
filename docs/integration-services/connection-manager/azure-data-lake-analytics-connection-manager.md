@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: 87c4b6ca0ccb53087c2c4532631edfde9d0e6516
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d40fea72f0c39bf932146de239f4713dbe5eb247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918583"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726692"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Azure Data Lake Analytics 接続マネージャー
 
@@ -43,15 +43,15 @@ Data Lake Analytics 接続マネージャー は、[SQL Server Integration Servi
    a. **[Azure AD のユーザー ID]** 認証オプションを選択する場合は、次の操作を行います。
    
       i. **[ユーザー名]** と **[パスワード]** のフィールドに値を指定します。    
-      ii. 接続をテストするには、 **[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Data Lake Analytics アカウントへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「 [Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)」を参照してください。
+      ii. 接続をテストするには、 **[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Data Lake Analytics アカウントへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「 [Azure Active Directory とアプリケーションの統合](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)」を参照してください。
     
    > [!NOTE] 
    > **[Azure AD のユーザー ID]** 認証オプションを選択する場合、多要素認証と Microsoft アカウント認証はサポートされません。
     
    b. **[Azure AD のサービス ID]** 認証オプションを選択する場合は、次の操作を行います。
    
-      i. Data Lake Analytics アカウントにアクセスするための Azure AD アプリケーションおよびサービス プリンシパルを作成します。 この認証オプションの詳細については、「 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)」 (ポータルを使用して、リソースにアクセスできる Active Directory アプリケーションとサービス プリンシパルを作成する) を参照してください。    
-      ii. 適切な権限を割り当てて、この Azure AD アプリケーションが Data Lake Analytics アカウントにアクセスできるようにします。 [ユーザー追加ウィザード](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user)を使用して Data Lake Analytics アカウントへのアクセス許可を付与する方法を確認してください。    
+      i. Data Lake Analytics アカウントにアクセスするための Azure AD アプリケーションおよびサービス プリンシパルを作成します。 この認証オプションの詳細については、「 [Use portal to create Active Directory application and service principal that can access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal)」 (ポータルを使用して、リソースにアクセスできる Active Directory アプリケーションとサービス プリンシパルを作成する) を参照してください。    
+      ii. 適切な権限を割り当てて、この Azure AD アプリケーションが Data Lake Analytics アカウントにアクセスできるようにします。 [ユーザー追加ウィザード](/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user)を使用して Data Lake Analytics アカウントへのアクセス許可を付与する方法を確認してください。    
       iii. **[アプリケーション ID]** 、 **[認証キー]** 、 **[テナント ID]** フィールドの値を指定します。    
       iv. 接続をテストするには、 **[接続テスト]** を選択します。  
 
@@ -59,5 +59,4 @@ Data Lake Analytics 接続マネージャー は、[SQL Server Integration Servi
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>接続マネージャーのプロパティを表示する
 作成した接続マネージャーのプロパティは、 **[プロパティ]** ウィンドウに表示されます。  
-  
   

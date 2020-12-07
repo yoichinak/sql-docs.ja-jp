@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 11492d2488fabdc4128844bca60c3ecbfac58ad6
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042843"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670689"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>トラブルシューティング:可用性グループ接続の超過 RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "90042843"
  ログ ブロックがログ ファイルに書き込まれるとすぐに、データの損失が回避されます。 そのため、ログ フィルとデータ ファイルを分離することが重要です。 ログ ファイルとデータ ファイルの両方が同じハード ディスクにマッピングされている場合、データ ファイルの読み取りを頻繁に行うレポート ワークロードが、ログ書き込み操作に必要な量と同じ I/O リソースを消費します。 低速の書き込みのためにプライマリ レプリカへの確認が遅くなり、そのためにフロー制御の過度のアクティブ化が発生し、フロー制御の待機時間が長くなる可能性があります。  
   
 ### <a name="diagnosis-and-resolution"></a>診断と解決  
- ネットワークが高待機時間または低スループットの影響を受けていないことを確認した場合、I/O の競合についてセカンダリ レプリカを調査する必要があります。 「[SQL Server: ディスク I/O を最小限に抑える](https://technet.microsoft.com/magazine/jj643251.aspx)」のクエリは、競合を特定する場合に便利です。 便宜上、その記事の例を下に示します。  
+ ネットワークが高待機時間または低スループットの影響を受けていないことを確認した場合、I/O の競合についてセカンダリ レプリカを調査する必要があります。 「[SQL Server: ディスク I/O を最小限に抑える](/previous-versions/technet-magazine/jj643251(v=msdn.10))」のクエリは、競合を特定する場合に便利です。 便宜上、その記事の例を下に示します。  
   
  次のスクリプトは、SQL Server インスタンス上で実行されているすべての可用性データベースに関して、各データ ファイルとログ ファイルの読み取りと書き込みの回数を表示することができます。 これは平均 I/O 停止時間 (ミリ秒) で並べ替えられます。 数字は、前回のサーバー インスタンスの開始時刻からの累積であることに注意してください。 そのため、しばらく時間が経過した後に 2 つの測定値の差を取得する必要があります。  
   
@@ -127,6 +127,5 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  I/O のボトルネックを特定し、ログ ファイルとデータ ファイルが同じハード ディスク上に置かれている場合、最初の手順として、データ ファイルとログ ファイルを別々のディスクに置く必要があります。 このベスト プラクティスにより、レポート ワークロードが、プライマリ レプリカからログ バッファーへのログ転送パスに干渉することがなくなり、セカンダリ ディスク上でトランザクションを書き込む機能に影響しなくなります。  
   
 ## <a name="next-steps"></a>次のステップ  
- [SQL Server (SQL Server 2012 に適用されます) のパフォーマンスに関する問題のトラブルシューティング](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [SQL Server (SQL Server 2012 に適用されます) のパフォーマンスに関する問題のトラブルシューティング](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

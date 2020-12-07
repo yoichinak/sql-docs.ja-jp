@@ -1,8 +1,8 @@
 ---
 title: Windows 上と Linux 上で SQL Server の Always On 可用性グループを構成する
 description: Windows サーバー上の 1 つのレプリカと Linux サーバー上のもう 1 つのレプリカを使用して、SQL Server Always On 可用性グループ (AG) を作成する方法について説明します。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/31/2018
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d38aed51796609a9fb97c2f6d06a7383fba9dde
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 3800029fb04f058f6f2a0f00ed3f859d1385782e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088955"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523897"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows 上と Linux 上で SQL Server の Always On 可用性グループを構成する (クロスプラットフォーム)
 
@@ -69,7 +69,7 @@ AG を作成する手順は、読み取りスケール ワークロード用に 
 
    次の図に、この手順全体を示します。
 
-   ![Linux 上で可用性グループを有効にする](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![コマンドが表示されている Git Bash ウィンドウのスクリーンショット。](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 1. 両方のサーバーで hosts ファイルを構成するか、DNS にサーバー名を登録します。
 
@@ -110,7 +110,7 @@ AG を作成する手順は、読み取りスケール ワークロード用に 
 
    次の図では、証明書とキーに対して所有権とグループが正しく設定されています。
 
-   ![Linux 上で可用性グループを有効にする](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![/var/opt/mssql/data フォルダーの .cer と .pvk が表示されている Git Bash ウィンドウのスクリーンショット。](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
 1. セカンダリ レプリカで、データベース ログインとパスワードを作成し、マスター キーを作成します。

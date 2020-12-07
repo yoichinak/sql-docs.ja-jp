@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: b1d4a5951b223e5772a59f3cb9c12fd4f04ae244
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834723"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125193"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる機能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85834723"
 
  ネイティブ モジュールの定義でサポートされる機能については、「 [ネイティブ コンパイル T-SQL モジュールでサポートされる DDL](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md)」をご覧ください。  
 
- サポートされない構造に関する詳細と、ネイティブ コンパイル モジュールのサポートされない一部の機能に対処する方法については、「 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)」を参照してください。 サポートされていない機能の詳細については、「 [インメモリ OLTP でサポートされていない Transact-SQL の構造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)」をご覧ください。  
+ サポートされない構造に関する詳細と、ネイティブ コンパイル モジュールのサポートされない一部の機能に対処する方法については、「 [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)」を参照してください。 サポートされていない機能の詳細については、「 [インメモリ OLTP でサポートされていない Transact-SQL の構造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)」をご覧ください。  
 
 ##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> ネイティブ モジュールのクエリ領域  
 
@@ -286,7 +286,5 @@ GO
  TOP N での最悪のケースでサポートされる最大 N を計算する式は次のとおりです: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`。  
 
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
- [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
-
+ [ネイティブ コンパイル ストアド プロシージャ](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
+ [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](./a-guide-to-query-processing-for-memory-optimized-tables.md)

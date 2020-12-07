@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b1be7086c66ed6450e8e23f90c0804274bc6b37d
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 4f53290d9b9a1ecd161ef02161f29c172297a93f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288214"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727420"
 ---
 # <a name="using-integrated-authentication"></a>統合認証を使用する
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -128,7 +128,7 @@ Linux または macOS コンピューターの時刻と Kerberos キー配布セ
 
 Kerberos 認証が失敗すると、Linux または macOS 上の ODBC ドライバーで NTLM 認証が使用されません。  
 
-Active Directory を使用した Linux または macOS コンピューターの認証の詳細については、「[Active Directory を使用して Linux クライアントを認証する](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)」をご覧ください。 Kerberos の構成に関する詳細については、[MIT Kerberos のドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)を参照してください。
+Active Directory を使用した Linux または macOS コンピューターの認証の詳細については、「[Active Directory を使用して Linux クライアントを認証する](/previous-versions/technet-magazine/dd228986(v=msdn.10)#id0060048)」をご覧ください。 Kerberos の構成に関する詳細については、[MIT Kerberos のドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)を参照してください。
 
 ## <a name="see-also"></a>参照  
 [プログラミング ガイドライン](programming-guidelines.md)

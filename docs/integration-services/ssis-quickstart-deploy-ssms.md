@@ -1,20 +1,22 @@
 ---
+title: SSMS を使用して SSIS プロジェクトを配置する
 description: SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する
-title: SSMS で SSIS プロジェクトを配置する | Microsoft Docs
-ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.prod_service: integration-services
-ms.custom: ''
 ms.technology: integration-services
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57a1c38bff7d5b302de595226a74ea66ba4f80ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 05/21/2018
+ms.openlocfilehash: fc86054be556dbb34d212b24172e50fbf52f8980
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495479"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129976"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する
 
@@ -27,7 +29,7 @@ SQL Server Management Studio は、SQL Server から SQL Database まで、SQL �
 
 ## <a name="prerequisites"></a>前提条件
 
-始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
+始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
 Azure SQL Database へのデプロイに関連してこの記事で説明している検証には、SQL Server Data Tools (SSDT) version 17.4 以降が必要です。 最新版の SSDT を入手する方法については、「[SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」をご覧ください。
 
@@ -123,4 +125,4 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
     - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)
     - [コマンド プロンプトから SSIS パッケージを実行する](./ssis-quickstart-run-cmdline.md)
     - [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
-    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md) 
+    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md)

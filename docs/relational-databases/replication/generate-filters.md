@@ -14,10 +14,10 @@ ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5c124642da9b895522e35c80e5edf68f50335dc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88428034"
 ---
 # <a name="generate-filters"></a>[フィルターの生成]
@@ -25,7 +25,7 @@ ms.locfileid: "88428034"
   **[フィルターの生成]** ダイアログ ボックスでは、マージ パブリケーション内の 1 つのテーブルに対して行フィルターを定義できます。これを行うと、レプリケーションによって、外部キー リレーションシップを介して関連付けられる他のテーブルにそのフィルターが自動的に拡張されます。 たとえば、フランスの顧客データのみを含むように、フィルターを顧客テーブルに定義した場合、レプリケーションによってこのフィルターが拡張され、関連する受注テーブルや受注詳細テーブルには、フランスの顧客に関連する情報のみが含まれることになります。  
   
 ## <a name="options"></a>オプション  
- このダイアログ ボックスには、テーブルに行フィルターを作成するための 3 段階のプロセスがあります。 主キーと外部キーのリレーションシップを通じて、フィルターされたテーブルと関連するテーブルにフィルターが拡張されます。 たとえば、3 つのテーブル、 **Customer**、 **SalesOrderHeader**、および **SalesOrderDetail**に、 **Customer** と **SalesOrderHeader**のリレーションシップおよび **SalesOrderHeader** と **SalesOrderDetail**のリレーションシップが与えられている場合、 **Customer**に行フィルターを適用すると、レプリケーションによってこのフィルターが **SalesOrderHeader** と **SalesOrderDetail**に拡張されます。  
+ このダイアログ ボックスには、テーブルに行フィルターを作成するための 3 段階のプロセスがあります。 主キーと外部キーのリレーションシップを通じて、フィルターされたテーブルと関連するテーブルにフィルターが拡張されます。 たとえば、3 つのテーブル、 **Customer**、 **SalesOrderHeader**、および **SalesOrderDetail** に、 **Customer** と **SalesOrderHeader** のリレーションシップおよび **SalesOrderHeader** と **SalesOrderDetail** のリレーションシップが与えられている場合、 **Customer** に行フィルターを適用すると、レプリケーションによってこのフィルターが **SalesOrderHeader** と **SalesOrderDetail** に拡張されます。  
   
 1.  **[フィルターを適用するテーブルを選択します。]**  
   

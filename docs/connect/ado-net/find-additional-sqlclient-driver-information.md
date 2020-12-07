@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 26ee3500511ca937e0712b9338ba9a796b3a8a45
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: 1ae61c177686f072729c1763974c1cdc3d00baa7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85106895"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725713"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>追加の SqlClient ドライバー情報の検索
 
@@ -32,7 +32,7 @@ Microsoft SqlClient Data Provider for SQL Server の一般的な開発の詳細�
 |--------------|-----------------|  
 |[.NET ランタイム GitHub リポジトリ](https://github.com/dotnet/runtime)|このリポジトリには、.NET Core のライブラリ実装が含まれています。|
 |[Microsoft SqlClient Data Provider for SQL Server GitHub リポジトリ](https://github.com/dotnet/SqlClient)|このリポジトリには、SqlClient ドライバーのソース コードが含まれています。|  
-|[.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/)|このサイトには、ドライバーに関する .NET API の情報が含まれています。|  
+|[.NET API ブラウザー](/dotnet/api/)|このサイトには、ドライバーに関する .NET API の情報が含まれています。|  
   
 ## <a name="next-steps"></a>次のステップ
- [SqlClient ドライバーの概要](overview-sqlclient-driver.md)  
+ [SqlClient ドライバーの概要](overview-sqlclient-driver.md)

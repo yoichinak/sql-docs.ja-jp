@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5a10fdbc94858a9fe3f5b523fdd43b505e2563f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243533"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987558"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>方法:SQL Server の単体テストのテスト プロジェクトを作成する
 
@@ -28,7 +28,7 @@ ms.locfileid: "87243533"
 |テストの実行やテストの検証のために、SQL Server の単体テストごとに異なるデータベース接続にアクセスする必要がありますか。|回答が "はい" の場合は、複数のテスト プロジェクトが必要です。 テストの実行には複数のデータベース接続を指定できません。 ただし、テストの検証には別のデータベース接続を指定できます。|  
 |単体テストごとに異なるデータベース プロジェクトを配置しますか。|回答が "はい" の場合は、複数のテスト プロジェクトが必要です。 テスト プロジェクトによって配置できるのは 1 つのデータベース プロジェクトのみです。|  
   
-これらの各質問の詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。 複数のテスト プロジェクトを作成する代わりに、独自の [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService 実装を提供することもできます。  
+これらの各質問の詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。 複数のテスト プロジェクトを作成する代わりに、独自の [DatabaseTestService](/previous-versions/visualstudio/visual-studio-2010/dd154755(v=vs.100)) Microsoft.Data.Schema.UnitTesting.DatabaseTestService 実装を提供することもできます。  
   
 データベース プロジェクトを含むソリューションにテスト プロジェクトを追加するには、次の 3 つの方法があります。  
   
@@ -56,4 +56,3 @@ ms.locfileid: "87243533"
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-  

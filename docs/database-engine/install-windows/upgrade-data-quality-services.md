@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ebd08b11c99f8b5de54be9fc882c1fd2751afab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4a1a020d691b1908f45b4b683f41d9720999c4c6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900257"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125763"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services のアップグレード
 
@@ -27,7 +27,7 @@ ms.locfileid: "85900257"
 > [!IMPORTANT]
 >  -   スキーマのアップグレード中に誤ってデータが削除されることを防ぐため、DQS をアップグレードする前に DQS データベースをバックアップしておく必要があります。 DQS データベースのバックアップの詳細については、「 [DQS データベースのバックアップと復元](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)」を参照してください。  
 > -   データ品質タスクを実行するために、現在または以前のバージョンの Data Quality クライアントか、Integration Services 内の [DQS クレンジング変換](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)を使用して、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality サーバーに接続できます。  
-> -   Data Quality Services およびマスター データ サービスをアップグレードした後は、以前のバージョンの Excel 用マスター データ サービス アドインは機能しなくなります。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ここ [から、](https://go.microsoft.com/fwlink/?LinkID=506665)バージョンの Excel 用マスター データ サービス アドインをダウンロードできます。  
+> -   Data Quality Services およびマスター データ サービスをアップグレードした後は、以前のバージョンの Excel 用マスター データ サービス アドインは機能しなくなります。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ここ [から、](../../master-data-services/master-data-services-installation-and-configuration.md)バージョンの Excel 用マスター データ サービス アドインをダウンロードできます。  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
@@ -101,5 +101,4 @@ ms.locfileid: "85900257"
  [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Data Quality Server オブジェクトの削除](../../sql-server/install/remove-data-quality-server-objects.md)   
  [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
   

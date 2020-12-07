@@ -16,12 +16,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc5d297364c5f2967536f94fde15441e4e21524
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74f5c5dcf2f2e1891daca22d70ebb9d9f1d9119f
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551530"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983116"
 ---
 # <a name="synonyms-database-engine"></a>シノニム (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "89551530"
   
 -   ベース オブジェクトの名前や場所に加えられた変更からクライアント アプリケーションを保護する抽象層を提供します。  
   
-たとえば、 **Server1** という名前のサーバーに [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]の **Employee**テーブルがあるとします。 クライアント アプリケーションで、このテーブルを別のサーバー ( **Server2**) から参照するには、 **Server1.AdventureWorks.Person.Employee**という 4 部構成の名前を使用する必要があります。 また、テーブルの場所を別のサーバーなどに変更する場合は、その変更内容を反映してクライアント アプリケーションを変更する必要があります。  
+たとえば、 **Server1** という名前のサーバーに [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]の **Employee** テーブルがあるとします。 クライアント アプリケーションで、このテーブルを別のサーバー ( **Server2**) から参照するには、 **Server1.AdventureWorks.Person.Employee** という 4 部構成の名前を使用する必要があります。 また、テーブルの場所を別のサーバーなどに変更する場合は、その変更内容を反映してクライアント アプリケーションを変更する必要があります。  
   
-このような問題の両方に対処するには、 **Server1**の **Employee** テーブルに対して、 **Server2** に **EmpTable**というシノニムを作成できます。 これで、クライアント アプリケーションから **Employee**テーブルを参照するときに、 **EmpTable** という 1 部構成の名前を使用するだけで済みます。 また、 **Employee** テーブルの場所が変更された場合は、 **Employee**テーブルの新しい場所を指すように、シノニムである **EmpTable** を変更する必要があります。 ALTER SYNONYM というステートメントは存在しないので、 **EmpTable**というシノニムをいったん削除してから、 **Employee**の新しい場所を指す同じ名前のシノニムを作成する必要があります。  
+このような問題の両方に対処するには、 **Server1** の **Employee** テーブルに対して、 **Server2** に **EmpTable** というシノニムを作成できます。 これで、クライアント アプリケーションから **Employee** テーブルを参照するときに、 **EmpTable** という 1 部構成の名前を使用するだけで済みます。 また、 **Employee** テーブルの場所が変更された場合は、 **Employee** テーブルの新しい場所を指すように、シノニムである **EmpTable** を変更する必要があります。 ALTER SYNONYM というステートメントは存在しないので、 **EmpTable** というシノニムをいったん削除してから、 **Employee** の新しい場所を指す同じ名前のシノニムを作成する必要があります。  
   
 シノニムはスキーマに属しています。したがって、スキーマ内の他のオブジェクトと同様に、シノニムの名前は一意にする必要があります。 シノニムは、次のデータベース オブジェクトに対して作成できます。  
 
@@ -56,8 +56,6 @@ ms.locfileid: "89551530"
 
         アセンブリ (CLR) 集計関数
 
-        アセンブリ (CLR) 集計関数
-
         SQL テーブル値関数
 
         SQL ストアド プロシージャ
@@ -73,12 +71,12 @@ ms.locfileid: "89551530"
   
 あるシノニムを別のシノニムのベース オブジェクトにすることはできません。また、シノニムからユーザー定義集計関数を参照することもできません。  
   
-シノニムとベース オブジェクトとのバインドは、名前だけで行われます。 ベース オブジェクトの存在、種類、および権限のチェックは、すべて実行時まで行われません。 このため、ベース オブジェクトの変更や削除を行うことも、または削除してから元のベース オブジェクトと同じ名前の別のオブジェクトに置換することもできます。 たとえば、 **の**Person.Contact **テーブルを参照する** MyContacts [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]というシノニムがあるとします。 **Contact** テーブルを削除し、 **Person.Contact**というビューに置き換えると、 **MyContacts** は **Person.Contact** ビューを参照するようになります。  
+シノニムとベース オブジェクトとのバインドは、名前だけで行われます。 ベース オブジェクトの存在、種類、および権限のチェックは、すべて実行時まで行われません。 このため、ベース オブジェクトの変更や削除を行うことも、または削除してから元のベース オブジェクトと同じ名前の別のオブジェクトに置換することもできます。 たとえば、 **の** Person.Contact **テーブルを参照する** MyContacts [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]というシノニムがあるとします。 **Contact** テーブルを削除し、 **Person.Contact** というビューに置き換えると、 **MyContacts** は **Person.Contact** ビューを参照するようになります。  
   
 シノニムへの参照は、スキーマにはバインドされていません。 したがって、シノニムはいつでも削除できます。 ただし、シノニムを削除することにより、削除されたシノニムへの参照が未解決の状態になる可能性があります。 このような参照は、実行時まで見つかりません。  
   
 ## <a name="synonyms-and-schemas"></a>シノニムとスキーマ  
-所有者が自分ではない既定のスキーマのシノニムを作成する場合は、自分が所有しているスキーマ名でシノニム名を修飾する必要があります。 たとえば、 **x**というスキーマを所有していて、既定のスキーマが **y** だとします。この状況で CREATE SYNONYM ステートメントを使用する場合は、1 部構成の名前を使用してシノニムに名前を付けるのではなく、スキーマ **x**をシノニム名のプレフィックスにする必要があります。 シノニムの作成方法の詳細については、「 [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)テーブルがあるとします。  
+所有者が自分ではない既定のスキーマのシノニムを作成する場合は、自分が所有しているスキーマ名でシノニム名を修飾する必要があります。 たとえば、 **x** というスキーマを所有していて、既定のスキーマが **y** だとします。この状況で CREATE SYNONYM ステートメントを使用する場合は、1 部構成の名前を使用してシノニムに名前を付けるのではなく、スキーマ **x** をシノニム名のプレフィックスにする必要があります。 シノニムの作成方法の詳細については、「 [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)テーブルがあるとします。  
   
 ## <a name="granting-permissions-on-a-synonym"></a>シノニムに対する権限の許可  
 シノニムに対する権限を許可できるのは、シノニムの所有者、 **db_owner**、または **db_ddladmin** のみです。  

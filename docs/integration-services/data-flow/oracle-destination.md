@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e029637f90afbb27e4b27c79c8a515a2e3aad823
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430784"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195364"
 ---
 # <a name="oracle-destination"></a>Oracle 変換先
 
@@ -83,13 +83,13 @@ Oracle ソースによって Oracle データ ソースに対して行われる 
 |プロパティ名|データ型|説明|読み込みモード|
 |:-|:-|:-|:-|
 |BatchSize|Integer|一括読み込みのバッチのサイズ。 これは、バッチとして読み込まれる行数です。|バッチ モードでのみ使用されます。|
-|DefaultCodePage|Integer|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>**注**:このプロパティは、**詳細エディター**によってのみ設定されます。|両方のモードで使用されます。|
+|DefaultCodePage|Integer|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>**注**:このプロパティは、**詳細エディター** によってのみ設定されます。|両方のモードで使用されます。|
 |FastLoad|ブール型|高速読み込みが使用されるかどうか。 既定値は **false** です。 これは、[Oracle 変換先エディター ([接続マネージャー] ページ)](#oracle-destination-editor-connection-manager-page) で設定することもできます。 |両方のモードで使用されます。|
 |[MaxErrors]|Integer|データ フローを停止する前に許容されるエラーの数を指定します。 既定値は **0** です。これは、エラー数の制限がないことを意味します。<br> **[エラー処理]** ページで **[フローのリダイレクト]** が選択されている場合。 エラー数が上限に達する前に、すべてのエラーがエラー出力に返されます。 詳細については、「[エラー処理](#error-handling)」を参照してください。|高速読み込みモードでのみ使用されます。|
 |NoLogging|ブール型|データベースのログ記録が無効になっているかどうか。 既定値は **False** です。これは、ログ記録が有効になっていることを意味します。|両方のモードで使用されます。|
 |並列|ブール型|並列読み込みが許可されるかどうか。 **True** は、同じターゲット テーブルに対して、他の読み込みセッションの実行が許可されていることを示します。<br> 詳細については、「[並列処理](#parallelism)」をご覧ください。|高速読み込みモードでのみ使用されます。|
 |TableName|String|使用されているデータを含むテーブルの名前。|両方のモードで使用されます。|
-|TableSubName|String|サブ名またはサブパーティション。 この値は省略可能です。<br> **注**:このプロパティは、**詳細エディター**でのみ設定できます。|高速読み込みモードでのみ使用されます。|
+|TableSubName|String|サブ名またはサブパーティション。 この値は省略可能です。<br> **注**:このプロパティは、**詳細エディター** でのみ設定できます。|高速読み込みモードでのみ使用されます。|
 |TransactionSize|Integer|単一のトランザクションで実行できる挿入の数。 既定値は **BatchSize** です。|バッチ モードでのみ使用されます。|
 |TransferBufferSize|Integer|転送バッファーのサイズ。 既定値は 64 KB です。|高速読み込みモードでのみ使用されます。|
 
@@ -200,7 +200,7 @@ Oracle 変換先エディターを次の図に示します。 それには、[�
 **エラー動作**
 
 Oracle ソースでフローでのエラーを処理する方法を選択します (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる)。
-**関連セクション**:[データのエラー処理](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**関連セクション**:[データのエラー処理](./error-handling-in-data.md?view=sql-server-2017)
 
 **切り捨て**
 

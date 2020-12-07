@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: dd2d1feb1ae156d685dbd18595447a248836eba9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646613"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081421"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ varbinary、binary、または varbinary(max) の各型のサーバー列に nul
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
 
-## <a name="example"></a>例  
+## <a name="parameter-example"></a>パラメーターの例  
 このコード例は、$contact をパラメーターにバインドした後に値を変更すると、クエリで渡される値が変更されることを示しています。  
   
 ```  
@@ -81,7 +81,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="output-parameter-example"></a>出力パラメーターの例  
 このコード サンプルは、出力パラメーターにアクセスする方法を示しています。  
   
 ```  
@@ -102,7 +102,7 @@ echo $input1;
 > [!NOTE]
 > 出力パラメーターを bigint 型にバインドする際に、値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外になる可能性がある場合、PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE と共に PDO::PARAM_INT を使用すると、"値が範囲外です" という例外が発生することがあります。 そのため、代わりに既定の PDO::P ARAM_STR を使用して、結果の文字列のサイズを指定します。最大は 21 です。 任意の bigint 値の最大桁数 (負の符号を含む) です。 
 
-## <a name="example"></a>例  
+## <a name="inputoutput-example"></a>入力と出力の例  
 このコード サンプルは、入力/出力パラメーターを使用する方法を示しています。  
   
 ```  
@@ -124,7 +124,7 @@ echo $input1;
 > [!NOTE]
 > 値を [10 進数列または数値列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)にバインドするときは、有効桁数と精度を保持するために、入力として文字列を使用することをお勧めします。これは、PHP には[浮動小数点数](https://php.net/manual/en/language.types.float.php)の有効桁数に制限があるためです。 値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外にある場合は特に、同じことが bigint 列にも適用されます。
 
-## <a name="example"></a>例  
+## <a name="decimal-input-example"></a>10 進数の入力の例  
 このコード サンプルでは、入力パラメーターとして 10 進数値をバインドする方法を示しています。  
 
 ```

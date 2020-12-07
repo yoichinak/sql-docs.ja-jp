@@ -14,14 +14,14 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8100d6f18803f891ac9ba5607185fdbac782660
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16522114fb7e02517ec7385b6b7c73aa90b4b6b0
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332521"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127493"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server の既存のインスタンスのアンインストール (セットアップ)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "87332521"
 
 - SQL Server をアンインストールするには、サービスとしてログオンする権限を持つローカル管理者である必要があります。 
 - コンピューターに "*最低限*" 必要な量の物理メモリがある場合は、ページ ファイルのサイズを物理メモリの量の 2 倍に増やします。 仮想メモリが不足した状況では、SQL Server の削除が不完全になる場合があります。 
-- SQL Server の複数のインスタンスがあるシステムでは、SQL Server の最後のインスタンスが削除されたときにのみ、SQL Server ブラウザー サービスがアンインストールされます。 SQL Server Browser サービスは、**コントロール パネル**の **[プログラムと機能]** から手動で削除できます。 
+- SQL Server の複数のインスタンスがあるシステムでは、SQL Server の最後のインスタンスが削除されたときにのみ、SQL Server ブラウザー サービスがアンインストールされます。 SQL Server Browser サービスは、**コントロール パネル** の **[プログラムと機能]** から手動で削除できます。 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアンインストールすると、インストール プロセス中に追加された tempdb データ ファイルが削除されます。 tempdb_mssql_*.ndf という名前パターンのファイルがシステム データベース ディレクトリにある場合、そのファイルは削除されます。 
   
 
@@ -96,7 +96,7 @@ Windows 10、Windows Server 2016、Windows Server 2019 以降から SQL Server �
 
 Windows Server 2008、Windows Server 2012、Windows 2012 R2 から SQL Server をアンインストールするには、次の手順に従います。 
 
-1. 削除プロセスを開始するには、**コントロール パネル**に移動し、 **[プログラムと機能]** を選択します。
+1. 削除プロセスを開始するには、**コントロール パネル** に移動し、 **[プログラムと機能]** を選択します。
 1. **[Microsoft SQL Server (バージョン) (ビット)]** を右クリックし、 **[アンインストール]** を選択します。 たとえば、「 `Microsoft SQL Server 2012 (64-bit)` 」のように入力します。  
   
     ![SQL Server のアンインストール](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)

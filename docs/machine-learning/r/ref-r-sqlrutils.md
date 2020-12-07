@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d006c3e9662e8e2d4d6486b991d8543ef96b7565
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8a458b1eadff2cd4ef36c73a75eb90a3d25530fa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179936"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195813"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (SQL Server Machine Learning Services の R パッケージ)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,7 +35,7 @@ R コードを変換して 1 つのストアド プロシージャ内で実行�
   
 ## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
-**sqlrutils** パッケージは、複数の Microsoft 製品で配布されていますが、このパッケージを SQL Server または別の製品のどちらで取得しても、使用方法は同じです。 これらの関数は同じであるため、[個々の sqlrutils 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)は Microsoft Machine Learning Server の [R リファレンス](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
+**sqlrutils** パッケージは、複数の Microsoft 製品で配布されていますが、このパッケージを SQL Server または別の製品のどちらで取得しても、使用方法は同じです。 これらの関数は同じであるため、[個々の sqlrutils 関数のドキュメント](/machine-learning-server/r-reference/revoscaler/revoscaler)は Microsoft Machine Learning Server の [R リファレンス](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
 
 ## <a name="functions-list"></a>関数の一覧
 
@@ -43,16 +43,16 @@ R コードを変換して 1 つのストアド プロシージャ内で実行�
 
 |機能 | 説明 |
 |------|-------------|
-|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| SQL ストアド プロシージャを実行します。|
-|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| ストアド プロシージャへの入力パラメーターの一覧を取得します。| 
-|[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| R データ フレームで使用されるデータ ソースを SQL Server に定義します。 入力データを保存する data.frame 名、データまたは既定値を取得するクエリを指定します。 単純な SELECT クエリのみがサポートされています。 | 
-|[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| T-SQL スクリプトに埋め込まれる単一の入力パラメーターを定義します。 パラメーター名とその R データ型を指定する必要があります。| 
-|[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| R 関数で data.frame を含むリストが返される場合に必要な中間のデータ オブジェクトを生成します。 *OutputData* オブジェクトは、リストから取得された単一の data.frame の名前を格納するために使用されます。| 
-|[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | R 関数でリストが返される場合に必要な中間のデータ オブジェクトを生成します。 *OutputParameter* オブジェクトは、メンバーがデータ フレームでは **ない** ことを想定し、リストの単一のメンバーの名前とデータ型を格納します。 |
-|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | ストアド プロシージャをデータベースに登録します。|
-|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| ストアド プロシージャの入力データ パラメーターにクエリを割り当てます。| 
-|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| ストアド プロシージャの入力パラメーターに値を割り当てます。| 
-|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| ストアド プロシージャ オブジェクト。|
+|[executeStoredProcedure](/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| SQL ストアド プロシージャを実行します。|
+|[getInputParameters](/machine-learning-server/r-reference/sqlrutils/getinputparameters)| ストアド プロシージャへの入力パラメーターの一覧を取得します。| 
+|[InputData](/machine-learning-server/r-reference/sqlrutils/inputdata)| R データ フレームで使用されるデータ ソースを SQL Server に定義します。 入力データを保存する data.frame 名、データまたは既定値を取得するクエリを指定します。 単純な SELECT クエリのみがサポートされています。 | 
+|[InputParameter](/machine-learning-server/r-reference/sqlrutils/inputparameter)| T-SQL スクリプトに埋め込まれる単一の入力パラメーターを定義します。 パラメーター名とその R データ型を指定する必要があります。| 
+|[OutputData](/machine-learning-server/r-reference/sqlrutils/outputdata)| R 関数で data.frame を含むリストが返される場合に必要な中間のデータ オブジェクトを生成します。 *OutputData* オブジェクトは、リストから取得された単一の data.frame の名前を格納するために使用されます。| 
+|[OutputParameter](/machine-learning-server/r-reference/sqlrutils/outputparameter) | R 関数でリストが返される場合に必要な中間のデータ オブジェクトを生成します。 *OutputParameter* オブジェクトは、メンバーがデータ フレームでは **ない** ことを想定し、リストの単一のメンバーの名前とデータ型を格納します。 |
+|[registerStoredProcedure](/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | ストアド プロシージャをデータベースに登録します。|
+|[setInputDataQuery](/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| ストアド プロシージャの入力データ パラメーターにクエリを割り当てます。| 
+|[setInputParameterValue](/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| ストアド プロシージャの入力パラメーターに値を割り当てます。| 
+|[StoredProcedure](/machine-learning-server/r-reference/sqlrutils/storedprocedure)| ストアド プロシージャ オブジェクト。|
 
 
 ## <a name="how-to-use-sqlrutils"></a>Sqlrutils の使用方法
@@ -107,4 +107,3 @@ R セッションで、コマンドラインから「`library(sqlrutils)`」と�
 ## <a name="see-also"></a>関連項目
 
 [sqlrutils を使用してストアド プロシージャを作成する方法](how-to-create-a-stored-procedure-using-sqlrutils.md)
-

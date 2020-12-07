@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8397412801d38107c3532bea377d7bd150561f17
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4b9f2d2db41914062d791d675577bc8f8664e903
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913643"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935240"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig ユーティリティ (SSRS)
   **rsconfig.exe** ユーティリティは、接続値とアカウント値を RSReportServer.config ファイルへ暗号化して格納します。 暗号化される値は、自動レポート処理に使用される、レポート サーバー データベースの接続情報とアカウント値です。  
@@ -121,10 +121,10 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [自動実行アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [暗号化されたレポート サーバー データの格納 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  

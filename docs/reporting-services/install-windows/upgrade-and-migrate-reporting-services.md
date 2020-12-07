@@ -12,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446089"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91934633"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -27,11 +27,11 @@ ms.locfileid: "88446089"
  
 - **Reporting Services 2016 以前のバージョン "*から*" Reporting Services 2016 以前のバージョン "*への*" アップグレード:** サーバーと現在インストールされているインスタンスで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをアップグレードします。 これは一般に "インプレース" アップグレードと呼ばれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーのモード間でのインプレース アップグレードはサポートされていません。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードのレポート サーバーにアップグレードすることはできません。 レポート アイテムはモード間で移行できます。 詳細については、このドキュメントで後述する「[SharePoint モードのアップグレードと移行のシナリオ](#bkmk_sharePoint_scenarios)」セクションを参照してください。  
 
-- **Reporting Services 2016 以前のバージョン "*から*" Reporting Services 2017 以降のバージョン "*への*" アップグレード**は、上記のバージョンと同じアップグレード シナリオではありません。 Reporting Services 2016 以前のバージョン "*に*" アップグレードする場合、SQL Server インストール メディアを使用したインプレース アップグレード プロセスに従うことができます。 新しい Reporting Services はスタンドアロン製品であるため、Reporting Services 2016 以前のバージョン "*から*" Reporting Services 2017 以降のバージョン "*に*" アップグレードする場合は、同じ手順に従うことはできません。 これは SQL Server のインストール メディアには含まれなくなりました。 
+- **Reporting Services 2016 以前のバージョン "*から*" Reporting Services 2017 以降のバージョン "*への*" アップグレード** は、上記のバージョンと同じアップグレード シナリオではありません。 Reporting Services 2016 以前のバージョン "*に*" アップグレードする場合、SQL Server インストール メディアを使用したインプレース アップグレード プロセスに従うことができます。 新しい Reporting Services はスタンドアロン製品であるため、Reporting Services 2016 以前のバージョン "*から*" Reporting Services 2017 以降のバージョン "*に*" アップグレードする場合は、同じ手順に従うことはできません。 これは SQL Server のインストール メディアには含まれなくなりました。 
 
     Reporting Services 2016 以前のバージョンから Reporting Services 2017 以降にアップグレードするには、移行先のインスタンスとして Reporting Services 2017 以降を使用して、「[Reporting Services のインストールの移行 (ネイティブ モード)](migrate-a-reporting-services-installation-native-mode.md)」の記事に従います。 
 
-- **Reporting Services 2017 "*から*" 今後のバージョンへのアップグレード**も、製品のインストール GUID が同じであるため、インプレース アップグレード シナリオです。 SQLServerReportingServices.exe インストール ファイルを実行して、Reporting Services が現在インストールされているサーバーでインプレース アップグレードを開始します。
+- **Reporting Services 2017 "*から*" 今後のバージョンへのアップグレード** も、製品のインストール GUID が同じであるため、インプレース アップグレード シナリオです。 SQLServerReportingServices.exe インストール ファイルを実行して、Reporting Services が現在インストールされているサーバーでインプレース アップグレードを開始します。
   
 - **移行**:新しい SharePoint 環境をインストールして構成し、レポート アイテムとリソースを新しい環境にコピーして、既存のコンテンツを使用するよう新しい環境を構成します。 下位レベルの移行形式では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データベース、構成ファイル、および SharePoint コンテンツ データベース (SharePoint モードを使用している場合) をコピーします。  
 
@@ -139,13 +139,13 @@ ms.locfileid: "88446089"
 ##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> Reporting Services ネイティブ モードのスケールアウト配置のアップグレード  
  複数のレポート サーバーにスケールアウトされる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードの配置をアップグレードする方法の概要を次に示します。 このプロセスでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置のダウンタイムが発生します。  
   
-1.  レポート サーバー データベースと暗号化キーをバックアップします。 詳細については、「[Reporting Services のバックアップおよび復元操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)」および「[スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)」を参照してください。  
+1.  レポート サーバー データベースと暗号化キーをバックアップします。 詳細については、「[Reporting Services のバックアップおよび復元操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)」、および[スケールアウト配置に関する暗号化キーの追加と削除 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) に関する記事を参照してください。  
   
-2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、スケールアウトした配置からすべてのレポート サーバーを削除します。 詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
+2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、スケールアウトした配置からすべてのレポート サーバーを削除します。 詳細については、[ネイティブ モード レポート サーバーのスケールアウト配置の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) に関する記事を参照してください。  
   
 3.  いずれかのレポート サーバーを SQL Server Reporting Services にアップグレードします。  
   
-4.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、スケールアウト配置にレポート サーバーを再度追加します。 詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
+4.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、スケールアウト配置にレポート サーバーを再度追加します。 詳細については、[ネイティブ モード レポート サーバーのスケールアウト配置の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) に関する記事を参照してください。  
   
      各サーバーで、アップグレードおよびスケールアウトの手順を繰り返します。  
   

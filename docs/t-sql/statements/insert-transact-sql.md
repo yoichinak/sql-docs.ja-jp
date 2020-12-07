@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64f8361faba39f948a5c2f35a32632fb3dd105c9
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b44d9306d08d1e75f1d0f0477e0c58c207bd70e8
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227334"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300871"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -139,21 +139,21 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  WITH \<common_table_expression>  
  INSERT ステートメントのスコープ内で定義された、一時的な名前付き結果セット (共通テーブル式とも呼ばれる) を指定します。 結果セットは SELECT ステートメントから派生します。 詳細については、「[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)」を参照してください。  
   
- TOP (*expression*) [ PERCENT ]  
+ TOP ( *expression* ) [ PERCENT ]  
  挿入するランダムな行の数または比率 (%) を指定します。 *expression* は行数または行の比率 (%) にすることができます。 詳細については、「[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)」を参照してください。  
   
  INTO  
  INSERT キーワードと対象のテーブルとの間で使用できるキーワードで、省略可能です。  
   
  *server_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
- テーブルまたはビューが配置されているリンク サーバーの名前です。 *server_name* は、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)名として指定することも、[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 関数を使用して指定することもできます。  
+ テーブルまたはビューが配置されているリンク サーバーの名前です。 *server_name* は、 [リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)名として指定することも、 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 関数を使用して指定することもできます。  
   
- *server_name* をリンク サーバーとして指定する場合は、*database_name* と *schema_name* が必要です。 *server_name* を OPENDATASOURCE で指定する場合は、*database_name* および *schema_name* がすべてのデータ ソースに適用されるとは限らず、リモート オブジェクトにアクセスする OLE DB プロバイダーの機能により制限されます。  
+ *server_name* をリンク サーバーとして指定する場合は、 *database_name* と *schema_name* が必要です。 *server_name* を OPENDATASOURCE で指定する場合は、 *database_name* および *schema_name* がすべてのデータ ソースに適用されるとは限らず、リモート オブジェクトにアクセスする OLE DB プロバイダーの機能により制限されます。  
   
  *database_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  データベースの名前です。  
   
@@ -168,7 +168,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  *table_or_view_name* によって参照されるビューは更新可能であることが必要です。また、そのビューの FROM 句ではベース テーブルを 1 つだけ参照している必要があります。 たとえば、複数のテーブルを参照するビューに対して INSERT を実行するには、1 つのベース テーブルの列のみを参照する *column_list* を使用する必要があります。 更新可能なビューの詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。  
   
  *rowset_function_limited*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 関数または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 関数を指定します。 これらの関数の使用は、リモート オブジェクトにアクセスする OLE DB プロバイダーの機能により制限されます。  
   
@@ -182,7 +182,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  INSERT ステートメントの対象であるテーブルに対して TABLOCK ヒントを指定すると、TABLOCKX ヒントを指定した場合と同じ効果を得られます。 テーブルに対して、排他ロックが取得されます。  
   
- (*column_list*)  
+ ( *column_list* )  
  データを挿入する、1 つ以上の列で構成されるリストを指定します。 *column_list* はかっこで囲み、コンマで区切る必要があります。  
   
  *column_list* に列がない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、列の定義に基づいて値を設定できる必要があります。値を設定できない場合は行を読み込むことはできません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、列が次の条件を満たす場合、自動的に列に値を設定します。  
@@ -202,12 +202,12 @@ ID 列に値を明示的に挿入するときは *column_list* を使用する�
 OUTPUT 句  
  挿入操作の一部として、挿入された行を返します。 処理中のアプリケーションに結果を返すことも、テーブルまたはテーブル変数に結果を挿入して処理を続行することもできます。  
   
- OUTPUT 句は、ローカル パーティション ビュー、分散パーティション ビュー、またはリモート テーブルのいずれかを参照する DML ステートメントではサポートされていません。また、*execute_statement* が含まれる INSERT ステートメントでもサポートされていません。 OUTPUT INTO 句は、\<dml_table_source> 句を含む INSERT ステートメントではサポートされません。 この句の引数と動作について詳しくは、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。
+ OUTPUT 句は、ローカル パーティション ビュー、分散パーティション ビュー、またはリモート テーブルのいずれかを参照する DML ステートメントではサポートされていません。また、 *execute_statement* が含まれる INSERT ステートメントでもサポートされていません。 OUTPUT INTO 句は、\<dml_table_source> 句を含む INSERT ステートメントではサポートされません。 この句の引数と動作について詳しくは、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。
   
  VALUES  
  追加するデータ値のリストを 1 つ以上指定します。 *column_list* (指定されている場合) またはテーブル内の各列ごとに 1 つのデータ値が必要です。 値リストは、かっこで囲む必要があります。  
   
- 値リスト内の値がテーブル内の列と同じ順序で並んでいない場合、またはテーブル内のすべての列に対応していない場合、*column_list* を使用して、各入力値を格納する列を明示的に指定する必要があります。  
+ 値リスト内の値がテーブル内の列と同じ順序で並んでいない場合、またはテーブル内のすべての列に対応していない場合、 *column_list* を使用して、各入力値を格納する列を明示的に指定する必要があります。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 行コンストラクター (テーブル値コンストラクターとも呼ばれる) を使用すると、単一の INSERT ステートメント内に複数の行を指定できます。 行コンストラクターは、かっこで囲まれ、コンマで区切られた複数の値リストを含む単一の VALUES 句で構成されています。 詳細については、「[テーブル値コンストラクター &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)」を参照してください。  
   
@@ -217,7 +217,7 @@ OUTPUT 句
  *式 (expression)*  
  定数、変数、または式を指定します。 式には EXECUTE ステートメントを含めることができません。  
   
- Unicode 文字データ型 **nchar**、**nvarchar**、**ntext** を参照している場合は、'*expression*' の前に大文字の 'N' を付ける必要があります。 'N' が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、文字列はデータベースまたは列の既定の照合順序に対応するコード ページに変換されます。 文字列がこのコード ページにない場合は、失われます。  
+ Unicode 文字データ型 **nchar** 、 **nvarchar** 、 **ntext** を参照している場合は、' *expression* ' の前に大文字の 'N' を付ける必要があります。 'N' が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、文字列はデータベースまたは列の既定の照合順序に対応するコード ページに変換されます。 文字列がこのコード ページにない場合は、失われます。  
   
  *derived_table*  
  テーブルに読み込まれるデータの行を返す、有効な SELECT ステートメントを指定します。 SELECT ステートメントには、共通テーブル式 (CTE) を含めることはできません。  
@@ -229,7 +229,7 @@ OUTPUT 句
   
  *execute_statement* を INSERT で使用する場合、各結果セットに、テーブルの列または *column_list* の列との互換性が必要です。  
   
- *execute_statement* を使用して、同じサーバー上またはリモート サーバー上で、ストアド プロシージャを実行できます。 リモート サーバーのプロシージャが実行されると、結果セットがローカル サーバーに返され、ローカル サーバーのテーブルに読み込まれます。 分散トランザクションでは、接続で複数のアクティブな結果セット (MARS) が有効になっている場合、*execute_statement* をループバック リンク サーバーに対して実行できません。  
+ *execute_statement* を使用して、同じサーバー上またはリモート サーバー上で、ストアド プロシージャを実行できます。 リモート サーバーのプロシージャが実行されると、結果セットがローカル サーバーに返され、ローカル サーバーのテーブルに読み込まれます。 分散トランザクションでは、接続で複数のアクティブな結果セット (MARS) が有効になっている場合、 *execute_statement* をループバック リンク サーバーに対して実行できません。  
   
  *execute_statement* が READTEXT ステートメントでデータを返す場合、各 READTEXT ステートメントは最大で 1 MB (1024 KB) のデータを返すことができます。 また *execute_statement* は、拡張プロシージャで使用することもできます。 *execute_statement* は、拡張プロシージャのメイン スレッドによって返されたデータを挿入します。ただし、メイン スレッド以外のスレッドからの出力は挿入しません。  
   
@@ -263,35 +263,35 @@ OUTPUT 句
  \<dml_statement_with_output_clause> から返される行をフィルター処理する有効な \<search_condition> を含む WHERE 句です。 詳しくは、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」をご覧ください。 このコンテキストで使用される \<search_condition> には、サブクエリ、データにアクセスするスカラー ユーザー定義関数、集計関数、TEXTPTR、またはフルテキスト検索述語を含めることができません。 
   
  DEFAULT VALUES  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  新しい行が、各列に対して定義されている既定値で構成されることを指定します。  
   
  BULK  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  外部ツールでバイナリ データ ストリームをアップロードする際に使用されます。 このオプションは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQLCMD、OSQL などのツールや、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client などのデータ アクセス アプリケーション プログラミング インターフェイスで使用することは想定されていません。  
   
  FIRE_TRIGGERS  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリームのアップロード処理中に、変換先テーブルで定義されている挿入トリガーを実行することを指定します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
  CHECK_CONSTRAINTS  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリームのアップロード処理中に、対象テーブルまたはビューに対するすべての制約を検証します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
  KEEPNULLS  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリームのアップロード処理中に、空の列の NULL 値を保持します。 詳細については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」をご覧ください。  
   
  KILOBYTES_PER_BATCH = kilobytes_per_batch  
  バッチあたりのデータの概算キロバイト数 (KB) を *kilobytes_per_batch* として指定します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
- ROWS_PER_BATCH =*rows_per_batch*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+ ROWS_PER_BATCH = *rows_per_batch*  
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリーム内のデータ行の概算数を指定します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
@@ -347,7 +347,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
 ## <a name="data-types"></a>データ型  
  行の挿入時には、次のデータ型の動作を考慮してください。  
   
--   **char**、**varchar**、**varbinary** 型の列に値が読み込まれる場合、後続の空白 (**char** と **varchar** の場合は空白、**varbinary** の場合は 0) の埋め込みや切り捨ては、テーブルが作成されたときに列に対して定義された SET ANSI_PADDING の設定値によって決まります。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)」を参照してください。  
+-   **char** 、 **varchar** 、 **varbinary** 型の列に値が読み込まれる場合、後続の空白 ( **char** と **varchar** の場合は空白、 **varbinary** の場合は 0) の埋め込みや切り捨ては、テーブルが作成されたときに列に対して定義された SET ANSI_PADDING の設定値によって決まります。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)」を参照してください。  
   
      次の表は、SET ANSI_PADDING OFF の既定の操作を示します。  
   
@@ -361,7 +361,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
   
 -   **text** 型列または **image** 型列に NULL 値を挿入した場合、有効なテキスト ポインターは作成されず、また、8 KB のテキスト ページもあらかじめ割り当てられません。  
   
--   **uniqueidentifier** 型で作成される列は、特別にフォーマットされた 16 バイトのバイナリ値を格納します。 ID 列の場合とは異なり、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、**uniqueidentifier** 型の列に対して自動的に値を生成しません。 挿入操作の際、**uniqueidentifier** 列には、**uniqueidentifier** 型の変数と、*xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (ハイフンを含む 36 文字で、*x* は 0 ～ 9 または a ～ f の範囲の 16 進数値) という形式の文字列定数を使用できます。 たとえば、**uniqueidentifier** 変数または列には、6F9619FF-8B86-D011-B42D-00C04FC964FF という値を指定できます。 GUID を取得するには、[NEWID()](../../t-sql/functions/newid-transact-sql.md) 関数を使用します。  
+-   **uniqueidentifier** 型で作成される列は、特別にフォーマットされた 16 バイトのバイナリ値を格納します。 ID 列の場合とは異なり、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、 **uniqueidentifier** 型の列に対して自動的に値を生成しません。 挿入操作の際、 **uniqueidentifier** 列には、 **uniqueidentifier** 型の変数と、 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (ハイフンを含む 36 文字で、 *x* は 0 ～ 9 または a ～ f の範囲の 16 進数値) という形式の文字列定数を使用できます。 たとえば、 **uniqueidentifier** 変数または列には、6F9619FF-8B86-D011-B42D-00C04FC964FF という値を指定できます。 GUID を取得するには、[NEWID()](../../t-sql/functions/newid-transact-sql.md) 関数を使用します。  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>ユーザー定義型の列への値の挿入  
  ユーザー定義型の列に値を挿入するには、次のようにします。  
@@ -454,7 +454,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 ```  
   
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. テーブルの列と順序が異なるデータを挿入する  
- 次の例では、列リストを使用して、各列に挿入する値を明示的に指定します。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルの列の順序は、`UnitMeasureCode`、`Name`、`ModifiedDate` です。ただし、*column_list* では列がその順序で並んでいません。  
+ 次の例では、列リストを使用して、各列に挿入する値を明示的に指定します。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルの列の順序は、`UnitMeasureCode`、`Name`、`ModifiedDate` です。ただし、 *column_list* では列がその順序で並んでいません。  
   
 ```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
@@ -721,12 +721,12 @@ GO
 ```  
   
 ###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> リモート テーブルに行を挿入する  
- このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルに行を挿入する方法を示します。  
+ このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../functions/opendatasource-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルに行を挿入する方法を示します。  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. リンク サーバーを使用してリモート テーブルにデータを挿入する  
  次の例では、リモート テーブルに行を挿入します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 *server.catalog.schema.object* という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 USE master;  
@@ -755,7 +755,7 @@ GO
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>北 OPENQUERY 関数を使用してリモート テーブルにデータを挿入する  
  次の例では、[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行セット関数を指定してリモート テーブルに行を挿入します。 この例では、前の例で作成したリンク サーバー名を使用します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -768,7 +768,7 @@ GO
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. OPENDATASOURCE 関数を使用してリモート テーブルにデータを挿入する  
  次の例では、[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行セット関数を指定してリモート テーブルに行を挿入します。 *server_name* または *server_name\instance_name* という形式を使用して、データ ソースの有効なサーバー名を指定します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -783,9 +783,9 @@ GO
 ```  
   
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. PolyBase を使用して作成された外部のテーブルに挿入する  
- Hadoop または Azure ストレージに SQL Server からのデータをエクスポートします。 最初に、変換先ファイルまたはディレクトリを指す外部テーブルを作成します。 次に、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートするのに INSERT INTO 使用します。 INSERT INTO ステートメントでは、存在しないと、SELECT ステートメントの結果は、指定されたファイルの形式で指定した場所にエクスポートする場合、変換先ファイルまたはディレクトリを作成します。  詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
+ Hadoop または Azure ストレージに SQL Server からのデータをエクスポートします。 最初に、変換先ファイルまたはディレクトリを指す外部テーブルを作成します。 次に、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートするのに INSERT INTO 使用します。 INSERT INTO ステートメントでは、存在しないと、SELECT ステートメントの結果は、指定されたファイルの形式で指定した場所にエクスポートする場合、変換先ファイルまたはディレクトリを作成します。  詳細については、「 [PolyBase 入門](../../relational-databases/polybase/polybase-guide.md)」を参照してください。  
   
-**適用対象**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象** : [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 ```sql
 -- Create an external table.   
@@ -861,7 +861,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. OPENROWSET 関数を BULK を指定して使用し、テーブルにデータを一括読み込みする  
  次の例は、OPENROWSET 関数を指定することによって、テーブルにデータ ファイルからの行を挿入します。 パフォーマンスを最適化するために、IGNORE_TRIGGERS テーブル ヒントを指定しています。 他の例については、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
@@ -881,7 +881,7 @@ FROM OPENROWSET (
 #### <a name="s-using-the-tablock-hint-to-specify-a-locking-method"></a>S. TABLOCK ヒントを使用してロック手法を指定する  
  次の例では、Production.Location テーブルに対して排他 (X) ロックを使用することと、このロックを INSERT ステートメントの終了まで保持することを指定します。  
   
-**適用対象**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
+**適用対象** : [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
   
 ```sql
 INSERT INTO Production.Location WITH (XLOCK)  
@@ -1032,7 +1032,3 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN);
  [OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
  [inserted テーブルと deleted テーブルの使用](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
-  
-
-
-

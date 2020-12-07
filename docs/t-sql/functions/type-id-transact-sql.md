@@ -22,12 +22,12 @@ ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa18e7fd00b50597068695f9b1f20a947289ca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4192aa80f1cbc2d7106d8893f135387c40b5bef5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467736"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379462"
 ---
 # <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88467736"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 TYPE_ID ( [ schema_name ] type_name )   
 ```  
   
@@ -46,7 +46,7 @@ TYPE_ID ( [ schema_name ] type_name )
 
 ## <a name="arguments"></a>引数
  *type_name*  
- データ型の名前です。 *type_name* のデータ型は **nvarchar**です。 *type_name* は、システムまたはユーザー定義データ型。  
+ データ型の名前です。 *type_name* のデータ型は **nvarchar** です。 *type_name* は、システムまたはユーザー定義データ型。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -64,7 +64,7 @@ TYPE_ID ( [ schema_name ] type_name )
 ### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>A. 1 つまたは 2 つの部分から成る型名の TYPE ID 値を検索する  
  次の例では、1 つまたは 2 つの部分から成る型名の TYPE ID が返されます。  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TYPE NewType FROM int;  
@@ -81,7 +81,7 @@ GO
 ### <a name="b-looking-up-the-type-id-of-a-system-data-type"></a>B. システム データ型の TYPE ID を検索する  
  次の例では、`TYPE ID` システム データ型の `datetime` が返されます。  
   
-```  
+```sql
 SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]  
     ,TYPE_ID('datetime') AS [TYPE_ID];  
 GO  
@@ -92,7 +92,7 @@ GO
 ### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: システム データ型の TYPE ID を検索する  
  次の例では、`TYPE ID` システム データ型の `datetime` が返されます。  
   
-```  
+```sql
 SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,   
     TYPE_ID('datetime') AS typeID FROM table1;  
 ```  

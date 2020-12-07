@@ -16,12 +16,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 84d8c205fad36848874ec5f8dd8714755c74fad2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bfa7cc36898aa521fed2e0e20fd08a5296147fcf
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490610"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91869225"
 ---
 # <a name="initialize-a-subscription-manually"></a>手動によるサブスクリプションの初期化
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88490610"
   
 2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **\@publication** **\@subscriber**、 **\@destination_db** にパブリッシュ済みのデータを格納するサブスクライバー側データベースの名前、 **\@subscription_type** に対する **pull** の値、 **\@sync_type** に対する **replication support only** の値を指定します。 詳細については、「 [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
-3.  サブスクライバーで、 [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)を実行します。 サブスクリプションの更新については、「 [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx)」を参照してください。  
+3.  サブスクライバーで、 [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)を実行します。 サブスクリプションの更新については、「 [Create an Updatable Subscription to a Transactional Publication](./publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。  
   
 4.  サブスクライバーで、 [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)を実行します。 詳細については、「 [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88490610"
   
 1.  スキーマとデータがサブスクリプション データベースに存在することを確認します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **\@destination_db** にパブリッシュ済みのデータを格納するサブスクライバー側データベースの名前、 **\@subscription_type** に対する **push**の値、 **\@sync_type** に対する **replication support only** の値を指定します。 サブスクリプションの更新については、「 [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx)」を参照してください。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **\@destination_db** にパブリッシュ済みのデータを格納するサブスクライバー側データベースの名前、 **\@subscription_type** に対する **push** の値、 **\@sync_type** に対する **replication support only** の値を指定します。 サブスクリプションの更新については、「 [Create an Updatable Subscription to a Transactional Publication](./publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)を実行します。 詳細については、「 [プッシュ サブスクリプションの作成](../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   
@@ -96,5 +96,4 @@ ms.locfileid: "88490610"
  [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)   
  [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

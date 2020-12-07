@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: efe29087d77a524128357ba2651fa411b279e658
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 678775f19cee303b4c1bb34320ca9f7fd7030e97
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117022"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127634"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel プロパティ設定の構成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 -   [フェールオーバー クラスターの Windows PowerShell の概要](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [クラスター リソースのコマンドと同等の Windows PowerShell コマンドレット](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [クラスター リソースのコマンドと同等の Windows PowerShell コマンドレット](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619744(v=ws.10)#BKMK_resource)  
   
 ##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WSFC"></a> フェールオーバー クラスター マネージャー スナップインの使用  
  **FailureConditionLevel プロパティ設定を構成するには**  
@@ -93,5 +93,4 @@ ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel =
 ## <a name="see-also"></a>参照  
  [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)   
  [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
-  
   

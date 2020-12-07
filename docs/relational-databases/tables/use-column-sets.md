@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79625148ed44c2003c74d393502129fe15a112f5
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564642"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125083"
 ---
 # <a name="use-column-sets"></a>列セットの使用
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -111,7 +111,7 @@ GO
  この例では、 `i`列に値が指定されていませんが、値 `0` が挿入されています。  
   
 ## <a name="using-the-sql_variant-data-type"></a>sql_variant データ型の使用  
- **sql_variant** データ型には、 **int**、 **char**、 **date**などの種類の異なる複数のデータ型を格納できます。 列セットは、 **sql_variant** 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
+ **sql_variant** データ型には、 **int**、 **char**、 **date** などの種類の異なる複数のデータ型を格納できます。 列セットは、 **sql_variant** 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
   
 |データ型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大長|有効桁数|スケール|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  

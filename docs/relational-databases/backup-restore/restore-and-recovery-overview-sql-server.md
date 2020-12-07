@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 - accelerated database recovery
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480415"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125552"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "89480415"
 |の|単純復旧モデルの場合|完全/一括ログ復旧モデルの場合|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |データベースの全体復元|基本的な復元ストラテジです。 データベースの全体復元では、データベースの完全バックアップを復元し復旧するだけになる場合があります。 また、データベースの完全バックアップを復元した後で差分バックアップを復元し復旧する場合もあります。<br /><br /> 詳細については、「[データベースの全体復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)」を参照してください。|基本的な復元ストラテジです。 データベースの全体復元を行うには、データベースの完全バックアップと、必要に応じて差分バックアップ (存在する場合) を復元し、その後で後続のすべてのログ バックアップを順番に復元する必要があります。 データベースの全体復元を完了するには、最新のログ バックアップを復旧して、さらにそれを復元します (RESTORE WITH RECOVERY)。<br /><br /> 詳細については、「[データベースの全体復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)」を参照してください。|  
-|File restore **\***|データベース全体を復元することなく、破損した 1 つ以上の読み取り専用ファイルを復元します。 ファイル復元は、データベースに読み取り専用のファイル グループが少なくとも 1 つ含まれている場合だけ使用できます。|データベース全体を復元することなく、1 つ以上のファイルを復元します。 ファイル復元は、データベースがオフラインのときに実行できますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによってはオンラインのままでも実行できます。 ファイル復元の間、復元対象のファイルを含むファイル グループは常にオフラインです。|  
+|ファイル復元 * *\** _|データベース全体を復元することなく、破損した 1 つ以上の読み取り専用ファイルを復元します。 ファイル復元は、データベースに読み取り専用のファイル グループが少なくとも 1 つ含まれている場合だけ使用できます。|データベース全体を復元することなく、1 つ以上のファイルを復元します。 ファイル復元は、データベースがオフラインのときに実行できますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによってはオンラインのままでも実行できます。 ファイル復元の間、復元対象のファイルを含むファイル グループは常にオフラインです。|  
 |ページ復元|適用なし|破損した 1 つ以上のページを復元します。 ページ復元は、データベースがオフラインのときに実行できますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによってはオンラインのままでも実行できます。 ページ復元の間、復元対象のページは常にオフラインです。<br /><br /> 現在のログ ファイルまで、ログ バックアップのチェーンが途切れていないことが必要です。ページを現在のログ ファイルまでの最新状態にするためには、それらをすべて適用する必要があります。<br /><br /> 詳細については、「[ページ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)」を参照してください。|  
-|段階的な部分復元 **\***|データベースをファイル グループ レベルで段階的に復元および復旧します。プライマリ ファイル グループとすべての読み書き可能セカンダリ ファイル グループの復元から行います。|データベースをファイル グループ レベルでプライマリ ファイル グループから段階的に復元および復旧します。<br /><br /> 詳細については、「[段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください|  
+|段階的な部分復元 _*\**_|データベースをファイル グループ レベルで段階的に復元および復旧します。プライマリ ファイル グループとすべての読み書き可能セカンダリ ファイル グループの復元から行います。|データベースをファイル グループ レベルでプライマリ ファイル グループから段階的に復元および復旧します。<br /><br /> 詳細については、「[段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください|  
   
- **\*** オンライン復元は、Enterprise Edition でのみサポートされます。  
+ _*\**_ オンライン復元は、Enterprise Edition でのみサポートされます。  
 
 ### <a name="steps-to-restore-a-database"></a>データベースを復元する手順
 ファイルの復元を実行するために、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] によって次の 2 つの手順が実行されます。 
@@ -87,17 +87,17 @@ ms.locfileid: "89480415"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファイルまたはページを復元する場合、復元操作中にデータベース内の他のデータをオンラインのままにすることができます。  
 
 ## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> 復旧とトランザクション ログ
-ほとんどの復元シナリオでは、トランザクション ログ バックアップを適用し、オンラインにするデータベースのために [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で**復旧プロセス**を実行できるようにする必要があります。 復旧とは、トランザクション的に一貫した (クリーンな) 状態で各データベースを開始させるために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるプロセスです。
+ほとんどの復元シナリオでは、トランザクション ログ バックアップを適用し、オンラインにするデータベースのために [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で "_ *復旧プロセス**" を実行できるようにする必要があります。 復旧とは、トランザクション的に一貫した (クリーンな) 状態で各データベースを開始させるために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるプロセスです。
 
 フェールオーバーやその他のクリーンでないシャットダウンが発生した場合、データベースは一部の変更がバッファー キャッシュからデータ ファイルに書き込まれない状態になる場合があり、未完了のトランザクションによる変更がデータ ファイル内に存在している可能性もあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが開始されると、各データベースの復旧が実行されます。これは 3 つのフェーズで構成され、最後の[データベース チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md)に基づいています。
 
--   **分析フェーズ**では、最後のチェックポイントを決定するためにトランザクション ログが分析され、ダーティ ページ テーブル (DPT) とアクティブなトランザクション テーブル (ATT) が作成されます。 DPT には、このデータベースがシャットダウンされたときにダーティだったページのレコードが含まれています。 ATT には、このデータベースがクリーンにシャットダウンされなかったときにアクティブだったトランザクションのレコードが含まれています。
+-   **分析フェーズ** では、最後のチェックポイントを決定するためにトランザクション ログが分析され、ダーティ ページ テーブル (DPT) とアクティブなトランザクション テーブル (ATT) が作成されます。 DPT には、このデータベースがシャットダウンされたときにダーティだったページのレコードが含まれています。 ATT には、このデータベースがクリーンにシャットダウンされなかったときにアクティブだったトランザクションのレコードが含まれています。
 
--   **再実行フェーズ**では、データベースがシャットダウンされたときにデータ ファイルに書き込まれていない可能性がある、ログに記録されたすべての変更がロールフォワードされます。 データベース全体の復旧を成功させるために必要な[最小ログ シーケンス番号](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#minlsn) (minLSN) は DPT 内にあり、すべてのダーティ ページで必要な再実行操作の開始がマークされます。 このフェーズでは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって、コミットされたトランザクションに属するすべてのダーティ ページがディスクに書き込まれます。
+-   **再実行フェーズ** では、データベースがシャットダウンされたときにデータ ファイルに書き込まれていない可能性がある、ログに記録されたすべての変更がロールフォワードされます。 データベース全体の復旧を成功させるために必要な[最小ログ シーケンス番号](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#minlsn) (minLSN) は DPT 内にあり、すべてのダーティ ページで必要な再実行操作の開始がマークされます。 このフェーズでは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって、コミットされたトランザクションに属するすべてのダーティ ページがディスクに書き込まれます。
 
--   **元に戻すフェーズ**では、ATT 内にある未完了のトランザクションがロールバックされ、データベースの整合性が確保されます。 ロールバック後、データベースはオンラインになり、そのデータベースにそれ以上のトランザクション ログ バックアップを適用できなくなります。
+-   **元に戻すフェーズ** では、ATT 内にある未完了のトランザクションがロールバックされ、データベースの整合性が確保されます。 ロールバック後、データベースはオンラインになり、そのデータベースにそれ以上のトランザクション ログ バックアップを適用できなくなります。
 
-各データベース復旧ステージの進行状況に関する情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[エラー ログ](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)に記録されます。 データベース復旧の進行状況は、拡張イベントを使って追跡することもできます。 詳細については、ブログ記事「[データベース復旧の進行状況のための新しい拡張イベント](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/)」をご覧ください。
+各データベース復旧ステージの進行状況に関する情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[エラー ログ](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)に記録されます。 データベース復旧の進行状況は、拡張イベントを使って追跡することもできます。 詳細については、ブログ記事「[データベース復旧の進行状況のための新しい拡張イベント](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress)」をご覧ください。
 
 > [!NOTE]
 > 段階的な部分復元のシナリオでは、読み取り専用ファイル グループがファイルのバックアップの作成前から読み取り専用だった場合は、ログ バックアップをファイル グループに適用する必要はないので、ファイルの復元の際にスキップされます。 
@@ -113,13 +113,13 @@ ms.locfileid: "89480415"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |データの復旧|完全な復旧 (ログが使用可能な場合)。|一部データ損失の可能性。|最新の完全バックアップまたは差分バックアップ以降のデータが損失。|  
 |ポイントインタイム リストア|ログ バックアップに含まれる任意の時点。|ログ バックアップに一括ログ記録された変更が含まれている場合は不可。|サポートされていません。|  
-|File restore **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
-|Page restore **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|[なし] :|  
-|段階的な (ファイル グループ レベルの) 部分復元 **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
+|ファイル復元 * *\** _|完全にサポートされます。|場合によりサポートされます。_ *\*\** *|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
+|ページ復元 * *\** _|完全にサポートされます。|場合によりサポートされます。_ *\*\** *|[なし] :|  
+|段階的な (ファイル グループ レベルの) 部分復元 * *\** _|完全にサポートされます。|場合によりサポートされます。_ *\*\** *|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
   
- **\*** の Enterprise Edition でのみ使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ * *\** _ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise Edition でのみ使用できます  
   
- **\*\*** 必要な条件については、このトピックの「 [単純復旧モデルの復元に関する制限事項](#RMsimpleScenarios)」を参照してください。  
+ _ *\*\** * 必要な条件については、このトピックの「[単純復旧モデルの復元に関する制限事項](#RMsimpleScenarios)」を参照してください。  
   
 > [!IMPORTANT]  
 > データベースの復旧モデルにかかわらず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを、そのバックアップを作成したバージョンより古いバージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に復元することはできません。  
@@ -174,9 +174,9 @@ ms.locfileid: "89480415"
   
 データベース復旧アドバイザーの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability の次のブログを参照してください。  
   
--   [復旧アドバイザー: 概要](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [復旧アドバイザー: 概要](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [復旧アドバイザー: SSMS を使用して分割バックアップを作成/復元する](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [復旧アドバイザー: SSMS を使用して分割バックアップを作成/復元する](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> 高速データベース復旧
 [高速データベース復旧](/azure/sql-database/sql-database-accelerated-database-recovery/)は [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で利用できます。 高速データベース復旧では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の[復旧プロセス](#TlogAndRecovery)の再設計により、データベースの可用性が大幅に向上します (長時間トランザクションが存在する場合は特に)。 高速データベース復旧が有効にされたデータベースでは、フェールオーバーまたは他のクリーンではないシャットダウンの後の復旧プロセスが、非常に速く完了します。 高速データベース復旧を有効にした場合、取り消された長時間トランザクションのロールバックも非常に速く完了します。
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [トランザクション ログ バックアップの適用 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [トランザクション ログ バックアップの適用 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

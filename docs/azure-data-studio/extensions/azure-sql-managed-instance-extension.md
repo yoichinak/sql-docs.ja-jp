@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: e31895f09b06e51f76c745a9b00a1dfe7c41d759
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: eee9b2874fe879a544725bf2243075703149e34d
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111751"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570921"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure Data Studio 用の Azure SQL Managed Instance ダッシュボード (プレビュー)
 
@@ -28,7 +28,7 @@ Azure SQL Managed Instance 拡張機能により、[Azure Data Studio](https://g
 
 ## <a name="install"></a>インストール
 
-この拡張機能の正式なリリースをインストールすることができます。 [Azure Data Studio のドキュメント](../extensions.md)の手順に従ってください。
+この拡張機能の正式なリリースをインストールすることができます。 [Azure Data Studio のドキュメント](./add-extensions.md)の手順に従ってください。
 **[拡張機能]** ウィンドウで「Managed Instance」を検索し、そこでインストールします。 インストールされた後は、拡張機能の更新があれば、自動的に通知されます。
 
 拡張機能をインストールすると、Azure Data Studio に **[Managed Instance]\(マネージド インスタンス\)** タブが表示されます。 ここでは、お使いのマネージド インスタンスに固有の情報を確認できます。
@@ -87,9 +87,9 @@ SQL Managed Instance 拡張機能に関して問題が発生した場合は、[E
 
 ## <a name="code-of-conduct"></a>倫理規定
 
-このプロジェクトは、[Microsoft のオープン ソースの倫理規定][https://opensource.microsoft.com/codeofconduct/ ] を採用しています。
+このプロジェクトは、「[Microsoft のオープン ソースの倫理規定](https://opensource.microsoft.com/codeofconduct/)」を採用しています。
 
-詳細については、[倫理規定の FAQ][https://opensource.microsoft.com/codeofconduct/faq/ ] のページを参照してください。また、追加の質問やコメントがある場合は [opencode@microsoft.com ][mailto:opencode@microsoft.com- ] にお問い合わせください。
+詳細については、[倫理規定の FAQ](https://opensource.microsoft.com/codeofconduct/faq/) のページを参照してください。また、追加の質問やコメントがある場合は [opencode@microsoft.com](mailto:opencode@microsoft.com) にお問い合わせください。
 
 ## <a name="next-steps"></a>次のステップ
 

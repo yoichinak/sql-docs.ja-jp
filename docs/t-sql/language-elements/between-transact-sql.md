@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 709af562247c040508627527c299ee6f5181da49
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417188"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128343"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 
 ## <a name="arguments"></a>引数
  *test_expression*  
- *begin_expression* と *end_expression* で定義した範囲内でテストする[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *test_expression* のデータ型は、*begin_expression* および *end_expression* の両方と同じにする必要があります。  
+ *begin_expression* と *end_expression* で定義した範囲内でテストする [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *test_expression* のデータ型は、*begin_expression* および *end_expression* の両方と同じにする必要があります。  
   
  NOT  
  述語の結果を否定することを指定します。  

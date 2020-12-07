@@ -15,12 +15,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3909eca1ac7b61da6d9d29ecbe0f4283065b122b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420776"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868450"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88420776"
   
 |*Valueptr* 値|説明|  
 |----------------------|-----------------|  
-|SQL_DP_ON|既定値。 [SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)を呼び出した後、 **sqlexecute**が呼び出されるか、メタプロパティ操作 (**SQLDescribeCol**または**SQLDescribeParam**) が実行されるまで、ステートメントの準備は遅延されます。|  
+|SQL_DP_ON|既定値。 [SQLPrepare 関数](../../odbc/reference/syntax/sqlprepare-function.md)を呼び出した後、 **sqlexecute**が呼び出されるか、メタプロパティ操作 (**SQLDescribeCol**または**SQLDescribeParam**) が実行されるまで、ステートメントの準備は遅延されます。|  
 |SQL_DP_OFF|**SQLPrepare**が実行されるとすぐに、ステートメントが準備されます。|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -149,7 +149,6 @@ ms.locfileid: "88420776"
  SQL_SOPT_SS_NAME_SCOPE に SQL_SS_NAME_SCOPE_TABLE 以外の値が指定されている場合に、SQLTables、Sqltables、SQLPrimaryKeys などのカタログ関数が呼び出されると、SQL_ERROR が返されます。 "関数のシーケンス エラーです (SQL_SOPT_SS_NAME_SCOPE が SQL_SS_NAME_SCOPE_TABLE に設定されていません)" というメッセージを含む SQLSTATE HY010 の診断レコードが生成されます。  
   
 ## <a name="see-also"></a>参照  
- [SQLGetStmtAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 関数](../../odbc/reference/syntax/sqlgetstmtattr-function.md)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

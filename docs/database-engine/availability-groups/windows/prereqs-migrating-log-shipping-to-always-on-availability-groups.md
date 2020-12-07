@@ -11,14 +11,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a4ee9154593b5c1d2d3d1bdf083796134d441fad
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 90ede0e93644a87d11ef25ec1c2113076ff0bba2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480817"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584068"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>ログ配布を Always On 可用性グループに変換する前提条件
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "89480817"
   
  **詳細:**  
   
- [可用性グループへのログ配布構成の変換](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (SQL Server ブログ)  
+ [可用性グループへのログ配布構成の変換](/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group) (SQL Server ブログ)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **ログ配布**  
@@ -86,19 +86,19 @@ ms.locfileid: "89480817"
   
 -   **ブログ:**  
   
-     [可用性グループへのログ配布構成の変換](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/)  
+     [可用性グループへのログ配布構成の変換](/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group)  
   
-     [Add a Log Shipping Primary Database and Secondary Database(s) to an Existing Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
+     [Add a Log Shipping Primary Database and Secondary Database(s) to an Existing Availability Group](/archive/blogs/sqlalwayson/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group)  
   
-     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)  
   
 -   **ホワイト ペーパー:**  
   
-     [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から AlwaysOn 可用性グループに移行する](https://msdn.microsoft.com/library/jj635217)  
+     [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から AlwaysOn 可用性グループに移行する](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -106,5 +106,4 @@ ms.locfileid: "89480817"
  [ログ配布について &#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの監視 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
-description: dm_workload_management_workload_groups_stats (Transact-sql)
-title: dm_workload_management_workload_groups_stats (Transact-sql) |Microsoft Docs
+description: sys.dm_workload_management_workload_groups_stats (Transact-sql)
+title: sys.dm_workload_management_workload_groups_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2019
 ms.prod: sql
@@ -12,14 +12,14 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: a439ebecacd29c2ca412e5ba90fac6b6b5af2b24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc36846a62b8b71e0e21d7ea61d088a0f16c674d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498320"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035183"
 ---
-# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>dm_workload_management_workload_groups_stats (Transact-sql)
+# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys.dm_workload_management_workload_groups_stats (Transact-sql)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 ワークロードグループの統計と、のワークロードグループの有効な値を返し [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。  
@@ -41,4 +41,4 @@ ms.locfileid: "88498320"
 
 ## <a name="see-also"></a>関連項目
 
- [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics と並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

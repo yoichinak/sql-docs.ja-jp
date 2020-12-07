@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 830b03042589ac1e9f03e94b134a48d510a37c31
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288252"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035837"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -398,7 +398,7 @@ GO
 フィルター選択されたインデックスに必要な値が SET オプションにない場合、クエリ オプティマイザーはインデックス ヒントを無視します。 詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
 ## <a name="using-noexpand"></a>NOEXPAND の使用  
-NOEXPAND は*インデックス付きビュー*にのみ適用できます。 インデックス付きビューとは、一意なクラスター化インデックスが作成されているビューを示します。 インデックス付きビューおよびベース テーブルの両方に存在する列への参照がクエリに含まれていて、クエリ オプティマイザーがクエリの実行にインデックス付きビューを使用する方が最適であると判断した場合、クエリ オプティマイザーはビューのインデックスを利用します。 この機能は、*インデックス付きビューのマッチング*と呼ばれます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のエディションでのみ、クエリ オプティマイザーではインデックス付きビューが自動的に使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、[SQL Server 2016 のエディションでサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)、[SQL Server 2017 のエディションでサポートされる機能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)、および [SQL Server 2019 のエディションでサポートされる機能](../../sql-server/editions-and-components-of-sql-server-version-15.md) に関するページを参照してください。  
+NOEXPAND は*インデックス付きビュー*にのみ適用できます。 インデックス付きビューとは、一意なクラスター化インデックスが作成されているビューを示します。 インデックス付きビューおよびベース テーブルの両方に存在する列への参照がクエリに含まれていて、クエリ オプティマイザーがクエリの実行にインデックス付きビューを使用する方が最適であると判断した場合、クエリ オプティマイザーはビューのインデックスを利用します。 この機能は、*インデックス付きビューのマッチング*と呼ばれます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のエディションでのみ、クエリ オプティマイザーではインデックス付きビューが自動的に使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、[SQL Server 2016 のエディションでサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2016.md)、[SQL Server 2017 のエディションでサポートされる機能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)、および [SQL Server 2019 のエディションでサポートされる機能](../../sql-server/editions-and-components-of-sql-server-version-15.md) に関するページを参照してください。  
   
 ただし、クエリ オプティマイザーで、インデックス付きビューのマッチングを検討したり、NOEXPAND ヒントで参照されるインデックス付きビューを使用したりするには、以下の SET オプションを ON に設定する必要があります。  
 
@@ -482,5 +482,4 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
-  
   

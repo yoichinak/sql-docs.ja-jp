@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ddd074654a12d6eb837b9e9fc9a152c7ec1e75b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e89edc66dee92fb74071de952e056d99c91cbf12
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497782"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985028"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>変換されたデータベースオブジェクトを SQL Server に読み込んでいます (DB2ToSQL)
 DB2 スキーマをに変換した後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、結果として得られるデータベースオブジェクトをに読み込むことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA を使用してオブジェクトを作成するか、オブジェクトのスクリプトを作成して自分でスクリプトを実行することができます。 また、SSMA では、ターゲットメタデータをデータベースの実際の内容で更新することもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -104,8 +104,7 @@ SSMA を使用してデータベースオブジェクトを作成するには、
 変換されたデータベースオブジェクトをに読み込むと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、それらのオブジェクトに対する権限を許可および拒否できます。 これは、データをに移行する前に行うことをお勧めし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 でオブジェクトをセキュリティで保護する方法の詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オンラインブックの「データベースおよびデータベースアプリケーションのセキュリティに関する考慮事項」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順は、 [DB2 データを SQL Server に移行](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)することです。  
+移行プロセスの次の手順は、 [DB2 データを SQL Server に移行](./migrating-db2-data-into-sql-server-db2tosql.md)することです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [DB2 データの SQL Server &#40;DB2ToSQL&#41;への移行 ](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

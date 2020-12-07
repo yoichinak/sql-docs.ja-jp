@@ -25,12 +25,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e14a1a07537ee9ec99d2eb54de4ec636621cce80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d798e00eccd5252c5142c0e6e19ac842b02d500d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467801"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379821"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="examples"></a>例  
  次の例では、最初の文字列 (`abcdef`) の位置 `2` (`b`) から 3 文字を削除し、その位置に 2 番目に指定した文字列を挿入して生成される文字列を返します。  
   
-```  
+```sql  
 SELECT STUFF('abcdef', 2, 3, 'ijklmn');  
 GO  
 ```  

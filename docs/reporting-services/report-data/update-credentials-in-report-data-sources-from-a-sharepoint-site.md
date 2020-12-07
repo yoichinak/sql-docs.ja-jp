@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: e1dc0c59a6fbe96062e48e24e2f6b126770f0c84
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458958"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935148"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>レポート データ ソース内の資格情報を SharePoint サイトから更新する
   このトピックでは、レポートに埋め込まれたデータ ソースや、SharePoint ドキュメント ライブラリ内に保存された共有データ ソースを更新する方法について説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "86458958"
   
      状況によっては、 **[資格情報は必要ありません]** オプションを使用することもできます。  
   
-     一部の種類のデータ ソースについては、レポート サーバーで自動実行アカウントを構成する必要があります。 詳細については、「[外部データ ソースのデータを追加する (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」および「[自動実行アカウントの構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」で、対応するデータ ソースの種類に関するトピックを参照してください。  
+     一部の種類のデータ ソースについては、レポート サーバーで自動実行アカウントを構成する必要があります。 詳細については、「[外部データ ソースのデータを追加する &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」および「[自動実行アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」で、対応するデータ ソースの種類に関するトピックを参照してください。  
   
 7.  ユーザー名とパスワードを入力します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "86458958"
   
      状況によっては、 **[資格情報は必要ありません]** オプションを使用することもできます。 このオプションは、データ ソースで資格情報が不要な場合、または他の方法で資格情報を渡している場合にのみ機能します。  
   
-     一部の種類のデータ ソースについては、レポート サーバーで自動実行アカウントを構成する必要があります。 詳細については、「[外部データ ソースのデータを追加する (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」および「[自動実行アカウントの構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」で、対応するデータ ソースの種類に関するトピックを参照してください。  
+     一部の種類のデータ ソースについては、レポート サーバーで自動実行アカウントを構成する必要があります。 詳細については、「[外部データ ソースのデータを追加する &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」および「[自動実行アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」で、対応するデータ ソースの種類に関するトピックを参照してください。  
   
 5.  ユーザー名とパスワードを入力します。  
   

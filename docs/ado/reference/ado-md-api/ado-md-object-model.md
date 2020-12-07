@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61fc4c7ea45478af1911fec52f1c37dc017a2263
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0e8a7371760076e300fc4eb8dd75365682e34974
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987563"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098661"
 ---
 # <a name="ado-md-object-model"></a>ADO MD オブジェクト モデル
 このトピックでは、ADO MD でオブジェクトがどのように表され、関連付けられるかについて説明します。  

@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7930e915884ee84884f1d1069622e7cc75d06c5f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116816"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124779"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ DEGREES ( numeric_expression )
 
 ## <a name="arguments"></a>引数
  *numeric_expression*  
-**bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+**bit** データ型を除く、真数または概数データ型カテゴリの [式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
 データ型が *numeric_expression* のデータ型に一致する値を返します。  

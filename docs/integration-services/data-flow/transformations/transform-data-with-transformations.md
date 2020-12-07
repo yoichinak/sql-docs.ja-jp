@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d9422574f80febefc6458b389f04b4b1625b22c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5189cda62a168db3cedff0d57666df7e15a0d65c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425654"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193174"
 ---
 # <a name="transform-data-with-transformations"></a>変換を使用してデータを変換する
 
@@ -49,7 +49,7 @@ ms.locfileid: "88425654"
   
  カスタムの変換を記述することもできます。 詳しくは、「 [カスタム データ フロー コンポーネントの開発](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 」と「 [特定の種類のデータ フロー コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)」をご覧ください。  
   
- 変換をデータ フロー デザイナーに追加した後で、変換を構成する前に、データ フロー内の別の変換または変換元の出力をこの変換の入力に連結することにより、変換をデータ フローに連結します。 2 つのデータ フロー コンポーネント間のコネクタは、パスと呼ばれます。 コンポーネントの連結とパスを使用した作業の詳細については、「 [パスを使用してコンポーネントを連結する](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)」をご覧ください。  
+ 変換をデータ フロー デザイナーに追加した後で、変換を構成する前に、データ フロー内の別の変換または変換元の出力をこの変換の入力に連結することにより、変換をデータ フローに連結します。 2 つのデータ フロー コンポーネント間のコネクタは、パスと呼ばれます。 コンポーネントの連結とパスを使用した作業の詳細については、「 [パスを使用してコンポーネントを連結する](../connect-components-in-a-data-flow.md)」をご覧ください。  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>変換をデータ フローに追加するには  
   
@@ -66,8 +66,7 @@ ms.locfileid: "88425654"
 ## <a name="see-also"></a>参照  
  [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)   
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
- [パスを使用してコンポーネントを連結する](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [パスを使用してコンポーネントを連結する](../connect-components-in-a-data-flow.md)   
  [データのエラー処理](../../../integration-services/data-flow/error-handling-in-data.md)   
  [データ フロー](../../../integration-services/data-flow/data-flow.md)  
-  
   

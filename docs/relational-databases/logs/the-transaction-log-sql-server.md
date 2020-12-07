@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 4d6e28a0e86a240d03ab4cdccac843488ff84446
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834763"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869306"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,16 +57,16 @@ ms.locfileid: "85834763"
 各ログのバックアップを復元するときに、ログに記録されている変更が [!INCLUDE[ssde_md](../../includes/ssde_md.md)] により再適用されて、すべてのトランザクションがロールフォワードされます。 最後のログのバックアップが復元されると、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] により、ログ情報を使用して、その時点で完了していなかったすべてのトランザクションがロールバックされます。 詳細については、「[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)」を参照してください。
 
 ### <a name="supporting-transactional-replication"></a>トランザクション レプリケーションのサポート
-ログ リーダー エージェントは、トランザクション レプリケーション用に構成された各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーします。 詳しくは、「 [トランザクション レプリケーションの動作方法](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))」をご覧ください。
+ログ リーダー エージェントは、トランザクション レプリケーション用に構成された各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーします。 詳しくは、「 [トランザクション レプリケーションの動作方法](/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))」をご覧ください。
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>高可用性とディザスター リカバリー ソリューションのサポート
 スタンバイ サーバー ソリューション、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、データベース ミラーリング、およびログ配布は、トランザクション ログに大きく依存しています。 
 
-**[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] シナリオ**では、データベース (プライマリ レプリカ) に対するすべての更新は、別に存在するデータベースの完全なコピー (セカンダリ レプリカ) で直ちに再現されます。 プライマリ レプリカにより各ログ レコードが直ちにセカンダリ レプリカに送信されます。そこでは、受信したログ レコードが可用性グループのデータベースに適用され、継続的にロールフォワードされます。 詳しくは、「 [AlwaysOn フェールオーバー クラスター インスタンス](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」をご覧ください。
+**[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] シナリオ** では、データベース (プライマリ レプリカ) に対するすべての更新は、別に存在するデータベースの完全なコピー (セカンダリ レプリカ) で直ちに再現されます。 プライマリ レプリカにより各ログ レコードが直ちにセカンダリ レプリカに送信されます。そこでは、受信したログ レコードが可用性グループのデータベースに適用され、継続的にロールフォワードされます。 詳しくは、「 [AlwaysOn フェールオーバー クラスター インスタンス](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」をご覧ください。
 
-**ログ配布シナリオ**では、プライマリ データベースのアクティブなトランザクション ログがプライマリ サーバーから 1 つ以上の配布先に送信されます。 各セカンダリ サーバーでは、受信したログがローカルのセカンダリ データベースに復元されます。 詳しくは、「 [ログ配布について](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」をご覧ください。 
+**ログ配布シナリオ** では、プライマリ データベースのアクティブなトランザクション ログがプライマリ サーバーから 1 つ以上の配布先に送信されます。 各セカンダリ サーバーでは、受信したログがローカルのセカンダリ データベースに復元されます。 詳しくは、「 [ログ配布について](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」をご覧ください。 
 
-**データベース ミラーリング シナリオ**では、プリンシパル データベースに対するすべての更新が、そのデータベースの完全なコピーである、独立したミラー データベースに直ちに再現されます。 各ログ レコードは、プリンシパル サーバー インスタンスからミラー サーバー インスタンスに直ちに送信されます。ここでは、受信したログ レコードがミラー データベースに適用され、継続的にロールフォワードされます。 詳しくは、「 [データベース ミラーリング](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」をご覧ください。
+**データベース ミラーリング シナリオ** では、プリンシパル データベースに対するすべての更新が、そのデータベースの完全なコピーである、独立したミラー データベースに直ちに再現されます。 各ログ レコードは、プリンシパル サーバー インスタンスからミラー サーバー インスタンスに直ちに送信されます。ここでは、受信したログ レコードがミラー データベースに適用され、継続的にロールフォワードされます。 詳しくは、「 [データベース ミラーリング](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」をご覧ください。
 
 ##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>トランザクション ログの特性
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のトランザクション ログには、次のような特性があります。 
@@ -96,13 +96,13 @@ ms.locfileid: "85834763"
 > ログの切り捨てを行っても、物理ログ ファイルのサイズは縮小されません。 物理ログ ファイルの物理サイズを削減するには、ログ ファイルを圧縮する必要があります。 物理ログ ファイルのサイズの圧縮の詳細については、「 [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
 > ただし、[ログの切り捨てが遅れる原因となる要因](#FactorsThatDelayTruncation)には留意してください。 ログの圧縮後、ストレージ領域が再び必要になると、トランザクション ログが再び増え、その分のパフォーマンスのオーバーヘッドが発生します。
   
-##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> ログの切り詰めが遅れる原因となる要因  
  このトピックで前述したように、ログ レコードが長い間アクティブなままになると、トランザクション ログの切り捨てが遅れて、トランザクション ログがいっぱいになります。  
   
 > [!IMPORTANT]
 > トランザクション ログがいっぱいに応答する方法については、「 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
   
- 実際に、ログの切り捨てはさまざまな理由で遅延が発生する場合があります。 ログの切り捨てを妨げている原因を、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **log_reuse_wait** 列と **log_reuse_wait_desc** 列に対するクエリを実行して確認してください。 次の表では、これらの列の値について説明します。  
+ 実際に、ログの切り捨てはさまざまな理由で遅延が発生する場合があります。 ログの切り捨てを妨げている原因を、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **log_reuse_wait** 列と **log_reuse_wait_desc** 列に対するクエリを実行して確認してください。 次の表では、これらの列の値について説明します。  
   
 |log_reuse_wait の値|log_reuse_wait_desc の値|説明|  
 |----------------------------|----------------------------------|-----------------|  
@@ -144,10 +144,10 @@ ms.locfileid: "85834763"
   
 -   新規データの挿入時または追加時の、[UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの `.WRITE` 句を使用した、大きな値のデータ型の部分更新。 既存の値を更新する場合は、最小ログ記録は使用されません。 大きな値のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
--   [text](../../t-sql/queries/writetext-transact-sql.md) 、 [ntext](../../t-sql/queries/updatetext-transact-sql.md) 、 **image**の各データ型列に新規データを挿入または追加するときの **WRITETEXT**ステートメントおよび **UPDATETEXT** ステートメント。 既存の値を更新する場合は、最小ログ記録は使用されません。  
+-   [text](../../t-sql/queries/writetext-transact-sql.md) 、 [ntext](../../t-sql/queries/updatetext-transact-sql.md) 、 **image** の各データ型列に新規データを挿入または追加するときの **WRITETEXT** ステートメントおよび **UPDATETEXT** ステートメント。 既存の値を更新する場合は、最小ログ記録は使用されません。  
   
     > [!WARNING]
-    > `WRITETEXT` ステートメントおよび `UPDATETEXT` ステートメントの使用は**非推奨となりました**。新しいアプリケーションでは、これらを使用しないようにしてください。  
+    > `WRITETEXT` ステートメントおよび `UPDATETEXT` ステートメントの使用は **非推奨となりました** 。新しいアプリケーションでは、これらを使用しないようにしてください。  
   
 -   データベースが単純復旧モデルまたは一括ログ復旧モデルに設定されている場合、一部のインデックス DDL 操作は、オフラインで実行されても、オンラインで実行されても、最小ログ記録の対象になります。 最小ログ記録が行われるインデックス操作は、次のとおりです。  
   
@@ -156,12 +156,12 @@ ms.locfileid: "85834763"
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 操作または DBCC DBREINDEX 操作。  
   
         > [!WARNING]
-        > `DBCC DBREINDEX` ステートメントは**非推奨となりました**。新しいアプリケーションでは使用しないようにしてください。  
+        > `DBCC DBREINDEX` ステートメントは **非推奨となりました** 。新しいアプリケーションでは使用しないようにしてください。  
   
         > [!NOTE]
         > インデックス構築操作では、最小ログ記録が使用されますが、同時にバックアップが実行されると遅延する可能性があります。 このような遅延は、単純復旧モデルまたは一括ログ復旧モデルを使用するときに、最小限のログが記録されるバッファー プール ページの同期要件が原因で発生します。 
       
-    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) による新しいヒープの再構築 (適用可能な場合)。 `DROP INDEX` 操作中のインデックス ページの割り当て解除は、**常に**完全にログ記録されます。
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) による新しいヒープの再構築 (適用可能な場合)。 `DROP INDEX` 操作中のインデックス ページの割り当て解除は、 **常に** 完全にログ記録されます。
 
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
 **トランザクション ログの管理**  
@@ -192,5 +192,4 @@ ms.locfileid: "85834763"
 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-  
   

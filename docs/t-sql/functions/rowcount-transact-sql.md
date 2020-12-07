@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1cbc8ae7854eb38185eaf07ed8ce52beaf4a1eff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cbcc0c744c195db159788cb4476a92963323f66
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88309168"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037110"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88309168"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@ROWCOUNT  
 ```  
   
@@ -68,12 +68,12 @@ ms.locfileid: "88309168"
   
  USE、SET \<option>、DEALLOCATE CURSOR、CLOSE CURSOR、PRINT、RAISERROR、BEGIN TRANSACTION、COMMIT TRANSACTION などのステートメントによって、ROWCOUNT 値は 0 にリセットされます。  
   
- ネイティブ コンパイル ストアド プロシージャでは、直前の @@ROWCOUNT が維持されます。 ネイティブ コンパイル ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、@@ROWCOUNT は設定しないでください。 詳細については、次を参照してください。 [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
+ ネイティブ コンパイル ストアド プロシージャでは、直前の @@ROWCOUNT が維持されます。 ネイティブ コンパイル ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、@@ROWCOUNT は設定しないでください。 詳細については、次を参照してください。 [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)です。  
   
 ## <a name="examples"></a>例  
  次の例では、`UPDATE` ステートメントを実行し、`@@ROWCOUNT` を使用して、変更された行があるかどうかを調べます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.Employee   
@@ -87,5 +87,4 @@ GO
 ## <a name="see-also"></a>参照  
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
-  
   

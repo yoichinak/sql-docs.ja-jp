@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46c1074500d6ea73af9b10ff373a8beb9cb433d5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b0ff8af0373d733cd24c507a544694849b849027
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541297"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131319"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "89541297"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name  
 ```  
   
@@ -47,7 +47,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、集計を削除します。  
   
@@ -66,7 +66,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 ## <a name="examples"></a>例  
  次の例では、集計関数 `Concatenate` を削除します。  
   
-```  
+```sql  
 DROP AGGREGATE dbo.Concatenate;  
 ```  
   

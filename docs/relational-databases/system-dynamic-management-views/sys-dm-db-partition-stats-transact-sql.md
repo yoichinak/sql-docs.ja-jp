@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_partition_stats (Transact-SQL)
-title: dm_db_partition_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_db_partition_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3099e86d00f0541fc4c5b3408ec8708d04042b3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1fd58cef1e99a1c7648ea8ad73657b7dc02be01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544777"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006016"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "89544777"
   現在のデータベースのパーティションごとに、ページ数と行数の情報を返します。  
   
 > [!NOTE]  
-> またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_db_partition_stats**という名前を使用します。 Dm_pdw_nodes_db_partition_stats の partition_id は、Azure SQL Data Warehouse のための、sys. パーティションカタログビューの partition_id とは異なります。
+> またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **sys.dm_pdw_nodes_db_partition_stats**という名前を使用します。 Sys.dm_pdw_nodes_db_partition_stats の partition_id は、Azure Synapse Analytics の [パーティション] カタログビューの partition_id とは異なります。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|パーティションの ID。 データベース内で一意です。 この値は、Azure SQL Data Warehouse を除き、[**パーティション**] カタログビューの**partition_id**と同じです。|  
+|**partition_id**|**bigint**|パーティションの ID。 データベース内で一意です。 これは、Azure Synapse Analytics を**除く、カタログビュー**の**partition_id**と同じ値です。|  
 |**object_id**|**int**|パーティションが属するテーブルまたはインデックス付きビューのオブジェクト ID。|  
 |**index_id**|**int**|パーティションが属するヒープまたはインデックスの ID。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス|  
 |**partition_number**|**int**|インデックスまたはヒープ内の、1 から始まるパーティション番号。|  
@@ -67,7 +67,7 @@ ms.locfileid: "89544777"
  各テーブルまたはインデックスの合計数は、関連するすべてのパーティションにおける数を加算することで取得されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- `VIEW DATABASE STATE` `VIEW DEFINITION` には、 **dm_db_partition_stats**動的管理ビューを照会するための権限とアクセス許可が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
+ `VIEW DATABASE STATE` `VIEW DEFINITION` には、 **sys.dm_db_partition_stats**動的管理ビューにクエリを実行するための権限とアクセス許可が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   

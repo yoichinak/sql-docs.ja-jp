@@ -9,12 +9,12 @@ ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 08645672c1aa8b7b980b4ffe86b4029a691fa1cf
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990022"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447108"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>高可用性を使用して SQL Server ビッグ データ クラスターを展開する
 
@@ -211,6 +211,8 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 - 別のサーバー上に作成されたバックアップから TDE 対応のデータベースを正常に復元するには、[必須の証明書](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)が、SQL Server インスタンス マスターと包含 AG マスターの両方に確実に復元されるようにする必要があります。 証明書のバックアップと復元の方法の例については、[こちら](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/)を参照してください。
 - `sp_configure` でのサーバー構成設定の実行などの特定の操作では、可用性グループ `master` ではなく、SQL Server インスタンス `master` データベースへの接続が必要になります。 対応するプライマリ エンドポイントを使用することはできません。 [指示](#instance-connect)に従ってエンドポイントを公開し、SQL Server インスタンスに接続して `sp_configure` を実行します。 SQL 認証を使用できるのは、エンドポイントを手動で公開して SQL Server インスタンス `master` データベースに接続する場合のみです。
 - 包含 msdb データベースは可用性グループに含まれており、SQL Agent ジョブはレプリケートされますが、プライマリ レプリカではジョブはスケジュールに従って実行されるのみです。
+- 含まれている可用性グループに対するレプリケーション機能はサポートされていません。 含まれている AG の一部である SQL Server インスタンスは、インスタンス レベルでも含まれている AG レベルでも、ディストリビューターまたはパブリッシャーとして機能することはできません。
+- データベースの作成中にファイル グループを追加することはサポートされていません。 回避策として、まずデータベースを作成し、次に ALTER DATABASE ステートメントを実行してファイル グループを追加します。
 - SQL Server 2019 CU2 よりも前のバージョンでは、`CREATE DATABASE` および `RESTORE DATABASE` 以外のワークフロー (`CREATE DATABASE FROM SNAPSHOT` など) の結果として作成されたデータベースは、自動的に可用性グループに追加されません。 [インスタンスに接続](#instance-connect)し、データベースを可用性グループに手動で追加します。
 
 ## <a name="next-steps"></a>次のステップ

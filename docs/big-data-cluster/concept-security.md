@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e3be3a3ea0d3f3b3d452bfea058ff85dd8a9141
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730682"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257252"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のセキュリティの概念
 
@@ -37,7 +37,7 @@ ms.locfileid: "85730682"
 
 ビッグ データ クラスターには 5 つのエントリ ポイントがあります
 
-* マスター インスタンス - SSMS や Azure Data Studio など、データベース ツールとアプリケーションを使用してクラスター内の SQL Server マスター インスタンスにアクセスするための TDS エンドポイント。 azdata から HDFS または SQL Server コマンドを使用する場合、操作に応じて、ツールは他のエンドポイントに接続します。
+* マスター インスタンス - SSMS や Azure Data Studio など、データベース ツールとアプリケーションを使用してクラスター内の SQL Server マスター インスタンスにアクセスするための TDS エンドポイント。 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] から HDFS または SQL Server コマンドを使用する場合、操作に応じて、ツールは他のエンドポイントに接続します。
 
 * HDFS ファイル、Spark (Knox) にアクセスするためのゲートウェイ - webHDFS や Spark などのサービスにアクセスするための HTTPS エンドポイントです。
 
@@ -59,16 +59,23 @@ ms.locfileid: "85730682"
 
 セキュリティで保護されたビッグ データ クラスターとは、SQL Server と HDFS/Spark の両方にまたがる、認証と承認のシナリオに対する一貫性のあるわかりやすいサポートを意味します。 認証とは、ユーザーまたはサービスの身元を確認し、ユーザーまたはサービスが本物であることを確認するプロセスです。 承認とは、要求元のユーザーの ID に基づいて、特定のリソースへのアクセスを許可または拒否することを意味します。 この手順は、ユーザーが認証によって識別された後に実行されます。
 
-通常、ビッグ データのコンテキストにおける承認は、ユーザー ID と特定のアクセス許可を関連付けるアクセス制御リスト (ACL) を使用して実行されます。 HDFS は、サービス API、HDFS ファイル、およびジョブ実行に対するアクセスを制限することで、承認をサポートするものです。
+ビッグ データのコンテキストにおける承認は、ユーザー ID と特定のアクセス許可を関連付けるアクセス制御リスト (ACL) を使用して実行されます。 HDFS は、サービス API、HDFS ファイル、およびジョブ実行に対するアクセスを制限することで、承認をサポートするものです。
 
-## <a name="encryption-and-other-security-mechanisms"></a>暗号化およびその他のセキュリティ メカニズム
+## <a name="encryption-in-flight-and-other-security-mechanisms"></a>フライトとその他のセキュリティ メカニズムでの暗号化
 
 クライアントと外部エンドポイント間およびクラスター内のコンポーネント間の通信の暗号化は、証明書を使用して TLS/SSL で保護されます。
 
 データ プールと通信する SQL マスター インスタンスなど、SQL Server 間のすべての通信は、SQL ログインを使用して保護されます。
 
 > [!IMPORTANT]
->  ビッグ データ クラスターでは、etcd を使用して資格情報が保存されます。 ベスト プラクティスとして、Kubernetes クラスターで保存時に etcd 暗号化が使用されるように、確実に構成する必要があります。 既定では、etcd に格納されるシークレットは暗号化されません。 Kubernetes のドキュメントでは、この管理タスクの詳細について説明しています (https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ と https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ )。
+>  ビッグ データ クラスターでは、`etcd` を使用して資格情報が保存されます。 ベスト プラクティスとして、Kubernetes クラスターで保存時に `etcd` 暗号化が使用されるように、確実に構成する必要があります。 既定では、`etcd` に格納されるシークレットは暗号化されません。 Kubernetes のドキュメントでは、この管理タスクの詳細について説明しています (https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ と https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ )。
+
+## <a name="data-encryption-at-rest"></a>保存データの暗号化
+
+SQL Server および HDFS コンポーネントのアプリケーション レベルの暗号化の主要なシナリオは、SQL Server ビッグ データ クラスターの保存時の暗号化機能セットによってサポートされています。 包括的な機能の使用ガイドについては、[保存時の暗号化の概念と構成ガイド](encryption-at-rest-concepts-and-configuration.md)の記事を参照してください。
+
+> [!IMPORTANT]
+> ボリューム暗号化は、すべての SQL Server ビッグ データ クラスターのデプロイに推奨されます。 保管時のデータ暗号化への包括的なアプローチとして、Kubernetes クラスターで構成されたお客様提供のストレージ ボリュームも暗号化する必要があります。 SQL Server ビッグ データ クラスターの保存時の暗号化機能は追加のセキュリティ レイヤーであり、SQL Server データとログ ファイルのアプリケーション レベルの暗号化と HDFS 暗号化ゾーンのサポートが提供されます。
 
 
 ## <a name="basic-administrator-login"></a>基本管理者ログイン

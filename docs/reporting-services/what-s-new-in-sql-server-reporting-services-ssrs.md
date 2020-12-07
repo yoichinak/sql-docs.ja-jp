@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: b44e664d75735a6283d12f218b904fbdd07ad481
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1af364896504dff41ab01095a69e8f581e792096
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396536"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243708"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
@@ -29,7 +29,7 @@ Power BI Report Server については、「[Power BI Report Server とは](http
 
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-**ダウンロード** ![ダウンロード](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+**ダウンロード** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) は、Microsoft ダウンロード センターからダウンロードできます。
 
@@ -51,7 +51,7 @@ Azure Active Directory アプリケーション プロキシによって、Web �
 
 ### <a name="custom-headers"></a>カスタム ヘッダー
 
-指定した正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML でカスタム ヘッダー値を更新し、選択された要求 URL のヘッダー値を設定できます。 管理者は、この XML に任意の数のヘッダーを追加できます。 詳細については、「 **[サーバーのプロパティ] の [詳細設定] ページ**」の記事の[カスタム ヘッダー](tools/server-properties-advanced-page-reporting-services.md#customheaders)のセクションを参照してください。
+指定した正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML でカスタム ヘッダー値を更新し、選択された要求 URL のヘッダー値を設定できます。 管理者は、この XML に任意の数のヘッダーを追加できます。 詳細については、「 **[サーバーのプロパティ] の [詳細設定] ページ** 」の記事の [カスタム ヘッダー](tools/server-properties-advanced-page-reporting-services.md#customheaders)のセクションを参照してください。
 
 ### <a name="transparent-database-encryption"></a>Transparent Database Encryption
 
@@ -67,7 +67,7 @@ SQL Server 2019 は、Enterprise および Standard エディションの SSRS �
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
 
-**ダウンロード** ![ダウンロード](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+**ダウンロード** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 SQL Server 2017 Reporting Services をダウンロードするには、「 **[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)** 」に移動します。
 
@@ -117,7 +117,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 
 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]の詳細については、「 [Web ポータル (SSRS ネイティブ モード)](../reporting-services/web-portal-ssrs-native-mode.md)」を参照してください。  
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
+![SQL Server Reporting Services ポータルを示すスクリーンショット。](../reporting-services/media/ssrsportal.png "ssRSPortal")  
 
 #### <a name="custom-branding-for-the-ssrswebportal-non-markdown"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] のカスタム ブランド化 
 
@@ -129,7 +129,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 
 現在のフォルダーのコンテキストに適合する KPI を [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 内で直接作成します。 KPI を作成するときに、データセットを選択し、その値を集計できます。 ドリル スルーする関連コンテンツを選択して、詳細を公開することもできます。
 
-![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
+![SQL Server Reporting Services ポータル内の KPI 示すスクリーンショット。](../reporting-services/media/ssrs-webportal-kpi.png)
 
 詳細については、「[Reporting Services で KPI を使用する](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)」を参照してください。
 
@@ -194,13 +194,13 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 
 ![注](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。
 
-![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
+![[Power BI ダッシュボードにピン留めする] ダイアログ ボックスを示すスクリーンショット。](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
 詳細については、「[Power BI Report Server の統合 &#40;構成マネージャー&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)」および「[Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。  
 
 **PowerPoint のレンダリングとエクスポート:** Microsoft PowerPoint (PPTX) 形式は、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] の新しい表示拡張機能です。 通常のアプリケーション (レポート ビルダー、レポート デザイナー (SSDT)、および [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]) から PPTX 形式のレポートをエクスポートできます。 たとえば、次の図は [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]のエクスポート メニューを示しています。 
 
-![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
+![[エクスポート] ドロップダウン リストを示すスクリーンショット。[PowerPoint] オプションが選択されています。](../reporting-services/media/ssrs-export-powerpoint.png) 
 
 サブスクリプション出力用に PPTX 形式を選択し、レポート サーバー URL アクセスを使用してレポートをレンダリングおよびエクスポートすることもできます。 たとえば、ブラウザーで次の URL コマンドを実行すると、レポート サーバーの名前付きインスタンスからレポートがエクスポートされます。  
 
@@ -214,16 +214,16 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。
 
-![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
+![[印刷] ダイアログ ボックスのスクリーンショット。](../reporting-services/media/ssrs-pdf-printing.png)
 
 ### <a name="subscription-improvements"></a>サブスクリプションの機能強化  
 
 |特徴量|サポートされるサーバー モード|  
 |-------------|---------------------------|  
-|**サブスクリプションを有効または無効にする**: サブスクリプションを簡単に無効または有効にできる新しいユーザー インターフェイス オプション。 サブスクリプションを無効にしても、スケジュールなどの他の構成プロパティは維持され、簡単に有効にすることができます。<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 詳細については、「 [レポートとサブスクリプションの処理を無効化または一時停止する](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)」を参照してください。|ネイティブ モード|  
-|**サブスクリプションの説明**: 新しいサブスクリプションを作成するときに、サブスクリプションのプロパティの一部として、レポートの説明を含めることができるようになりました。 説明はサブスクリプションの概要ページに表示されます。|SharePoint モードとネイティブ モード|  
-|**サブスクリプションの所有者の変更**: サブスクリプションの所有者をすばやく変更できる拡張ユーザー インターフェイス。 以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、管理者はスクリプトを使用してサブスクリプションの所有者を変更できます。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] リリース以降では、ユーザー インターフェイスまたはスクリプトを使用してサブスクリプションの所有者を変更できます。 サブスクリプションの所有者の変更は、ユーザーが組織を離れたり、組織での役割が変更されたりしたときに行う一般的な管理タスクです。|SharePoint モードとネイティブ モード|  
-|**ファイル共有サブスクリプションの共有資格情報**: [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、現在 2 つのワークフローがあります。<br /><br /> このリリースの新機能として、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の管理者が、複数のサブスクリプションで使える 1 つのファイル共有アカウントを構成できるようになりました。 ファイル共有アカウントは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のネイティブ モードの構成マネージャー **[ファイル共有アカウントを指定します]** で構成されます。 ユーザーは、サブスクリプションの構成ページで、 **[ファイル共有アカウントを使用する]** を選択します。<br /><br /> 宛先のファイル共有の具体的な資格情報を使って、個々のサブスクリプションを構成します。<br /><br /> この 2 つの方法を組み合わせて、一部のファイル共有サブスクリプションでは管理者が構成したファイル共有アカウントを使用し、他のサブスクリプションでは特定の資格情報を使用することもできます。|ネイティブ モード|
+|**サブスクリプションを有効または無効にする** : サブスクリプションを簡単に無効または有効にできる新しいユーザー インターフェイス オプション。 サブスクリプションを無効にしても、スケジュールなどの他の構成プロパティは維持され、簡単に有効にすることができます。<br /><br /> ![[有効化]、[無効化]、および [削除] の各オプションを示すスクリーンショット。](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> 詳細については、「 [レポートとサブスクリプションの処理を無効化または一時停止する](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)」を参照してください。|ネイティブ モード|  
+|**サブスクリプションの説明** : 新しいサブスクリプションを作成するときに、サブスクリプションのプロパティの一部として、レポートの説明を含めることができるようになりました。 説明はサブスクリプションの概要ページに表示されます。|SharePoint モードとネイティブ モード|  
+|**サブスクリプションの所有者の変更** : サブスクリプションの所有者をすばやく変更できる拡張ユーザー インターフェイス。 以前のバージョンの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、管理者はスクリプトを使用してサブスクリプションの所有者を変更できます。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] リリース以降では、ユーザー インターフェイスまたはスクリプトを使用してサブスクリプションの所有者を変更できます。 サブスクリプションの所有者の変更は、ユーザーが組織を離れたり、組織での役割が変更されたりしたときに行う一般的な管理タスクです。|SharePoint モードとネイティブ モード|  
+|**ファイル共有サブスクリプションの共有資格情報** : [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、現在 2 つのワークフローがあります。<br /><br /> このリリースの新機能として、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の管理者が、複数のサブスクリプションで使える 1 つのファイル共有アカウントを構成できるようになりました。 ファイル共有アカウントは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のネイティブ モードの構成マネージャー **[ファイル共有アカウントを指定します]** で構成されます。 ユーザーは、サブスクリプションの構成ページで、 **[ファイル共有アカウントを使用する]** を選択します。<br /><br /> 宛先のファイル共有の具体的な資格情報を使って、個々のサブスクリプションを構成します。<br /><br /> この 2 つの方法を組み合わせて、一部のファイル共有サブスクリプションでは管理者が構成したファイル共有アカウントを使用し、他のサブスクリプションでは特定の資格情報を使用することもできます。|ネイティブ モード|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 

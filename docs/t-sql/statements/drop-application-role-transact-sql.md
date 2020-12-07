@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4274c8a7689dacd251c872b3066b4422c4c90d80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a9ccfbde6cd85b6f7e953ca7574b890381ce8d8c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478932"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380206"
 ---
 # <a name="drop-application-role-transact-sql"></a>DROP APPLICATION ROLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88478932"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP APPLICATION ROLE rolename  
 ```  
   
@@ -61,7 +60,7 @@ DROP APPLICATION ROLE rolename
 ## <a name="examples"></a>例  
  データベースからアプリケーション ロール "weekly_ledger" を削除します。  
   
-```  
+```sql  
 DROP APPLICATION ROLE weekly_ledger;  
 GO  
 ```  

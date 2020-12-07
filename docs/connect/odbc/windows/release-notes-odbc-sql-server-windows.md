@@ -2,7 +2,7 @@
 title: ODBC Driver for SQL Server on Windows のリリース ノート
 description: このリリース ノート記事では、Windows 上の SQL Server 用 Microsoft ODBC ドライバーの各リリースにおける変更点について説明します。
 ms.custom: ''
-ms.date: 07/29/2020
+ms.date: 10/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898817"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043807"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows のリリース ノート
 
@@ -169,6 +169,7 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 | Azure Active Directory マネージド ID (システムおよびユーザー割り当て) 認証モード。 | 「[ODBC ドライバーでの Azure Active Directory の使用](../using-azure-active-directory.md)」を参照してください。 |
 | Always Encrypted 列に対して入力パラメーターをストリーム配信する機能。 | 「[Limitations of the ODBC driver when using Always Encrypted (Always Encrypted を使用するときの ODBC ドライバーの制限事項)](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)」をご覧ください。 |
 | XA 分散トランザクション。 | 「[Using XA Transactions (XA トランザクションの使用)](../use-xa-with-dtc.md)」をご覧ください。 |
+| 更新された Visual C++ 再頒布可能パッケージ | ランタイム依存関係を Visual C++ 2017 再頒布可能パッケージ ([x64 のダウンロード](https://aka.ms/vs/15/release/vc_redist.x64.exe)、[x86 のダウンロード](https://aka.ms/vs/15/release/vc_redist.x86.exe)) にアップグレードしました |
 | バグが修正されました。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 

@@ -17,10 +17,10 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 02632ce64dbd7b10571e559daf8fde4475a4e37b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471205"
 ---
 # <a name="msdb-database"></a>msdb データベース
@@ -28,12 +28,12 @@ ms.locfileid: "88471205"
 
   **msdb** データベースは、警告やジョブのスケジュール設定のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されます。また、その他の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 、データベース メールなどの機能でも使用されます。  
   
- たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オンラインのバックアップおよび復元の履歴をすべて **msdb**データベース内のテーブルで自動的に管理します。 この情報には、バックアップの実行者名、バックアップ日時、バックアップが格納されているデバイスやファイルなどが含まれます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、この情報を使用して、データベースを復元してトランザクション ログ バックアップを適用するプランを立てます。 すべてのデータベースに対するバックアップ イベントは、独自のアプリケーションやサード パーティのツールで発生した場合にも記録されます。 たとえば、SMO (SQL Server 管理オブジェクト) オブジェクトを呼び出してバックアップ操作を行う [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを使用する場合、イベントは **msdb** システム テーブル、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 **msdb**に格納される情報を保護するために、 **msdb** トランザクション ログをフォールト トレラント ストレージに置くことを検討するようにお勧めします。  
+ たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オンラインのバックアップおよび復元の履歴をすべて **msdb** データベース内のテーブルで自動的に管理します。 この情報には、バックアップの実行者名、バックアップ日時、バックアップが格納されているデバイスやファイルなどが含まれます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、この情報を使用して、データベースを復元してトランザクション ログ バックアップを適用するプランを立てます。 すべてのデータベースに対するバックアップ イベントは、独自のアプリケーションやサード パーティのツールで発生した場合にも記録されます。 たとえば、SMO (SQL Server 管理オブジェクト) オブジェクトを呼び出してバックアップ操作を行う [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを使用する場合、イベントは **msdb** システム テーブル、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 **msdb** に格納される情報を保護するために、 **msdb** トランザクション ログをフォールト トレラント ストレージに置くことを検討するようにお勧めします。  
   
- 既定では、 **msdb** は単純復旧モデルを使用します。 [バックアップおよび復元の履歴](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) テーブルを使用する場合は、 **msdb**の完全復旧モデルを使用することをお勧めします。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールまたはアップグレードするとき、Setup.exe を使用してシステム データベースを再構築すると必ず、 **msdb** の復旧モデルは自動的に simple に設定されることに注意してください。  
+ 既定では、 **msdb** は単純復旧モデルを使用します。 [バックアップおよび復元の履歴](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) テーブルを使用する場合は、 **msdb** の完全復旧モデルを使用することをお勧めします。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールまたはアップグレードするとき、Setup.exe を使用してシステム データベースを再構築すると必ず、 **msdb** の復旧モデルは自動的に simple に設定されることに注意してください。  
   
 > [!IMPORTANT]  
->  データベースのバックアップや復元など、 **msdb**を更新する操作の後は、 **msdb**をバックアップすることをお勧めします。 詳細については、「[システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)」を参照してください。  
+>  データベースのバックアップや復元など、 **msdb** を更新する操作の後は、 **msdb** をバックアップすることをお勧めします。 詳細については、「[システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)」を参照してください。  
   
 ## <a name="physical-properties-of-msdb"></a>msdb データベースの物理プロパティ  
  **msdb** データベースのデータとログ ファイルの初期構成値を次の表に示します。 これらのファイルのサイズは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のエディションによって多少異なる場合があります。  

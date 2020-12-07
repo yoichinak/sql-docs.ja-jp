@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c184f0be8a853eb373063468e3bded901c4b58e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2197b4a47a01e114b4bac330fb170e5489ff614
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495926"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195986"
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
 
@@ -55,7 +55,7 @@ ms.locfileid: "88495926"
  WMI データ リーダー タスクは、WMI 接続マネージャーを使用して、WMI 情報を読み取るサーバーに接続します。 詳細については、「 [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)」をご覧ください。  
   
 ## <a name="wql-query"></a>WQL クエリ  
- WQL は SQL 言語仕様の 1 つで、WMI イベント通知やその他 WMI 固有の機能をサポートする拡張機能が付いています。 WQL の詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?linkid=7022)にある Windows Management Instrumentation のマニュアルをご覧ください。  
+ WQL は SQL 言語仕様の 1 つで、WMI イベント通知やその他 WMI 固有の機能をサポートする拡張機能が付いています。 WQL の詳細については、 [MSDN ライブラリ](../../sql-server/index.yml)にある Windows Management Instrumentation のマニュアルをご覧ください。  
   
 > [!NOTE]  
 >  WMI クラスは、Windows のバージョンによって異なります。  
@@ -100,7 +100,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="wmi-data-reader-task-editor-general-page"></a>[WMI データ リーダー タスク エディター] ([全般] ページ)
   **[WMI データ リーダー タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、WMI データ リーダー タスクの名前と説明を入力できます。  
@@ -126,7 +126,7 @@ Select * FROM Win32_QuickFixEngineering
  **[WMIConnectionName]**  
  WMI 接続マネージャーを一覧から選択するか、[\<**New WMI Connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 接続マネージャー エディター](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+ **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 接続マネージャー エディター](../connection-manager/wmi-connection-manager.md)  
   
  **[WQLQuerySourceType]**  
  タスクで実行する WQL クエリのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -161,13 +161,13 @@ Select * FROM Win32_QuickFixEngineering
  **[WQLQuerySource]**  
  一覧でファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../connection-manager/file-connection-manager.md)  
   
 #### <a name="wqlquerysourcetype--variable"></a>[WQLQuerySourceType] = [変数]  
  **[WQLQuerySource]**  
  一覧で変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  
   
 ### <a name="destinationtype-dynamic-options"></a>[DestinationType] 動的オプション  
   
@@ -175,16 +175,15 @@ Select * FROM Win32_QuickFixEngineering
  **宛先**  
  一覧でファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../connection-manager/file-connection-manager.md)  
   
 #### <a name="destinationtype--variable"></a>[DestinationType] = [変数]  
  **宛先**  
  一覧で変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

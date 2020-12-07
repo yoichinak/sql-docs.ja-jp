@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e466840015f0b5d82a8e6430434239db6655ee81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d966e11f3bb545ec4ac71a412958fc36de6885ee
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472235"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91497749"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT (フルテキストの権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,7 @@ AS *granting_principal*
 ### <a name="a-granting-permissions-to-a-full-text-catalog"></a>A. フルテキスト カタログに対する権限を許可する  
  次の例では、フルテキスト カタログ `ProductCatalog` に対する `CONTROL` 権限を `Ted` に許可します。  
   
-```  
+```sql  
 GRANT CONTROL  
     ON FULLTEXT CATALOG :: ProductCatalog  
     TO Ted ;  
@@ -147,7 +147,7 @@ GRANT CONTROL
 ### <a name="b-granting-permissions-to-a-stoplist"></a>B. ストップリストに対する権限を許可する  
  次の例では、フルテキスト ストップリスト `ProductStoplist` に対する `VIEW DEFINITION` 権限を `Mary` に許可します。  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON FULLTEXT STOPLIST :: ProductStoplist  
     TO Mary ;  

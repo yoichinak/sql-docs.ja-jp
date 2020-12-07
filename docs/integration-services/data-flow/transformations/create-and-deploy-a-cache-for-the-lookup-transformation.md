@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d212a870d0b66108cb1b905249fc8ba2a611a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26f08ee42a1fae6ac5a5d3a50d8b32282c2a2fde
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477756"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192697"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>参照変換用のキャッシュを作成および配置する
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477756"
   
  参照変換は、接続されているデータ ソースの入力列のデータを参照データセットの列と結合することにより参照を実行します。  
   
- キャッシュ接続マネージャーおよびキャッシュ変換を使用して、キャッシュ ファイルを作成します。 詳細については、「 [キャッシュ接続マネージャー](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 」および「 [キャッシュ変換](../../../integration-services/data-flow/transformations/cache-transform.md)」をご覧ください。  
+ キャッシュ接続マネージャーおよびキャッシュ変換を使用して、キャッシュ ファイルを作成します。 詳細については、「 [キャッシュ接続マネージャー](../../connection-manager/cache-connection-manager.md) 」および「 [キャッシュ変換](../../../integration-services/data-flow/transformations/cache-transform.md)」をご覧ください。  
   
  参照変換とキャッシュ ファイルの詳細については、「 [参照変換](../../../integration-services/data-flow/transformations/lookup-transformation.md)」を参照してください。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "88477756"
     > [!NOTE]  
     >  参照変換がキャッシュ接続マネージャーを使用するように構成されている場合、参照データセット内のインデックス列のみ入力列にマップできます。 また、すべてのインデックス列をマップする必要があります。  
   
-     詳細については、「 [キャッシュ接続マネージャー エディター](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)」を参照してください。  
+     詳細については、「 [キャッシュ接続マネージャー エディター](../../connection-manager/cache-connection-manager.md)」を参照してください。  
   
 7.  必要に応じてキャッシュ変換を構成します。  
   
-     詳細については、「[キャッシュ変換エディター &#40;[接続マネージャー] ページ&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)」および「[キャッシュ変換エディター &#40;[マッピング] ページ&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)」を参照してください。  
+     詳細については、「[キャッシュ変換エディター &#40;[接続マネージャー] ページ&#41;](./cache-transform.md)」および「[キャッシュ変換エディター &#40;[マッピング] ページ&#41;](./cache-transform.md)」を参照してください。  
   
 8.  パッケージを実行します。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88477756"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] プロジェクトを開き、そのパッケージを開きます。  
   
-2.  必要に応じて、パッケージ構成を作成します。 詳細については、「 [パッケージ構成を作成する](../../../integration-services/packages/create-package-configurations.md)」を参照してください。  
+2.  必要に応じて、パッケージ構成を作成します。 詳細については、「 [パッケージ構成を作成する](../../packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
 3.  次の操作を行って、キャッシュ ファイルをプロジェクトに追加します。  
   
@@ -89,13 +89,12 @@ ms.locfileid: "88477756"
   
      ソリューション エクスプローラーの **[その他]** フォルダーに、選択したキャッシュ ファイルが表示されます。  
   
-4.  配置ユーティリティを作成するようにプロジェクトを構成し、プロジェクトをビルドします。 詳細については、「 [配置ユーティリティを作成する](../../../integration-services/packages/create-a-deployment-utility.md)」を参照してください。  
+4.  配置ユーティリティを作成するようにプロジェクトを構成し、プロジェクトをビルドします。 詳細については、「 [配置ユーティリティを作成する](../../packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
      マニフェスト ファイル \<*project name*>.SSISDeploymentManifest.xml が作成され、プロジェクトに含まれるその他のファイル、パッケージ、およびパッケージ構成の一覧が示されます。  
   
-5.  パッケージをファイル システムに配置します。 詳細については、「 [配置ユーティリティを使用してパッケージを配置する](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)」を参照してください。  
+5.  パッケージをファイル システムに配置します。 詳細については、「 [配置ユーティリティを使用してパッケージを配置する](../../packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [配置ユーティリティを作成する](../../../integration-services/packages/create-a-deployment-utility.md)  
-  
+ [配置ユーティリティを作成する](../../packages/legacy-package-deployment-ssis.md)  
   

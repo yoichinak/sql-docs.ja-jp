@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: beae593bc4673a1fd31d27c5f807553a2b960872
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 21f3cfcd2f1ac1214f053f89775064796d822a0d
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458357"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891162"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ **Value** および **IsMissing** に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 拡張フィールド プロパティ値をレポートに含めるには、組み込み **Fields** コレクションを使用して名前で拡張フィールド プロパティ値を指定する式を記述します。  
   
  拡張プロパティには、定義済みプロパティとカスタム プロパティがあります。 定義済みプロパティとは、特定のフィールド プロパティ名にマップされ、組み込み **Fields** コレクションを介して名前でアクセスできる、複数のデータ ソースに共通のプロパティです。 カスタム プロパティは、各データ プロバイダーに固有であり、拡張プロパティ名を文字列として扱う構文のみを使用して、組み込み **Fields** コレクションを介してアクセスできます。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリ デザイナーをグラフィカル モードで使用してクエリを定義する場合、定義済みの一連のセル プロパティおよびディメンション プロパティが自動的に MDX クエリに追加されます。 レポート内では、MDX クエリに明記されている拡張プロパティのみを使用できます。 レポートによっては、既定の MDX コマンド テキストを変更して、キューブに定義されている他のディメンションまたはカスタム プロパティを含めることができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースで使用できる拡張フィールドの詳細については、「[プロパティ値の作成および使用 (MDX)](https://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリ デザイナーをグラフィカル モードで使用してクエリを定義する場合、定義済みの一連のセル プロパティおよびディメンション プロパティが自動的に MDX クエリに追加されます。 レポート内では、MDX クエリに明記されている拡張プロパティのみを使用できます。 レポートによっては、既定の MDX コマンド テキストを変更して、キューブに定義されている他のディメンションまたはカスタム プロパティを含めることができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースで使用できる拡張フィールドの詳細については、「[プロパティ値の作成および使用 (MDX)](/analysis-services/multidimensional-models/mdx/mdx-member-properties?viewFallbackFrom=sql-server-ver15)」を参照してください。  
   
 ## <a name="working-with-field-properties-in-a-report"></a>レポートのフィールド プロパティの操作  
  拡張フィールド プロパティには、定義済みプロパティとデータ プロバイダー固有のプロパティがあります。 フィールド プロパティは、データセット用に作成されたクエリに存在しますが、 **レポート データ** ペインのフィールド一覧に表示されません。したがって、フィールド プロパティをレポートのデザイン画面にドラッグすることはできません。 その代わり、フィールドをレポートにドラッグし、フィールドの **Value** プロパティを、使用するプロパティに変更します。 たとえば、キューブからのセル データが既に書式設定されている場合は、 `=Fields!FieldName.FormattedValue`の式を使用することで、FormattedValue フィールド プロパティを使用できます。  
@@ -151,5 +151,4 @@ CELL PROPERTIES
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
-  
   

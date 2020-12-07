@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408118"
 ---
 # <a name="indexes-on-computed-columns"></a>計算列のインデックス
@@ -95,7 +95,7 @@ COLUMNPROPERTY 関数の **IsPrecise** プロパティは、 *computed_column_ex
 
 ## <a name="data-type-requirements"></a>データ型の要件
   
--   計算列で定義された *computed_column_expression* は、 **text**データ型、 **ntext**データ型、または **image** データ型として評価できません。  
+-   計算列で定義された *computed_column_expression* は、 **text** データ型、 **ntext** データ型、または **image** データ型として評価できません。  
 -   **image**、 **ntext**、 **text**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、および **xml** データ型から派生した計算列には、計算列のデータ型をインデックス キー列として使用できる限り、インデックスを作成できます。  
 -   **image**、 **ntext**、および **text** データ型から派生した計算列は、計算列のデータ型を非キー インデックス列として使用できる限り、非クラスター化インデックスの非キー列 (付加列) にすることができます。  
 

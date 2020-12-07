@@ -26,11 +26,11 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c75769df4c504f71dfdd3a724648aea19b66460
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688146"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124209"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,25 +64,25 @@ ALTER SERVICE MASTER KEY
  REGENERATE  
  サービス マスター キーを再生成することを示します。  
   
- OLD_ACCOUNT **='***account_name***'**  
+ OLD_ACCOUNT **='** _account_name_*_'_*  
  古い Windows サービス アカウントの名前を指定します。  
   
 > [!WARNING]  
 >  このオプションは、互換性のために残されています。 使用しないでください。 代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使用してください。  
   
- OLD_PASSWORD **='***password***'**  
+ OLD_PASSWORD **='** _password_*_'_*  
  古い Windows サービス アカウントのパスワードを指定します。  
   
 > [!WARNING]  
 >  このオプションは、互換性のために残されています。 使用しないでください。 代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使用してください。  
   
- NEW_ACCOUNT **='***account_name***'**  
+ NEW_ACCOUNT **='** _account_name_*_'_*  
  新しい Windows サービス アカウントの名前を指定します。  
   
 > [!WARNING]  
 >  このオプションは、互換性のために残されています。 使用しないでください。 代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使用してください。  
   
- NEW_PASSWORD **='***password***'**  
+ NEW_PASSWORD **='** _password_*_'_*  
  新しい Windows サービス アカウントのパスワードを指定します。  
   
 > [!WARNING]  

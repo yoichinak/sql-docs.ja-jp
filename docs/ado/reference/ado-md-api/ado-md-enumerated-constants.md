@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c302bde71ea759a068aaa9e7274ec0182217a0cc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: de1f2579c3b3d219ece16e006abcd9f6ed980715
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987553"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098641"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD の列挙定数
 デバッグを支援するために、ADO MD 列挙定数は各定数の値を一覧表示します。 ただし、この値は純粋にアドバイザリであり、ADO MD のリリースごとに変更される可能性があります。 コードは、列挙定数の実際の値ではなく、名前のみに依存する必要があります。  

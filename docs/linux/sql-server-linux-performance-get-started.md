@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: 2a9c81bf046d30bd997409389ca91d213a01437f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d0a90d6346e4d56516f452b949449b2483fada7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893075"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115418"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>SQL Server on Linux のパフォーマンス機能のチュートリアル
 
@@ -158,7 +158,7 @@ SQL Server は、メモリ最適化テーブルにアクセスするネイティ
 インメモリ OLTP の詳細については、次のトピックを参照してください。
 
 - [クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
-- [インメモリ OLTP への移行](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
+- [インメモリ OLTP への移行](../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)
 - [メモリ最適化を使用した一時テーブルとテーブル変数の高速化](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [メモリ使用量の監視とトラブルシューティング](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
 - [インメモリ OLTP (インメモリ最適化)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)

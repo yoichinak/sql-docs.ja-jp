@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472922"
 ---
 # <a name="user-defined-functions"></a>ユーザー定義関数
@@ -50,7 +50,7 @@ ms.locfileid: "88472922"
   
 ##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> 関数の種類  
 **スカラー関数**  
- ユーザー定義のスカラー関数は、RETURNS 句で定義された型の単一のデータ値を返します。 インライン スカラー関数の場合、返されるスカラー値は単一ステートメントの結果です。 複数ステートメントを持つスカラー関数の場合、関数本体に、単一の値を返す一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含めることができます。 戻り値の型は、 **text**、 **ntext**、 **image**、 **cursor**、 **timestamp**を除く各種のデータ型になります。 
+ ユーザー定義のスカラー関数は、RETURNS 句で定義された型の単一のデータ値を返します。 インライン スカラー関数の場合、返されるスカラー値は単一ステートメントの結果です。 複数ステートメントを持つスカラー関数の場合、関数本体に、単一の値を返す一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含めることができます。 戻り値の型は、 **text**、 **ntext**、 **image**、 **cursor**、 **timestamp** を除く各種のデータ型になります。 
  **[使用例。](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **テーブル値関数**  
@@ -170,7 +170,7 @@ ms.locfileid: "88472922"
     :::column-end:::
 :::row-end:::
  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数では、次の非決定論的な組み込み関数を使用**できません**。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数では、次の非決定論的な組み込み関数を使用 **できません**。  
   
 :::row:::
     :::column:::

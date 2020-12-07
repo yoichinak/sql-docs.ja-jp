@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4b893bd45de93ab0ee934343e16bf6d577f1123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427934"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868076"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -207,7 +207,7 @@ Full-Text Engine では、フルテキスト インデックスを作成する�
   
  セキュリティ上の理由から、フィルターはフィルター デーモン ホスト プロセスによって読み込まれます。 サーバー インスタンスでは、マルチスレッド フィルターに対してはすべてマルチスレッド処理が使用され、シングル スレッド フィルターに対してはすべてシングル スレッド処理が使用されます。 マルチスレッド フィルターを使用するドキュメントにシングル スレッド フィルターを使用するドキュメントが埋め込まれていると、Full-Text Engine では埋め込まれたドキュメントに対してシングル スレッド処理を開始します。 たとえば、PDF ドキュメントが埋め込まれた Word 文書の場合、Full-Text Engine は、Word コンテンツに対してはマルチスレッド プロセスを使用し、PDF の内容に対してはシングル スレッド プロセスを開始します。 ただし、このような環境では、シングル スレッド フィルターが適切に機能しない場合があり、フィルター処理が不安定になることがあります。 このような埋め込みが通例であるような特定の状況では、不安定になった結果、プロセスがクラッシュすることもあります。 クラッシュが発生すると、エラーが発生したドキュメント (たとえば、PDF の内容が埋め込まれた Word 文書) がシングル スレッド フィルター処理に再ルーティングされます。 再ルーティングが頻繁に起こると、フルテキスト インデックス作成処理のパフォーマンスが低下します。  
   
-この問題を回避するには、コンテナー ドキュメント (この例では Word 文書) に対するフィルターとして、シングル スレッド フィルターを設定します。 シングル スレッド フィルターとして設定するには、フィルターの **ThreadingModel** レジストリ値を **Apartment Threaded** に設定します。 シングル スレッド アパートメントの詳細については、ホワイト ペーパー「 [COM スレッド モデルの概要と使用方法](https://go.microsoft.com/fwlink/?LinkId=209159)」を参照してください。  
+この問題を回避するには、コンテナー ドキュメント (この例では Word 文書) に対するフィルターとして、シングル スレッド フィルターを設定します。 シングル スレッド フィルターとして設定するには、フィルターの **ThreadingModel** レジストリ値を **Apartment Threaded** に設定します。 シングル スレッド アパートメントの詳細については、ホワイト ペーパー「 [COM スレッド モデルの概要と使用方法](/previous-versions/ms809971(v=msdn.10))」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
@@ -217,5 +217,4 @@ Full-Text Engine では、フルテキスト インデックスを作成する�
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [フルテキスト インデックスの作成のトラブルシューティング](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2d9b12cb2042b1e67e13057345056cfcb0105f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438404"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725513"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC ドライバーの国際化機能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,15 +55,14 @@ ms.locfileid: "88438404"
 ## <a name="collation-support"></a>照合順序のサポート  
  JDBC Driver 3.0 では、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] と [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でサポートされるすべての照合順序に加え、新しい照合順序 ([!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] で導入された新バージョンの Windows 照合順序名) がサポートされます。  
   
- 照合順序の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックで「[照合順序と Unicode のサポート](https://go.microsoft.com/fwlink/?LinkId=131366)」と「[WWindows 照合順序名 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367)」を参照してください。  
+ 照合順序の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックで「[照合順序と Unicode のサポート](/previous-versions/sql/sql-server-2008-r2/ms143503(v=sql.105))」と「[WWindows 照合順序名 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)」を参照してください。  
   
 ## <a name="using-international-domain-names-idn"></a>国際ドメイン名 (IDN) の使用  
  SQL Server 用 JDBC Driver 6.0 は国際ドメイン名 (IDN) の使用に対応しており、接続で要求されるとき、Unicode serverName を ASCII 互換エンコーディング (Punycode) に変換できます。  IDN がドメイン名システム (DNS) に Punycode 形式 (仕様は RFC 3490 で既定) で ASCII 文字列として保存されている場合、serverNameAsACE プロパティを「true」に設定することで Unicode サーバー名を変換できます。  そのように保存されていなければ、DNS サービスが Unicode 文字を使用できるように構成されている場合、serverNameAsACE プロパティを既定の「false」に設定します。  以前のバージョンの JDBC ドライバーの場合、[Java の IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) メソッドを使って serverName を Punycode に変換してから、そのプロパティを接続のために設定することもできます。  
   
 > [!NOTE]  
->  Windows プラットフォーム以外のために記述されたリゾルバー ソフトウェアの大半はインターネット DSN 標準に基づき、多くの場合、IDN に Punycode 形式を使用します。一方で、プライベート ネットワークの Windows ベースのDNS サーバーはサーバーごとに UTF-8 文字を使用できるように構成できます。  詳細については、「[Unicode 文字サポート](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)」を参照してください。  
+>  Windows プラットフォーム以外のために記述されたリゾルバー ソフトウェアの大半はインターネット DSN 標準に基づき、多くの場合、IDN に Punycode 形式を使用します。一方で、プライベート ネットワークの Windows ベースのDNS サーバーはサーバーごとに UTF-8 文字を使用できるように構成できます。  詳細については、「[Unicode 文字サポート](/previous-versions/windows/it-pro/windows-server-2003/cc738403(v=ws.10))」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
   

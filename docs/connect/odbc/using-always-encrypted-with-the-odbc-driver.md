@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288184"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727393"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 > [!NOTE]
 > Linux および macOS 上でセキュア エンクレーブが設定された Always Encrypted を使用するには、OpenSSL バージョン 1.0.1 以降が必要です。
 
-バージョン 17.4 以降のドライバーでは、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされています。 SQL Server 2019 以降への接続時にエンクレーブの使用を有効にするには、`ColumnEncryption` DSN、接続文字列、または接続属性を、エンクレーブの種類と構成証明プロトコルの名前、および関連する構成証明書のデータに設定します。 バージョン 17.4 では、[仮想化ベースのセキュリティ](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) エンクレーブの種類と[ホスト ガーディアン サービス](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)構成証明プロトコル (`VBS-HGS` で示されます) のみがサポートされます。これを使用するには、次の例のように構成認証サーバーの URL を指定します。
+バージョン 17.4 以降のドライバーでは、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされています。 SQL Server 2019 以降への接続時にエンクレーブの使用を有効にするには、`ColumnEncryption` DSN、接続文字列、または接続属性を、エンクレーブの種類と構成証明プロトコルの名前、および関連する構成証明書のデータに設定します。 バージョン 17.4 では、[仮想化ベースのセキュリティ](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) エンクレーブの種類と[ホスト ガーディアン サービス](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)構成証明プロトコル (`VBS-HGS` で示されます) のみがサポートされます。これを使用するには、次の例のように構成認証サーバーの URL を指定します。
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -383,7 +383,7 @@ ODBC Driver for SQL Server には、次の組み込みのキーストア プロ�
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault プロバイダーを使用する
 
-Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納および管理するための便利なオプションです (特にアプリケーションが Azure でホストされている場合)。 Linux、macOS、および Windows 向けの ODBC Driver for SQL Server には、Azure Key Vault 用の組み込みの列マスター キーストア プロバイダーが含まれています。 Always Encrypted に対して Azure Key Vault を構成する方法の詳細については、[Azure Key Vault の操作手順](/archive/blogs/kv/azure-key-vault-step-by-step)、[Key Vault の概要](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)、および [Azure Key Vault での列マスター キーの作成](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)に関するページを参照してください。
+Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納および管理するための便利なオプションです (特にアプリケーションが Azure でホストされている場合)。 Linux、macOS、および Windows 向けの ODBC Driver for SQL Server には、Azure Key Vault 用の組み込みの列マスター キーストア プロバイダーが含まれています。 Always Encrypted に対して Azure Key Vault を構成する方法の詳細については、[Azure Key Vault の操作手順](/archive/blogs/kv/azure-key-vault-step-by-step)、[Key Vault の概要](/azure/key-vault/general/overview)、および [Azure Key Vault での列マスター キーの作成](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)に関するページを参照してください。
 
 > [!NOTE]
 > ODBC ドライバーでは、Azure Active Directory に対する直接の AKV 認証のみがサポートされます。 AKV に対する Azure Active Directory 認証を使用しており、Active Directory 構成によって、Active Directory フェデレーション サービス エンドポイントに対する認証が要求されている場合は、認証が失敗する可能性があります。
@@ -395,7 +395,7 @@ Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納�
 
 - クライアント ID /シークレット - この方法では、資格情報はアプリケーションクライアント ID とアプリケーション シークレットです。
 
-- マネージド ID (17.5.2+) - システムまたはユーザー割り当てについては、「[Azure リソースのマネージド ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/)」を参照してください。
+- マネージド ID (17.5.2+) - システムまたはユーザー割り当てについては、「[Azure リソースのマネージド ID](/azure/active-directory/managed-identities-azure-resources/)」を参照してください。
 
 ドライバーが AKV に格納されている CMK を列暗号化に使用できるようにするには、次の接続文字列限定のキーワードを使用します。
 

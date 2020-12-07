@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1fc4ea656830eb779b80b22a15a74dfd799781aa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7b8e0e8df7bd2a5453299751df682e0c33502c25
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178579"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585074"
 ---
 # <a name="python-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Python のチュートリアル:二項分類を使用して NYC タクシーの料金を予測する
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -29,7 +29,7 @@ SQL プログラマー向けのこの 5 部構成のチュートリアル シリ
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-SQL プログラマー向けのこの 5 部構成のチュートリアル シリーズでは、[Azure SQL Managed Instance の Machine Learning Services (プレビュー)](/azure/azure-sql/managed-instance/machine-learning-services-overview) での Python 統合について説明します。
+SQL プログラマー向けのこの 5 部構成のチュートリアル シリーズでは、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) での Python 統合について説明します。
 ::: moniker-end
 
 SQL Server でサンプル データベースを使用して、Python ベースの機械学習ソリューションをビルドしてデプロイします。 T-SQL、Azure Data Studio または SQL Server Management Studio、およびデータベース インスタンスを SQL 機械学習と Python 言語サポートと共に使用します。

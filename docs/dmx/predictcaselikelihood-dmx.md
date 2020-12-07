@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b182e4a3a842065152b050ed1b428d71b7d0cf07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a08ec4809b281205386abad429afe339e0dbb1d1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426124"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727712"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood 度 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -81,9 +81,8 @@ NATURAL PREDICTION JOIN
  これらの結果の違いは、正規化の影響を示します。 **Caselikelihood**の生の値は、ケースの確率が約20% であることを示します。しかし、結果を正規化すると、ケースの確率が非常に低いことが明らかになります。  
   
 ## <a name="see-also"></a>参照  
- [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
  [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
-  
   

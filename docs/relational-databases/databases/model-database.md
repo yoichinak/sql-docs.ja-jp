@@ -16,10 +16,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465422"
 ---
 # <a name="model-database"></a>model データベース
@@ -94,7 +94,7 @@ SQL Server 2014 での既定のファイル拡張値については、「[model 
   
 -   照合順序の変更。 既定の照合順序はサーバーの照合順序です。  
   
--   データベース所有者の変更。 **model** は **sa**が所有します。  
+-   データベース所有者の変更。 **model** は **sa** が所有します。  
   
 -   データベースの削除。  
   
@@ -112,7 +112,7 @@ SQL Server 2014 での既定のファイル拡張値については、「[model 
   
 -   プライマリ ファイル グループの READ_ONLY への設定。  
   
--   WITH ENCRYPTION オプションを使用したプロシージャ、ビュー、またはトリガーの作成。 暗号化キーは、オブジェクトが作成されたデータベースに関連付けられています。 **model** データベースで作成された暗号化オブジェクトは、 **model**データベースのみで使用できます。  
+-   WITH ENCRYPTION オプションを使用したプロシージャ、ビュー、またはトリガーの作成。 暗号化キーは、オブジェクトが作成されたデータベースに関連付けられています。 **model** データベースで作成された暗号化オブジェクトは、 **model** データベースのみで使用できます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [システム データベース](../../relational-databases/databases/system-databases.md)  

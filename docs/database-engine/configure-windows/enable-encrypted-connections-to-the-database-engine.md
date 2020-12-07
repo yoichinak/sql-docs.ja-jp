@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027293"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670972"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 
@@ -74,7 +74,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 > フェールオーバー クラスターで暗号化を使用する場合、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全修飾 DNS 名を使用してサーバー証明書をインストールする必要があります。 たとえば、***test1.\*\<your company>\*.com*** および ***test2.\*\<your company>\*.com*** というノードを持つ 2 ノードのクラスターと、***virtsql*** という仮想サーバーがあるとします。この場合、***virtsql.\*\<your company>\*.com*** の証明書を両方のノードにインストールする必要があります。 **[SQL Server ネットワークの構成]** の **[virtsql のプロトコル]** プロパティ ボックスの **[強制的に暗号化]** オプションを **[はい]** に設定します。
 
 > [!NOTE]
-> Azure VM 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への Azure Search インデクサーからの暗号化接続を作成するには、「[Azure VM での Azure Search インデクサーから SQL Server への接続の構成](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)」を参照してください。 
+> Azure VM 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への Azure Search インデクサーからの暗号化接続を作成するには、「[Azure VM での Azure Search インデクサーから SQL Server への接続の構成](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers)」を参照してください。 
 
 ## <a name="certificate-requirements"></a>証明書の要件
 
@@ -126,7 +126,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 
 > [!IMPORTANT]
 > 運用環境では、証明機関から信頼された証明書を取得することをお勧めします。    
-> テスト目的のため、自己署名証明書を使用することもできます。 自己署名証明書を作成するには、[Powershell コマンドレット New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) または [certreq コマンド](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1)に関するページを参照してください。
+> テスト目的のため、自己署名証明書を使用することもできます。 自己署名証明書を作成するには、[Powershell コマンドレット New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) または [certreq コマンド](/windows-server/administration/windows-commands/certreq_1)に関するページを参照してください。
   
 ## <a name="install-across-multiple-servers"></a>複数のサーバーにまたがるインストール
 
@@ -187,4 +187,4 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 
 + [Microsoft SQL Server の TLS 1.2 サポート](https://support.microsoft.com/kb/3135244)     
 + [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-+ [Powershell コマンドレット New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)
++ [Powershell コマンドレット New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

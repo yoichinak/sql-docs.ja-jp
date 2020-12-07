@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff086556b507c0d09750b7ab27671a7b1cfaf496
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7e106fa85ac8832782c339b115969e2ca8d4fad4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89522233"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891532"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent クラス
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ class SQLErrorLogEvent
 |FileName|データ型: **文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> エラー ログ ファイルの名前です。|  
 |InstanceName|データ型: **文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
 |LogDate|データ型: **datetime**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> イベントがログ ファイルに記録された日時。|  
-|メッセージ|データ型: **文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベント メッセージ。|  
+|Message|データ型: **文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベント メッセージ。|  
 |ProcessInfo|データ型: **文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベントのソース サーバー プロセス ID (SPID) に関する情報。|  
   
 ## <a name="remarks"></a>解説  
@@ -79,7 +79,7 @@ WScript.Echo "Instance Name: " & logEvent.InstanceName & vbNewLine _
 Next  
 ```  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
  WQL ステートメントで *InstanceName* または *FileName* が指定されていない場合、クエリは既定のインスタンスと現在のログファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) 上の現在のログ ファイル (ERRORLOG) に含まれるすべてのログ イベントを返します。  
   
 ```  
@@ -95,10 +95,9 @@ Next
   
      ** \<Drive> : Server\MSSQL13** **。 \<InstanceName>\MSSQL\Log**  
   
- ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](https://go.microsoft.com/fwlink/?LinkId=178848)」を参照してください。  
+ ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SqlErrorLogFile クラス](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

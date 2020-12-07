@@ -20,12 +20,12 @@ ms.assetid: 687f3284-2849-4853-8a5c-fc936deceae0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c44e41086b436e046745da2cde86918b383c9eba
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d1b2b7fde378416f83bf749f4be5020ab4aedf1
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542106"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753926"
 ---
 # <a name="table_constraints-transact-sql"></a>TABLE_CONSTRAINTS (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,16 +42,15 @@ ms.locfileid: "89542106"
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|テーブル修飾子。|  
 |**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブルを含むスキーマの名前。<br /><br /> <strong> \* \* 重要 \* : \* </strong>オブジェクトのスキーマを検索する信頼できる方法は、sys. objects カタログビューに対してクエリを実行することだけです。|  
 |**TABLE_NAME**|**sysname**|テーブル名。|  
-|**CONSTRAINT_TYPE**|**varchar (** 11 **)**|制約の種類:<br /><br /> CHECK<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
+|**CONSTRAINT_TYPE**|**varchar (** 11 **)**|制約の種類:<br /><br /> チェック<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
 |**IS_DEFERRABLE**|**varchar (** 2 **)**|制約チェックを遅延できるかどうかを指定します。 常に NO が返されます。|  
 |**INITIALLY_DEFERRED**|**varchar (** 2 **)**|制約チェックが最初に延期されているかどうかを示します。 常に NO が返されます。|  
   
 ## <a name="see-also"></a>参照  
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys.key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys.check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)  
-  
   

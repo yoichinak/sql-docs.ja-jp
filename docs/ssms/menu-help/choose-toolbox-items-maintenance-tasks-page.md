@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2cc71bd272c0f2865d2e4491ff9a373e897b2bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 499e4f4c2c7361760d344c71c46ec98298762ee9
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492000"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364744"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>[ツールボックス アイテムの選択] ([メンテナンス タスク] ページ)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **[ツールボックス アイテムの選択]** ダイアログ ボックスのこのタブには、コンピューターに登録されているメンテナンス タスク コンポーネントがすべて一覧表示され、ツールボックスに表示されているメンテナンス タスクを変更できます。 **[ツールボックス アイテムの選択]** ダイアログ ボックスは、 **[ツール]** メニューから開けます。 コンポーネントの一覧を並べ替えるには、列見出しを選択します。  
   
-## <a name="options"></a>オプション  
 **[メンテナンス タスク]** タブには次の列が表示されます。  
   
 **名前**  
@@ -36,15 +35,14 @@ ms.locfileid: "88492000"
 **パス**  
 コンポーネントの完全なパスが表示されます。 製品に付属していた既定のコンポーネントを特定するには、この列を使用して並べ替えた後、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio のインストール パスを探します。  
   
-**更新日時**  
+**[最終更新]**  
 コンポーネントが最後に更新された日付が表示されます。  
   
 名前をクリックすると、 **[言語]** ボックスおよび **[バージョン]** ボックスにコンポーネントの属性とアイコンが表示されます。  
   
-## <a name="options"></a>オプション  
 **Language**  
 コンポーネントの言語です。  
   
-**Version**  
+**バージョン**  
 コンポーネントのバージョンです。  
   

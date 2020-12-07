@@ -22,11 +22,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 680486ac7d743347df759c96f31b4b7925881a5d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117206"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119432"
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ ASIN ( float_expression )
 
 ## <a name="arguments"></a>引数
 *float_expression*  
-**float** 型、または暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 -1.00 ～ 1.00 の範囲の値のみが有効です。 この範囲外の値を指定すると、NULL が返され、ASIN がドメイン エラーを報告します。
+**float** 型、または暗黙的に float 型に変換できる [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 -1.00 ～ 1.00 の範囲の値のみが有効です。 この範囲外の値を指定すると、NULL が返され、ASIN がドメイン エラーを報告します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**

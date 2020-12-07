@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 98c7f5b8c7cc634212769f910152322a94054d66
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 18cd0c279493dcb41d043d3f76d6debe71eb402c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178559"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194475"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Python のチュートリアル:T-SQL を使用して Python モデルをトレーニングし保存する
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -145,7 +145,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
 
 このストアド プロシージャは、新しい **revoscalepy** パッケージを使用します。これは Python 用の新しいパッケージです。 これには、R 言語の **RevoScaleR** パッケージに提供されているものと同様のオブジェクト、変換、およびアルゴリズムが含まれています。 
 
-**revoscalepy** を使用すると、リモート コンピューティング コンテキストの作成、コンピューティング コンテキスト間でのデータ移動、データ変換、および、ロジスティック、線形回帰、デシジョンツリーなどの一般的アルゴリズムを使用した、予測モデルのトレーニングを行うことができます。 詳細については、[SQL Server の revoscalepy モジュール](../python/ref-py-revoscalepy.md)および [revoscalepy 関数参照](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)に関するページを参照してください。
+**revoscalepy** を使用すると、リモート コンピューティング コンテキストの作成、コンピューティング コンテキスト間でのデータ移動、データ変換、および、ロジスティック、線形回帰、デシジョンツリーなどの一般的アルゴリズムを使用した、予測モデルのトレーニングを行うことができます。 詳細については、[SQL Server の revoscalepy モジュール](../python/ref-py-revoscalepy.md)および [revoscalepy 関数参照](/r-server/python-reference/revoscalepy/revoscalepy-package)に関するページを参照してください。
 
 1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で新しい**クエリ** ウィンドウを開き、次のステートメントを実行して、ストアド プロシージャ _TrainTipPredictionModelRxPy_ を作成します。  ストアド プロシージャには、既に入力データの定義が含まれているため、入力クエリを提供する必要はありません。
 

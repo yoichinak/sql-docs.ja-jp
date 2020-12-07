@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 554622ce583bb314609c9000b1398ffbca4b6718
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: bff06284226c67a0f784b9e77bbe85dd056edb09
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458226"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891142"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB の接続の種類 (SSRS)
   OLE DB データ プロバイダーのデータを含めるには、種類が OLE DB のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] OLE DB データ処理拡張機能に基づいています。  
@@ -58,7 +58,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  目的のデータを正常に取得するには、データ プロバイダーでサポートされるクエリ構文を使用する必要があります。 サポートされるパラメーターはデータ プロバイダーによって異なります。 詳細については、使用するデータ プロバイダー向けのトピックを参照してください。 次に例を示します。  
   
--   [Analysis Services OLE DB Provider &#40;Analysis Services - 多次元データ&#41;](https://docs.microsoft.com/analysis-services/instances/data-providers-used-for-analysis-services-connections
+-   [Analysis Services OLE DB Provider &#40;Analysis Services - 多次元データ&#41;](/analysis-services/instances/data-providers-used-for-analysis-services-connections
 )  
    
   
@@ -100,5 +100,4 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

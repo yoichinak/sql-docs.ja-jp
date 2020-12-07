@@ -5,18 +5,18 @@ description: この 4 部構成のチュートリアル シリーズのパート
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d56b3cb50c268a2af74ec4bfacebf8049a4518d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 62c7a271a7caf3afa588a48c0ac54ef86a38f785
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178459"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870338"
 ---
 # <a name="tutorial-build-a-clustering-model-in-r-with-sql-machine-learning"></a>チュートリアル:SQL 機械学習を使用して R でクラスタリング モデルをビルドする
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88178459"
 
 ## <a name="prerequisites"></a>前提条件
 
-* このチュートリアル シリーズのパート 3 は、[**パート 1** ](r-clustering-model-introduction.md)の前提条件を満たし、[**パート 2** ](r-clustering-model-prepare-data.md)の手順を完了していることを前提としています。
+* このチュートリアル シリーズのパート 3 は、[**パート 1**](r-clustering-model-introduction.md)の前提条件を満たし、[**パート 2**](r-clustering-model-prepare-data.md)の手順を完了していることを前提としています。
 
 ## <a name="define-the-number-of-clusters"></a>クラスターの数を定義する
 

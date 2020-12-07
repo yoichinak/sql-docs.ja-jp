@@ -19,14 +19,14 @@ helpviewer_keywords:
 - BEGIN TRAN...WITH MARK statement
 - two-phase commit
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7d456054b4edd45b15182a511235e640a03337b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4d07b3b4d85f6ef0e62709f66ea5c738a0dc8110
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631235"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129005"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する
 
@@ -70,7 +70,7 @@ ms.locfileid: "85631235"
   
 -   トランザクション マークはログ領域を使用するので、データベース復旧ストラテジにおいて重要な役割を果たすトランザクションだけに使用する必要があります。  
   
--   マークされたトランザクションのコミットが完了したら、 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) の **logmarkhistory**テーブルに 1 行が挿入されます。  
+-   マークされたトランザクションのコミットが完了したら、 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) の **logmarkhistory** テーブルに 1 行が挿入されます。  
   
 -   マークされたトランザクションが同じデータベース サーバーまたは異なるサーバー上の複数のデータベースと関係している場合は、影響を受けたすべてのデータベースのログにそのマークが記録される必要があります。  
   

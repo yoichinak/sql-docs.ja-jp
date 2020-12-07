@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 478c8c846f075c6d9a9705e978a53236a65e3536
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 525e0b30fd68aa45425849b9f2e144621b92286f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467591"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92187687"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88467591"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
@@ -66,7 +65,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ## <a name="examples"></a>例  
  次の例では、カーソルをオープンし、すべての行をフェッチします。  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LastName, FirstName  
 FROM AdventureWorks2012.HumanResources.vEmployee  

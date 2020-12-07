@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 71c6a40db00734c487ff8de5e97bcd4d7c7b5d4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f2d3a53cb12a0d7762137a44cc12ec6f06a5d81
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492271"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036701"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>変数値ファイルの作成 (SybaseToSQL)
 変数値ファイルは、などのコマンドのパラメーター値を構成する XML ファイルです。サーバーの移行から別のサーバーへの移行に頻繁に変更される転送元または転送先のサーバー名を指定します。 多数のデータベースの移行が行われると、各ソースサーバーの値を格納するための複数の変数ファイルが作成され、コマンドラインで **-v** スイッチを使用してマスタースクリプトファイルに参照されます。 これにより、複数の変数ファイルの変数値を使用して、いくつかのスクリプトファイルで静的な値を保持することができます。  
@@ -94,5 +94,4 @@ ms.locfileid: "88492271"
 コンソールを操作する次の手順では、[サーバー接続ファイル &#40;SybaseToSQL&#41;を作成し](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)ます。  
   
 ## <a name="see-also"></a>参照  
-[サーバーファイルを作成する (Sybase)](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
-  
+[サーバーファイルを作成する (Sybase)](./creating-the-server-connection-files-sybasetosql.md)  

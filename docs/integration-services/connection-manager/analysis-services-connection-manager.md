@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc6be0059b1e49c5db9cf2ced79e66c6b523b5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 633dd8288a9168422d0e5187caa1265615911a8a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478274"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130613"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 接続マネージャー
 
@@ -31,10 +31,10 @@ ms.locfileid: "88478274"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクや [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクなどのタスクと、データ マイニング モデル トレーニング変換先などの変換先は、どちらも [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを使用します。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データべースの詳細については、「[多次元モデル データベース &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データべースの詳細については、「[多次元モデル データベース &#40;SSAS&#41;](/analysis-services/multidimensional-models/multidimensional-model-databases-ssas)」を参照してください。  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Analysis Services 接続マネージャーの構成  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーをパッケージに追加すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、実行時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続として解決される接続マネージャーが作成され、接続マネージャーのプロパティが設定され、接続マネージャーがパッケージの **Connections** コレクションに追加されます。 接続マネージャーの **ConnectionManagerType** プロパティは、 **MSOLAP100**に設定されます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーをパッケージに追加すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、実行時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続として解決される接続マネージャーが作成され、接続マネージャーのプロパティが設定され、接続マネージャーがパッケージの **Connections** コレクションに追加されます。 接続マネージャーの **ConnectionManagerType** プロパティは、 **MSOLAP100** に設定されます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーは、次の方法で構成できます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "88478274"
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続する場合、認証モードを指定します。  
 
 > [!NOTE]    
->  Azure Data Factory (ADF) で SSIS を使用していて、Azure Analysis Services (AAS) インスタンスに接続する場合は、Multi-Factor Authentication (MFA) が有効になっているアカウントを使用することはできません。代わりに、対話機能/MFA を必要としないアカウント、またはサービス プリンシパルを使用する必要があります。 サービス プリンシパルを使用するには、[ここ](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)を参照してサービス プリンシパルを作成し、サーバー管理者ロールを割り当てます。その後、**[特定のユーザー名とパスワードを使用する]** を選択して、接続マネージャーでサーバーにログオンし、最後に「`User name: app:YourApplicationID`」と「`Password: YourAuthorizationKey`」を入力します。
+>  Azure Data Factory (ADF) で SSIS を使用していて、Azure Analysis Services (AAS) インスタンスに接続する場合は、Multi-Factor Authentication (MFA) が有効になっているアカウントを使用することはできません。代わりに、対話機能/MFA を必要としないアカウント、またはサービス プリンシパルを使用する必要があります。 サービス プリンシパルを使用するには、[ここ](/azure/analysis-services/analysis-services-service-principal)を参照してサービス プリンシパルを作成し、サーバー管理者ロールを割り当てます。その後、**[特定のユーザー名とパスワードを使用する]** を選択して、接続マネージャーでサーバーにログオンし、最後に「`User name: app:YourApplicationID`」と「`Password: YourAuthorizationKey`」を入力します。
   
 -   接続マネージャーから作成される接続を、実行時に保持するかどうかを指定します。  
   
@@ -56,5 +56,4 @@ ms.locfileid: "88478274"
 -   [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cd8b8d0ecf3e7be9a8a68710c32e15b65497e173
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 83abd087cab67c0b048ed6333e912ac1edc76f7c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480972"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810161"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>リモート BLOB ストア (RBS) [SQL Server]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "89480972"
  多数のサード パーティのストレージ ソリューション ベンダーが、これらの標準 API に準拠し、さまざまなストレージ プラットフォームで BLOB ストレージをサポートする RBS プロバイダーを開発しています。  
   
 ## <a name="rbs-requirements"></a>RBS 要件  
- - RBS では、BLOB メタデータが格納されている主なデータベース サーバー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise が必要です。  ただし、指定された FILESTREAM プロバイダーを使用する場合は、BLOB 自体を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard に格納できます。 RBS が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するには、 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は ODBC ドライバー バージョン 11 以上、 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]の場合は ODBC ドライバー バージョン 13 以上が必要です。 ドライバーは、「 [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)」(SQL Server 用の ODBC ドライバーをダウンロードする) で入手できます。    
+ - RBS では、BLOB メタデータが格納されている主なデータベース サーバー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise が必要です。  ただし、指定された FILESTREAM プロバイダーを使用する場合は、BLOB 自体を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard に格納できます。 RBS が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するには、 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は ODBC ドライバー バージョン 11 以上、 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]の場合は ODBC ドライバー バージョン 13 以上が必要です。 ドライバーは、「 [Download ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)」(SQL Server 用の ODBC ドライバーをダウンロードする) で入手できます。    
   
  RBS には、RBS を使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで格納できる FILESTREAM プロバイダーが含まれています。 RBS を使用して BLOB を別のストレージ ソリューションに格納する場合は、そのストレージ ソリューション用に開発されたサード パーティの RBS プロバイダーを使用するか、RBS API を使用してカスタム RBS プロバイダーを開発する必要があります。 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)には、NTFS ファイル システムに BLOB を格納するサンプル プロバイダーが学習用リソースとして用意されています。  
   
 ## <a name="rbs-security"></a>RBS セキュリティ  
- SQL リモート BLOB ストレージ チームのブログはこの機能に関する適切な情報源です。 「 [RBS Security Model (RBS セキュリティ モデル)](https://docs.microsoft.com/archive/blogs/sqlrbs/rbs-security-model)」で、RBS セキュリティ モデルに関する投稿を参照してください。  
+ SQL リモート BLOB ストレージ チームのブログはこの機能に関する適切な情報源です。 「 [RBS Security Model (RBS セキュリティ モデル)](/archive/blogs/sqlrbs/rbs-security-model)」で、RBS セキュリティ モデルに関する投稿を参照してください。  
   
 ### <a name="custom-providers"></a>カスタム プロバイダー  
  カスタム プロバイダーを使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の外部に格納する場合は、カスタム プロバイダーが使用するストレージ メディアに適した権限と暗号化オプションで格納された BLOB が保護されていることを確認してください。  
@@ -89,7 +89,7 @@ ms.locfileid: "89480972"
  [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) で入手できる RBS サンプルでは、RBS アプリケーションの開発方法とカスタム RBS プロバイダーの開発およびインストール方法を示します。  
   
  **RBS ブログ**  
- [RBS ブログ](https://docs.microsoft.com/archive/blogs/sqlrbs/) には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
+ [RBS ブログ](/archive/blogs/sqlrbs/) には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
   
 ##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> キー ローテーションのスクリプト  
  この例では、 `sp_rotate_rbs_symmetric_credential_key` というストアド プロシージャを作成し、現在使用している RBS 資格情報ストアの対称キーを、  
@@ -241,5 +241,4 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
 ## <a name="see-also"></a>参照  
 [リモート BLOB ストアと AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
-  
   

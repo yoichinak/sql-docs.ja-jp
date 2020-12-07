@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 8ad83932fc6d02986f715a35fefbfedba5f320c8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728332"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080751"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>方法:SQL Server 認証を使用して接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +50,7 @@ SQL Server 認証を使用して SQL Server に接続する場合は、次の予
 > [!NOTE]  
 > 接続を確立するときに、ユーザー ID とパスワードに加え、接続属性を設定できます。 サポートされている接続属性の一覧については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="sqlsrv-example"></a>SQLSRV の例  
 次の例では、SQL Server 認証で SQLSRV ドライバーを使用して、SQL Server のローカル インスタンスに接続します。 *UID* と *PWD* の必須接続属性の値は、*C:\AppData* ディレクトリ内のアプリケーション固有のテキスト ファイル (*uid.txt* と *pwd.txt*) から取得されます。 接続が確立されると、ユーザーのログインを確認するためにサーバーが照会されます。  
   
 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
@@ -95,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="pdo_sqlsrv-example"></a>PDO_SQLSRV の例  
 このサンプルでは、PDO_SQLSRV ドライバーを使用して、SQL Server 認証で接続する方法を示します。  
   
 ```  

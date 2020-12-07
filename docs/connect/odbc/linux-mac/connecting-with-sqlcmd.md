@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 586e55397297277130b61b2e6468dac0ada7b38a
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 5d69f1a19e0494b7426eebbac7d8732794f90be8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807099"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987908"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) ユーティリティは、Linux と macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用できます。
+[sqlcmd](../../../tools/sqlcmd-utility.md) ユーティリティは、Linux と macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用できます。
   
 次のコマンドは、Windows 認証 (Kerberos) と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証の使用方法をそれぞれ示しています。
   
@@ -215,9 +215,13 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 システム DSN は、ODBC SysConfigDir ディレクトリ (標準インストールでは `/etc/odbc.ini`) 内の `odbc.ini` ファイルに格納されます。 ユーザー DSN は、ユーザーのホーム ディレクトリ (`~/.odbc.ini`) 内の `.odbc.ini` に格納されます。
 
+Windows システムでは、システム DNS とユーザー DNS はレジストリに格納され、odbcad32.exe を介して管理されます。 ファイル DSN は、bcp および sqlcmd によるサポートの対象ではありません。
+
 ドライバーがサポートするエントリの一覧については、「[DSN と接続文字列のキーワードと属性](../dsn-connection-string-attribute.md)」を参照してください。
 
-DSN では DRIVER エントリのみが必要ですが、サーバーに接続するには、`sqlcmd` または `bcp` が SERVER エントリ内の値を必要とします。  
+DSN では、DRIVER エントリのみが必要ですが、リモート サーバーに接続するには、`sqlcmd` または `bcp` が SERVER 要素内に値を必要とします。 SERVER 要素が空であるか、DSN に存在しない場合は、`sqlcmd` と `bcp` によって、ローカルシステム上の既定のインスタンスへの接続が試行されます。
+
+Windows システムで bcp を使用する場合、[!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] 以前では、SQL Native Client 11 ドライバー (sqlncli11.dll) が必要であり、[!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 以降では、Microsoft ODBC Driver 17 for SQL Server ドライバー (msodbcsql17.dll) が必要です。  
 
 DSN と `sqlcmd` または `bcp` コマンド ラインの両方で同じオプションが指定されている場合は、コマンドライン オプションが、DSN で使用される値をオーバーライドします。 たとえば、DSN に DATABASE エントリがあり、`sqlcmd` コマンドラインに **-d** が含まれる場合、 **-d** に渡される値が使用されます。 DSN で **Trusted_Connection=yes** が指定されている場合は、Kerberos 認証が使用され、ユーザー名 ( **-U**) とパスワード ( **-P**) は無視されます (指定されている場合)。
 

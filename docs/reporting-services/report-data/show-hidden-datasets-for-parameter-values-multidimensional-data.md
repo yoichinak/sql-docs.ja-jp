@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 610ca1c3b7dbd5660a98dec4a91ce4f9988a5108
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4118c7ad1cccb46a08ec200eef223f62010cf45e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455254"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890821"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>多次元データのパラメーター値の非表示データセットの表示
   既定ではレポート データ ペインに表示されない、自動的に生成されたデータセット (非表示のデータセット) がレポートに含まれる場合があります。 これらのデータセットは次のような場合に作成されます。  
@@ -36,8 +36,7 @@ ms.locfileid: "86455254"
   
 ## <a name="see-also"></a>参照  
  [クエリ デザイン ツール (SSRS)](query-design-tools-ssrs.md)   
- [Reporting Services クエリ デザイナー](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Reporting Services クエリ デザイナー](/previous-versions/sql/)   
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
-  
   

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c03bf004b95e4321cb93198750a798a019a1eb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a741612f0afd305edaf4cc289f1841eb9b353d8a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495455"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129962"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL を使用して SSMS から SSIS プロジェクトを配置する
 
@@ -28,7 +28,7 @@ SQL Server Management Studio は、SQL Server から SQL Database まで、SQL �
 
 ## <a name="prerequisites"></a>前提条件
 
-始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
+始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
@@ -103,4 +103,4 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)
     - [コマンド プロンプトから SSIS パッケージを実行する](./ssis-quickstart-run-cmdline.md)
     - [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
-    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md) 
+    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md)

@@ -16,15 +16,15 @@ ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8d609ec57f47cf3df061f286bd663c0a8431047
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465454"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125222"
 ---
 # <a name="database-mail-external-program"></a>データベース メール外部プログラム
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  データベース メール外部実行可能ファイルは **DatabaseMail.exe**です。このファイルは、 **インストール環境の** MSSQL\Binn ディレクトリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にあります。 データベース メールでは、処理する電子メール メッセージがあるときに、Service Broker のアクティブ化を使用して外部プログラムが起動されます。 次に、データベース メールによって外部プログラムの 1 つのインスタンスが開始されます。 外部プログラムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のサービス アカウントのセキュリティ コンテキストで実行されます。  
+  データベース メール外部実行可能ファイルは **DatabaseMail.exe** です。このファイルは、 **インストール環境の** MSSQL\Binn ディレクトリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にあります。 データベース メールでは、処理する電子メール メッセージがあるときに、Service Broker のアクティブ化を使用して外部プログラムが起動されます。 次に、データベース メールによって外部プログラムの 1 つのインスタンスが開始されます。 外部プログラムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のサービス アカウントのセキュリティ コンテキストで実行されます。  
   
  **このトピックの内容**  
   

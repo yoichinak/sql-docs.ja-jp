@@ -22,12 +22,12 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33134b3f32620ce68edf844737e9e6c1814f1fcb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48ea2ba928333eef0980ad199e33f93f94a859c6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459231"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195436"
 ---
 # <a name="unary-operators---positive"></a>単項演算子 - 正号
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -47,7 +47,6 @@ ms.locfileid: "88459231"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 + numeric_expression  
 ```  
   
@@ -68,8 +67,8 @@ ms.locfileid: "88459231"
 ### <a name="a-setting-a-variable-to-a-positive-value"></a>A. 変数に正の値を設定する  
  次の例では、変数を正の値に設定します。  
   
-```  
-DECLARE @MyNumber decimal(10,2);  
+```sql  
+DECLARE @MyNumber DECIMAL(10,2);  
 SET @MyNumber = +123.45;  
 SELECT @MyNumber;  
 GO  
@@ -87,10 +86,10 @@ GO
 ### <a name="b-using-the-unary-plus-operator-with-a-negative-value"></a>B. 単項プラス演算子を負の値と共に使用する  
  次の例では、単項プラス演算子を負の式と共に使用した場合と、同じ式に対して ABS() 関数を使用した場合とを示しています。 単項プラス演算子は式に影響を与えませんが、ABS 関数は式の値を正の値にして返します。  
   
-```  
+```sql  
 USE tempdb;  
 GO  
-DECLARE @Num1 int;  
+DECLARE @Num1 INT;  
 SET @Num1 = -5;  
 SELECT +@Num1, ABS(@Num1);  
 GO  

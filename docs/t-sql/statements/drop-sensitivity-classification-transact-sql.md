@@ -24,16 +24,16 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - data classification
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 347573e5eb507ca1e607382e2df0dd07763f7689
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: " >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
+ms.openlocfilehash: 6b09e5e60bd7ac1d02f46d191fccd0e2142f8d75
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88304682"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131108"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 1 つ以上のデータベース列から秘密度の分類に関するメタデータを削除します。
 

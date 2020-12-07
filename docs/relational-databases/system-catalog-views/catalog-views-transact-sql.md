@@ -24,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3af547afd4b35c10358ce24be2fbcce96801144
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9d139633c9f1e38f7509696ce228c6e0559da52f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546891"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038302"
 ---
 # <a name="system-catalog-views-transact-sql"></a>システムカタログビュー (Transact-sql)
 
@@ -46,7 +46,7 @@ ms.locfileid: "89546891"
 - 派生ビューには列のスーパーセットと行のサブセットが含まれます。
 
 > [!IMPORTANT]
-> 今後の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] のリリースでは、列のリストの末尾に列を追加することにより、システム カタログ ビューの定義が拡張される可能性があります。 \*返される列の数が変更され、アプリケーションが中断される可能性があるため、実稼働コードで SELECT FROM *sys. catalog_view_name*を使用することをお勧めします。
+> 今後の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] のリリースでは、列のリストの末尾に列を追加することにより、システム カタログ ビューの定義が拡張される可能性があります。 \*返される列の数が変更され、アプリケーションが中断される可能性があるため、実稼働コードで SELECT FROM *sys.catalog_view_name*を使用することをお勧めします。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカタログ ビューは、次のカテゴリに分類されます。
 
@@ -109,7 +109,7 @@ ms.locfileid: "89546891"
         
         [空間データのカタログ ビュー](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
-        [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+        [Azure Synapse Analytics と Parallel Data Warehouse のカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
         
         [Stretch Database カタログビュー &#40;Transact-sql&#41;](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         

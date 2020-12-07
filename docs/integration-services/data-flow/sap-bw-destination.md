@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1b1398c6884fd154d4f142f10a6d14844a3e7875
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d46d3598bb309029319c1b74b467983e681b96ac
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495795"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92197056"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 転送先
 
@@ -88,7 +88,7 @@ ms.locfileid: "88495795"
   
  変換先を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
- SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](https://go.microsoft.com/fwlink/?LinkID=137090)」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
+ SAP BW 接続マネージャー、変換元、変換先の構成および使用方法の詳細については、ホワイト ペーパー「 [SAP BI 7.0 を使用した SQL Server 2008 Integration Services](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100))」を参照してください。 このホワイト ペーパーには、SAP BW で必要なオブジェクトの構成方法についても説明されています。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>SSIS デザイナーを使用して変換先を構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる SAP BW 変換先のプロパティの詳細については、次のトピックのいずれかを参照してください。  
@@ -121,5 +121,4 @@ ms.locfileid: "88495795"
   
 ## <a name="see-also"></a>関連項目  
  [Microsoft Connector for SAP BW のコンポーネント](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

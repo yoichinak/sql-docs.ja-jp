@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ea0b098296ef5e4617fffc1f172ecdb30a94d0e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: df897731d0172a2d496446e3ee6a12d6320a0d0b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248106"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934741"
 ---
 # <a name="url-access-ssrs"></a>URL アクセス (SSRS)
   SQL Server Reporting Services (SSRS) のレポート サーバーの URL アクセスにより、URL 要求を使用してレポート サーバーにコマンドを送信できます。 たとえば、ネイティブ モードのレポート サーバーや SharePoint ライブラリのレポートの表示をカスタマイズすることができます。 特定のレポート パラメーター値のセットを使用してレポートを表示したり、レポートの関心のある特定ページを表示することがあります。 この情報を、事前に定義された URL アクセス パラメーターを使用して URL にカプセル化することができます。 表示形式またはレポート ビューアーのルック アンド フィールのパラメーターを埋め込むことで、レポート サーバーによるレポートの処理方法をさらにカスタマイズできます。 その後、この URL を電子メールまたは Web ページに直接貼り付けて、他のユーザーがブラウザーから同じ方法でレポートにアクセスできるようにすることができます。  
@@ -57,7 +57,7 @@ reportpath
   
 ### <a name="syntax-description"></a>構文の説明  
  *rswebserviceurl*  
- レポート サーバーの Web サービスの URL。 ネイティブ モードでは、Reporting Services Configuration Manager に構成されているレポート サーバー インスタンスの Web サービスの URL です (「[レポート サーバー URL の構成 (SSRS 構成マネージャー)](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください)。 次に例を示します。  
+ レポート サーバーの Web サービスの URL。 ネイティブ モードでは、Reporting Services Configuration Manager に構成されているレポート サーバー インスタンスの Web サービスの URL です (「[レポート サーバー URL の構成 (レポート サーバー構成マネージャー)](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください)。 次に例を示します。  
   
 ```  
 https://myrshost/reportserver  

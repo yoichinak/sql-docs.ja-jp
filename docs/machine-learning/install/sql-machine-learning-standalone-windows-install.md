@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178659"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956811"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server セットアップを使用して Machine Learning Server (スタンドアロン) または R Server (スタンドアロン) をインストールする
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -26,7 +26,7 @@ SQL Server セットアップには、SQL Server の外部で実行されるス�
 SQL Server セットアップには、SQL Server の外部で実行されるスタンドアロンの機械学習サーバーをインストールするための**共有機能**オプションが含まれています。 SQL Server 2016 では、この機能は **R Server (スタンドアロン)** と呼ばれます。  
 ::: moniker-end
 
-SQL Server セットアップによってインストールされるスタンドアロン サーバーは、[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) の非 SQL ブランド バージョンと機能的に同等であり、次のような同じユース ケースとシナリオがサポートされています。
+SQL Server セットアップによってインストールされるスタンドアロン サーバーは、[Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) の非 SQL ブランド バージョンと機能的に同等であり、次のような同じユース ケースとシナリオがサポートされています。
 
 + リモート実行、同じコンソールでのローカル セッションとリモート セッションの切り替え
 + Web ノードとコンピューティング ノードを使用した運用可能化
@@ -192,7 +192,7 @@ R と Python の開発では、同じコンピューター上に複数のバー�
 
 3. Web サービスの配置用の Web ノードとコンピューティング ノードとして実行するために運用可能化を有効にした場合は、**AppSettings.json** ファイルを念のためにバックアップします。 SQL Server 2017 CU13 以降を適用すると、このファイルが改訂されるため、元のバージョンを保持するためにバックアップ コピーが必要になる場合があります。
 
-4. 「[Microsoft SQL Server の最新の更新プログラム](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)」から、お使いのバージョンに適した最新の累積的な更新プログラムをインターネットに接続されたマシンにダウンロードします。
+4. 「[Microsoft SQL Server の最新の更新プログラム](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)」から、お使いのバージョンに適した最新の累積的な更新プログラムをインターネットに接続されたマシンにダウンロードします。
 
 5. 最新の累積的な更新プログラムをダウンロードします。 それは実行可能ファイルです。
 
@@ -215,7 +215,7 @@ R と Python の開発では、同じコンピューター上に複数のバー�
     }
     ```
 
-9. [管理 CLI ユーティリティを実行](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)して、Web ノードとコンピューティング ノードを再起動します。 手順と構文については、「[Web ノードとコンピューティング ノードの監視、開始、停止](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)」を参照してください。
+9. [管理 CLI ユーティリティを実行](/machine-learning-server/operationalize/configure-admin-cli-launch)して、Web ノードとコンピューティング ノードを再起動します。 手順と構文については、「[Web ノードとコンピューティング ノードの監視、開始、停止](/machine-learning-server/operationalize/configure-admin-cli-stop-start)」を参照してください。
 
 ## <a name="development-tools"></a>開発ツール
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 371326efa5bf207f0a0e3febbad0260865e1299b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b1b2055f810be69949f72dd97364ccfb47bfa22f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538740"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809166"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,14 +63,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|論理ファイル名です。|  
 |**fileid**|**smallint**|ファイル ID。|  
-|**ファイル名**|**nchar (260)**|オペレーティングシステムのファイル名 (物理ファイル名)。|  
+|**filename**|**nchar (260)**|オペレーティングシステムのファイル名 (物理ファイル名)。|  
 |**グループ**|**nvarchar(128)**|ファイルが属するファイルグループ。<br /><br /> NULL = ファイルはログファイルです。 これは、ファイルグループの一部ではありません。|  
 |**size**|**nvarchar (18)**|ファイルサイズ (mb)。|  
 |**maxsize**|**nvarchar (18)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
 |**成長**|**nvarchar (18)**|ファイルの拡張増分値。 これは、新しい領域が必要になるたびにファイルに追加される領域の量を示します。|  
 |**ユーセジリンク**|**varchar (9)**|ファイルの使用方法。 データファイルの場合、値は **' data only '** で、ログファイルの値は **' log only '** です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  結果セットの **status** 列は、データベースで ON に設定されているオプションを報告します。 [ **状態** ] 列には、すべてのデータベースオプションがレポートされません。 現在のデータベースオプションの設定の完全な一覧を表示するに **は、データベースカタログビュー** を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -98,11 +98,10 @@ GO
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

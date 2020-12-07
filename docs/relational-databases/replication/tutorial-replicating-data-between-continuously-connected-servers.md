@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 15b114b66462be069b4c67d3bedc662af6c6cbfd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e22b9695d229c83cbf95a08c0ef81462b8074a63
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720705"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868288"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>チュートリアル:2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 トランザクション レプリケーションは、常時接続サーバー間でデータを移動する際の問題を解決する有効なソリューションです。 レプリケーション ウィザードを使用すると、レプリケーション トポロジを簡単に設定し、管理できます。 
 
-このチュートリアルでは、常時接続サーバー間にトランザクション レプリケーション トポロジを設定する方法を学習します。 トランザクション レプリケーションのしくみについては、[トランザクション レプリケーションの概要](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication)に関するページを参照してください。 
+このチュートリアルでは、常時接続サーバー間にトランザクション レプリケーション トポロジを設定する方法を学習します。 トランザクション レプリケーションのしくみについては、[トランザクション レプリケーションの概要](./transactional/transactional-replication.md)に関するページを参照してください。 
   
 ## <a name="what-you-will-learn"></a>学習する内容  
 このチュートリアルでは、トランザクション レプリケーションによって 1 つのデータベースから別のデータベースにデータをパブリッシュする方法について説明します。  
@@ -50,13 +50,13 @@ ms.locfileid: "85720705"
   
 - サブスクライバー サーバー (レプリケーション先) に、[!INCLUDE[ssEW](../../includes/ssew-md.md)] を除く [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のエディションをインストールします。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] は、トランザクション レプリケーションのサブスクライバーとして使用できません。  
   
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
-- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードします。 SSMS でデータベースを復元する方法の詳細については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードします。 SSMS でデータベースを復元する方法の詳細については、[データベースの復元](../backup-restore/restore-a-database-backup-using-ssms.md)に関するページを参照してください。 
  
 >[!NOTE]
 > - 3 つ以上離れたバージョンの SQL Server インスタンスでは、レプリケーションはサポートされていません。 詳細については、「[Supported SQL Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)」(レプリケーション トポロジでサポートされている SQL Server のバージョン) を参照してください。
-> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、固定サーバー ロール **sysadmin** のメンバーとしてログインし、パブリッシャーとサブスクライバーに接続する必要があります。 このロールの詳細については、「[サーバー レベルのロール](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)」を参照してください。  
+> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、固定サーバー ロール **sysadmin** のメンバーとしてログインし、パブリッシャーとサブスクライバーに接続する必要があります。 このロールの詳細については、「[サーバー レベルのロール](../security/authentication-access/server-level-roles.md)」を参照してください。  
   
   
 **このチュートリアルの推定所要時間: 60 分**  
@@ -168,7 +168,7 @@ ms.locfileid: "85720705"
 
    ![パブリケーションが選択された [パブリケーション] ページ](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
   
-4. **[ディストリビューション エージェントの場所]** ページで、 **[ディストリビューターですべてのエージェントを実行する]** を選択し、 **[次へ]** を選択します。  プル サブスクリプションとプッシュ サブスクリプションの詳細については、「[パブリケーションのサブスクライブ](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications)」を参照してください。
+4. **[ディストリビューション エージェントの場所]** ページで、 **[ディストリビューターですべてのエージェントを実行する]** を選択し、 **[次へ]** を選択します。  プル サブスクリプションとプッシュ サブスクリプションの詳細については、「[パブリケーションのサブスクライブ](./subscribe-to-publications.md)」を参照してください。
 
    ![ディストリビューターですべてのエージェントを実行するオプションが選択された [ディストリビューション エージェントの場所] ページ](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   

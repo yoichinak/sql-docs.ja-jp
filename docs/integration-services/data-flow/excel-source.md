@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9664786703f0d9b81ce2a939bd422ea41a2fd8f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e00a786dfb9d9ffe55274822b276a2d2497efd82
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484591"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127181"
 ---
 # <a name="excel-source"></a>Excel ソース
 
@@ -56,7 +56,7 @@ ms.locfileid: "88484591"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるすべてのプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Excel のカスタム プロパティ](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "88484591"
 |値|説明|  
 |-----------|-----------------|  
 |[テーブルまたはビュー]|Excel ファイルのワークシートまたは名前付き範囲からデータを取得します。|  
-|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](../integration-services-ssis-variables.md)|  
 |[SQL コマンド]|SQL クエリを使用して、Excel ファイルからデータを取得します。 |  
 |[変数からの SQL コマンド]|SQL クエリ テキストを変数で指定します。|  
   

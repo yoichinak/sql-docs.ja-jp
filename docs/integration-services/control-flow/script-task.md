@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425884"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92197143"
 ---
 # <a name="script-task"></a>スクリプト タスク
 
@@ -79,15 +79,15 @@ ms.locfileid: "88425884"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
--   [[スクリプト タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/script-task-editor-general-page.md)  
+-   [[スクリプト タスク エディター] &#40;[全般] ページ&#41;]()  
   
--   [[スクリプト タスク エディター] ([スクリプト] ページ)](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [[スクリプト タスク エディター] ([スクリプト] ページ)]()  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>プログラムによるスクリプト タスクの構成  
  プログラムによってこれらのプロパティを設定する方法については、次のトピックを参照してください。  
@@ -123,7 +123,7 @@ ms.locfileid: "88425884"
   
  タスクのスクリプトを作成した後に、 **[ScriptLanguage]** プロパティの値を変更することはできません。  
   
- スクリプト タスクの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](../../integration-services/control-flow/script-task-editor-general-page.md)」を参照してください。  
+ スクリプト タスクの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page]()」を参照してください。  
   
  **EntryPoint**  
  スクリプト タスクのコードのエントリ ポイントとして [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムが呼び出すメソッドを指定します。 指定するメソッドは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) プロジェクトの ScriptMain クラスに存在する必要があります。ScriptMain クラスは、スクリプト テンプレートによって生成される既定のクラスです。  
@@ -148,5 +148,4 @@ ms.locfileid: "88425884"
 ## <a name="related-content"></a>関連コンテンツ  
   
 -   shareourideas.com の技術記事「 [配信通知付きで電子メールを送信する方法 (C#)](https://go.microsoft.com/fwlink/?LinkId=237625)」  
-  
   

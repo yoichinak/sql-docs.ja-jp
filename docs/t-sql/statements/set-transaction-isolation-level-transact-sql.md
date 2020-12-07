@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88cbb1203595203af88cf9e9da6e122cc7db5322
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 6d8b590e304120015f6333546a08c8c78a26493c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227463"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038335"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ COMMITTED 分離レベル。READ_COMMITTED_SNAPSHOT データベース オプションを ON に設定します。  
   
--   SNAPSHOT 分離レベル。 スナップショット分離の詳細については、「[SQL Server でのスナップショット分離](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server)」を参照してください。 
+-   SNAPSHOT 分離レベル。 スナップショット分離の詳細については、「[SQL Server でのスナップショット分離](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server)」を参照してください。 
   
  READ COMMITTED  
  他のトランザクションで変更されたが、まだコミットされていないデータを、ステートメントで読み取れないように指定します。 これにより、ダーティ リードを防ぐことができます。 現在のトランザクション内にある各ステートメント間では、他のトランザクションによるデータの変更が可能です。この結果、反復不能読み取りやファントム データが発生することがあります。 これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のオプションです。  
@@ -90,7 +90,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   READ_COMMITTED_SNAPSHOT が ON (Azure SQL Database での既定値) に設定されている場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では行のバージョン管理が使用され、各ステートメントでは、トランザクション全体で一貫性のあるデータのスナップショットが使用されます。このスナップショットは、ステートメント開始時点に存在したデータのスナップショットです。 ただし、ロックは、他のトランザクションがデータを更新するのを防ぐために使用されることはありません。
 
 > [!IMPORTANT]  
-> トランザクション分離レベルを選択しても、データ変更を保護するために獲得したロックは影響を受けません。 トランザクションでは、設定されたトランザクション分離レベルに関係なく、常に、そのトランザクションで変更するデータについて排他ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 さらに、READ_COMMITTED 分離レベルで作成された更新では、選択されたデータ行に更新ロックを使用するのに対して、SNAPSHOT 分離レベルで作成された更新では行のバージョンを使用して更新する行を選択します。 トランザクション分離レベルでは主に、読み取り操作に対して、他のトランザクションによって行われる変更の影響からの保護レベルを定義します。 詳細については、「[トランザクションのロックおよび行のバージョン管理ガイド](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)」を参照してください。
+> トランザクション分離レベルを選択しても、データ変更を保護するために獲得したロックは影響を受けません。 トランザクションでは、設定されたトランザクション分離レベルに関係なく、常に、そのトランザクションで変更するデータについて排他ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 さらに、READ_COMMITTED 分離レベルで作成された更新では、選択されたデータ行に更新ロックを使用するのに対して、SNAPSHOT 分離レベルで作成された更新では行のバージョンを使用して更新する行を選択します。 トランザクション分離レベルでは主に、読み取り操作に対して、他のトランザクションによって行われる変更の影響からの保護レベルを定義します。 詳細については、「[トランザクションのロックおよび行のバージョン管理ガイド](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)」を参照してください。
 
 > [!NOTE]  
 >  スナップショット分離は、FILESTREAM データをサポートします。 スナップショット分離モードで、トランザクションの任意のステートメントによって読み取られる FILESTREAM データは、トランザクションの開始時に存在していたデータのバージョンとトランザクション的に一致しています。  
@@ -197,5 +197,4 @@ GO
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
-  
   

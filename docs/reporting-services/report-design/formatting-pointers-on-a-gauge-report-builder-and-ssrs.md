@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 196e542698af55c3469a1851b3f7b315d9410f8d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8c0ee25b36c64a8b151c6d816d47dd0e8c1e90b4
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939242"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935034"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのゲージ ポインターは、ゲージの現在の値を示します。   
@@ -44,7 +44,7 @@ ms.locfileid: "87939242"
  放射状ゲージに限り、ポインターの上部または下部に描画できるニードル キャップを指定できます。 すべてのニードル キャップ スタイルは、変更できない組み込みのグラデーションを使用して描画されます。 ただし、例外として **RoundedDark** スタイルではグラデーションの色とスタイルを指定できます。  
   
 ##  <a name="setting-a-snapping-interval"></a><a name="SettingSnappingInterval"></a> スナップ間隔の設定  
- スナップ間隔とは、値を丸める際の倍数を定義するものです。 既定では、ゲージは、データ ペインで指定したフィールドの正確な値を指し示します。 ただし必要であれば、事前に設定した間隔にポインターが合うように、正確な値を切り上げたり、切り捨てたりすることができます。 たとえば、ゲージの値が 34.2 であるとき、スナップ間隔として 5 を指定した場合、ゲージ ポインターが指し示す値は 35 になります。 ゲージの値が 31.2 であるとき、スナップ間隔として 5 を指定した場合、ゲージ ポインターが指し示す値は 30 になります。 詳細については、「 [ゲージへのスナップ間隔の設定 (レポート ビルダーおよび SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)」を参照してください。  
+ スナップ間隔とは、値を丸める際の倍数を定義するものです。 既定では、ゲージは、データ ペインで指定したフィールドの正確な値を指し示します。 ただし必要であれば、事前に設定した間隔にポインターが合うように、正確な値を切り上げたり、切り捨てたりすることができます。 たとえば、ゲージの値が 34.2 であるとき、スナップ間隔として 5 を指定した場合、ゲージ ポインターが指し示す値は 35 になります。 ゲージの値が 31.2 であるとき、スナップ間隔として 5 を指定した場合、ゲージ ポインターが指し示す値は 30 になります。 詳細については、「 [ゲージへのスナップ間隔の設定 (レポート ビルダーおよび SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="specifying-an-image-as-a-pointer-on-a-radial-gauge"></a><a name="SpecifyingImage"></a> 画像を放射状ゲージのポインターとして指定する  
  ポインターには、組み込みの一連のポインター スタイルの他に、画像を指定できます。 既存の針ポインター スタイルを画像で置き換えた場合、最も効果的です。 画像はポインターに重ね合わせられますが、ポインター機能はすべて適用可能です。 ポインターに画像が使用されている場合、色とグラデーションのオプションは適用されません。  
@@ -55,5 +55,4 @@ ms.locfileid: "87939242"
  [ゲージのスケールの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
-  
   

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59c98e39bccbb6d4f74ddb5e9494e7fc4bced3eb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894018"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985078"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
 
@@ -56,12 +56,12 @@ ms.locfileid: "85894018"
   
 |**クラス**|**メソッド/プロパティ**|**説明**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|モデルに対してクエリを実行してオブジェクトを取得します。これは、モデル API に対するメイン エントリ ポイントです。 Table や View などの最上位レベルの型のみに対してクエリを実行できます。Columns などの型は、モデルの走査によってのみ検出できます。 ModelTypeClass フィルターが指定されていない場合は、最上位レベルのすべての型が返されます。|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|現在の TSqlObject によって参照される要素に対するリレーションシップを検出します。 たとえば、テーブルの場合、テーブルの列などのオブジェクトが返されます。 この場合、ModelRelationshipClass フィルターを使用すると、クエリの実行対象となる正確なリレーションシップを指定できます (たとえば、"Table.Columns" フィルターを使用した場合は列のみが返されます)。<br /><br />GetReferencingRelationshipInstances、GetChildren、GetParent など、類似するメソッドが多数あります。 詳細については、API のドキュメントを参照してください。|  
+|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)|GetObjects()|モデルに対してクエリを実行してオブジェクトを取得します。これは、モデル API に対するメイン エントリ ポイントです。 Table や View などの最上位レベルの型のみに対してクエリを実行できます。Columns などの型は、モデルの走査によってのみ検出できます。 ModelTypeClass フィルターが指定されていない場合は、最上位レベルのすべての型が返されます。|  
+|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|GetReferencedRelationshipInstances()|現在の TSqlObject によって参照される要素に対するリレーションシップを検出します。 たとえば、テーブルの場合、テーブルの列などのオブジェクトが返されます。 この場合、ModelRelationshipClass フィルターを使用すると、クエリの実行対象となる正確なリレーションシップを指定できます (たとえば、"Table.Columns" フィルターを使用した場合は列のみが返されます)。<br /><br />GetReferencingRelationshipInstances、GetChildren、GetParent など、類似するメソッドが多数あります。 詳細については、API のドキュメントを参照してください。|  
   
 **コントリビューターを一意に識別する**  
   
-ビルド プロセス中に、カスタム コントリビューターは標準の拡張機能ディレクトリから読み込まれます。 ビルド コントリビューターは、 [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 属性によって識別されます。 コントリビューターを検出できるようにするためにこの属性は必須です。 この属性は次のようになります。  
+ビルド プロセス中に、カスタム コントリビューターは標準の拡張機能ディレクトリから読み込まれます。 ビルド コントリビューターは、 [ExportBuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute) 属性によって識別されます。 コントリビューターを検出できるようにするためにこの属性は必須です。 この属性は次のようになります。  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -75,7 +75,7 @@ ms.locfileid: "85894018"
   
 -   クラス ライブラリ プロジェクトを作成し、必要な参照を追加する。  
   
--   [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) から継承する ModelStatistics という名前のクラスを定義する。  
+-   [BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor) から継承する ModelStatistics という名前のクラスを定義する。  
   
 -   OnExecute メソッドをオーバーライドする。  
   
@@ -594,4 +594,3 @@ Relationships
 ## <a name="see-also"></a>参照  
 [ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [チュートリアル:配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

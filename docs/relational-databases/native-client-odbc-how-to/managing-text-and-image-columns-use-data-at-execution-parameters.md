@@ -14,12 +14,12 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9542741a00cee0206931e6194e3ded2089fe3f4d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ce4d81317218c8823b528c3e37df40694471e9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460774"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868910"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>text 列と image 列の管理 - 実行時パラメーターの使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88460774"
   
     -   プログラム定義のパラメーター識別子として **rgbValue** (8 番目のパラメーター) を使用します。  
   
-2.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) または [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ パラメーターを処理する準備が整っていることを示します。  
+2.  [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) または [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ パラメーターを処理する準備が整っていることを示します。  
   
 3.  実行時データの各パラメーターに対して次の操作を行います。  
   
-    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、プログラム定義のパラメーター ID を取得します。 実行時データ パラメーターが他にもある場合は、SQL_NEED_DATA が返されます。  
+    -   [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) を呼び出して、プログラム定義のパラメーター ID を取得します。 実行時データ パラメーターが他にもある場合は、SQL_NEED_DATA が返されます。  
   
     -   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、パラメーター データを length の長さまで送信します。  
   
-4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ パラメーターのデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
+4.  [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) を呼び出して、最後の実行時データ パラメーターのデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
   
 ## <a name="example"></a>例  
  このサンプルでは、SQLParamData と SQLPutData を使用して、SQL_LONG 変数の文字データを読み込む方法を示します。 このサンプルは IA64 ではサポートされていません。  
@@ -226,6 +226,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Text 列と image 列の管理方法に関するトピック &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [Text 列と image 列の管理方法に関するトピック &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

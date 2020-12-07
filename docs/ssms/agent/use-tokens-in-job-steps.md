@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 933848c0d0056a67a561a6468db8f10c2bd8c478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f222f011015f4cf23cf4640b7c4bc2136d338583
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88317638"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037263"
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップ スクリプトでトークンを使用できます。 ジョブ ステップを記述するときにトークンを使用すると、ソフトウェア プログラムを記述するときの変数と同じような柔軟性が得られます。 ジョブ ステップ スクリプトにトークンを挿入した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブシステムでジョブ ステップが実行される前に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] エージェントにより実行時にトークンが置き換えられます。  
   
@@ -144,4 +144,3 @@ WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID)));
 ## <a name="see-also"></a>参照  
 [ジョブの実装](../../ssms/agent/implement-jobs.md)  
 [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)  
-  

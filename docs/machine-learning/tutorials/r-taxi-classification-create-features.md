@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: 全 5 回からなるこのチュートリアル シリーズの第 3 回では、T-SQL 関数を使用し、SQL 機械学習でサンプル データから特徴を作成し、保存します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 070832ff6d934a8bcc4f8e88210f26205a92a48a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180328"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412569"
 ---
 # <a name="r-tutorial-create-data-features"></a>R チュートリアル:データの特徴量の作成
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "88180328"
 
 [第 5 回](r-taxi-classification-deploy-model.md) では、第 4 回でトレーニングして保存したモデルを運用化する方法について説明します。
 
-[第 5 回](sqldev-py6-operationalize-the-model.md) では、第 4 回でトレーニングして保存したモデルを運用化する方法について説明します。
+[第 5 回](./python-taxi-classification-deploy-model.md) では、第 4 回でトレーニングして保存したモデルを運用化する方法について説明します。
 
 ## <a name="about-feature-engineering"></a>特徴量エンジニアリングについて
 
-データ探索を何度か行うと、データからインサイトが収集されているので、 *特徴量エンジニアリング*に移ることができます。 生データから意味のある特徴を作成するこのプロセスは、分析モデルを作成するための重要な手順です。
+データ探索を何度か行うと、データからインサイトが収集されているので、 *特徴量エンジニアリング* に移ることができます。 生データから意味のある特徴を作成するこのプロセスは、分析モデルを作成するための重要な手順です。
 
 このデータセットでは、距離の値は報告されたメーター距離に基づいており、必ずしも地理的距離や実際の走行距離を示す距離を表しているとは限りません。 そのため、ソースである NYC タクシー データセットの座標を利用し、乗車地点と降車地点の間の直接距離を計算する必要があります。 カスタム [関数で](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 式 [!INCLUDE[tsql](../../includes/tsql-md.md)] を利用し、この計算を実行できます。
 
@@ -58,7 +58,7 @@ ms.locfileid: "88180328"
 
 このチュートリアルの準備の一環として、関数 _fnCalculateDistance_ をダウンロードし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する必要があります。 少し時間をかけてコードを確認してください。
   
-1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]**、 **[関数]** 、 **[スカラー値関数]** の順に展開します。   
+1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]** 、 **[関数]** 、 **[スカラー値関数]** の順に展開します。   
 
 2. _fnCalculateDistance_ を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
   

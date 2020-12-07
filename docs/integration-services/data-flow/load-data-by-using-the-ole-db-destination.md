@@ -16,10 +16,10 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3165371fc1153636ae869b650468342e3614b024
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495835"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 変換先を使用してデータを読み込む

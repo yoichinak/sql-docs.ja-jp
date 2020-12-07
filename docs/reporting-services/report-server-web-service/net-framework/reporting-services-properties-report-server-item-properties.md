@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1cd71f267fb6e249116cda4ba9c54069e8ee570
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b368b02ebfe37e63b4d02e6e69d6eed2bdb831ea
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509644"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934596"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services のプロパティ - レポート サーバー アイテムのプロパティ
   アイテム プロパティは、レポート サーバー データベースのアイテムに固有のプロパティです。 アイテム プロパティには、レポート、リンク レポート、フォルダー、リソース、モデル、データ ソースなどがあります。  
@@ -59,7 +59,7 @@ ms.locfileid: "79509644"
 |**Language**|レポートで使用される言語。 値は、Internet Engineering Task Force (IETF) RFC1766 仕様で定義されている言語コードです。 先頭の 2 文字は基本言語を指定します。 ハイフンで区切られた 2 番目の部分は、言語のバリエーションや方言を指定します。 レポート定義の **Body**要素に関連付けられた **Style** 要素に値が指定されていない場合は、既定値がレポート サーバーの言語になります。|  
 |**ReportProcessingTimeout**|各レポートのタイムアウト値 (秒単位)。 この値を設定すると、指定した時間が経過した時点でレポートの処理が中止されます。 有効値は **-1** ～ **2**、**147**、**483**、**647**です。 値が **-1** の場合、処理中にレポートがタイムアウトしません。 値が **null** の場合、レポート処理のタイムアウトとしてシステム プロパティ **ReportProcessingTimeout** の値が使用されます。既定値は、**null** です。 詳細については、「[レポート サーバーのシステム プロパティ](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)」を参照してください。|  
 |**ExecutionDate**|レポートのスナップショットが最後に作成された日付と時刻。|  
-|**CanRunUnattended**|スケジュールに基づいてレポートを自動実行できるかどうかを示す値。 このプロパティを **true** に設定すると、レポート パラメーターの既定値が定義され、データ ソースの資格情報がレポートと一緒に格納されるか、資格情報取得オプションが**None** に設定されます。 このプロパティを **false** に設定すると、レポートを自動実行するための前提条件が満たされません。 「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。|  
+|**CanRunUnattended**|スケジュールに基づいてレポートを自動実行できるかどうかを示す値。 このプロパティを **true** に設定すると、レポート パラメーターの既定値が定義され、データ ソースの資格情報がレポートと一緒に格納されるか、資格情報取得オプションが**None** に設定されます。 このプロパティを **false** に設定すると、レポートを自動実行するための前提条件が満たされません。 詳細については、「[自動実行アカウントの構成 (レポート サーバー構成マネージャー)](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。|  
 |**HasParameterDefaultValues**|レポートのすべてのレポート パラメーターが有効な既定値に設定されているかどうかを示す値。 レポートにレポート パラメーターがない場合も、値は **true** です。 このプロパティが **false** に設定されている場合は、1 つ以上のレポート パラメーターに有効な既定値がありません。|  
 |**HasDataSourceCredentials**|レポートに関連付けられているすべてのデータ ソースの資格情報取得オプション セットが **None** または **Store** であることを示す値。 このプロパティが **false** に設定されている場合は、レポートに関連付けられているいずれかのデータ ソースの資格情報取得オプション セットが **Integrated** または **Prompt** です。|  
 |**IsSnapshotExecution**|レポートがスナップショットであるかどうかを示す値。|  

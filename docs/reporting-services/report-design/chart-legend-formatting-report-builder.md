@@ -26,12 +26,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc2f10905bdf80c1853aecefd6783bdc60819a82
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 5916b79410568a1fd2a89b753f9a3ff8ca606780
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255325"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935349"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>グラフの凡例 - 書式設定 (レポート ビルダー)
   グラフの凡例には、グラフ内の各カテゴリの説明が含まれています。 凡例には常に 1 つ以上の凡例アイテムが含まれています。次の図に示すように、それぞれの凡例アイテムは、系列を表現する色つきのボックス、および系列を説明するテキスト文字列で構成されています。  
@@ -78,12 +78,11 @@ ms.locfileid: "84255325"
  既定では、凡例テキストは、凡例領域に合わせて最適化されません。 割り当てられた領域に合わせて凡例テキストを表示するには、AutoFitTextDisabled プロパティを **False** に設定し、MinFontSize プロパティの最小フォント サイズを変更して、表示可能で凡例が最適化されると思われる最小のフォント サイズに設定します。  
   
 ## <a name="see-also"></a>参照  
- [[全般] ([凡例のプロパティ] ダイアログ ボックス) &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
+ [[全般] ([凡例のプロパティ] ダイアログ ボックス) &#40;レポート ビルダーおよび SSRS&#41;]()   
  [凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [グラフの凡例項目を非表示にする &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [パレットを使用したグラフの色の定義 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
-  
   

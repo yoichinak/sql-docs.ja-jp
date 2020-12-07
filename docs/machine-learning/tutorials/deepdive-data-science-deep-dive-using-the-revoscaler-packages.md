@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad18fc08a06a647c626972cf3b3141d9d9861c87
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a6fe6713479c0a9c62c1f56e358c27084dc9bbdc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178799"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195164"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>チュートリアル:SQL Server データでの RevoScaleR R 関数の使用
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 このマルチパート チュートリアル シリーズでは、データ サイエンスに関連するタスク用のさまざまな **RevoScaleR** 関数について紹介します。 プロセスでは、リモートのコンピューティング コンテキストを作成する方法、ローカルとリモートのコンピューティング コンテキスト間でデータを移動する方法、およびリモート SQL サーバー上で R コードを実行する方法について説明します。 また、ローカルとリモート サーバー上の両方でデータを分析してプロットする方法と、モデルを作成して配置する方法についても説明します。
 
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) は、データ サイエンスと機械学習のワークロードの分散および並列処理を提供する Microsoft R パッケージです。 SQL Server での R 開発の場合、**RevoScaleR** は最も重要な組み込みパッケージの 1 つで、データ ソース オブジェクトを作成するための機能、コンピューティング コンテキストの設定、パッケージの管理、および最も重要なこととして、インポートから視覚化および分析まで、データをエンドツーエンドで操作する機能を備えています。 SQL Server の Machine Learning アルゴリズムは、**RevoScaleR** データ ソースに依存しています。 **RevoScaleR** の重要性を考えると、その関数を呼び出すタイミングと方法を把握することは、重要なスキルと言えます。 
+[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) は、データ サイエンスと機械学習のワークロードの分散および並列処理を提供する Microsoft R パッケージです。 SQL Server での R 開発の場合、**RevoScaleR** は最も重要な組み込みパッケージの 1 つで、データ ソース オブジェクトを作成するための機能、コンピューティング コンテキストの設定、パッケージの管理、および最も重要なこととして、インポートから視覚化および分析まで、データをエンドツーエンドで操作する機能を備えています。 SQL Server の Machine Learning アルゴリズムは、**RevoScaleR** データ ソースに依存しています。 **RevoScaleR** の重要性を考えると、その関数を呼び出すタイミングと方法を把握することは、重要なスキルと言えます。 
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -29,7 +29,7 @@ ms.locfileid: "88178799"
   
 + [データベース権限](../security/user-permission.md)と SQL Server データベース ユーザー ログイン
 
-+ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)
 
 + R に付属する RStudio や組み込みの RGUI ツールなどの IDE
 

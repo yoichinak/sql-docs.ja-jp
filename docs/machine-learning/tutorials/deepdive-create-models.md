@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c37608146b0ebf75cd0042f12ffc004f1273960
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c17b74aff83412dd7f74d3c9a9cb1fb7ec711b19
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178819"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196306"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>R モデルを作成する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 7 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 7 です。
 
 トレーニング データを強化しました。 このチュートリアルでは、回帰モデリングを使用してデータを分析してみましょう。 線形モデルは、予測分析の世界における重要なツールです。 **RevoScaleR** パッケージには、ワークロードを分割して、それを並列で実行できる回帰アルゴリズムが含まれています。
 
@@ -31,7 +31,7 @@ ms.locfileid: "88178819"
 
 この手順では、独立変数として *gender* 列と *creditLine* 列の値を使用して、顧客のクレジット カード残高を推定する単純な線形モデルを作成します。
   
-そのためには、リモートの計算コンテキストをサポートする [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 関数を使用します。
+そのためには、リモートの計算コンテキストをサポートする [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) 関数を使用します。
   
 1. 完成したモデルを格納する R 変数を作成し、**rxLinMod** を呼び出して適切な数式を渡します。
   
@@ -75,7 +75,7 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>ロジスティック回帰モデルを作成する
 
-次に、特定の顧客に不正使用の危険があるかどうかを示すロジスティック回帰モデルを作成します。 ロジスティック回帰をリモートの計算コンテキストに収めることができる **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 関数を使用します。
+次に、特定の顧客に不正使用の危険があるかどうかを示すロジスティック回帰モデルを作成します。 ロジスティック回帰をリモートの計算コンテキストに収めることができる **RevoScaleR** [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) 関数を使用します。
 
 計算コンテキストはそのまま保持します。 データ ソースも引き続き同じものを使用します。
 

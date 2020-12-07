@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9660b546fbfa293cab2442db3546838dbde80467
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477014"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196745"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX データ操作 - SELECT
 
@@ -110,14 +110,14 @@ FROM
  *MemberProperty_Name*  
  メンバー プロパティを表す有効な文字列です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  `<SELECT slicer axis clause>` 式には、指定した `<SELECT query axis clause>` 式で参照されるディメンションと階層以外のメンバーを指定する必要があります。  
   
  指定した `<SELECT query axis clause>` 式と `<SELECT slicer axis clause>` 値でキューブ内の属性が省略されている場合は、属性の既定のメンバーが暗黙的にスライサー軸に追加されます。  
   
  サブセレクト ステートメントで NON VISUAL オプションを使用すると、フィルター選択された合計ではなく、実際の合計を維持しながら、メンバーを除外することができます。 これにより、上位 10 件の売上 (販売員、製品、地域) のクエリを実行するときに、返された上位 10 件の売上の合計額ではなく、クエリ対象となるすべてのメンバーに対する実際の売上合計を取得することができます。 詳細については、以下の例を参照してください。  
   
- 計算されるメンバーは、接続 \<SELECT query axis clause> 文字列パラメーターの *サブクエリ = 1*を使用して接続を開いたときに、に含めることができます。 [サポートされる xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) および <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> パラメーターの使用法に関する説明を参照してください。 サブセレクトの計算されるメンバーには、例が用意されています。  
+ 計算されるメンバーは、接続 \<SELECT query axis clause> 文字列パラメーターの *サブクエリ = 1*を使用して接続を開いたときに、に含めることができます。 [サポートされる xmla プロパティ &#40;xmla&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) および <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> パラメーターの使用法に関する説明を参照してください。 サブセレクトの計算されるメンバーには、例が用意されています。  
   
 ## <a name="autoexists"></a>autoexists  
  SELECT ステートメントに特定のディメンションの属性を複数使用した場合、こうした属性のメンバーは、Analysis Services が属性の式を評価する際、それ以外のすべての属性の条件を満たすよう、適切に絞り込まれます。 たとえば、Geography ディメンションの属性を指定したとします。 一方の式で City 属性のすべてのメンバーを返し、もう一方の式で Country 属性のメンバーを、欧州内の国のみに限定した場合、結果として得られる City メンバーは、欧州の国に属する市区町村に限定されます。 Analysis Services が備えているこの特性は Autoexists と呼ばれ、同じディメンション内の属性にのみ適用されます。 Autoexists が同じディメンションの属性にのみ適用されるのは、一方の属性式で排除されたディメンション レコードが、もう一方の属性式で含められるのを防ぐように機能するためです。 ディメンション レコードに複数の属性式を適用した結果の共通集合と考えることもできます。 次の例を考えてみてください。  
@@ -335,7 +335,7 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists の動作は、接続文字列の AUTOEXISTS = [1 | 2 | 3] パラメーターを使用して変更できます。パラメーターの使用法については、「 [xmla&#41;&#40;サポートされる Xmla プロパティ ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
+ Autoexists の動作は、接続文字列の AUTOEXISTS = [1 | 2 | 3] パラメーターを使用して変更できます。パラメーターの使用法については、「 [xmla&#41;&#40;サポートされる Xmla プロパティ ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
   
 ## <a name="examples"></a>例  
  次の例では、 `Measures.[Order Quantity]` `Date` **Adventure works** キューブから、ディメンションに含まれる2003年の最初の8か月間に集計された、メンバーの合計を返します。  
@@ -455,9 +455,7 @@ WHERE
 |$80,450,596.98|$79980114.38|$470482.60|0.58%|  
   
 ## <a name="see-also"></a>参照  
- [MDX &#40;Analysis Services の主な概念&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX &#40;Analysis Services の主な概念&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Mdx&#41;&#40;MDX データ操作ステートメント ](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [クエリ軸とスライサー軸によるクエリの制限 &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
-  
-

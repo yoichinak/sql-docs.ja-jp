@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 7345d2ed17d8eca7bac386f4abe58893827ff00e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88404968"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
@@ -43,17 +43,17 @@ ms.locfileid: "88404968"
      [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **\@schema_option** パラメーターを   
     **0x40000000000** に設定します。  
   
-3.  [アーティクルのプロパティ] ウィンドウで **[Enable Memory optimization]** (メモリ最適化を有効にする) を **true**に設定します。  
+3.  [アーティクルのプロパティ] ウィンドウで **[Enable Memory optimization]** (メモリ最適化を有効にする) を **true** に設定します。  
   
 4.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
-5.  ここで、新しいサブスクリプションを作成します。 **サブスクリプションの新規作成ウィザード** で **[Memory Optimized Subscription]** (メモリ最適化サブスクリプション) を **true**に設定します。  
+5.  ここで、新しいサブスクリプションを作成します。 **サブスクリプションの新規作成ウィザード** で **[Memory Optimized Subscription]** (メモリ最適化サブスクリプション) を **true** に設定します。  
 
  これでメモリ最適化テーブルはパブリッシャーから更新を受け取り始めます。  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>既存のトランザクション レプリケーションを再構成する  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のサブスクリプションのプロパティに移動して、 **[Memory Optimized Subscription]** (メモリ最適化サブスクリプション) を **true**に設定します。 サブスクリプションを再初期化するまで変更は適用されません。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のサブスクリプションのプロパティに移動して、 **[Memory Optimized Subscription]** (メモリ最適化サブスクリプション) を **true** に設定します。 サブスクリプションを再初期化するまで変更は適用されません。  
   
      [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addsubscription** ストアド プロシージャの新しい **\@memory_optimized** パラメーターを true に設定します。  
   

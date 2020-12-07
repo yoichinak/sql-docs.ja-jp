@@ -7,14 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: dd9b0dde6a7cc032b31fc2d8c45a06f616e3ed58
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 55d2917d149a4c88dbfddf614971c8d4f1e60d26
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179148"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869955"
 ---
 # <a name="install-packages-with-r-tools"></a>R ツールを使用してパッケージをインストールする
 
@@ -127,4 +126,4 @@ ZIP ファイルが SQL Server インスタンス上にある場合は、標準�
 
 + [R パッケージ情報の取得](r-package-information.md)
 + [R パッケージを使用するためのヒント](tips-for-using-r-packages.md)
-+ [SQL Server の R 言語のチュートリアル](../tutorials/sql-server-r-tutorials.md)
++ [SQL Server の R 言語のチュートリアル](../tutorials/r-tutorials.md)

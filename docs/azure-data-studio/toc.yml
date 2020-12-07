@@ -7,14 +7,14 @@
 - name: 概要
   items:
     - name: Azure Data Studio
-      href: what-is.md
+      href: what-is-azure-data-studio.md
 - name: クイックスタート
   items:
     - name: SQL Server に対する接続およびクエリ
       href: quickstart-sql-server.md
     - name: Azure SQL Database に対する接続およびクエリ
       href: quickstart-sql-database.md
-    - name: Azure SQL Data Warehouse に対する接続およびクエリ
+    - name: Azure Synapse Analytics に対する接続およびクエリ
       href: quickstart-sql-dw.md
     - name: PostgreSQL に対する接続およびクエリ
       href: quickstart-postgres.md
@@ -59,7 +59,7 @@
         - name: PowerShell の拡張機能
           href: extensions/powershell-extension.md
         - name: SandDance の拡張機能
-          href: sanddance-extension.md
+          href: extensions/sanddance-extension.md
         - name: スキーマ比較の拡張機能
           href: extensions/schema-compare-extension.md
         - name: SQL Database プロジェクトの拡張機能
@@ -84,10 +84,10 @@
           href: extensions/sql-server-profiler-extension.md
     - name: 拡張機能のオーサリング
       items:
-        - name: 拡張性の概要
-          href: extensibility.md
         - name: 拡張機能のオーサリング
           href: extensions/extension-authoring.md
+        - name: 拡張性の概要
+          href: extensibility.md
         - name: 拡張 API
           href: extensibility-apis.md
         - name: キーマップ拡張機能
@@ -102,8 +102,8 @@
           href: extensions/wizard-extension.md
     - name: 統合ターミナル (PowerShell、Bash)
       href: integrated-terminal.md
-    - name: キーボード ショートカット
-      href: keyboard-shortcuts.md
+    - name: プレビュー機能
+      href: preview-features.md
     - name: サーバー グループ
       href: server-groups.md
     - name: ソース管理
@@ -124,22 +124,26 @@
           href: notebooks/notebooks-kqlmagic.md
     - name: デプロイ
       items:
+        - name: Azure SQL Database のデプロイ
+          href: deploy-azure-sql-database.md
         - name: Azure SQL Edge のデプロイ
           href: deploy-azure-sql-edge.md
+        - name: Azure Virtual Machines 上の SQL Server をデプロイする
+          href: deploy-azure-sql-server-vm.md
     - name: ダッシュボードおよび分析情報のウィジェット
       href: insight-widgets.md
     - name: コード スニペット
       href: code-snippets.md
     - name: エクスプローラーの Azure SQL リソース
       href: azure-resource-explorer.md
+    - name: キーボード ショートカット
+      href: keyboard-shortcuts.md
     - name: 使用状況データ収集
       href: usage-data-collection.md
-    - name: ワークスペースとユーザー設定
-      href: settings.md
     - name: Windows 認証 (Kerberos)
       href: enable-kerberos.md
-    - name: 使用状況データ収集
-      href: usage-data-collection.md
+    - name: ワークスペースとユーザー設定
+      href: settings.md
 - name: References
   items:
     - name: SQL ツール
@@ -150,6 +154,8 @@
   items:
     - name: よく寄せられる質問
       href: faq.md
+    - name: トラブルシューティング
+      href: troubleshooting.md
     - name: Azure Data Studio の GitHub リポジトリ >
       href: 'https://www.github.com/Microsoft/azuredatastudio'
     - name: 問題の報告とご提案 >

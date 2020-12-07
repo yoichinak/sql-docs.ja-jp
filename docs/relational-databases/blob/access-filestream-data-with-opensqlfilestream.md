@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f2f87e037f16d2d0dc46d9f677403076148868b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 959bc875e314f0fbb79b51e4f9ea36dbf5414dc9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85745174"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810278"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>OpenSqlFilestream による FILESTREAM データへのアクセス
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  OpenSqlFilestream API は、ファイル システムに格納されている FILESTREAM バイナリ ラージ オブジェクト (BLOB) の Win32 互換ファイル ハンドルを取得します。 このハンドルは、次のいずれかの Win32 API に渡すことができます。[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 このハンドルをその他の Win32 API に渡すと、ERROR_ACCESS_DENIED エラーが返されます。 このハンドルは、トランザクションをコミットまたはロールバックする前に Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API に渡して閉じる必要があります。 ハンドルを閉じないと、サーバー側でリソースのリークが発生します。  
+  OpenSqlFilestream API は、ファイル システムに格納されている FILESTREAM バイナリ ラージ オブジェクト (BLOB) の Win32 互換ファイル ハンドルを取得します。 このハンドルは、次のいずれかの Win32 API に渡すことができます。[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile)、[TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile)、[SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer)、[SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile)、[FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers)。 このハンドルをその他の Win32 API に渡すと、ERROR_ACCESS_DENIED エラーが返されます。 このハンドルは、トランザクションをコミットまたはロールバックする前に Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API に渡して閉じる必要があります。 ハンドルを閉じないと、サーバー側でリソースのリークが発生します。  
   
  FILESTREAM データ コンテナー アクセスはすべて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションの中で実行する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じトランザクションで実行することもできます。 これにより、SQL データと FILESTREAM BLOB データの一貫性が維持されます。  
   
@@ -54,7 +54,7 @@ HANDLE OpenSqlFilestream (
  [in] **PathName** 関数から返される [nvarchar(max)](../../relational-databases/system-functions/pathname-transact-sql.md) パスです。 PathName は、FILESTREAM のテーブルおよび列に対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SELECT または UPDATE の権限を持つアカウントのコンテキストから呼び出す必要があります。  
   
  *DesiredAccess*  
- [in] FILESTREAM BLOB データへのアクセスに使用するモードを設定します。 この値は [DeviceIoControl 関数](https://go.microsoft.com/fwlink/?LinkId=105527)に渡されます。  
+ [in] FILESTREAM BLOB データへのアクセスに使用するモードを設定します。 この値は [DeviceIoControl 関数](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)に渡されます。  
   
 |名前|値|意味|  
 |----------|-----------|-------------|  
@@ -105,5 +105,4 @@ HANDLE OpenSqlFilestream (
  [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [FILESTREAM データの部分的な更新](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)   
  [FILESTREAM アプリケーションでのデータベース操作との競合の回避](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
-  
   

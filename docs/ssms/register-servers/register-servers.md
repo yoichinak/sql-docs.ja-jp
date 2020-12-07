@@ -20,12 +20,12 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: dd50ab7a771dd0cd479716c94fa26110198822b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bd61a8a290f8863d13c2052d0a50835461c5aae
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468551"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038397"
 ---
 # <a name="register-servers"></a>サーバーの登録
 
@@ -69,23 +69,22 @@ ms.locfileid: "88468551"
   
 |**説明**|**トピック**|  
 |---------------------|---------------|  
-|ローカル サーバー インスタンスの登録|[接続済みのサーバーの登録 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)|  
-|サーバーの登録|[新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)|  
-|登録済みサーバーの表示|[SQL Server Management Studio で登録済みサーバーを表示する方法](../../tools/sql-server-management-studio/view-registered-servers-in-sql-server-management-studio.md)|  
-|登録済みサーバーの削除|[新しい登録済みサーバーの削除 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/remove-a-registered-server-sql-server-management-studio.md)|  
-|サーバーの登録の変更|[サーバーの登録の変更 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)|  
-|登録済みサーバーの接続|[登録済みサーバーへの接続 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)|  
-|登録済みサーバーの切断|[登録済みサーバーの切断 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/disconnect-from-a-registered-server-sql-server-management-studio.md)|  
-|登録済みサーバーまたはサーバー グループの移動|[登録済みサーバーまたは登録済みサーバー グループの移動 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)|  
-|登録済みサーバーまたはサーバー グループの名前変更|[登録済みサーバーまたは登録済みサーバー グループの名前の変更 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-the-name-of-registered-server-or-registered-server-group.md)|  
-|サーバー グループの作成または編集|[サーバー グループの作成または編集 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)|  
-|サーバー グループの削除|[サーバー グループの削除 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/remove-a-server-group-sql-server-management-studio.md)|  
-|登録済みサーバーの情報のエクスポート|[登録済みサーバー情報のエクスポート &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)|  
-|登録済みサーバーの情報のインポート|[登録済みサーバー情報のインポート &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)|  
-|中央管理サーバーおよびサーバー グループの作成|[中央管理サーバーとサーバー グループの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)|  
-|複数のサーバーに対するステートメントの同時実行|[複数のサーバーに対してステートメントを同時に実行する方法 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)|  
+|ローカル サーバー インスタンスの登録|[接続済みのサーバーの登録 &#40;SQL Server Management Studio&#41;](./register-a-connected-server-sql-server-management-studio.md)|  
+|サーバーの登録|[新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)|  
+|登録済みサーバーの表示|[SQL Server Management Studio で登録済みサーバーを表示する方法](./view-registered-servers-in-sql-server-management-studio.md)|  
+|登録済みサーバーの削除|[新しい登録済みサーバーの削除 &#40;SQL Server Management Studio&#41;](./remove-a-registered-server-sql-server-management-studio.md)|  
+|サーバーの登録の変更|[サーバーの登録の変更 &#40;SQL Server Management Studio&#41;](./change-a-server-s-registration-sql-server-management-studio.md)|  
+|登録済みサーバーの接続|[登録済みサーバーへの接続 &#40;SQL Server Management Studio&#41;](./connect-to-a-registered-server-sql-server-management-studio.md)|  
+|登録済みサーバーの切断|[登録済みサーバーの切断 &#40;SQL Server Management Studio&#41;](./disconnect-from-a-registered-server-sql-server-management-studio.md)|  
+|登録済みサーバーまたはサーバー グループの移動|[登録済みサーバーまたは登録済みサーバー グループの移動 &#40;SQL Server Management Studio&#41;](./move-a-registered-server-or-registered-server-group.md)|  
+|登録済みサーバーまたはサーバー グループの名前変更|[登録済みサーバーまたは登録済みサーバー グループの名前の変更 &#40;SQL Server Management Studio&#41;](./change-the-name-of-registered-server-or-registered-server-group.md)|  
+|サーバー グループの作成または編集|[サーバー グループの作成または編集 &#40;SQL Server Management Studio&#41;](./create-or-edit-a-server-group-sql-server-management-studio.md)|  
+|サーバー グループの削除|[サーバー グループの削除 &#40;SQL Server Management Studio&#41;](./remove-a-server-group-sql-server-management-studio.md)|  
+|登録済みサーバーの情報のエクスポート|[登録済みサーバー情報のエクスポート &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)|  
+|登録済みサーバーの情報のインポート|[登録済みサーバー情報のインポート &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)|  
+|中央管理サーバーおよびサーバー グループの作成|[中央管理サーバーとサーバー グループの作成 &#40;SQL Server Management Studio&#41;](./create-a-central-management-server-and-server-group.md)|  
+|複数のサーバーに対するステートメントの同時実行|[複数のサーバーに対してステートメントを同時に実行する方法 &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リモート サーバー](../../database-engine/configure-windows/remote-servers.md)  
-  
   

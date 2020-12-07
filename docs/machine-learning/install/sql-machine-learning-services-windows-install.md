@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 02/29/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c3cf6afe4f99e7a728368f3454cc125998d806fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 11e051a87e0b5d051cf62c702c13f1189a21ca05
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178669"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870500"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -26,7 +26,7 @@ Windows に SQL Server Machine Learning Services をインストールする方�
 
 + データベース エンジンのインスタンスが必要です。 Python または R の機能だけをインストールすることはできませんが、既存のインスタンスにそれらを段階的に追加することはできます。
 
-+ ビジネス継続性のために、Machine Learning Services では [Always On 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)がサポートされています。 各ノードに Machine Learning Services をインストールし、パッケージを構成します。
++ ビジネス継続性のために、Machine Learning Services では [Always On 可用性グループ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)がサポートされています。 各ノードに Machine Learning Services をインストールし、パッケージを構成します。
 
 + Machine Learning Services のインストールは、SQL Server 2017 の [Always On フェールオーバー クラスター](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)ではサポート "*されていません*"。 SQL Server 2019 以降ではサポートされています。
  
@@ -41,7 +41,7 @@ Windows に SQL Server Machine Learning Services をインストールする方�
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> Machine Learning Services は、既定で **SQL Server ビッグ データ クラスター**にインストールされます。 **ビッグ データ クラスター**を使用する場合、この記事の手順を実行する必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
+> Machine Learning Services は、既定で **SQL Server ビッグ データ クラスター** にインストールされます。 **ビッグ データ クラスター** を使用する場合、この記事の手順を実行する必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
 ::: moniker-end
 
 > [!IMPORTANT]
@@ -52,11 +52,11 @@ Windows に SQL Server Machine Learning Services をインストールする方�
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Python および R と Machine Learning Services との統合をサポートする SQL Server エディションの詳細については、「[SQL Server 2017 のエディションとサポートされる機能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017)」を参照してください。
+Python および R と Machine Learning Services との統合をサポートする SQL Server エディションの詳細については、「[SQL Server 2017 のエディションとサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」を参照してください。
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-Python および R と Machine Learning Services との統合をサポートする SQL Server エディションの詳細については、「[SQL Server 2019 (15.x) のエディションとサポートされる機能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15)」を参照してください。
+Python および R と Machine Learning Services との統合をサポートする SQL Server エディションの詳細については、「[SQL Server 2019 (15.x) のエディションとサポートされる機能](../../sql-server/editions-and-components-of-sql-server-version-15.md)」を参照してください。
 ::: moniker-end
 
 ## <a name="run-setup"></a>セットアップを実行する
@@ -110,7 +110,7 @@ Python および R と Machine Learning Services との統合をサポートす�
      Microsoft Python パッケージ、Python 3.5 実行可能ファイルを追加したり、Anaconda ディストリビューションからライブラリを選択したりするには、このオプションをオンにします。
      
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   Java のインストールと使用の詳細については、「[SQL Server の言語拡張を Windows にインストールする](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)」を参照してください。
+   Java のインストールと使用の詳細については、「[SQL Server の言語拡張を Windows にインストールする](../../language-extensions/install/windows-java.md)」を参照してください。
    ::: moniker-end
    
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -147,7 +147,7 @@ Python および R と Machine Learning Services との統合をサポートす�
 
    構成ファイルが格納されている `..\Setup Bootstrap\Log` パスの下にあるフォルダーの場所をメモしておきます。 セットアップが完了したら、インストールされたコンポーネントを概要ファイルで確認できます。
 
-1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
+1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。
 
 ::: moniker-end
 
@@ -165,13 +165,13 @@ Python および R と Machine Learning Services との統合をサポートす�
 
    構成ファイルが格納されている `..\Setup Bootstrap\Log` パスの下にあるフォルダーの場所をメモしておきます。 セットアップが完了したら、インストールされたコンポーネントを概要ファイルで確認できます。
 
-4. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
+4. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。
 
 ::: moniker-end
 
 ## <a name="set-environment-variables"></a>環境変数の設定
 
-R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの[一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)する必要があります。
+R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの [一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)する必要があります。
 
 1. コントロール パネルで、 **[システムとセキュリティ]**  >  **[システム]**  >  **[システムの詳細設定]**  >  **[環境変数]** の順にクリックします。
 
@@ -189,7 +189,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。 
 
     > [!TIP]
-    > 次のページから適切なバージョンをダウンロードしてインストールできます。[SQL Server Management Studio (SSMS) をダウンロードしてください](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+    > 次のページから適切なバージョンをダウンロードしてインストールできます。[SQL Server Management Studio (SSMS) をダウンロードしてください](../../ssms/download-sql-server-management-studio-ssms.md)。
     > 
     > SQL Server に対する管理タスクとクエリをサポートする [Azure Data Studio](../../azure-data-studio/what-is.md) を使用することもできます。
   
@@ -230,7 +230,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
    **run_value** は 1 に設定されます。
     
-2. **[サービス]** パネルまたは SQL Server 構成マネージャーを開き、**SQL Server Launchpad サービス**が実行されていることを確認します。 R または Python がインストールされているすべてのデータベース エンジンのインスタンスに対して 1 つのサービスがある必要があります。 サービスの詳細については、[機能拡張フレームワーク](../concepts/extensibility-framework.md)に関するページを参照してください。 
+2. **[サービス]** パネルまたは SQL Server 構成マネージャーを開き、**SQL Server Launchpad サービス** が実行されていることを確認します。 R または Python がインストールされているすべてのデータベース エンジンのインスタンスに対して 1 つのサービスがある必要があります。 サービスの詳細については、[機能拡張フレームワーク](../concepts/extensibility-framework.md)に関するページを参照してください。 
    
 3. スタート パッドが実行されている場合は、単純な Python および R スクリプトを実行して、外部スクリプト ランタイムから SQL Server と通信できることを確認できます。
 
@@ -287,7 +287,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 1. 既にインストールされているベースライン インスタンスを使用して開始します: SQL Server 2017 の初回リリース
 
-2. 累積的な更新プログラムの一覧に移動します: [Microsoft SQL Server の最新の更新プログラム](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+2. 累積的な更新プログラムの一覧に移動します: [Microsoft SQL Server の最新の更新プログラム](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 3. 最新の累積的な更新プログラムを選択します。 実行可能ファイルがダウンロードされ、自動的に抽出されます。
 
@@ -311,7 +311,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 * [追加のネットワーク プロトコルの有効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [リモート接続の有効化](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [SQLRUserGroup のログインを作成する](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
-* ディスク領域を消費するタスクを外部スクリプトで実行しないようにするための[ディスク クォータの管理](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)
+* ディスク領域を消費するタスクを外部スクリプトで実行しないようにするための[ディスク クォータの管理](/windows/desktop/fileio/managing-disk-quotas)
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 Windows の SQL Server 2019 では、分離メカニズムが変更されています。 このメカニズムは、**SQLRUserGroup**、ファイアウォール規則、ファイルのアクセス許可、および暗黙の認証に影響します。 詳細については、[Machine Learning Services の分離の変更](sql-server-machine-learning-services-2019.md)に関するページを参照してください。

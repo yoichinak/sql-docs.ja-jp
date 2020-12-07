@@ -15,12 +15,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6644a84c2134735cefd489c4ddf6abdae775c412
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0690ad04a9b4dfdb2edd22c4e882616c2f8bf73f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723102"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869499"
 ---
 # <a name="sql-server-replication"></a>SQL Server のレプリケーション
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -134,7 +134,6 @@ ms.locfileid: "85723102"
 -   [管理者以外のユーザーがレプリケーション モニターを使用できるようにする](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [プログラムによるレプリケーションの監視](monitor/programmatically-monitor-replication.md)    
 -   [レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する (レプリケーション Transact-SQL プログラミング)](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](view-conflict-information-for-merge-publications.md) 
+-   [マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](./view-and-resolve-data-conflicts-for-merge-publications.md) 
 -   [待機時間を計測して Connections for Transactional Replication を検証します。](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
-  
   

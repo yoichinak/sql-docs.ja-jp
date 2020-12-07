@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba6441215b1f1462195b83a99ce040da11d694fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d98fda12251dafb69ab3738ea90f1eaf0298df46
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457321"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92192700"
 ---
 # <a name="partition-processing-destination"></a>パーティション処理変換先
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  パーティション処理変換先では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパーティションが読み込まれ処理されます。 パーティションの詳細については、「[パーティション (Analysis Services - 多次元データ)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)」を参照してください。  
+  パーティション処理変換先では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパーティションが読み込まれ処理されます。 パーティションの詳細については、「[パーティション (Analysis Services - 多次元データ)](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)」を参照してください。  
   
  パーティション処理変換先には、次の機能が含まれます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88457321"
   
 -   パーティション分割列への入力列のマッピング。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの処理に関する詳細については、「[処理オプションと設定 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの処理に関する詳細については、「[処理オプションと設定 (Analysis Services)](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)」を参照してください。  
   
 > [!NOTE]  
 >  ここで説明されているタスクは、Analysis Services テーブル モデルには適用されません。  テーブル モデルで入力列をパーティション列にマップすることはできません。 代わりに Analysis Services DDL 実行タスク [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) を使用してパーティションを処理することができます。  
@@ -114,7 +114,7 @@ ms.locfileid: "88457321"
   
 ### <a name="options"></a>オプション  
  **[既定のエラー構成を使用する]**  
- 既定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エラー処理を使用するかどうかを指定します。 既定では、この値は **True**です。  
+ 既定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エラー処理を使用するかどうかを指定します。 既定では、この値は **True** です。  
   
  **[キー エラー アクション]**  
  許容されないキー値を持つレコードを処理する方法を指定します。  
@@ -151,7 +151,7 @@ ms.locfileid: "88457321"
 |**ReportAndStop**|エラーを報告して処理を停止します。|  
   
  **[重複キー]**  
- 重複キーのエラーに対する操作を指定します。 既定では、この値は **IgnoreError**です。  
+ 重複キーのエラーに対する操作を指定します。 既定では、この値は **IgnoreError** です。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -160,7 +160,7 @@ ms.locfileid: "88457321"
 |**ReportAndStop**|エラーを報告して処理を停止します。|  
   
  **[不明な種類に変換された NULL キー]**  
- NULL キーが不明な値に変換された場合に実行する操作を指定します。 既定では、この値は **IgnoreError**です。  
+ NULL キーが不明な値に変換された場合に実行する操作を指定します。 既定では、この値は **IgnoreError** です。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -184,4 +184,4 @@ ms.locfileid: "88457321"
  エラー ログのパスを選択します。  
   
 ## <a name="see-also"></a>関連項目  
- [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)

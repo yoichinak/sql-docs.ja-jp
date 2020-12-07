@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2cc50fc56b82ac8e98a6bcbb4b31f7db5beb81c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 295eaa677578effd375e5443fd20e1f5ca368669
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420756"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91868643"
 ---
 # <a name="toolbox-component-f1-help"></a>ツールボックス コンポーネントの F1 ヘルプ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[ツールボックス]** には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトで使用するさまざまなアイテムが表示されます。 **[ツールボックス]** は、 **[表示]** メニューから開くことができます。このウィンドウは自由にドッキングできます。 ドッキングするときに、 **[ツールボックス]** を固定して開くように設定したり、使用していないときは **[自動的に隠す]** を適用したりできます。  
   
- コード エディターまたは**内のデザイン ビュー画面に、** [ツールボックス] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のアイテムをドラッグしてドロップするか、コピーして貼り付けることができます。  
+ コード エディターまたは **内のデザイン ビュー画面に、** [ツールボックス] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のアイテムをドラッグしてドロップするか、コピーして貼り付けることができます。  
   
 ## <a name="how-the-toolbox-works"></a>ツールボックスのしくみ  
  [ツールボックス] はスライド式のツリー コントロールで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows エクスプローラーの動作と似ていますが、グリッド線や接続線はありません。 **[ツールボックス]** の複数のセグメント (タブ) を同時に展開し、ツリー全体をスクロールして **[ツールボックス]** ウィンドウ内を移動することができます。 **[ツールボックス]** のタブを展開するには、名前の横のプラス記号 (**[+]**) をクリックします。 展開したタブを折りたたむには、名前の横のマイナス記号 ( **[-]** ) をクリックします。  
@@ -41,4 +41,4 @@ ms.locfileid: "88420756"
   
 ## <a name="see-also"></a>参照  
  [ツールボックスの使用](../../ssms/use-the-toolbox.md)   
- [[ツールボックス アイテムの選択] &#40;[メンテナンス タスク] ページ&#41;](https://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
+ [[ツールボックス アイテムの選択] &#40;[メンテナンス タスク] ページ&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)

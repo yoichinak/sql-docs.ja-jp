@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6edb71255096e8a3164361af07ca0d675f6a9e7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0069e1fc2a6991df71291fd377aaa76e10f23256
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422896"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734631"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,9 +51,15 @@ DBCC FREESYSTEMCACHE
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
-( 'ALL' [,_pool\_name_ ] )  
+( 'ALL' [, _pool\_name_ ] )  
 ALL はサポートされるすべてのキャッシュを指定します。  
-_pool\_name_ は Resource Governor プール キャッシュを指定します。 このプールに関連付けられたエントリだけが解放されます。  
+_pool\_name_ はリソース ガバナー プール キャッシュを指定します。 このプールに関連付けられたエントリだけが解放されます。 使用可能なプール名を一覧表示するには、次のように実行します。
+
+```sql
+SELECT name FROM sys.dm_os_memory_clerks
+```
+
+このコマンドを使用すると、すべてではありませんが、ほとんどのキャッシュを個別に解放できます。
   
 MARK_IN_USE_FOR_REMOVAL  
 現在使用しているエントリが使用されなくなったら、それぞれのキャッシュから非同期に解放します。 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL の実行後、キャッシュ内に作成された新しいエントリには影響ありません。  
@@ -62,7 +68,11 @@ NO_INFOMSGS
 すべての情報メッセージを表示しないようにします。  
   
 ## <a name="remarks"></a>解説  
-DBCC FREESYSTEMCACHE を実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアがクリアされるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、'DBCC FREEPROCCACHE' 操作または 'DBCC FREESYSTEMCACHE' 操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
+DBCC FREESYSTEMCACHE を実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュ ストアが消去されるたびに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに次のような通知メッセージが記録されます。
+
+>`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
+
+ このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 
 ## <a name="result-sets"></a>結果セット  
 DBCC FREESYSTEMCACHE は次のメッセージを返します。"DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"

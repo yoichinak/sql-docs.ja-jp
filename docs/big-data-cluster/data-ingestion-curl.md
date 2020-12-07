@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e4d030b54944b8fe25d930f7f0b4fc540f7aff67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae893bb1e291b244b5101ccfb2ed66bcf765f049
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784325"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866846"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-big-data-clusters-2019"></a>curl を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の HDFS にデータを読み込む
 
@@ -47,12 +47,24 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
+## <a name="authentication-with-active-directory"></a>Active Directory での認証
+
+Active Directory でのデプロイの場合は、ネゴシエート認証で、認証パラメーターと `curl` を使用します。 
+
+Active Directory 認証で `curl` を使用するには、次のコマンドを実行します。
+
+```
+kinit <username>
+```
+
+このコマンドによって、使用する `curl` に対して Kerberos トークンが生成されます。 次のセクションで説明するコマンドによって、`curl` の `--anyauth` パラメーターが指定されます。 ネゴシエート認証が必要な URL の場合、`curl` を使用することで、その URL に対して認証を行うためのユーザー名とパスワードではなく、生成された Kerberos トークンが自動的に検出および使用されます。
+
 ## <a name="list-a-file"></a>ファイルの一覧表示
 
 **hdfs:///product_review_data** の下のファイルを一覧表示するには、次の curl コマンドを使用します。
 
 ```terminal
-curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+curl -i -k --anyauth -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
@@ -60,7 +72,7 @@ curl -i -k -u root:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP ex
 ルートを使用しないエンドポイントの場合は、次の curl コマンドを使用します。
 
 ```terminal
-curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
+curl -i -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>ローカル ファイルを HDFS に配置する
@@ -68,7 +80,7 @@ curl -i -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X GET 'https://<gateway-svc-e
 **test.csv** という新しいファイルをローカル ディレクトリから product_review_data ディレクトリに配置するには、次の curl コマンドを使用します (**Content-Type** パラメーターは必須です)。
 
 ```terminal
-curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k --anyauth -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
@@ -76,7 +88,7 @@ curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP
 ルートを使用しないエンドポイントの場合は、次の curl コマンドを使用します。
 
 ```terminal
-curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>ディレクトリを作成する
@@ -84,14 +96,14 @@ curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-sv
 `hdfs:///` の下に **test** というディレクトリを作成するには、次のコマンドを使用します。
 
 ```terminal
-curl -i -L -k -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k --anyauth -u root:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 ルートを使用しないエンドポイントの場合は、次の curl コマンドを使用します。
 
 ```terminal
-curl -i -L -k -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k --anyauth -u <AZDATA_USERNAME>:<AZDATA_PASSWORD> -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## <a name="next-steps"></a>次のステップ

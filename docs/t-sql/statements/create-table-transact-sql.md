@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f7e6cc805953007bb83eb5a50db5a39aea9e37b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024581"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521170"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -108,7 +108,7 @@ column_name <data_type>
     [ COLLATE collation_name ]
     [ SPARSE ]
     [ MASKED WITH ( FUNCTION = ' mask_function ') ]
-    [ CONSTRAINT constraint_name [ DEFAULT constant_expression ] ]
+    [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression ]
     [ IDENTITY [ ( seed,increment ) ]
     [ NOT FOR REPLICATION ]
     [ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] ]
@@ -468,7 +468,7 @@ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **適用対象**
 
 指定した `datetime2` 列が、システムによって、レコードの有効期限の開始時刻またはレコードの有効期限の終了時刻のいずれかを記録するために使用されることを指定します。 列を `NOT NULL` として定義する必要があります。 それらを `NULL` として指定しようとすると、システムによりエラーがスローされます。 期間列に対して明示的に NOT NULL を指定しない場合、システムにより既定で列が `NOT NULL` として定義されます。 `PERIOD FOR SYSTEM_TIME` および `WITH SYSTEM_VERSIONING = ON` 引数と組み合わせてこの引数を使い、テーブル上でシステムのバージョン管理を有効にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
-1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM** _`<table>`_ がこれらの列の値を返さないようにすることができます。 既定では、期間列は非表示ではありません。 非表示の列を使用するためには、テンポラル テーブルを直接参照するすべてのクエリで明示的に含める必要があります。 変更する、 **HIDDEN** を既存の**期間**列の属性 期間 削除し、別の非表示フラグを再作成する必要があります。
+1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM** _`<table>`_ がこれらの列の値を返さないようにすることができます。 既定では、期間列は非表示ではありません。 非表示の列を使用するためには、テンポラル テーブルを直接参照するすべてのクエリで明示的に含める必要があります。 変更する、 **HIDDEN** を既存の **期間** 列の属性 期間 削除し、別の非表示フラグを再作成する必要があります。
 
 INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] ) **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
@@ -524,7 +524,7 @@ ENCRYPTED WITH: [Always Encrypted](../../relational-databases/security/encryptio
 
 COLUMN_ENCRYPTION_KEY = *key_name*: 列の暗号化キーを指定します。 詳細については、[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) に関するページをご覧ください。
 
-ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }: **決定論的な暗号化**では、指定した任意のプレーンテキストに対して、常に同じ暗号化された値が生成されるような方法を使用します。 決定論的な暗号化を使うことにより、等価比較を使った検索や、グループ化、暗号化された値に基づく等価結合を使ったテーブルの結合が可能になりますが、承認されていないユーザーが、暗号化された列のパターンを調べることで暗号化された値に関する情報を推測することも可能になります。 決定論的に暗号化された列で 2 つのテーブルを結合することができるのは、両方の列が同じ列暗号化キーを使って暗号化されている場合のみです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。
+ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }: **決定論的な暗号化** では、指定した任意のプレーンテキストに対して、常に同じ暗号化された値が生成されるような方法を使用します。 決定論的な暗号化を使うことにより、等価比較を使った検索や、グループ化、暗号化された値に基づく等価結合を使ったテーブルの結合が可能になりますが、承認されていないユーザーが、暗号化された列のパターンを調べることで暗号化された値に関する情報を推測することも可能になります。 決定論的に暗号化された列で 2 つのテーブルを結合することができるのは、両方の列が同じ列暗号化キーを使って暗号化されている場合のみです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。
 
 **暗号化をランダム化** は低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 ランダム化された暗号化は、より安全ですが、SQL Server インスタンスでセキュア エンクレーブを使用する Always Encrypted がサポートされる場合を除き、暗号化された列に対する計算とインデックス作成はすべて阻止されます。 詳しくは、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」(セキュア エンクレーブを使用する Always Encrypted) をご覧ください。
 
@@ -807,7 +807,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **適用対象**: [!INCLUDE[ss
     {( FILTER_COLUMN = column_name,   
            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } )}] **Applies to:** Azure SQL Edge "*のみ*"
 
-データベース内のテーブルの古いデータまたは期限切れのデータに対し、アイテム保持ポリシーを使用したクリーンアップを有効にします。 詳細については、[データ保持の有効化と無効化](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable)に関するページを参照してください。 データ保持を有効にするには、次のパラメーターを指定します。 
+データベース内のテーブルの古いデータまたは期限切れのデータに対し、アイテム保持ポリシーを使用したクリーンアップを有効にします。 詳細については、[データ保持の有効化と無効化](/azure/azure-sql-edge/data-retention-enable-disable)に関するページを参照してください。 データ保持を有効にするには、次のパラメーターを指定します。 
 
 - FILTER_COLUMN = { column_name }  
 列を指定します。これは、テーブル内の行が廃止されているかどうかを判断するために使用します。 フィルター列に使用できるデータ型は次のとおりです。
@@ -817,12 +817,12 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **適用対象**: [!INCLUDE[ss
   - SmallDateTime
   - DateTimeOffset
 
-- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS }}       
   テーブルの保持期間のポリシーを指定します。 保有期間は、正の整数値と日付部分の単位を組み合わせて指定します。   
 
 MEMORY_OPTIMIZED **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。 Azure SQL Managed Instance では、メモリ最適化テーブルはサポートされません。
 
-値が ON の場合は、テーブルがメモリ最適化されていることを示します。 メモリ最適化テーブルは、トランザクション処理のパフォーマンスの最適化に使用されるインメモリ OLTP 機能の一部です。 インメモリ OLTP の使用を開始するには、「[クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」を参照してください。 メモリ最適化テーブルについて詳しくは、「[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)」をご覧ください。
+値が ON の場合は、テーブルがメモリ最適化されていることを示します。 メモリ最適化テーブルは、トランザクション処理のパフォーマンスの最適化に使用されるインメモリ OLTP 機能の一部です。 インメモリ OLTP の使用を開始するには、「[クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」を参照してください。 メモリ最適化テーブルについて詳しくは、「[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)」をご覧ください。
 
 既定値の OFF は、テーブルがディスク ベースであることを示します。
 

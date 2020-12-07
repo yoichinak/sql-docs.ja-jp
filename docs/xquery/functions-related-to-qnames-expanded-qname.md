@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88bbf5697112fd80f8ffea629a1ad2b9e99977fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1a59104b8becec2edd8b4b15c28e13e19011a4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720043"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036825"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames に関係する関数 - expanded-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -41,28 +41,28 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  QName のローカル名部分です。  
   
-## <a name="remarks"></a>Remarks  
- 次の例は、**拡張 QName ()** 関数に適用されます。  
+## <a name="remarks"></a>解説  
+ 次の例は、 **拡張 QName ()** 関数に適用されます。  
   
--   指定された *$paramLocal*値が Xs: NCName 型の正しい構文形式でない場合、空のシーケンスが返され、動的なエラーを表します。  
+-   指定された *$paramLocal* 値が Xs: NCName 型の正しい構文形式でない場合、空のシーケンスが返され、動的なエラーを表します。  
   
--   では、xs: QName 型から他の型への変換はサポートされていません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 このため、**拡張 QName ()** 関数は XML の構築では使用できません。 たとえば、`<e> expanded-QName(...) </e>` など、ノードを構築する場合、型指定なしの値を使用する必要があります。 これは、`expanded-QName()` で返される xs:QName の値を xdt:untypedAtomic に変換する必要性を意味します。 ただし、これはサポートされていません。 ソリューションは、このトピックで後述する例で提供されています。  
+-   では、xs: QName 型から他の型への変換はサポートされていません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 このため、 **拡張 QName ()** 関数は XML の構築では使用できません。 たとえば、`<e> expanded-QName(...) </e>` など、ノードを構築する場合、型指定なしの値を使用する必要があります。 これは、`expanded-QName()` で返される xs:QName の値を xdt:untypedAtomic に変換する必要性を意味します。 ただし、これはサポートされていません。 ソリューションは、このトピックで後述する例で提供されています。  
   
--   既存の QName 型の値を変更または比較することができます。 たとえば、は、 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 要素の値 <`e`> を、展開された**qname ()** 関数によって返された qname と比較します。  
+-   既存の QName 型の値を変更または比較することができます。 たとえば、は、 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 要素の値 <`e`> を、展開された **qname ()** 関数によって返された qname と比較します。  
   
-## <a name="examples"></a>使用例  
- このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
+## <a name="examples"></a>例  
+ このトピックでは、データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
-### <a name="a-replacing-a-qname-type-node-value"></a>A: QName 型ノードの値を置換する  
+### <a name="a-replacing-a-qname-type-node-value"></a>A. QName 型ノードの値を置換する  
  この例では、QName 型の要素ノードの値を変更する方法を示しています。 この例では、次の処理を実行します。  
   
 -   QName 型の要素を定義する XML スキーマコレクションを作成します。  
   
--   Xml スキーマコレクションを使用して、 **xml**型の列を含むテーブルを作成します。  
+-   Xml スキーマコレクションを使用して、 **xml** 型の列を含むテーブルを作成します。  
   
 -   XML インスタンスをテーブルに保存します。  
   
--   では、xml データ型の**modify ()** メソッドを使用して、インスタンスの QName 型の要素の値を変更します。 新しい QName 型の値を生成するには、展開された**qname ()** 関数を使用します。  
+-   では、xml データ型の **modify ()** メソッドを使用して、インスタンスの QName 型の要素の値を変更します。 新しい QName 型の値を生成するには、展開された **qname ()** 関数を使用します。  
   
 ```  
 -- If XML schema collection (if exists)  
@@ -99,7 +99,7 @@ go
 </Root>   
 ```  
   
- 次のクエリでは、次に `ElemQN` 示すように、xml データ型の**modify ()** メソッドおよび xml DML の replace 値を使用して、<> 要素の値が置き換えられます。  
+ 次のクエリでは、次に `ElemQN` 示すように、xml データ型の **modify ()** メソッドおよび xml DML の replace 値を使用して、<> 要素の値が置き換えられます。  
   
 ```  
 -- the value.  
@@ -132,7 +132,7 @@ drop xml schema collection SC
 go  
 ```  
   
-### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B: 拡張 QName () 関数を使用する場合の制限事項に対処する  
+### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. 拡張 QName () 関数を使用する場合の制限事項に対処する  
  **拡張 QName**関数は、XML の構築では使用できません。 次の例を使って説明します。 この制限を回避するために、この例では最初にノードを挿入してから、そのノードを変更しています。  
   
 ```  
@@ -201,9 +201,8 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
- 1つの制限事項があります。**拡張 QName ()** 関数では、2番目の引数として空のシーケンスが受け入れられ、2番目の引数が正しくない場合に、実行時エラーを発生させる代わりに、空のが返されます。  
+ 1つの制限事項があります。 **拡張 QName ()** 関数では、2番目の引数として空のシーケンスが受け入れられ、2番目の引数が正しくない場合に、実行時エラーを発生させる代わりに、空のが返されます。  
   
-## <a name="see-also"></a>関連項目  
- [QNames &#40;XQuery&#41;に関連する関数](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+## <a name="see-also"></a>参照  
+ [QNames &#40;XQuery&#41;に関連する関数 ]()  
   

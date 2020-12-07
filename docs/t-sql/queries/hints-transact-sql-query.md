@@ -56,12 +56,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 623c29594f1ceec2051eeec6e0a533fc948413dc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: effad55b1fd1eec856aa412700a751e36e588b37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116632"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035856"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -355,7 +355,7 @@ ROBUST PLAN
    > [!NOTE]
    > 既定またはレガシのカーディナリティ推定の設定が、データベース スコープ構成、トレース フラグ、または QUERYTRACEON などの別のクエリ ヒントによって適用されている場合、QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ヒントはそれをオーバーライドしません。   
    > このヒントは、クエリ オプティマイザーの動作にのみ影響します。 特定のデータベース機能の可用性など、[データベース互換レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)に依存する可能性のある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他の機能には影響しません。  
-   > このヒントの詳細については、「[Developer’s Choice:Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)」(開発者の選択: クエリ ヒント実行モデル) をご覧ください。
+   > このヒントの詳細については、「[Developer’s Choice:Hinting Query Execution model](/archive/blogs/sql_server_team/developers-choice-hinting-query-execution-model)」(開発者の選択: クエリ ヒント実行モデル) をご覧ください。
     
 *  'QUERY_PLAN_PROFILE'      
  クエリの軽量プロファイリングを有効にします。 この新しいヒントを含むクエリが完了したら、新しい拡張イベントである query_plan_profile が起動されます。 この拡張イベントでは、実行の統計と query_post_execution_showplan 拡張イベントのような実際の実行プラン XML が公開されますが、新しいヒントを含むクエリのみが対象です。    
@@ -658,4 +658,3 @@ OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
 [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
 [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
-  

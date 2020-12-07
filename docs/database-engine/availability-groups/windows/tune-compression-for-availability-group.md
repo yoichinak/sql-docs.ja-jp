@@ -7,14 +7,14 @@ ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f8af4702abe127dc0bf5b53be7618515c21cd13c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6b618efb64f5409e16665d772accbbe9434e8ffd
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888013"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583691"
 ---
 # <a name="tune-compression-for-availability-group"></a>可用性グループの圧縮の調整
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +45,6 @@ ms.locfileid: "85888013"
 
 [データベース エンジンのスタートアップ オプション](../../../database-engine/configure-windows/database-engine-service-startup-options.md)
 
-[自動シード処理](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
+[自動シード処理](./automatically-initialize-always-on-availability-group.md)
 
-[Always On の前提条件](prereqs-restrictions-recommendations-always-on-availability.md) 
+[Always On の前提条件](prereqs-restrictions-recommendations-always-on-availability.md)

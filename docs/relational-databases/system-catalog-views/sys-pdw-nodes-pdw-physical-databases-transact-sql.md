@@ -1,6 +1,6 @@
 ---
-description: pdw_nodes_pdw_physical_databases (Transact-sql)
-title: pdw_nodes_pdw_physical_databases (Transact-sql)
+description: sys.pdw_nodes_pdw_physical_databases (Transact-sql)
+title: sys.pdw_nodes_pdw_physical_databases (Transact-sql)
 ms.custom: seo-dt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41c43a39c85c05dcb0155c90fea74c5899445527
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4b29984f962f2ec4f542a57cd604c619a78c6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475369"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036715"
 ---
-# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>pdw_nodes_pdw_physical_databases (Transact-sql)
+# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   コンピューティングノードの物理データベースごとに1行のデータを格納します。 物理データベース情報を集計して、データベースに関する詳細情報を取得します。 情報を結合するには、を `sys.pdw_nodes_pdw_physical_databases` `sys.pdw_database_mappings` テーブルとテーブルに結合し `sys.databases` ます。  
@@ -28,7 +28,7 @@ ms.locfileid: "88475369"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|データベースのオブジェクト ID。 この値は、 [transact-sql&#41;ビュー &#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) の database_id と同じではないことに注意してください。|  
-|physical_name|**sysname**|シェル/コンピューティングノード上のデータベースの物理名。 この値は、 [pdw_database_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) ビューの physical_name 列の値と同じです。|  
+|physical_name|**sysname**|シェル/コンピューティングノード上のデータベースの物理名。 この値は、 [transact-sql&#41;ビュー &#40;sys.pdw_database_mappings ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) の [physical_name] 列の値と同じです。|  
 |pdw_node_id|**int**|ノードに関連付けられている一意の数値 id。|  
   
 ## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -47,7 +47,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Pdw_nodes_pdw_physical_databases を使用して詳細なオブジェクト情報を収集する  
+### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Sys.pdw_nodes_pdw_physical_databases を使用した詳細なオブジェクト情報の収集  
  次のクエリは、インデックスに関する情報を表示し、データベース内のオブジェクトにオブジェクトが属しているデータベースに関する有用な情報を格納します。  
   
 ```  
@@ -64,7 +64,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Pdw_nodes_pdw_physical_databases を使用して暗号化の状態を確認する  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Sys.pdw_nodes_pdw_physical_databases を使用して暗号化の状態を確認する  
  次のクエリは、AdventureWorksPDW2012 データベースの暗号化の状態を提供します。  
   
 ```  
@@ -87,9 +87,9 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Azure Synapse Analytics と Parallel Data Warehouse のカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [pdw_database_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [sys.pdw_database_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

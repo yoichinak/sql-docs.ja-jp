@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df2b88cc69b8f77a43ad6d1a26bfa706fed12eaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3265871cc1ddf221b3fb4090936d146f555dd3b5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393508"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194294"
 ---
 # <a name="foreach-loop-container"></a>Foreach ループ コンテナー
 
@@ -115,9 +115,9 @@ ms.locfileid: "88393508"
   
 2.  タスクとコンテナーを Foreach ループ コンテナーに追加します。 詳細については、「 [制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
-3.  優先順位制約を使用して、Foreach ループ コンテナー内のタスクとコンテナーを連結します。 詳細については、「 [既定の優先順位制約を使用してタスクとコンテナーを連結する](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)」を参照してください。  
+3.  優先順位制約を使用して、Foreach ループ コンテナー内のタスクとコンテナーを連結します。 詳細については、「 [既定の優先順位制約を使用してタスクとコンテナーを連結する](./precedence-constraints.md)」を参照してください。  
   
-4.  Foreach ループ コンテナーを構成します。 詳細については、「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
+4.  Foreach ループ コンテナーを構成します。 詳細については、「 [Foreach ループ コンテナーを構成する]()」を参照してください。  
 
 ## <a name="configure-a-foreach-loop-container"></a>Foreach ループ コンテナーを構成する
 この手順では、列挙子レベルおよびコンテナー レベルでのプロパティ式など、Foreach ループ コンテナーを構成する方法について説明します。  
@@ -185,7 +185,7 @@ ms.locfileid: "88393508"
 ## <a name="general-page---foreach-loop-editor"></a>[全般] ページ - [Foreach ループ エディター]
 **[Foreach ループ エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Foreach ループ コンテナーの名前と説明を指定できます。これは、指定した列挙子を使用してコレクション内の各メンバーのワークフローを繰り返し処理するコンテナーです。  
   
- Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
+ Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する]()」を参照してください。  
   
 ### <a name="options"></a>Options  
  **名前**  
@@ -200,7 +200,7 @@ ms.locfileid: "88393508"
 ## <a name="collection-page---foreach-loop-editor"></a>[コレクション] ページ - [Foreach ループ エディター]
  **[Foreach ループ エディター]** ダイアログ ボックスの **[コレクション]** ページを使用すると、列挙子の型を指定して列挙子を構成できます。  
   
- Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
+ Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する]()」を参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
  **列挙子**  
@@ -289,7 +289,7 @@ ms.locfileid: "88393508"
  **[列]**  
  アイテム内の列のデータ型を構成する場合にクリックします。  
   
- **関連トピック:** [[For Each Item 列] ダイアログ ボックスの UI リファレンス](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **関連トピック:** [[For Each Item 列] ダイアログ ボックスの UI リファレンス]()  
   
 #### <a name="enumerator--foreach-ado-enumerator"></a>[Enumerator] = [Foreach ADO 列挙子]  
  Foreach ADO 列挙子は、変数に格納されている ADO オブジェクトまたは ADO.NET オブジェクト内の行またはテーブルを列挙するために使用します。 たとえば、変数にデータセットを書き込むスクリプト タスクが Foreach ループに含まれている場合、Foreach ADO 列挙子を使用して、データセット内の行を列挙できます。 変数に ADO.NET データセットが格納されている場合は、複数のテーブル内の行を列挙するか、テーブルを列挙するようにこの列挙子を構成できます。  
@@ -300,7 +300,7 @@ ms.locfileid: "88393508"
 > [!NOTE]  
 >  変数は、Object データ型にする必要があります。それ以外の場合はエラーが発生します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  
   
  **[最初のテーブル内の行]**  
  最初のテーブルの行のみを列挙する場合に選択します。  
@@ -320,7 +320,7 @@ ms.locfileid: "88393508"
 > [!IMPORTANT]  
 >  ADO.NET 接続マネージャーでは、OLE DB の .NET プロバイダーを使用する必要があります。 SQL Server に接続する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の使用をお勧めします。このプロバイダーは、 **[接続マネージャー]** ダイアログ ボックスの **[OleDb の .Net プロバイダー]** セクションに一覧表示されます。  
   
- **関連トピック:** [ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)、[ADO.NET の接続マネージャーの構成](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ **関連トピック:** [ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)、[ADO.NET の接続マネージャーの構成](../connection-manager/ado-net-connection-manager.md)  
   
  **[スキーマ]**  
  列挙するスキーマを選択します。  
@@ -328,7 +328,7 @@ ms.locfileid: "88393508"
  **[制限の設定]**  
  指定したスキーマに適用する制約を設定します。  
   
- **関連トピック:** [[スキーマの制限] ダイアログ ボックス](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **関連トピック:** [[スキーマの制限] ダイアログ ボックス]()  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>[Enumerator] = [Foreach From Variable 列挙子]  
  Foreach From Variable 列挙子は、指定した変数に含まれる列挙可能なオブジェクトを列挙するために使用します。 たとえば、クエリを実行し、その結果を変数に格納する SQL 実行タスクが Foreach ループに含まれている場合、Foreach From Variable 列挙子を使用してクエリの結果を列挙できます。  
@@ -336,14 +336,14 @@ ms.locfileid: "88393508"
  **変数**  
  一覧で変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>[Enumerator] = [Foreach NodeList 列挙子]  
  Foreach Nodelist 列挙子は、XPath 式を XML ファイルに適用した結果として生成された XML ノードのセットを列挙するために使用します。 たとえば、Foreach ループにスクリプト タスクが含まれている場合、Foreach NodeList 列挙子を使用して、XPath 式の条件を満たす値を XML ファイルからスクリプト タスクに渡すことができます。  
   
  XML ファイルに適用される XPath 式は、OuterXPathString プロパティに格納された外部 XPath 操作です。 **ElementCollection**に XPath 列挙型が設定されている場合、ForeachNodeList 列挙子は、InnerXPathString プロパティに格納された内部 XPath 式を、要素のコレクションに適用できます。  
   
- XML ドキュメントとデータの操作の詳細については、MSDN ライブラリの「[.NET Framework における XML の使用](https://go.microsoft.com/fwlink/?LinkId=56214)」を参照してください。  
+ XML ドキュメントとデータの操作の詳細については、MSDN ライブラリの「[.NET Framework における XML の使用](/previous-versions/aa720019(v=vs.71))」を参照してください。  
   
  **[DocumentSourceType]**  
  XML ドキュメントのソースの種類を選択します。 このプロパティには、次の表に示すオプションがあります。  
@@ -359,11 +359,11 @@ ms.locfileid: "88393508"
   
  **[DocumentSourceType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../connection-manager/file-connection-manager.md)  
   
  **[DocumentSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)。  
   
  **[EnumerationType]**  
  一覧から列挙型を選択します。 このプロパティには、次の表に示すオプションがあります。  
@@ -389,11 +389,11 @@ ms.locfileid: "88393508"
   
  **[OuterXPathStringSourceType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../connection-manager/file-connection-manager.md)  
   
  **[OuterXPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)。  
   
  **[InnerElementType]**  
  **[EnumerationType]** が **[ElementCollection]** に設定されている場合は、一覧の内部要素の型を選択します。  
@@ -412,11 +412,11 @@ ms.locfileid: "88393508"
   
  **[InnerXPathStringSourceType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../connection-manager/file-connection-manager.md)  
   
  **[InnerXPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)。  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>[Enumerator] = [Foreach SMO 列挙子]  
  Foreach SMO 列挙子は、SQL Server 管理オブジェクト (SMO) のオブジェクトを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach SMO 列挙子を使用して、**AdventureWorks** データベース内のテーブルを列挙し、各テーブル内の行数をカウントするクエリを実行できます。  
@@ -424,7 +424,7 @@ ms.locfileid: "88393508"
  **接続**  
  既存の ADO.NET 接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- 関連トピック:[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)、[ADO.NET の接続マネージャーの構成](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ 関連トピック:[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)、[ADO.NET の接続マネージャーの構成](../connection-manager/ado-net-connection-manager.md)  
   
  **[列挙]**  
  列挙する SMO オブジェクトを指定します。  
@@ -432,7 +432,7 @@ ms.locfileid: "88393508"
  **[参照]**  
  SMO 列挙を選択します。  
   
- **関連トピック:** [[SMO 列挙の選択] ダイアログ ボックス](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
+ **関連トピック:** [[SMO 列挙の選択] ダイアログ ボックス]()  
   
 ####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> [列挙子] = [Foreach HDFS File 列挙子]  
  **[Foreach HDFS File Enumerator]** (Foreach HDFS ファイル列挙子) を指定すると、SSIS パッケージは、指定した HDFS の場所にある HDFS ファイルを列挙します。 各 HDFS ファイルの名前を変数に格納し、Foreach ループ コンテナー内のタスクで使用することができます。  
@@ -512,20 +512,20 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
 
 ***サービス プリンシパルのアクセス許可の構成に関する注意事項***
 
-Data Lake Storage Gen2 アクセス許可は [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) と [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) の両方によって決定されます。
-[こちら](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)に説明されているように、アプリ登録に対応するサービス プリンシパルのオブジェクト ID (OID) を使用して ACL を構成することに注意してください。
+Data Lake Storage Gen2 アクセス許可は [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) と [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) の両方によって決定されます。
+[こちら](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)に説明されているように、アプリ登録に対応するサービス プリンシパルのオブジェクト ID (OID) を使用して ACL を構成することに注意してください。
 これは、RBAC 構成で使用されるアプリケーション (クライアント) ID とは異なります。
 組み込みロールまたはカスタム ロールを使用してセキュリティ プリンシパルに RBAC データ アクセス許可が付与されると、これらのアクセス許可は、要求の認可時に最初に評価されます。
 要求された操作がセキュリティ プリンシパルの RBAC 割り当てによって認可された場合、認可はすぐに解決され、追加の ACL チェックは実行されません。
 また、セキュリティ プリンシパルに RBAC 割り当てがない場合、または要求の操作が割り当てられたアクセス許可と一致しない場合、ACL チェックが実行され、要求された操作を実行する権限がセキュリティ プリンシパルに付与されているかどうかが判断されます。
 列挙子が機能するためには、少なくともルート ファイル システムから開始する**実行**アクセス許可を、ターゲット フォルダーに対する**読み取り**アクセス許可と共に付与します。
 または、少なくとも**ストレージ BLOB データ閲覧者**の役割を RBAC を使用して付与します。
-詳細については、[この記事](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)を参照してください。
+詳細については、[この記事](/azure/storage/blobs/data-lake-storage-access-control)を参照してください。
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>[変数のマッピング] ページ - [ForEach ループ エディター]
  **[Foreach ループ エディター]** ダイアログ ボックスの **[変数のマッピング]** ページを使用すると、コレクションの値に変数をマップできます。 変数の値は、ループの各反復処理でコレクションの値を使用して更新されます。  
   
- Integration Services パッケージでの Foreach Loop コンテナーの使用方法の詳細については、「[Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)」を参照してください。 構成方法の詳細については、「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
+ Integration Services パッケージでの Foreach Loop コンテナーの使用方法の詳細については、「[Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)」を参照してください。 構成方法の詳細については、「 [Foreach ループ コンテナーを構成する]()」を参照してください。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] チュートリアルの「簡単な ETL パッケージの作成」には、Foreach ループの追加および構成について説明するレッスンが含まれています。  
   
@@ -536,7 +536,7 @@ Data Lake Storage Gen2 アクセス許可は [RBAC](https://docs.microsoft.com/a
 > [!NOTE]  
 >  変数をマップした後、新しい行が **[変数]** リストに自動的に追加されます。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  
   
  **Index**  
  Foreach Item 列挙子を使用する場合、変数にマップするコレクションの値に列のインデックスを指定します。 他の列挙子の型では、インデックスは読み取り専用です。  
@@ -557,7 +557,7 @@ Data Lake Storage Gen2 アクセス許可は [RBAC](https://docs.microsoft.com/a
  **変数**  
  制限を定義するために変数を使用します。 変数を一覧から選択するか、 **[新しい変数]** をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  
   
  **[テキスト]**  
  制限を定義するテキストを入力します。  
@@ -610,5 +610,4 @@ Data Lake Storage Gen2 アクセス許可は [RBAC](https://docs.microsoft.com/a
 ## <a name="see-also"></a>参照  
  [制御フロー](../../integration-services/control-flow/control-flow.md)   
  [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)  
-  
   

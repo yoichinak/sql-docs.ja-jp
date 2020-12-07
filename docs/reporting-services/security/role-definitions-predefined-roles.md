@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c0929f82f7f9a086fa58856b6e1357807c198f7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454524"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987396"
 ---
 # <a name="role-definitions---predefined-roles"></a>ロールの定義 - 定義済みロール
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、定義済みのロールと共にインストールされます。このロールを使用すると、レポート サーバーの操作へのアクセスを許可することができます。 定義済みの各ロールは、関連するタスクのコレクションを示しています。 定義済みのロールにグループやユーザー アカウントを割り当てることで、レポート サーバーの操作にすぐにアクセスできます。  
@@ -60,11 +60,11 @@ ms.locfileid: "88454524"
 |----------|-----------------|  
 |レポートの使用|レポート定義を読み込みます。|  
 |リンク レポートの作成|リンク レポートではないレポートを基にしたリンク レポートを作成します。|  
-|すべてのサブスクリプションを管理|レポートおよびリンク レポートのサブスクリプションを、その所有者がだれであるかにかかわらず表示、変更、および削除します。 このタスクでは、データ ドリブンのサブスクリプションの作成をサポートしています。 また、[Power BI Report Server の Power BI (.pbix) ファイルのスケジュールされている更新](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh)の編集と実行もサポートしています。|  
+|すべてのサブスクリプションを管理|レポートおよびリンク レポートのサブスクリプションを、その所有者がだれであるかにかかわらず表示、変更、および削除します。 このタスクでは、データ ドリブンのサブスクリプションの作成をサポートしています。 また、[Power BI Report Server の Power BI (.pbix) ファイルのスケジュールされている更新](/power-bi/report-server/configure-scheduled-refresh)の編集と実行もサポートしています。|  
 |データ ソースを管理する|共有データ ソース アイテムの作成および削除と、データ ソースのプロパティとコンテンツの表示および変更を行います。|  
 |フォルダーの管理|フォルダーの作成、表示、削除、およびフォルダーのプロパティの表示と変更を行います。|  
 |モデルを管理する|モデルの作成、表示、削除、およびモデルのプロパティの表示と変更を行います。|  
-|個別のサブスクリプションを管理|レポートおよびリンク レポートに対してユーザーが所有するサブスクリプションを作成、表示、変更、および削除します。 このタスクでは、[Power BI Report Server の Power BI (.pbix) ファイルのスケジュールされている更新](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh)の編集と実行もサポートしています。|  
+|個別のサブスクリプションを管理|レポートおよびリンク レポートに対してユーザーが所有するサブスクリプションを作成、表示、変更、および削除します。 このタスクでは、[Power BI Report Server の Power BI (.pbix) ファイルのスケジュールされている更新](/power-bi/report-server/configure-scheduled-refresh)の編集と実行もサポートしています。|  
 |レポート履歴の管理|レポート履歴の作成、表示、削除、レポート履歴のプロパティの表示、およびスナップショット履歴の制限とキャッシュの動作を決定する設定の表示と変更を行います。|  
 |レポートの管理|レポートの追加と削除、レポート パラメーターの変更、レポートのプロパティの表示と変更、レポートにコンテンツを提供するデータ ソースの表示と変更、レポート定義の表示と変更、レポート レベルのセキュリティ ポリシーの設定を行います。|  
 |リソースの管理|リソースの作成、変更、削除、およびリソースのプロパティの表示および変更を行います。|  
@@ -216,4 +216,3 @@ ms.locfileid: "88454524"
 [ロールの割り当てを変更または削除する &#40;SSRS Web ポータル&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
 [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)
-  

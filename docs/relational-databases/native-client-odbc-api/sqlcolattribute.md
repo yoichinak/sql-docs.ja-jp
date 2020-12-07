@@ -15,12 +15,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86590239e22f19ba0858af583193675bc711a0ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2d1ef030815e701f0b1b7cdeac02c4827641ff2
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428344"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809889"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "88428344"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、XML スキーマコレクション名、スキーマ名、およびカタログ名を示す追加情報を提供するために、ドライバー固有の記述子フィールドが導入されました。 これらのプロパティでは、英数字以外の文字が含まれる場合でも、引用符やエスケープ文字は必要ありません。 次の表では、追加された新しい記述子フィールドについて説明します。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|XML スキーマ コレクション名が定義されているカタログの名前です。 カタログ名が見つからない場合は、この変数に空文字列が含まれます。<br /><br /> この情報は、IRD の SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME レコード フィールドから返されます。このレコード フィールドは読み取りと書き込みが可能なフィールドです。|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|XML スキーマ コレクション名が定義されているスキーマの名前です。 スキーマ名が見つからない場合は、この変数に空文字列が含まれます。<br /><br /> この情報は、IRD の SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME レコード フィールドから返されます。このレコード フィールドは読み取りと書き込み可能なフィールドです。|  
@@ -87,7 +87,7 @@ ms.locfileid: "88428344"
   
  また、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、結果セットのユーザー定義型 (UDT) 列に関する追加情報、またはストアド プロシージャやパラメーター化クエリの UDT パラメーターに関する追加情報を提供するために、ドライバー固有の新しい記述子フィールドが導入されました。 これらのプロパティでは、英数字以外の文字が含まれる場合でも、引用符やエスケープ文字は必要ありません。 次の表では、追加された新しい記述子フィールドについて説明します。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|UDT を含むカタログの名前。|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|UDT を含むスキーマの名前。|  
@@ -110,8 +110,7 @@ ms.locfileid: "88428344"
  詳細については、「 [スパース列のサポート &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLColAttribute 関数](https://go.microsoft.com/fwlink/?LinkId=59334)   
+ [SQLColAttribute 関数](../../odbc/reference/syntax/sqlcolattribute-function.md)   
  [ODBC API の実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
-  
   

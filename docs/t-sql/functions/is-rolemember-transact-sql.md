@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 856265d1ba66eb2cfae29b12ec23b432cb4c8e3f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116722"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
@@ -45,7 +45,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 
 ## <a name="arguments"></a>引数
  **'** *role* **'**  
- 確認するデータベース ロールの名前を指定します。 *role* は **sysname**です。  
+ 確認するデータベース ロールの名前を指定します。 *role* は **sysname** です。  
   
  **'** *database_principal* **'**  
  確認するデータベース ユーザー、データベース ロール、またはアプリケーション ロールの名前です。 *database_principal* は **sysname**, 、既定値は NULL です。 値を指定しない場合、結果は現在の実行コンテキストに基づきます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
@@ -55,8 +55,8 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
   
 |戻り値|説明|  
 |------------------|-----------------|  
-|0|*database_principal* のメンバーではない *ロール*です。|  
-|1|*database_principal* のメンバーである *ロール*です。|  
+|0|*database_principal* のメンバーではない *ロール* です。|  
+|1|*database_principal* のメンバーである *ロール* です。|  
 |NULL|*database_principal* または *ロール* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
   
 ## <a name="remarks"></a>解説  

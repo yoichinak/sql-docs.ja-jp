@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28d57d973f0c1c33e46930c8fb0277aec70dc89f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: e3ca428410760ac224cccf513aa8e8ed2a3060e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115051"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726549"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>可用性グループの監視とトラブルシューティング
  このガイドは、Always On 可用性グループの監視と可用性グループのいくつかの一般的な問題のトラブルシューティング作業を開始するために役立ちます。 オリジナルのコンテンツに加えて、他の場所で公開されている役に立つ情報のランディング ページを提供します。 このガイドでは、可用性グループの大きな領域で発生する可能性があるすべての問題を完全に説明することはできませんが、根本原因の分析と問題の解決に関して正しい方向を示すことができます。 
@@ -35,7 +35,7 @@ ms.locfileid: "91115051"
 |[トラブルシューティング: 可用性グループ接続の超過 RTO ](troubleshoot-availability-group-exceeded-rto.md)|パフォーマンス|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
 |[トラブルシューティング: 可用性グループ接続の超過 RPO ](troubleshoot-availability-group-exceeded-rpo.md)|パフォーマンス|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
 |[トラブルシューティング: プライマリ上の変更がセカンダリ レプリカに反映されない](troubleshoot-primary-changes-not-reflected-on-secondary.md)|パフォーマンス|クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。|  
-|[トラブルシューティング: Always On 可用性グループでの長い HADR_SYNC_COMMIT 待機の種類](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|パフォーマンス|HADR_SYNC_COMMIT が異常に長い場合は、データの移動フローまたはセカンダリ レプリカのログの書き込みにパフォーマンスの問題があります。|  
+|[トラブルシューティング: Always On 可用性グループでの長い HADR_SYNC_COMMIT 待機の種類](/archive/blogs/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups)|パフォーマンス|HADR_SYNC_COMMIT が異常に長い場合は、データの移動フローまたはセカンダリ レプリカのログの書き込みにパフォーマンスの問題があります。|  
 
 ##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a> トラブルシューティングに役立つツール  
  可用性グループを構成または実行するときには、さまざまなツールでさまざまな種類の問題を診断できます。 次の表では、ツールに関する役立つ情報のリンクを提供します。  
@@ -64,15 +64,14 @@ ms.locfileid: "91115051"
 |-----------|-----------------|  
 |[Always On 可用性グループのパフォーマンスを監視する](monitor-performance-for-always-on-availability-groups.md)|可用性グループのデータ同期プロセス、フロー制御ゲート、可用性グループを監視するときに役立つメトリックについて説明し、RTO および RPO のメトリックを収集する方法についても説明します。|  
 |[可用性グループの監視 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|可用性グループを監視するためのツールについて説明します。|  
-|[AlwaysOn の正常性モデル: パート 1: 正常性モデルのアーキテクチャ](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Always On 正常性モデルの概要を示します。|  
-|[AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|追加情報を表示するように Always On 正常性モデルと Always On ダッシュボードをカスタマイズする方法を示します。|  
-|[PowerShell を使用した AlwaysOn 正常性状態の監視: パート 1: 基本的なコマンドレットの概要](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|可用性グループの正常性を監視するために使用できる PowerShell コマンドレットの基本的な概要を説明します。|  
-|[PowerShell を使用した AlwaysOn 正常性状態の監視: パート 2: 高度なコマンドレットの使用方法](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|可用性グループの正常性を監視するための Always On PowerShell コマンドレットの高度な使用方法を説明します。|  
-|[PowerShell を使用した AlwaysOn 正常性状態の監視: パート 3: 単純な監視アプリケーション](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|アプリケーションで可用性グループを自動的に監視する方法を示します。|  
-|[PowerShell を使用した AlwaysOn 正常性状態の監視: パート 4: SQL Server との統合](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|SQL Server エージェントと可用性グループの監視を統合し、問題が発生したときの適切なユーザーへの通知を構成する方法について説明します。|  
+|[AlwaysOn の正常性モデル: パート 1: 正常性モデルのアーキテクチャ](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Always On 正常性モデルの概要を示します。|  
+|[AlwaysOn の正常性モデル: パート 2: 正常性モデルの拡張](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|追加情報を表示するように Always On 正常性モデルと Always On ダッシュボードをカスタマイズする方法を示します。|  
+|[PowerShell を使用した AlwaysOn 正常性状態の監視: パート 1: 基本的なコマンドレットの概要](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|可用性グループの正常性を監視するために使用できる PowerShell コマンドレットの基本的な概要を説明します。|  
+|[PowerShell を使用した AlwaysOn 正常性状態の監視: パート 2: 高度なコマンドレットの使用方法](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|可用性グループの正常性を監視するための Always On PowerShell コマンドレットの高度な使用方法を説明します。|  
+|[PowerShell を使用した AlwaysOn 正常性状態の監視: パート 3: 単純な監視アプリケーション](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|アプリケーションで可用性グループを自動的に監視する方法を示します。|  
+|[PowerShell を使用した AlwaysOn 正常性状態の監視: パート 4: SQL Server との統合](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|SQL Server エージェントと可用性グループの監視を統合し、問題が発生したときの適切なユーザーへの通知を構成する方法について説明します。|  
 
 ## <a name="next-steps"></a>次のステップ  
- [SQL Server AlwaysOn チーム ブログ](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [CSS SQL Server エンジニアのブログ](https://docs.microsoft.com/archive/blogs/psssql/)  
-  
+ [SQL Server AlwaysOn チーム ブログ](/archive/blogs/sqlalwayson/)   
+ [CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)  
   

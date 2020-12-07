@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e909c0a84ae4f57e5eb6cbd6bf7041cf2361b62
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 420e34cc54d83d2f9f01aee1b794c7f37080c493
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394398"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130115"
 ---
 # <a name="ado-connection-manager"></a>ADO 接続マネージャー
 
@@ -29,14 +29,14 @@ ms.locfileid: "88394398"
 
   ADO 接続マネージャーを使用すると、レコードセットなどの ADO (ActiveX データ オブジェクト) オブジェクトにパッケージを接続できます。 この接続マネージャーは、通常、Microsoft Visual Basic 6.0 などの以前のバージョンの言語で記述されたカスタム タスクや、ADO を使用してデータ ソースに接続する既存のアプリケーションの一部のカスタム タスクで使用されます。  
   
- ADO 接続マネージャーをパッケージに追加すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により実行時に ADO 接続を解決する接続マネージャーが作成され、接続マネージャーのプロパティが設定され、接続マネージャーがパッケージの **Connections** コレクションに追加されます。 接続マネージャーの **ConnectionManagerType** プロパティは、 **ADO**に設定されます。  
+ ADO 接続マネージャーをパッケージに追加すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により実行時に ADO 接続を解決する接続マネージャーが作成され、接続マネージャーのプロパティが設定され、接続マネージャーがパッケージの **Connections** コレクションに追加されます。 接続マネージャーの **ConnectionManagerType** プロパティは、 **ADO** に設定されます。  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>ADO 接続マネージャーのトラブルシューティング  
  ADO 接続マネージャーに読み込まれると、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日付データ型は次の表に示す結果を生成します。  
   
 |SQL Server データ型|結果|  
 |--------------------------|------------|  
-|**time**、 **datetimeoffset**|パッケージがパラメーター化 SQL コマンドを使用していない場合、パッケージは失敗します。 パラメーター化 SQL コマンドを使用するには、パッケージで SQL 実行タスクを使用します。 詳細については、「 [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。|  
+|**time**、 **datetimeoffset**|パッケージがパラメーター化 SQL コマンドを使用していない場合、パッケージは失敗します。 パラメーター化 SQL コマンドを使用するには、パッケージで SQL 実行タスクを使用します。 詳細については、「 [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](../control-flow/execute-sql-task.md)」を参照してください。|  
 |**datetime2**|ADO 接続マネージャーは、ミリ秒の値を切り捨てます。|  
   
 > [!NOTE]  
@@ -57,11 +57,10 @@ ms.locfileid: "88394398"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
--   [[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
+-   [[OLE DB 接続マネージャーの構成]](./ole-db-connection-manager.md)  
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
 ## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

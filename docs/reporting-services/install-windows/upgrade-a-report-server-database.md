@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fcf80ef99c06487f25b65a928aab25a24bfccffe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446007"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891172"
 ---
 # <a name="upgrade-a-report-server-database"></a>レポート サーバー データベースのアップグレード
 
@@ -61,7 +61,7 @@ ms.locfileid: "88446007"
   
  しかし、リモート コンピューターのデータベースに対する **sysadmin** アクセス許可がないと、接続が拒否され、次のエラー メッセージが表示されます。  
   
- `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Reporting Services Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
+ `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Report Server Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
   
  この時点で、レポート サーバーのプログラム ファイルはアップグレードされますが、レポート サーバー データベースは以前のバージョンの形式のままになります。 データベースを手動でアップグレードしてアップグレード プロセスを完了するまで、レポート サーバーは使用できません。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "88446007"
   
 ## <a name="next-steps"></a>次のステップ
 
-[Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[レポート サーバー構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [レポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services のインストールを移行する](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  

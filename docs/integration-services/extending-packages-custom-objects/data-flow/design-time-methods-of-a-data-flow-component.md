@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6eaaacea73d119961f7db31e75ba7089387674c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd3951ce785fc8444009a0af9442a85a41b0fbfa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484248"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193162"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>データ フロー コンポーネントのデザイン時のメソッド
 
@@ -105,7 +105,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- 詳細については、[MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkId=7022)の「一般的な型変換」および「型コンバーターの実装」を参照してください。  
+ 詳細については、[MSDN ライブラリ](../../../sql-server/index.yml)の「一般的な型変換」および「型コンバーターの実装」を参照してください。  
   
  次の例に示すように、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> プロパティを使用すると、カスタム プロパティの値を設定するカスタム エディター ダイアログ ボックスを指定できます。 ニーズに合った既存の UI 型エディターのクラスが見つからない場合は、最初に **System.Drawing.Design.UITypeEditor** を継承するカスタム型のエディターを作成する必要があります。  
   
@@ -139,9 +139,8 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- 詳細については、[MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkId=7022)の「UI 型エディターの実装」を参照してください。  
+ 詳細については、[MSDN ライブラリ](../../../sql-server/index.yml)の「UI 型エディターの実装」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー コンポーネントの実行時のメソッド](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
-  
   

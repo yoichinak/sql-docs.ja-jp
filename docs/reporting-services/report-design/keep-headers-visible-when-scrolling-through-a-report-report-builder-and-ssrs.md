@@ -9,30 +9,30 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: ce0edeb4d0d78f43da0c510b09e74e7972f5d301
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255498"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907110"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)
   レポートを表示した後に、スクロールによって行ラベルや列ラベルが隠れないようにするために、行見出しまたは列見出しを固定できます。  
   
  行と列を制御する方法は、テーブルとマトリックスのどちらを使用しているかによって異なります。 テーブルを使用している場合は、静的メンバー (行見出しと列見出し) を表示したままにするよう構成します。 マトリックスを使用している場合は、行と列のグループ ヘッダーを表示したままにするよう構成します。  
   
- レポートを Excel にエクスポートしても、ヘッダーは自動的には固定表示されません。 Excel でウィンドウ枠を固定できます。 詳細については、「[Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」の「**ページ ヘッダーとページ フッター**」を参照してください。  
+ レポートを Excel にエクスポートしても、ヘッダーは自動的には固定表示されません。 Excel でウィンドウ枠を固定できます。 詳細については、「 [Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」の「 **ページ ヘッダーとページ フッター** 」を参照してください。  
   
 > [!NOTE]  
 >  テーブルに行グループおよび列グループがある場合でも、スクロール中にこれらのグループ ヘッダーを表示したままにすることはできません。  
   
  次の図はテーブルを示しています。  
   
- ![Table](../../reporting-services/report-design/media/table.png "テーブル")  
+ ![テーブルのスクリーンショット。](../../reporting-services/report-design/media/table.png "テーブル")  
   
  次の図はマトリックスを示しています。  
   
- ![マトリックス](../../reporting-services/report-design/media/matrix.png "Matrix")  
+ ![マトリックスのスクリーンショット。](../../reporting-services/report-design/media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,7 +59,7 @@ ms.locfileid: "84255498"
   
      ![Tablix メンバー プロパティ](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix メンバー プロパティ")  
   
-4.  プロパティ ペインで、 **[FixedData]** を **True**に設定します。  
+4.  プロパティ ペインで、 **[FixedData]** を **True** に設定します。  
   
 5.  スクロール中も表示したままにするすべての隣接するメンバーに対して、この手順を繰り返します。  
   

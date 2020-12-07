@@ -16,14 +16,14 @@ helpviewer_keywords:
 - full recovery model [SQL Server], performing restores
 - log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 45146f857c0a5e47fd86f26b7ce7697015ab8a51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 81dbe5eee46e46a3205c28948b362fd41ae489c7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728461"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129314"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>データベースの全体復元 (完全復旧モデル)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85728461"
   
 ### <a name="untrusted-sources"></a>信頼されていないソース
 
-不明なソースや信頼されていないソースからのデータベースのアタッチまたは復元は_実行しない_ことをお勧めします。 そのようなデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更することによりエラーを発生させる悪意のあるコードが含まれている可能性があります。 不明なソースや信頼されていないソースからのデータベースを使用する場合は、事前に運用サーバー以外のサーバー上のデータベースで [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行してください。 さらに、ストアド プロシージャやその他のユーザー定義コードなどのデータベース内に記述されたユーザーのコードを調べてください。
+不明なソースや信頼されていないソースからのデータベースのアタッチまたは復元は _実行しない_ ことをお勧めします。 そのようなデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更することによりエラーを発生させる悪意のあるコードが含まれている可能性があります。 不明なソースや信頼されていないソースからのデータベースを使用する場合は、事前に運用サーバー以外のサーバー上のデータベースで [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行してください。 さらに、ストアド プロシージャやその他のユーザー定義コードなどのデータベース内に記述されたユーザーのコードを調べてください。
 
 ### <a name="backups-from-earlier-versions"></a>以前のバージョンからのバックアップ
 

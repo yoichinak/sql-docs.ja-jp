@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 54ea252e2fbe828200339fdbfb4d25ef83451cb3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897473"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987548"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>チュートリアル:配置計画を分析するためにデータベース プロジェクトの配置を拡張する
 
@@ -46,7 +46,7 @@ ms.locfileid: "85897473"
   
 -   クラス ライブラリ プロジェクトを作成し、必要な参照を追加する。  
   
--   [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) から継承する、DeploymentUpdateReportContributor という名前のクラスを定義する。  
+-   [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) から継承する、DeploymentUpdateReportContributor という名前のクラスを定義する。  
   
 -   OnExecute メソッドをオーバーライドする。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "85897473"
   
     ```  
   
-    これで、DeploymentPlanExecutor から継承する配置コントリビューターの定義が完了しました。 ビルドおよび配置プロセス中に、カスタム コントリビューターは標準の拡張機能ディレクトリから読み込まれます。 配置計画を実行するコントリビューターは、[ExportDeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx) 属性によって識別されます。  
+    これで、DeploymentPlanExecutor から継承する配置コントリビューターの定義が完了しました。 ビルドおよび配置プロセス中に、カスタム コントリビューターは標準の拡張機能ディレクトリから読み込まれます。 配置計画を実行するコントリビューターは、[ExportDeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute) 属性によって識別されます。  
   
     コントリビューターを検出できるようにするためにこの属性は必須です。 これは次のようになります。  
   
@@ -249,9 +249,9 @@ ms.locfileid: "85897473"
             }  
     ```  
   
-    この OnExecute メソッドに、[DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) オブジェクトが渡され、指定されたすべての引数、ソースとターゲットのデータベース モデル、ビルド プロパティ、および拡張ファイルにアクセスできるようになります。 この例では、モデルを取得し、そのモデルに関する情報を出力するヘルパー関数を呼び出します。 ここでは、発生したエラーを報告するために、基本クラスで PublishMessage ヘルパー メソッドを使用します。  
+    この OnExecute メソッドに、[DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext) オブジェクトが渡され、指定されたすべての引数、ソースとターゲットのデータベース モデル、ビルド プロパティ、および拡張ファイルにアクセスできるようになります。 この例では、モデルを取得し、そのモデルに関する情報を出力するヘルパー関数を呼び出します。 ここでは、発生したエラーを報告するために、基本クラスで PublishMessage ヘルパー メソッドを使用します。  
   
-    その他の重要な型およびメソッドは、[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx)、[SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx) です。  
+    その他の重要な型およびメソッドは、[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)、[ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult)、[DeploymentPlanHandle](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanhandle)、[SqlDeploymentOptions](/dotnet/api/microsoft.sqlserver.dac.deployment.sqldeploymentoptions) です。  
   
     次に、配置計画の詳細を調査するヘルパー クラスを定義します。  
   
@@ -524,11 +524,11 @@ ms.locfileid: "85897473"
   
     |**コード領域**|**有用な型**|  
     |-----------------|--------------------|  
-    |クラス メンバー|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |クラス メンバー|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)、[ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult)、[DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)|  
     |WriteReport メソッド|XmlWriter と XmlWriterSettings|  
-    |ReportPlanOperations メソッド|主な型: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)、[SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx)、[SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx)、[SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx)、[DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。<br /><br />他にも多くのステップがあります。ステップの完全な一覧については、API のドキュメントを参照してください。|  
-    |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |ReportPlanOperations メソッド|主な型: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)、[SqlRenameStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlrenamestep)、[SqlMoveSchemaStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlmoveschemastep)、[SqlTableMigrationStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqltablemigrationstep)、[CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep)、[AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep)、[DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep)。<br /><br />他にも多くのステップがあります。ステップの完全な一覧については、API のドキュメントを参照してください。|  
+    |GetElementCategory|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
+    |GetElementName|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
   
     次に、クラス ライブラリをビルドします。  
   
@@ -738,10 +738,9 @@ ms.locfileid: "85897473"
     実行時に配置計画を分析することにより、配置に含まれるすべての情報について報告することも、その計画のステップに基づいた追加のアクションを実行することもできます。  
   
 ## <a name="next-steps"></a>次の手順  
-出力 XML ファイルの処理を実行するには、追加のツールを作成できます。 これは、[DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) の一例にすぎません。 また、[DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) を作成し、実行前に配置プランを変更することもできます。  
+出力 XML ファイルの処理を実行するには、追加のツールを作成できます。 これは、[DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) の一例にすぎません。 また、[DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) を作成し、実行前に配置プランを変更することもできます。  
   
 ## <a name="see-also"></a>参照  
-[チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[チュートリアル:配置計画を変更するためにデータベース プロジェクトの配置を拡張する](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
-[ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
-  
+[チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張](/previous-versions/visualstudio/visual-studio-2010/ee461508(v=vs.100))  
+[チュートリアル:配置計画を変更するためにデータベース プロジェクトの配置を拡張する](/previous-versions/visualstudio/visual-studio-2010/ee461507(v=vs.100))  
+[ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする](/previous-versions/visualstudio/visual-studio-2010/ee461505(v=vs.100))  

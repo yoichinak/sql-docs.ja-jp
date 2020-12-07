@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4325dfa9c16edba12c2bba694b47c1b0875c7c6f
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0dd6f92c728962b78c20e3c4fef956f9182206c7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "74400312"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379607"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Analytics Platform System のソフトウェアサービス
 このセクションでは、WSUS や Analytics Platform System の修正プログラムなど、分析プラットフォームシステムアプライアンスのソフトウェアサービス要件について概要を説明します。  
   
 ## <a name="software-servicing-basics"></a><a name="Basics"></a>ソフトウェアサービスの基礎  
-**WSUS:** Windows Server Update Services (WSUS) から更新プログラムを受信するように、分析プラットフォームシステムアプライアンスを構成する必要があります。 これらの更新プログラムには、アプライアンスソフトウェアに対する重要な変更が含まれています。 構成が完了すると、多くの更新プログラムが自動的にインストールされ、ハンズオン管理は不要になります。 通常、WSUS の更新プログラムは、新しいアプライアンスのセットアップ時に実行される [ [Windows Server Update Services &#40;wsus&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md) ] ステップで構成されます。 それ以外の場合は、後でこの構成手順を実行できます。 WSUS の詳細については、 [wsus web サイトガイド](https://go.microsoft.com/fwlink/?LinkId=202417)を参照してください。  
+**WSUS:** Windows Server Update Services (WSUS) から更新プログラムを受信するように、分析プラットフォームシステムアプライアンスを構成する必要があります。 これらの更新プログラムには、アプライアンスソフトウェアに対する重要な変更が含まれています。 構成が完了すると、多くの更新プログラムが自動的にインストールされ、ハンズオン管理は不要になります。 通常、WSUS の更新プログラムは、新しいアプライアンスのセットアップ時に実行される [ [Windows Server Update Services &#40;wsus&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md) ] ステップで構成されます。 それ以外の場合は、後でこの構成手順を実行できます。 WSUS の詳細については、 [wsus web サイトガイド](/windows/deployment/deploy-whats-new)を参照してください。  
   
 **修正プログラム:** また、Analytics Platform System の修正プログラムを適用することが必要になる場合もあります。 *修正プログラム*は、分析プラットフォームシステムソフトウェアの問題を解決するために、特定の顧客向けに作成されたソフトウェア更新プログラムです。 各修正プログラムは、お客様固有の問題の修正プログラムをインストールする実行可能ファイルです。 各修正プログラムには、Windows、SQL Server、および分析プラットフォームシステム用に以前にリリースされたソフトウェア更新プログラムの累積も含まれています。 修正プログラムをインストールする必要がある場合は、Microsoft サポートから修正プログラムと手順が提供されます。  
   
@@ -41,4 +41,3 @@ ms.locfileid: "74400312"
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-  

@@ -11,11 +11,11 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 946bb57a3d821186ebcca132539713cf515ab20f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484092"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122817"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードのデータ型マッピング
 
@@ -35,7 +35,7 @@ ms.locfileid: "88484092"
 既定と異なるデータ型のマッピングが必要な場合は、マッピング ファイルを更新して、ウィザードによって使用されるマッピングを変更できます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から DB2 にデータを転送するときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** データ型を DB2 **VARGRAPHIC** データ型ではなく DB2 **GRAPHIC** データ型にマップするには、 **SqlClientToIBMDB2.xml** マッピング ファイルで **nchar** マッピングを変更して、**VARGRAPHIC.** ではなく **GRAPHIC** を使用します。  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>新しいマッピング ファイルを追加できる
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、一般的な変換元と変換先の組み合わせのマッピングをインストールします。 他の変換元と変換先の組み合わせをサポートする新しいマッピング ファイルを **MappingFiles** ディレクトリに追加することもできます。 新しいマッピング ファイルは、公開されている XSD スキーマおよび変換元と変換先の一意の組み合わせ間でのマッピングに準拠する必要があります。 マッピング ファイルのスキーマである **DataTypeMapping.xsd**は、 [こちら](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)に公開されています。
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、一般的な変換元と変換先の組み合わせのマッピングをインストールします。 他の変換元と変換先の組み合わせをサポートする新しいマッピング ファイルを **MappingFiles** ディレクトリに追加することもできます。 新しいマッピング ファイルは、公開されている XSD スキーマおよび変換元と変換先の一意の組み合わせ間でのマッピングに準拠する必要があります。 マッピング ファイルのスキーマである **DataTypeMapping.xsd** は、 [こちら](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)に公開されています。
  
 ## <a name="sample-mapping-file"></a>サンプル マッピング ファイル
 次に示すのは、SQL Server データ型 (具体的には .Net Framework Data Provider for SQL Server で使用されるデータ型) から Oracle データ型にマップする XML マッピングファイルの一部です。 一例として、SQL Server の **int** データ型が Oracle の **INTEGER** データ型にマップされることを確認できます。

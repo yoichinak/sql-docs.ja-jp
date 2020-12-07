@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc7c25d1b953b98c81691843a4de6dc924bca651
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753614"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038075"
 ---
 # <a name="functions-on-nodes---local-name"></a>ノードの関数 - local-name
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,18 +39,18 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  ローカル名の部分を取得するノードの名前。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
--   SQL Server では、引数が指定されていない**fn: ローカル名 ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ () 内でのみ使用でき `[ ]` ます。  
+-   SQL Server では、引数が指定されていない **fn: ローカル名 ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ () 内でのみ使用でき `[ ]` ます。  
   
 -   引数を指定し、空のシーケンスの場合、関数は長さ0の文字列を返します。  
   
 -   ターゲットノードがドキュメントノード、コメント、またはテキストノードであるために名前がない場合、関数は長さ0の文字列を返します。  
   
-## <a name="examples"></a>使用例  
- このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+## <a name="examples"></a>例  
+ このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>A: 特定のノードのローカル名を取得する  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. 特定のノードのローカル名を取得する  
  次のクエリは、型指定されていない XML インスタンスに対して指定されています。 クエリ式は、 `local-name(/ROOT[1])` 指定されたノードのローカル名部分を取得します。  
   
 ```  
@@ -71,8 +71,8 @@ WHERE ProductModelID=7
 -- result = Location  
 ```  
   
-### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B: 述語で引数を指定せずに local-name を使用する  
- 次のクエリは、ProductModel テーブルの型指定された**xml**列である命令列に対して指定されています。 この式は、 `root` QName のローカル名部分が "Location" である <> 要素のすべての子要素を返します。 **ローカル名 ()** 関数は、述語で指定され、引数がありません。この関数では、コンテキストノードが使用されます。  
+### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. 述語で引数を指定せずに local-name を使用する  
+ 次のクエリは、ProductModel テーブルの型指定された **xml** 列である命令列に対して指定されています。 この式は、 `root` QName のローカル名部分が "Location" である <> 要素のすべての子要素を返します。 **ローカル名 ()** 関数は、述語で指定され、引数がありません。この関数では、コンテキストノードが使用されます。  
   
 ```  
 SELECT Instructions.query('  
@@ -84,8 +84,7 @@ WHERE ProductModelID=7
   
  このクエリでは、 `Location` <> 要素のすべての <> 子要素が返さ `root` れます。  
   
-## <a name="see-also"></a>関連項目  
- [ノードの関数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+## <a name="see-also"></a>参照  
+ [ノードの関数](./xquery-functions-against-the-xml-data-type.md)   
  [名前空間 uri 関数 &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
-  
   

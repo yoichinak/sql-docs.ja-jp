@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2e7bc60bcfd7578d70528d92ef025370c28134e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425804"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194751"
 ---
 # <a name="sql-server-destination"></a>SQL Server 変換先
 
@@ -99,7 +99,7 @@ ms.locfileid: "88425804"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [SQL Server 変換先のカスタム プロパティ](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88425804"
   
 -   support.microsoft.com の技術記事: [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](https://go.microsoft.com/fwlink/?LinkId=199482)  
   
--   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=233700)  
+-   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))  
   
 -   simple-talk.com の技術記事: [SQL Server Integration Services を使用してデータの一括読み込みを行う](https://go.microsoft.com/fwlink/?LinkId=233701)  
   
@@ -166,34 +166,34 @@ ms.locfileid: "88425804"
   
 ### <a name="options"></a>オプション  
  **[ID を保持する]**  
- タスクが値を ID 列に挿入するかどうかを指定します。 このプロパティの既定値は **False**です。  
+ タスクが値を ID 列に挿入するかどうかを指定します。 このプロパティの既定値は **False** です。  
   
  **[NULL を保持する]**  
- タスクが NULL 値を保持するかどうかを指定します。 このプロパティの既定値は **False**です。  
+ タスクが NULL 値を保持するかどうかを指定します。 このプロパティの既定値は **False** です。  
   
  **[テーブル ロック]**  
- データが読み込まれるときにテーブルをロックするかどうかを指定します。 このプロパティの既定値は **True**です。  
+ データが読み込まれるときにテーブルをロックするかどうかを指定します。 このプロパティの既定値は **True** です。  
   
  **CHECK 制約**  
- タスクが制約をチェックするかどうかを指定します。 このプロパティの既定値は **True**です。  
+ タスクが制約をチェックするかどうかを指定します。 このプロパティの既定値は **True** です。  
   
  **[トリガーを起動する]**  
- テーブルにおける一括挿入でトリガーを起動するかどうかを指定します。 このプロパティの既定値は **False**です。  
+ テーブルにおける一括挿入でトリガーを起動するかどうかを指定します。 このプロパティの既定値は **False** です。  
   
  **[先頭行]**  
- 先頭行が挿入されるように指定します。 このプロパティの既定値は、 **-1**です。これは、値が割り当てられていないことを示します。  
+ 先頭行が挿入されるように指定します。 このプロパティの既定値は、 **-1** です。これは、値が割り当てられていないことを示します。  
   
 > [!NOTE]  
 >  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]**、およびオブジェクト モデルでは、-1 を使用します。  
   
  **[最終行]**  
- 最終行が挿入されるように指定します。 このプロパティの既定値は、 **-1**です。これは、値が割り当てられていないことを示します。  
+ 最終行が挿入されるように指定します。 このプロパティの既定値は、 **-1** です。これは、値が割り当てられていないことを示します。  
   
 > [!NOTE]  
 >  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]**、およびオブジェクト モデルでは、-1 を使用します。  
   
  **[エラーの最大数]**  
- 一括挿入を停止する前に許容するエラー数を指定します。 このプロパティの既定値は、 **-1**です。これは、値が割り当てられていないことを示します。  
+ 一括挿入を停止する前に許容するエラー数を指定します。 このプロパティの既定値は、 **-1** です。これは、値が割り当てられていないことを示します。  
   
 > [!NOTE]  
 >  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]**、およびオブジェクト モデルでは、-1 を使用します。  
@@ -206,5 +206,4 @@ ms.locfileid: "88425804"
   
 ## <a name="see-also"></a>参照  
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  
   

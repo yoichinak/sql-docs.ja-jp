@@ -12,15 +12,15 @@ helpviewer_keywords:
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a327b5aa82c11b3c0192b054e9b242f854b43818
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895395"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126035"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>データベース互換性レベルの変更とクエリ ストアの使用
 
@@ -46,7 +46,7 @@ ms.locfileid: "85895395"
   
 以下のような、クエリ プロセッサを最新バージョンのコードにアップグレード場合に推奨されるワークフローについては、「[新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」を参照してください。  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![クエリ プロセッサを最新バージョンのコードにアップグレードするための推奨ワークフローを示す図。](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、ユーザーはクエリ調整アシスタントを使用して、推奨されるワークフローのガイドを得ることができます。 詳細については、「[クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)」を参照してください。
  

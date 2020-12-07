@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: c210bb02d44b22727b74cb49e635b47e6d1f3dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37e339dc13577bd30491f1c155ebb8114868d60
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491751"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038954"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>[制約のチェック] ダイアログ ボックス (Visual Database Tools)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88491751"
 展開して **[式]** のプロパティ フィールドを表示します。  
   
 **[式]**  
-選択した CHECK 制約の式を表示します。 新しい制約の場合は、このボックスを終了する前に式を入力する必要があります。 既存の CHECK 制約を編集することもできます。 詳細については、[制約の使用](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)に関するページを参照してください。  
+選択した CHECK 制約の式を表示します。 新しい制約の場合は、このボックスを終了する前に式を入力する必要があります。 既存の CHECK 制約を編集することもできます。 詳細については、[制約の使用](../../relational-databases/tables/unique-constraints-and-check-constraints.md)に関するページを参照してください。  
   
 **[IDENTITY] カテゴリ**  
 展開して **[名前]** と **[説明]** のプロパティを表示します。  
@@ -69,5 +69,5 @@ ms.locfileid: "88491751"
   
 ## <a name="see-also"></a>参照
 
-[[制約の使用]](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[[制約の使用]](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 [[インデックス/キー] ダイアログ ボックス &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

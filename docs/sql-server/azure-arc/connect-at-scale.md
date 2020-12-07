@@ -8,16 +8,16 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07b140aceae2eae1a63b826b0bb4f95c8cfc515b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0bd60864615e1ffbf2aecac5eb41efa86407ba68
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990355"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734383"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>SQL Server インスタンスを大規模に Azure Arc に接続する
 
-複数の Windows または Linux マシンにインストールされている複数の SQL Server インスタンスは、[単一のマシンに対して生成したスクリプト](connect.md)と同じものを使用して、Azure Arc に接続することができます。 このスクリプトを使用すると、各マシンとそこにインストールされている SQL Server インスタンスが Azure Arc に接続されて登録されます。最適なエクスペリエンスを得るために、Azure Active Directory [サービス プリンシパル](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals)を使用することをお勧めします。 サービス プリンシパルは、マシンを Azure に接続する場合や、Azure Arc 対応サーバーと Azure Arc 対応 SQL Server サーバー用の Azure リソースを作成する場合に必要な最小限のアクセス許可のみが付与される、特殊な制限付きの管理用 ID です。 これは、テナント管理者のような、より高い特権を持つアカウントを使用するよりも安全で、アクセス制御セキュリティのベスト プラクティスに従っています。  
+複数の Windows または Linux マシンにインストールされている複数の SQL Server インスタンスは、[単一のマシンに対して生成したスクリプト](connect.md)と同じものを使用して、Azure Arc に接続することができます。 このスクリプトを使用すると、各マシンとそこにインストールされている SQL Server インスタンスが Azure Arc に接続されて登録されます。最適なエクスペリエンスを得るために、Azure Active Directory [サービス プリンシパル](/azure/active-directory/develop/app-objects-and-service-principals)を使用することをお勧めします。 サービス プリンシパルは、マシンを Azure に接続する場合や、Azure Arc 対応サーバーと Azure Arc 対応 SQL Server サーバー用の Azure リソースを作成する場合に必要な最小限のアクセス許可のみが付与される、特殊な制限付きの管理用 ID です。 これは、テナント管理者のような、より高い特権を持つアカウントを使用するよりも安全で、アクセス制御セキュリティのベスト プラクティスに従っています。  
 
 Connected Machine エージェントをインストールして構成するためのインストール方法を使用するには、使用する自動化された方法に、マシンでの管理者のアクセス許可が付与されている必要があります。 Linux ではルート アカウントを使用し、Windows ではローカルの Administrators グループのメンバーとして実行します。
 
@@ -79,10 +79,10 @@ Connected Machine エージェントをインストールして構成するた�
 
 各ターゲット マシンには、[Azure CLI がインストールされている](/cli/azure/install-azure-cli)必要があります。 サービス プリンシパルの資格情報が提供されており、他のユーザーがまだサインインしていない場合は、登録スクリプトにより、その資格情報で自動的に Azure へのサインインが行われます。 複数の Linux マシン上の SQL Server インスタンスに接続するには、次の手順を使用します。
 
-1. ['az ad sp create-for-rbac'](/cli/azure/ad/sp.md#az_ad_sp_create_for_rbac) コマンドを使用して、サービス プリンシパルを作成します。 
+1. ['az ad sp create-for-rbac'](/cli/azure/ad/sp#az_ad_sp_create_for_rbac) コマンドを使用して、サービス プリンシパルを作成します。
 
    ```azurecli-interactive
-   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>    
+   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>
    ```
 
    ```output

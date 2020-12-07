@@ -14,12 +14,12 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b612f3718b35d94ec7e0a4ae60acd618faa9135e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cfbe3440f5976ed2432f5fbcc7bd7ff39dffde45
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427404"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811086"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>チュートリアル : 証明書を使用したストアド プロシージャへの署名
 [!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,11 +39,11 @@ master データベースに証明書を作成し、サーバーレベルの権�
 ## <a name="prerequisites"></a>前提条件
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
-- [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
+- [AdventureWorks2017 サンプル データベース](../samples/adventureworks-install-configure.md)をダウンロードする。
 
-SQL Server Management Studio でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。   
+SQL Server Management Studio でデータベースを復元する手順については、[データベースの復元](./backup-restore/restore-a-database-backup-using-ssms.md)に関するページを参照してください。   
   
 ## <a name="1-configure-the-environment"></a>1.環境を構成する  
 この例の初期コンテキストを設定するには、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で新しいクエリを開き、次のコードを実行して Adventureworks2017 データベースを開きます。 このコードにより、データベース コンテキストが `AdventureWorks2012` に変更され、新しいサーバー ログインとデータベース ユーザー アカウント (`TestCreditRatingUser`) が作成されます。ログインにはパスワードが設定されます。  
@@ -288,6 +288,5 @@ GO
   
 ## <a name="see-also"></a>参照  
 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a9477acb504bf68edf6c5b9caec72b0d8e8feed
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 220f4a8abfe37a12a7f0699b9aec8a634691cabe
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978123"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723223"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM 上で実行するための DLL の有効化
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
  次の手順では、ビジネスオブジェクトの .dll で、コンポーネントサービスを介して DCOM と Microsoft インターネットインフォメーションサービス (HTTP) の両方を使用できるようにする方法を説明します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "88978123"
   
 2.  ビジネスオブジェクトをパッケージにインストールします。  
   
-     - または -  
+     または  
   
      パッケージに [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) オブジェクトをインポートします。  
   

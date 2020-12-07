@@ -12,10 +12,10 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bbe7698c4b97a11fd9b2b4dba581fbad5a8be8df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484110"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>レッスン 2-3:フラット ファイル接続マネージャーの変更

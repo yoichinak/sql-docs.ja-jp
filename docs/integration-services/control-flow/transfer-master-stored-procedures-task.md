@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b4fccce21cd319049a4e313c27da6c4202a72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a053581c9f6ca8f9592aef42c1649511ecc51a02
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495961"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194224"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク
 
@@ -52,7 +52,7 @@ ms.locfileid: "88495961"
  Master ストアド プロシージャ転送タスクでは、増分中のログイン転送タスクの進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
- タスクの **ExecutionValue** プロパティで定義する実行値は、転送されたストアド プロシージャの数を返します。 Master ストアド プロシージャ転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、パッケージの他のオブジェクトからストアド プロシージャの転送に関する情報を使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+ タスクの **ExecutionValue** プロパティで定義する実行値は、転送されたストアド プロシージャの数を返します。 Master ストアド プロシージャ転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、パッケージの他のオブジェクトからストアド プロシージャの転送に関する情報を使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../integration-services-ssis-variables.md)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  Master ストアド プロシージャ転送タスクには、次のようなカスタム ログ エントリがあります。  
@@ -82,7 +82,7 @@ ms.locfileid: "88495961"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>[Master ストアド プロシージャ転送タスク エディター] ([全般] ページ)
   **[Master ストアド プロシージャ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Master ストアド プロシージャ転送タスクの名前と説明を入力できます。  
@@ -139,5 +139,4 @@ ms.locfileid: "88495961"
  [SQL Server オブジェクトの転送タスク](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

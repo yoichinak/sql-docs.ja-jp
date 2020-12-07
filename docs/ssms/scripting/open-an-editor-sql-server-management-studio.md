@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093487"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036485"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>エディターの表示 (SQL Server Management Studio)
 
@@ -52,7 +52,7 @@ ms.locfileid: "89093487"
 ### <a name="using-the-fileopen-menu"></a>[ファイル] メニューの [開く] の使用  
  **[ファイル]** メニューの **[開く]** をクリックし、目的のファイルに移動して開きます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] にはファイル拡張子に対応する適切な種類のエディターが表示されます。さらに、ファイルの内容がエディター ウィンドウにコピーされ、必要に応じて接続ダイアログが表示されます。 たとえば、.sql という拡張子のファイルを開いた場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] に [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開き、.sql ファイルの内容がコピーされて、接続ダイアログが表示されます。 開こうとするファイルの拡張子が特定のエディターに関連付けられていない場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のテキスト エディター ウィンドウが開いて、ファイルの内容がコピーされます。  
   
- 詳細については、「 [ファイル拡張子をコード エディターに関連付ける方法](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)」を参照してください。  
+ 詳細については、「 [ファイル拡張子をコード エディターに関連付ける方法](./associate-file-extensions-to-a-code-editor.md)」を参照してください。  
   
 ### <a name="using-the-toolbar"></a>ツール バーの使用  
  **[標準]** ツール バーで、次のいずれかのボタンをクリックします。  

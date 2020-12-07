@@ -14,23 +14,23 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61062aae61a7653ea226ee56ecca51f0d99bb11a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a17fb30859866155b2e3976e3d1a1bb2890ac4e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403178"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92006224"
 ---
 # <a name="polygon"></a>多角形
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   **Polygon** は、1 つの外部境界リングと 0 個以上の内部リングを定義する一連の点として格納される 2 次元表面です。  
   
 ## <a name="polygon-instances"></a>Polygon インスタンス  
  **Polygon** インスタンスは、3 つ以上の異なる点を持つリングで形成されます。 **Polygon** インスタンスは空にすることもできます。  
   
-**Polygon** の外部および内部のリングは、その境界を定義します。 リング内の空間は **Polygon**の内部を定義します。  
+**Polygon** の外部および内部のリングは、その境界を定義します。 リング内の空間は **Polygon** の内部を定義します。  
   
 次の図は、 **Polygon** インスタンスの例です。  
   

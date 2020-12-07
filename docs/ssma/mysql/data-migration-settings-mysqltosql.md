@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3dbf44933ae4abe26f5dacfc79bad0d971bfe5ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bc5427d17a8678e81ee148d247d743bda9d53ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492446"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988718"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>データ移行の設定 (MySQLToSQL)
   
 ## <a name="data-migration-settings"></a>データの移行設定  
 **データ移行設定** を使用すると、ユーザーはデータ移行のためのカスタムクエリを作成できます。  
   
--   このタブは、[プロジェクトの設定] で [**非表示**] に設定した場合に、[**拡張データ移行オプション**] が [**表示**] に設定され、非表示になるときに使用できます。 プロジェクトの移行設定の詳細については、「 [プロジェクトの設定 (移行)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) 」を参照してください。  
+-   このタブは、[プロジェクトの設定] で [**非表示**] に設定した場合に、[**拡張データ移行オプション**] が [**表示**] に設定され、非表示になるときに使用できます。 プロジェクトの移行設定の詳細については、「 [プロジェクトの設定 (移行)](./project-settings-migration-mysqltosql.md) 」を参照してください。  
   
 -   カスタム SQL ステートメントの解析は、テーブルノードの [ **データ移行の設定** ] タブで実装されます。  
   
@@ -52,6 +52,5 @@ ms.locfileid: "88492446"
   
 -   **取り消し:** 変更が行われる前に設定を復元するには、[ **キャンセル** ] をクリックします。  
   
-## <a name="see-also"></a>関連項目  
-[MySQL データの SQL Server/SQL Azure への移行](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
-  
+## <a name="see-also"></a>参照  
+[MySQL データの SQL Server/SQL Azure への移行](./migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  

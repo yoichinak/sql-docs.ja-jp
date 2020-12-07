@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6c5ec4c058edc0f1d63aee7c0ab305d9becfdc56
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 1e5d0941256fbb1e167f65489e250eed9c9b895a
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790315"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257222"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>ビッグ データ クラスターで Apache Spark と Apache Hadoop を構成する
 
@@ -155,5 +155,5 @@ bdc.json の記憶域プール定義の例は次のようになることがあ�
 ## <a name="next-steps"></a>次のステップ
 
 - [Apache Spark と Apache Hadoop (HDFS) の構成プロパティ。](reference-config-spark-hadoop.md)
-- [`azdata` リファレンス](reference-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] リファレンス](../azdata/reference/reference-azdata.md)
 - [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)

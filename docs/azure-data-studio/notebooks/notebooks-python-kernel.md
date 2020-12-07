@@ -1,7 +1,7 @@
 ---
 title: Azure Data Studio のノートブックと Python カーネル
 description: このチュートリアルでは、Python ノートブックを作成し、実行する方法について説明します。
-ms.topic: tutorial
+ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 author: garyericson
@@ -9,12 +9,12 @@ ms.author: garye
 ms.reviewer: mikeray, alayu, maghan
 ms.custom: ''
 ms.date: 07/01/2020
-ms.openlocfilehash: 38223789b149f0302005c39a42fdd18eb73ec2f6
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: e019777c629084c5265cac1cd531ee01bdede01f
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136809"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364219"
 ---
 # <a name="create-and-run-a-python-notebook"></a>Python ノートブックを作成して実行する
 

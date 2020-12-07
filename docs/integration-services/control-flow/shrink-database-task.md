@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 066a41ecdb41ff27d0043204c6254b65371e6b15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af97af913af741cc93a5afda1ba9a986ea1f72db
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495975"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92192822"
 ---
 # <a name="shrink-database-task"></a>データベースの圧縮タスク
 
@@ -58,6 +58,5 @@ ms.locfileid: "88495975"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックをクリックしてください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

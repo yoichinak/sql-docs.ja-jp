@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16b73d0d01f4507dfb1a53596ca6ed38c49fd78a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e433b0ba5513396d732c1230f8e3ce43539e3976
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548990"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91497870"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "89548990"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
+```syntaxsql 
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
       FROM <queue>  
@@ -106,7 +105,7 @@ ms.locfileid: "89548990"
 ### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. 無制限に待機して、メッセージ交換グループを取得する  
  次の例では、`@conversation_group_id` にメッセージ交換グループの識別子を設定します。このメッセージ交換グループは、`ExpenseQueue` 上にあり、次に使用できるメッセージで使用されます。 このコマンドは、メッセージが使用できるようになるまで待機します。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 WAITFOR (  
@@ -118,7 +117,7 @@ WAITFOR (
 ### <a name="b-getting-a-conversation-group-waiting-one-minute"></a>B. 1 分間待機して、メッセージ交換グループを取得する  
  次の例では、`@conversation_group_id` にメッセージ交換グループの識別子を設定します。このメッセージ交換グループは、`ExpenseQueue` 上にあり、次に使用できるメッセージで使用されます。 使用できるメッセージが 1 分以内に取得できない場合、GET CONVERSATION GROUP では、`@conversation_group_id` の値が変更されずに返されます。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER  
   
 WAITFOR (  
@@ -130,7 +129,7 @@ TIMEOUT 60000 ;
 ### <a name="c-getting-a-conversation-group-returning-immediately"></a>C. 待機せず、メッセージ交換グループを取得する  
  次の例では、`@conversation_group_id` にメッセージ交換グループの識別子を設定します。このメッセージ交換グループは、`ExpenseQueue` 上にあり、次に使用できるメッセージで使用されます。 使用できるメッセージがない場合、`GET CONVERSATION GROUP` ステートメントでは、`@conversation_group_id` の値が変更されずにすぐに返されます。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 GET CONVERSATION GROUP @conversation_group_id  

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2da6f9cf82d189647d8b13ec864403134d6af571
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449897"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728033"
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
 
@@ -90,7 +90,7 @@ ms.locfileid: "88449897"
   
 5.  解析方法として **[区切り記号]** を選択した場合は、 **[ナレッジ ベース解析を使用します]** を選択することもできます。 詳細については、「 [Knowledge-Based Parsing](#KnowledgeBaseParsing)」をご参照ください。  
   
-6.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+6.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> 補足情報: 複合ドメインの作成後  
  複合ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
@@ -103,5 +103,4 @@ ms.locfileid: "88449897"
  ナレッジ ベースの解析は、複合ドメインが文字列ドメインで構成されている場合、または複合ドメインが異なる型のドメイン (int、date、time など) を組み合わせて構成されている場合に使用できます。 データ ソースが異なる型のデータで構成されている場合、解析はまず文字列以外のデータ型に対して実行され、次に残りのデータに対して、前述のとおりドメイン ナレッジに基づいて実行されます。  
   
  ナレッジ ベースの解析を使用する場合、複合ドメイン内のドメインよりもソース データ内の値の方が少ないときは、不足しているドメインに null が格納されます。 複合ドメイン内のドメインよりもソース データ内の値の方が多いときは、余分なデータがいずれかの列に追加されます。 複数のドメインに同じ値が含まれる場合、データ ソースは最初に一致したドメインに解析されます。  
-  
   

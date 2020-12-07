@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8ae33f12587345c042ea33e93f86790cdeb95691
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e59df620f51de5a3e99ab759460c73eb517bd7cf
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543311"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810904"
 ---
 # <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  プロシージャにアクセスするには、ユーザーに PUBLIC ロールが割り当てられている必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
 ## <a name="example"></a>例  
@@ -64,9 +64,8 @@ exec sp_help_spatial_geometry_index 'geometry_col', 'SIndx_SpatialTable_geometry
 ```  
   
 ## <a name="see-also"></a>参照  
- [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [空間インデックスストアドプロシージャ](./spatial-index-stored-procedures-arguments-and-properties.md)   
  [sp_help_spatial_geometry_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
-  
   

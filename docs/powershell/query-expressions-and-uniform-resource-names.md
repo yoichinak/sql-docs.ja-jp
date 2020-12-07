@@ -1,10 +1,7 @@
 ---
 title: クエリ式と Uniform Resource Name | Microsoft Docs
 description: オブジェクト モデル階層内の 1 つまたは複数のオブジェクトを列挙するクエリ式、および単一のオブジェクトを一意に識別する Uniform Resource Name (URN) について学習します。
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +11,15 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26483454e805bf8dcaa780fed352cbe984c61f71
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 839bef5d4b3aba3a9d95664c549556d6c05206e5
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714120"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081901"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
 
@@ -27,15 +27,11 @@ ms.locfileid: "88714120"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインでは、XPath 式に似た、2 種類の式文字列が使用されます。 クエリ式は、オブジェクト モデル階層内の 1 つまたは複数のオブジェクトを列挙するための条件のセットを指定する文字列です。 URN (Uniform Resource Name) は、単一のオブジェクトを一意に識別する特定の種類のクエリ式文字列です。  
 
-> [!NOTE]
-> SQL Server PowerShell モジュールには **SqlServer** と **SQLPS** の 2 つがあります。 **SQLPS** モジュールは (後方互換性のため) SQL Server のインストールに含まれていますが、今後更新されることはありません。 最新の PowerShell モジュールは **SqlServer** モジュールです。 **SqlServer** モジュールには **SQLPS** のコマンドレットの更新バージョンだけでなく、最新の SQL 機能をサポートする新しいコマンドレットも含まれています。  
-> SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれて*いました*が、SSMS の 16.x バージョンのみです。 PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを PowerShell ギャラリーからインストールする必要があります。
-> **SqlServer** モジュールをインストールする場合は、「[SQL Server PowerShell のインストール](download-sql-server-ps-module.md)」を参照してください。
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
-  
 ## <a name="syntax"></a>構文  
-  
-```  
+
+```powershell
   
 Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]  
   
@@ -50,48 +46,48 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  | @DatePropertyName=datetime('DateString')  
  | is_null(@PropertyName)  
  | not(<PropertyExpression>)  
-  
 ```  
+
+## <a name="arguments"></a>引数
+
+*Object*  
+オブジェクトの種類を指定します。オブジェクトの種類は、式文字列のこのノードで表されます。 各オブジェクトは、これらの SMO オブジェクト モデルの名前空間からのコレクション クラスを表します。  
+
+<xref:Microsoft.SqlServer.Management.Smo>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Agent>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Broker>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Mail>  
+
+<xref:Microsoft.SqlServer.Management.Dmf>  
+
+<xref:Microsoft.SqlServer.Management.Facets>  
+
+<xref:Microsoft.SqlServer.Management.RegisteredServers>  
+
+<xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
+
+たとえば、サーバーでは **ServerCollection** クラスを、データベースでは **DatabaseCollection** クラスを指定します。  
+
+\@*PropertyName*  
+*Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に \@ 文字を付ける必要があります。 たとえば、**Database** クラスのプロパティ **IsAnsiNull**には、\@IsAnsiNull と指定します。  
   
-## <a name="arguments"></a>引数  
- *Object*  
- オブジェクトの種類を指定します。オブジェクトの種類は、式文字列のこのノードで表されます。 各オブジェクトは、これらの SMO オブジェクト モデルの名前空間からのコレクション クラスを表します。  
+\@*BooleanPropertyName*=true()  
+指定したブール型のプロパティが TRUE に設定されているすべてのオブジェクトを列挙します。  
   
- <xref:Microsoft.SqlServer.Management.Smo>  
+\@*BooleanPropertyName*=false()  
+指定したブール型のプロパティが FALSE に設定されているすべてのオブジェクトを列挙します。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Agent>  
+contains(\@*StringPropertyName*, '*PatternString*')  
+指定した文字列プロパティに '*PatternString*' に指定した文字のセットが 1 つ以上含まれるすべてのオブジェクトを列挙します。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Broker>  
+\@*StringPropertyName*='*PatternString*'  
+指定した文字列プロパティの値が '*PatternString*' に指定した文字パターンとまったく同じであるすべてのオブジェクトを列挙します。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Mail>  
-  
- <xref:Microsoft.SqlServer.Management.Dmf>  
-  
- <xref:Microsoft.SqlServer.Management.Facets>  
-  
- <xref:Microsoft.SqlServer.Management.RegisteredServers>  
-  
- <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
-  
- たとえば、サーバーでは **ServerCollection** クラスを、データベースでは **DatabaseCollection** クラスを指定します。  
-  
- \@*PropertyName*  
- *Object*に指定したオブジェクトと関連付けるクラスのいずれかのプロパティの名前を指定します。 プロパティの名前の前に \@ 文字を付ける必要があります。 たとえば、**Database** クラスのプロパティ **IsAnsiNull**には、\@IsAnsiNull と指定します。  
-  
- \@*BooleanPropertyName*=true()  
- 指定したブール型のプロパティが TRUE に設定されているすべてのオブジェクトを列挙します。  
-  
- \@*BooleanPropertyName*=false()  
- 指定したブール型のプロパティが FALSE に設定されているすべてのオブジェクトを列挙します。  
-  
- contains(\@*StringPropertyName*, '*PatternString*')  
- 指定した文字列プロパティに '*PatternString*' に指定した文字のセットが 1 つ以上含まれるすべてのオブジェクトを列挙します。  
-  
- \@*StringPropertyName*='*PatternString*'  
- 指定した文字列プロパティの値が '*PatternString*' に指定した文字パターンとまったく同じであるすべてのオブジェクトを列挙します。  
-  
- \@*DatePropertyName*= datetime('*DateString*')  
- 指定した日付プロパティの値が '*DateString*' に指定した日付と一致するすべてのオブジェクトを列挙します。 *DateString* は、yyyy-mm-dd hh:mi:ss.mmm 形式で指定する必要があります。  
+\@*DatePropertyName*= datetime('*DateString*')  
+指定した日付プロパティの値が '*DateString*' に指定した日付と一致するすべてのオブジェクトを列挙します。 *DateString* は、yyyy-mm-dd hh:mi:ss.mmm 形式で指定する必要があります。  
   
 |DateString コンポーネント|説明|  
 |-|-|  
@@ -112,18 +108,20 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  *PropertyExpression*の評価値を否定して、 *PropertyExpression*に指定した条件に一致しないすべてのオブジェクトを列挙します。 たとえば、not(contains(\@Name, 'xyz')) と指定した場合、名前に xyz という文字列が含まれないすべてのオブジェクトが列挙されます。  
   
 ## <a name="remarks"></a>解説  
- クエリ式は、SMO モデル階層のノードを列挙する文字列です。 各ノードには、そのノードのどのオブジェクトを列挙するかを決定する条件を指定するためのフィルター式があります。 クエリ式は、XPath 式言語をモデル化したものです。 クエリ式は、XPath でサポートされる式の小さなサブセットを実装し、XPath には用意されていないいくつかの拡張を含みます。 XPath 式は、XML ドキュメント内の 1 つまたは複数のタグを列挙するための条件のセットを指定する文字列です。 XPath の詳細については、 [W3C XPath 言語の Web サイト](http://www.w3.org/TR/xpath20/)を参照してください。  
-  
- クエリ式は、Server オブジェクトへの絶対参照で開始する必要があります。 / で始まる相対的な式は使用できません。 クエリ式に指定するオブジェクトの順序は、関連付けられたオブジェクト モデルのコレクション オブジェクトの階層に従っている必要があります。 たとえば、Microsoft.SqlServer.Management.Smo 名前空間のオブジェクトを参照するクエリ式は、Server ノードで開始し、続けて Database ノードを指定する必要があります。  
-  
- オブジェクトに対して *\<FilterExpression>* を指定しなかった場合、そのノードのすべてのオブジェクトが列挙されます。  
+
+クエリ式は、SMO モデル階層のノードを列挙する文字列です。 各ノードには、そのノードのどのオブジェクトを列挙するかを決定する条件を指定するためのフィルター式があります。 クエリ式は、XPath 式言語をモデル化したものです。 クエリ式は、XPath でサポートされる式の小さなサブセットを実装し、XPath には用意されていないいくつかの拡張を含みます。 XPath 式は、XML ドキュメント内の 1 つまたは複数のタグを列挙するための条件のセットを指定する文字列です。 XPath の詳細については、 [W3C XPath 言語の Web サイト](http://www.w3.org/TR/xpath20/)を参照してください。  
+
+クエリ式は、Server オブジェクトへの絶対参照で開始する必要があります。 / で始まる相対的な式は使用できません。 クエリ式に指定するオブジェクトの順序は、関連付けられたオブジェクト モデルのコレクション オブジェクトの階層に従っている必要があります。 たとえば、Microsoft.SqlServer.Management.Smo 名前空間のオブジェクトを参照するクエリ式は、Server ノードで開始し、続けて Database ノードを指定する必要があります。  
+
+オブジェクトに対して *\<FilterExpression>* を指定しなかった場合、そのノードのすべてのオブジェクトが列挙されます。  
   
 ## <a name="uniform-resource-names-urn"></a>URN (Uniform Resource Name)  
- URN は、クエリ式のサブセットです。 それぞれの URN は、1 つのオブジェクトへの完全修飾参照を示します。 一般的な URN では、Name プロパティを使用して、各ノードの単独のオブジェクトを識別します。 たとえば、次の URN は特定の列を参照します。  
+
+URN は、クエリ式のサブセットです。 それぞれの URN は、1 つのオブジェクトへの完全修飾参照を示します。 一般的な URN では、Name プロパティを使用して、各ノードの単独のオブジェクトを識別します。 たとえば、次の URN は特定の列を参照します。  
   
-```  
+```powershell
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
-```  
+```
   
 ## <a name="examples"></a>例  
   
@@ -169,8 +167,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>参照  
- [Invoke-PolicyEvaluation コマンドレット](invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+- [Invoke-PolicyEvaluation コマンドレット](invoke-policyevaluation-cmdlet.md)
+- [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

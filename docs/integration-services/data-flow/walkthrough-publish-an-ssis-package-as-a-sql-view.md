@@ -1,5 +1,5 @@
 ---
-description: 'チュートリアル: SSIS パッケージを SQL ビューとして公開する'
+description: チュートリアル:SQL ビューとして SSIS パッケージを公開する
 title: 'チュートリアル: SSIS パッケージを SQL ビューとして公開する | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1df84869443257dbfc73d5ef3984f3e37a15b6c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425644"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194577"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
 
@@ -256,7 +256,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Timeout は、SSIS パッケージから新しいデータが到着するまで OLE DB provider for SSIS が待機できる秒数を示します。 既定のタイムアウトは 60 秒です。 Timeout には 20 ～ 32000 の範囲の整数値を指定できます。  
   
- Parameters には、パッケージ パラメーターとプロジェクト パラメーターの両方の値が含まれます。 パラメーターのルールは、 [DTExec](https://msdn.microsoft.com/library/hh231187.aspx)のパラメーターと同じです。  
+ Parameters には、パッケージ パラメーターとプロジェクト パラメーターの両方の値が含まれます。 パラメーターのルールは、 [DTExec](../packages/dtexec-utility.md)のパラメーターと同じです。  
   
  クエリ句で使用できる特殊文字を次に示します。  
   
@@ -270,6 +270,5 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## <a name="see-also"></a>参照  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   
- [Data Streaming Destination を構成する](../../integration-services/data-flow/configure-data-streaming-destination.md)  
-  
+ [Data Streaming Destination を構成する](./data-streaming-destination.md)  
   

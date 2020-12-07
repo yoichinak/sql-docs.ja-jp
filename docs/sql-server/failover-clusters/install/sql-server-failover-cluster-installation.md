@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: fc5aaf5bb89edabcc483baebe8cb4b709314a383
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5fc6afb68622514c5ff8f2c244ff0942ae1f0e1d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91112195"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121140"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server フェールオーバー クラスターのインストール
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91112195"
   
 3.  フェールオーバー クラスター インスタンスごとに複数の IP アドレスを指定します。 各サブネットに複数の IP アドレスを指定することができます。 同じサブネットに複数の IP アドレスがある場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは依存関係を AND に設定します。 複数のサブネットにわたってノードをクラスター化している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは依存関係を OR に設定します。  
 
-4.  SQL Server フェールオーバー クラスター インスタンス (FCI) では、クラスター ノードをドメイン参加させる必要があります。 次の構成は**サポートされていません**。
+4.  SQL Server フェールオーバー クラスター インスタンス (FCI) では、クラスター ノードをドメイン参加させる必要があります。 次の構成は **サポートされていません**。
     - ワークグループ クラスター上の SQL FCI。 
     - マルチドメイン クラスター上の SQL FCI。   
     - ドメイン + ワークグループ クラスター上の SQL FCI。 
@@ -88,7 +88,6 @@ ms.locfileid: "91112195"
 ## <a name="see-also"></a>参照  
  [フェールオーバー クラスタリングをインストールする前に](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
- [コマンド プロンプトからの SQL Server 2016 のインストール](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [コマンド プロンプトからの SQL Server 2016 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [SQL Server フェールオーバー クラスター インスタンスのアップグレード](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
   

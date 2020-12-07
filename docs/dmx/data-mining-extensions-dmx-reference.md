@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd6830e46f10ba20642d1975f293b72b768f7e5b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414088"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726254"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>データ マイニング拡張機能 (DMX) リファレンス
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88414088"
   
  この仕様では、データ マイニングの基礎がデータ マイニング モデル仮想オブジェクトとして定義されます。 データ マイニング モデル オブジェクトは、特定のマイニング モデルに関する既知の事柄をすべてカプセル化します。 データ マイニング モデル オブジェクトは SQL テーブルのような構造になっており、モデルを説明する列、データ型、およびメタ情報から構成されています。 この構造により、SQL の拡張版である DMX 言語を使用して、モデルを作成、使用することができるようになります。  
   
- **詳細については、「** [マイニング構造 &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) 」を参照してください。  
+ **詳細については、「** [マイニング構造 &#40;Analysis Services-データマイニング&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining) 」を参照してください。  
   
 ##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> DMX ステートメント  
  DMX ステートメントを使用して、データマイニングモデルの作成、処理、削除、コピー、参照、および予測を行うことができます。 DMX にはデータ定義ステートメントおよびデータ操作ステートメントの 2 種類のステートメントがあります。 それぞれの種類のステートメントを使用して、さまざまな種類のタスクを実行できます。  
@@ -109,5 +109,4 @@ ms.locfileid: "88414088"
  [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 646db60d22175c298a686bed903fdd9246c2a59f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f34a3a3ce7ddf6c80127fbdfb5cdd0298466633b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897020"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584153"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "85897020"
 2. **Switch-SqlAvailabilityGroup** コマンドレットを使用します。 
   
     > [!NOTE] 
-    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] コマンドレットを使用します。 詳細については、「[SQL Server PowerShell のヘルプの参照](../../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。 
+    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] コマンドレットを使用します。 詳細については、「[SQL Server PowerShell のヘルプの参照](../../../powershell/sql-server-powershell.md)」を参照してください。 
   
      次の例では、指定したパスのセカンダリ レプリカに *MyAg* 可用性グループを手動でフェールオーバーします。 
   
@@ -104,8 +104,8 @@ ms.locfileid: "85897020"
   
     SQL Server PowerShell プロバイダーを設定して使用するには: 
   
-    -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
-    -   [SQL Server PowerShell のヘルプの参照](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
+    -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md) 
+    -   [SQL Server PowerShell のヘルプの参照](../../../powershell/sql-server-powershell.md) 
 
 ##  <a name="follow-up-after-you-manually-fail-over-an-availability-group"></a><a name="FollowUp"></a> フォロー アップ: 可用性グループの手動フェールオーバーを実行した後 
  可用性グループの [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] の外側でフェールオーバーした場合、Windows Server フェールオーバー クラスタリング ノードのクォーラム投票を調整して新しい可用性グループの構成を反映します。 詳細については、「[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)」を参照してください。 
@@ -121,5 +121,4 @@ ms.locfileid: "85897020"
  * [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
  * [可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
-  
   

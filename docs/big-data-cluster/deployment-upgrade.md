@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: 058012d828dd9f6f327354809be4dfe67021744b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392178"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257192"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法
 
@@ -57,16 +57,16 @@ ms.locfileid: "89392178"
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-1. `azdata` を更新します。
+1. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] を更新します。
 
-   `azdata` のインストール手順に従います。 
-   - [Windows インストーラー](deploy-install-azdata-installer.md)
-   - [Linux (apt を使用)](deploy-install-azdata-linux-package.md)
-   - [Linux (yum を使用)](deploy-install-azdata-yum.md)
-   - [Linux (zypper を使用)](deploy-install-azdata-zypper.md)
+   [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] のインストール手順に従います。 
+   - [Windows インストーラー](../azdata/install/deploy-install-azdata-installer.md)
+   - [Linux (apt を使用)](../azdata/install/deploy-install-azdata-linux-package.md)
+   - [Linux (yum を使用)](../azdata/install/deploy-install-azdata-yum.md)
+   - [Linux (zypper を使用)](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
-   >`azdata` が `pip` と共にインストールされている場合は、Windows インストーラーまたは Linux パッケージ マネージャーを使ってインストールする前に、手動で削除する必要があります。
+   >[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] が `pip` と共にインストールされている場合は、Windows インストーラーまたは Linux パッケージ マネージャーを使ってインストールする前に、手動で削除する必要があります。
 
 1. ビッグ データ クラスターを更新します。
 
@@ -131,7 +131,7 @@ SQL Server ビッグ データ クラスターの CTP またはリリース候�
 
 ### <a name="backup-and-delete-the-old-cluster"></a>以前のクラスターをバックアップして削除する
 
-SQL Server 2019 GDR1 リリースの前に展開されたビッグ データ クラスターのインプレース アップグレードはありません。 新しいリリースにアップグレードする唯一の方法は、クラスターを手動で削除して再作成することです。 各リリースには、以前のバージョンと互換性のない固有のバージョンの `azdata` があります。 また、別の以前のバージョンで展開されたクラスターに新しいコンテナー イメージをダウンロードした場合、最新のイメージはクラスター上の以前のイメージと互換性がない可能性があります。 コンテナー設定の展開構成ファイルで `latest` イメージ タグを使用している場合は、新しいイメージがプルされます。 既定では、各リリースには、SQL Server のリリース バージョンに対応する固有のイメージ タグがあります。 最新のリリースにアップグレードするには、次の手順に従います。
+SQL Server 2019 GDR1 リリースの前に展開されたビッグ データ クラスターのインプレース アップグレードはありません。 新しいリリースにアップグレードする唯一の方法は、クラスターを手動で削除して再作成することです。 各リリースには、以前のバージョンと互換性のない固有のバージョンの [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] があります。 また、別の以前のバージョンで展開されたクラスターに新しいコンテナー イメージをダウンロードした場合、最新のイメージはクラスター上の以前のイメージと互換性がない可能性があります。 コンテナー設定の展開構成ファイルで `latest` イメージ タグを使用している場合は、新しいイメージがプルされます。 既定では、各リリースには、SQL Server のリリース バージョンに対応する固有のイメージ タグがあります。 最新のリリースにアップグレードするには、次の手順に従います。
 
 1. 以前のクラスターを削除する前に、SQL Server マスター インスタンス上と HDFS 上のデータをバックアップします。 SQL Server マスター インスタンスの場合は、[SQL Server のバックアップと復元](data-ingestion-restore-database.md)を使用できます。 HDFS の場合は、[`curl` を使用してデータをコピーできます](data-ingestion-curl.md)。
 
@@ -142,18 +142,18 @@ SQL Server 2019 GDR1 リリースの前に展開されたビッグ データ ク
    ```
 
    > [!Important]
-   > クラスターと一致するバージョンの `azdata` を使用します。 新しいバージョンの `azdata` で古いクラスターを削除しないでください。
+   > クラスターと一致するバージョンの [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] を使用します。 新しいバージョンの [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] で古いクラスターを削除しないでください。
 
    > [!Note]
    > `azdata bdc delete` コマンドを発行すると、そのビッグ データ クラスター名で示される名前空間内で作成されたすべてのオブジェクトは削除されますが、名前空間自体は削除されません。 名前空間は、空で、他のアプリケーションが中に作成されていない限り、後の展開に再利用できます。
 
-1. 以前のバージョンの `azdata` をアンインストールします。
+1. 以前のバージョンの [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] をアンインストールします。
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. 最新バージョンの `azdata` をインストールします。 次のコマンドでは、最新のリリースから `azdata` がインストールされます。
+1. 最新バージョンの [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] をインストールします。 次のコマンドでは、最新のリリースから [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] がインストールされます。
 
    **Windows:**
 
@@ -168,11 +168,11 @@ SQL Server 2019 GDR1 リリースの前に展開されたビッグ データ ク
    ```
 
    > [!IMPORTANT]
-   > 各リリースで、`azdata` の `n-1` バージョンへのパスが変更されます。 以前に `azdata` をインストールしている場合でも、新しいクラスターを作成する前に、最新のパスから再インストールする必要があります。
+   > 各リリースで、[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] の `n-1` バージョンへのパスが変更されます。 以前に [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] をインストールしている場合でも、新しいクラスターを作成する前に、最新のパスから再インストールする必要があります。
 
 ### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> azdata のバージョンを確認する
 
-新しいビッグ データ クラスターを展開する前に、`--version` パラメーターを指定して、最新バージョンの `azdata` を使用していることを確認します。
+新しいビッグ データ クラスターを展開する前に、`--version` パラメーターを指定して、最新バージョンの [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] を使用していることを確認します。
 
 ```bash
 azdata --version
@@ -180,7 +180,7 @@ azdata --version
 
 ### <a name="install-the-new-release"></a>新しいリリースをインストールする
 
-以前のビッグ データ クラスターを削除し、最新の `azdata` をインストールしたら、現在の展開手順に従って、新しいビッグ データ クラスターを展開します。 詳細については、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md)」を参照してください。 次に、必要なデータベースまたはファイルを復元します。
+以前のビッグ データ クラスターを削除し、最新の [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] をインストールしたら、現在の展開手順に従って、新しいビッグ データ クラスターを展開します。 詳細については、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md)」を参照してください。 次に、必要なデータベースまたはファイルを復元します。
 
 ## <a name="next-steps"></a>次のステップ
 

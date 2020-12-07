@@ -26,12 +26,12 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3c5c380472013176cdbe7ff745c588107d216b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 284d4110c4c0a2b8b4b7a1c26c4a4148fb5c50a6
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467636"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124409"
 ---
 # <a name="-modulus-transact-sql"></a>% (剰余) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467636"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 dividend % divisor  
 ```  
   
@@ -50,7 +50,7 @@ dividend % divisor
 
 ## <a name="arguments"></a>引数
  *dividend*  
- 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定する必要があります。  
+ 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の有効な [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定する必要があります。  
   
  *divisor*  
  被除数を除算する数値式です。 *divisor* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の任意の有効な式を指定する必要があります。  
@@ -66,18 +66,18 @@ dividend % divisor
 ### <a name="a-simple-example"></a>A. 簡単な例  
  次の例では、38 を 5 で割ります。 この結果は、答えの整数部分である 7 となります。また、剰余演算子を使用して余り 3 を返す方法も示しています。  
   
-```  
+```sql  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder;
 ```  
   
 ### <a name="b-example-using-columns-in-a-table"></a>B. テーブルの列を使用した例  
  次の例では、製品 ID 番号、製品の単価、および注文された製品数を各製品の価格で割った余り (剰余) を整数値に変換した値を返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP(100)ProductID, UnitPrice, OrderQty,  
-   CAST((UnitPrice) AS int) % OrderQty AS Modulo  
+   CAST((UnitPrice) AS INT) % OrderQty AS Modulo  
 FROM Sales.SalesOrderDetail;  
 GO  
 ```  
@@ -87,7 +87,7 @@ GO
 ### <a name="c-simple-example"></a>C. 簡単な例  
  次の例は、3 を 2 で割ったときの `%` 演算子の結果を示しています。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP(1) 3%2 FROM dimEmployee;  

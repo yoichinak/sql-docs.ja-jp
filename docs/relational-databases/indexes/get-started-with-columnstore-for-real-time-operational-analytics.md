@@ -12,12 +12,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24ecd09d3f649e0a18e76db87c05ee2be79c0cb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05ca5334dd7f83ac31c8e118cad983b25d049b03
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381984"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863911"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>列ストアを使用したリアルタイム運用分析の概要
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -91,21 +91,21 @@ ms.locfileid: "88381984"
   
 -   [リアルタイム運用分析のビジネス ケース](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
   
--   [非クラスター化列ストア インデックスを使用したリアルタイム運用分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)  
+-   [非クラスター化列ストア インデックスを使用したリアルタイム運用分析](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)  
   
--   [非クラスター化列ストア インデックスの使用方法に関する簡単な例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)  
+-   [非クラスター化列ストア インデックスの使用方法に関する簡単な例](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)  
   
--   [トランザクション ワークロードで SQL Server が非クラスター化列ストア インデックスを管理する方法](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)  
+-   [トランザクション ワークロードで SQL Server が非クラスター化列ストア インデックスを管理する方法](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)  
   
--   [フィルター処理されたインデックスを使用して非クラスター化列ストア インデックスのメンテナンスの影響を最小限に抑える](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
+-   [フィルター処理されたインデックスを使用して非クラスター化列ストア インデックスのメンテナンスの影響を最小限に抑える](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)  
   
--   [圧縮遅延を使用して非クラスター化列ストア インデックスのメンテナンスの影響を最小限に抑える](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)  
+-   [圧縮遅延を使用して非クラスター化列ストア インデックスのメンテナンスの影響を最小限に抑える](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)  
   
--   [圧縮遅延を使用して非クラスター化列ストア インデックスのメンテナンスの影響を最小限に抑える - パフォーマンス番号](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
+-   [圧縮遅延を使用して非クラスター化列ストア インデックスのメンテナンスの影響を最小限に抑える - パフォーマンス番号](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)  
   
--   [メモリ最適化テーブルによるリアルタイム運用分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
+-   [メモリ最適化テーブルによるリアルタイム運用分析](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)  
   
--   [列ストア インデックスと行グループのマージ ポリシー](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
+-   [列ストア インデックスと行グループのマージ ポリシー](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)  
   
 ## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>パフォーマンス ヒント 1:フィルター処理されたインデックスを使用したクエリ パフォーマンスの改善  
  リアルタイム分析の運用を実行すると、OLTP ワークロードのパフォーマンスに影響を及ぼすことがあります。 この影響は最小限に抑える必要があります。 次の例では、分析をリアルタイムで実行しつつ、フィルター処理されたインデックスを使用してトランザクション ワークロード上の非クラスター化列ストア インデックスの影響を最小限に抑える方法を示します。  
@@ -165,7 +165,7 @@ Group By customername
   
  ![クエリ プラン](../../relational-databases/indexes/media/query-plan-columnstore.png "クエリ プラン")  
   
- [フィルター処理された非クラスター化列ストア インデックス](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
+ [フィルター処理された非クラスター化列ストア インデックス](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)の詳細については、ブログを参照してください。  
   
 ## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>パフォーマンス ヒント 2:AlwaysOn 読み取り可能セカンダリに対する分析の負荷を軽減する  
  フィルター処理された列ストア インデックスを使用して、列ストア インデックスのメンテナンスを最小限に抑えることはできますが、それでも分析クエリには多大なコンピューティング リソース (CPU、I/O、メモリ) が必要であり、運用ワークロードのパフォーマンスに影響します。 ほとんどのミッション クリティカルなワークロードについては、AlwaysOn 構成を使用することをお勧めします。 この構成では、負荷を読み取り可能セカンダリにオフロードすることで、実行中の分析の影響を除去できます。  
@@ -192,7 +192,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
- [圧縮遅延](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
+ [圧縮遅延](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)の詳細については、ブログを参照してください。  
   
  推奨されているベスト プラクティスを次に示します。  
   
@@ -222,4 +222,3 @@ ORDER BY created_time DESC;
  [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [データ ウェアハウスの列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
-  

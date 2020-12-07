@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6981eea5cb4d327303755adc74d5610637eb70b0
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 6625e985781f3980c44bef9b6dbd408243ac78a9
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588258"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523852"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>記憶域プール (ビッグ データ クラスター) から CSV データを仮想化する
 
@@ -31,17 +31,17 @@ SQL Server ビッグ データ クラスターでは、HDFS の CSV ファイル
 
 Azure Data Studio (ADS) で、ご使用のビッグ データ クラスターの [SQL Server マスター インスタンスに接続します](connect-to-big-data-cluster.md#master)。 接続したら、オブジェクト エクスプローラーで HDFS 要素を展開して、データを仮想化する CSV ファイルを見つけます。 
 
-このチュートリアルでは、**Data** という名前の新しいディレクトリを作成します。
+このチュートリアルでは、 **Data** という名前の新しいディレクトリを作成します。
 
 1. HDFS ルート ディレクトリのコンテキスト メニューを右クリックします。
 2. **[新しいディレクトリ]** をクリックします。
-3. 新しいディレクトリに "*Data*" という名前を付けます。
+3. 新しいディレクトリに " *Data* " という名前を付けます。
 
 サンプル データをアップロードします。 簡単なチュートリアルの場合は、サンプルの csv データ ファイルを使用できます。 この記事では、[米国運輸省](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?pn=1)の航空会社の遅延の原因データを使用します。 生データをダウンロードし、ご使用のコンピューターにデータを抽出します。 ファイルに *airline_delay_causes.csv* という名前を付けます。
 
 抽出後にサンプル ファイルをアップロードするには:
 
-1. Azure Data Studio で、作成した新しいディレクトリを "*右クリック*" します。 
+1. Azure Data Studio で、作成した新しいディレクトリを " *右クリック* " します。 
 2. **[ファイルのアップロード]** をクリックします。
 
 ![HDFS の csv ファイルの例](media/data-virtualization/100-csv-sample-file-hdfs.png)
@@ -71,7 +71,7 @@ ADS から、CSV ファイルを右クリックして、コンテキスト メ�
 
 Azure Data Studio により、インポートされたデータのプレビューが提供されます。
 
-![外部データ ソースの資格情報](media/data-virtualization/130-csv-preview-data.png)
+![インポートされたデータのプレビューが含まれる [Create External Table From CSV]\(CSV から外部テーブルを作成する\) ウィンドウを示すスクリーンショット。](media/data-virtualization/130-csv-preview-data.png)
 
 プレビューの表示が終わったら、 **[次へ]** をクリックして続行します。
 
@@ -79,7 +79,7 @@ Azure Data Studio により、インポートされたデータのプレビュ�
 
 次のウィンドウでは、作成する外部テーブルの列を変更できます。 列の名前とデータ型を変更でき、null 許容型の行にすることができます。 
 
-![外部データ ソースの資格情報](media/data-virtualization/140-csv-modify-columns.png)
+![手順 3「列を変更する」が示されている [Create External Table From CSV]\(CSV から外部テーブルを作成する\) ウィンドウのスクリーンショット。](media/data-virtualization/140-csv-modify-columns.png)
 
 変換先の列を確認したら、 **[次へ]** をクリックします。
 

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_copies (Azure SQL データベース)
-title: dm_database_copies (Azure SQL Database) |Microsoft Docs
+title: sys.dm_database_copies (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.service: sql-database
@@ -20,19 +20,19 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 178fda9bb96fc84acd1527f172c6a6728a1ec22e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: acdb347af36812095df03f61ae9f118493496e51
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543927"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364774"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL データベース)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   データベースのコピーに関する情報を返します。  
   
-Geo レプリケーションリンクに関する情報を取得するには、 [geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) または [dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) ビュー (SQL Database V12 で利用可能) を使用します。
+Geo レプリケーションリンクに関する情報を取得するには、 [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) ビューまたは [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) ビュー (SQL Database V12 で利用可能) を使用します。
   
   
 |列名|データ型|説明|  
@@ -59,7 +59,7 @@ Geo レプリケーションリンクに関する情報を取得するには、 
 ## <a name="permissions"></a>アクセス許可  
  このビューは、サーバーレベルプリンシパルログインの **master** データベースでのみ使用できます。  
   
-## <a name="remarks"></a>解説  
- ソースサーバーまたはターゲットサーバーの**master**データベースでは、 **sys. dm_database_copies**ビューを使用でき [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ます。 データベースのコピーが正常に完了し、新しいデータベースがオンラインになると、 **dm_database_copies** ビューの行が自動的に削除されます。  
+## <a name="remarks"></a>注釈  
+ ソースサーバーまたはターゲットサーバーの **master** データベースの **sys.dm_database_copies** ビューを使用でき [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ます。 データベースのコピーが正常に完了し、新しいデータベースがオンラインになると、 **sys.dm_database_copies** ビューの行が自動的に削除されます。  
   
   

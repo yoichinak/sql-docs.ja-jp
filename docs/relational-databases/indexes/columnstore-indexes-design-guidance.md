@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4cf6107c1e200620f1ba48f4e774c440ccdcd7a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409178"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006619"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列ストア インデックス - 設計ガイダンス
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88409178"
 * テーブルに、varchar(max)、nvarchar(max)、varbinary(max) データ型が必要な場合。 または、これらの列が含まれないように列ストア インデックスを設計します。
 * テーブル データが永続的でない場合。 データをすばやく格納および削除する必要がある場合は、ヒープまたは一時テーブルの使用を検討してください。
 * テーブルの行数がパーティションあたり 100 万未満の場合。 
-* 更新と削除がテーブルに対する操作の 10% を超える場合。 大量の更新と削除は断片化の原因となります。 すべてのデータを列ストアに強制的に入れて断片化を解消する再編成という操作を実行するまで、断片化は圧縮率とクエリ パフォーマンスに影響します。 詳しくは、[列ストア インデックスでインデックスの断片化を最小限に抑える方法](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)に関する記事をご覧ください。
+* 更新と削除がテーブルに対する操作の 10% を超える場合。 大量の更新と削除は断片化の原因となります。 すべてのデータを列ストアに強制的に入れて断片化を解消する再編成という操作を実行するまで、断片化は圧縮率とクエリ パフォーマンスに影響します。 詳しくは、[列ストア インデックスでインデックスの断片化を最小限に抑える方法](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)に関する記事をご覧ください。
 
 詳しくは、「[Columnstore indexes - data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)」(列ストア インデックス - データ ウェアハウス) をご覧ください。
 
@@ -100,7 +100,7 @@ ms.locfileid: "88409178"
 
 詳しくは、「[Get started with columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)」(列ストア インデックスを使用したリアルタイム運用分析の概要) をご覧ください
 
-最適な列ストア インデックスの選択について詳しくは、Sunil Agarwal のブログで「[Which columnstore index is right for my workload?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload)」(自分のワークロードに適した列ストア インデックス) をご覧ください。
+最適な列ストア インデックスの選択について詳しくは、Sunil Agarwal のブログで「[Which columnstore index is right for my workload?](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload)」(自分のワークロードに適した列ストア インデックス) をご覧ください。
 
 ## <a name="use-table-partitions-for-data-management-and-query-performance"></a>テーブルのパーティションを使用してデータ管理とクエリのパフォーマンスを高める
 列ストア インデックスでは、データの管理とアーカイブの優れた方法であるパーティション分割がサポートされます。 パーティション分割では、操作を 1 つ以上のパーティションに制限することでクエリのパフォーマンスも向上します。
@@ -130,7 +130,7 @@ ms.locfileid: "88409178"
 * 1,000,000 行を 1 つのパーティションまたは非パーティション テーブルに読み込みます。 1,000,000 行を含む 1 つの圧縮行グループを取得します。 これは、高いデータ圧縮と高速なクエリ パフォーマンスに優れています。
 * 1,000,000 行を 10 個のパーティションに均等に読み込みます。 各パーティションは、列ストア圧縮の最小しきい値未満である 100,000 行を受け取ります。 その結果、列ストア インデックスには、それぞれ 100,000 行を含む 10 個のデルタ行グループがある可能性があります。 デルタ行グループを列ストアに強制的に移動する方法があります。 ただし、これらが列ストア インデックス内の行のみである場合、圧縮された行グループは、最適な圧縮とクエリ パフォーマンスを発揮するには小さくなりすぎます。
 
-パーティション分割について詳しくは、Sunil Agarwal のブログ記事「[Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/)」(自分の列ストア インデックスは分割する必要があるか) をご覧ください。
+パーティション分割について詳しくは、Sunil Agarwal のブログ記事「[Should I partition my columnstore index?](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index)」(自分の列ストア インデックスは分割する必要があるか) をご覧ください。
 
 ## <a name="choose-the-appropriate-data-compression-method"></a>適切なデータの圧縮方法を選ぶ
 列ストア インデックスは、データ圧縮に関する 2 つの選択肢 (列ストア圧縮とアーカイブ圧縮) を提供しています。 圧縮オプションは、インデックスの作成時、または後で [ALTER INDEX ...REBUILD](../../t-sql/statements/alter-index-transact-sql.md) を使用して変更するときに選択できます。
@@ -190,7 +190,6 @@ B ツリー インデックスは並べ替えられた順序で行を既に格�
 空の列ストア インデックスを作成するには:
 
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。「[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。
-* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。「[CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)」を参照してください。
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。「[CREATE TABLE (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)」を参照してください。
 
 既存の行ストア ヒープまたは B ツリー インデックスをクラスター化列ストア インデックスに変換する方法、または非クラスター化列ストア インデックスを作成する方法の詳細については、「[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)」を参照してください。
-

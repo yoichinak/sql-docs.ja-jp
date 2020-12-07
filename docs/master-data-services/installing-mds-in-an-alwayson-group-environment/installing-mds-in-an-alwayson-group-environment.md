@@ -1,5 +1,5 @@
 ---
-title: 高可用性とディザスター リカバリー
+title: 高可用性と障害復旧
 description: バックエンドデータの高可用性とディザスターリカバリーを向上させるために、SQL マスターデータサービスを Always On 可用性グループにインストールして構成します。
 ms.custom: seo-lt-2019
 ms.date: 07/28/2017
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: a6cc30d907d6b8c0c14d177106da3457eb828bef
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522006"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194099"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>マスター データ サービスの高可用性とディザスター リカバリー
 
@@ -184,9 +184,9 @@ WSFC 機能がすべてのインスタンスにインストールされたら、
 
 - WSFC 機能は、一部のエディションの Windows Server でご利用いただけない場合があります。 お使いのエディションにこの機能があることをご確認ください。
 
-- Active Directory で WSFC を設定するアクセス許可が与えられていることを確認します。 問題がある場合は、「[フェールオーバー クラスターのステップ バイ ステップ ガイド: Active Directory でのアカウントの構成](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)」を参照してください。
+- Active Directory で WSFC を設定するアクセス許可が与えられていることを確認します。 問題がある場合は、「[フェールオーバー クラスターのステップ バイ ステップ ガイド: Active Directory でのアカウントの構成](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10))」を参照してください。
 
-WSFC の詳細については、「[Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx)」(フェールオーバー クラスター) を参照してください。
+WSFC の詳細については、「[Failover Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732488(v=ws.10))」(フェールオーバー クラスター) を参照してください。
 
 ## <a name="sql-server-always-on-availability-group"></a>Always On 可用性グループの SQL Server
 
@@ -228,7 +228,7 @@ FCIs は、インスタンスレベルの高可用性を提供します。 SQL S
 
    図 10
 
-2. [ **SQL Server (MSSQLSERVER)** **のプロパティ**] ダイアログボックスで、[ **Always On 高可用性**] タブをクリックし、[**可用性グループの Always On を有効にする**] チェックボックスをオンにします。 値が **[Windows フェールオーバー クラスター名]** テキスト ボックスに表示されたら、**[OK]** をクリックして続行します。 図 11 を参照してください。
+2. [ **SQL Server (MSSQLSERVER)** **のプロパティ** ] ダイアログボックスで、[ **Always On 高可用性** ] タブをクリックし、[ **可用性グループの Always On を有効にする** ] チェックボックスをオンにします。 値が **[Windows フェールオーバー クラスター名]** テキスト ボックスに表示されたら、**[OK]** をクリックして続行します。 図 11 を参照してください。
 
    ![Always On 可用性グループの有効化オプション](media/Fig11_EnableAlwaysOn.png)
 
@@ -309,7 +309,7 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
 
 8. **[レプリカの指定]** ページで、**[リスナー]** タブをクリックし、次の操作を行います。 図 18 を参照してください。
 
-   a。 **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
+   a. **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
 
    b. **[リスナーの DNS 名]** を入力します。たとえば、「MDSSQLServer」にします。
 
@@ -318,7 +318,7 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
    d. **[ネットワーク モード]** テキスト ボックスに DHCP を入力し、**[次へ]** をクリックして続行します。
 
    > [!NOTE]
-   > 必要に応じて、**ネットワークモード**として [静的 ip] を選択し、静的 ip を入力できます。 1433 以外のポートも入力できます。
+   > 必要に応じて、 **ネットワークモード** として [静的 ip] を選択し、静的 ip を入力できます。 1433 以外のポートも入力できます。
 
    ![リスナーを構成する](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -326,7 +326,7 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
 
 9. **[データ同期の選択]** ページで、**[完全]** をクリックし、すべてのノードがアクセスできるネットワークを指定します。 **[次へ]** をクリックして次に進みます。 図 19 を参照してください。
 
-   このネットワーク共有は、セカンダリ レプリカの作成時にデータベース バックアップを保存するために利用されます。 所属する組織でネットワーク共有を利用できない場合、別のデータ同期方法を選択してください。 他のオプションを使用してセカンダリレプリカを作成する方法については、 [SQL Server 2016 Always On 可用性グループ](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)に関する説明を参照してください。 図 17 では、その他の選択肢も確認できます。
+   このネットワーク共有は、セカンダリ レプリカの作成時にデータベース バックアップを保存するために利用されます。 所属する組織でネットワーク共有を利用できない場合、別のデータ同期方法を選択してください。 他のオプションを使用してセカンダリレプリカを作成する方法については、 [SQL Server 2016 Always On 可用性グループ](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) に関する説明を参照してください。 図 17 では、その他の選択肢も確認できます。
 
    ![データ同期を構成する](media/Fig19_AvailabilityGroupDataSync.png)
 
@@ -382,7 +382,7 @@ Always On 可用性グループの詳細については、「 [SQL Server 2016 A
 
    MDS 設定が完了です。 上記の手順を繰り返し、すべてのノードで実行されるように MDS を設定できます。 バックエンド データベースは、同じ AG で同じになります。
 
-6. 以前に一時データベースを作成した場合 (「[可用性グループの作成](#create-an-availability-group)」セクションを参照)、AG を作成するには、一時データベースを削除する必要があります。
+6. 以前に一時データベースを作成した場合 (「 [可用性グループの作成](#create-an-availability-group) 」セクションを参照)、AG を作成するには、一時データベースを削除する必要があります。
 
    マスター データ サービスの詳細については、「[マスター データ サービスの概要](../master-data-services-overview-mds.md)」を参照してください。
 
@@ -394,5 +394,4 @@ Always On 可用性グループの詳細については、「 [SQL Server 2016 A
 
 このホワイト ペーパーはお役に立ちましたか?  記事の上部にある **[コメント]** をクリックし、フィードバックをお寄せください。 
 
-いただいたフィードバックは、今後のホワイト ペーパーの品質向上につながります。 
-
+いただいたフィードバックは、今後のホワイト ペーパーの品質向上につながります。

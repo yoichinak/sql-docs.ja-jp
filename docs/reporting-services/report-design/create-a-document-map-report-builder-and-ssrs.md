@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: cd6c70f92cb409ee6742590709743897bb3e77f7
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85061052"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364444"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
 
@@ -40,15 +40,14 @@ ms.locfileid: "85061052"
   
  詳細については、「[さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)」を参照してください。  
   
-##  <a name="AddRptItemToMap"></a>   
-#### <a name="to-add-a-report-item-to-a-document-map"></a>ドキュメント マップにレポート アイテムを追加するには  
+##  <a name="to-add-a-report-item-to-a-document-map"></a><a name="AddRptItemToMap"></a> ドキュメント マップにレポート アイテムを追加するには  
   
 1.  デザイン ビューで、テーブル、マトリックス、ゲージなど、ドキュメント マップに追加するレポート アイテムを選択します。 プロパティ ペインにレポート アイテム プロパティが表示されます。  
   
     > [!NOTE]  
     >  Tablix データ領域を選択するには、任意のセルをクリックして行ハンドルおよび列ハンドルを表示し、コーナー ハンドルをクリックします。  
   
-2.  プロパティ ペインで、ドキュメント マップに表示するテキストを **DocumentMapLabel** プロパティに入力するか、ラベルになる式を入力します。 たとえば、「 **Sales Chart**」のように入力します。  
+2.  プロパティ ペインで、ドキュメント マップに表示するテキストを **DocumentMapLabel** プロパティに入力するか、ラベルになる式を入力します。 たとえば、「 **Sales Chart** 」のように入力します。  
   
     > [!NOTE]  
     >  [プロパティ] ペインが表示されない場合は、 **[表示]** タブの **[表示/非表示]** グループで、 **[プロパティ]** を選択します。  
@@ -58,8 +57,7 @@ ms.locfileid: "85061052"
 4.  **[実行]** をクリックします。 レポートが実行され、作成したラベルがドキュメント マップに表示されます。 任意のリンクをクリックすると、このレポート アイテムが配置されたレポート ページに移動します。  
 
   
-##  <a name="AddUniqueValuesToMap"></a>   
-#### <a name="to-add-unique-group-values-to-a-document-map"></a>ドキュメント マップに一意のグループ値を追加するには  
+##  <a name="to-add-unique-group-values-to-a-document-map"></a><a name="AddUniqueValuesToMap"></a> ドキュメント マップに一意のグループ値を追加するには  
   
 1.  デザイン ビューで、ドキュメント マップに表示するグループを格納するテーブル、マトリックス、または一覧を選択します。 グループ化ペインに行グループと列グループが表示されます。  
   
@@ -75,8 +73,7 @@ ms.locfileid: "85061052"
   
 7.  **[実行]** をクリックします。 レポートが実行され、グループ値がドキュメント マップに表示されます。 任意のリンクをクリックすると、このレポート アイテムが配置されたレポート ページに移動します。  
   
-##  <a name="HideMapWhenViewRpt"></a>   
-#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>レポートを表示する場合にドキュメント マップを非表示にするには  
+##  <a name="to-hide-the-document-map-when-you-view-a-report"></a><a name="HideMapWhenViewRpt"></a> レポートを表示する場合にドキュメント マップを非表示にするには  
   
 1.  Web ポータルで、ドキュメント マップのあるレポートを参照します。  
   

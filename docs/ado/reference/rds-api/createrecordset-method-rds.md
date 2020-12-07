@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad1c9b0f36922f29ce015fd459a1be3e788e07f5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982523"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721203"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset メソッド (RDS)
 空の非接続 [レコードセット](../ado-api/recordset-object-ado.md)を作成します。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ object.CreateRecordset(ColumnInfos)
   
 |属性|説明|  
 |---------------|-----------------|  
-|Name|列ヘッダーの名前。|  
+|名前|列ヘッダーの名前。|  
 |Type|データ型の整数。|  
 |サイズ|データ型に関係なく、文字単位の幅の整数。|  
 |NULL 値の許容|ブール値。|  
@@ -66,7 +66,7 @@ object.CreateRecordset(ColumnInfos)
   
  変数のデータ型によっては、代入列に示されている型に型を強制的に変換することができます。 **レコードセット**が作成され、いっぱいになるまで、置換は表示されません。 その後、必要に応じて、実際のデータ型を確認できます。  
   
-|長さ|定数|Number|代入|  
+|長さ|一定|Number|代入|  
 |------------|--------------|------------|------------------|  
 |固定|**adTinyInt**|16||  
 |固定|**adSmallInt**|2||  

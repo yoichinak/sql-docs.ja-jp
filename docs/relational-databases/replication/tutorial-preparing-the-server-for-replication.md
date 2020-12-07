@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ae1dddb8ac5b84bea8a602264c43797b2b041e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f9cbaaca472c6b63d0196cb2f751e28b184e206
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726026"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868390"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>チュートリアル:レプリケーション用の SQL Server の準備 (パブリッシャー、ディストリビューター、サブスクライバー)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "85726026"
   
 - サブスクライバー サーバー (レプリケーション先) に、[!INCLUDE[ssEW](../../includes/ssew-md.md)] を除く [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のエディションをインストールします。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] は、トランザクション レプリケーションのサブスクライバーとして使用できません。  
   
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
-- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードします。 SSMS でデータベースを復元する方法の詳細については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードします。 SSMS でデータベースを復元する方法の詳細については、[データベースの復元](../backup-restore/restore-a-database-backup-using-ssms.md)に関するページを参照してください。 
     
 >[!NOTE]
 > - 3 つ以上離れたバージョンの SQL Server インスタンスでは、レプリケーションはサポートされていません。 詳細については、「[Supported SQL Versions in Replication Topology](replication-backward-compatibility.md)」(レプリケーション トポロジでサポートされている SQL Server のバージョン) を参照してください。
-> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、固定サーバー ロール **sysadmin** のメンバーとしてログインし、パブリッシャーとサブスクライバーに接続する必要があります。 このロールの詳細については、「[サーバー レベルのロール](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)」を参照してください。  
+> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、固定サーバー ロール **sysadmin** のメンバーとしてログインし、パブリッシャーとサブスクライバーに接続する必要があります。 このロールの詳細については、「[サーバー レベルのロール](../security/authentication-access/server-level-roles.md)」を参照してください。  
 
 
 **このチュートリアルの推定所要時間: 30 分**
@@ -247,5 +247,4 @@ SQL Server Management Studio インスタンスが管理者権限で実行され
 > [!div class="nextstepaction"]
 > [チュートリアル:2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する](tutorial-replicating-data-between-continuously-connected-servers.md)
 
-  
   

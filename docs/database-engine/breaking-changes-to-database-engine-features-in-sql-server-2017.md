@@ -15,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 38813ed7b78c5f43852b17a4e3e9775c589a30e4
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 18a129e630028d0384f10a373a2302ff57bd78cb
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472462"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670161"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sssqlv14-md"></a>[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] におけるデータベース エンジン機能の重大な変更
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -47,8 +47,7 @@ ms.locfileid: "87472462"
 
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 データベース エンジンの非推奨の機能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [SQL Server 2016 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [SQL Server データベース エンジンの旧バージョンとの互換性](../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server 2016 で廃止されたデータベース エンジンの機能](./discontinued-database-engine-functionality-in-sql-server.md)   
+ [SQL Server データベース エンジンの旧バージョンとの互換性](./discontinued-database-engine-functionality-in-sql-server.md)   
  [ALTER DATABASE 互換性レベル &#40;TRANSACT-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
-  
   

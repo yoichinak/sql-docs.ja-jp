@@ -16,12 +16,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1a119275f9508c69ab5c250e2a5a6e487d1b6502
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 820837717d2651c1be08ae4be4c88cc8e2ac7c11
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920958"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364688"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>暗号化された列のデータをレプリケートする (SQL Server Management Studio)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,14 +76,16 @@ ms.locfileid: "86920958"
   
 11. [CLOSE SYMMETRIC KEY](../../../t-sql/statements/close-symmetric-key-transact-sql.md) を実行してキーを閉じます。  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例
+
+### <a name="a-create-keys-in-the-publication-database"></a>A. パブリケーション データベースでキーを作成する
  この例では、対称キー、対称キーを保護するために使用される証明書、およびマスター キーを作成しています。 これらのキーは、パブリケーション データベースで作成されます。 これらは、 `SalesOrderHeader` テーブル内の暗号化された列 (EncryptedCreditCardApprovalCode) の作成に使用されます。 この列は、暗号化していない CreditCardApprovalCode 列の代わりに、AdvWorksSalesOrdersMerge パブリケーションでパブリッシュされます。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
  [!code-sql[HowTo#sp_PublishEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_1.sql)]  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_2.sql)]  
   
-## <a name="example"></a>例  
+### <a name="b-create-keys-in-the-subscription-database"></a>B. サブスクリプション データベースでキーを作成する
  この例では、最初の例の ALGORITHM、KEY_SOURCE、および IDENTITY_VALUE の場合と同じ値を使用して、サブスクリプション データベース内に同じ対象キーを再作成しています。 この例は、暗号化された列をレプリケートする AdvWorksSalesOrdersMerge パブリケーションへのサブスクリプションが初期化済みであることを前提としています。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を保存する必要がある場合は、格納時および送信時の不正アクセスからファイルを保護する必要があります。  
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  

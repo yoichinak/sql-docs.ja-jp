@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8964906be1f9d055e45c7eacb6699f7ccc87da86
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 36e9563d26030181c943ace428ca4eb3176bdd43
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197195"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043842"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加
 
@@ -23,7 +23,7 @@ ms.locfileid: "86197195"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用するコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用するコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]** 、 **[レポート モデル]** 、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。
 
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
@@ -61,7 +61,7 @@ ms.locfileid: "86197195"
   
 2.  **[サイトの設定]** に移動します。  
   
-    -   SharePoint 2013 の場合、 **[設定]** アイコンをクリックします。 ![SharePoint の設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")  
+    -   SharePoint 2013 の場合、 **[設定]** アイコンをクリックします。 ![SharePoint の設定](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")  
   
     -   SharePoint 2010 の場合、 **[サイトの操作]** をクリックし、 **[サイトの設定]** をクリックします。  
   
@@ -69,11 +69,11 @@ ms.locfileid: "86197195"
   
 4.  **[レポート サーバーの統合機能]** を見つけて **[非アクティブ化]** をクリックします。  
   
-     ![rs_reportserver_integration_active](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
+     ![[非アクティブ化] オプションと [アクティブ化] オプションを表示している [レポート サーバーの統合機能] のスクリーンショット。](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
   
 5.  ブラウザーを更新します。 **[レポート サーバーの統合機能]** の **[アクティブ化]** をクリックします。  
   
-     ![rs-reportserver-integration-deactivate](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
+     ![[アクティブ化] オプションを表示している [レポート サーバーの統合機能] のスクリーンショット。](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> 1 つのドキュメント ライブラリでコンテンツの種類の管理を有効にするには (SharePoint 2013)  
   
@@ -173,5 +173,4 @@ ms.locfileid: "86197195"
 ## <a name="see-also"></a>関連項目  
  [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)  
-  
   

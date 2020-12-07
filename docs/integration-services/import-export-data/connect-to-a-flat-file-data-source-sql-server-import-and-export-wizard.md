@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495651"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195192"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>フラット ファイル データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -261,7 +261,7 @@ Page|推奨  |Type
  **[更新]**  
  **[最新の情報に更新]** をクリックすると、スキップする行数を変更した結果が表示されます。 このボタンは、他の接続オプションを変更した場合にのみ表示されます。  
  
-**[プレビュー]** ページの詳細については、Integration Services リファレンス ページ「[[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)」を参照してください。
+**[プレビュー]** ページの詳細については、Integration Services リファレンス ページ「[[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../connection-manager/flat-file-connection-manager.md)」を参照してください。
 
 ## <a name="connect-to-a-flat-file-destination"></a>フラット ファイル変換先に接続する
 フラット ファイル変換先の場合は、次のスクリーン ショットに示すように、オプションに関するページは 1 ページのみとなります。 ファイルを参照して選択し、**[形式]** セクションで設定を確認します。
@@ -303,4 +303,3 @@ Page|推奨  |Type
 ## <a name="see-also"></a>参照
 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

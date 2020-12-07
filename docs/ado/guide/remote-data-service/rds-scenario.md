@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4492a80690c99d1e5b7003763faf77effdeebec
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6c9b7563b940cd4340b7f07238fe50af56cf66e6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977883"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721413"
 ---
 # <a name="rds-scenario"></a>RDS のシナリオ
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
  アドレス帳アプリケーションは、リモートデータサービス (RDS) を使用して単純なデータ対応 Web アプリケーションを構築する方法を示すシナリオです (オンラインの企業アドレス帳)。 このシナリオは、データ対応の ActiveX コントロールを RDS で使用する方法や、データ中心の Web アプリケーションを構築する経験豊富なソフトウェア開発者を対象とする Microsoft Visual Basic Scripting Edition (VBScript) および COM プログラマに役立ちます。  
   

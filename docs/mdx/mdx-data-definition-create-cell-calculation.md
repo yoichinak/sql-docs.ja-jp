@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5080e6bfa0f7a0ac942c3c5aa65bd1883b3050ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94f2a2286b72aac5a8698fad7ba0085f2a6ad8d0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494875"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196999"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX データ操作 - CREATE CELL CALCULATION
 
@@ -68,19 +68,18 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Scalar_Expression*  
  有効な MDX スカラー式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  クライアントアプリケーションでは、計算されるセルを使用することによって、カスタムロールアップ式や計算されるメンバーの場合と同様に、セルのセット全体ではなく、特定のセルのセットに対してロールアップ値を指定できます。 たとえば、`{[Canada],[Time].[2000]}` によって定義されるセット内のセルに、特定の式によって定義される値を入れる、といった指定が可能です。 このセット内に含まれていないその他のセルは、通常どおりに計算されます。  
   
 > [!NOTE]  
->  のバッカスナウア記法-Backus-naur Form (BNF) は、 `{*(<comment> | <whitespace> | <newline>)}` `{*}` 下位互換性のためにとして解析されます。  
+>  の Backus-Naur フォーム (BNF) は、 `{*(<comment> | <whitespace> | <newline>)}` `{*}` 下位互換性のためにとして解析されます。  
   
 ## <a name="see-also"></a>参照  
- [セッションスコープの計算されるセルの作成](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells)   
- [MDX&#41;&#40;クエリスコープのセル計算を作成する ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations)   
- [Mdx &#40;MDX でのセル計算の作成&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations)   
- [MDX&#41;&#40;のセルプロパティの使用 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties)   
- [MDX&#41;&#40;のコンテンツの FORMAT_STRING ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents)   
- [MDX&#41;&#40;コンテンツの FORE_COLOR と BACK_COLOR ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents)   
+ [計算されるセルの作成 Session-Scoped](/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells)   
+ [MDX&#41;&#40;のセル計算の作成 Query-Scoped ](/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations)   
+ [Mdx &#40;MDX でのセル計算の作成&#41;](/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations)   
+ [MDX&#41;&#40;のセルプロパティの使用 ](/analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties)   
+ [MDX&#41;&#40;のコンテンツの FORMAT_STRING ](/analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents)   
+ [MDX&#41;&#40;コンテンツの FORE_COLOR と BACK_COLOR ](/analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents)   
  [Mdx&#41;&#40;mdx データ定義ステートメント ](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

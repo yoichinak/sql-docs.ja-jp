@@ -25,7 +25,7 @@ ms.locfileid: "88498611"
   
  非推奨のオブジェクトは含まれていません。  
   
- セマンティック検索をサポートするデータベース オブジェクトの一覧については、「 [Semantic Search DDL, Functions, Stored Procedures, and Views](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)」を参照してください。  
+ セマンティック検索をサポートするデータベース オブジェクトの一覧については、「 [セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)」を参照してください。  
   
 ##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL データ定義言語 (DDL) ステートメント  
   

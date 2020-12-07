@@ -1,5 +1,6 @@
 ---
-title: ユーザーまたはグループを削除する (マスター データ サービス) | Microsoft Docs
+description: ユーザーまたはグループを削除する (マスター データ サービス)
+title: ユーザーまたはグループを削除する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 81b16bc5b2bc8f2158a82733fb96f5144b7d15f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48ddbf53a44bf0d34abe725595bba255e6fa4fae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258078"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>ユーザーまたはグループを削除する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスする必要のなくなったユーザーまたはグループを削除します。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "67906274"
   
 -   セキュリティの変更は、20 分間は MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] に反映されません。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
@@ -53,7 +54,7 @@ ms.locfileid: "67906274"
   
 5.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   
   

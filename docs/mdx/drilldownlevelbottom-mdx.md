@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2d77e40e322ab3489070061b1fc466f2e212ba36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f761c0af97cf6a9d2a5dda4e26ac2e4503a8b4b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483995"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193994"
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
 
@@ -38,19 +38,19 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  レベルを返す有効な多次元式 (MDX) 式です。  
   
  *Numeric_Expression*  
- 任意。 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 省略可能。 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
  *Include_Calc_Members*  
- 任意。 ドリルダウン結果に計算されるメンバーを追加するキーワード。  
+ 省略可能。 ドリルダウン結果に計算されるメンバーを追加するキーワード。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  数値式が指定されている場合、 **DrilldownLevelBottom** 関数は、指定されたセット内の各メンバーの子を、子メンバーのセットに対して評価されるように、指定された値に従って昇順で並べ替えます。 数値式が指定されていない場合、指定されたセット内の各メンバーの子を、クエリ コンテキストから判別した子メンバーのセットが表すセルの値に基づいて、昇順で並べ替えます。この動作は、並べ替えを行わずに自然な順序でメンバーのセットを返す、BottomCount および Tail (MDX) 関数に似ています。  
   
  並べ替えの後、 **DrilldownLevelBottom** 関数は、親メンバーと、 *Count*で指定した子メンバーの数のうち、最小値を含むセットを返します。  
   
  **DrilldownLevelBottom**関数は、[ドリルダウンレベル](../mdx/drilldownlevel-mdx.md)関数に似ていますが、指定されたレベルで各メンバーのすべての子を含めるのではなく、 **DrilldownLevelBottom**関数は、子メンバーの最下位の数を返します。  
   
- XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「 [サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
+ XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「 [サポートされる Xmla プロパティ &#40;xmla&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
 ## <a name="examples"></a>例  
  次の例では、既定のメジャーに基づいて Product Category レベルの子を最小のものから 3 つ返します。 Adventure Works のサンプルキューブでは、アクセサリの下部の3つの子はタイヤ、チューブ、ポンプ、および Panになっています。 Management Studio では、[MDX クエリ] ウィンドウで [製品] に移動します。製品カテゴリ |Members |すべての製品 |[アクセサリ] を参照して、完全な一覧を表示します。 Count 引数を増やすと、さらに多くのメンバーを返すことができます。  
@@ -84,5 +84,4 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>参照  
  [MDX&#41;&#40;ドリルダウンレベル ](../mdx/drilldownlevel-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

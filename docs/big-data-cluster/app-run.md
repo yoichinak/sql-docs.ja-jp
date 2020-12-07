@@ -10,12 +10,12 @@ ms.date: 08/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e8c603040c0b5df9440e3aaabadac0d947315310
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 13639627081a9bb9cb1309bcd0793653c7900ac8
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681084"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257272"
 ---
 # <a name="run-apps-with-azdata---sql-server-big-data-clusters"></a>azdata でアプリを実行する - SQL Server ビッグ データ クラスター
 
@@ -24,7 +24,7 @@ ms.locfileid: "88681084"
 ## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)
-- [azdata コマンドライン ユーティリティ](deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>機能
 

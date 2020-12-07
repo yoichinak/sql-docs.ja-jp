@@ -17,19 +17,19 @@ ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51fbc9b4c5ffdcb6c787c164a68ebdf790bc1ca6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8de90d38e540b4c4964581ef434514bc734cbdf0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448534"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866950"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>SQL Server ドライバーの拡張機能 - 一括コピー関数
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC (Open Database Connectivity) は、ODBC データ ソース内のデータにアクセスするアプリケーションで使用される、Microsoft Win32 アプリケーション プログラミング インターフェイスです。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー リファレンスは、すべての ODBC 関数呼び出しを記載したものではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーと共に使用される、ドライバー固有のパラメーターや動作を備えた ODBC 関数だけについて説明しています。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは ODBC 3.51 仕様に準拠しています。 ODBC 3.51 の総合的なリファレンスについては、 [データアクセスおよびストレージデベロッパーセンター](https://go.microsoft.com/fwlink?linkid=4173)から Microsoft Data ACCESS Components SDK をダウンロードするか、 [odbc プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250) をオンラインで参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは ODBC 3.51 仕様に準拠しています。 ODBC 3.51 の総合的なリファレンスについては、 [データアクセスおよびストレージデベロッパーセンター](https://go.microsoft.com/fwlink?linkid=4173)から Microsoft Data ACCESS Components SDK をダウンロードするか、 [odbc プログラマーズリファレンス](../../odbc/reference/odbc-programmer-s-reference.md) をオンラインで参照してください。  
  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 専用の一括コピー API 拡張機能を使用すると、クライアント アプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルへのデータ行の追加や、テーブルからのデータ行の抽出をすばやく行うことができます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用している場合は、SQLNCLI11.LIB と SQLNCLI.H 内にある一括コピー関数 (BCP) を参照できます。  
   
@@ -74,7 +74,6 @@ ms.locfileid: "88448534"
 -   [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server ドライバーの拡張機能](https://msdn.microsoft.com/library/1043bc93-965d-4939-bd1c-21e9d8d3e9ac)   
+ [SQL Server ドライバーの拡張機能]()   
  [ODBC&#41;&#40;の一括コピー操作の実行 ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
-  
   

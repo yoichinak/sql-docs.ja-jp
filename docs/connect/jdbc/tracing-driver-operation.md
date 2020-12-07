@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c25f97d79477497d60d458c994ef5dbdc102463d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393130"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727541"
 ---
 # <a name="tracing-driver-operation"></a>ドライバー操作のトレース
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "86393130"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] をアプリケーションで使用すると、トレース (またはログ記録) を使用して JDBC Driver で発生した問題の解決に役立てることができます。 トレースを有効にするため、JDBC Driver では java.util.logging でログ記録 API を使用しています。この API には、Logger および LogRecord オブジェクトを作成するための一連のクラスが用意されています。  
   
 > [!NOTE]  
->  JDBC Driver に含まれているネイティブのコンポーネント sqljdbc_xa.dll については、Built-In Diagnostics (BID) フレームワークを使用してトレースを有効にしています。 BID の詳細については、[SQL Server でのデータ アクセスのトレース](https://go.microsoft.com/fwlink/?LinkId=70042)に関するページを参照してください。  
+>  JDBC Driver に含まれているネイティブのコンポーネント sqljdbc_xa.dll については、Built-In Diagnostics (BID) フレームワークを使用してトレースを有効にしています。 BID の詳細については、[SQL Server でのデータ アクセスのトレース](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))に関するページを参照してください。  
   
  アプリケーションを開発する際に、Logger オブジェクトへの呼び出しを行うことができます。次に、このオブジェクトは LogRecord オブジェクトを作成し、処理のために Handler オブジェクトに渡します。 ロガー オブジェクトとハンドラー オブジェクトでは、どちらもログ記録レベルを使用して、(必要に応じてログ記録フィルターも使用して)、どの LogRecords を処理するかが制御されます。 ログの記録が完了すると、Handler オブジェクトは、Formatter オブジェクトを使用してオプションでログ情報を公開することができます。  
   
@@ -161,5 +161,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## <a name="see-also"></a>関連項目  
  [JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2e931d371bd117d82d4cd1725acb3fc5f64890ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e18319e45c3d397e4283013ec31bb3c98424c892
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444597"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131091"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88444597"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql  
 DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]  
 ```  
   
@@ -65,7 +64,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
 ## <a name="examples"></a>例  
  次の例では、現在のデータベースから対称キー `GailSammamishKey6` を削除します。  
   
-```  
+```sql  
 CLOSE SYMMETRIC KEY GailSammamishKey6;  
 DROP SYMMETRIC KEY GailSammamishKey6;  
 GO  

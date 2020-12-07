@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0681d22c6a48d8680c7b44e767558f02e2a4c251
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bbd07982bc45b3fbd32b140f74a9a0f32fa3c3a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467939"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380748"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,6 @@ ms.locfileid: "88467939"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
@@ -118,7 +117,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. PERMISSIONS 関数をステートメント権限に対して使用する  
  次の例では、現在のユーザーが `CREATE TABLE` ステートメントを実行できるかどうかを判定します。  
   
-```  
+```sql  
 IF PERMISSIONS()&2=2  
    CREATE TABLE test_table (col1 INT)  
 ELSE  
@@ -128,7 +127,7 @@ ELSE
 ### <a name="b-using-the-permissions-function-with-object-permissions"></a>B. PERMISSIONS 関数をオブジェクト権限に対して使用する  
  次の例では、現在のユーザーが `Address` データベース内の `AdventureWorks2012` テーブルにデータ行を挿入できるかどうかを判定します。  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&8=8   
    PRINT 'The current user can insert data into Person.Address.'  
 ELSE  
@@ -138,7 +137,7 @@ ELSE
 ### <a name="c-using-the-permissions-function-with-grantable-permissions"></a>C. PERMISSIONS 関数を、付与できる権限に対して使用する  
  次の例では、現在のユーザーが別のユーザーに `Address` データベース内の `AdventureWorks2012` テーブルに対する INSERT 権限を許可できるかどうかを判定します。  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&0x80000=0x80000  
    PRINT 'INSERT on Person.Address is grantable.'  
 ELSE  

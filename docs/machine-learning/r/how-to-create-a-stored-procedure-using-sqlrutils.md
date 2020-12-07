@@ -3,21 +3,21 @@ title: sqlrutils パッケージを使用してバンドルされた R コード
 description: SQL Server の sqlrutils R パッケージを使用して、R 言語コードを 1 つの関数にバンドルし、引数としてストアド プロシージャに渡せるようにします。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/31/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ba94a55144278abd54ebbc2cf038463c3c5f0cb
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 5af17aa003de878a79d6c7a5b9710851b8655d0b
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288293"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098831"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>sqlrutils を使用してストアド プロシージャを作成する
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 この記事では、T-SQL ストアド プロシージャとして実行する R コードを変換するための手順について説明します。 考えられる最良の結果を得るために、コードを少し変更し、すべての入力をパラメーター化できるようにする必要がある場合があります。
 

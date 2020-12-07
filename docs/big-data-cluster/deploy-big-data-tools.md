@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d0c4f21d6fcf8f90026164dded1007de4e34164
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27248c9a8ef05b8662f56255cab47e47bd2959f4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765841"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257232"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 のビッグ データ ツールをインストールする
 
@@ -29,13 +29,13 @@ ms.locfileid: "88765841"
 | ツール | 必須 | 説明 | インストール |
 |---|---|---|---|
 | `python` | はい | Python は、動的なセマンティクスを備えた、インタープリター方式でオブジェクト指向の高水準プログラミング言語です。 SQL Server 用のビッグ データ クラスターの多くの部分で、Python が使われています。 | [Python のインストール](#python)|
-| `azdata` | はい | ビッグ データ クラスターをインストールして管理するためのコマンドライン ツールです。 | [インストール](deploy-install-azdata.md) |
+| [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] | はい | ビッグ データ クラスターをインストールして管理するためのコマンドライン ツールです。 | [インストール](../azdata/install/deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | はい | 基になる Kubernetes クラスターを監視するためのコマンドライン ツールです ([詳細情報](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
-| **Azure Data Studio** | はい | SQL Server のクエリを実行するためのクロスプラットフォーム グラフィック ツールです。 | [インストール](https://aka.ms/getazuredatastudio) |
-| **データ仮想化の拡張機能** | はい | データ仮想化ウィザードを提供する Azure Data Studio の拡張機能。 | [インストール](../azure-data-studio/data-virtualization-extension.md) |
-| **Azure CLI**<sup>2</sup> | AKS の場合 | Azure のサービスを管理するための最新のコマンドライン インターフェイスです。 AKS ビッグ データ クラスターの展開で使われます ([詳細情報](/cli/azure/?view=azure-cli-latest))。 | [インストール](/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **Azure Data Studio** | はい | SQL Server のクエリを実行するためのクロスプラットフォーム グラフィック ツールです。 | [インストール](../azure-data-studio/download-azure-data-studio.md) |
+| **データ仮想化の拡張機能** | はい | データ仮想化ウィザードを提供する Azure Data Studio の拡張機能。 | [インストール](../azure-data-studio/extensions/data-virtualization-extension.md) |
+| **Azure CLI**<sup>2</sup> | AKS の場合 | Azure のサービスを管理するための最新のコマンドライン インターフェイスです。 AKS ビッグ データ クラスターの展開で使われます ([詳細情報](/cli/azure/?view=azure-cli-latest&preserve-view=true))。 | [インストール](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) |
 | **mssql-cli** | 省略可能 | SQL Server のクエリを実行するための最新のコマンドライン インターフェイスです ([詳細情報](../tools/mssql-cli.md))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **sqlcmd** | 一部のスクリプトの場合 | SQL Server のクエリを実行するための従来のコマンドライン ツールです ([詳細情報](../tools/sqlcmd-utility.md?view=sql-server-ver15))。 SQLCMD パッケージをインストールする前に、Microsoft ODBC Driver 11 for SQL Server のインストールが必要になる場合があります。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | 一部のスクリプトの場合 | SQL Server のクエリを実行するための従来のコマンドライン ツールです ([詳細情報](../tools/sqlcmd-utility.md))。 SQLCMD パッケージをインストールする前に、Microsoft ODBC Driver 11 for SQL Server のインストールが必要になる場合があります。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | 一部のスクリプトの場合 | URL でデータを転送するためのコマンドライン ツールです。 | [Windows](https://curl.haxx.se/windows/) \| Linux: curl パッケージのインストール |
 | `oc` | Red Hat OpenShift と Azure Redhat OpenShift の展開に必要です。 |`oc` は、Open Shift コマンド ライン インターフェイス (CLI) です。 | [CLI のインストール](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli)
 
@@ -56,7 +56,7 @@ ms.locfileid: "88765841"
 
 上の表では、ビッグ データ クラスターで使われる一般的なツールがすべて示されています。 どのツールが必要かは、実際のシナリオによって異なります。 ただし、一般に、クラスターの管理、接続、クエリを行うには、次のツールが最も重要です。
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - **Azure Data Studio**
 - **データ仮想化の拡張機能**
@@ -85,7 +85,7 @@ ms.locfileid: "88765841"
 
 Azure Data Studio には、SQL Server ビッグ データ クラスター専用の機能が用意されています。
 
-[最新の Azure Data Studio を取得します](https://aka.ms/getazuredatastudio)。
+[最新の Azure Data Studio を取得します](../azure-data-studio/download-azure-data-studio.md)。
 
 最新リリースに関する詳細については、[リリース ノート](./release-notes-big-data-cluster.md)をご覧ください。
 

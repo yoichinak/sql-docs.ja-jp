@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 09bdea851ed3b9efeca1c69a09c12108706bbb22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9623feab13740d9b328d97a248742711871ffa3
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896507"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115485"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 用のアプリケーションの開発を開始する方法
 
@@ -24,7 +24,7 @@ SQL Server on Linux に接続して使用するアプリケーションは、さ
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
-> これらと同じ開発オプションを使用して、他のプラットフォームの SQL Server を対象にすることもできます。 アプリケーションは、オンプレミスまたはクラウドの、Linux、Windows、または macOS の Docker 上で実行されている SQL Server を対象にできます。 または、Azure SQL Database および Azure SQL Data Warehouse を対象にすることもできます。
+> これらと同じ開発オプションを使用して、他のプラットフォームの SQL Server を対象にすることもできます。 アプリケーションは、オンプレミスまたはクラウドの、Linux、Windows、または macOS の Docker 上で実行されている SQL Server を対象にできます。 または、Azure SQL Database および Azure Synapse Analytics を対象にすることもできます。
 
 ## <a name="try-the-tutorials"></a>チュートリアルを試す
 
@@ -62,7 +62,7 @@ SQL Server に対するアプリケーションの構築を始める最適な方
 
 [Visual Studio Code](https://code.visualstudio.com) の新しい [mssql 拡張機能](https://aka.ms/mssql-marketplace)が Linux、macOS、および Windows で使用できるようになりました。 手順ごとの説明については、次のチュートリアルをご覧ください。
 
-- [Visual Studio Code を使用する](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code を使用する](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 
 また、Linux のネイティブの新しいコマンドライン ツールを使用することもできます。 以下のツールが含まれています。
 

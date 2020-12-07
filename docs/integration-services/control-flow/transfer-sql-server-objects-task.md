@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2cd15daac2c287c2dc750e1f79032f855d5640d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7162d2eb4c718330fb3fec38dceddc4f0bf8e04e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349168"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192772"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server オブジェクトの転送タスク
 
@@ -86,7 +86,7 @@ ms.locfileid: "88349168"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクでは、オブジェクト転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
- このタスクの **ExecutionValue** プロパティに格納される実行値は、転送されたオブジェクトの数を返します。 SQL Server オブジェクトの転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、オブジェクト転送に関する情報をパッケージの他のオブジェクトで使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+ このタスクの **ExecutionValue** プロパティに格納される実行値は、転送されたオブジェクトの数を返します。 SQL Server オブジェクトの転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、オブジェクト転送に関する情報をパッケージの他のオブジェクトで使用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../integration-services-ssis-variables.md)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  SQL Server オブジェクトの転送タスクには、次のようなカスタム ログ エントリがあります。  
@@ -117,7 +117,7 @@ ms.locfileid: "88349168"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>プログラムによる SQL Server オブジェクトの転送タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
@@ -331,7 +331,7 @@ ms.locfileid: "88349168"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
- [[SQL Server オブジェクトの転送タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [[SQL Server オブジェクトの転送タスク エディター] &#40;[全般] ページ&#41;]()   
  [[式] ページ](../../integration-services/expressions/expressions-page.md)   
  [一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+ [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)

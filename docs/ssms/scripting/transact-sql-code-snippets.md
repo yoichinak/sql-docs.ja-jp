@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a70d930b53ac4c43428f2bb0dbe0da26ab5fbfc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5a805fe8c32828dffc740959385ba599641ac03b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480723"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036225"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL コード スニペット
 
@@ -28,11 +28,11 @@ ms.locfileid: "89480723"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|CREATE TABLE や SELECT スニペットなど、既存のスニペットを挿入する方法について説明します。|[Transact-SQL スニペットの挿入](../../relational-databases/scripting/insert-transact-sql-snippets.md)|  
-|一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを BEGIN、IF、または WHILE ブロック内に挿入する方法について説明します。|[ブロックの挿入 Transact-SQL スニペットの挿入](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)|  
-|コード スニペットの挿入後に [!INCLUDE[tsql](../../includes/tsql-md.md)] のステートメントまたはブロックを完成させる方法について説明します。|[Transact-SQL スニペットの作成](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
-|独自のカスタム スニペットを作成して SQL Server の一連のスニペットに追加する方法について説明します。|[Transact-SQL スニペットの追加](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
+|CREATE TABLE や SELECT スニペットなど、既存のスニペットを挿入する方法について説明します。|[Transact-SQL スニペットの挿入](./insert-transact-sql-snippets.md)|  
+|一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを BEGIN、IF、または WHILE ブロック内に挿入する方法について説明します。|[ブロックの挿入 Transact-SQL スニペットの挿入](./insert-surround-with-transact-sql-snippets.md)|  
+|コード スニペットの挿入後に [!INCLUDE[tsql](../../includes/tsql-md.md)] のステートメントまたはブロックを完成させる方法について説明します。|[Transact-SQL スニペットの作成](./complete-transact-sql-snippets.md)|  
+|独自のカスタム スニペットを作成して SQL Server の一連のスニペットに追加する方法について説明します。|[Transact-SQL スニペットの追加](./add-transact-sql-snippets.md)|  
   
 ## <a name="see-also"></a>参照
 
-[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

@@ -22,12 +22,12 @@ ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9653304e80d78aad1e5fb787abf0221c5f4d46cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1bbcdf4244c81eac74e2206d06f5704b92ebb93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422456"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191105"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -62,7 +62,7 @@ USE { database_name }
 ## <a name="examples"></a>例  
  次の例では、データベース コンテキストを `AdventureWorks2012` データベースに変更します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ```  
@@ -71,10 +71,7 @@ GO
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../statements/create-database-transact-sql.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
   
-  
-
-

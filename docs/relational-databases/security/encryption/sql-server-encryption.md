@@ -16,12 +16,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 702b7f39a3435255432474542b74a8d1f210284d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720433"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869245"
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "85720433"
  [SQL Server の保護](../../../relational-databases/security/securing-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プラットフォームを保護する方法、およびユーザーとセキュリティ保護可能なオブジェクトを操作する方法の概要を説明します。  
 
-[Azure SQL Database のセキュリティ機能の概要](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview)
+[Azure SQL Database のセキュリティ機能の概要](/azure/sql-database/sql-database-security-overview)
 </br>データの保護、アクセスの制御、プロアクティブな監視に関する Azure SQL Database のセキュリティの概要を説明します。
   
  [暗号化関数 &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
@@ -88,5 +88,4 @@ ms.locfileid: "85720433"
  [SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Reporting Services の暗号化キーのバックアップと復元](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)     
  [データベース エンジンへの暗号化接続の有効化](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)    
-  
   

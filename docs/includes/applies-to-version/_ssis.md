@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 07/20/2020
 ms.author: mikeray
 ms.openlocfilehash: 69eb034ac6688c9d07485d0fadd92d4e3ef32e93
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86899552"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96122798"
 ---
 <Token>![はい](../media/yes-icon.png) [!INCLUDE [ssis-integrated-runtime](../ssis-integrated-runtime.md)]</Token>

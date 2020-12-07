@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d39284d132610e1ab68312823ca1d06d540bc492
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: bd19b92c3ddd9cf6dad2cb917bbb598f4cff0438
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897003"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584094"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>考えられる可用性レプリカ間の接続エラーの原因を判断する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の問題により、2 つの可用性レプリカ間のセッションが失敗する場合があります。 可用性レプリカでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、通知されないその他の失敗を検出するために、独自のセッション タイムアウト メカニズムを実装しています。 セッション タイムアウト期間を秒単位で指定します。 このタイムアウト時間は、別のインスタンスからの PING メッセージを受信するために、サーバー インスタンスが待機する最大時間です。この時間を過ぎると、待機していたインスタンスは接続解除されたものと見なされます。 2 つの可用性レプリカ間でセッション タイムアウトが発生すると、可用性レプリカはエラーが発生したと想定し、 *ソフト エラー*を宣言します。  
+物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の問題により、2 つの可用性レプリカ間のセッションが失敗する場合があります。 可用性レプリカでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー* といいます。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、通知されないその他の失敗を検出するために、独自のセッション タイムアウト メカニズムを実装しています。 セッション タイムアウト期間を秒単位で指定します。 このタイムアウト時間は、別のインスタンスからの PING メッセージを受信するために、サーバー インスタンスが待機する最大時間です。この時間を過ぎると、待機していたインスタンスは接続解除されたものと見なされます。 2 つの可用性レプリカ間でセッション タイムアウトが発生すると、可用性レプリカはエラーが発生したと想定し、 *ソフト エラー* を宣言します。  
   
 > [!IMPORTANT]  
 >  プライマリ データベース以外のデータベースで発生した障害は検出されません。 さらに、データ ディスクの障害によりデータベースが再起動した場合を除き、データ ディスクの障害はほとんど検出されません。  

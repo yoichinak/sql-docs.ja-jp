@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17199fb610f707c77a6610d34c8b1a5f0166de13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2767a89347329ee084c8b055bcb444dc4e78117
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424854"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243531"
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同期実行 (ポーリング メソッド)
-ODBC 3.8 および Windows 7 SDK より前の場合、非同期操作はステートメント関数でのみ許可されていました。 詳細については、このトピックの「 **ステートメントの実行**」を参照してください。  
+ODBC 3.8 および Windows 7 SDK より前の場合、非同期操作はステートメント関数でのみ許可されていました。 詳細については、このトピックの「 **ステートメントの実行** 」を参照してください。  
   
  Windows 7 SDK の ODBC 3.8 では、接続関連の操作に対する非同期実行が導入されました。 詳細については、このトピックの「 **接続操作を非同期で実行** する」セクションを参照してください。  
   
@@ -201,7 +201,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  特定の接続で実行される関数を非同期に実行するように指定するには、アプリケーションが **SQLSetConnectAttr** を呼び出し、SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 属性を SQL_ASYNC_DBC_ENABLE_ON に設定します。 接続を確立する前に接続属性を設定することは、常に同期的に実行されます。 また、 **SQLSetConnectAttr** を使用して接続属性 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE を設定する操作は、常に同期的に実行されます。  
   
- アプリケーションでは、接続を確立する前に非同期操作を有効にすることができます。 ドライバーマネージャーは、接続を確立する前に使用するドライバーを決定できないため、ドライバーマネージャーは常に **SQLSetConnectAttr**で成功を返します。 ただし、ODBC ドライバーが非同期操作をサポートしていない場合、接続に失敗する可能性があります。  
+ アプリケーションでは、接続を確立する前に非同期操作を有効にすることができます。 ドライバーマネージャーは、接続を確立する前に使用するドライバーを決定できないため、ドライバーマネージャーは常に **SQLSetConnectAttr** で成功を返します。 ただし、ODBC ドライバーが非同期操作をサポートしていない場合、接続に失敗する可能性があります。  
   
  一般に、特定の接続ハンドルまたはステートメントハンドルに関連付けられている関数は、非同期的に1つしか実行できません。 ただし、接続ハンドルには、複数のステートメントハンドルを関連付けることができます。 接続ハンドルで実行される非同期操作がない場合は、関連付けられたステートメントハンドルで非同期操作を実行できます。 同様に、関連付けられているステートメントハンドルで非同期操作が進行中でない場合は、接続ハンドルに対して非同期操作を行うことができます。 現在非同期操作を実行しているハンドルを使用して非同期操作を実行しようとすると、"関数シーケンスエラー" という HY010 が返されます。  
   
@@ -233,23 +233,22 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  接続が非同期的に開かれたり閉じられたりしている場合は、アプリケーションが元の関数呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を受け取ると、操作が完了します。  
   
- ODBC 3.8、 **Sqlcancelhandle**に新しい関数が追加されました。 この関数は、6つの接続関数 (**SQLBrowseConnect**、 **SQLConnect**、 **sqldisconnect**、 **SQLDriverConnect**、 **SQLEndTran**、および **SQLSetConnectAttr**) を取り消します。 アプリケーションは **Sqlgetfunctions** を呼び出して、ドライバーが **sqlgetfunctions**をサポートしているかどうかを判断する必要があります。 **SQLCancel**と同様、 **sqlcancelhandle**が成功を返す場合は、操作が取り消されたという意味ではありません。 アプリケーションは、元の関数を再度呼び出して、操作が取り消されたかどうかを判断する必要があります。 **Sqlcancelhandle** を使用すると、接続ハンドルまたはステートメントハンドルに対する非同期操作を取り消すことができます。 **Sqlcancelhandle**を使用してステートメントハンドルに対する操作を取り消すことは、 **SQLCancel**の呼び出しと同じです。  
+ ODBC 3.8、 **Sqlcancelhandle** に新しい関数が追加されました。 この関数は、6つの接続関数 ( **SQLBrowseConnect** 、 **SQLConnect** 、 **sqldisconnect** 、 **SQLDriverConnect** 、 **SQLEndTran** 、および **SQLSetConnectAttr** ) を取り消します。 アプリケーションは **Sqlgetfunctions** を呼び出して、ドライバーが **sqlgetfunctions** をサポートしているかどうかを判断する必要があります。 **SQLCancel** と同様、 **sqlcancelhandle** が成功を返す場合は、操作が取り消されたという意味ではありません。 アプリケーションは、元の関数を再度呼び出して、操作が取り消されたかどうかを判断する必要があります。 **Sqlcancelhandle** を使用すると、接続ハンドルまたはステートメントハンドルに対する非同期操作を取り消すことができます。 **Sqlcancelhandle** を使用してステートメントハンドルに対する操作を取り消すことは、 **SQLCancel** の呼び出しと同じです。  
   
- **Sqlcancelhandle**と非同期接続の両方の操作を同時にサポートする必要はありません。 ドライバーは非同期接続操作をサポートできますが、 **Sqlcancelhandle**はサポートできません。また、その逆も可能です。  
+ **Sqlcancelhandle** と非同期接続の両方の操作を同時にサポートする必要はありません。 ドライバーは非同期接続操作をサポートできますが、 **Sqlcancelhandle** はサポートできません。また、その逆も可能です。  
   
  Odbc 3.8 ドライバーおよび odbc 3.8 Driver Manager を使用して、odbc 3.x および odbc 2.x アプリケーションで非同期接続操作と **Sqlcancelhandle** を使用することもできます。 古いアプリケーションで、以降のバージョンの ODBC の新機能を使用できるようにする方法については、「 [互換性マトリックス](../../../odbc/reference/develop-app/compatibility-matrix.md)」を参照してください。  
   
-### <a name="connection-pooling"></a>接続プール  
- 接続プールが有効になっている場合、非同期操作は、( **SQLConnect** および **SQLDriverConnect**を使用した) 接続を確立し、 **sqldisconnect**を使用して接続を終了するために最小限しかサポートされません。 ただし、アプリケーションでは、 **SQLConnect**、 **SQLDriverConnect**、および **sqldisconnect**からの SQL_STILL_EXECUTING 戻り値を引き続き処理できる必要があります。  
+### <a name="connection-pooling"></a>接続のプール  
+ 接続プールが有効になっている場合、非同期操作は、( **SQLConnect** および **SQLDriverConnect** を使用した) 接続を確立し、 **sqldisconnect** を使用して接続を終了するために最小限しかサポートされません。 ただし、アプリケーションでは、 **SQLConnect** 、 **SQLDriverConnect** 、および **sqldisconnect** からの SQL_STILL_EXECUTING 戻り値を引き続き処理できる必要があります。  
   
  接続プールが有効になっている場合、非同期操作では **SQLEndTran** と **SQLSetConnectAttr** がサポートされます。  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例  
   
-### <a name="description"></a>説明  
+### <a name="a-enable-asynchronous-execution-of-connection-functions"></a>A. 接続関数の非同期実行を有効にする
+
  次の例では、 **SQLSetConnectAttr** を使用して、接続関連の関数の非同期実行を有効にする方法を示します。  
-  
-### <a name="code"></a>コード  
   
 ```  
 BOOL AsyncConnect (SQLHANDLE hdbc)   
@@ -298,12 +297,9 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ```  
   
-## <a name="example"></a>例  
-  
-### <a name="description"></a>説明  
+### <a name="b-asynchronous-commit-operations"></a>B. 非同期コミット操作 
+
  この例では、非同期コミット操作を示します。 このようにしてロールバック操作を行うこともできます。  
-  
-### <a name="code"></a>コード  
   
 ```  
 BOOL AsyncCommit ()   

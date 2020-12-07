@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 2bd48189958a95a54efa128a7b0a9887b4e04b4c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989905"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867418"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -300,6 +300,5 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 - IX_CustomerID でのフル インデックス スキャンは、インデックス シークで置き換えられました。 これにより、スキャンの対象は 5 行となり、フル インデックス スキャンに必要な 830 行ではなくなります。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [メモリ最適化テーブル](./sample-database-for-in-memory-oltp.md)  
   

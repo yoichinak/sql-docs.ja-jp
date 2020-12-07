@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 8df03adc67cb4ae97e099ad31d4af42c34a8533c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951227"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636172"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Database Experimentation Assistant でトレースを再生する
 
@@ -31,14 +31,14 @@ Database Experimentation Assistant (DEA) では、アップグレードされた
 
 まず、既存の運用環境を表すターゲット1に対してトレースの再生を実行する必要があります。
 
-1. DEA の左側のナビゲーションバーで矢印アイコンを選択し、[**すべての再生**] ページで [**新しい再生**] を選択します。
+1. DEA の左側のナビゲーションバーで矢印アイコンを選択し、[ **すべての再生** ] ページで [ **新しい再生**] を選択します。
 
     ![DEA で再生を作成する](./media/database-experimentation-assistant-replay-trace/dea-create-replay.png)
 
     > [!NOTE]
     > 分散再生コントローラーコンピューターには、リモート接続に使用するユーザーアカウントに対するアクセス許可が必要です。
 
-2. [**新しい再生**] ページの [**再生の詳細**] で、次の情報を入力または選択します。
+2. [ **新しい再生** ] ページの [ **再生の詳細**] で、次の情報を入力または選択します。
 
     - **再生名**: トレース再生の名前を入力します。
     - [**ソーストレース形式**]: ソーストレースファイルの形式 (Trace または xevent) を指定します。
@@ -59,15 +59,15 @@ Database Experimentation Assistant (DEA) では、アップグレードされた
     - **認証の種類**: [認証の種類] で [ **Windows**] を選択します。
     - **データベース名**: サーバー側のトレースを開始するデータベースの名前を入力します。 データベースを指定しない場合は、サーバー上のすべてのデータベースでトレースがキャプチャされます。
 
-5. シナリオに応じて、[**接続を暗号化**し、**サーバー証明書を信頼**する] チェックボックスをオンまたはオフにします。
+5. シナリオに応じて、[ **接続を暗号化** し、 **サーバー証明書を信頼** する] チェックボックスをオンまたはオフにします。
 
     ![[新しい再生] ページ](./media/database-experimentation-assistant-replay-trace/dea-new-replay.png)
 
 ## <a name="start-the-trace-replay-on-target-1"></a>ターゲット1でトレース再生を開始します
 
-- 必要な情報を入力または選択したら、[**開始**] を選択してトレースの再生を開始します。
+- 必要な情報を入力または選択したら、[ **開始** ] を選択してトレースの再生を開始します。
 
-  入力した情報が有効な場合は、分散再生プロセスが開始されます。 そうしないと、正しくない情報を含むテキストボックスが赤色で強調表示されます。 入力した値が正しいことを確認し、[**開始**] を選択します。
+  入力した情報が有効な場合は、分散再生プロセスが開始されます。 そうしないと、正しくない情報を含むテキストボックスが赤色で強調表示されます。 入力した値が正しいことを確認し、[ **開始**] を選択します。
 
   ![ターゲット1に対して進行状況を再生する](./media/database-experimentation-assistant-replay-trace/dea-run-replay-target1.png)
 
@@ -98,7 +98,7 @@ Database Experimentation Assistant (DEA) では、アップグレードされた
 
 **Q: 複数の再生を並列で開始することはできますか。**
 
-はい。ただし、[**コントローラーとクライアント**] で選択したのと同じコンピューターセットではありません。 コントローラーとクライアントがビジー状態になります。 並列再生を開始するには、**コントローラーとクライアント**の下に別のコンピューターセットを設定します。
+はい。ただし、[ **コントローラーとクライアント**] で選択したのと同じコンピューターセットではありません。 コントローラーとクライアントがビジー状態になります。 並列再生を開始するには、 **コントローラーとクライアント** の下に別のコンピューターセットを設定します。
 
 **Q: 通常、再生が完了するまでにどれくらいの時間がかかりますか。**
 
@@ -122,7 +122,7 @@ SQL Server は、ステートフルなリレーショナルデータベース管
 
 **Q: 再生中に収集されるトレースイベントにはどのようなものがありますか。**
 
-DEA は、パフォーマンスに関連する情報を含むトレースイベントをキャプチャします。 キャプチャの構成は、StartReplayCaptureTrace スクリプトに含まれています。 これらのイベントは、 [sp_trace_setevent (transact-sql) リファレンスドキュメント](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)に記載されている一般的な SQL Server トレースイベントです。
+DEA は、パフォーマンスに関連する情報を含むトレースイベントをキャプチャします。 キャプチャの構成は、StartReplayCaptureTrace スクリプトに含まれています。 これらのイベントは、 [sp_trace_setevent (transact-sql) リファレンスドキュメント](../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)に記載されている一般的な SQL Server トレースイベントです。
 
 ## <a name="troubleshoot-trace-replay"></a>トレース再生のトラブルシューティング
 
@@ -139,13 +139,13 @@ DEA は、パフォーマンスに関連する情報を含むトレースイベ�
 
 - コントローラーコンピューターで分散再生コントローラーサービスが実行されていることを確認してください。 確認するには、分散再生管理ツールを使用します (コマンドを実行し `dreplay.exe status -f 1` ます)。
 - 再生がリモートで開始された場合:
-  - DEA を実行しているコンピューターがコントローラーに対して ping を正常に実行できることを確認します。 [**再生環境の構成**] ページの指示に従って、ファイアウォールの設定によって接続が許可されていることを確認します。 詳細については、「 [SQL Server 分散再生](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017)」を参照してください。
+  - DEA を実行しているコンピューターがコントローラーに対して ping を正常に実行できることを確認します。 [ **再生環境の構成** ] ページの指示に従って、ファイアウォールの設定によって接続が許可されていることを確認します。 詳細については、「 [SQL Server 分散再生](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017)」を参照してください。
   - 分散再生コントローラーのユーザーに対して、DCOM リモート起動とリモートアクティブ化が許可されていることを確認します。
   - 分散再生コントローラーのユーザーに対して、DCOM リモートアクセスユーザー権限が許可されていることを確認します。
 
 **Q: トレースファイルのパスは、コンピューター上に存在します。分散再生コントローラーが見つからないのはなぜですか。**
 
-分散再生は、ローカルディスクリソースにのみアクセスできます。 再生を開始する前に、ソーストレースファイルを分散再生コントローラーマシンにコピーする必要があります。 また、[**新しい再生**] ページでパスを指定する必要があります。
+分散再生は、ローカルディスクリソースにのみアクセスできます。 再生を開始する前に、ソーストレースファイルを分散再生コントローラーマシンにコピーする必要があります。 また、[ **新しい再生** ] ページでパスを指定する必要があります。
 
 UNC パスは分散再生と互換性がありません。 分散再生パスは、最初のソーストレースファイル (拡張子を含む) へのローカルな絶対パスである必要があります。
 
@@ -165,4 +165,4 @@ UNC パスは分散再生と互換性がありません。 分散再生パスは
 
 ## <a name="see-also"></a>関連項目
 
-- 提案された変更に関する洞察を得るために役立つ分析レポートを作成するには、「[レポートの作成](database-experimentation-assistant-create-report.md)」を参照してください。
+- 提案された変更に関する洞察を得るために役立つ分析レポートを作成するには、「 [レポートの作成](database-experimentation-assistant-create-report.md)」を参照してください。

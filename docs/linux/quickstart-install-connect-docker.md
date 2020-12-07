@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: b58763dc5bf126e164ada0c0d808a75270819171
-ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
+ms.openlocfilehash: 8e87ca7630fca5e72daf2a3e4eedfd38d50482fd
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614612"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115665"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>クイック スタート:Docker を使用して SQL Server コンテナー イメージを実行する
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -132,7 +132,7 @@ any changes to one section should be duplicated in the other-->
    > [!NOTE]
    > パスワードは SQL Server の既定のパスワード ポリシーに従う必要があります。従わない場合、コンテナーで SQL Server をセットアップできず、動作が停止します。 既定で、パスワードは 8 文字以上の長さにする必要があり、次の 4 つのセットのうち 3 つから文字を含める必要があります。大文字、小文字、10 進数、記号です。 [docker ログ](https://docs.docker.com/engine/reference/commandline/logs/) コマンドを実行することでエラー ログを調査することができます。
    >
-   > 既定では、これにより SQL Server 2017 Developer Edition のコンテナーが作成されます。 コンテナーで実稼働エディションを実行するためのプロセスは若干異なります。 詳細については、「[Run production container images](sql-server-linux-configure-docker.md#production)」(実稼働のコンテナー イメージを実行する) を参照してください。
+   > 既定では、これにより SQL Server 2017 Developer Edition のコンテナーが作成されます。 コンテナーで実稼働エディションを実行するためのプロセスは若干異なります。 詳細については、「[Run production container images](./sql-server-linux-docker-container-deployment.md#production)」(実稼働のコンテナー イメージを実行する) を参照してください。
 
    次の表は、前の `docker run` の例のパラメーターについて説明しています。
 
@@ -171,7 +171,7 @@ any changes to one section should be duplicated in the other-->
 
    ![Docker ps コマンドの出力](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](sql-server-linux-configure-docker.md#troubleshooting)を参照してください。
+4. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](./sql-server-linux-docker-container-troubleshooting.md)を参照してください。
 
 前述の `-h` (ホスト名) パラメーターは、コンテナーの内部名をカスタム値に変更します。 これは、次の Transact-SQL クエリで返される名前です。
 
@@ -223,7 +223,7 @@ SELECT @@SERVERNAME,
    > [!TIP]
    > このクイック スタートでは、SQL Server 2019 の Docker イメージを使用します。 SQL Server 2017 のイメージを実行する場合は、[この記事の SQL Server 2017 バージョン](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)を参照してください。
 
-   上記のコマンドでは、Ubuntu に基づいて SQL Server 2019 のコンテナー イメージをプルします。 代わりに RedHat に基づくコンテナーイメージを使用するには、[RHEL ベースのコンテナー イメージの実行](sql-server-linux-configure-docker.md#rhel)に関するページを参照してください。 利用可能なすべてのイメージを表示する方法は、[mssql-server-linux Docker Hub ページ](https://hub.docker.com/_/microsoft-mssql-server)を参照してください。
+   上記のコマンドでは、Ubuntu に基づいて SQL Server 2019 のコンテナー イメージをプルします。 代わりに RedHat に基づくコンテナーイメージを使用するには、[RHEL ベースのコンテナー イメージの実行](./sql-server-linux-docker-container-deployment.md#rhel)に関するページを参照してください。 利用可能なすべてのイメージを表示する方法は、[mssql-server-linux Docker Hub ページ](https://hub.docker.com/_/microsoft-mssql-server)を参照してください。
 
    ::: zone pivot="cs1-bash"
    この記事の bash コマンドには、`sudo` が使用されています。 macOS では、`sudo` が不要な場合があります。 Linux では、`sudo` を使用して Docker を実行したくない場合は、**docker** グループを構成して、そのグループにユーザーを追加できます。 詳細については、「[Linux でのインストール後の手順](https://docs.docker.com/install/linux/linux-postinstall/)」を参照してください。
@@ -500,7 +500,7 @@ SQL 接続をサポートする外部の Linux、Windows、macOS ツールから
 
 SQL Server に接続するその他の一般的なツールは次のとおりです。
 
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [Windows の SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli (プレビュー)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 19db6aeab39dc93c2dcfd6a869d3b54e0a1ceaa6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522894"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192473"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -98,9 +98,9 @@ SSISDB でのログ記録は、ログイン **##MS_SSISLogDBWorkerAgentLogin##**
 
 Azure の仮想マシンでは、この構成手順の他に追加の手順が必要です。 これらの概念および手順の詳しい説明については、この記事の範囲対象外です。
 
-1.  Azure ドメインを設定する必要があります。 Windows Server フェールオーバー クラスタリングでは、クラスター内のすべてのコンピューターが同じドメインのメンバーである必要があります。 詳細については、「[Azure Portal を使用して Azure Active Directory Domain Services を有効にする](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)」を参照してください。
+1.  Azure ドメインを設定する必要があります。 Windows Server フェールオーバー クラスタリングでは、クラスター内のすべてのコンピューターが同じドメインのメンバーである必要があります。 詳細については、「[Azure Portal を使用して Azure Active Directory Domain Services を有効にする](/azure/active-directory-domain-services/create-instance)」を参照してください。
 
-2. Azure ロード バランサーを設定する必要があります。 これは可用性グループ リスナーの要件です。 詳細については、「[チュートリアル:Azure portal の Basic ロードバランサーを使用して内部トラフィックの負荷を分散する](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)」を参照してください。
+2. Azure ロード バランサーを設定する必要があります。 これは可用性グループ リスナーの要件です。 詳細については、「[チュートリアル:Azure portal の Basic ロードバランサーを使用して内部トラフィックの負荷を分散する](/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)」を参照してください。
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8.SSISDB で Scale Out Master アドレスを更新する
 

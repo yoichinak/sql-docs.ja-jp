@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919558d10e0e5d16b93d6efc171825670da47778
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79c3d518798c53342e67bfa42ce430d9ffe8e07a
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536773"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753474"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89536773"
   データベースをサーバーにアタッチします。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、CREATE DATABASE *database_name* FOR ATTACH を使用することをお勧めします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、CREATE DATABASE *database_name* FOR ATTACH を使用することをお勧めします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 >  複数のログファイルを再構築するには、1つまたは複数の場所に新しい場所がある場合は、CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG を使用します。  
@@ -53,7 +53,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 `[ @filename1 = ] 'filename_n'` データベースファイルの物理名 (パスを含む) を指定します。 *filename_n* は **nvarchar (260)**,、既定値は NULL です。 ファイル名は 16 個まで指定できます。 パラメーター名は** \@ filename1**から始まり、 ** \@ filename16**にインクリメントされます。 ファイル名の一覧には、少なくともプライマリファイルが含まれている必要があります。 プライマリファイルには、データベース内の他のファイルを指すシステムテーブルが含まれています。 また、データベースをデタッチした後に移動されたすべてのファイルを一覧に含める必要があります。  
   
 > [!NOTE]  
->  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+>  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)」を参照してください。  
 >   
 >  フルテキスト カタログ ファイルを含む [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー インスタンスにアタッチする場合、カタログ ファイルは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同様に他のデータベース ファイルと一緒に以前の場所からアタッチされます。 詳細については、「 [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
   
@@ -64,7 +64,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  なし  
   
 ## <a name="remarks"></a>解説  
- **Sp_attach_db**ストアドプロシージャは、明示的な**sp_detach_db**操作またはコピーしたデータベースに対してデータベースサーバーから以前にデタッチされたデータベースでのみ実行する必要があります。 16個を超えるファイルを指定する必要がある場合は、CREATE DATABASE *database_name* FOR ATTACH または create database *database_name* FOR_ATTACH_REBUILD_LOG を使用します。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+ **Sp_attach_db**ストアドプロシージャは、明示的な**sp_detach_db**操作またはコピーしたデータベースに対してデータベースサーバーから以前にデタッチされたデータベースでのみ実行する必要があります。 16個を超えるファイルを指定する必要がある場合は、CREATE DATABASE *database_name* FOR ATTACH または create database *database_name* FOR_ATTACH_REBUILD_LOG を使用します。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)」を参照してください。  
   
  指定されていないファイルは、最後の既知の場所にあると見なされます。 異なる場所にあるファイルを使用するには、新しい場所を指定する必要があります。  
   
@@ -84,7 +84,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 **OPEN MASTER KEY** を使用して、データベース マスター キー (DMK) を暗号化解除する必要があります。 DMK の暗号化が解除されると、 **ALTER MASTER KEY REGENERATE** ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。  
   
 ## <a name="permissions"></a>アクセス許可  
- データベースがアタッチされているときの権限の処理方法については、「 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+ データベースがアタッチされているときの権限の処理方法については、「 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
  次の例では、から [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 現在のサーバーにファイルをアタッチします。  
@@ -103,5 +103,4 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
  [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_removedbreplication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

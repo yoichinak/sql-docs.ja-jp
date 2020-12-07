@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c1103f32d08335e2f2dfc6c302db0b62ff93b3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f152bf79c030fee3ce480d455c54fbdfad4b719
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373469"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935481"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services での認証の拡張保護
 
@@ -154,7 +154,7 @@ SSRS では、オペレーティング システムで有効になっている�
 |ComputerNamePhysicalDnsHostname|ローカル コンピューターの DNS ホスト名。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの名前ではなく、ローカル コンピューターの DNS ホスト名が使用されます。|  
 |ComputerNamePhysicalNetBIOS|ローカル コンピューターの NetBIOS 名。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの名前ではなく、ローカル コンピューターの NetBIOS 名が使用されます。|  
   
-詳細については、「[Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)」(レポート サーバーのサービス プリンシパル名 &#40;SPN&#41; の登録) および「[URL の予約と登録について &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)」を参照してください。  
+詳細については、「[レポート サーバーのサービス プリンシパル名 &#40;SPN&#41; の登録](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)」および「[URL の予約と登録について &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="next-steps"></a>次のステップ
 

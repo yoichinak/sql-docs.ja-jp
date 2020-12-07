@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03c4fa2ddf36130fb9ff96899870207c6427efe1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f98991f50c259950ce9b3743d1aaff9a69bcf427
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939222"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934977"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>ゲージ (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのゲージ データ領域には、データセットの単一の値が表示されます。 各ゲージは常に、ゲージ パネル内に配置されます。ゲージ パネルでは、子ゲージまたは隣接ゲージを追加できます。 1 つのゲージ パネル内に、フィルター選択、グループ化、並べ替えなどの共通機能を使用する複数のゲージを作成できます。  
@@ -283,7 +283,7 @@ ms.locfileid: "87939222"
   
 -   [ゲージへの最小値または最大値の設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [ゲージへのスナップ間隔の設定 (レポート ビルダーおよび SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)  
+-   [ゲージへのスナップ間隔の設定 (レポート ビルダーおよび SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> トピックの内容  
  次の各トピックでは、ゲージの使用に関する追加情報について説明します。  
@@ -300,5 +300,4 @@ ms.locfileid: "87939222"
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
   

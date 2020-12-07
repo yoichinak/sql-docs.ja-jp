@@ -12,10 +12,10 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7237d7356ffb97861779c4d5427fd4fb05083695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88345328"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>レッスン 5-2:パッケージ構成の有効化と構成
@@ -71,7 +71,7 @@ ms.locfileid: "88345328"
   
 5.  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで **[パッケージの構成を有効にする]** を選択し、**[追加]** を選択します。  
   
-6.  **パッケージ構成ウィザード**の初期画面で、**[次へ]** を選択します。  
+6.  **パッケージ構成ウィザード** の初期画面で、**[次へ]** を選択します。  
   
 7.  **[構成の種類の選択]** ページで、 **[構成の種類]** が **[XML 構成ファイル]** に設定されていることを確認します。  
   

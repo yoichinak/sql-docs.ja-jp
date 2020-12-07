@@ -15,12 +15,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fc1f9de3db5d2e3aa31d932b74c9971fc596c04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7092b653634f23230983244aa6030e14ab67ac70
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486778"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869034"
 ---
 # <a name="sql-server-native-client-date-and-time-improvements-ole-db"></a>SQL Server Native Client の日付と時刻の強化 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88486778"
  [OLE DB の日付/時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付と時刻のデータ型をサポートする OLE DB (Native Client) 型に関する情報を提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
- [メタデータ &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [メタデータ &#40;OLE DB&#41;](./data-type-support-for-ole-db-date-and-time-improvements.md)  
  DBBINDING 構造、**ICommandWithParameters::GetParameterInfo**、**ICommandWithParameters::SetParameterInfo**、**IColumnsRowset::GetColumnsRowset**、I**ColumnsInfo::GetColumnInfo** に関する詳細が含まれています。 また、OLE DB スキーマ行セットの更新についても説明します。  
   
  [バインドと変換 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
@@ -53,5 +53,4 @@ ms.locfileid: "88486778"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
   

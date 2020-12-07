@@ -11,15 +11,15 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f1b6753aa679c5e54fd14475ab30f2d498a23e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60254364eb7dd4151ee309258f75039bd59628a1
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455450"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006365"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **CompoundCurve** は、geometry 型または geography 型の 0 個以上の連続する **CircularString** インスタンスあるいは **LineString** インスタンスのコレクションです。  
   
 空の **CompoundCurve** インスタンスをインスタンス化することはできますが、 **CompoundCurve** を有効にするには、次の条件を満たす必要があります。  
@@ -33,7 +33,7 @@ ms.locfileid: "88455450"
 ## <a name="compoundcurve-instances"></a>CompoundCurve インスタンス  
 次の図は、有効な **CompoundCurve** 型を示しています。  
   
-![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
+![CompoundCurve の例](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
 ### <a name="accepted-instances"></a>許容されるインスタンス  
  **CompoundCurve** インスタンスは、空のインスタンスであるかまたは次の条件を満たす場合に許容されます。  

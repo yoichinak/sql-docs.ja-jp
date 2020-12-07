@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c7a2e6ffd3dcf8544dabfd010ea7a1161dc9bf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8791836a066b658fb6775ce1cbf30f30c7d7d4a1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477784"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123397"
 ---
 # <a name="data-mining-query-transformation"></a>データ マイニング クエリ変換
 
@@ -32,7 +32,7 @@ ms.locfileid: "88477784"
 
   データ マイニング クエリ変換は、データ マイニング モデルに対して予測クエリを実行します。 この変換には、データ マイニング拡張機能 (DMX) クエリを作成するためのクエリ ビルダーが含まれています。 このクエリ ビルダーを使用すると、DMX 言語を使用して、既存のマイニング モデルに対して変換入力データを評価する、カスタム ステートメントを作成できます。 詳細については、「[データ マイニング拡張機能 (DMX) リファレンス](../../../dmx/data-mining-extensions-dmx-reference.md)」を参照してください。  
   
- 同じデータ マイニング構造で複数のモデルが構築されている場合、1 回の変換で複数の予測クエリを実行することもできます。 詳細については、「 [データ マイニング クエリ ツール](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)」を参照してください。  
+ 同じデータ マイニング構造で複数のモデルが構築されている場合、1 回の変換で複数の予測クエリを実行することもできます。 詳細については、「 [データ マイニング クエリ ツール](/analysis-services/data-mining/data-mining-query-tools)」を参照してください。  
   
 ## <a name="configuration-of-the-data-mining-query-transformation"></a>データ マイニング クエリ変換の構成  
  データ マイニング クエリ変換は、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 接続マネージャーを使用して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] プロジェクト、またはマイニング構造とマイニング モデルを含む [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../../../integration-services/connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
@@ -43,7 +43,7 @@ ms.locfileid: "88477784"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -74,4 +74,3 @@ ms.locfileid: "88477784"
   
  **[新しいクエリの作成]**  
  **[新しいクエリの作成]** をクリックし、グラフィカルなクエリ ビルダーを使用して、データ マイニング拡張機能 (DMX) クエリを作成します。  
-  

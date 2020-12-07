@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570293"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194524"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>SQL Server での Launchpad サービスと外部スクリプト実行に関する問題のトラブルシューティング
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "89570293"
 
 ## <a name="determine-whether-launchpad-is-running"></a>Launchpad が実行されているかどうかを判断する
 
-1. **[サービス]** パネル (services.msc) を開きます。 または、コマンド ラインで「**Sqlservermanager13.msc**」または「**SQLServerManager14**」と入力して、[SQL Server 構成マネージャー](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)を開きます。
+1. **[サービス]** パネル (services.msc) を開きます。 または、コマンド ラインで「**Sqlservermanager13.msc**」または「**SQLServerManager14**」と入力して、[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)を開きます。
 
 2. Launchpad が実行されているサービス アカウントをメモします。 R または Python が有効になっている各インスタンスには、Launchpad サービスの独自のインスタンスが必要です。 たとえば、名前付きインスタンスのサービスは、_MSSQLLaunchpad$InstanceName_ のようになります。
 
@@ -121,7 +121,7 @@ Launchpad に別のアカウントを割り当てたか、SQL Server コンピ�
 
 機械学習をインストールして有効にしたが、R または Python スクリプトを実行しようとするとこのエラーが発生する場合は、インスタンスの Launchpad サービスが実行を停止した可能性があります。
 
-1. Windows コマンド プロンプトから SQL Server 構成マネージャーを開きます。 詳細については、「 [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)」を参照してください。
+1. Windows コマンド プロンプトから SQL Server 構成マネージャーを開きます。 詳細については、「 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)」を参照してください。
 
 2. インスタンスの SQL Server Launchpad を右クリックし、 **[プロパティ]** を選択します。
 
@@ -223,7 +223,7 @@ R をインストールするボリュームが短いファイル名に対応し
 
 回避策として、SQL Server がインストールされ、R Services がインストールされているボリュームで 8dot3 表記を有効にできます。 次に、R Services 構成ファイルに作業ディレクトリの短い名前を指定する必要があります。
 
-1. 8dot3 表記を有効にするには、「[fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx)」で説明されているように、*8dot3name* 引数を指定して fsutil ユーティリティを実行します。
+1. 8dot3 表記を有効にするには、「[fsutil 8dot3name](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff621566(v=ws.11))」で説明されているように、*8dot3name* 引数を指定して fsutil ユーティリティを実行します。
 
 2. 8dot3 表記が有効になったら、RLauncher.config ファイルを開き、`WORKING_DIRECTORY` のプロパティを確認します。 このファイルを見つける方法の詳細については、[Machine Learning のトラブルシューティングのためのデータ収集](data-collection-ml-troubleshooting-process.md)に関する記事を参照してください。
 

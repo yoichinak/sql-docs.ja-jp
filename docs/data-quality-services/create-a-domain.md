@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 399cc88598173e7406b326c83ea9a098b879c59e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487903"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725362"
 ---
 # <a name="create-a-domain"></a>ドメインの作成
 
@@ -90,9 +90,8 @@ ms.locfileid: "88487903"
   
 9. **[OK]** をクリックします。  
   
-10. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+10. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a> 補足情報: ドメインを作成した後  
  ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
-  
   

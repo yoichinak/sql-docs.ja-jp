@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aef4411334ee9ca345a5b2f2c8b325c6fd2dae70
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 0e2036700a138150c9d103cfc1bca9c3c65b6d60
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462416"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935398"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>レポート ビルダー関数 - 集計関数
   データ プロバイダーの定義に従い、指定された式のカスタムの集計を返します。  
@@ -40,7 +40,7 @@ Aggregate(expression, scope)
  戻り値の型はデータ プロバイダーによって決められます。 プロバイダーがこの関数をサポートしていない場合や、データが取得できなかった場合は、 **Nothing** が返されます。  
   
 ## <a name="remarks"></a>解説  
- **Aggregate** 関数を使用すると、外部データ ソース上で計算される集計を使用できます。 この機能のサポートは、データ拡張機能によって異なります。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、MDX クエリからフラットな行セットを取得します。 結果セット内の一部の行には、データ ソース サーバーで計算される集計値を含めることができます。 これらは、 *サーバー集計*と呼ばれます。 サーバー集計を [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のグラフィカル クエリ デザイナーで表示するには、ツール バーの **[集計の表示]** ボタンを使用します。 詳細については、「[Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)」を参照してください。  
+ **Aggregate** 関数を使用すると、外部データ ソース上で計算される集計を使用できます。 この機能のサポートは、データ拡張機能によって異なります。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、MDX クエリからフラットな行セットを取得します。 結果セット内の一部の行には、データ ソース サーバーで計算される集計値を含めることができます。 これらは、 *サーバー集計*と呼ばれます。 サーバー集計を [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のグラフィカル クエリ デザイナーで表示するには、ツール バーの **[集計の表示]** ボタンを使用します。 詳細については、「[Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](/previous-versions/sql/)」を参照してください。  
   
  Tablix データ領域の詳細行にデータセットの集計値および詳細値の組み合わせを表示する場合、通常、サーバー集計値は詳細データではないため含まれません。 ただし、データセットから取得したすべての値を表示し、集計データを計算および表示する方法をカスタマイズできます。  
   
@@ -80,5 +80,4 @@ Aggregate(expression, scope)
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

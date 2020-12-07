@@ -14,15 +14,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 55220291257cf90f7345acb63ce2369b9308f435
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900226"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125750"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>レプリケートされたデータベースのアップグレードまたは修正プログラム
 
@@ -135,4 +135,4 @@ SQL Server インスタンスを SQL Server 2016 (またはそれ以降) にア�
  [レプリケーションの下位互換性](../../relational-databases/replication/replication-backward-compatibility.md)   
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
- [SQL Server 2016 へのレプリケーション トポロジのアップグレード](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)
+ [SQL Server 2016 へのレプリケーション トポロジのアップグレード](/archive/blogs/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016)

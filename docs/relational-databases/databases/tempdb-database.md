@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: c49e89d9ed81950d0c8781d39c57eef3e408482b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024344"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195559"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 
@@ -40,9 +40,9 @@ ms.locfileid: "91024344"
   > [!IMPORTANT]
   > `tempdb` に保存され、データベース レベルまで調べられるグローバル一時テーブルとグローバル一時ストアド プロシージャは、Azure SQL Database 単一データベースおよびエラスティック プールによってサポートされています。 
   >
-  > グローバル一時テーブルとグローバル一時ストアド プロシージャは、同じ SQL データベース内のすべてのユーザーのセッションで共有されます。 他の SQL データベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。 詳細については、「[Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)」(データベース スコープ グローバル一時テーブル (Azure SQL Database)) を参照してください。 [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では、SQL Server と同じ一時オブジェクトがサポートされます。
+  > グローバル一時テーブルとグローバル一時ストアド プロシージャは、同じ SQL データベース内のすべてのユーザーのセッションで共有されます。 他の SQL データベースからのユーザー セッションは、グローバル一時テーブルにアクセスできません。 詳細については、「[Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)」(データベース スコープ グローバル一時テーブル (Azure SQL Database)) を参照してください。 [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) では、SQL Server と同じ一時オブジェクトがサポートされます。
   >
-  > Azure SQL Database の単一データベースとエラスティック プールでは、master データベースと `tempdb` データベースのみが適用されます。 詳細については、[Azure SQL Database サーバーの概要](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)に関する記事を参照してください。 Azure SQL Database の単一データベースとエラスティック プールのコンテキストでの `tempdb` については、[Azure SQL Database の単一データベースとエラスティック プールでの tempdb データベース](#tempdb-database-in-sql-database)に関する説明を参照してください。 
+  > Azure SQL Database の単一データベースとエラスティック プールでは、master データベースと `tempdb` データベースのみが適用されます。 詳細については、[Azure SQL Database サーバーの概要](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)に関する記事を参照してください。 Azure SQL Database の単一データベースとエラスティック プールのコンテキストでの `tempdb` については、[Azure SQL Database の単一データベースとエラスティック プールでの tempdb データベース](#tempdb-database-in-sql-database)に関する説明を参照してください。 
   >
   > Azure SQL Managed Instance の場合、すべてのシステム データベースが適用されます。
 
@@ -149,7 +149,7 @@ ms.locfileid: "91024344"
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>vCore に基づくサービス層の tempdb のサイズ
 
-[仮想コア ベースのリソース制限](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)に関する記事を参照してください。
+[仮想コア ベースのリソース制限](/azure/sql-database/sql-database-vcore-resource-limits)に関する記事を参照してください。
 
 ## <a name="restrictions"></a>制限事項
 
@@ -223,7 +223,7 @@ GO
 - `tempdb` 内のすべての割り当てで単一エクステントが使用されます。 [トレース フラグ 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) は必須ではなくなりました。  
 - プライマリ ファイル グループの場合、`AUTOGROW_ALL_FILES` プロパティはオンにされており、プロパティは変更できません。
 
-`tempdb` でのパフォーマンス向上の詳細については、[TEMPDB - ファイルとトレース フラグと更新](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)に関するブログ記事を参照してください。
+`tempdb` でのパフォーマンス向上の詳細については、[TEMPDB - ファイルとトレース フラグと更新](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my)に関するブログ記事を参照してください。
 
 ## <a name="memory-optimized-tempdb-metadata"></a>メモリ最適化 tempdb メタデータ
 `tempdb` でのメタデータの競合は、従来、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上で実行されている多くのワークロードのスケーラビリティに対するボトルネックになっていました。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、[メモリ内データベース](../in-memory-database.md)機能ファミリの一部として、メモリ最適化 tempdb メタデータという新機能が導入されています。 
@@ -355,4 +355,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
 [データベース ファイルの移動](../../relational-databases/databases/move-database-files.md)    
-  

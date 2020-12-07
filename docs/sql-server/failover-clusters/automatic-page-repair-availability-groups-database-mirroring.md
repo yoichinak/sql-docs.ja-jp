@@ -14,14 +14,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 195b796514be6ac86de1b997d88de1b6eee44394
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3f829ca9f0acb82089251c772f80f47395fa32e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117030"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127685"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>ページの自動修復 (可用性グループ: データベース ミラーリング)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "91117030"
 ##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> プリンシパル/プライマリ データベースでの I/O エラーの処理  
  プリンシパル/プライマリ データベースでページの自動修復が試行されるのは、データベースが SYNCHRONIZED 状態にあり、そのデータベースのログ レコードがプリンシパル/プライマリ サーバーからミラー/セカンダリへ送信され続けている場合だけです。 ページの自動修復が試行される場合の基本的な処理順序を次に示します。  
   
-1.  プリンシパル/プライマリ データベースのデータ ページで読み取りエラーが発生すると、プリンシパル/プライマリは、該当するエラー状態が記録された行を [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) テーブルに挿入します。 この後、データベース ミラーリングの場合は、プリンシパルがミラーに対してページのコピーを要求します。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]の場合は、プライマリが、すべてのセカンダリに要求をブロードキャストし、最初に応答したセカンダリからページを取得します。 この要求では、ページ ID と、現在フラッシュされたログの最後にある LSN を指定します。 要求対象のページは、 *復元待ち*としてマークされます。 これにより、ページの自動修復の試行時、このページにはアクセスできなくなります。 修復の試行時にこのページにアクセスしようとすると、エラー 829 (復元待ち) が発生して失敗します。  
+1.  プリンシパル/プライマリ データベースのデータ ページで読み取りエラーが発生すると、プリンシパル/プライマリは、該当するエラー状態が記録された行を [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) テーブルに挿入します。 この後、データベース ミラーリングの場合は、プリンシパルがミラーに対してページのコピーを要求します。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]の場合は、プライマリが、すべてのセカンダリに要求をブロードキャストし、最初に応答したセカンダリからページを取得します。 この要求では、ページ ID と、現在フラッシュされたログの最後にある LSN を指定します。 要求対象のページは、 *復元待ち* としてマークされます。 これにより、ページの自動修復の試行時、このページにはアクセスできなくなります。 修復の試行時にこのページにアクセスしようとすると、エラー 829 (復元待ち) が発生して失敗します。  
   
 2.  ページ要求を受け取ったミラー/セカンダリは、まず、その要求で指定されている LSN までログを再実行し、 その後、データベースのコピーに存在する該当ページへのアクセスを試みます。 該当ページにアクセスできた場合は、そのページのコピーをプリンシパル/プライマリに送信します。 アクセスできない場合、ミラー/セカンダリはプリンシパル/プライマリにエラーを返します。つまり、ページの自動修復は失敗となります。  
   

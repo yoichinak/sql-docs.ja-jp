@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2b810d2b268e12c97857475e474d3ed597978ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 24a19fc748da4ef521bb9781941911efb08e0132
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431174"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727750"
 ---
 # <a name="bottomcount-dmx"></a>下端のカウント (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
  引数によって指定された値によって、 \<rank expression> 引数に指定された行のランクの増加順序が決定され、 \<table expression> 引数に指定されている最下位行の数 \<count> が返されます。  
   
 ## <a name="examples"></a>例  
- 次の例では、「 [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
+ 次の例では、「 [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  下位カウントのしくみを理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
  結果の例:  
   
@@ -105,5 +105,4 @@ NATURAL PREDICTION JOIN
  [DMX&#41;&#40;の割合 ](../dmx/bottompercent-dmx.md)   
  [DMX&#41;&#40;BottomSum ](../dmx/bottomsum-dmx.md)   
  [DMX&#41;&#40;TopCount ](../dmx/topcount-dmx.md)  
-  
   

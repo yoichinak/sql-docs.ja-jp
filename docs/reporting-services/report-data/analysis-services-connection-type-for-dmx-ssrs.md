@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e44b1872f3962f27666bf68b1f661b9804b8880b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: acb81c5dc8533e4870b540dda7c091eb37542d2c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458984"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891822"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>DMX のための Analysis Services の接続の種類 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースを使用してデータセットを作成した場合、レポート デザイナーで有効なキューブが検出されると、多次元式 (MDX) クエリ デザイナーが表示されます。 キューブは検出されなくても、データ マイニング モデルが使用可能な場合、レポート デザイナーではデータ マイニング拡張機能 (DMX) クエリ デザイナーが表示されます。 MDX と DMX デザイナーを切り替えるには、ツール バーの **[コマンドの種類 DMX]** (![DMX クエリ言語ビューに変更](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "DMX クエリ言語ビューへの変更")) ボタンをクリックします。 DMX クエリ デザイナーを使用すると、グラフィカルな要素を使用して対話的に DMX クエリを作成できます。 DMX クエリ デザイナーを使用するには、指定するデータ ソースが、データを提供するデータ マイニング モデルを既に備えている必要があります。 クエリ結果は、レポートで使用できるようにフラットな行セットに変換されます。  
   
 > [!NOTE]  
->  レポートをデザインする前に、モデルのトレーニングを行う必要があります。 詳細については、「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
+>  レポートをデザインする前に、モデルのトレーニングを行う必要があります。 詳細については、「 [データ マイニング ソリューション](/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
 ## <a name="design-mode"></a>デザイン モード  
  DMX クエリ デザイナーは、デザイン モードで開きます。 デザイン モードには、単一のデータ マイニング モデルと入力テーブルを選択するためのグラフィカルなデザイン画面、および予測クエリを指定するためのグリッドが含まれています。 DMX クエリ デザイナーには、この他に 2 つのモードがあります。クエリ モードと結果モードです。 クエリ モードでは、デザインモードのグリッドがクエリ ペインに置き換えられ、これを使用して DMX クエリを入力することができます。 結果モードでは、クエリによって返された結果セットがデータ グリッドに表示されます。  
@@ -46,8 +46,7 @@ ms.locfileid: "86458984"
  レポート パラメーターとクエリ パラメーターの関係を管理する方法の詳細については、「[クエリ パラメーターのレポート パラメーターへの関連付け (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)」を参照してください。 パラメーターの詳細については、「[レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
+ [データ マイニング ソリューション](/analysis-services/data-mining/data-mining-solutions)   
  [クエリ デザイン ツール (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
   

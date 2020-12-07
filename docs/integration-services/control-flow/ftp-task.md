@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d17bad386cc020be1a61696aec96a81b6126d8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 013fffc66c8e40ca2124b949f555e0638df7967e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393555"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127404"
 ---
 # <a name="ftp-task"></a>FTP タスク
 
@@ -77,7 +77,7 @@ ms.locfileid: "88393555"
 ## <a name="related-tasks"></a>Related Tasks  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
+ これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
  プログラムによってこれらのプロパティを設定する方法の詳細については、「 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>」を参照してください。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88393555"
 > [!IMPORTANT]  
 >  FTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
   
- **関連トピック:** [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **関連トピック:** [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../connection-manager/ftp-connection-manager.md)  
   
  **[StopOnFailure]**  
  FTP 操作が失敗した場合に FTP タスクを終了するかどうかを示します。  
@@ -157,7 +157,7 @@ ms.locfileid: "88393555"
  **[RemotePath]**  
  既存の FTP 接続マネージャーを選択するか、[\<**New connection...**>] をクリックして接続マネージャーを作成します。  
   
- **関連トピック:** [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **関連トピック:** [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../connection-manager/ftp-connection-manager.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>[IsLocalPathVariable] の動的オプション  
   
@@ -176,5 +176,4 @@ ms.locfileid: "88393555"
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

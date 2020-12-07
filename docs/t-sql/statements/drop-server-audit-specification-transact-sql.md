@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b87ff1ba14f3f8725d946f56823c83a1e1599ca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1664f2a9263db649dc9e840b915cd25d2610e956
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547704"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131129"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "89547704"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
+```syntaxsql 
 DROP SERVER AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
 ```  
@@ -57,7 +56,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>例  
  次の例では、`HIPAA_Audit_Specification` というサーバー監査仕様を削除します。  
   
-```  
+```sql  
 DROP SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification;  
 GO  
 ```  

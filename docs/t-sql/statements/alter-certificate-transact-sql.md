@@ -24,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 37580f0069d4621f759d258e238ba3f8cf2d7d14
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688078"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128141"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -76,7 +76,7 @@ ALTER CERTIFICATE certificate_name
         DECRYPTION BY PASSWORD = '<key password>' )
 }  
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

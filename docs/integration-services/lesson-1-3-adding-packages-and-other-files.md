@@ -12,10 +12,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449721"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>レッスン 1-3 - パッケージとその他のファイルの追加
@@ -50,7 +50,7 @@ ms.locfileid: "88449721"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、[ **スタート**] ボタンをクリックし、[ **すべてのプログラム**]、[ **Microsoft SQL Server**] の順にポイントして、[ **SQL Server Data Tools**] をクリックします。  
   
-2.  **[ファイル]** メニューの **[開く]** をクリックし、 **[プロジェクト/ソリューション]** をクリックします。次に、 **[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
+2.  **[ファイル]** メニューの **[開く]** をクリックし、 **[プロジェクト/ソリューション]** をクリックします。次に、 **[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln** をダブルクリックします。  
   
 3.  ソリューション エクスプローラーで、[Deployment Tutorial] を右クリックして [ **追加**] をクリックし、[ **既存のパッケージ**] をクリックします。  
   

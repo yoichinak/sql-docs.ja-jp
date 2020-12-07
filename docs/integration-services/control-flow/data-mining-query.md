@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ac57f5f3e064df60c0fc885765fcbc445be9e22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c3e798ca968230aa0a554189076281a886bff3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457554"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727633"
 ---
 # <a name="data-mining-query"></a>データ マイニング クエリ
 
@@ -68,7 +68,6 @@ ms.locfileid: "88457554"
  列に適用する条件またはユーザー式を指定します。 マイニング モデルを含むテーブルや入力列から列をセルにドラッグできます。  
   
 ## <a name="see-also"></a>関連項目  
- [データ マイニング クエリ ツール](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
+ [データ マイニング クエリ ツール](/analysis-services/data-mining/data-mining-query-tools)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

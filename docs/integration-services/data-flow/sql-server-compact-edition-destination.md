@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 345d470be5b7ea6ba0cce3c0ad907e38a60059dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95b8ae3e0af8f30b38b77b0e3c7a327db4a46707
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457331"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194736"
 ---
 # <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition 変換先
 
@@ -47,14 +47,13 @@ ms.locfileid: "88457331"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [SQL Server 変換先のカスタム プロパティ](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  
   

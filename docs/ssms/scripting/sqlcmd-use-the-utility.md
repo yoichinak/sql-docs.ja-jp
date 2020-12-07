@@ -18,12 +18,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3a7425eebb86ae2afd5d9e41af51fa0badbb304
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901522"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036266"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - ユーティリティの使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88901522"
   
 -   実行する **ステートメントを 1 つ指定するか、実行する** ステートメントの入ったテキスト ファイルをユーティリティに指定して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブを実行します。 出力先はコマンド プロンプトにすることもできますが、通常はテキスト ファイルに出力されます。  
   
--   [クエリ エディターの](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) SQLCMD モード [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+-   [クエリ エディターの](./edit-sqlcmd-scripts-with-query-editor.md) SQLCMD モード [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 -   SQL Server 管理オブジェクト (SMO)  
   
@@ -202,7 +202,7 @@ ms.locfileid: "88901522"
  行 `3> GO` の後の行は、 `SELECT` ステートメントの出力です。 出力の生成後、 `sqlcmd` により `sqlcmd` プロンプトがリセットされ、 `1>`が表示されます。 行 `EXIT` で「 `1>`」と入力すると、最初にコマンド プロンプト ウィンドウを開いたときと同じ行が表示されます。 これは、 `sqlcmd` のセッションを終了したことを示します。 その状態で再度 `EXIT` コマンドを入力すると、コマンド プロンプト ウィンドウを閉じることができます。  
   
 ## <a name="running-transact-sql-script-files-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL スクリプト ファイルの実行  
- **sqlcmd** を使用してデータベース スクリプト ファイルを実行できます。 スクリプト ファイルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、 **sqlcmd** コマンド、およびスクリプト変数が混在したテキスト ファイルです。 変数をスクリプト化する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」をご覧ください。 スクリプト ファイル内のステートメント、コマンド、およびスクリプト変数に対して**sqlcmd** で行われる処理は、対話的に入力したステートメントやコマンドの処理と似ています。 **sqlcmd** が対話入力の場合と大きく異なる点は、ユーザーがステートメント、コマンド、およびスクリプト変数を入力するまで待機するのではなく、入力ファイルを最後まで中断することなく読み取るという点です。  
+ **sqlcmd** を使用してデータベース スクリプト ファイルを実行できます。 スクリプト ファイルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、 **sqlcmd** コマンド、およびスクリプト変数が混在したテキスト ファイルです。 変数をスクリプト化する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](./sqlcmd-use-with-scripting-variables.md)」をご覧ください。 スクリプト ファイル内のステートメント、コマンド、およびスクリプト変数に対して**sqlcmd** で行われる処理は、対話的に入力したステートメントやコマンドの処理と似ています。 **sqlcmd** が対話入力の場合と大きく異なる点は、ユーザーがステートメント、コマンド、およびスクリプト変数を入力するまで待機するのではなく、入力ファイルを最後まで中断することなく読み取るという点です。  
   
  データベース スクリプト ファイルの作成方法はいくつかあります。  
   
@@ -535,9 +535,8 @@ SQLCMD -E -N -C
   
 ## <a name="more-about-sqlcmd"></a>sqlcmd に関する詳細情報  
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
- [sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [クエリ エディターによる SQLCMD スクリプトの編集](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
+ [sqlcmd でのスクリプト変数の使用](./sqlcmd-use-with-scripting-variables.md)   
+ [クエリ エディターによる SQLCMD スクリプトの編集](./edit-sqlcmd-scripts-with-query-editor.md)   
  [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)   
  [CmdExec ジョブ ステップの作成](../../ssms/agent/create-a-cmdexec-job-step.md)  
-  
   

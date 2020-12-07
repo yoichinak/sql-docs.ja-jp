@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12046405d10c41796b8ad989f746aaac242f430d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20ad05559aa172ff7e8937359bad93f85347a92a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448842"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193447"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 関数
 **互換性**  
  導入されたバージョン: ODBC 3.81 標準準拠: ODBC  
   
  **まとめ**  
- **SQLCleanupConnectionPoolID** は、プール ID がタイムアウトしたことをドライバーに通知します。プール ID は、そのプール ID に関連付けられているプール内のすべての接続がタイムアウトしたときにタイムアウトすることがあります。接続タイムアウトの詳細については [、「Microsoft Data Access コンポーネントでのプーリング](https://msdn.microsoft.com/library/ms810829.aspx) 」を参照してください。  
+ **SQLCleanupConnectionPoolID** は、プール ID がタイムアウトしたことをドライバーに通知します。プール ID は、そのプール ID に関連付けられているプール内のすべての接続がタイムアウトしたときにタイムアウトすることがあります。接続タイムアウトの詳細については [、「Microsoft Data Access コンポーネントでのプーリング](/previous-versions/ms810829(v=msdn.10)) 」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +51,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  アプリケーションは、ドライバーによって返されたエラーメッセージを受信できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **SQLCleanupConnectionPoolID** はいつでも呼び出すことができますが、ドライバーマネージャーは、他のスレッドが同時に **SQLGetPoolID** を呼び出していないことを保証します。また、そのプール ID で割り当てられた接続情報トークンを使用して、他のスレッドが **SQLRateConnection** と **sqlpoolconnect** を同時に呼び出すことはありません。 そのため、ドライバーは、この機能がスレッドセーフであることを確認する必要があります。  
   
  ドライバーは、プール ID に関連付けられているリソースをクリーンアップできます。  

@@ -4,20 +4,20 @@ titleSuffix: ''
 description: Machine Learning Services は、リレーショナル データを使用して Python および R スクリプトを実行できるようになる SQL Server の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の Microsoft Python および R パッケージを使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server Machine Learning Services の基本と開始方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/19/2020
+ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: be0e80a5d6a54726fd77b753c9910764bf5f600d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7f25b832feeb54e622b364ccd715886ed90aae88
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180375"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94582624"
 ---
-# <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services とは (Python と R)
-[!INCLUDE [SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
+# <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>SQL Server Machine Learning Services (Python と R) とは
+[!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Machine Learning Services は、リレーショナル データを使用して Python および R スクリプトを実行できるようになる SQL Server の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の [Microsoft Python および R パッケージ](#packages)を使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server Machine Learning Services の基本と開始方法について説明します。
 
@@ -25,7 +25,7 @@ Machine Learning Services は、リレーショナル データを使用して P
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> SQL Server で Java を実行する方法については、[言語拡張のドキュメント](../language-extensions/language-extensions-overview.md)を参照してください。
+> SQL Server で Java を実行する方法については、[Java 言語拡張のドキュメント](../language-extensions/java-overview.md)を参照してください。
 ::: moniker-end
 
 ## <a name="execute-python-and-r-scripts-in-sql-server"></a>SQL Server で Python および R スクリプトを実行する
@@ -45,15 +45,23 @@ Machine Learning Services では、SQL Server での Python および R スク�
 ## <a name="get-started-with-machine-learning-services"></a>Machine Learning Services の概要
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-1. [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)または [Windows に SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)。 [ビッグ データ クラスターの Machine Learning Services](../big-data-cluster/machine-learning-services.md) も使用できます。
+1. [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)または [Windows に SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)。 また、[ビッグ データ クラスターで Machine Learning Services](../big-data-cluster/machine-learning-services.md) を使用したり、[Azure SQL Managed Instance で Machine Learning Services ](/azure/azure-sql/managed-instance/machine-learning-services-overview)を使用したりすることもできます。
 
 1. 開発ツールを構成します。 「[Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する](install/sql-machine-learning-azure-data-studio.md)」を使用できます。 [Azure Data Studio](../azure-data-studio/what-is.md) で T-SQL を実行することもできます。
 
 1. 初めての Python または R スクリプトを作成する。
 
-    + [SQL 機械学習用の Python チュートリアル](tutorials/python-tutorials.md)
-    + [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)
+   + [SQL 機械学習用の Python チュートリアル](tutorials/python-tutorials.md)
+   + [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)
 ::: moniker-end
+
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ 初めての Python または R スクリプトを作成する。
+
+   + [SQL 機械学習用の Python チュートリアル](tutorials/python-tutorials.md)
+   + [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)
+::: moniker-end
+
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 1. [Windows に SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)。
 
@@ -61,8 +69,8 @@ Machine Learning Services では、SQL Server での Python および R スク�
 
 1. 初めての Python または R スクリプトを作成する。
 
-    + [SQL 機械学習用の Python チュートリアル](tutorials/python-tutorials.md)
-    + [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)
+   + [SQL 機械学習用の Python チュートリアル](tutorials/python-tutorials.md)
+   + [SQL 機械学習用の R チュートリアル](tutorials/r-tutorials.md)
 ::: moniker-end
 
 <a name="versions"></a>
@@ -76,7 +84,7 @@ Machine Learning Services では、SQL Server での Python および R スク�
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 
-SQL Server 2016 の R バージョンについては、[「R Services とは」の「R バージョン」セクション](r/sql-server-r-services.md?view=sql-server-2016#version)を参照してください。
+SQL Server 2016 の R バージョンについては、[「R Services とは」の「R バージョン」セクション](r/sql-server-r-services.md?view=sql-server-2016&preserve-view=true#version)を参照してください。
 
 <a name="packages"></a>
 

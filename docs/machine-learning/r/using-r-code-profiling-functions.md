@@ -3,22 +3,22 @@ title: R コード プロファイル関数を使用してパフォーマンス�
 description: R プロファイリング関数を使用することで、パフォーマンスを向上させるのに役立つ情報を収集し、SQL Server での R 計算の結果をより速く得られるようにします。 *rprof* 関数は、内部関数呼び出しに関する情報を収集して返します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 12/12/2018
+ms.date: 10/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e65171fa0222c0c581f692bede727dc4366c9c53
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d15f31dc2c289df910b06de8cb1f48647dbde33c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180442"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384751"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>R コード プロファイル関数を使用してパフォーマンスを向上させる
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-SQL Server のリソースとツールを使用して R スクリプトの実行を監視できるほか、他の R パッケージが提供するパフォーマンス ツールを使用して、内部関数の呼び出しに関する情報を取得できます。 
+この記事では、内部関数呼び出しに関する情報を取得するために R パッケージによって提供されるパフォーマンス ツールについて説明します。 この情報を使用して、コードのパフォーマンスを向上させることができます。
 
 > [!TIP]
 > この記事では、作業を開始するための基本的なリソースについて説明します。 専門家によるガイダンスとしては、[Hadley Wickham 著 "Advanced R"](http://adv-r.had.co.nz) の「*Performance*」の章をお勧めします。
@@ -59,9 +59,11 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>R のデバッグとプロファイル
 
-既定でインストールされる Microsoft R Open のドキュメントには、R 言語の拡張機能の開発に関するマニュアルが含まれており、[プロファイルとデバッグ](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)の詳細について説明しています。 お使いのコンピューターでこちらから同じドキュメントを取得できます。C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual
+既定でインストールされる Microsoft R Open のドキュメントには、R 言語の拡張機能の開発に関するマニュアルが含まれており、[プロファイルとデバッグ](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)の詳細について説明しています。
 
-## <a name="see-also"></a>関連項目
+## <a name="next-steps"></a>次のステップ
 
-+ [utils R パッケージ](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ [Hadley Wickham 著 "Advanced R"](http://adv-r.had.co.nz)
++ SQL Server での R スクリプトの最適化の詳細については、[R でのパフォーマンスのチューニングとデータの最適化](r-and-data-optimization-r-services.md)に関する記事を確認してください。
++ SQL Server でのパフォーマンスの調整の詳細については、「[SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)」を参照してください。
++ utils パッケージの詳細については、「[The R Utils Package (R Utils パッケージ)](https://www.rdocumentation.org/packages/utils/versions/3.5.1)」を参照してください。
++ R のプログラミングの詳細については、「["Advanced R" by Hadley Wickham (Hadley Wickham による "Advanced R")](http://adv-r.had.co.nz)」を参照してください。

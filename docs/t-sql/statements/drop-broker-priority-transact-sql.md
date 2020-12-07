@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef86c39af2116d06fab2f56f1ca049342981e63d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4b1ecefa12702aade36144df55600f696e2042e2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544211"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127450"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "89544211"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP BROKER PRIORITY ConversationPriorityName  
 [;]  
 ```  
@@ -55,9 +54,8 @@ DROP BROKER PRIORITY ConversationPriorityName
 ## <a name="examples"></a>例  
  次の例では、`InitiatorAToTargetPriority` という名前のメッセージ交換の優先度を削除します。  
   
-```  
-DROP BROKER PRIORITY InitiatorAToTargetPriority;  
-  
+```sql  
+DROP BROKER PRIORITY InitiatorAToTargetPriority;
 ```  
   
 ## <a name="see-also"></a>参照  

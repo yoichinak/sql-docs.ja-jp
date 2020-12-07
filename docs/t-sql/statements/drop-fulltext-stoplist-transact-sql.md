@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dd3cc4e5679a5f766f02d7630b3b760290203d43
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e82a6c699aa31b58e5bdd79d122754cabf728941
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549314"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131222"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "89549314"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP FULLTEXT STOPLIST stoplist_name  
 ;  
 ```  
@@ -62,7 +61,7 @@ DROP FULLTEXT STOPLIST stoplist_name
 ## <a name="examples"></a>例  
  次の例では、`myStoplist` というフルテキスト ストップリストを削除します。  
   
-```  
+```sql 
 DROP FULLTEXT STOPLIST myStoplist;  
 ```  
   

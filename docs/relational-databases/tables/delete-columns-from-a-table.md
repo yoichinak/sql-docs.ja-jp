@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2ad600234ac931f408cdf60ba5b2a855823f8151
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446455"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128717"
 ---
 # <a name="delete-columns-from-a-table"></a>テーブルからの列の削除
 
@@ -65,8 +65,8 @@ CHECK 制約がある列を削除することはできません。 最初に制�
 
 ### <a name="to-delete-columns-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用して列を削除するには
 
-1. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。
-2. **オブジェクト エクスプローラー**で、列を削除するテーブルを探し、展開して列名を表示します。
+1. **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。
+2. **オブジェクト エクスプローラー** で、列を削除するテーブルを探し、展開して列名を表示します。
 3. 削除する列を右クリックして、**[削除]** を選びます。
 4. **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。
 
@@ -74,7 +74,7 @@ CHECK 制約がある列を削除することはできません。 最初に制�
 
 ### <a name="to-delete-columns-by-using-table-designer"></a>テーブル デザイナーを使用して列を削除するには
 
-1. **オブジェクト エクスプローラー**で、列を削除するテーブルを右クリックし、 **[デザイン]** をクリックします。
+1. **オブジェクト エクスプローラー** で、列を削除するテーブルを右クリックし、 **[デザイン]** をクリックします。
 2. 削除する列を右クリックし、ショートカット メニューの **[列の削除]** をクリックします。
 3. 列にリレーションシップ (FOREIGN KEY または PRIMARY KEY) が適用されている場合は、選択した列および列のリレーションシップの削除を確認するメッセージが表示されます。 **[はい]** をクリックします。
 

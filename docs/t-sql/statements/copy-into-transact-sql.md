@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (プレビュー)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Azure Synapse Analytics で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行います。
-ms.date: 08/05/2020
+ms.date: 09/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024561"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300289"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -43,9 +43,9 @@ ms.locfileid: "91024561"
 
 COPY ステートメントを使用した包括的な例とクイックスタートについては、次のドキュメントを参照してください。
 
-- [クイック スタート: COPY ステートメントを使用してデータを一括読み込みする](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
-- [クイック スタート: COPY ステートメントとそのサポートされている認証方法の使用例](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [クイック スタート: 機能が豊富な Synapse Studio UI を使用して COPY ステートメントを作成する (Workspace プレビュー)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [クイック スタート: COPY ステートメントを使用してデータを一括読み込みする](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [クイック スタート: COPY ステートメントとそのサポートされている認証方法の使用例](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [クイック スタート: 機能が豊富な Synapse Studio UI を使用して COPY ステートメントを作成する (Workspace プレビュー)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>構文  
 
@@ -75,7 +75,7 @@ WITH
 ## <a name="arguments"></a>引数  
 
 *schema_name*  
-操作を実行するユーザーの既定のスキーマが、指定したテーブルのスキーマと同じ場合は省略可能です。 "*スキーマ*" を指定せず、さらに COPY 操作を実行するユーザーの既定のスキーマが、指定したテーブルのスキーマと異なる場合、COPY は取り消され、エラー メッセージが返されます。  
+操作を実行するユーザーの既定のスキーマが、指定したテーブルのスキーマと同じ場合は省略可能です。 " *スキーマ* " を指定せず、さらに COPY 操作を実行するユーザーの既定のスキーマが、指定したテーブルのスキーマと異なる場合、COPY は取り消され、エラー メッセージが返されます。  
 
 *table_name*  
 データの COPY 先のテーブルの名前です。 ターゲット テーブルは、一時テーブルまたはパーマネント テーブルであり、データベースに既に存在している必要があります。 
@@ -95,11 +95,11 @@ WITH
 *External locations(s)*</br>
 データを含むファイルがステージングされる場所です。 現在、Azure Data Lake Storage (ADLS) Gen2 と Azure Blob Storage がサポートされています。
 
-- Blob Storage の *External location*: https://<account>.blob.core.windows.net/<container>/<path>
-- ADLS Gen2 の *External location*: https://<account>. dfs.core.windows.net/<container>/<path>
+- Blob Storage の *External location* : https://<account>.blob.core.windows.net/<container>/<path>
+- ADLS Gen2 の *External location* : https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> BLOB エンドポイントは、下位互換性のため ADLS Gen2 で使用できます。 最適なパフォーマンスを得るには、**BLOB** エンドポイントを使用します。
+> .blob エンドポイントは ADLS Gen2 にも使用でき、現在最高のパフォーマンスを実現しています。 お使いの認証方法で .dfs が必要ない場合、.blob エンドポイントを使用します。
 
 - *Account* - ストレージ アカウント名
 
@@ -136,18 +136,25 @@ WITH
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* は、外部ストレージ アカウントにアクセスするための認証メカニズムを指定します。 認証方法を次に示します。
 
-|                          |                CSV                |              Parquet               |                ORC                 |
-| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
-|  **Azure Blob Storage**  | SAS/MSI/サービス プリンシパル/キー/AAD |              SAS/キー               |              SAS/キー               |
-| **Azure Data Lake Gen2** | SAS/MSI/サービス プリンシパル/キー/AAD | SAS (BLOB エンドポイント)/MSI (dfs エンドポイント)/サービス プリンシパル/キー/AAD | SAS (BLOB エンドポイント)/MSI (dfs エンドポイント)/サービス プリンシパル/キー/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Azure Blob Storage**  | SAS/MSI/サービス プリンシパル/キー/AAD |                      SAS/キー                       |                      SAS/キー                       |
+| **Azure Data Lake Gen2** | SAS/MSI/サービス プリンシパル/キー/AAD | SAS (BLOB<sup>1</sup>)/MSI (dfs<sup>2</sup>)/サービス プリンシパル/キー/AAD | SAS (BLOB<sup>1</sup>)/MSI (dfs<sup>2</sup>)/サービス プリンシパル/キー/AAD |
+
+1:この認証方法には、お使いの外部のロケーション パスに .blob エンドポイント ( **.blob** .core.windows.net) が必要です。
+
+2:この認証方法には、お使いの外部のロケーション パスに .dfs エンドポイント ( **.dfs** .core.windows.net) が必要です。
 
 
-AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
+> [!NOTE]  
+>
+> - AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
+> - ストレージ アカウントが VNet に関連付けられている場合は、MSI (マネージド ID) を使用して認証する必要があります。
 
 - Shared Access Signatures (SAS) を使用した認証
   
   - *IDENTITY:* "Shared Access Signature" の値が含まれている定数
-  - *SECRET:*  [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
+  - *SECRET:*  [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) " *を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
   -  最低限必要な権限: READ および LIST
   
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
@@ -172,7 +179,7 @@ AAD またはパブリック ストレージ アカウントを使用して認�
   - 最低限必要な RBAC ロール: AAD ユーザーに対するストレージ BLOB データ共同作成者またはストレージ BLOB データ所有者
 
 *ERRORFILE = Directory Location*</br>
-*ERRORFILE* は CSV にのみ適用されます。 COPY ステートメント内でディレクトリを指定します。拒否された行と該当するエラー ファイルがそこに書き込まれます。 ストレージ アカウントからの完全なパスを指定することも、コンテナーを基準とした相対パスを指定することもできます。 指定したパスが存在しない場合は、自動的に作成されます。 "_rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 
+*ERRORFILE* は CSV にのみ適用されます。 COPY ステートメント内でディレクトリを指定します。拒否された行と該当するエラー ファイルがそこに書き込まれます。 ストレージ アカウントからの完全なパスを指定することも、コンテナーを基準とした相対パスを指定することもできます。 指定したパスが存在しない場合は、自動的に作成されます。 " _rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 
 
 このディレクトリ内には、YearMonthDay -HourMinuteSecond (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーには、理由 (エラー) ファイルとデータ (行) ファイルの 2 種類のファイルが書き込まれ、それぞれ queryID、distributionID、ファイル GUID が事前に追加されています。 データと理由が別々のファイル内にあり、対応するファイルはプレフィックスが一致しています。
 
@@ -186,7 +193,7 @@ ERRORFILE でストレージ アカウントの完全なパスが定義されて
   
 - Shared Access Signatures (SAS) を使用した認証
   - *IDENTITY:* "Shared Access Signature" の値が含まれている定数
-  - *SECRET:*  [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
+  - *SECRET:*  [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) " *を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
   - 最低限必要な権限: READ、LIST、WRITE、CREATE、DELETE
   
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
@@ -422,9 +429,6 @@ WITH (
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Parquet ファイルまたは ORC ファイルを読み込む COPY コマンドに関するファイルの分割ガイダンスについて教えてください。
 COPY コマンドによって自動的にファイルが分割されるため、Parquet ファイルと ORC ファイルを分割する必要はありません。 最適なパフォーマンスを得るには、Azure ストレージ アカウントの Parquet ファイルと ORC ファイルが 256MB 以上である必要があります。 
-
-### <a name="when-will-the-copy-command-be-generally-available"></a>COPY コマンドはいつ一般公開されますか?
-COPY コマンドは、この暦年 (2020) の終わりまでに一般提供されます。 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>ファイルの数やサイズに制限はありますか?
 ファイルの数やサイズに制限はありません。ただし、最適なパフォーマンスを得るには、少なくとも 4 MB のファイルを使用することをお勧めします。

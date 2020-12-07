@@ -12,12 +12,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: da776f4ccddcfaaa6c0f8e6af6363f2ef9a1f13d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3fd592913164d92851ca738090de9dd200df66f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913898"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719307"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics タスク
 
@@ -59,8 +59,8 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 |SourceType|動的オプション|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|送信する U-SQL クエリを、オプション ボックスに直接入力します。または、参照ボタン [...] をクリックし、 **[Enter U-SQL Query]\(U-SQL クエリの入力\)** ダイアログ ボックスで U-SQL クエリを入力します。|  
-|**SourceType = FileConnection**|既存のファイル接続マネージャーを選択するか、<**新しい接続…** > を選択して新しいファイル接続を作成します。 関連情報については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」と「[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)」をご覧ください。|  
-|**SourceType = Variable**|既存の変数を選択するか、[\<**New variable...**>] を選択して新しい変数を作成します。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)」をご覧ください。|
+|**SourceType = FileConnection**|既存のファイル接続マネージャーを選択するか、<**新しい接続…** > を選択して新しいファイル接続を作成します。 関連情報については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」と「[ファイル接続マネージャー エディター](../connection-manager/file-connection-manager.md)」をご覧ください。|  
+|**SourceType = Variable**|既存の変数を選択するか、[\<**New variable...**>] を選択して新しい変数を作成します。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[変数の追加](../integration-services-ssis-variables.md)」をご覧ください。|
 | &nbsp; | &nbsp; |
 
 
@@ -137,4 +137,3 @@ OUTPUT @rs1
 - [Azure Data Lake Analytics 接続マネージャー](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
 - [Azure Data Lake Store ファイル システム タスク](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 - [Azure Data Lake Store 接続マネージャー](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-

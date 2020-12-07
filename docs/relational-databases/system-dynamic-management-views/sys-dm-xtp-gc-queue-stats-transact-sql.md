@@ -1,6 +1,6 @@
 ---
-description: dm_xtp_gc_queue_stats (Transact-sql)
-title: dm_xtp_gc_queue_stats (Transact-sql) |Microsoft Docs
+description: sys.dm_xtp_gc_queue_stats (Transact-sql)
+title: sys.dm_xtp_gc_queue_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5431cba1f886aee939d9a70d9b05fd65398184ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f1c2a816af4936d51473cd9770e6c52f46f277fa
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539239"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439485"
 ---
-# <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>dm_xtp_gc_queue_stats (Transact-sql)
+# <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-sql)
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -55,7 +55,7 @@ ms.locfileid: "89539239"
 ## <a name="user-scenario"></a>ユーザーシナリオ  
  この出力は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が 4 コアで実行中か、または、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが 4 コアに関連付けられていることを示しています。  
   
- この出力は、処理する作業項目がキューにないことを示しています。 キュー 0 の場合、SQL の起動後、キューから削除された作業項目が合計 15625 で、キューの最大項目数は 215625 に設定されています。  
+ この出力は、処理する作業項目がキューにないことを示しています。 キュー0の場合、SQL スタートアップが15625でキューの深さの最大値が15625であるため、合計作業項目がキューから解除されます。  
   
 ```  
 queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth  last_service_ticks  

@@ -17,12 +17,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e93eeab1636dd2ee866ee6727bddb99c58a8c14
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 04f5ea78761812c54c13fcf611d3f6e4765769a5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332228"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869495"
 ---
 # <a name="choose-an-encryption-algorithm"></a>暗号化アルゴリズムの選択
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "87332228"
 >   
 >  異なるデータ ブロックに対して同じ RC4 または RC4_128 KEY_GUID を繰り返し使用すると、同一の RC4 キーが生成されます。これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が自動的に salt を提供しないためです。 同一の RC4 キーを繰り返し使用することは、暗号強度を著しく低下させる周知の間違いです。 そのため、RC4 キーワードおよび RC4_128 キーワードは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- 暗号化アルゴリズムおよび暗号化テクノロジの詳細については、MSDN の『.NET Framework 開発者ガイド』で、「 [セキュリティの基本概念](https://go.microsoft.com/fwlink/?LinkId=62082) 」を参照してください。  
+ 暗号化アルゴリズムおよび暗号化テクノロジの詳細については、MSDN の『.NET Framework 開発者ガイド』で、「 [セキュリティの基本概念](/previous-versions/aa720225(v=vs.71)) 」を参照してください。  
   
  **DES アルゴリズムに関する説明:**  
   
@@ -77,5 +77,4 @@ ms.locfileid: "87332228"
 ## <a name="see-also"></a>参照  
  [SQL Server の暗号化](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [暗号化階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

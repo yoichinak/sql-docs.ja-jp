@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1e4c3e685bd3dc294ae1a71d54a478b937df8a0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6605fd1fd9aee53bc117701acddd5ffe28e16d8
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934291"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934709"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services レポート サーバー (SharePoint モード)
 
@@ -29,7 +29,7 @@ ms.locfileid: "87934291"
 
  インストールと構成の詳細については、以下を参照してください。  
   
--   [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)。  
+-   [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)。  
   
 -   [ファームへのレポート サーバーの追加](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "87934291"
   
 - Reporting Services から提供されるすべてのアプリケーション ページ、ツール、エラー、警告、およびメッセージは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語のうち Reporting Services インスタンスによって使用される言語で表示されます。  
   
-- SharePoint サイトで開くアプリケーション ページ、レポート ビューアー Web パーツ、およびレポート ビルダーは、Reporting Services アドインでサポートされている言語のいずれかで表示されます。 サポートされている言語の一覧を表示するには、[SQL Server ダウンロード](https://msdn.microsoft.com/sql/downloads/)にアクセスし、SQL Server 2016 Reporting Services アドインのダウンロード ページを開いてください。  
+- SharePoint サイトで開くアプリケーション ページ、レポート ビューアー Web パーツ、およびレポート ビルダーは、Reporting Services アドインでサポートされている言語のいずれかで表示されます。 サポートされている言語の一覧を表示するには、[SQL Server ダウンロード](/powerapps/developer/common-data-service/org-service/subscribe-sdk-assembly-updates-using-nuget)にアクセスし、SQL Server 2016 Reporting Services アドインのダウンロード ページを開いてください。  
   
 - SharePoint サイト、SharePoint のサーバーの全体管理、オンライン ヘルプ、メッセージは、Office Server 製品でサポートされる言語で使用できます。  
   
@@ -129,8 +129,8 @@ ms.locfileid: "87934291"
   
 |**タスク**|**リンク**|  
 |--------------|--------------|  
-|SharePoint モードの Reporting Services をインストールおよび構成するための詳細な手順。|「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)」および「[ファームへのレポート サーバーの追加](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」。|  
-|レポート サーバーの追加による Reporting Services SharePoint 配置のスケールアウト。|「[ファームへのレポート サーバーの追加](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」および「[SharePoint の SQL Server BI 機能の配置トポロジ](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)」。|  
+|SharePoint モードの Reporting Services をインストールおよび構成するための詳細な手順。|「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)」および「[ファームへのレポート サーバーの追加](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」。|  
+|レポート サーバーの追加による Reporting Services SharePoint 配置のスケールアウト。|「[ファームへのレポート サーバーの追加](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」および「[SharePoint の SQL Server BI 機能の配置トポロジ](/previous-versions/sql/sql-server-2016/hh231674(v=sql.130))」。|  
 |表示およびレポート アイテム用の Reporting Services コンポーネントがインストールされている SharePoint Web フロントエンドの追加。|[ファームへの Reporting Services Web フロントエンドの追加](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |SharePoint でレポート サーバーの電子メールを構成します。|[Reporting Services サービス アプリケーションの電子メールの構成](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
 |TechNet Wiki に掲載されている、今リリース向けの最新情報。|[SQL Server 2012 Reporting Services の役立つヒントおよびトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=221297)。|  
@@ -138,6 +138,6 @@ ms.locfileid: "87934291"
 ## <a name="next-steps"></a>次のステップ
 
 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
-[SharePoint サイトのレポート ビューアー Web パーツ ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
+[SharePoint サイトのレポート ビューアー Web パーツ ](./report-viewer-web-part-sharepoint-site.md)
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

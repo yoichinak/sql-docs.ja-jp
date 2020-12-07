@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database restores [SQL Server], full differential backups
 - backing up databases [SQL Server], full differential backups
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 56217ec9891b2762af7d9d48e1f108167b3cdc01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6015242cd42a2e3b932a88cff827968cfb514c39
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717987"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129186"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>データベースの差分バックアップの復元 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "85717987"
   
 3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をポイントして、 **[データベース]** をクリックします。  
   
-4.  **[全般]** ページの **復元元**のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
+4.  **[全般]** ページの **復元元** のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
     -   **[データベース]**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "85717987"
   
          **メモ** この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。  
   
-5.  **復元先のセクション**の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
+5.  **復元先のセクション** の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
   
     > [!NOTE]  
     >  特定の時点で復元を停止するには、 **[タイムライン]** をクリックして、 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスします。 特定の時点でデータベースの復元を停止する方法については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  

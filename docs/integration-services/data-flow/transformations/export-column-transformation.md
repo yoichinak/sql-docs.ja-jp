@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d7741de0a6a1d0195344613330bffd3f0c0c62d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cf2f0799896bfaac652e00a7736a0de3d8be97e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495730"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123369"
 ---
 # <a name="export-column-transformation"></a>列エクスポート変換
 
@@ -44,11 +44,11 @@ ms.locfileid: "88495730"
 |False|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |True|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |False|True|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
-|True|True|いいえ|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
+|True|True|いいえ|デザイン時の検証に失敗します。 両方のプロパティに **true** を設定するのは無効です。|  
 |False|False|はい|実行時エラーが発生します。 ファイルは存在しますが、そのファイルに書き込めません。|  
 |False|True|はい|ファイルが削除されて再作成され、データが書き込まれます。|  
 |True|False|はい|ファイルが開かれ、そのファイルの終わりにデータが書き込まれます。|  
-|True|True|はい|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
+|True|True|はい|デザイン時の検証に失敗します。 両方のプロパティに **true** を設定するのは無効です。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>列エクスポート変換の構成  
  列エクスポート変換は、次の方法で構成できます。  
@@ -70,7 +70,7 @@ ms.locfileid: "88495730"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -119,5 +119,4 @@ ms.locfileid: "88495730"
   
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
-  
   

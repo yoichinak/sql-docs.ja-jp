@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: af86eae9866960c58ec9967f32a45998e5a91106
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147583"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727257"
 ---
 # <a name="sql-server-login-dialog-box"></a>[SQL Server ログイン] ダイアログ ボックス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "88147583"
 > [!NOTE]  
 > [SQL Server ログイン] ダイアログのプロンプト動作は、`DBPROP_INIT_PROMPT` 初期化プロパティによって制御されます。 詳細については、次を参照してください。
 > - [初期化プロパティと承認プロパティ](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [OLE DB プログラマー ガイド](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [OLE DB プログラマー ガイド](/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![[SQL Server ログイン] ダイアログ ボックスのスクリーンショット](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>オプション
 |オプション|説明|
 |---   |---        |
-|サーバー|ネットワーク上の SQL Server のインスタンスの名前です。 一覧から server\instance 形式の名前を選択するか、 **[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー**を使用してクライアント コンピューターでサーバーの別名を作成し、 **[サーバー]** ボックスにその名前を入力することができます。 <br/><br/>SQL Server と同じコンピューターを使用している場合は、「(local)」と入力することができます。 その後、ネットワークに接続されていない SQL Server を実行している場合でも、SQL Server のローカル インスタンスに接続することができます。<br/><br/>さまざまな種類のネットワークに対応するサーバー名の詳細については、[SQL Server のインストール](https://go.microsoft.com/fwlink/?linkid=2067541)に関するページを参照してください。|
+|サーバー|ネットワーク上の SQL Server のインスタンスの名前です。 一覧から server\instance 形式の名前を選択するか、 **[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー**を使用してクライアント コンピューターでサーバーの別名を作成し、 **[サーバー]** ボックスにその名前を入力することができます。 <br/><br/>SQL Server と同じコンピューターを使用している場合は、「(local)」と入力することができます。 その後、ネットワークに接続されていない SQL Server を実行している場合でも、SQL Server のローカル インスタンスに接続することができます。<br/><br/>さまざまな種類のネットワークに対応するサーバー名の詳細については、[SQL Server のインストール](../../../database-engine/install-windows/install-sql-server.md)に関するページを参照してください。|
 |認証モード|ドロップダウン リストから、次の認証オプションを選択できます。<br/><ul><li>`Windows Authentication:` 現在ログインしているユーザーの Windows アカウントの資格情報を使用した SQL Server に対する認証。</li><li>`SQL Server Authentication:` ログイン ID とパスワードを使用した認証。</li><li>`Active Directory - Integrated:` Azure Active Directory の ID による統合認証。 このモードは、SQL Server に対する Windows 認証でも使用できます。</li><li>`Active Directory - Password:` Azure Active Directory の ID によるユーザー ID とパスワードの認証。</li><li>`Active Directory - Universal with MFA support:` Azure Active Directory の ID による対話型認証。 このモードでは、Azure Multi-Factor Authentication (MFA) がサポートされます。</li></ul>|
 |サーバー SPN|セキュリティ接続を使用する場合、サーバーのサービス プリンシパル名 (SPN) を指定できます。|
 |Login ID|接続に使用するログイン ID を指定します。 [ログイン ID] テキスト ボックスは、`Authentication Mode` が `SQL Server Authentication`、`Active Directory - Password`、または `Active Directory - Universal with MFA support` に設定されている場合にのみ有効になります。|

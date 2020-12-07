@@ -1,45 +1,45 @@
 ---
 title: 非同期操作
-description: .NET Framework で使用されている非同期モデルに基づいて設計された API を使用し、非同期データベース操作を実行する方法について説明します。
+description: .NET Framework で使用されている非同期モデルに基づいて設計された API を使用して、非同期データベース操作を実行する方法について説明します。
 ms.date: 09/30/2019
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bc2a921e3aec0068c11b2baab45c396d853a1a36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3923db97ce144662f7fe5410c13278862d1ab6a1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897064"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725681"
 ---
 # <a name="asynchronous-operations"></a>非同期操作
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-コマンドの実行など、一部のデータベース操作は、完了するまでに時間がかかる場合があります。 このような場合、シングルスレッド アプリケーションでは、他の操作をブロックしなければならず、そのコマンドの完了を待ってから独自の操作を続行する必要があります。 これに対して、実行時間の長い操作をバックグラウンド スレッドに割り当てることができると、フォアグラウンド スレッドが途中でブロックされることがなくなります。 たとえば、Windows アプリケーションでは、実行時間の長い操作をバックグラウンド スレッドに委任すると、その操作の実行中にユーザー インターフェイス スレッドの応答性を維持することができます。  
+コマンドの実行など、データベースでの一部の操作は、完了までに長時間かかることがあります。 このような場合、シングルスレッド アプリケーションでは、他の操作をブロックしなければならず、そのコマンドの完了を待ってから独自の操作を続行する必要があります。 これに対して、長時間にわたる操作をバックグラウンド スレッドに割り当てることができれば、フォアグラウンド スレッドがアクティブなまま操作を続行できます。 たとえば、Windows アプリケーションでは、操作を実行中のユーザー インターフェイス スレッドの応答性を維持しながら、時間のかかる操作をバックグラウンド スレッドに委任することができます。  
   
-.NET には、開発者がバックグラウンド スレッドを利用し、ユーザー インターフェイスや優先順位の高いスレッドを解放してその <xref:Microsoft.Data.SqlClient.SqlCommand> クラスの他の操作を完了するために使用できる、標準の非同期デザイン パターンがいくつか用意されています。 具体的には、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> メソッドを <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドと組み合わせて非同期サポートが提供されます。  
+.NET には、開発者がバックグラウンド スレッドを利用し、ユーザー インターフェイスや優先順位の高いスレッドを解放してその <xref:Microsoft.Data.SqlClient.SqlCommand> クラスの他の操作を完了するために使用できる、標準の非同期デザイン パターンがいくつか用意されています。 特に、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、および <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドと、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A>、および <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> メソッドとのペアによって、非同期動作がサポートされています。  
   
 > [!NOTE]
->  非同期プログラミングは .NET のコアとなる機能です。 開発者が使用できるさまざまな非同期技法の詳細については、「[同期メソッドの非同期呼び出し](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)」を参照してください。  
+>  非同期プログラミングは .NET のコアとなる機能です。 開発者が使用できるさまざまな非同期技法の詳細については、「[同期メソッドの非同期呼び出し](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)」を参照してください。  
   
-ADO.NET 機能で非同期技法を使用しても特別な考慮事項は追加されませんが、マルチスレッド アプリケーションを作成する利点と落とし穴に注意することが重要です。 このセクションの以降の例では、開発者がマルチスレッド機能を組み込んだアプリケーションを構築する際に考慮する必要のあるいくつかの重要な問題をとりあげます。  
+ADO.NET 機能で非同期技法を使用しても特別な考慮事項は追加されませんが、マルチスレッド アプリケーションを作成する利点と落とし穴に注意することが重要です。 このセクションに示す例は、マルチスレッド機能を組み込むアプリケーションを構築する際に考慮すべき重要な問題を提示しています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [コールバックを使用する Windows アプリケーション](windows-applications-callbacks.md)  
-非同期コマンドを安全に実行して、別のスレッドからのフォームやその内容の操作を正しく処理する方法の例を示します。  
+この例では、非同期コマンドを安全に実行し、異なるスレッドのフォームと内容との対話を正しく処理する方法を示します。  
   
 [待機ハンドルを使用する ASP.NET アプリケーション](aspnet-apps-use-wait-handles.md)  
-ASP.NET ページから複数の同時実行コマンドを実行する方法の例を示します。Wait ハンドルを使用してすべてのコマンドの完了時に操作を管理します。  
+この例では、ASP.NET ページから複数の同時実行コマンドを実行し、すべてのコマンドの終了時に Wait ハンドルを使用して操作を管理する方法を示します。  
   
 [コンソール アプリケーションでのポーリング](poll-console-applications.md)  
-ポーリングを使用して、コンソール アプリケーションからの非同期コマンドの実行が完了するまで待機する例を示します。 この手法は、クラス ライブラリや、ユーザー インターフェイスのないその他のアプリケーションでも有効です。  
+この例では、ポーリングを使用して非同期コマンドの実行をコンソール アプリケーションで待機する方法を示します。 この技法は、クラス ライブラリまたはユーザー インターフェイスを持たないその他のアプリケーションでも有効です。  
   
 ## <a name="next-steps"></a>次のステップ
 - [SQL Server と ADO.NET](index.md)
-- [同期メソッドの非同期呼び出し](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)
+- [同期メソッドの非同期呼び出し](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)

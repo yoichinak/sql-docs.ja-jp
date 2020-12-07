@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d47d7492b9c4973d58113c80e5cca737315282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 28f1287ead4b3c84f5dcb65ec24564b9341d33f0
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540843"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384675"
 ---
 # <a name="temporal-table-usage-scenarios"></a>テンポラル テーブルの使用シナリオ
 
@@ -33,7 +33,7 @@ ms.locfileid: "89540843"
 次の図に、現在 (青) と履歴行バージョン (グレー) のデータ サンプルを含む Employee テーブルのシナリオを示します。
 図の右側部分では、テンポラル テーブルに対して (SYSTEM_TIME 句を使用した場合、または使用しない場合の) 異なる種類のクエリを実行したときに選択される行バージョンを時間軸により視覚化しています。
 
-![テンポラルの使用シナリオ 1](../../relational-databases/tables/media/temporalusagescenario1.png "テンポラルの使用シナリオ 1")
+![最初のテンポラルの使用シナリオを示す図。](../../relational-databases/tables/media/temporalusagescenario1.png "テンポラルの使用シナリオ 1")
 
 ### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>データ監査用に新しいテーブルでシステム バージョン管理を有効にする
 
@@ -59,7 +59,7 @@ CREATE TABLE Employee
 
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>データ監査用に既存のテーブルでシステム バージョン管理を有効にする
 
-既存のデータベースのデータを監査する必要がある場合、ALTER TABLE を使用し、非テンポラル テーブルをシステム バージョン管理テーブルにします。 アプリケーションの破壊的変更を回避するために、「[非テンポラル テーブルをシステム バージョン管理されたテンポラル テーブルに変更する](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)」の説明に従って、期間列を HIDDEN として追加します。 次の例では、仮定の HR データベース内の既存の Employee テーブルで、システム バージョン管理を有効にする方法について説明します。
+既存のデータベースのデータを監査する必要がある場合、ALTER TABLE を使用し、非テンポラル テーブルをシステム バージョン管理テーブルにします。 アプリケーションの破壊的変更を回避するために、「[非テンポラル テーブルをシステム バージョン管理されたテンポラル テーブルに変更する](./creating-a-system-versioned-temporal-table.md)」の説明に従って、期間列を HIDDEN として追加します。 次の例では、仮定の HR データベース内の既存の Employee テーブルで、システム バージョン管理を有効にする方法について説明します。
 
 ```sql
 /*
@@ -175,7 +175,7 @@ AT TIME ZONE は、システム バージョン管理されたテーブルを使
 
 次の図では、在庫管理に使用される単純なデータ モデルを示します。
 
-![インメモリでのテンポラルの使用](../../relational-databases/tables/media/temporalusageinmemory.png "インメモリでのテンポラルの使用")
+![在庫管理に使用される単純なデータ モデルを示す図。](../../relational-databases/tables/media/temporalusageinmemory.png "インメモリでのテンポラルの使用")
 
 次のコード例では、ProductInventory は、(既定で作成される行ストア インデックスを実際に置き換える) クラスター化列ストア インデックスが履歴テーブルにある、システム バージョン管理されたテンポラル テーブルがメモリ内に作成されます。
 
@@ -255,13 +255,14 @@ BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL=SNAPSHOT, LANGUAGE=N'English')
                         @productId
                        ,@locationId
                        ,@quantityIncrement
+                   )
         END
 END;
 ```
 
 spUpdateInventory ストアド プロシージャによって、在庫に新しい製品が挿入されるか、特定の場所の製品の数量が更新されます。 このビジネス ロジックは、テーブルの更新によって Quantity フィールドを増減させ、常に最新の状態を正しく維持することに焦点を当てており、非常に単純です。それに対し、システム バージョン管理されたテーブルでは、次の図のとおり、履歴ディメンションをデータに追加します。
 
-![インメモリでのテンポラルの使用 2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "インメモリでのテンポラルの使用 2b")
+![現在のメモリ内使用を含むテンポラルの使用と、クラスター化列ストアでの使用履歴を示す図。](../../relational-databases/tables/media/temporalusageinmemory2b.png "インメモリでのテンポラルの使用 2b")
 
 これで、ネイティブにコンパイルされているモジュールから最新の状態を効率的にクエリできます。
 
@@ -295,7 +296,7 @@ SELECT * FROM vw_GetProductInventoryHistory
 
 次の図には、Power Query、Power BI または類似のビジネス インテリジェンス ツールに前述のビューをインポートすることにより、簡単にレンダリングできる 1 つの製品のデータ履歴を示しています。
 
-![製品履歴の推移](../../relational-databases/tables/media/producthistoryovertime.png "製品履歴の推移")
+![1 つの製品のデータ履歴を示す図。](../../relational-databases/tables/media/producthistoryovertime.png "製品履歴の推移")
 
 このシナリオでテンポラル テーブルを使用すると、過去の任意の時点の在庫の状態の再構築や、別の時点のスナップショットとの比較など、その他の種類のタイム トラベル分析を行えます。
 
@@ -348,7 +349,7 @@ SELECT * FROM vw_ProductInventoryDetails
 
 次の図は、SELECT クエリ用に生成された実行計画です。 これは、テンポラルな関係を処理するすべての複雑さは、完全に SQL Server エンジンに処理されることを示しています。
 
-![AS OF の実行プラン](../../relational-databases/tables/media/asofexecutionplan.png "AS OF の実行プラン")
+![SELECT クエリ用に生成された実行プランを示す図。テンポラルな関係を処理するすべての複雑さが SQL Server エンジンによって完全に処理されることを示しています。](../../relational-databases/tables/media/asofexecutionplan.png "AS OF の実行プラン")
 
 次のコードを使用すると、ある 2 つの時点 (前日と 1 か月前) の製品の在庫の状態を比較できます。
 
@@ -390,7 +391,7 @@ CREATE TABLE [dbo].[Product]
 
 次の図は購入を時間順に示しています。
 
-![テンポラルの異常検出](../../relational-databases/tables/media/temporalanomalydetection.png "テンポラルの異常検出")
+![購入を時間順に示している図。](../../relational-databases/tables/media/temporalanomalydetection.png "テンポラルの異常検出")
 
 通常の日は購入品数にはあまり変動がないことを前提に、次のクエリでは単一の外れ値が識別されます。つまり、周りのサンプルは大きくは変わらない中 (20% 未満)、すぐ隣のものと比較して大きく異なる (2 倍) サンプルが識別されます。
 
@@ -466,7 +467,7 @@ ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLoca
 
 次の図は、2 つの SCD (DimLocation および DimProduct) と 1 つのファクト テーブルを使用する単純なシナリオでテンポラル テーブルを使用する方法を示します。
 
-![テンポラルの SCD](../../relational-databases/tables/media/temporalscd.png "テンポラルの SCD")
+![2 つの SCD (DimLocation および DimProduct) と 1 つのファクト テーブルを使用する単純なシナリオでテンポラル テーブルを使用する方法を示す図。](../../relational-databases/tables/media/temporalscd.png "テンポラルの SCD")
 
 レポートで上述の SCD を使用するには、クエリを効率的に調整する必要があります。 たとえば、過去 6 か月間の売上額合計と 1 人当たりが販売した製品の平均数を計算したいとします。 両方のメトリックでは、ファクト テーブルとディメンションのデータに相関関係がある必要があることに注意してください (DimLocation.NumOfCustomers、DimProduct.UnitPrice)。分析に重要なその属性に変更がある可能性があります。 次のクエリによって、必要なメトリックが正しく計算されます。
 
@@ -539,13 +540,13 @@ UPDATE Employee
 
 次の図は、プロシージャの呼び出しの前後に行の状態を示しています。 長方形で赤くマークされているのは、不正な行バージョンで、長方形で緑にマークされているのは履歴の正しいバージョンです。
 
-![テンポラル使用の修復 1](../../relational-databases/tables/media/temporalusagerepair1.png "テンポラル使用の修復 1")
+![プロシージャの呼び出しの前後の行の状態を示すスクリーンショット](../../relational-databases/tables/media/temporalusagerepair1.png "テンポラル使用の修復 1")
 
 ```sql
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
 ```
 
-![テンポラル使用の修復 2](../../relational-databases/tables/media/temporalusagerepair2.png "テンポラル使用の修復 2")
+![修正された行を示すスクリーンショット。](../../relational-databases/tables/media/temporalusagerepair2.png "テンポラル使用の修復 2")
 
 この修復のストアド プロシージャは、行のバージョンではなく、正確なタイムスタンプを受け入れるように定義できます。 これでは、提供された時点でアクティブであった任意のバージョンに行を復元します (つまり、AS OF の時点)。
 
@@ -567,11 +568,11 @@ UPDATE Employee
 
 次の図では、同じデータ サンプルを時間条件で復元するシナリオを示しています。 @asOf パラメーター、提供された時点で履歴で実際に選択されていた行、修復操作後の現在のテーブルの新しい行バージョンが強調表示されています。
 
-![テンポラル使用の修復 3](../../relational-databases/tables/media/temporalusagerepair3.png "テンポラル使用の修復 3")
+![時間条件がある修復シナリオを示すスクリーンショット。](../../relational-databases/tables/media/temporalusagerepair3.png "テンポラル使用の修復 3")
 
 データ修正は、データ ウェアハウスおよびレポート システムで自動的にデータを読み込む際の一部にできます。 新しく更新された値がそのとき不正な場合、多くのシナリオでは、履歴から以前のバージョンを復元することで十分に対応できます。 次の図では、これを自動化する手順を示します。
 
-![テンポラル使用の修復 4](../../relational-databases/tables/media/temporalusagerepair4.png "テンポラル使用の修復 4")
+![プロセスを自動化する方法を示す図。](../../relational-databases/tables/media/temporalusagerepair4.png "テンポラル使用の修復 4")
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c5e7e9ccd0e71b8fe798b1b8f1cca7a7c3097d1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f47c2dd34b6a94ae8e3e777aa2ff8f1878849d5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466274"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196882"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバー
 Microsoft Visual FoxPro は、データベース構築とアプリケーション開発を行うための強力なオブジェクト指向環境です。 Microsoft Visual FoxPro ODBC ドライバーを使用すると、アプリケーションは、Open Database Connectivity (ODBC) インターフェイスを使用して、Visual FoxPro およびそれ以前のバージョンの FoxPro のデータを開いたり、クエリを実行したり、更新したりすることができます。  
@@ -45,4 +45,4 @@ Microsoft Visual FoxPro は、データベース構築とアプリケーショ�
 |Visual C++ を使用して Visual FoxPro データにアクセスする簡単な例を見る|[C または C++ アプリケーションでの Visual FoxPro ODBC ドライバーの使用](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
 |サポートされているハードウェアとソフトウェアの一覧を表示する|[システム要件](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
- Visual FoxPro ODBC ドライバーのダウンロードとインストールの詳細については、MSDN ダウンロードの「 [Visual FOXPRO Odbc ドライバー](https://go.microsoft.com/fwlink/?LinkId=121318) 」を参照してください。
+ Visual FoxPro ODBC ドライバーのダウンロードとインストールの詳細については、MSDN ダウンロードの「 [Visual FOXPRO Odbc ドライバー](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)) 」を参照してください。

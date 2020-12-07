@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 052d533e503f5b82f506ec119684acbbfe7cdd5f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480610"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192352"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX データ操作 - ALTER CUBE
 
 
-  指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用の詳細については、このブログの投稿「 [Analysis Services を使用した書き戻しアプリケーションの構築 (ブログ)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services) 」を参照してください。  
+  指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用の詳細については、このブログの投稿「 [Analysis Services を使用した書き戻しアプリケーションの構築 (ブログ)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services) 」を参照してください。  
   
  同時実行ディメンションの書き戻しによってデッドロックが発生する可能性があることに注意してください。2番目の書き戻しによって保持されている共有ロックが原因で、最初の書き戻しがコミットからブロックされます。 このような状況では、エラーは生成されません。また、どのような操作も実行されません。 最終的には、タイムアウトと変更の両方がロールバックされます。  
   
@@ -164,7 +164,6 @@ CELL CALCULATION Calculation_Name
 ## <a name="creating-a-cell-calculation"></a>セル計算の作成  
  ALTER CUBE ステートメントを使用してセル計算を作成する方法の詳細については、「 [DROP CELL Calculation ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Mdx&#41;&#40;mdx データ定義ステートメント ](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

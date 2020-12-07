@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e43b37dd96a931d98555f05fe6e70b9f8a4f99e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088170"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129173"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>マークされたトランザクションを含む関連データベースの復旧
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88088170"
   
 -   トランザクション マークはログ領域を使用するので、データベース復旧ストラテジにおいて重要な役割を果たすトランザクションだけに使用する必要があります。  
   
--   マークされたトランザクションのコミットが完了したら、 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) の **logmarkhistory**テーブルに 1 行が挿入されます。  
+-   マークされたトランザクションのコミットが完了したら、 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) の **logmarkhistory** テーブルに 1 行が挿入されます。  
   
 -   マークされたトランザクションが同じデータベース サーバーまたは異なるサーバー上の複数のデータベースと関係している場合は、影響を受けたすべてのデータベースのログにそのマークが記録される必要があります。 詳細については、「 [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)」を参照してください。  
   
@@ -73,7 +73,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  STOPATMARK オプションと STOPBEFOREMARK オプションは両方とも、省略可能な AFTER *datetime* 句をサポートしています。 *datetime* を使用する場合、マーク名を一意にする必要はありません。  
   
- AFTER *datetime* の指定を省略すると、指定した名前を持つ最初のマークでロールフォワードが停止します。 AFTER *datetime* を指定すると、 *datetime*以降の指定した名前を持つ最初のマークでロールフォワードが停止します。  
+ AFTER *datetime* の指定を省略すると、指定した名前を持つ最初のマークでロールフォワードが停止します。 AFTER *datetime* を指定すると、 *datetime* 以降の指定した名前を持つ最初のマークでロールフォワードが停止します。  
   
 > [!NOTE]  
 >  時間を指定したすべての復元操作と同様に、一括ログ記録の対象となる操作がデータベースで実行されている場合は、マーク時点に復旧できません。  

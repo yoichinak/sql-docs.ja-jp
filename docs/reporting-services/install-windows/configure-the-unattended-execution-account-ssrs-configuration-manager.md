@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866319"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933555"
 ---
-# <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>自動実行アカウントの構成 (SSRS 構成マネージャー)
+# <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>自動実行アカウントの構成 (レポート サーバー構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
   
 -   データベース認証を使用するレポートに対する接続要求のネットワーク経由での送信や、認証を必要としないまたは使用しない外部レポート データ ソースへの接続。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。
@@ -41,7 +41,7 @@ ms.locfileid: "74866319"
   
  アカウントを指定するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは **rsconfig** ユーティリティを使用できます。 自動実行アカウントを構成する最も簡単な方法は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを実行して、[実行アカウント] ページで資格情報を指定することです。  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。 手順については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、構成するレポート サーバー インスタンスに接続します。 手順については、「[レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 2.  [実行アカウント] ページで、 **[実行アカウントの指定]** を選択します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74866319"
   
 3.  次のコマンドを入力して、ローカル レポート サーバー インスタンス上でアカウントを構成します。  
   
-     **rsconfig -e -u\<ドメイン/ユーザー名> -p\<パスワード>**  
+     **rsconfig -e -u\<domain/username> -p\<password>**  
   
  **rsconfig -e** では、他にも引数がサポートされています。 構文の詳細およびコマンド例の表示方法については、「[rsconfig ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)」を参照してください。
  
@@ -106,6 +106,6 @@ ms.locfileid: "74866319"
  アカウント情報が RSReportServer.config ファイルから削除されます。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー (SSRS ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [レポート サーバー構成マネージャー (SSRS ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

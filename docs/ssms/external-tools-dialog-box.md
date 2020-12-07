@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b0bb11779dc90e17f0646bfe747550df62e94ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a08bda94128619aa9bf8c190652654ebd765d03
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463012"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035490"
 ---
 # <a name="external-tools-dialog-box"></a>[外部ツール] ダイアログ ボックス
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88463012"
 メニューでツールが選択されたときにツールに渡される変数を指定します。 引数によって、ツールやコマンドの起動時に渡す値を指定できます。 たとえば、ファイル名またはディレクトリを指定できます。 矢印ボタンをクリックして表示される定義済みの引数の一覧から選択します。 複数の引数を追加できます。 定義済み引数および定義の完全な一覧については、「 [外部ツールの引数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)」を参照してください。 使用するコマンドまたはツールに応じて、カスタム引数 (コマンド ライン スイッチなど) を入力することもできます。  
   
 **[出力ウィンドウを使用]**  
-[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の出力ウィンドウを開いて、実行中のコマンドの出力を表示します。 ツールによっては、出力ウィンドウに表示可能な形式の出力が提示されないものもあります。 詳細については、「 [[出力ウィンドウ]](../relational-databases/scripting/transact-sql-debugger-output-window.md)」を参照してください。  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の出力ウィンドウを開いて、実行中のコマンドの出力を表示します。 ツールによっては、出力ウィンドウに表示可能な形式の出力が提示されないものもあります。 詳細については、「 [[出力ウィンドウ]](./scripting/transact-sql-debugger-output-window.md)」を参照してください。  
   
 **[Unicode で出力を処理する]**  
 出力を Unicode として解釈します。  
@@ -78,4 +78,3 @@ ms.locfileid: "88463012"
 ## <a name="see-also"></a>参照  
 [外部ツールの引数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [一般的なユーザー インターフェイス要素](../ssms/general-user-interface-elements.md)  
-  

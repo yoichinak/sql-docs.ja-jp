@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae472556993fafc52719fcf929bf88c35098e196
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41d40f419497ccb2917052ac477c888a9338c135
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392158"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195264"
 ---
 # <a name="dtutil-utility"></a>Encrypt
 
@@ -268,7 +268,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  上の例で使用しているハッシュは実際のハッシュではありません。  
   
- 詳細については、「 [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)」(Authenticode を使用したコードの署名と検証) の「CertMgr」を参照してください。  
+ 詳細については、「 [Signing and Checking Code with Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))」(Authenticode を使用したコードの署名と検証) の「CertMgr」を参照してください。  
   
 ### <a name="encrypt-examples"></a>暗号化の例  
  次の例では、完全パッケージ暗号化とパスワードを使用してファイルベースの PackageToEncrypt.dtsx を暗号化し、ファイルベースの EncryptedPackage.dts として保存します。 暗号化に使用されるパスワードは、 *EncPswd*です。  
@@ -279,5 +279,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
   
 ## <a name="see-also"></a>参照  
 [Integration Services (SSIS) パッケージの実行](../integration-services/packages/run-integration-services-ssis-packages.md)  
-  
   

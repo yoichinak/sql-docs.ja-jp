@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 643257fb35e042979353b8918f0381525b497cf7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1a21fa1559bb09493ae2802254c87235ecc19efc
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539782"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809458"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>データ層アプリケーションビュー-dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89539782"
 |created_by|**sysname**|DAC インスタンスを作成したログイン。|  
 |database_name|**sysname**|DAC インスタンスのために作成したデータベースの名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  DAC には、テーブルやビューなどのアプリケーションによって使用される論理データ層オブジェクトの定義である DAC 型が含まれています。 DAC パッケージは、DAC を配置するために使用されるファイルです。 DAC パッケージは、DAC 型に含まれるすべての論理オブジェクトの表現を含んでいます。 DAC パッケージは、DAC の1つ以上のコピー (インスタンス) をのインスタンスに配置するために使用でき [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 同じ DAC パッケージから配置された各 DAC インスタンスは同じ種類を共有しますが、一意のインスタンス名と識別子が割り当てられます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -53,6 +53,5 @@ ms.locfileid: "89539782"
   
 ## <a name="see-also"></a>参照  
  [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [データ層アプリケーションビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
-  
+ [データ層アプリケーションビュー &#40;Transact-sql&#41;]()  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18d2b3f5029e70379f0692a919aa8fe6cd4ed10b
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: fe59f14e43a32d6c6b3239c24f1be665e7bbad82
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862243"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727186"
 ---
 # <a name="return-codes"></a>リターン コード
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88862243"
 
   最も基本的なレベルでは、メンバー関数は成功するか失敗するかのどちらかです。 それよりもやや詳細なレベルでは、関数は成功しても、その成功はアプリケーション開発者が意図した状態ではない場合があります。  
   
- OLE DB のリターン コードの詳細については、「[リターン コード (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631)」を参照してください。  
+ OLE DB のリターン コードの詳細については、「[リターン コード (OLE DB)](/previous-versions/windows/desktop/ms725451(v=vs.85))」を参照してください。  
   
  OLE DB Driver for SQL Server のメンバー関数が S_OK を返したときは、その関数は成功しています。  
   
@@ -50,5 +50,4 @@ ms.locfileid: "88862243"
   
 ## <a name="see-also"></a>参照  
  [エラー](../../oledb/ole-db-errors/errors.md)  
-  
   

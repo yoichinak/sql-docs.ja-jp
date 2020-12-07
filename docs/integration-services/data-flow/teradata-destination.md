@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: caa6cc656e37f4718e06c9af010b458dfa1b738d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 191c89d1fdced6ad1581dadff1e4ed92f397f640
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484520"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194715"
 ---
 # <a name="teradata-destination"></a>Teradata 変換先
 
@@ -57,7 +57,7 @@ Teradata の高速読み込みの制限の詳細については、Teradata の�
 
 読み込み処理が完了すると、一時テーブルは削除されます。 Teradata 変換先でテンポラル テーブルを読み取ることができない場合は、**[常にエラーテーブルを削除する]** プロパティがオンになっていない限り、削除されません。  読み込みプロセスが完了前に停止した場合は、必要に応じて、これらのテーブルを手動で削除する必要があります。 これらのテーブルは、変換先テーブルと同じデータベースに格納されています。
 
-**エラーの最大数**に達したときのターゲット テーブルの状態は、使用しているモードによって異なります。
+**エラーの最大数** に達したときのターゲット テーブルの状態は、使用しているモードによって異なります。
 
 - 高速読み込みモードでは、ターゲット テーブルは使用できません。 もう一度実行するには、ターゲット テーブルを切り捨てるか削除し、再作成する必要があります。 ロールバックはサポートされていません。
 - TPT Stream 演算子モードでは、Teradata 変換先はバッファーされた行メカニズムを介して実行されます。 ジョブが失敗すると、失敗した時点で完了した (バッファーが送信された) すべての変更がターゲット テーブルに永続的に保存されます。 ロールバックの概念はありません。 エラー テーブルは削除されます。
@@ -72,7 +72,7 @@ TPT Stream モードでは、並列処理の制限はありません。 同じ�
 
 ## <a name="troubleshooting-the-teradata-destination"></a>Teradata 変換先のトラブルシューティング
 
-Teradata ソースから Teradata Parallel Transporter API (TPT API) への呼び出しをログに記録できます。 呼び出しをログに記録するには、パッケージのログ記録を有効にし、パッケージ レベルで**診断**イベントを選択します。
+Teradata ソースから Teradata Parallel Transporter API (TPT API) への呼び出しをログに記録できます。 呼び出しをログに記録するには、パッケージのログ記録を有効にし、パッケージ レベルで **診断** イベントを選択します。
 
 Teradata ソースから Teradata ODBC ドライバーへの ODBC の呼び出しをログに記録するには、ODBC ドライバー マネージャーのトレースを有効にします。 詳細については、「 *ODBC で ODBC トレースを生成する方法 (データ ソース管理者向け)* 」 の Microsoft のドキュメントを参照してください。
 
@@ -83,14 +83,14 @@ Teradata ソースから Teradata ODBC ドライバーへの ODBC の呼び出�
 |プロパティ名|データ型|説明|
 |:-|:-|:-|
 |AlwaysDropErrorTable|ブール型|既定値は **False** です。 **True** の場合、Teradata 変換先が読み取りに失敗した場合でも、すべてのエラー テーブルが削除されます。|
-|ArraySupport|ブール型|既定値は **True** です。 **True** の場合、DML グループで ArraySupport が使用されます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
-|バッファー|Integer|増加する要求バッファーの数。値は 2 から 64 で設定できます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
-|BufferMode|ブール型|既定値は **True** です。 PutBuffer 機能が使用されている場合、**True** にする必要があります。 このプロパティは、**詳細エディター**にあります。|
-|BufferSize|Integer|読み込みパーセルの送信に使用される出力バッファー サイズ (KB 単位)。 既定値は 1024 です。 TPT Load にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
+|ArraySupport|ブール型|既定値は **True** です。 **True** の場合、DML グループで ArraySupport が使用されます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター** にあります。|
+|バッファー|Integer|増加する要求バッファーの数。値は 2 から 64 で設定できます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター** にあります。|
+|BufferMode|ブール型|既定値は **True** です。 PutBuffer 機能が使用されている場合、**True** にする必要があります。 このプロパティは、**詳細エディター** にあります。|
+|BufferSize|Integer|読み込みパーセルの送信に使用される出力バッファー サイズ (KB 単位)。 既定値は 1024 です。 TPT Load にのみ適用されます。 このプロパティは、**詳細エディター** にあります。|
 |DataEncryption|ブール型|既定値は **False** です。 **True** の場合は、完全セキュリティ暗号化が使用されます。|
-|DefaultCodePage|Integer|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>**注**:このプロパティは、**詳細エディター**にあります。|
-|DetailedTracingLevel|Integer (列挙)|詳細トレースに対して、次のいずれかのオプションを選択します。 <br> **Off**:詳細ログは記録されません。 <br> **General**:ドライバー固有のアクティビティの一般的なトレースがログに記録されます。 <br> **CLI**:CLIv2 に関連するアクティビティのトレースがログに記録されます。 <br> **Notify Method**:通知機能に関連するアクティビティのトレースがログに記録されます。 <br> **Common Library**: opcommon ライブラリ アクティビティのトレースがログに記録されます。 <br> **[すべて]** : 上記のすべてのアクティビティのトレースがログに記録されます。 <br> 詳細トレース ログ ファイルは、**DetailedTracingFile** プロパティで定義されています。 <br> オプションが Off になっていない場合は、**DetailedTracingFile** プロパティを設定する必要があります。 <br> このプロパティは、**詳細エディター**にあります。|
-|DetailedTracingFile|String|**DetailedTracingLevel** が **Off** になっていない場合に、自動的に生成されるログ ファイルのパス。 このプロパティは、**詳細エディター**にあります。|
+|DefaultCodePage|Integer|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>**注**:このプロパティは、**詳細エディター** にあります。|
+|DetailedTracingLevel|Integer (列挙)|詳細トレースに対して、次のいずれかのオプションを選択します。 <br> **Off**:詳細ログは記録されません。 <br> **General**:ドライバー固有のアクティビティの一般的なトレースがログに記録されます。 <br> **CLI**:CLIv2 に関連するアクティビティのトレースがログに記録されます。 <br> **Notify Method**:通知機能に関連するアクティビティのトレースがログに記録されます。 <br> **Common Library**: opcommon ライブラリ アクティビティのトレースがログに記録されます。 <br> **[すべて]** : 上記のすべてのアクティビティのトレースがログに記録されます。 <br> 詳細トレース ログ ファイルは、**DetailedTracingFile** プロパティで定義されています。 <br> オプションが Off になっていない場合は、**DetailedTracingFile** プロパティを設定する必要があります。 <br> このプロパティは、**詳細エディター** にあります。|
+|DetailedTracingFile|String|**DetailedTracingLevel** が **Off** になっていない場合に、自動的に生成されるログ ファイルのパス。 このプロパティは、**詳細エディター** にあります。|
 |DiscardLargeRow|ブール型|既定値は **False** です。 **True** の場合、大きい行 (64K を超える) が破棄されます。|
 |ErrorTableName|String|エラー テーブル名。 既定値はターゲット テーブル名です。|
 |ExtendedStringColumnsAllocation|ブール型|**True** の場合、**Maximal Transfer Character Allocation Factor** が使用されます。 <br> Teradata データベースの **Export Width Table ID** プロパティが **Maximal Defaults** に設定されている場合は、この値を **True** に設定する必要があります。 <br> 既定値は **False** です。|
@@ -98,14 +98,14 @@ Teradata ソースから Teradata ODBC ドライバーへの ODBC の呼び出�
 |[MaxErrors]|Integer|データ フローを停止する前に許容されるエラーの数を指定します。 既定値は **0** です。これは、エラー数の制限がないことを意味します。<br> **[エラー処理]** ページで **[フローのリダイレクト]** が選択されている場合。 エラー数が上限に達する前に、すべてのエラーがエラー出力に返されます。 詳細については、「[Teradata ソース エディター ([エラー出力] ページ)](#teradata-destination-editor-error-output-page)」をご覧ください。|
 |MaxSessions|Integer|ログオンされているセッションの最大数。 この値は、1 より大きくする必要があります。 既定値は、使用可能な AMP ごとに 1 つのセッションです。|
 |MinSessions|Integer|ログオンされているセッションの最小数。 この値は、1 より大きくする必要があります。 既定値は、使用可能な AMP ごとに 1 つのセッションです。|
-|Pack|Integer|複数ステートメントの要求にパックするステートメントの数。 既定値は 20 で、最大許容値は 2400 です。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
-|PackMaximum|ブール型|**True** の場合、現在の Stream ジョブの最大パック係数が動的に決定されます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
-|QueryBandSessInfo|Varchar|チャージバックの監視とガバナンスを有効にする、ユーザー定義のセッションベースのクエリ バンド式。 このプロパティは、接続文字列の形式である必要があります。 このプロパティは、**詳細エディター**にあります。|
-|ReplicationOveride|Integer (列挙)|オプション: <br> **既定**:SET SESSION OVERRIDE REPLICATION ステートメントがデータベースに送信されません。 データベースの既定の設定が使用されます。 <br> **更新日時**:通常のレプリケーション サービス コントロールはオーバーライドされます。 <br> **Off**:通常のレプリケーション サービス コントロールが使用されます。 <br> このプロパティは、TPT Stream のみに適用されます。 <br> このプロパティは、**詳細エディター**にあります。|
-|Robust|ブール型|**True** の場合、復旧と再起動の操作に Robust の再起動ロジックが使用されます。 このプロパティは、**TPT Stream** のみに適用されます。 このプロパティは、**詳細エディター**にあります。|
+|Pack|Integer|複数ステートメントの要求にパックするステートメントの数。 既定値は 20 で、最大許容値は 2400 です。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター** にあります。|
+|PackMaximum|ブール型|**True** の場合、現在の Stream ジョブの最大パック係数が動的に決定されます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター** にあります。|
+|QueryBandSessInfo|Varchar|チャージバックの監視とガバナンスを有効にする、ユーザー定義のセッションベースのクエリ バンド式。 このプロパティは、接続文字列の形式である必要があります。 このプロパティは、**詳細エディター** にあります。|
+|ReplicationOveride|Integer (列挙)|オプション: <br> **既定**:SET SESSION OVERRIDE REPLICATION ステートメントがデータベースに送信されません。 データベースの既定の設定が使用されます。 <br> **更新日時**:通常のレプリケーション サービス コントロールはオーバーライドされます。 <br> **Off**:通常のレプリケーション サービス コントロールが使用されます。 <br> このプロパティは、TPT Stream のみに適用されます。 <br> このプロパティは、**詳細エディター** にあります。|
+|Robust|ブール型|**True** の場合、復旧と再起動の操作に Robust の再起動ロジックが使用されます。 このプロパティは、**TPT Stream** のみに適用されます。 このプロパティは、**詳細エディター** にあります。|
 |TableName|String|使用されているデータを含むテーブルの名前。|
-|TenacityHours|Integer|読み込み操作またはエクスポート操作の最大数が既に実行されている場合に、TPT ドライバーがログインを試行する時間数。 既定値は 4 時間です。 このプロパティは、**詳細エディター**にあります。|
-|TenacitySleep|Integer|TPT ドライバーが制限に達したときにログインを試行する前に一時停止する分数。 制限は **MaxSessions** プロパティと **TenacityHours** プロパティによって定義されます。 既定値は 6 分です。 このプロパティは、**詳細エディター**にあります。|
+|TenacityHours|Integer|読み込み操作またはエクスポート操作の最大数が既に実行されている場合に、TPT ドライバーがログインを試行する時間数。 既定値は 4 時間です。 このプロパティは、**詳細エディター** にあります。|
+|TenacitySleep|Integer|TPT ドライバーが制限に達したときにログインを試行する前に一時停止する分数。 制限は **MaxSessions** プロパティと **TenacityHours** プロパティによって定義されます。 既定値は 6 分です。 このプロパティは、**詳細エディター** にあります。|
 |UnicodePassThrough|ブール型|Off (既定値):Unicode パス スルーを無効にします。 <br>On:Unicode パス スルーを有効にします。|
 
 ## <a name="configuring-the-teradata-destination"></a>Teradata 変換先を構成する
@@ -223,7 +223,7 @@ Teradata 変換先エディターの [マッピング] ページを開くには
 
 Teradata 変換先でフローのエラーを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。
 
-**関連トピック:** [データのエラー処理](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**関連トピック:** [データのエラー処理](./error-handling-in-data.md?view=sql-server-2017)
 
 **切り捨て**
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f70d8f963a6f26131099e6cd7d09d5019f9c6bc
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477776"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123405"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
 
@@ -60,7 +60,7 @@ ms.locfileid: "88477776"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -91,16 +91,15 @@ ms.locfileid: "88477776"
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  
   
- **: **  [Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[ &#40;SSIS 式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、および [ &#40;SSIS 式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **:**  [Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[ &#40;SSIS 式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、および [ &#40;SSIS 式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **[既定の出力名]**  
  既定の出力の名前を入力するか、既定を使用します。  
   
  **[エラー出力の構成]**  
- [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
+ [[エラー出力の構成]](../error-handling-in-data.md) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

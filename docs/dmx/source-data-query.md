@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fedb3472755a8147e10aef046c7a7fc435b356cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9dbceb416cea3e64200708639a771989f900be3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500780"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726127"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;source data query&gt;
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -54,6 +54,5 @@ ms.locfileid: "88500780"
 ## <a name="see-also"></a>参照  
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
- [入れ子になったテーブル &#40;Analysis Services データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
-  
+ [入れ子になったテーブル &#40;Analysis Services データマイニング&#41;](/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.sql_expression_dependencies (Transact-SQL)
-title: sql_expression_dependencies (Transact-sql) |Microsoft Docs
+title: sys.sql_expression_dependencies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4aabba6bd3608b4a4392b47e64ee37d7498d80
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 012d3d8b944b162e317bee53f4f25dcaaf5a1541
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548659"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006428"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89548659"
   
 -   複数のデータベースやサーバーにまたがるエンティティ。 エンティティ名はレポートされますが、エンティティ ID は解決されません。  
   
--   スキーマバインドエンティティの列レベルの依存関係。 スキーマバインドされていないオブジェクトの列レベルの依存関係は、 [dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)を使用して返すことができます。  
+-   スキーマバインドエンティティの列レベルの依存関係。 スキーマバインドされていないオブジェクトの列レベルの依存関係は、 [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)を使用して返すことができます。  
   
 -   サーバーレベルの DDL トリガーは、master データベースのコンテキストで発生します。  
   
@@ -69,12 +69,12 @@ ms.locfileid: "89548659"
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 依存関係情報は、ルール、既定値、一時テーブル、一時ストアドプロシージャ、またはシステムオブジェクトに対して作成または管理されません。  
 
 > [!NOTE]
-> Azure SQL Data Warehouse および並列データウェアハウスでは、この一覧からテーブル、ビュー、フィルター選択された統計情報、および Transact-sql ストアドプロシージャのエンティティ型をサポートしています。  依存関係情報は、テーブル、ビュー、およびフィルター選択された統計情報に対してのみ作成および管理されます。  
+> Azure Synapse Analytics と Parallel Data Warehouse では、この一覧からテーブル、ビュー、フィルター選択された統計情報、および Transact-sql ストアドプロシージャのエンティティ型をサポートしています。  依存関係情報は、テーブル、ビュー、およびフィルター選択された統計情報に対してのみ作成および管理されます。  
   
 |エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
-|Table|はい*|はい|  
-|View|はい|はい|  
+|テーブル|はい*|はい|  
+|表示|はい|はい|  
 |フィルター選択されたインデックス|はい**|いいえ|  
 |フィルター選択された統計情報|はい**|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ***|はい|はい|  

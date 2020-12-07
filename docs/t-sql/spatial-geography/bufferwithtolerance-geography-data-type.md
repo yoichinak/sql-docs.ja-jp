@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 50c8e19dd3ed6782a7a8fe8532ab0edb61cceb34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e278c50b6a467660c827e3e59181945fdb9985e7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360408"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115006"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ _distance_ が数値ではない (NAN) 場合、または _distance_ が正か�
   
 0.999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0.999 \* 地球の円周の 1/2)  
   
-理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents \* 1.E-7) です。この tolerance は _tolerance_ パラメーターの値になります。 エクステントの詳細は、「[geography データ型メソッド リファレンス](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)」を参照してください。  
+理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents \* 1.E-7) です。この tolerance は _tolerance_ パラメーターの値になります。 エクステントの詳細は、「[geography データ型メソッド リファレンス](./stequals-geography-data-type.md)」を参照してください。  
   
 このメソッドは正確ではありません。  
   
@@ -89,5 +89,4 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
 ## <a name="see-also"></a>関連項目  
 [STBuffer &#40;geography データ型&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
 [Geography インスタンスの拡張メソッド](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
   

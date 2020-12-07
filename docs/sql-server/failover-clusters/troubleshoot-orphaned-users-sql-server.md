@@ -17,15 +17,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e538c68882c1fc49a449767c51c39123ee222f6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 6356874ac61790fe27730961e0429db92760bfce
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115337"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121246"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立したユーザーのトラブルシューティング (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,9 +73,9 @@ WHERE sp.SID IS NULL
   
  現在のデータベース内で、どの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにもリンクされていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ユーザーとそのセキュリティ識別子 (SID) が出力されます。  
 
-**SQL Database および SQL Data Warehouse の場合**
+**SQL Database と Azure Synapse Analytics の場合**
 
-`sys.server_principals` テーブルは、SQL Database または SQL Data Warehouse では使用できません。 これらの環境では、次の手順を使用して孤立ユーザーを識別します。
+`sys.server_principals` テーブルは、SQL Database または Azure Synapse Analytics では使用できません。 これらの環境では、次の手順を使用して孤立ユーザーを識別します。
 
 1. `master` データベースに接続し、次のクエリを使用してログインの SID を選択します。
     ```
@@ -105,7 +105,7 @@ WITH PASSWORD = '<use_a_strong_password_here>',
 SID = <SID>;  
 ```  
   
- **マスター**に既に存在するログインに孤立ユーザーをマッピングするには、ログイン名を指定し、ユーザー データベースで [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) ステートメントを実行します。  
+ **マスター** に既に存在するログインに孤立ユーザーをマッピングするには、ログイン名を指定し、ユーザー データベースで [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) ステートメントを実行します。  
   
 ```  
 ALTER USER <user_name> WITH Login = <login_name>;  

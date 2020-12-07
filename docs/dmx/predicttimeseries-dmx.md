@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b85cc4197b0ffafef7a83566e4041a7d290548
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422265"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727675"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   3番目の例では、EXTEND_MODEL_CASES パラメーターを使用して、マイニングモデルを新しいデータで更新する方法を示します。  
   
- タイムシリーズモデルの使用方法の詳細については、「データマイニングチュートリアル」、「 [レッスン 2: 予測シナリオの構築」 (中級者向けデータマイニングチュートリアル &#40;&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) と [時系列予測 DMX のチュートリアル](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)) を参照してください。  
+ タイムシリーズモデルの使用方法の詳細については、「データマイニングチュートリアル」、「 [レッスン 2: 予測シナリオの構築」 (中級者向けデータマイニングチュートリアル &#40;&#41;](/previous-versions/sql/sql-server-2016/ms169846(v=sql.130)) と [時系列予測 DMX のチュートリアル](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130))) を参照してください。  
   
 > [!NOTE]  
 >  モデルの結果は異なる場合があります。次の例の結果は、結果の形式を説明することのみを目的としています。  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replace_model_cases"></a>例 2: 新しいデータを追加して REPLACE_MODEL_CASES を使用する  
  特定の地域のデータが間違っていることがわかっており、モデル内のパターンを使用するが、新しいデータに合わせて予測を調整する場合を考えてみます。 または、別のリージョンにより信頼性の高い傾向があり、最も信頼性の高いモデルを別のリージョンのデータに適用する場合もあります。  
   
- このようなシナリオでは、REPLACE_MODEL_CASES パラメーターを使用して、履歴データとして使用するデータの新しいセットを指定できます。 このようにすると、射影は指定されたモデルのパターンに基づいて行われますが、新しいデータポイントの終了からスムーズに進みます。 このシナリオの完全なチュートリアルについては、「 [&#40;中級者向けデータマイニングチュートリアル&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)」を参照してください。  
+ このようなシナリオでは、REPLACE_MODEL_CASES パラメーターを使用して、履歴データとして使用するデータの新しいセットを指定できます。 このようにすると、射影は指定されたモデルのパターンに基づいて行われますが、新しいデータポイントの終了からスムーズに進みます。 このシナリオの完全なチュートリアルについては、「 [&#40;中級者向けデータマイニングチュートリアル&#41;](/previous-versions/sql/sql-server-2016/cc879290(v=sql.130))」を参照してください。  
   
  次の PREDICTION JOIN クエリでは、データを置き換えて新しい予測を作成する構文を示します。 置換データの場合、この例では Amount 列と Quantity 列の値を取得し、それぞれを2で乗算しています。  
   
@@ -254,7 +254,6 @@ OR [Model Region] = 'M200 North America'
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [タイムシリーズモデルのクエリ例](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
+ [タイムシリーズモデルのクエリ例](/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
-  
   

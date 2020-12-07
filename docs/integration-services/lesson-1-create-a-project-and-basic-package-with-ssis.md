@@ -12,10 +12,10 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 428295430a2abb50738742db088b9573a7bf35a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88461994"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>レッスン 1:SSIS によるプロジェクトと基本パッケージの作成

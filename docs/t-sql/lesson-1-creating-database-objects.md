@@ -11,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6405d6be70477297fb9ca02637c92b9e458144a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459177"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035885"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>レッスン 1: データベース オブジェクトの作成とクエリ
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "88459177"
 ## <a name="prerequisites"></a>前提条件
 このチュートリアルを実行するには、SQL Server Management Studio と SQL Server インスタンスへのアクセスが必要です。 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 
 SQL Server インスタンスがない場合は、インスタンスを作成します。 インスタンスを作成するには、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
 - **Windows**: [SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- **macOS**: [Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+- **macOS**: [Docker で SQL Server 2017 をダウンロードする](../linux/quickstart-install-connect-docker.md)。
 
 ## <a name="create-a-database"></a>データベースを作成する
 多くの [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント同様、[`CREATE DATABASE`](statements/create-database-transact-sql.md) ステートメントには、必須パラメーターがあります。必須パラメーターはデータベースの名前です。` CREATE DATABASE` また、データベース ファイルを配置するディスクの場所など、多くのオプションのパラメーターがあります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でオプション パラメーターを指定せずに `CREATE DATABASE` を実行すると、これらの多くのパラメーターでは既定値が使用されます。
@@ -241,7 +241,7 @@ SELECT ステートメント内のデータの操作に使用できる関数の�
         [数学関数 &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)
     :::column-end:::
     :::column:::
-        [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
+        [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](./functions/text-and-image-functions-textptr-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
@@ -304,6 +304,5 @@ SELECT ステートメント内のデータの操作に使用できる関数の�
 詳細については、次の記事に進んでください
 > [!div class="nextstepaction"]
 > [次の手順](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   
   

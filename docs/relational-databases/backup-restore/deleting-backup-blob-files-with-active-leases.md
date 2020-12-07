@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f51c01570aa5149e24ca1cb37af4b6bafe35ee0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: df3d0b503ab61d00d098a47ef0bb2a85c32dc99f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737815"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127005"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>アクティブなリースを保持しているバックアップ BLOB ファイルを削除する
 
@@ -24,7 +24,7 @@ ms.locfileid: "85737815"
 
 Microsoft Azure Storage へのバックアップまたは Microsoft Azure Storage からの復元を実行するときに、SQL Server は BLOB への排他アクセスをロックするために無限リースを取得します。 バックアップまたは復元プロセスが正常に完了すると、リースは解放されます。 バックアップまたは復元に失敗すると、バックアップ プロセスは無効な BLOB のクリーンアップを試みます。 ただし、バックアップの失敗の原因が長期的または持続的なネットワーク接続エラーの場合は、バックアップ プロセスは BLOB にアクセスできず、BLOB は孤立したままになる可能性があります。 つまり、リースが解放されるまで、BLOB を書き込むことも削除することもできません。 このトピックでは、リースを解放 (終了) する方法と BLOB の削除について説明します。
   
-リースの種類について詳しくは、[こちらの記事](https://go.microsoft.com/fwlink/?LinkId=275664)をご覧ください。  
+リースの種類について詳しくは、[こちらの記事](/rest/api/storageservices/Lease-Blob)をご覧ください。  
   
 バックアップ操作が失敗すると、無効なバックアップ ファイルが生成されます。 また、バックアップ BLOB ファイルでは、削除や上書きを防ぐためにアクティブなリースを保持する場合もあります。 そのような BLOB を削除または上書きするには、先にリースを解放 (終了) する必要があります。 バックアップに問題がある場合は、リースをクリーンアップして BLOB を削除することをお勧めします。 記憶域管理タスクの一環として、リースのクリーンアップと BLOB の削除を定期的に行うこともできます。  
   
@@ -36,7 +36,7 @@ Microsoft Azure Storage へのバックアップまたは Microsoft Azure Storag
   
 1. **リースを保持している BLOB を識別する:** バックアップ プロセスを実行するスクリプトまたはプロセスがあると、スクリプトまたはプロセス内のエラーをキャプチャし、それを使って BLOB をクリーンアップできる場合があります。  また、LeaseStats プロパティと LeastState プロパティを使って、それらのプロパティに対してリースを保持している BLOB を識別することもできます。 BLOB を識別したら、一覧を確認し、BLOB を削除する前にバックアップ ファイルが有効かどうかを確認します。  
   
-1. **リースを終了する:** 承認された要求では、リース ID を指定せずにリースを終了できます。 詳細については、 [こちら](https://go.microsoft.com/fwlink/?LinkID=275664) をご覧ください。  
+1. **リースを終了する:** 承認された要求では、リース ID を指定せずにリースを終了できます。 詳細については、 [こちら](/rest/api/storageservices/Lease-Blob) をご覧ください。  
   
     > [!TIP]  
     > SQL Server は、復元操作中にリース ID を発行して排他アクセスを確立します。 復元のリース ID は BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2 です。  
@@ -46,7 +46,7 @@ Microsoft Azure Storage へのバックアップまたは Microsoft Azure Storag
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a> PowerShell スクリプトの例  
   
 > [!IMPORTANT]
-> PowerShell 2.0 を実行している場合、Microsoft WindowsAzure.Storage.dll アセンブリの読み込み中に問題が発生することがあります。 この問題を解決するには、[PowerShell](https://docs.microsoft.com/powershell/) をアップグレードすることをお勧めします。 次の回避策を利用することで、powershell.exe.config ファイルを作成または変更し、実行時、.NET 2.0 アセンブリと .NET 4.0 アセンブリをロードすることもできます。  
+> PowerShell 2.0 を実行している場合、Microsoft WindowsAzure.Storage.dll アセンブリの読み込み中に問題が発生することがあります。 この問題を解決するには、[PowerShell](/powershell/) をアップグレードすることをお勧めします。 次の回避策を利用することで、powershell.exe.config ファイルを作成または変更し、実行時、.NET 2.0 アセンブリと .NET 4.0 アセンブリをロードすることもできます。  
 >
 > ```xml
 > <?xml version="1.0"?>
@@ -128,4 +128,4 @@ if($lockedBlobs.Count -gt 0)
   
 ## <a name="see-also"></a>関連項目
 
-[SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

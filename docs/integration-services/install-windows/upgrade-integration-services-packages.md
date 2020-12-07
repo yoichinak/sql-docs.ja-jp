@@ -15,12 +15,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: dca0076160c9e21b991c444986d1b27162941f5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7353d02985194024c24319df5c6eca1100607d29
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346218"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195877"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services パッケージのアップグレード
 
@@ -62,7 +62,7 @@ ms.locfileid: "88346218"
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使って、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] カスタム コンポーネントを含むパッケージを設計するには、 *\<drive>* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE にある devenv.exe.config ファイルを変更する必要があります。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のランタイムで構築された顧客アプリケーションでこれらのパッケージを使用するには、実行可能ファイルに対応する *.exe.config ファイルの configuration セクションにリダイレクト ルールを含めます。 これらのルールにより、ランタイム アセンブリが Version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトされます。 アセンブリ バージョン リダイレクトの詳細については、[\<runtime> の \<assemblyBinding> 要素](https://msdn.microsoft.com/library/twy1dw1e.aspx)を参照してください。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のランタイムで構築された顧客アプリケーションでこれらのパッケージを使用するには、実行可能ファイルに対応する *.exe.config ファイルの configuration セクションにリダイレクト ルールを含めます。 これらのルールにより、ランタイム アセンブリが Version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトされます。 アセンブリ バージョン リダイレクトの詳細については、[\<runtime> の \<assemblyBinding> 要素](/dotnet/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime)を参照してください。  
   
 ### <a name="locating-the-assemblies"></a>アセンブリの場所  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 *\<drive>* :\Windows\Microsoft.NET\assembly に、.NET 4 用の別のグローバル アセンブリ キャッシュが用意されています。 すべての [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  
@@ -81,5 +81,4 @@ ms.locfileid: "88346218"
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>ADODB.dll に依存するスクリプト  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] がインストールされていないコンピューターでは、ADODB.dll を明示的に参照するスクリプト タスクおよびスクリプト コンポーネントのスクリプトをアップグレードしたり、実行したりすることはできません。 このようなスクリプト タスクまたはスクリプト コンポーネントのスクリプトをアップグレードするには、ADODB.dll に対する依存関係を削除することをお勧めします。  また、VB や C# のスクリプトなどのマネージド コードの代わりに ADO.NET を使用することをお勧めします。  
-  
   

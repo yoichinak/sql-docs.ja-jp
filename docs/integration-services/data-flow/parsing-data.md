@@ -15,10 +15,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eba3e72558433acab3ba1a0edc3cd921b15281bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457354"
 ---
 # <a name="parsing-data"></a>データの解析
@@ -198,7 +198,7 @@ ms.locfileid: "88457354"
   
 3.  **[入力および出力]** ペインで、高速解析を有効にする列をクリックします。  
   
-4.  [プロパティ] ウィンドウで **[カスタム プロパティ]** ノードを展開し、 **FastParse** プロパティを **True**に設定します。  
+4.  [プロパティ] ウィンドウで **[カスタム プロパティ]** ノードを展開し、 **FastParse** プロパティを **True** に設定します。  
   
 5.  **[OK]** をクリックします。  
 

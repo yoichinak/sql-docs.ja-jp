@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 973c8eb74a26047dfa8472497e403385e3678326
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b342052d848597a7422adf5594e25a2b799c7b3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445413"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193276"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server のユーティリティのステートメント - GO
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88445413"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 GO [count]  
 ```  
   
@@ -57,7 +57,7 @@ GO [count]
   
  ユーザーは、バッチの規則に従う必要があります。 たとえば、バッチの最初のステートメント以降でストアド プロシージャを実行する場合は、バッチに EXECUTE キーワードを含める必要があります。 ローカル (ユーザー定義) 変数のスコープはバッチ内に限られ、GO コマンドの後では参照できません。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyMsg VARCHAR(50)  
@@ -81,7 +81,7 @@ GO
   
  GO の後、ステートメントのターミネータとしてセミコロンを使用しません。
  
-```
+```sql
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
@@ -93,21 +93,21 @@ GO;
 ## <a name="examples"></a>例  
  次の例では、2 つのバッチを作成します。 最初のバッチは、データベース コンテキストを設定する `USE AdventureWorks2012` ステートメントのみで構成されます。 その他のステートメントではローカル変数が使用されます。 このため、すべてのローカル変数宣言を 1 つのバッチにまとめる必要があります。 これには、変数を参照する最後のステートメントが実行されてから `GO` コマンドを実行するようにします。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NmbrPeople int  
+DECLARE @NmbrPeople INT  
 SELECT @NmbrPeople = COUNT(*)  
 FROM Person.Person;  
 PRINT 'The number of people as of ' +  
-      CAST(GETDATE() AS char(20)) + ' is ' +  
-      CAST(@NmbrPeople AS char (10));  
+      CAST(GETDATE() AS CHAR(20)) + ' is ' +  
+      CAST(@NmbrPeople AS CHAR(10));  
 GO  
 ```  
   
  次の例では、バッチ内のステートメントを 2 回実行します。  
   
-```  
+```sql  
 SELECT DB_NAME();  
 SELECT USER_NAME();  
 GO 2  

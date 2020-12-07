@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f8c6cb06fd63f526de699d7c6050dacd1b5ff05b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290894"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891862"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server のレポート ビルダー
 
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、Visual Studio/SSDT のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、ページ分割されたレポートを作成するためのツールです。  ページ分割されたレポートをデザインすることは、取得するデータ、その取得場所、およびその表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートをプレビューできます。 その後、ネイティブ モードまたは SharePoint 統合モード (2016 以前) でレポートを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにパブリッシュします。 
 
-ページ分割されたレポートを Power BI サービスにパブリッシュすることもできます。 詳しくは、[Power BI Premium のページ分割されたレポート](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (プレビュー) に関するページをご覧ください。
+ページ分割されたレポートを Power BI サービスにパブリッシュすることもできます。 詳しくは、[Power BI Premium のページ分割されたレポート](/power-bi/paginated-reports-report-builder-power-bi) (プレビュー) に関するページをご覧ください。
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -93,5 +93,3 @@ ms.locfileid: "80290894"
   
  [キーボード ショートカット (レポート ビルダー)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートのナビゲーションとデザインに使用できるショートカット キーについて説明します。  
-  
-

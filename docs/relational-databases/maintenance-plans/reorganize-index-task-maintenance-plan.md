@@ -16,10 +16,10 @@ ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3af62a68c6aeb36f6527afc66744ad8c2f66947f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88494178"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>[インデックスの再構成タスク] (メンテナンス プラン)
@@ -42,7 +42,7 @@ ms.locfileid: "88494178"
   
 -   **[すべてのシステム データベース]**  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベース ( **tempdb**を除く) を対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。 ユーザーが作成したデータベースではメンテナンス タスクは実行されません。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベース ( **tempdb** を除く) を対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。 ユーザーが作成したデータベースではメンテナンス タスクは実行されません。  
   
 -   **[すべてのユーザー データベース]**  
   

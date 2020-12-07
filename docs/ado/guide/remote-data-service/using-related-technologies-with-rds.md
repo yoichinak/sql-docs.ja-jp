@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f137abb4d65a523b1926dc6455b7e68c1e39043c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f974241847a916086312d8d6671dba9748756771
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977363"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721263"
 ---
 # <a name="using-related-technologies-with-rds"></a>RDS での関連テクノロジの使用
 このセクションでは、次のトピックを扱います。  
@@ -28,7 +28,7 @@ ms.locfileid: "88977363"
 -   [コンポーネント サービスでのビジネス オブジェクトの実行](./running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
  他の多くのテクノロジは、リモートデータサービスと対話するか、実装で使用されます。  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 721f7dbf286d6088af861fe26ee3fb4ec04bfedc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 601d7bdff19c6e6d8f4daec58c28c048891bcc82
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547839"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131335"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、アセンブリを削除します。  
   
@@ -74,7 +74,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ## <a name="examples"></a>例  
  次の例では、アセンブリ `HelloWorld` が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに既に作成されていることを前提としています。  
   
-```  
+```sql  
 DROP ASSEMBLY Helloworld ;  
 ```  
   

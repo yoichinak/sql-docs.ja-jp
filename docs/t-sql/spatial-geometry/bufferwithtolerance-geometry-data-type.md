@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fc0cfc790f933935de0f9aee96dd7c6e7b66425f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a039118dc0abe85b065d74b96f551c2991820333
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472542"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128181"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88472542"
  *tolerance*  
  バッファー距離の許容範囲を指定する **float** 式です。  
   
- *許容範囲*とは、返された線形近似の理想的なバッファー距離の最大幅のことです。  
+ *許容範囲* とは、返された線形近似の理想的なバッファー距離の最大幅のことです。  
   
  たとえば、ある地点の理想のバッファー距離は円ですが、多角形によって近似された形状になる必要があります。 許容範囲が小さいほど、多角形の頂点の数は多くなります。つまり、計算結果の複雑性が増しますが、元の図形との差が小さくなります。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "88472542"
   
  バッファーに負の値を指定すると、**geometry** インスタンスの境界から、指定された距離の範囲内にある地点をすべて削除します。  
   
- 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents \* 1.E-7) です。この tolerance は *tolerance* パラメーターの値になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)」を参照してください。  
+ 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents \* 1.E-7) です。この tolerance は *tolerance* パラメーターの値になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](./spatial-types-geometry-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
  `Point` インスタンスを作成し、`BufferWithTolerance()` を使用して、インスタンスの周りの大まかなバッファーを取得する例を次に示します。  
@@ -98,5 +98,3 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
  [STBuffer &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
-  
-

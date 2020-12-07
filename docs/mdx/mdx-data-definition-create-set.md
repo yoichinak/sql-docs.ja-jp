@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d8aa29715753cfb169d87df3a31230eeec9397f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483887"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193954"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX データ操作 - CREATE SET
 
@@ -47,12 +47,12 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  セットのプロパティの値を定義する有効なスカラー式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  名前付きセットとは、再度使用するために作成するディメンションメンバー (またはセットを定義する式) のセットです。 たとえば、売上高上位 10 ストアのセットで構成されるディメンション メンバーのセットを名前付きセットとして定義するとします。 このセットは、静的に定義することも、 [TopCount](../mdx/topcount-mdx.md)のような関数を使用して定義することもできます。 この名前付きセットは、上位10個のストアのセットが必要な場所であればいつでも使用できます。  
   
- CREATE SET ステートメントは、セッション全体で使用できる名前付きセットを作成します。したがって、セッションの複数のクエリで使用できます。 詳細については、「 [MDX&#41;&#40;セッションスコープの計算されるメンバーを作成する ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)」を参照してください。  
+ CREATE SET ステートメントは、セッション全体で使用できる名前付きセットを作成します。したがって、セッションの複数のクエリで使用できます。 詳細については、「 [MDX&#41;&#40;の Session-Scoped 計算されるメンバーの作成 ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)」を参照してください。  
   
- 1 つのクエリだけで使用する名前付きセットを定義することも可能です。 そのようなセットを定義する場合は、SELECT ステートメントで WITH 句を使用します。 WITH 句の詳細については、「 [MDX&#41;&#40;クエリスコープの名前付きセットを作成する ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)」を参照してください。  
+ 1 つのクエリだけで使用する名前付きセットを定義することも可能です。 そのようなセットを定義する場合は、SELECT ステートメントで WITH 句を使用します。 WITH 句の詳細については、「 [MDX&#41;&#40;Query-Scoped 名前付きセットの作成 ](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)」を参照してください。  
   
  *Set_Expression*句には、MDX 構文をサポートする任意の関数を含めることができます。 セッション句を指定しない CREATE SET ステートメントを使用して作成されたセットには、セッションスコープがあります。 クエリ スコープによるセットを作成するには、WITH 句を使用してください。  
   
@@ -62,7 +62,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  ユーザー定義セットは、次の表に示すいずれかのスコープ内で発生する可能性があります。  
   
  クエリ スコープ  
- セットの表示設定と有効期間は、クエリに限定されます。 セットは、個々のクエリで定義されます。 クエリスコープは、セッションスコープよりも優先されます。 詳細については、「 [MDX&#41;&#40;クエリスコープの名前付きセットの作成 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)」を参照してください。  
+ セットの表示設定と有効期間は、クエリに限定されます。 セットは、個々のクエリで定義されます。 クエリスコープは、セッションスコープよりも優先されます。 詳細については、「 [MDX&#41;&#40;Query-Scoped 名前付きセットの作成 ](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets)」を参照してください。  
   
  セッション スコープ  
  セットの可視性と有効期間は、そのセットが作成されたセッションに限定されます。 (Set で DROP SET ステートメントが実行された場合、有効期間はセッション継続時間よりも短くなります)。CREATE SET ステートメントは、セッションスコープを持つセットを作成します。 クエリ スコープによるセットを作成するには、WITH 句を使用してください。  
@@ -103,5 +103,4 @@ SELECT [Core Products] ON 0
 ## <a name="see-also"></a>参照  
  [DROP SET ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
  [Mdx&#41;&#40;mdx データ定義ステートメント ](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

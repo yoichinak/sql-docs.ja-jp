@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 70cb57fd62b62e10aeb1d68d708a7504265e4e97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88460194"
 ---
 # <a name="view-user-defined-functions"></a>ユーザー定義関数の表示
@@ -57,7 +57,7 @@ ms.locfileid: "88460194"
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>ユーザー定義関数のプロパティを表示するには  
   
-1.  **オブジェクト エクスプローラー**で、プロパティを表示する関数を含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
+1.  **オブジェクト エクスプローラー** で、プロパティを表示する関数を含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
 2.  プラス記号をクリックして **[関数]** フォルダーを展開します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "88460194"
   
 4.  プロパティを表示する関数を右クリックし、 **[プロパティ]** を選択します。  
 
-     **[関数のプロパティ - ** _function_name_] ダイアログ ボックスに、次のプロパティが表示されます。  
+     **[関数のプロパティ -** _function_name_] ダイアログ ボックスに、次のプロパティが表示されます。  
   
      **[データベース]**  
      この関数を含むデータベースの名前です。  
@@ -116,7 +116,7 @@ ms.locfileid: "88460194"
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>関数の定義およびプロパティを取得するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "88460194"
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>関数の依存関係を取得するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

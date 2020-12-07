@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cdd281be64879d56ec8c81eacc52ea3631fe0867
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 642e6ad5d7d0b8ad1103571b5868ba16a509876d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477714"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192668"
 ---
 # <a name="data-conversion-transformation"></a>データ変換の変換
 
@@ -51,7 +51,7 @@ ms.locfileid: "88477714"
  この変換は、1 つの入力、1 つの出力、および 1 つのエラー出力をとります。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 SSIS デザイナーでのデータ変換の変換の使用については、「[データ変換の変換を使用してデータを別のデータ型に変換する](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)」を参照してください。 プログラムによるこの変換のプロパティの設定については、「 [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 」および「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」をご覧ください。  
+ プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 SSIS デザイナーでのデータ変換の変換の使用については、「[データ変換の変換を使用してデータを別のデータ型に変換する](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)」を参照してください。 プログラムによるこの変換のプロパティの設定については、「 [共通プロパティ](../set-the-properties-of-a-data-flow-component.md) 」および「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」をご覧ください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)」  
@@ -88,11 +88,10 @@ ms.locfileid: "88477714"
  DT_STR 型の列に適したコード ページを選択します。  
   
  **[エラー出力の構成]**  
- [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
+ [[エラー出力の構成]](../error-handling-in-data.md) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
   
 ## <a name="see-also"></a>参照  
- [高速解析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [高速解析](../parsing-data.md)   
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

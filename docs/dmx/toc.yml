@@ -165,7 +165,7 @@
         - name: DMX 演算子リファレンス
           href: ../dmx/data-mining-extensions-dmx-operator-reference.md
           items:
-            - name: + (加算)
+            - name: + (追加)
               href: ../dmx/add-dmx.md
             - name: '- (減算)'
               href: ../dmx/subtract-dmx.md
@@ -177,7 +177,7 @@
               href: ../dmx/less-than-dmx.md
             - name: '> (より大きい)'
               href: ../dmx/greater-than-dmx.md
-            - name: = (等しい)
+            - name: '= (等しい)'
               href: ../dmx/equal-to-dmx.md
             - name: <> (等しくない)
               href: ../dmx/not-equal-to-dmx.md
@@ -193,7 +193,7 @@
               href: ../dmx/or-dmx.md
             - name: + (正号)
               href: ../dmx/positive-dmx.md
-            - name: '- (負号)'
+            - name: '- (負)'
               href: ../dmx/negative-dmx.md
             - name: // (コメント)
               href: ../dmx/double-slash-comment-dmx.md

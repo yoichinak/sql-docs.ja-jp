@@ -21,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d04e4fe2f3adc13b02b5aafb4f2cc49ab05d09d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7353735a34874248e3796763c608bff24a83f649
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923678"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907374"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>既存のパブリケーションでのアーティクルの追加および削除
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "86923678"
  アーティクルを追加するには、アーティクルへのパブリケーションの追加、パブリケーションの新しいスナップショットの作成、サブスクリプションの同期による新しいアーティクルのスキーマとデータの適用を行います。  
   
 > [!NOTE]
->  マージ パブリケーションにアーティクルを追加する際に、その新しいアーティクルに既存のアーティクルが依存している場合は、[sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) および [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) の **\@processing_order** パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、**sp_addmergearticle** の **\@processing_order** パラメーターに値 **1** を指定し、**sp_changemergearticle** の **\@processing_order** パラメーターに値 **2** を指定します。パラメーター **\@article** にはテーブル名を指定します。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
+>  マージ パブリケーションにアーティクルを追加する際に、その新しいアーティクルに既存のアーティクルが依存している場合は、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) および [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) の **\@processing_order** パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、 **sp_addmergearticle** の **\@processing_order** パラメーターに値 **1** を指定し、 **sp_changemergearticle** の **\@processing_order** パラメーターに値 **2** を指定します。パラメーター **\@article** にはテーブル名を指定します。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
   
 1.  次のいずれかの方法を使用して、1 つ以上のアーティクルを追加します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "86923678"
  前述のように、場合によっては、アーティクルを削除するために、サブスクリプションの削除、再作成、および同期が必要になる場合があります。 詳細については、「[パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)」と「[データの同期](../../../relational-databases/replication/synchronize-data.md)」を参照してください。  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 以降、および **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 以降では、トランザクション レプリケーションに参加しているアーティクルに **DROP TABLE** DLL コマンドを使用する、テーブルの削除をサポートします。 DROP TABLE DDL がパブリケーションでサポートされる場合、DROP TABLE 操作ではパブリケーションとデータベースからテーブルが削除されます。 ログ リーダー エージェントでは、削除されたテーブルのディストリビューション データベースのクリーンアップ コマンドをポストし、パブリッシャーのメタデータのクリーンアップを実行します。 ログ リーダーで削除されたテーブルを参照しているすべてのログ レコードを処理していない場合、削除されたテーブルに関連付けられている新しいコマンドは無視されます。 既に処理されているレコードは、ディストリビューション データベースに配信されます。 ログ リーダーが廃止 (削除) されたアーティクルをクリーンアップする前に、ディストリビューション エージェントがレコードを処理する場合、これらのレコードはサブスクライバー データベースに適用される可能性があります。 すべてのトランザクション レプリケーション パブリケーションに対する**既定**の設定では、DROP TABLE DLL をサポートしません。 [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) には、この改善機能に関する詳細が含まれます。
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 以降、および **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 以降では、トランザクション レプリケーションに参加しているアーティクルに **DROP TABLE** DDL コマンドを使用する、テーブルの削除をサポートします。 DROP TABLE DDL がパブリケーションでサポートされる場合、DROP TABLE 操作ではパブリケーションとデータベースからテーブルが削除されます。 ログ リーダー エージェントでは、削除されたテーブルのディストリビューション データベースのクリーンアップ コマンドをポストし、パブリッシャーのメタデータのクリーンアップを実行します。 ログ リーダーで削除されたテーブルを参照しているすべてのログ レコードを処理していない場合、削除されたテーブルに関連付けられている新しいコマンドは無視されます。 既に処理されているレコードは、ディストリビューション データベースに配信されます。 ログ リーダーが廃止 (削除) されたアーティクルをクリーンアップする前に、ディストリビューション エージェントがレコードを処理する場合、これらのレコードはサブスクライバー データベースに適用される可能性があります。 すべてのトランザクション レプリケーション パブリケーションに対する **既定** の設定では、DROP TABLE DDL をサポートしません。 [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) には、この改善機能に関する詳細が含まれます。
 
   
 ## <a name="see-also"></a>参照  

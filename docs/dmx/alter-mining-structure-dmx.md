@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2a5e81b7ae19b431f35b3fe0eac291718c4df3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6169d898479637d8f8c0a74aececd56cf1f62eb7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431184"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727813"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +37,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>引数  
- *structure*  
+ *データ*  
  マイニング モデルが追加されるマイニング構造の名前です。  
   
  *model*  
@@ -56,10 +56,10 @@ USING <algorithm> [(<parameter list>)]
  プロバイダーによって定義されたデータマイニングアルゴリズムの名前。  
   
 > [!NOTE]  
->  現在のプロバイダーでサポートされているアルゴリズムの一覧は [DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))を使用して取得できます。 の現在のインスタンスでサポートされているアルゴリズムを表示するには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、「 [データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
+>  現在のプロバイダーでサポートされているアルゴリズムの一覧は [DMSCHEMA_MINING_SERVICES 行セット](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))を使用して取得できます。 の現在のインスタンスでサポートされているアルゴリズムを表示するには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、「 [データマイニングのプロパティ](/analysis-services/server-properties/data-mining-properties)」を参照してください。  
   
  *パラメーターリスト*  
- 任意。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
+ 省略可能。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
   
  *フィルター条件*  
  ケーステーブルの列に適用されるフィルター式。  
@@ -97,7 +97,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>列名と別名  
- 列定義リストで使用する列名は、マイニング構造で使用されている列の名前にする必要があります。 ただし、必要に応じて、マイニングモデルの構造列を表す別名を定義することもできます。 同じ構造列に複数の列定義を作成し、列の各コピーに異なる別名と予測の使用方法を割り当てることもできます。 既定では、別名を定義しない場合、構造列の名前が使用されます。 詳細については、「 [モデル列の別名を作成](https://docs.microsoft.com/analysis-services/data-mining/create-an-alias-for-a-model-column)する」を参照してください。  
+ 列定義リストで使用する列名は、マイニング構造で使用されている列の名前にする必要があります。 ただし、必要に応じて、マイニングモデルの構造列を表す別名を定義することもできます。 同じ構造列に複数の列定義を作成し、列の各コピーに異なる別名と予測の使用方法を割り当てることもできます。 既定では、別名を定義しない場合、構造列の名前が使用されます。 詳細については、「 [モデル列の別名を作成](/analysis-services/data-mining/create-an-alias-for-a-model-column)する」を参照してください。  
   
  入れ子になったテーブルの列の場合は、入れ子になったテーブルの名前を指定し、データ型を **テーブル**として指定します。次に、モデルに含める入れ子になった列の一覧をかっこで囲んで指定します。  
   
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |句|説明|  
 |-|-|  
-|**将来**|この列はモデルによって予測できます。また、その値を入力として使用して、その他の予測可能列の値を予測することもできます。|  
+|**PREDICT**|この列はモデルによって予測できます。また、その値を入力として使用して、その他の予測可能列の値を予測することもできます。|  
 |**PREDICT_ONLY**|この列はモデルによって予測できますが、その値を入力ケースで使用して他の予測可能列の値を予測することはできません。|  
   
 ## <a name="filter-criteria-expressions"></a>フィルター条件式  
@@ -129,15 +129,15 @@ USING <algorithm> [(<parameter list>)]
   
  フィルター条件式は、WHERE 句に似た単純な DMX 述語です。 フィルター式は、基本的な算術演算子、スカラー、および列名を使用する式に制限されます。 ただし、EXISTS 演算子は例外です。これは、サブクエリに対して少なくとも 1 行が返される場合は true に評価されます。 述語は、一般的な論理演算子 (AND、OR、および NOT) を使用して組み合わせることができます。  
   
- マイニングモデルで使用されるフィルターの詳細については、「 [Analysis Services データマイニング&#41;&#40;マイニングモデルのフィルター ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)」を参照してください。  
+ マイニングモデルで使用されるフィルターの詳細については、「 [Analysis Services データマイニング&#41;&#40;マイニングモデルのフィルター ](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)」を参照してください。  
   
 > [!NOTE]  
 >  フィルター内の列は、マイニング構造列である必要があります。 モデル列または別名列に対してフィルターを作成することはできません。  
   
- DMX の演算子と構文の詳細については、「 [マイニングモデル列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」を参照してください。  
+ DMX の演算子と構文の詳細については、「 [マイニングモデル列](/analysis-services/data-mining/mining-model-columns)」を参照してください。  
   
 ## <a name="parameter-definition-list"></a>パラメーター定義リスト  
- アルゴリズム パラメーターをパラメーター リストに追加して、モデルのパフォーマンスと機能を調整できます。 使用できるパラメーターは、USING 句で指定するアルゴリズムによって異なります。 各アルゴリズムに関連付けられているパラメーターの一覧については、「データマイニング [アルゴリズム &#40;Analysis Services データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)」を参照してください。  
+ アルゴリズム パラメーターをパラメーター リストに追加して、モデルのパフォーマンスと機能を調整できます。 使用できるパラメーターは、USING 句で指定するアルゴリズムによって異なります。 各アルゴリズムに関連付けられているパラメーターの一覧については、「データマイニング [アルゴリズム &#40;Analysis Services データマイニング&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)」を参照してください。  
   
  パラメーターリストの構文は次のとおりです。  
   
@@ -204,5 +204,4 @@ USING Microsoft_Decision Trees
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

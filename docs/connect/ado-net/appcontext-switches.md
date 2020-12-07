@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 16d3ed6db478f12157333badf93682eb861c57f3
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 8704cb5bf6492fc90f90344103359abdd7a32e2e
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091691"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081511"
 ---
 # <a name="appcontext-switches-in-sqlclient"></a>SqlClient の AppContext スイッチ
 
@@ -71,7 +71,7 @@ TransparentNetworkIPResolution は既定では有効になっています。 Mul
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString", true);
 ```
 
-これらのプロパティの設定方法の詳細については、「[SqlConnection.ConnectionString プロパティ](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring)」を参照してください。 
+これらのプロパティの設定方法の詳細については、「[SqlConnection.ConnectionString プロパティ](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring)」を参照してください。 
 
 ## <a name="enable-a-minimum-timeout-during-login"></a>ログイン中に最小タイムアウトを有効にする
 
@@ -95,4 +95,4 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", fa
 
 ## <a name="see-also"></a>関連項目
 
-[AppContext クラス](https://docs.microsoft.com/dotnet/api/system.appcontext?view=netcore-3.1)
+[AppContext クラス](/dotnet/api/system.appcontext?view=netcore-3.1&preserve-view=true)

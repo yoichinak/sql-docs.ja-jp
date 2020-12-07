@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 064b6294a33b87e41a9439e2759be2461131e388
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: 8f872916b7b93a1aab3447bad6579dd672c915e1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89424422"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194801"
 ---
 # <a name="odata-source"></a>OData ソース
 
@@ -42,7 +42,7 @@ Open Data Protocol (OData) サービスからのデータを使用するには�
 
 OData ソースには、次のデータ ソースのサポートが含まれます。
 -   Microsoft Dynamics AX Online および Microsoft Dynamics CRM Online
--   SharePoint リスト。 SharePoint サーバーのすべてのリストを表示するには、`https://<server>/_vti_bin/ListData.svc` という URL を使用します。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](https://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。
+-   SharePoint リスト。 SharePoint サーバーのすべてのリストを表示するには、`https://<server>/_vti_bin/ListData.svc` という URL を使用します。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14))」を参照してください。
 
 ## <a name="supported-data-types"></a>サポートされるデータ型
 
@@ -159,5 +159,4 @@ OData ソースは、次の単純なデータ型をサポートしています: 
   
 ## <a name="see-also"></a>参照  
  [OData 接続マネージャー](../../integration-services/connection-manager/odata-connection-manager.md)  
-  
   

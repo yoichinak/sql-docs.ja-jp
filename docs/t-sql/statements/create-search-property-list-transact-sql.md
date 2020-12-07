@@ -15,6 +15,7 @@ f1_keywords:
 - CREATE_SEARCH_PROPERTY_TSQL
 - CREATE SEARCH PROPERTY
 - CREATE SEARCH PROPERTY LIST
+- sql13.swb.spl.newsearchpropertylist.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2b347260ffc65ddf640678aed8d2728a087f981
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 22ae11a8e37109e7ba90e2b02e9e4351510f9ae7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688878"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127413"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

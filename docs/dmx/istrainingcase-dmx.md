@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e31f1c575441c01c6ff7e9325179ae6776802276
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb68d0aaa0d19fb903154b8d5c4d4135b57883e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352338"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726151"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,12 +37,12 @@ IsTrainingCase()
  <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> プロパティと <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> プロパティの値を表示すると、特定のデータ マイニング構造のデータがテスト セットとトレーニング セットにパーティション分割されているかどうかを確認できます。  
   
 > [!NOTE]  
->  IsTrainingCase 関数または IsTestCase 関数を使用してモデル内のケースに関する詳細を返す場合は、モデルでドリルスルーを有効にする必要があります。 詳細については、「 [Enable Drillthrough for a Mining Model](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)」(マイニング モデルのドリルスルーの有効化) を参照してください。  
+>  IsTrainingCase 関数または IsTestCase 関数を使用してモデル内のケースに関する詳細を返す場合は、モデルでドリルスルーを有効にする必要があります。 詳細については、「 [Enable Drillthrough for a Mining Model](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)」(マイニング モデルのドリルスルーの有効化) を参照してください。  
   
  テストデータセットの一部であるケースを返すには、関数 [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)を使用します。  
   
 ## <a name="examples"></a>例  
- 次の例では、「 [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」の絞り込みメール配信シナリオのクラスタリングデータマイニングモデルを使用します。 このクエリは、マイニングモデルのトレーニングに使用されたケースのみを返します。 さらに、トレーニングケースは40よりも前の顧客に制限されています。  
+ 次の例では、「 [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」の絞り込みメール配信シナリオのクラスタリングデータマイニングモデルを使用します。 このクエリは、マイニングモデルのトレーニングに使用されたケースのみを返します。 さらに、トレーニングケースは40よりも前の顧客に制限されています。  
   
 ```  
 SELECT *  
@@ -54,8 +54,7 @@ AND [Age] <40
  データマイニングで使用されるケースをクエリする方法のその他の例については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;&#40;ケース ](../dmx/select-from-model-cases-dmx.md) は [&#60;構造&#62; から選択します。ケース](../dmx/select-from-structure-cases.md)。  
   
 ## <a name="see-also"></a>参照  
- [トレーニングデータセットとテストデータセット](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)   
+ [トレーニングデータセットとテストデータセット](/analysis-services/data-mining/training-and-testing-data-sets)   
  [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
- [データマイニングクエリ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)  
-  
+ [データマイニングクエリ](/analysis-services/data-mining/data-mining-queries)  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5a27b74e529d917cf746d617e08dd44f9953a800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 754f9002dd5b9e8f9111dce59bc81417c704e40d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497759"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984918"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>サーバー接続ファイルの作成 (DB2ToSQL)
 
@@ -71,6 +71,6 @@ ms.locfileid: "88497759"
 
 コンソールを操作する次の手順では、 [SSMA コンソール &#40;DB2ToSQL を実行](../../ssma/db2/executing-the-ssma-console-db2tosql.md)して&#41;
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [SSMA コンソールの実行](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)
+- [SSMA コンソールの実行](./executing-the-ssma-console-db2tosql.md)

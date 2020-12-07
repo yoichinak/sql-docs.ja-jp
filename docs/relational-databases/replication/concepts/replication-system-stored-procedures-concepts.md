@@ -20,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08cca6276b93515385f342a591376b45c9898d04
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8a95adc8ad2b4a9c5c2b97a1d5e36820d1fe7ac1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480629"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868103"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -131,9 +131,9 @@ GO
  作成したレプリケーション スクリプトは、次のいずれかの方法で実行できます。  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>SQL Server Management Studio を使った SQL クエリ ファイルの作成  
- レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプト ファイルは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] プロジェクトで SQL クエリ ファイルとして作成できます。 スクリプトを作成した後、このクエリ ファイルが格納されたデータベースに接続することによってスクリプトを実行できます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを作成する方法の詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)」を参照してください。  
+ レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプト ファイルは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] プロジェクトで SQL クエリ ファイルとして作成できます。 スクリプトを作成した後、このクエリ ファイルが格納されたデータベースに接続することによってスクリプトを実行できます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを作成する方法の詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)」を参照してください。  
   
- スクリプト変数を含むスクリプトを使用するには、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を **sqlcmd** モードで実行する必要があります。 **sqlcmd** モードでは、変数の値として使用される `:setvar` などの **sqlcmd** に固有の追加の構文を Query Editor で使用できます。 **sqlcmd** モードの詳細については、「[クエリ エディターによる SQLCMD スクリプトの編集](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。 次のスクリプトでは、`$(DistPubServer)` 変数の値の指定に `:setvar` を使用しています。  
+ スクリプト変数を含むスクリプトを使用するには、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を **sqlcmd** モードで実行する必要があります。 **sqlcmd** モードでは、変数の値として使用される `:setvar` などの **sqlcmd** に固有の追加の構文を Query Editor で使用できます。 **sqlcmd** モードの詳細については、「[クエリ エディターによる SQLCMD スクリプトの編集](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。 次のスクリプトでは、`$(DistPubServer)` 変数の値の指定に `:setvar` を使用しています。  
   
 ```  
 :setvar DistPubServer N'MyPublisherAndDistributor';  
@@ -230,5 +230,4 @@ REM -- The following must be supplied on one line.
  [レプリケーションのプログラミング概念](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [レプリケーションのスクリプト作成](../../../relational-databases/replication/scripting-replication.md)  
-  
   

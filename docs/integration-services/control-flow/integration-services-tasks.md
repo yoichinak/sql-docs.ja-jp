@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d54d80276714bdc1427c2c01be0f9620acc32c8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0136b994f064a01a66d4c0884499172b1dab894b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392648"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197208"
 ---
 # <a name="integration-services-tasks"></a>Integration Services タスク
 
@@ -79,7 +79,7 @@ ms.locfileid: "88392648"
   
  プログラムによってパッケージにタスクを追加する方法の詳細については、「 [プログラムによるタスクの追加](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)」を参照してください。  
   
- 各タスクは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで用意されている、各タスク用のカスタム ダイアログ ボックスを使用して、個別に構成できます。または、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に含まれる [プロパティ] ウィンドウから構成できます。 パッケージには、6 つの SQL 実行タスクなど、同じ種類の複数のタスクを含めることができ、各タスクは個別に構成できます。 詳細については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
+ 各タスクは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで用意されている、各タスク用のカスタム ダイアログ ボックスを使用して、個別に構成できます。または、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に含まれる [プロパティ] ウィンドウから構成できます。 パッケージには、6 つの SQL 実行タスクなど、同じ種類の複数のタスクを含めることができ、各タスクは個別に構成できます。 詳細については、「 [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
 ## <a name="tasks-connections-and-groups"></a>タスクの連結とグループ  
  タスクに複数のタスクが含まれる場合、それらのタスクは優先順位制約によって順序が決定され、制御フロー内で連結されます。 詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
@@ -88,5 +88,4 @@ ms.locfileid: "88392648"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  
   

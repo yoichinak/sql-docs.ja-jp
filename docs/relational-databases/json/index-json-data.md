@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499256"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439465"
 ---
 # <a name="index-json-data"></a>JSON データへのインデックスの追加
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ SQL Server と SQL Database では、JSON のデータ型は組み込まれて�
 データベース インデックスでは、フィルターおよび並べ替え操作のパフォーマンスを向上させることができます。 インデックスがない場合、SQL Server は、データのクエリを実行するたびに、テーブルを完全にスキャンしなければなりません。  
   
 ## <a name="index-json-properties-by-using-computed-columns"></a>計算列を使用した JSON のプロパティへのインデックスの追加  
-SQL Server に JSON データを格納するときは通常、JSON ドキュメントの 1 つまたは複数の "*プロパティ*" でクエリ結果をフィルターしたり並べ替えたりします。  
+SQL Server に JSON データを格納するときは通常、JSON ドキュメントの 1 つまたは複数の " *プロパティ* " でクエリ結果をフィルターしたり並べ替えたりします。  
 
 ### <a name="example"></a>例 
 この例では、AdventureWorks の `SalesOrderHeader` テーブルに、注文に関するさまざまな情報を JSON 形式で格納している `Info` 列があるものとします。 たとえば、顧客、営業担当者、出荷および請求先住所などの情報が含まれます。 顧客の販売注文をフィルター処理するために、`Info` 列の値を使用したいとします。
@@ -46,7 +46,7 @@ WHERE JSON_VALUE(Info, '$.Customer.Name') = N'Aaron Campbell'
 ```  
 
 ### <a name="example-index"></a>インデックスの例
-JSON ドキュメントのプロパティでフィルターまたは `ORDER BY` 句を高速化する場合は、他の列で既に使用しているのと同じインデックスを使用します。 ただし、JSON ドキュメントのプロパティを "*直接*" 参照することはできません。
+JSON ドキュメントのプロパティでフィルターまたは `ORDER BY` 句を高速化する場合は、他の列で既に使用しているのと同じインデックスを使用します。 ただし、JSON ドキュメントのプロパティを " *直接* " 参照することはできません。
     
 1.  最初に、フィルター処理に使用する値を返す "仮想列" を作成する必要があります。
 2.  それからその仮想列にインデックスを作成します。  
@@ -70,7 +70,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 ### <a name="execution-plan-for-this-example"></a>この例の実行プラン
 この例のクエリの実行プランを次に示します。  
   
-![実行プラン](../../relational-databases/json/media/jsonindexblog1.png "実行プラン")  
+![この例の実行プランを示すスクリーンショット。](../../relational-databases/json/media/jsonindexblog1.png "実行プラン")  
   
 SQL Server では、テーブルを完全にスキャンするのではなく、非クラスター化インデックスに index seek を使用し、指定した条件に一致する行を探します。 次に、`SalesOrderHeader` テーブルでキー参照を使って、クエリで参照される他の列 (この例では `SalesOrderNumber` と `OrderDate`) をフェッチします。  
  
@@ -138,13 +138,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  実際の実行計画を見ると、非クラスター化インデックスからの並べ替えられた値を使用していることがわかります。  
   
- ![実行プラン](../../relational-databases/json/media/jsonindexblog2.png "実行プラン")  
+ ![非クラスター化インデックスからの並べ替えられた値を使用する実行プランを示すスクリーンショット。](../../relational-databases/json/media/jsonindexblog2.png "実行プラン")  
   
  クエリには `ORDER BY` 句がありますが、実行プランでは、Sort 演算子は使用しません。 JSON インデックスは既にセルビア語 (キリル) の規則に従って並んでいます。 したがって、結果が既に並べ替えられている場合、SQL Server は非クラスター化インデックスを使用できます。  
   
  ただし、`JSON_VALUE` 関数の後に `COLLATE French_100_CI_AS_SC` を追加するなど、`ORDER BY` 式の照合順序を変更した場合、得られるクエリ実行プランは異なります。  
   
- ![実行プラン](../../relational-databases/json/media/jsonindexblog3.png "実行プラン")  
+ ![別の実行プランを示すスクリーンショット。](../../relational-databases/json/media/jsonindexblog3.png "実行プラン")  
   
  インデックス内の値の順序はフランス語の照合順序の規則を準拠していないために、SQL Server では、結果の順序付けにそのインデックスを使用できません。 したがって、フランス語の照合順序の規則を使用して結果を並べ替える Sort 演算子が追加されます。  
  

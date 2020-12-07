@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e65024ac3673e6579e614ad64931ab772b599f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480321"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193665"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
 
@@ -72,11 +72,10 @@ ms.locfileid: "89480321"
 |エンティティ管理者|明示的に割り当てられている管理者権限、またはグループから継承した権限に基づいてエンティティ管理者になる場合があります。<br /><br /> アクセス権が付与された機能領域だけにアクセスできます。<br /><br /> 特定のエンティティのすべてのオブジェクトおよびメンバーに対するあらゆる権限が自動的に付与されます。<br /><br /> エンティティの変更に承認が必要な場合、保留中の変更セットを承認できます。|  
   
 ## <a name="external-resources"></a>外部リソース  
- msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)」をご覧ください。  
+ msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](/archive/blogs/e7/improvements-to-autoplay)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデル管理者 &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [マスターデータサービスデータベースを作成する](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [通知 (マスター データ サービス)](../master-data-services/notifications-master-data-services.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7bc85d20ab3c1c087b6352d16777b2bb7d7dcd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 062e95b2030b3f4e3004fa1409f26fe82e38e05d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500873"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726118"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,10 +38,10 @@ FROM <existing model>
  プロバイダーによって定義された、データ マイニング アルゴリズムの名前です。  
   
  *パラメーターリスト*  
- 任意。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
+ 省略可能。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
   
  *式 (expression)*  
- トレーニングデータの有効なフィルター条件に評価される式。 フィルターとして使用できる式の詳細については、「 [Analysis Services データマイニング&#41;&#40;マイニングモデルのフィルター ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)」を参照してください。  
+ トレーニングデータの有効なフィルター条件に評価される式。 フィルターとして使用できる式の詳細については、「 [Analysis Services データマイニング&#41;&#40;マイニングモデルのフィルター ](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)」を参照してください。  
   
  *既存のモデル*  
  コピーする既存のモデルの名前。  
@@ -54,7 +54,7 @@ FROM <existing model>
  **WITH ドリルスルー**句を使用すると、新しいマイニングモデルでドリルスルーを実行できます。 ドリルスルーは、モデルの作成時にのみ可能です。  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>例 1: モデルのパラメーターを変更する  
- 次の例では、 `TM_Clustering` 「 [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成した既存のマイニングモデルに基づいて、新しいマイニングモデルを作成します。 新しいモデルでは、CLUSTER_COUNT パラメーターが変更され、最大5つのクラスターが新しいモデルに存在するようになりました。 これに対して、既存のモデルでは既定値 10 が使用されています。  
+ 次の例では、 `TM_Clustering` 「 [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」で作成した既存のマイニングモデルに基づいて、新しいマイニングモデルを作成します。 新しいモデルでは、CLUSTER_COUNT パラメーターが変更され、最大5つのクラスターが新しいモデルに存在するようになりました。 これに対して、既存のモデルでは既定値 10 が使用されています。  
   
 ```  
 SELECT * INTO [New_Clustering]  
@@ -78,5 +78,4 @@ FROM [TM Clustering]
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

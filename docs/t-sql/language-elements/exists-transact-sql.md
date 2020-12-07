@@ -26,12 +26,12 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21ea1933bc37001040beb6007fb877fa8765a24c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e5b3519a18f8729920e307ddd895d34a2449d93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467694"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194970"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467694"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 EXISTS ( subquery )  
 ```  
   
@@ -63,7 +63,7 @@ EXISTS ( subquery )
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. サブクエリで NULL を使用しても結果セットを返すようにする  
  次の例では、サブクエリに `NULL` を指定しても、`EXISTS` により TRUE と評価されるので、結果が返されます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name   
@@ -75,7 +75,7 @@ ORDER BY Name ASC ;
 ### <a name="b-comparing-queries-by-using-exists-and-in"></a>B. EXISTS と IN を使用してクエリを比較する  
  次の例では、意味的に等価な 2 つのクエリを比較します。 最初のクエリでは `EXISTS` を使用し、2 番目のクエリでは `IN` を使用します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -90,7 +90,7 @@ GO
   
  次のクエリでは `IN` を使用します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -118,7 +118,7 @@ Willis                                             Johnson
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. EXISTS と = ANY を使用してクエリを比較する  
  次の例では、ベンダーと同じ名前の店を検索する 2 つのクエリを示します。 最初のクエリでは `EXISTS` を使用し、2 番目のクエリでは `=``ANY` を使用します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -132,7 +132,7 @@ GO
   
  次のクエリでは `= ANY` を使用します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -146,7 +146,7 @@ GO
 ### <a name="d-comparing-queries-by-using-exists-and-in"></a>D. EXISTS と IN を使用してクエリを比較する  
  次の例では、`P` で始まる部署の従業員を検索するクエリを示します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -165,7 +165,7 @@ GO
   
  次のクエリでは `IN` を使用します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -183,7 +183,7 @@ GO
 ### <a name="e-using-not-exists"></a>E. NOT EXISTS を使用する  
  NOT EXISTS は EXISTS とは逆の動作をします。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例では、`P` で始まる部署に属していない従業員を検索します。  
   
-```  
+```sql  
 SELECT p.FirstName, p.LastName, e.JobTitle  
 FROM Person.Person AS p   
 JOIN HumanResources.Employee AS e  
@@ -304,7 +304,7 @@ Peng                           Wu                             Quality Assurance 
 ### <a name="f-using-exists"></a>F. EXISTS を使用する  
  次の例では、`ProspectiveBuyer` テーブルの行が `DimCustomer` テーブルの行と一致するかどうかを示しています。 2 つのテーブルの `LastName` と `BirthDate` の両方の値が一致する場合にのみ、クエリは行を返します。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  
@@ -318,7 +318,7 @@ WHERE EXISTS
 ### <a name="g-using-not-exists"></a>G. NOT EXISTS を使用する  
  NOT EXISTS の動作は EXISTS と逆です。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例では、`LastName` と `BirthDate` が `ProspectiveBuyers` テーブルのどのエントリとも一致しない `DimCustomer` テーブルの行を検出します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  

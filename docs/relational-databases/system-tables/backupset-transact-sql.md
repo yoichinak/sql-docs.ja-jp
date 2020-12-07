@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544683"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328597"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-sql)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "89544683"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メジャーバージョン番号。 NULL にすることができます。|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマイナー バージョン番号。 NULL にすることができます。|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のビルド番号。 NULL にすることができます。|  
-|**time_zone**|**smallint**|現地時刻 (バックアップ操作が実行されている場所) と世界協定時刻 (UTC) の差 (15 分間隔)。 値は、-48 ~ + 48 の範囲で指定できます。 値 127 は、不明な状態を表します。 たとえば、-20 は東部標準時刻 (EST) を表し、これは UTC の 5 時間前にあたります。 NULL にすることができます。|  
+|**time_zone**|**smallint**|バックアップ操作の開始時のタイムゾーン情報を使用して、ローカル時刻 (バックアップ操作が実行されている場所) と世界協定時刻 (UTC) の差を15分間隔で指定します。 値は、-48 ~ + 48 の範囲で指定できます。 値 127 は、不明な状態を表します。 たとえば、-20 は東部標準時刻 (EST) を表し、これは UTC の 5 時間前にあたります。 NULL にすることができます。|  
 |**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format のマイナー バージョン番号。 NULL にすることができます。|  
 |**first_lsn**|**numeric(25,0)**|バックアップセット内の最初または最も古いログレコードのログシーケンス番号。 NULL にすることができます。|  
 |**last_lsn**|**numeric(25,0)**|バックアップ セットの次のログ レコードのログ シーケンス番号。 NULL にすることができます。|  
@@ -90,14 +90,14 @@ ms.locfileid: "89544683"
 |**has_incomplete_metadata**|**bit**|1 = 不完全なメタデータでのログ末尾のバックアップ。 詳細については、「[ログ末尾のバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)」を参照してください。|  
 |**is_force_offline**|**bit**|1 = バックアップ時、データベースが NORECOVERY オプションによってオフラインにされた。|  
 |**is_copy_only**|**bit**|1 = コピーのみのバックアップ。 詳細については、「[コピーのみのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)」を参照してください。|  
-|**first_recovery_fork_guid**|**uniqueidentifier**|開始復旧分岐の ID。 これは、RESTORE HEADERONLY の **Firstrecoveryforkid** に対応しています。<br /><br /> データバックアップの場合、 **first_recovery_fork_guid** は **last_recovery_fork_guid**と同じになります。|  
-|**last_recovery_fork_guid**|**uniqueidentifier**|終了する復旧分岐の ID。 これは、RESTORE HEADERONLY の **Recoveryforkid** に対応しています。<br /><br /> データバックアップの場合、 **first_recovery_fork_guid** は **last_recovery_fork_guid**と同じになります。|  
-|**fork_point_lsn**|**numeric(25,0)**|**First_recovery_fork_guid**が**last_recovery_fork_guid**と等しくない場合、これは分岐ポイントのログシーケンス番号です。 それ以外の場合は NULL になります。|  
+|**first_recovery_fork_guid**|**uniqueidentifier**|開始復旧分岐の ID。 これは、RESTORE HEADERONLY の **Firstrecoveryforkid** に対応しています。<br /><br /> データバックアップの場合、 **first_recovery_fork_guid** は **last_recovery_fork_guid** と同じになります。|  
+|**last_recovery_fork_guid**|**uniqueidentifier**|終了する復旧分岐の ID。 これは、RESTORE HEADERONLY の **Recoveryforkid** に対応しています。<br /><br /> データバックアップの場合、 **first_recovery_fork_guid** は **last_recovery_fork_guid** と同じになります。|  
+|**fork_point_lsn**|**numeric(25,0)**|**First_recovery_fork_guid** が **last_recovery_fork_guid** と等しくない場合、これは分岐ポイントのログシーケンス番号です。 それ以外の場合は NULL になります。|  
 |**database_guid**|**uniqueidentifier**|データベースの一意の ID。 これは、RESTORE HEADERONLY の **Bindingid** に対応します。 データベースが復元されると、新しい値が割り当てられます。|  
 |**family_guid**|**uniqueidentifier**|作成時の元のデータベースの一意の ID。 この値は、データベースが復元されるときに、別の名前であっても変わりません。|  
 |**differential_base_lsn**|**numeric(25,0)**|差分バックアップのベース LSN。 単一ベースの差分バックアップの場合Lsn が **differential_base_lsn** 以上の変更が、差分バックアップに含まれています。<br /><br /> マルチベースの差分では、値は NULL で、ベース LSN はファイルレベルで決定する必要があります (「 [backupfile &#40;transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)」を参照してください)。<br /><br /> 差分以外のバックアップの種類の場合、値は常に NULL になります。|  
 |**differential_base_guid**|**uniqueidentifier**|シングル ベースの差分バックアップの場合は、差分ベースの一意識別子。<br /><br /> マルチ ベースの差分バックアップの場合は NULL。差分のベースはファイル レベルで決定される必要があります。<br /><br /> 差分以外のバックアップの種類の場合、値は NULL になります。|  
-|**compressed_backup_size**|**Numeric (20, 0)**|ディスクに格納されたバックアップの総バイト数。<br /><br /> 圧縮比率を計算するには、 **compressed_backup_size** と **backup_size**を使用します。<br /><br /> この値は、 **msdb** のアップグレード中に NULL に設定されます。 これは圧縮されていないバックアップを示します。|  
+|**compressed_backup_size**|**Numeric (20, 0)**|ディスクに格納されたバックアップの総バイト数。<br /><br /> 圧縮比率を計算するには、 **compressed_backup_size** と **backup_size** を使用します。<br /><br /> この値は、 **msdb** のアップグレード中に NULL に設定されます。 これは圧縮されていないバックアップを示します。|  
 |**key_algorithm**|**nvarchar(32)**|バックアップの暗号化に使用される暗号化アルゴリズム。 NO_Encryption 値は、バックアップが暗号化されていないことを示しています。|  
 |**encryptor_thumbprint**|**varbinary(20)**|データベースに保存されている証明書や非対称キーを検索するために使用される暗号化機能の拇印。 バックアップが暗号化されていない場合、この値は NULL になります。|  
 |**encryptor_type**|**nvarchar(32)**|使用される暗号化の種類:証明書キーまたは非対称キー。 . バックアップが暗号化されていない場合、この値は NULL になります。|  

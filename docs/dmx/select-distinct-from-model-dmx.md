@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: caefcdc2e081c0e8d0e7bee329d4dc5d4d5cfa22
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413268"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727653"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt; model &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +31,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>引数  
  *n*  
- 任意。 返す行数を指定する整数。  
+ 省略可能。 返す行数を指定する整数。  
   
  *式の一覧*  
  関連する列識別子 (モデルから派生したもの) または式のコンマ区切りのリスト。  
@@ -43,7 +43,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 任意。 スカラー値を返す式。  
+ 省略可能。 スカラー値を返す式。  
   
 ## <a name="remarks"></a>解説  
  **SELECT DISTINCT FROM**ステートメントは、1つの列、または関連する列のセットでのみ機能します。 この句は、関連しない列のセットでは動作しません。  
@@ -56,14 +56,14 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
  **SELECT DISTINCT FROM \<model> **ステートメントの結果は、列の種類によって異なります。 次の表は、サポートされている列の型およびステートメントからの出力について示しています。  
   
-|列の型|出力|  
+|列の型|Output|  
 |-----------------|------------|  
 |離散|列内の一意の値。|  
 |Discretized|列内の分離された各バケットの中間点。|  
 |継続的|列内の値の中間点。|  
   
 ## <a name="discrete-column-example"></a>不連続列の例  
- 次のコードサンプルは、「 `[TM Decision Tree]` [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成したモデルに基づいています。 このクエリでは、不連続列に存在する一意の値が返され `Gender` ます。  
+ 次のコードサンプルは、「 `[TM Decision Tree]` [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」で作成したモデルに基づいています。 このクエリでは、不連続列に存在する一意の値が返され `Gender` ます。  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -103,7 +103,7 @@ FROM [TM Decision Tree]
  次のコード サンプルは、列 `Yearly Income]` のアルゴリズムで作成された各バケットの中間点、最大値、および最小値を返します。 この例の結果を再現するには、と同じ新しいマイニング構造を作成する必要があり `[Targeted Mailing]` ます。 ウィザードで、列のコンテンツの種類を [ `Yearly Income` **連続** ] から [ **分離**] に変更します。  
   
 > [!NOTE]  
->  また、「基本的なマイニングチュートリアル」で作成したマイニングモデルを変更して、マイニング構造列を分離することもでき `Yearly Income]` ます。 この方法の詳細については、「 [マイニングモデルの列の分離を変更](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)する」を参照してください。 ただし、列の分離を変更した場合は、マイニング構造が強制的に再処理され、その構造を使用して作成した他のモデルの結果が変更されます。  
+>  また、「基本的なマイニングチュートリアル」で作成したマイニングモデルを変更して、マイニング構造列を分離することもでき `Yearly Income]` ます。 この方法の詳細については、「 [マイニングモデルの列の分離を変更](/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)する」を参照してください。 ただし、列の分離を変更した場合は、マイニング構造が強制的に再処理され、その構造を使用して作成した他のモデルの結果が変更されます。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -138,5 +138,4 @@ FROM [TM Decision Tree]
  [DMX&#41;を選択 &#40;](../dmx/select-dmx.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

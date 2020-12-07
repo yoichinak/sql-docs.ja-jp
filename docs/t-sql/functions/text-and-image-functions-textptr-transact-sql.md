@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90365bd45edac8e3e5a131ab4786449352b70011
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422596"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92036470"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88422596"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 TEXTPTR ( column )  
 ```  
   
@@ -65,10 +64,10 @@ TEXTPTR ( column )
   
 |関数またはステートメント|説明|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
-|DATALENGTH<b>(</b>_expression_ **)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
+|PATINDEX <b>('</b> _%pattern%_ **' ,** _expression_ **)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
+|DATALENGTH <b>(</b>_expression_ **)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
 |[SET TEXTSIZE]|SELECT ステートメントで返される **text**、**ntext**、または **image** データの制限値をバイト単位で返します。|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
+|SUBSTRING <b>(</b>_text_column_, _start_, _length_ **)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
   
 ## <a name="examples"></a>例  
   
@@ -78,10 +77,10 @@ TEXTPTR ( column )
 ### <a name="a-using-textptr"></a>A. TEXTPTR を使用する  
  次の例では、`TEXTPTR` 関数を使用して、`pubs` データベースの `pub_info` テーブル内の `New Moon Books` に関連付けられている **image** 列 `logo` を検索します。 テキスト ポインターは、ローカル変数 `@ptrval.` に格納されます。  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(logo)  
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   
@@ -92,8 +91,8 @@ GO
 ### <a name="b-using-textptr-with-in-row-text"></a>B. TEXTPTR を行内テキストと使用する  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行内テキスト ポインターは、次の例に示すように、トランザクション内で使用する必要があります。  
   
-```  
-CREATE TABLE t1 (c1 int, c2 text);  
+```sql
+CREATE TABLE t1 (c1 INT, c2 TEXT);  
 EXEC sp_tableoption 't1', 'text in row', 'on';  
 INSERT t1 VALUES ('1', 'This is text.');  
 GO  
@@ -109,7 +108,7 @@ COMMIT;
 ### <a name="c-returning-text-data"></a>C. テキスト データを返す  
  次の例では、`pub_info` テーブルから `pub_id` 列、および `pr_info` 列の 16 バイトのテキスト ポインターを選択します。  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, TEXTPTR(pr_info)  
@@ -137,7 +136,7 @@ pub_id
   
  次の例では、TEXTPTR を使用せずにテキストの最初の `8000` バイトを返す方法を示します。  
   
-```  
+```sql
 USE pubs;  
 GO  
 SET TEXTSIZE 8000;  
@@ -168,10 +167,10 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ### <a name="d-returning-specific-text-data"></a>D. 特定のテキスト データを返す  
  次の例では、`pubs` データベースの `pub_info` テーブル内の `pub_id``0736` に関連付けられた `text` 列 (`pr_info`) を検索します。 まず、ローカル変数 `@val` が宣言されます。 次に、テキスト ポインター (長いバイナリ文字列) が `@val` に挿入され、`READTEXT` ステートメントにパラメーターとして指定されます。 これによって、5 番目のバイト (オフセットは 4) から開始して、10 バイトのデータが返されます。  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @val varbinary(16);  
+DECLARE @val VARBINARY(16);  
 SELECT @val = TEXTPTR(pr_info)   
 FROM pub_info  
 WHERE pub_id = '0736';  
@@ -193,8 +192,7 @@ pr_info
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;]()   
  [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
-  
   

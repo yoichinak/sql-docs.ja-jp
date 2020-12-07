@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009338"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727441"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server への接続
 
@@ -77,7 +77,7 @@ TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets 
 
 暗号化を有効にすると、セキュリティは向上しますが、パフォーマンスは低下します。
 
-詳しくは、「[SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?LinkId=220900)」および「[検証を伴わない暗号化の使用](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)」をご覧ください。
+詳しくは、「[SQL Server への接続の暗号化](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))」および「[検証を伴わない暗号化の使用](../../../relational-databases/native-client/features/using-encryption-without-validation.md)」をご覧ください。
 
 **Encrypt** と **TrustServerCertificate**の設定に関係なく、サーバー ログインの資格情報 (ユーザー名とパスワード) は常に暗号化されます。 次の表は、 **Encrypt** 設定と **TrustServerCertificate** 設定の効果の一覧です。  
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d3d0bc74e2d928b81e00947095aa992669bcb54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b2d327df39cb0c3a891fc5f4bc624619e7964e8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459261"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195454"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88459261"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 SHUTDOWN [ WITH NOWAIT ]   
 ```  
   

@@ -22,10 +22,10 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 31cf25c3800d4fe35e0ef914db85eb82f58fe85c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116716"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
@@ -45,7 +45,7 @@ GETANSINULL ( [ 'database' ] )
 
 ## <a name="arguments"></a>引数
  '*database*'  
- NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 * データベースは **char** または **nchar** です。 場合 **char**, 、*データベース* に暗黙的に変換が **nchar**です。  
+ NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 * データベースは **char** または **nchar** です。 場合 **char**, 、*データベース* に暗黙的に変換が **nchar** です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  

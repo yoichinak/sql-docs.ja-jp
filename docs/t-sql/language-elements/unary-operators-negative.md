@@ -20,12 +20,12 @@ ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 873bff9e761f83f0b15493810d0c684afa189748
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 808fbbb25bbd91071e4274d29133da11e420d8fc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459246"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196817"
 ---
 # <a name="unary-operators---negative"></a>単項演算子 - 負号
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,10 +62,10 @@ ms.locfileid: "88459246"
 ### <a name="a-setting-a-variable-to-a-negative-value"></a>A. 変数に負の値を設定する  
  次の例では、変数に負の値を設定します。  
   
-```  
+```sql 
 USE tempdb;  
 GO  
-DECLARE @MyNumber decimal(10,2);  
+DECLARE @MyNumber DECIMAL(10,2);  
 SET @MyNumber = -123.45;  
 SELECT @MyNumber AS NegativeValue;  
 GO  
@@ -85,14 +85,13 @@ NegativeValue
 ### <a name="b-changing-a-variable-to-a-negative-value"></a>B. 変数を負の値に変更する  
  次の例では、変数を負の値に変更します。  
   
-```  
+```sql  
 USE tempdb;  
 GO  
-DECLARE @Num1 int;  
+DECLARE @Num1 INT;  
 SET @Num1 = 5;  
 SELECT @Num1 AS VariableValue, -@Num1 AS NegativeValue;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -111,7 +110,7 @@ VariableValue NegativeValue
 ### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. 正の定数の負の値を返す  
  次の例では、正の定数の負の値を返します。  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT TOP (1) - 17 FROM DimEmployee;  
@@ -126,7 +125,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 ### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. 負の定数の正の値を返す  
  次の例では、負の定数の正の値を返します。  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT TOP (1) - ( - 17) FROM DimEmployee;  
@@ -141,7 +140,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 列の負の値を返す  
  次の例では、`dimEmployee` テーブルの各従業員に対し、`BaseRate` 値の負の値を返します。  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT - BaseRate FROM DimEmployee;  

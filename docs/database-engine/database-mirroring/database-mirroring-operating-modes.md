@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fdcdc937ba8509f67b71352dd1b87d8f98f92d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 505f09118b4c1b4598936e59c57ce2202a4ddd55
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631420"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670855"
 ---
 # <a name="database-mirroring-operating-modes"></a>データベース ミラーリングの動作モード
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85631420"
  ここでは、非同期データベース ミラーリングのしくみ、高パフォーマンス モードの使用に適した状況、およびプリンシパル サーバーで障害が発生した場合の対処法について説明します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のほとんどのエディションでは、同期データベース ミラーリングのみ (安全性レベルが FULL の場合のみ) をサポートしています。 データベース ミラーリングを完全にサポートするエディションについては、「[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」の「高可用性 (Always On)」を参照してください。
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のほとんどのエディションでは、同期データベース ミラーリングのみ (安全性レベルが FULL の場合のみ) をサポートしています。 データベース ミラーリングを完全にサポートするエディションについては、「[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」の「高可用性 (Always On)」を参照してください。
   
  トランザクションの安全性が OFF に設定されていると、データベース ミラーリング セッションが非同期に動作します。 非同期動作は、高パフォーマンス モードという動作モードのみでサポートされています。 このモードでは高可用性という点を譲歩してパフォーマンスが強化されています。 高パフォーマンス モードでは、プリンシパル サーバーおよびミラー サーバーのみを使用します。 ミラー サーバーで発生した問題がプリンシパル サーバーに影響を及ぼすことはありません。 プリンシパル サーバーが停止した場合、ミラー データベースは DISCONNECTED になりますがウォーム スタンバイ状態で利用できます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "85631420"
  プリンシパル サーバーから非常に離れた場所にミラー サーバーを設置していたり、軽度のエラーによるプリンシパル サーバーへの影響でも不都合が生じる災害復旧シナリオでは、高パフォーマンス モードが適切である場合があります。  
   
 > [!NOTE]  
->  ログ配布はデータベース ミラーリングを補うことができ、非同期データベース ミラーリングの有効な代替手段です。 ログ配布の利点については、「[高可用性ソリューション &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)」を参照してください。 ログ配布とデータベース ミラーリングの使用方法の詳細については、「[データベース ミラーリングとログ配布 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)」を参照してください。  
+>  ログ配布はデータベース ミラーリングを補うことができ、非同期データベース ミラーリングの有効な代替手段です。 ログ配布の利点については、「[高可用性ソリューション &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)」を参照してください。 ログ配布とデータベース ミラーリングの使用方法の詳細については、「[データベース ミラーリングとログ配布 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)」を参照してください。  
   
 ###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> 高パフォーマンス モードのミラーリング監視の影響  
  Transact-SQL を使用して高パフォーマンス モードを構成する場合、SAFETY プロパティを OFF に設定した際には常に、WITNESS プロパティも OFF に設定することを強くお勧めします。 ミラーリング監視は高パフォーマンス モードでも使用できますが、使用による利点はなく、リスクが増えるだけです。  
@@ -287,5 +287,4 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>参照  
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [データベース ミラーリング監視サーバー](../../database-engine/database-mirroring/database-mirroring-witness.md)  
-  
   

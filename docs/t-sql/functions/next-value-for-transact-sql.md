@@ -24,10 +24,10 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 02eaf8552bdbd25788d5a436230b58e3d14d6f9e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116657"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
@@ -96,9 +96,9 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **ORDER BY** 句を使用するステートメン内で使用する場合。ただし、**NEXT VALUE FOR** ...**OVER** (**ORDER BY** ...) が使用されている場合を除く。  
   
--   次の句で: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY**, or **FOR XML**です。  
+-   次の句で: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY**, or **FOR XML** です。  
   
--   使用して条件付きの式で **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL**, or **NULLIF**です。  
+-   使用して条件付きの式で **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL**, or **NULLIF** です。  
   
 -   **VALUES** 句がない場合の一部では、 **INSERT** ステートメントです。  
   
@@ -134,7 +134,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 -   `INSERT ... SELECT` ステートメントまたは `INSERT ... EXEC` ステートメントで、挿入されるデータを **ORDER BY** 句を使用してクエリから取得する場合、**NEXT VALUE FOR** 関数によって返される値は、**ORDER BY** 句で指定された順序で生成されます。  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>OVER ORDER BY 句でのシーケンス オブジェクトの使用  
- **NEXT VALUE FOR** 関数は、適用することで並べ替えられたシーケンス値の生成をサポートしています、 **OVER** 句を **NEXT VALUE FOR** 呼び出します。 **OVER** 句を使用することにより、返される値が **OVER** 句の **ORDER BY** サブ句の順序で生成されることが保証されます。 次の追加のルールの適用を使用する場合、 **NEXT VALUE FOR** で動作、 **OVER**で 句。  
+ **NEXT VALUE FOR** 関数は、適用することで並べ替えられたシーケンス値の生成をサポートしています、 **OVER** 句を **NEXT VALUE FOR** 呼び出します。 **OVER** 句を使用することにより、返される値が **OVER** 句の **ORDER BY** サブ句の順序で生成されることが保証されます。 次の追加のルールの適用を使用する場合、 **NEXT VALUE FOR** で動作、 **OVER** で 句。  
   
 -   複数回呼び出す、 **NEXT VALUE FOR** 関数の 1 つのステートメントで同じシーケンス ジェネレーター必要がありますすべてを使用してください、同じ **OVER** 句の定義。  
   
@@ -142,7 +142,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **OVER** 句に適用される、 **NEXT VALUE FOR** 関数がサポートされていません、 **PARTITION BY** サブ句。  
   
--   呼び出しはすべての場合、 **NEXT VALUE FOR** で機能、 を**SELECT** ステートメントを指定、 **OVER**で 句、 **ORDER BY** 句で使用できる、 を**SELECT** ステートメントです。  
+-   呼び出しはすべての場合、 **NEXT VALUE FOR** で機能、 を **SELECT** ステートメントを指定、 **OVER** で 句、 **ORDER BY** 句で使用できる、 を **SELECT** ステートメントです。  
   
 -   **SELECT** ステートメントまたは `INSERT ... SELECT ...` ステートメントでは、**NEXT VALUE FOR** 関数と共に **OVER** 句を使用できます。 **UPDATE** ステートメントまたは **MERGE** ステートメントでは、**NEXT VALUE FOR** 関数で **OVER** 句は使用できません。  
   

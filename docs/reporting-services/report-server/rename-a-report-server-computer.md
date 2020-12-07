@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83de666e0f6aa3dc54c3e9b864ebabf957f4ac25
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 2fbe0a54b6f48c97c81b288b8eebb5514cc637ac
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544524"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892412"
 ---
 # <a name="rename-a-report-server-computer"></a>レポート サーバー コンピューターの名前の変更
   コンピューターの名前を変更すると、同じコンピューター上に存在する Web サーバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前が対応して変更されます。 場合によっては、コンピューター名を変更した後に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にアクセスできなくなることがあります。 コンピューター名を変更した後にレポート サーバーを再構成するには、この記事で説明する手順を使用します。  
@@ -46,7 +46,7 @@ ms.locfileid: "84544524"
   
 ## <a name="see-also"></a>関連項目  
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [rsconfig ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  

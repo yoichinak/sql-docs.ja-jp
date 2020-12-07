@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf7ec186a6a233d12034114f88b98efea50e72f9
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: c7c914306258394bde91d64e5cb84665d62ab2b4
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381015"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081401"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>方法:組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ UTF-8 でエンコードされたデータを送信または取得するには:
   
 UTF-8 または SQLSRV_ENC_CHAR を **CharacterSet** に渡すことはできますが、SQLSRV_ENC_BINARY を渡すことはできません。 既定のエンコーディングは SQLSRV_ENC_CHAR です。  
   
-## <a name="example"></a>例  
+## <a name="connection-example"></a>接続の例  
 次の例では、接続の作成時に、UTF-8 文字セットを指定して、UTF-8 でエンコードされたデータを送信および取得する方法を示します。 この例では、Production.ProductReview テーブルの指定したレビュー ID の Comments 列を更新します。 この例では、新規に更新したデータも取得し、それを表示します。 なお、Comments 列は、**nvarchar(3850)** 型です。 また、サーバーに送信される前に、データは PHP **utf8_encode** 関数を使用して UTF-8 エンコードに変換されます。 これはデモンストレーションのみを目的としています。 実際のアプリケーションのシナリオでは、UTF-8 でエンコード済みのデータで開始します。  
   
 この例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 ブラウザーからこの例を実行すると、すべての出力はブラウザーに書き込まれます。  
@@ -126,9 +126,9 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Unicode データを格納する方法の詳細については、「[Unicode データを使用した作業](https://msdn.microsoft.com/library/ms175180.aspx)」を参照してください。  
+Unicode データを格納する方法の詳細については、「[Unicode データを使用した作業](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105))」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="column-example"></a>列の例  
 次の例は最初のサンプルと似ていますが、このサンプルでは接続で UTF-8 文字セットを指定する代わりに、列に UTF-8 文字セットを指定する方法を示します。  
   
 ```  
@@ -231,4 +231,3 @@ sqlsrv_close( $conn);
 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [サンプル アプリケーション &#40;SQLSRV ドライバー&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-  

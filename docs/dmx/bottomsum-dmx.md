@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8a80c42971199d6acf57e802994feced63b7899f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 551fde90989093ab601cfa6100b6c6e208fac9e6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431144"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727749"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
  **BottomSum**関数は、順位の昇順で一番下の行を返します。 順位付けは、各行の引数の評価値に基づいて行われます。これは、値の合計が、引数で指定された指定された \<rank expression> 合計以上であることを示し \<rank expression> \<sum> ます。 **BottomSum** は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
   
 ## <a name="examples"></a>例  
- 次の例では、「 [基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
+ 次の例では、「 [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  BottomSum の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
  結果の例:  
   
@@ -102,5 +102,4 @@ NATURAL PREDICTION JOIN
  [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
  [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX&#41;&#40;の割合 ](../dmx/bottompercent-dmx.md)  
-  
   

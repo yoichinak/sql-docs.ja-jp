@@ -27,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 570372e0ca0f40284f89e862eee75e5a3d419440
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d441cba0f070f4d93210000f3b497e88ebf9011
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88308418"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380067"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88308418"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SUSER_SNAME ( [ server_user_sid ] )   
 ```  
   
@@ -73,7 +73,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ### <a name="a-using-suser_sname"></a>A. SUSER_SNAME を使用する  
  次の例では、現在のセキュリティ コンテキストのログイン名が返されます。  
   
-```  
+```sql
 SELECT SUSER_SNAME();  
 GO  
 ```  
@@ -83,7 +83,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
-```  
+```sql
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
 GO  
 ```  
@@ -91,7 +91,7 @@ GO
 ### <a name="c-using-suser_sname-as-a-default-constraint"></a>C. SUSER_SNAME を DEFAULT 制約として使用する  
  次の例では、`SUSER_SNAME` ステートメントで `DEFAULT` を `CREATE TABLE` 制約として使用しています。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE sname_example  
@@ -110,7 +110,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
-```  
+```sql
 SELECT SUSER_SNAME();  
 GO  
 EXECUTE AS LOGIN = 'WanidaBenShoof';  
@@ -118,8 +118,7 @@ SELECT SUSER_SNAME();
 REVERT;  
 GO  
 SELECT SUSER_SNAME();  
-GO  
-  
+GO 
 ```  
   
  以下に結果を示します。  
@@ -135,7 +134,7 @@ sa
 ### <a name="e-using-suser_sname"></a>E. SUSER_SNAME を使用する  
  次の例では、セキュリティ ID 番号が `0x01` のログイン名を返します。  
   
-```  
+```sql
 SELECT SUSER_SNAME(0x01);  
 GO  
 ```  
@@ -143,7 +142,7 @@ GO
 ### <a name="f-returning-the-current-login"></a>F. 現在のログインを返す  
  次の例では、現在のログインのログイン名を返します。  
   
-```  
+```sql
 SELECT SUSER_SNAME() AS CurrentLogin;  
 GO  
 ```  

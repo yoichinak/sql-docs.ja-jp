@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80b988844668fbc5ea1e06af2852ffc9bc1a7785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04bf343142c1e89affe6ebb056f09771226da6e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392108"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194787"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
 
@@ -35,7 +35,7 @@ ms.locfileid: "88392108"
  ODBC 入力先には、1 つの標準出力と 1 つのエラー出力があります。  
   
 ##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> 読み込みオプション  
- ODBC 入力先先は、2 つのアクセス読み込みモジュールのうちどちらかを使用できます。 [ODBC ソース エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)。 次の 2 つのモードがあります。  
+ ODBC 入力先先は、2 つのアクセス読み込みモジュールのうちどちらかを使用できます。 [ODBC ソース エディター &#40;[接続マネージャー] ページ&#41;](./odbc-source.md)。 次の 2 つのモードがあります。  
   
 -   **バッチ**: このモードでは、ODBC 入力先は、把握した ODBC プロバイダーの機能に基づいて、最も効率的な挿入方法を使用します。 最新の ODBC プロバイダーの場合、これは、パラメーターを設定した INSERT ステートメントを準備し、行方向の配列パラメーター バインドを使用する方法です (このとき、配列のサイズは **BatchSize** プロパティによって制御します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88392108"
   
 -   標準出力データ列。  
   
- ODBC 入力先は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[CDC ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)」を参照してください。  
+ ODBC 入力先は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[CDC ソース エディター &#40;[エラー出力] ページ&#41;](./odbc-source.md)」を参照してください。  
   
 ## <a name="parallelism"></a>Parallelism  
  並列実行できる ODBC 入力先コンポーネントの数に制限はありません。これは、同一テーブル上にある場合または異なるテーブル上にある場合、同一コンピューター上で実行する場合または異なるコンピューター上で実行する場合のいずれにも該当します (ただし、通常のグローバルなセッション制限を除きます)。  
@@ -67,11 +67,11 @@ ms.locfileid: "88392108"
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;]()  
   
--   [ODBC 変換先エディター &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 変換先エディター &#40;[マッピング] ページ&#41;]()  
   
--   [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;]()  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
   
@@ -185,4 +185,3 @@ ms.locfileid: "88392108"
   
 #### <a name="redirect-flow"></a>[フローのリダイレクト]  
  エラーまたは切り捨てが ODBC 入力先のエラー出力に送られる原因となった行。 詳細については、「ODBC 入力先」を参照してください。  
-  

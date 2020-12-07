@@ -15,11 +15,11 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f63ea95489b639672ddb50b44fa882eecc463025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425564"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123278"
 ---
 # <a name="--conditional-ssis-expression"></a>? :(条件) (SSIS 式)
 
@@ -47,7 +47,7 @@ boolean_expression?expression1:expression2
  任意の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
- *expression1* または *expression2*のデータ型です。  
+ *expression1* または *expression2* のデータ型です。  
   
 ## <a name="remarks"></a>注釈  
  *boolean_expression* が NULL に評価された場合、式の結果は NULL になります。 選択された式 ( *expression1* または *expression2* のいずれか) が NULL の場合、結果は NULL になります。 選択された式が NULL でなく、選択されていない式が NULL の場合、結果は選択された式の値になります。  
@@ -58,7 +58,7 @@ boolean_expression?expression1:expression2
   
 -   DT_BYTES データ型の場合、結果の長さは、長いほうの引数の長さと同じです。  
   
- 式セットである *expression1* および *expression2*は、有効なデータ型および次のルールのいずれかに従って評価される必要があります。  
+ 式セットである *expression1* および *expression2* は、有効なデータ型および次のルールのいずれかに従って評価される必要があります。  
   
 -   **数値***expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   

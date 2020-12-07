@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17a26c5897ff10ce636297151cef9f300f4f3056
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 66b5478f23d771d9aa65f98f4bc7f29bcf885b25
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765424"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810866"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe オブジェクト
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,19 +41,19 @@ ms.locfileid: "85765424"
   
  **Send**メソッドは、データをクライアントまたは呼び出し元に直接送信します。 通常は、 **SqlPipe**からの出力を使用するクライアントですが、入れ子になった CLR ストアドプロシージャの場合は、出力コンシューマーもストアドプロシージャにすることができます。 たとえば、Procedure1 がコマンド テキスト "EXEC Procedure2" の SqlCommand.ExecuteReader() を呼び出すとします。 Procedure2 もマネージド ストアド プロシージャです。 ここで Procedure2 が SqlPipe.Send( SqlDataRecord ) を呼び出すと、行はクライアントではなく、Procedure1 のリーダーに送信されます。  
   
- **Send**メソッドは、情報メッセージとしてクライアントに表示される文字列メッセージを送信します。これは、の PRINT に相当し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 また、 **SqlDataRecord**または**SqlDataReader**を使用した複数行の結果セットを使用して、単一行の結果セットを送信することもできます。  
+ **Send**メソッドは、情報メッセージとしてクライアントに表示される文字列メッセージを送信します。これは、の PRINT に相当し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 また、 **SqlDataRecord**または **SqlDataReader**を使用した複数行の結果セットを使用して、単一行の結果セットを送信することもできます。  
   
- **SqlPipe**オブジェクトには、 **executeandsend**メソッドもあります。 このメソッドを使用して、( **SqlCommand**オブジェクトとして渡された) コマンドを実行し、結果を直接呼び出し元に返すことができます。 送信されたコマンドにエラーがある場合、パイプに例外が送信されますが、呼び出し元のマネージド コードにもコピーが送信されます。 呼び出し元コードが例外をキャッチしない場合は、履歴を伝わり [!INCLUDE[tsql](../../includes/tsql-md.md)] コードに反映され、2 度出力に表示されます。 呼び出し元コードが例外をキャッチした場合、パイプ コンシューマーにはまだエラーが表示されますが、重複するエラーはありません。  
+ **SqlPipe**オブジェクトには、 **executeandsend**メソッドもあります。 このメソッドを使用して、( **SqlCommand** オブジェクトとして渡された) コマンドを実行し、結果を直接呼び出し元に返すことができます。 送信されたコマンドにエラーがある場合、パイプに例外が送信されますが、呼び出し元のマネージド コードにもコピーが送信されます。 呼び出し元コードが例外をキャッチしない場合は、履歴を伝わり [!INCLUDE[tsql](../../includes/tsql-md.md)] コードに反映され、2 度出力に表示されます。 呼び出し元コードが例外をキャッチした場合、パイプ コンシューマーにはまだエラーが表示されますが、重複するエラーはありません。  
   
- コンテキスト接続に関連付けられている**SqlCommand**のみを取得できます。非コンテキスト接続に関連付けられているコマンドを実行することはできません。  
+ コンテキスト接続に関連付けられている **SqlCommand** のみを取得できます。非コンテキスト接続に関連付けられているコマンドを実行することはできません。  
   
 ## <a name="returning-custom-result-sets"></a>カスタム結果セットを返す  
- マネージストアドプロシージャは、 **SqlDataReader**からのものではない結果セットを送信できます。 Sendの**start**メソッドを**sendresult row**および**sendresultsstart**と共に使用すると、ストアドプロシージャからクライアントにカスタム結果セットを送信できます。  
+ マネージストアドプロシージャは、 **SqlDataReader**からのものではない結果セットを送信できます。 Sendの **start** メソッドを **sendresult row** および **sendresultsstart**と共に使用すると、ストアドプロシージャからクライアントにカスタム結果セットを送信できます。  
   
- **Send、start**は、入力として**SqlDataRecord**を受け取ります。 さらに、結果セットの先頭にマークを付け、レコード メタデータを使用して、結果セットを説明するメタデータを生成します。 **Sendの start**を使用してレコードの値を送信することはありません。 **Sendの行**を使用して送信される後続のすべての行は、そのメタデータ定義と一致している必要があります。  
+ **Send、start** は、入力として **SqlDataRecord** を受け取ります。 さらに、結果セットの先頭にマークを付け、レコード メタデータを使用して、結果セットを説明するメタデータを生成します。 **Sendの start**を使用してレコードの値を送信することはありません。 **Sendの行**を使用して送信される後続のすべての行は、そのメタデータ定義と一致している必要があります。  
   
 > [!NOTE]  
->  Sendの**start**メソッドを呼び出した後は、 **SendResultsRow** **Sendresultsstart と sendresultsstart**のみを呼び出すことができます。 **SqlPipe**の同じインスタンスで他のメソッドを呼び出すと、 **InvalidOperationException**が発生します。 **Sendresultsend**セットは、他のメソッドを呼び出すことができる初期状態に**SqlPipe**バックします。  
+>  Sendの**start**メソッドを呼び出した後は、 **SendResultsRow** **Sendresultsstart と sendresultsstart**のみを呼び出すことができます。 **SqlPipe**の同じインスタンスで他のメソッドを呼び出すと、 **InvalidOperationException**が発生します。 **Sendresultsend** セットは、他のメソッドを呼び出すことができる初期状態に **SqlPipe** バックします。  
   
 ### <a name="example"></a>例  
  **Uspgetproductline**ストアドプロシージャは、指定された製品ライン内のすべての製品の名前、製品番号、色、および表示価格を返します。 このストアドプロシージャは、 *prodLine*と完全に一致するものを受け取ります。  
@@ -134,15 +134,14 @@ End Sub
 End Class  
 ```  
   
- 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、ツーリング自転車製品の一覧を返す**Uspgetproduct**プロシージャを実行します。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、ツーリング自転車製品の一覧を返す **Uspgetproduct** プロシージャを実行します。  
   
 ```  
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SqlDataRecord オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
- [CLR ストアドプロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [CLR ストアドプロシージャ](/dotnet/framework/data/adonet/sql/clr-stored-procedures)   
  [ADO.NET に対する SQL Server インプロセス固有の拡張機能](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
-  
   

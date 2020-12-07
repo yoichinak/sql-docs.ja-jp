@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765741"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914345"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とは
 
@@ -22,9 +22,7 @@ ms.locfileid: "88765741"
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 以降、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を使用すると、Kubernetes 上で動作する SQL Server、Spark、および HDFS コンテナーのスケーラブルなクラスターを展開できます。 これらのコンポーネントを並行して実行し、Transact-SQL または Spark からのビッグ データの読み取り、書き込み、処理を行うことができるので、高価値のリレーショナル データと大量のビッグ データを簡単に組み合わせて分析できます。
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、SQL Server ビッグ データ クラスターについて説明しています。
-
-SQL Server ビッグ データ クラスターを使用して次のことを行います。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を使用して以下の操作を実行できます。
 
 - Kubernetes で実行している SQL Server、Spark、HDFS コンテナーの[スケーラブルなクラスターを配置します](./deploy-get-started.md)。 
 - Transact-SQL または Spark からビッグ データの読み取り、書き込み、処理を行います。
@@ -45,19 +43,19 @@ SQL Server ビッグ データ クラスターを使用して次のことを行�
 
 ### <a name="data-virtualization"></a>データの仮想化
 
-[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md) を利用することで、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]では、データを移動またはコピーすることなく、外部データ ソースに対してクエリを実行できます。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、データ ソースに新しいコネクタが導入されています。
+[PolyBase](../relational-databases/polybase/polybase-guide.md) を利用することで、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]では、データを移動またはコピーすることなく、外部データ ソースに対してクエリを実行できます。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、データ ソースに新しいコネクタが導入されています。
 
 ![データの仮想化](media/big-data-cluster-overview/data-virtualization.png)
 
 ### <a name="data-lake"></a>データ レイク
 
-SQL Server ビッグ データ クラスターには、スケーラブルな HDFS *記憶域プール*が含まれています。 これは、複数の外部ソースから取り込まれた可能性があるビッグ データを格納するために使用できます。 ビッグ データ クラスターの HDFS にビッグ データが格納されたら、そのデータを分析してクエリを実行し、リレーショナル データと組み合わせることができます。
+SQL Server ビッグ データ クラスターには、スケーラブルな HDFS *記憶域プール* が含まれています。 これは、複数の外部ソースから取り込まれた可能性があるビッグ データを格納するために使用できます。 ビッグ データ クラスターの HDFS にビッグ データが格納されたら、そのデータを分析してクエリを実行し、リレーショナル データと組み合わせることができます。
 
 ![データ レイク](media/big-data-cluster-overview/data-lake.png)
 
 ### <a name="scale-out-data-mart"></a>スケールアウト データ マート
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]には、任意のデータの分析パフォーマンスを向上させるスケールアウト コンピューティングとストレージが用意されています。 さまざまなソースのデータを取り込み、さらに分析するためにキャッシュとして*データ プール* ノード全体に分散することができます。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]には、任意のデータの分析パフォーマンスを向上させるスケールアウト コンピューティングとストレージが用意されています。 さまざまなソースのデータを取り込み、さらに分析するためにキャッシュとして *データ プール* ノード全体に分散することができます。
 
 ![データ マート](media/big-data-cluster-overview/data-mart.png)
 
@@ -75,7 +73,7 @@ SQL Server ビッグ データ クラスターには、スケーラブルな HDF
 - 一般的な管理タスク用の組み込みスニペット。
 - HDFS の参照、ファイルのアップロード、ファイルのプレビュー、およびディレクトリの作成を行う機能。
 - Jupyter 互換ノートブックを作成、開く、および実行する機能。
-- 外部データ ソースの作成を簡易化するデータ仮想化ウィザード (**データ仮想化の拡張機能**によって有効化されます)。
+- 外部データ ソースの作成を簡易化するデータ仮想化ウィザード ( **データ仮想化の拡張機能** によって有効化されます)。
 
 ## <a name="architecture"></a><a id="architecture"></a> アーキテクチャ
 
@@ -96,7 +94,7 @@ Kubernetes はオープン ソースのコンテナー オーケストレータ�
 
 ### <a name="big-data-clusters-architecture"></a>ビッグ データ クラスターのアーキテクチャ
 
-次の図は、SQL Server 用のビッグ データ クラスターのコンポーネントを示しています。
+次の図は、SQL Server ビッグ データ クラスターのコンポーネントを示しています。
 
 ![アーキテクチャの概要](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
@@ -106,7 +104,7 @@ Kubernetes はオープン ソースのコンテナー オーケストレータ�
 
 ### <a name="compute-pool"></a><a id="computeplane"></a> コンピューティング プール
 
-コンピューティング プールは、クラスターにコンピューティング リソースを提供します。 これには SQL Server on Linux ポッドを実行するノードが含まれます。 コンピューティング プール内のポッドは、特定の処理タスクのために *SQL コンピューティング インスタンス*に分割されます。 
+コンピューティング プールは、クラスターにコンピューティング リソースを提供します。 これには SQL Server on Linux ポッドを実行するノードが含まれます。 コンピューティング プール内のポッドは、特定の処理タスクのために *SQL コンピューティング インスタンス* に分割されます。 
 
 ### <a name="data-pool"></a><a id="dataplane"></a> データ プール
 
@@ -121,4 +119,4 @@ Kubernetes はオープン ソースのコンテナー オーケストレータ�
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server ビッグ データ クラスターの展開の詳細については、「[SQL Server ビッグ データ クラスターの使用を開始する](deploy-get-started.md)」を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] の展開の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の概要](deploy-get-started.md)」を参照してください。

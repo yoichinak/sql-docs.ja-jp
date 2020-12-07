@@ -20,10 +20,10 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9e47bae183dc2d0e790a6f0cb6be207d30cd4834
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495543"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS パッケージ アップグレード ウィザードの F1 ヘルプ
@@ -108,7 +108,7 @@ ms.locfileid: "88495543"
 |値|説明|  
 |-----------|-----------------|  
 |**ファイル システム**|アップグレードされたパッケージをローカル コンピューター上のフォルダーに保存することを示します。|  
-|**[SSIS パッケージ ストア]**|アップグレードされたパッケージを Integration Services パッケージ ストア内に保存することを示します。 パッケージ ストアは、Integration Services サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](../integration-services/service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
+|**[SSIS パッケージ ストア]**|アップグレードされたパッケージを Integration Services パッケージ ストア内に保存することを示します。 パッケージ ストアは、Integration Services サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](../integration-services/service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する **パッケージ ソース** 動的オプションが表示されます。|  
 |**Microsoft SQL Server**|アップグレードされたパッケージを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の既存のインスタンスに保存することを示します。<br /><br /> この値を選択すると、対応する **パッケージ ソース** 動的オプションが表示されます。|  
   
  **フォルダー**  

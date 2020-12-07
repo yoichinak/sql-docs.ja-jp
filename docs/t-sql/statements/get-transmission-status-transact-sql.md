@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b5e691a1836ee4826ad7d2db3be5b71ccd98fa8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a3aa4aecb35151734d2a0b9a7e7305dbb2643c1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549021"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91497834"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,8 +42,7 @@ ms.locfileid: "89549021"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 GET_TRANSMISSION_STATUS ( conversation_handle )  
 ```  
   
@@ -67,7 +66,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="examples"></a>例  
  次の例では、メッセージ交換ハンドル `58ef1d2d-c405-42eb-a762-23ff320bddf0` とのメッセージ交換に関する転送状態がレポートされます。  
   
-```  
+```sql  
 SELECT Status =  
     GET_TRANSMISSION_STATUS('58ef1d2d-c405-42eb-a762-23ff320bddf0') ;  
 ```  

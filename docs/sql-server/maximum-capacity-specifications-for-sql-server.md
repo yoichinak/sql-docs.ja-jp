@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c7335d6a9f2fd1993ce66a6fd56f0f14d111a7e9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 81a36f15a68d3b122a0ba7651c11bfb22fbfa2e2
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523044"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988558"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 
@@ -122,7 +122,7 @@ ms.locfileid: "87523044"
 |データベースごとのログ ファイル数|1|
 |コンピューターごとのボリューム数|3|
 
-<sup>*</sup>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティでサポートされる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの最大数は、サーバーのハードウェア構成によって異なる場合があります。 概要情報については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイントは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](https://msdn.microsoft.com/library/cc645993.aspx)」を参照してください。
+<sup>*</sup>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティでサポートされる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの最大数は、サーバーのハードウェア構成によって異なる場合があります。 概要情報については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイントは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](./editions-and-components-of-sql-server-2016.md)」を参照してください。
 
 ## <a name="ssnoversion-data-tier-application-objects"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション オブジェクト
 

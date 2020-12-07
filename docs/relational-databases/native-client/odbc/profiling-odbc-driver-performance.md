@@ -21,12 +21,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 172557586f7198bcc6151fd58f12faa0683f4fc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db94d769171bd5335253611758da5234f6d5a7c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428124"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892272"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC ドライバーのパフォーマンスのプロファイル
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,11 +68,11 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   アプリケーション プロファイル  
   
--   Connection  
+-   接続  
   
 -   ネットワーク  
   
--   Time  
+-   時刻  
   
  次の表では、SQLPERF データ構造体のフィールドについて説明します。この説明は、パフォーマンス ログ ファイルに記録される統計情報にも適用されます。  
   
@@ -86,7 +86,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|SQL_PERF_START 以降に処理された SELECT ステートメントの数。|  
 |SQLSelectRows|SQL_PERF_START 以降に選択された行数。|  
 |トランザクション|SQL_PERF_START 以降のユーザー トランザクションの数。ロールバックの数も含まれます。 SQL_AUTOCOMMIT_ON の状態で ODBC アプリケーションが実行されている場合は、各コマンドがトランザクションと見なされます。|  
-|SQLPrepares|SQL_PERF_START 後の [SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360) 呼び出しの数。|  
+|SQLPrepares|SQL_PERF_START 後の [SQLPrepare 関数](../../../odbc/reference/syntax/sqlprepare-function.md) 呼び出しの数。|  
 |ExecDirects|SQL_PERF_START 後の **SQLExecDirect** 呼び出しの数。|  
 |SQLExecutes|SQL_PERF_START 後の **Sqlexecute** 呼び出しの数。|  
 |CursorOpens|SQL_PERF_START 以降にドライバーがサーバー カーソルを開いた回数。|  
@@ -124,5 +124,4 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Odbc&#41;&#40;ODBC ドライバーのパフォーマンスのプロファイル方法に関するトピック ](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

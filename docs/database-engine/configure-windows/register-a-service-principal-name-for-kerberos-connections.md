@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/12/2020
-ms.openlocfilehash: 242b87166035c8ffc0e01272b5910f85a66620e7
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 27e19a66912c220e8c407c4182c3241906af5ea5
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200686"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670335"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 接続用のサービス プリンシパル名の登録
 
@@ -68,7 +68,7 @@ Windows 認証は、SQL Server を認証する場合にお勧めする方法で�
 > [!NOTE]  
 >  Windows Server 2008 R2 機能レベルより低いレベルで Windows ドメインが実行されるように構成されている場合は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの SPN を登録するために必要な権限が、管理されたサービス アカウントに与えられません。 Kerberos 認証が必要な場合は、ドメイン管理者が、管理されたサービス アカウントに SQL Server の SPN を手動で登録する必要があります。
 
-その他の情報については、「 [SQL Server 2008 で Kerberos の制約付き委任を実装する方法](https://technet.microsoft.com/library/ee191523.aspx)」を参照してください。  
+その他の情報については、「 [SQL Server 2008 で Kerberos の制約付き委任を実装する方法](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100))」を参照してください。  
 
 ##  <a name="spn-formats"></a><a name="Formats"></a> SPN の形式
 
@@ -190,4 +190,4 @@ WHERE session_id = @@SPID;
 - [クライアント接続 &#40;OLE DB&#41; でのサービス プリンシパル名 &#40;SPNs&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)
 - [クライアント接続 &#40;ODBC&#41; でのサービス プリンシパル名 &#40;SPNs&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)
 - [SQL Server Native Client の機能](../../relational-databases/native-client/features/sql-server-native-client-features.md)
-- [Reporting Services 環境における Kerberos 認証の問題の管理](https://technet.microsoft.com/library/ff679930.aspx)
+- [Reporting Services 環境における Kerberos 認証の問題の管理](/previous-versions/sql/sql-server-2008/ff679930(v=sql.100))

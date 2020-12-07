@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bc4e0df3bfcffa7bdfd84b681c33ed179af75b9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ee3abb8e5a06d972b63140007cb8002e32837df2
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546068"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810901"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public** ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  NULL 値を含むプロパティは、XML の戻り値のセットに含まれません。  
   
 ## <a name="example"></a>例  
@@ -76,11 +76,10 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
 ## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャの引数とプロパティ](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
- [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [空間インデックスストアドプロシージャ](./spatial-index-stored-procedures-arguments-and-properties.md)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [XQuery の基礎](../../xquery/xquery-basics.md)   
  [XQuery 言語リファレンス](../../xquery/xquery-language-reference-sql-server.md)  
-  
   

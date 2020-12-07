@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570327"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727507"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
 
@@ -134,7 +134,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 JDBC Driver **8.4.1** 以降では、マネージド ID を使用して Azure Key Vault に対する認証を行うためのサポートが追加されました。
 
-アプリケーションが Azure でホストされている場合、ユーザーは[マネージド ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) を使用して Azure Key Vault に対する認証を行えるので、コードで資格情報を提供して公開する必要がなくなります。 
+アプリケーションが Azure でホストされている場合、ユーザーは[マネージド ID](/azure/active-directory/managed-identities-azure-resources/overview) を使用して Azure Key Vault に対する認証を行えるので、コードで資格情報を提供して公開する必要がなくなります。 
 
 #### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>マネージド ID による Key Vault の認証の接続プロパティ
 
@@ -164,7 +164,7 @@ JDBC Driver 8.4.1 以降では、次の接続プロパティが導入されま�
 
 なお、以前に追加した接続プロパティ `keyVaultProviderClientId` と `keyVaultProviderClientKey` は非推奨になっており、前述の接続プロパティによって置き換えられています。
 
-マネージド ID を構成する方法の詳細については、「[Azure portal を使用して Azure VM で Azure リソースのマネージド ID を構成する](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)」をご覧ください。
+マネージド ID を構成する方法の詳細については、「[Azure portal を使用して Azure VM で Azure リソースのマネージド ID を構成する](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm)」をご覧ください。
 
 ### <a name="using-windows-certificate-store-provider"></a>Windows 証明書ストア プロバイダーの使用
 SQLServerColumnEncryptionCertificateStoreProvider は、列マスター キーを Windows 証明書ストアに格納するために使用できます。 データベースに列マスター キーと列暗号化キーの定義を作成するには、SQL Server Management Studio (SSMS) Always Encrypted ウィザードまたはその他のサポートされているツールを使用します。 同じウィザードを使用して、Windows 証明書ストアで Always Encrypted データの列マスター キーとして使用できる自己署名証明書を生成することができます。 列マスター キーと列暗号化キーの T-SQL 構文の詳細については、「[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)」と「[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)」をそれぞれ参照してください。

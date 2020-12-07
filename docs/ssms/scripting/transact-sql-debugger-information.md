@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35bd9f8d1870c45b5c2b401639e261806e9d3f91
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902103"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036175"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL デバッガー情報
 
@@ -70,10 +70,10 @@ ms.locfileid: "88902103"
   
  **[ローカル]**、 **[ウォッチ]**、または **[クイック ウォッチ]** の各ウィンドウで変数にデータ値を設定するには、行を右クリックし、 **[値の編集]** を選択します。 **[ローカル]** 、 **[ウォッチ]** 、および **[クイック ウォッチ]** ダイアログ ボックスの **[値]** 列では、テキスト、XML、および HTML のデータ ビジュアライザーがサポートされます。 ビジュアライザーは、 **[値]** 列の右側の虫眼鏡データ ヒントとして表されます。 ビジュアライザーを使用すると、データ型に一致するテキスト、XML、または HTML のデータ値を表示できます (たとえば、XML ファイルをブラウザー ウィンドウに表示できます)。  
   
- デバッグ モードでは、識別子の上にマウス ポインターを移動すると、式の名前とその現在の値が **クイック ヒント** ポップアップに表示されます。 詳細については、「[クイック ヒント &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)」を参照してください。  
+ デバッグ モードでは、識別子の上にマウス ポインターを移動すると、式の名前とその現在の値が **クイック ヒント** ポップアップに表示されます。 詳細については、「[クイック ヒント &#40;IntelliSense&#41;](./quick-info-intellisense.md)」を参照してください。  
   
 ## <a name="breakpoints"></a>ブレークポイント  
- **[ブレークポイント]** ウィンドウでは、現在設定されているブレークポイントを表示および管理できます。 詳細については、「 [Transact-SQL コードのステップ実行](../../relational-databases/scripting/step-through-transact-sql-code.md)」を参照してください。  
+ **[ブレークポイント]** ウィンドウでは、現在設定されているブレークポイントを表示および管理できます。 詳細については、「 [Transact-SQL コードのステップ実行](./step-through-transact-sql-code.md)」を参照してください。  
   
 ## <a name="call-stacks"></a>呼び出し履歴  
  **[呼び出し履歴]** ウィンドウには、現在の実行場所が表示されます。また、実行が元のエディター ウィンドウから [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュール (関数、ストアド プロシージャ、またはトリガー) 経由で現在の実行場所まで、どのように渡されたかについての情報も表示されます。 **[呼び出し履歴]** ウィンドウの各行はスタック フレームと呼ばれ、次のいずれかの項目を表します。  
@@ -104,13 +104,12 @@ ms.locfileid: "88902103"
  デバッグ モードのとき、クエリ エディターの **[結果]** タブと **[メッセージ]** タブはアクティブ状態で維持されます。 **[結果]** タブには、デバッグ セッション中に実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントからの結果セットが表示されます。 **[メッセージ]** タブには、システム メッセージ (たとえば " *xx* 行処理されました") や、PRINT ステートメントおよび RAISERROR ステートメントの出力が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [[ローカル] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [[ウォッチ] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [[クイック ウォッチ] ダイアログ ボックス](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [[ブレークポイント] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
- [[呼び出し履歴] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [[スレッド] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
- [[出力ウィンドウ]](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [[ローカル] ウィンドウ](./transact-sql-debugger-locals-window.md)   
+ [[ウォッチ] ウィンドウ](./transact-sql-debugger-watch-window.md)   
+ [[クイック ウォッチ] ダイアログ ボックス](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [[ブレークポイント] ウィンドウ](./transact-sql-debugger-breakpoints-window.md)   
+ [[呼び出し履歴] ウィンドウ](./transact-sql-debugger-call-stack-window.md)   
+ [[スレッド] ウィンドウ](./transact-sql-debugger-threads-window.md)   
+ [[出力ウィンドウ]](./transact-sql-debugger-output-window.md)   
+ [Transact-SQL デバッガー](./transact-sql-debugger.md)  
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], compression
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b018053582e6bddafe744be1d9a0411132fc3e06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6285ec4a9f06bb44d6502af44aa964b666bb58c1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730880"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125475"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -113,7 +113,7 @@ GO
   
 2.  このプールを使用するリソース ガバナー ワークロード グループを作成して構成します。  
   
-3.  ユーザー定義関数 (UDF) である *分類子関数*を作成します。リソース ガバナーは、この関数の戻り値を使用してセッションを分類し、適切なワークロード グループにセッションがルーティングされるようにします。  
+3.  ユーザー定義関数 (UDF) である *分類子関数* を作成します。リソース ガバナーは、この関数の戻り値を使用してセッションを分類し、適切なワークロード グループにセッションがルーティングされるようにします。  
   
 4.  分類子関数をリソース ガバナーに登録します。  
   
@@ -199,7 +199,7 @@ GO
  この例では、トランザクションをコミットした後に、ALTER WORKLOAD GROUP または ALTER RESOURCE POOL ステートメントで要求された構成の変更が適用されます。  
   
 > [!IMPORTANT]  
->  次の例では、「例 A: ログインとユーザーの設定 (Transact-SQL)」で作成したサンプルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーのユーザー名*domain_name*`\MAX_CPU` を使用しています。 この名前を、優先度の低い圧縮されたバックアップを作成する際に使用する予定のログインのユーザーの名前に置き換えてください。  
+>  次の例では、「例 A: ログインとユーザーの設定 (Transact-SQL)」で作成したサンプルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーのユーザー名 *domain_name*`\MAX_CPU` を使用しています。 この名前を、優先度の低い圧縮されたバックアップを作成する際に使用する予定のログインのユーザーの名前に置き換えてください。  
   
 ```sql  
 -- Configure Resource Governor.  

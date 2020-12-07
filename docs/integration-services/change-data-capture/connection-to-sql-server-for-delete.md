@@ -12,11 +12,11 @@ ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1688ed8c1e95edabfea6b022b605a18a0e99d690
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496305"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123716"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>削除用の SQLServer への接続
 
@@ -42,9 +42,9 @@ ms.locfileid: "88496305"
  **[オプション]**  
  矢印をクリックして、構成するオプションを表示します。 これらのオプションを既定値のままにすることもできます。 使用可能なオプションは次のとおりです。  
   
--   **[接続タイムアウト]**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続が確立されるまでプログラムが待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウト エラーが発生します。 既定値は **15**です。  
+-   **[接続タイムアウト]**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続が確立されるまでプログラムが待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウト エラーが発生します。 既定値は **15** です。  
   
--   **[実行タイムアウト]**: SQL コマンドの実行が完了するまでプログラムが待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウト エラーが発生します。 既定値は、 **30**です。  
+-   **[実行タイムアウト]**: SQL コマンドの実行が完了するまでプログラムが待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウト エラーが発生します。 既定値は、 **30** です。  
   
 -   **[暗号化接続]**: 確立する **への接続を暗号化してプライバシーを保証するには、** [暗号化接続] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択します。  
   

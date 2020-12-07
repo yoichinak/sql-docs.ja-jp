@@ -20,12 +20,12 @@ ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 613b429b61e944c0bf39d01e7d9a96ee22c5ab0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9916894ee3e8f5aecbdd0b8e42ef39fc91082efb
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479602"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380517"
 ---
 # <a name="tan-transact-sql"></a>TAN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88479602"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 TAN ( float_expression )  
 ```  
   
@@ -44,7 +44,7 @@ TAN ( float_expression )
 
 ## <a name="arguments"></a>引数
  *float_expression*  
- ラジアン数として解釈される、**float** 型または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ ラジアン数として解釈される、**float** 型または暗黙的に **float** 型に変換できる [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
@@ -52,7 +52,7 @@ TAN ( float_expression )
 ## <a name="examples"></a>例  
  次の例では、`PI()/2` のタンジェントを返します。  
   
-```  
+```sql
 SELECT TAN(PI()/2);  
 ```  
   
@@ -66,7 +66,7 @@ SELECT TAN(PI()/2);
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、45 のタンジェントを返します。  
   
-```  
+```sql
 SELECT TAN(.45);  
 ```  
   

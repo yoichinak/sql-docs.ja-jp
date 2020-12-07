@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 70f02555b6993a8edd3b226352480dc5be8951c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6a1543cf0da811abe622ad09ad4b135d310e8018
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894893"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127610"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -105,11 +105,10 @@ ms.locfileid: "85894893"
  \* 既定値  
   
 ####  <a name="responding-to-failures"></a><a name="respond"></a> エラーへの対応  
- 1 つまたは複数のエラー条件が検出された後で WSFC サービスがどのようにエラーに対応するかは、WSFC クォーラムの状態と、FCI リソース グループの再起動およびフェールオーバー設定に依存します。 FCI がその WSFC クォーラムを失った場合、FCI 全体がオフラインになり、FCI は高可用性を失います。 FCI が WSFC クォーラムを保持し続けた場合、WSFC サービスは、最初に障害が発生したノードの再起動を試み、再起動の試行が失敗した場合はフェールオーバーを実行することによって対応します。 再起動とフェールオーバーの設定は、フェールオーバー クラスター マネージャー スナップインで構成します。 これらの設定の詳細については、[\<Resource> のプロパティ: [ポリシー] タブ](https://technet.microsoft.com/library/cc725685.aspx)」を参照してください。  
+ 1 つまたは複数のエラー条件が検出された後で WSFC サービスがどのようにエラーに対応するかは、WSFC クォーラムの状態と、FCI リソース グループの再起動およびフェールオーバー設定に依存します。 FCI がその WSFC クォーラムを失った場合、FCI 全体がオフラインになり、FCI は高可用性を失います。 FCI が WSFC クォーラムを保持し続けた場合、WSFC サービスは、最初に障害が発生したノードの再起動を試み、再起動の試行が失敗した場合はフェールオーバーを実行することによって対応します。 再起動とフェールオーバーの設定は、フェールオーバー クラスター マネージャー スナップインで構成します。 これらの設定の詳細については、[\<Resource> のプロパティ: [ポリシー] タブ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725685(v=ws.11))」を参照してください。  
   
  クォーラムの正常性の維持については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
-  
   

@@ -10,14 +10,14 @@ ms.topic: quickstart
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce94f99ac38a6d87dfc39a9ba01ad672f1cd70a0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: dbacb44550622f3c61a3cd58281619bb74652af7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902301"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120812"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "85902301"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ドキュメントのこのセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールして構成する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [高可用性ソリューション &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md)   
  [フェールオーバー クラスタリングをインストールする前に](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
- [インストール ウィザードを使用した SQL Server のアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [インストール ウィザードを使用した SQL Server のアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)

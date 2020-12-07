@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE DB, creating applications
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 49a9f20904c5719960cbffc7ca94c825def7231c
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ed150ea18d1141e6116efe177e65836c235cf703
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862336"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727224"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>OLE DB Driver for SQL Server のアプリケーションの作成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88862336"
 3.  結果の処理。  
   
 > [!NOTE]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](/windows/win32/seccng/cng-portal) を使用して暗号化してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -51,5 +51,4 @@ ms.locfileid: "88862336"
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server のプログラミング](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

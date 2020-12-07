@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], interoperability
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f0038fb53bb0f50dfd11551bed9a7c17a41971a1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 91a3308db77a9f8dd8e99b802b53a08298dd01ff
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115711"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584815"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性グループ: 相互運用性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -63,15 +63,15 @@ ms.locfileid: "91115711"
 
 - **ブログ:**
 
-  [移行ガイド: 以前のクラスタリングおよびミラーリングの展開による SQL Server 2012 フェールオーバークラスタリングおよび可用性グループへの移行](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)
-  [SQL Server Always On チームのブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)
-  [CSS SQL Server エンジニアのブログ](https://docs.microsoft.com/archive/blogs/psssql/)
+  [移行ガイド: 以前のクラスタリングおよびミラーリングの展開による SQL Server 2012 フェールオーバークラスタリングおよび可用性グループへの移行](/archive/blogs/sqlalwayson/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments)
+  [SQL Server Always On チームのブログ:SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)
+  [CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)
 
 - **ホワイト ペーパー:**
 
-  [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から Always On 可用性グループに移行する](https://msdn.microsoft.com/library/jj635217)
-  [高可用性とディザスター リカバリーのための Microsoft SQL Server Always On ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)
-  [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)
+  [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から Always On 可用性グループに移行する](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))
+  [高可用性とディザスター リカバリーのための Microsoft SQL Server Always On ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
+  [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)
   [SQL Server ユーザー諮問チームのホワイト ペーパー](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## <a name="see-also"></a>参照

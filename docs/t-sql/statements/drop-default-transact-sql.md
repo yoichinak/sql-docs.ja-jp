@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab8d8b67ecc262269e1aa322735ac152329bc36b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2bb618bfc53e481e2ea7d86749aaf093d3ec2542
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539883"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131306"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、既定値を削除します。  
   
@@ -69,7 +69,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ### <a name="a-dropping-a-default"></a>A. デフォルトを削除する  
  既定値が列または別名データ型にバインドされていない場合は、DROP DEFAULT を使うだけで削除できます。 次の例では、ユーザーが作成したデフォルト `datedflt` を削除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  
@@ -81,7 +81,7 @@ GO
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、次の構文を使うことができます。  
   
-```  
+```sql  
 DROP DEFAULT IF EXISTS datedflt;  
 GO  
 ```  
@@ -89,7 +89,7 @@ GO
 ### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>B. 列にバインドされた既定値を削除する  
  次の例では、`EmergencyContactPhone` テーブルの `Contact` 列に関連付けられているデフォルトをアンバインドし、デフォルト `phonedflt` を削除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
    BEGIN   

@@ -25,12 +25,12 @@ ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdd71beb5099fe6704199aaa92dd608534bed93a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3baafa663bab7930201ec02ca2996a83cd199692
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467914"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379170"
 ---
 # <a name="sign-transact-sql"></a>SIGN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88467914"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 SIGN ( numeric_expression )  
 ```  
   
@@ -50,7 +50,7 @@ SIGN ( numeric_expression )
 
 ## <a name="arguments"></a>引数
  *numeric_expression*  
- **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ **bit** データ型を除く、真数または概数データ型カテゴリの [式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="return-types"></a>戻り値の型  
   
@@ -65,8 +65,8 @@ SIGN ( numeric_expression )
 ## <a name="examples"></a>例  
  次の例では、-1 から 1 の 3 つの数値の SIGN 値を返します。  
   
-```  
-DECLARE @value real  
+```sql  
+DECLARE @value REAL  
 SET @value = -1  
 WHILE @value < 2  
    BEGIN  
@@ -103,7 +103,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、3 つの数値の SIGN 値を返します。  
   
-```  
+```sql  
 SELECT SIGN(-125), SIGN(0), SIGN(564);  
 ```  
   

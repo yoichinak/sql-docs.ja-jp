@@ -18,11 +18,11 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495705"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123392"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS クレンジング変換
 
@@ -39,7 +39,7 @@ ms.locfileid: "88495705"
   
 -   列が、互換性のあるデータ型のドメインにマップされている。  
   
- また、変換には、低レベルのエラーを処理するように構成するエラー出力も含まれます。 エラー出力を構成するには、 **DQS クレンジング変換エディター**を使用します。  
+ また、変換には、低レベルのエラーを処理するように構成するエラー出力も含まれます。 エラー出力を構成するには、 **DQS クレンジング変換エディター** を使用します。  
   
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) をデータ フローに含めて、重複部分と考えられるデータ行を特定することができます。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "88495705"
  列名を変更するフィールドをクリックしてください。  
   
  **[出力の別名]**  
- **DQS クレンジング変換**によって出力された列を一覧表示します。 この列には、元の列値または修正後の値が含まれます。  
+ **DQS クレンジング変換** によって出力された列を一覧表示します。 この列には、元の列値または修正後の値が含まれます。  
   
  列名を変更するフィールドをクリックしてください。  
   

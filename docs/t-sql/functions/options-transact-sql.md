@@ -21,11 +21,11 @@ ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: aba9b19dd9788eef4f322db198dd7f8f3789a8c8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115871"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128397"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "91115871"
  **integer**  
   
 ## <a name="remarks"></a>解説  
- オプションは、**SET** コマンドの使用または **sp_configure ユーザー オプション**値からのものです。 **SET** コマンドで構成されているセッション値は、**sp_configure** オプションをオーバーライドします。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] などの多数のツールによって SET オプションは自動的に構成されます。 各ユーザーには、構成を表す @@OPTIONS 関数が用意されます。  
+ オプションは、**SET** コマンドの使用または **sp_configure ユーザー オプション** 値からのものです。 **SET** コマンドで構成されているセッション値は、**sp_configure** オプションをオーバーライドします。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] などの多数のツールによって SET オプションは自動的に構成されます。 各ユーザーには、構成を表す @@OPTIONS 関数が用意されます。  
   
  SET ステートメントを使用することにより、特定のユーザー セッションの言語とクエリ処理オプションを変更できます。 **\@\@OPTIONS** では、ON または OFF に設定されたオプションのみを検出できます。  
   

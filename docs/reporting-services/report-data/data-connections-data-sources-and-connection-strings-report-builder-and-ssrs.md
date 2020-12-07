@@ -8,12 +8,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b544e7220d82d8368aec2a44c861e44b1e96398
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 96c470f52cb5c76601f4d7a7b6b97fd69290152f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988441"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891832"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>データ接続文字列の作成 - レポート ビルダーおよび SSRS
 
@@ -37,7 +37,7 @@ ms.locfileid: "87988441"
 |Azure SQL データベース|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|データ ソースの種類を **Microsoft Azure SQL Database** に設定します。 [Azure SQL 接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md) に関するページを参照してください。|  
 |SQL Server 並列データ ウェアハウス|`HOST=<IP address>;database= AdventureWorks; port=<port>`|データ ソースの種類を **Microsoft SQL Server Parallel Data Warehouse**に設定します。 詳細については、「[SQL Server 並列データ ウェアハウスの接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)」を参照してください。|  
 |ローカル サーバーの Analysis Services データベース|`data source=localhost;initial catalog=Adventure Works DW`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 詳細については、「[MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)」または「[DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)」を参照してください。|  
-|Sales パースペクティブを持つ Analysis Services テーブル モデル データベース|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 cube= 設定にパースペクティブの名前を指定します。 詳しくは、「 [パースペクティブ &#40;SSAS テーブル&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular)」をご覧ください。|  
+|Sales パースペクティブを持つ Analysis Services テーブル モデル データベース|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 cube= 設定にパースペクティブの名前を指定します。 詳しくは、「 [パースペクティブ &#40;SSAS テーブル&#41;](/analysis-services/tabular-models/perspectives-ssas-tabular)」をご覧ください。|  
 |Oracle サーバー|`data source=myserver`|データ ソースの種類を **Oracle**に設定します。 レポート デザイナーがインストールされているコンピューターとレポート サーバーに、Oracle クライアント ツールがインストールされている必要があります。 詳細については、「[Oracle の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)」を参照してください。|  
 |SAP NetWeaver BI データ ソース|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|データ ソースの種類を **SAP NetWeaver BI**に設定します。 詳細については、「[SAP NetWeaver BI の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)」を参照してください。|  
 |Hyperion Essbase データ ソース|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|データ ソースの種類を **Hyperion Essbase**に設定します。 詳細については、「[Hyperion Essbase の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)」を参照してください。|  
@@ -55,7 +55,7 @@ ms.locfileid: "87988441"
  これらの種類のデータ ソースへの接続に必要な設定の詳細については、「[外部データ ソースのデータを追加する (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」または「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」で、目的のデータ接続の記事を参照してください。  
   
 ##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> パスワードの特殊文字  
- パスワードを要求したり、接続文字列にパスワードを含めるように ODBC データ ソースや SQL データ ソースを構成し、ユーザーが句読点のような特殊文字を使用してパスワードを入力した場合、基になるデータ ソースのドライバーによってはその特殊文字を検証することができません。 レポートを処理する際に、この問題によって、"パスワードが無効です" というメッセージが表示される場合があります。 パスワードを変更できない場合は、データベース管理者と連携して、適切な資格情報をシステム ODBC データ ソース名 (DSN) の一部としてサーバーに格納することができます。 詳細については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ドキュメントの [OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring) に関する記事を参照してください。  
+ パスワードを要求したり、接続文字列にパスワードを含めるように ODBC データ ソースや SQL データ ソースを構成し、ユーザーが句読点のような特殊文字を使用してパスワードを入力した場合、基になるデータ ソースのドライバーによってはその特殊文字を検証することができません。 レポートを処理する際に、この問題によって、"パスワードが無効です" というメッセージが表示される場合があります。 パスワードを変更できない場合は、データベース管理者と連携して、適切な資格情報をシステム ODBC データ ソース名 (DSN) の一部としてサーバーに格納することができます。 詳細については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ドキュメントの [OdbcConnection.ConnectionString](/dotnet/api/system.data.odbc.odbcconnection.connectionstring) に関する記事を参照してください。  
   
 ##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a> 式に基づく接続文字列  
  式に基づく接続文字列は実行時に評価されます。 たとえば、データ ソースをパラメーターとして指定し、接続文字列にパラメーター参照を含めて、ユーザーがレポートのデータ ソースを選択できるようにすることができます。 たとえば、多国籍企業がいくつもの国にデータ サーバーを持っていると仮定します。 式ベースの接続文字列を使用すると、販売レポートを実行するユーザーは、レポートの実行前に特定の国のデータ ソースを選択することができます。  

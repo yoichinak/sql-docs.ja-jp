@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 099bf39d869caf8e42575393276e1a7e5ddadb68
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457261"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890771"
 ---
 # <a name="query-profiling-infrastructure"></a>クエリ プロファイリング インフラストラクチャ
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> クエリ プロファイリングのパフォーマンス オーバーヘッドの詳細については、ブログの投稿「[Developers Choice:Query progress - anytime, anywhere (開発者の選択: クエリの進行状況 - いつでも、どこでも)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)」をご覧ください。 
+> クエリ プロファイリングのパフォーマンス オーバーヘッドの詳細については、ブログの投稿「[Developers Choice:Query progress - anytime, anywhere (開発者の選択: クエリの進行状況 - いつでも、どこでも)](/archive/blogs/sql_server_team/query-progress-anytime-anywhere)」をご覧ください。 
 
 *query_thread_profile* イベントを使用する拡張イベント セッションの実行時に、[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV も軽量プロファイリングを使用して入力されます。これによって、[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)を使用することや、DMV に直接クエリを実行することができます。
 
@@ -126,7 +126,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ほとんどのクエリで最後の既知の実際の実行プランと同等のものが返されるように、*最後のクエリ プランの統計*と呼ばれる新しい DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) が導入されました。 最後のクエリ プランの統計は、LAST_QUERY_PLAN_STATS [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;` を使用して、データベース レベルで有効にすることができます。
 
-新しい *query_post_execution_plan_profile* 拡張イベントでは、標準プロファイリングを使用する *query_post_execution_showplan* とは異なり、軽量プロファイリングに基づいて、実際の実行プランと同等のものが収集されます。 *query_post_execution_plan_profile* 拡張イベントを使用したサンプル セッションは下の例のように構成できます。
+新しい *query_post_execution_plan_profile* 拡張イベントでは、標準プロファイリングを使用する *query_post_execution_showplan* とは異なり、軽量プロファイリングに基づいて、実際の実行プランと同等のものが収集されます。 このイベントは、CU14 以降の [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] でも提供されています。 *query_post_execution_plan_profile* 拡張イベントを使用したサンプル セッションは下の例のように構成できます。
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -180,7 +180,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 |---------------|---------------|---------------|
 |グローバル|`query_post_execution_showplan` XE を使用する xEvent セッション。[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降|トレース フラグ 7412。[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降|
 |グローバル|`Showplan XML` トレース イベントを使用する SQL トレースおよび SQL Server Profiler。SQL Server 2000 以降|`query_thread_profile` XE を使用する xEvent セッション。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降|
-|グローバル|-|`query_post_execution_plan_profile` XE を使用する xEvent セッション。[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降|
+|グローバル|-|`query_post_execution_plan_profile` XE を使用する xEvent セッション。[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 および [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]以降|
 |Session|`SET STATISTICS XML ON` を使用。SQL Server 2000 以降|`query_plan_profile` XE を使用する xEvent イベント セッションと共に `QUERY_PLAN_PROFILE` クエリ ヒントを使用。[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降|
 |Session|`SET STATISTICS PROFILE ON` を使用。SQL Server 2000 以降|-|
 |Session|SSMS 内で[[ライブ クエリ統計]](../../relational-databases/performance/live-query-statistics.md) ボタンをクリック。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降|-|
@@ -212,4 +212,4 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
  [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [実際の実行プラン](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)      
+ [ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)

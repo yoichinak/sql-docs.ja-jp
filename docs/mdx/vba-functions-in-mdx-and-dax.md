@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dcbf0f0321ddc0c1959c4681c0b1dddf49c1aba
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429704"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192292"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX および DAX での VBA 関数
 
 
-  このドキュメントには、MDX でサポートされている [Visual Basic for Applications 関数](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) で使用できるすべての VBA 関数の参照が含まれています。また、DAX 言語との機能の等価性がある場合、一覧にはメモが含まれます。  
+  このドキュメントには、MDX でサポートされている [Visual Basic for Applications 関数](/office/vba/Language/Reference/functions-visual-basic-for-applications) で使用できるすべての VBA 関数の参照が含まれています。また、DAX 言語との機能の等価性がある場合、一覧にはメモが含まれます。  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 関数リファレンス  
   
@@ -43,7 +43,7 @@ ms.locfileid: "88429704"
 |CLng|MDX のみ||  
 |CLngLng|サポートされていません||  
 |CLngPtr|サポートされていません||  
-|コマンド|サポートされていません||  
+|command|サポートされていません||  
 |Cos|MDX のみ||  
 |CreateObject|サポートされていません||  
 |CSng|MDX のみ||  
@@ -57,7 +57,7 @@ ms.locfileid: "88429704"
 |DatePart|MDX のみ||  
 |DateSerial|MDX のみ||  
 |DateValue|DAX、MDX||  
-|日|DAX、MDX||  
+|日間|DAX、MDX||  
 |DDB|MDX のみ||  
 |Dir|サポートされていません||  
 |DoEvents|サポートされていません||  
@@ -114,7 +114,7 @@ ms.locfileid: "88429704"
 |Mid|DAX、MDX||  
 |分|DAX、MDX||  
 |MIRR|MDX のみ||  
-|Month|DAX、MDX||  
+|月|DAX、MDX||  
 |MonthName|サポートされていません||  
 |MsgBox|サポートされていません||  
 |Now|DAX、MDX||  
@@ -146,7 +146,7 @@ ms.locfileid: "88429704"
 |Str|MDX のみ||  
 |StrComp|MDX のみ||  
 |StrConv|MDX のみ||  
-|文字列型|MDX のみ||  
+|String|MDX のみ||  
 |StrReverse|サポートされていません||  
 |スイッチ|MDX のみ||  
 |SYD|MDX のみ||  
@@ -165,5 +165,4 @@ ms.locfileid: "88429704"
 |平日|DAX、MDX||  
 |WeekdayName|サポートされていません||  
 |年|DAX、MDX||  
-  
   

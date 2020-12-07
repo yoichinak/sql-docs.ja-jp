@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ea0b09b3a20322065648efd3692d835b7c16ac9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1496143b862037ae8a4d0593ac3cc412dfd0b56e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521357"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889266"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue メソッド (ClientNetworkProtocol クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -52,6 +52,5 @@ object.SetOrderValue(OrderValue)
 ## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [[クライアント プロトコルのプロパティ] ダイアログ ボックス ([順序] タブ)](https://technet.microsoft.com/library/ms187884.aspx)  
-  
+ [[クライアント プロトコルのプロパティ] ダイアログ ボックス ([順序] タブ)](../../../tools/configuration-manager/client-protocols-properties-order-tab.md)  
   

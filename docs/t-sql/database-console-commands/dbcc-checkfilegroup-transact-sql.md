@@ -27,11 +27,11 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116153"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128625"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +94,7 @@ DBCC CHECKFILEGROUP
 >  PHYSICAL_ONLY を指定すると、DBCC CHECKFILEGROUP で FILESTREAM データのチェックがすべてスキップされるようになります。  
   
  MAXDOP  
- **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
  ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、Resource Governor で構成されている値を超えると、データベース エンジンは、「ALTER WORKLOAD GROUP (Transact-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
@@ -143,7 +143,7 @@ DBCC CHECKFILEGROUP コマンドの終了後、メッセージが [!INCLUDE[ssNo
 |5|不明なエラーが発生し、DBCC コマンドが終了しました。|  
   
 ## <a name="error-reporting"></a>[エラー報告]  
-DBCC CHECKFILEGROUP で破損エラーが検出されるたびに、ミニ ダンプ ファイル (SQLDUMP*nnnn*.txt) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の LOG ディレクトリに作成されます。 機能の使用状況データ収集とエラー報告機能が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して有効になっている場合、ダンプ ファイルは自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] に転送されます。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
+DBCC CHECKFILEGROUP で破損エラーが検出されるたびに、ミニ ダンプ ファイル (SQLDUMP *nnnn*.txt) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の LOG ディレクトリに作成されます。 機能の使用状況データ収集とエラー報告機能が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して有効になっている場合、ダンプ ファイルは自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] に転送されます。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
 このダンプ ファイルには、DBCC CHECKFILEGROUP コマンドの結果と追加の診断出力が含まれます。 また、制限付きの随意アクセス制御リスト (DACL) が割り当てられます。 アクセスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと **sysadmin** ロールのメンバーに制限されます。 既定では、**sysadmin** ロールには Windows の BUILTIN\Administrators グループとローカルの管理者グループのすべてのメンバーが含まれます。 データ収集プロセスが失敗しても、DBCC コマンドは失敗しません。
   
 ## <a name="resolving-errors"></a>エラーの解決  

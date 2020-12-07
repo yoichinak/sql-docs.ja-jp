@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 014341cc860e9db53447abc5db08169ba0e0b5b4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad2204beb3d6c4abd9b1f68ff6814dc99ded6738
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978203"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724743"
 ---
 # <a name="datafactory-customization"></a>DataFactory のカスタマイズ
 リモートデータサービス (RDS) を使用すると、3層のクライアント/サーバーシステムで簡単にデータアクセスを実行できます。 クライアントデータコントロールは、リモートデータソースに対してクエリを実行するための接続とコマンド文字列パラメーター、または更新を実行するための接続文字列および [レコードセット](../../reference/ado-api/recordset-object-ado.md) オブジェクトパラメーターを指定します。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
  パラメーターは、リモートデータソースに対するデータアクセス操作を実行するサーバープログラムに渡されます。 RDS には、 [DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) オブジェクトと呼ばれる既定のサーバープログラムが用意されています。 **DataFactory**オブジェクトは、クエリによって生成されたすべての**レコードセット**オブジェクトをクライアントに返します。  
   

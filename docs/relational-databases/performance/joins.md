@@ -18,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511314"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726013"
 ---
 # <a name="joins-sql-server"></a>結合 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -263,7 +263,7 @@ WHERE [fo].[Quantity] = 361;
 - データベース互換性レベルが 140 以上である。
 - クエリが `SELECT` ステートメントである (現在、データ変更ステートメントは使えません)。
 - 結合が、インデックス付きのネステッド ループ結合またはハッシュ結合の両方の物理アルゴリズムで実行できる。
-- クエリ全体に列ストア インデックスが存在すること、列ストア インデックス テーブルを結合で直接参照すること、または[行ストア機能でバッチ モード](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)を使用することにより、有効化されたバッチ モードをハッシュ結合が使っている。
+- クエリ全体に列ストア インデックスが存在すること、列ストア インデックス テーブルを結合で直接参照すること、または[行ストアでバッチ モード](./intelligent-query-processing.md#batch-mode-on-rowstore)を使用することにより、有効化されたバッチ モードをハッシュ結合が使っている。
 - ネステッド ループ結合とハッシュ結合の生成された代替ソリューションが、同じ最初の子 (外部参照) を持っている。
 
 ### <a name="adaptive-threshold-rows"></a>アダプティブしきい値行

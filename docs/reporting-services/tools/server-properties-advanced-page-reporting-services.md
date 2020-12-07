@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/17/2020
+ms.date: 10/19/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: e8bb8de8d13a9b7696bb6505363b15d38cd35994
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89282402"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194278"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>[サーバーのプロパティ] の [詳細設定] ページ - Power BI Report Server と Reporting Services
 
@@ -57,7 +57,7 @@ ms.locfileid: "89282402"
 <CustomHeaders>
     <Header>
         <Name>X-Frame-Options</Name>
-        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
         <Value>SAMEORIGIN</Value>
     </Header>
 </CustomHeaders>
@@ -82,7 +82,7 @@ ms.locfileid: "89282402"
 
 #### <a name="setting-the-customheaders-property"></a>CustomHeaders プロパティの設定
 
-- パラメーターとして CustomHeaders プロパティを渡す [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP エンドポイントを使用して設定できます。
+- パラメーターとして CustomHeaders プロパティを渡す [SetSystemProperties](/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP エンドポイントを使用して設定できます。
 - REST エンドポイント [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties): `/System/Properties` を使用して CustomHeaders プロパティを渡すことができます
 
 #### <a name="example"></a>例
@@ -93,8 +93,8 @@ ms.locfileid: "89282402"
 <CustomHeaders>
     <Header>
         <Name>Strict-Transport-Security</Name>
-        <Pattern>\/Reports\/mobilereport</Pattern>
-        <Value>max-age=86400</Value>
+        <Pattern>(.+)\/Reports\/mobilereport(.+)</Pattern>
+        <Value>max-age=86400; includeSubDomains=true</Value>
     </Header>
     <Header>
         <Name>Embed</Name>
@@ -104,7 +104,7 @@ ms.locfileid: "89282402"
 </CustomHeaders>
 ```
 
-上記の XML の最初のヘッダーによって、一致する要求に `Strict-Transport-Security: max-age=86400` ヘッダーが追加されます。
+上記の XML の最初のヘッダーによって、一致する要求に `Strict-Transport-Security: max-age=86400; includeSubDomains=true` ヘッダーが追加されます。
 - http://adventureworks/Reports/mobilereport/New%20Mobile%20Report - 正規表現が一致し、HSTS ヘッダーが設定されます
 - http://adventureworks/ReportServer/mobilereport/New%20Mobile%20Report - 一致しません
 

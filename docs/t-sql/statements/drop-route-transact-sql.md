@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c85a6b4629e7cf6e6738a2a8313395c511e11818
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 112bb3a213fe009ab8ff1a02961bfaecd7da7dce
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540650"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131126"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89540650"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP ROUTE route_name  
 [ ; ]  
 ```  
@@ -61,7 +60,7 @@ DROP ROUTE route_name
 ## <a name="examples"></a>例  
  次の例では、`ExpenseRoute` ルートを削除します。  
   
-```  
+```sql  
 DROP ROUTE ExpenseRoute ;  
 ```  
   

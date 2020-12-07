@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba891b077e6144a97dfbfcb25597e00fc43b0b0d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062311"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005670"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server のリリース ノート
 
@@ -361,9 +361,9 @@ JDBC Driver でこの機能を使用する方法の詳細については、「[S
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>接続プロパティ useBulkCopyForBatchInsert を追加
 
-Microsoft JDBC Driver 7.0 for SQL Server には、新しい接続プロパティである `useBulkCopyForBatchInsert` が導入されています。 このプロパティは、Azure SQL Data Warehouse に対してのみサポートされます。
+Microsoft JDBC Driver 7.0 for SQL Server には、新しい接続プロパティである `useBulkCopyForBatchInsert` が導入されています。 このプロパティは、Azure Synapse Analytics に対してのみサポートされます。
 
-このプロパティは、既定では無効になっています。 Azure SQL Data Warehouse に大量のデータをプッシュするときに、それを有効にすることで、ユーザー アプリケーションのパフォーマンスを向上させることができます。 このプロパティを有効にすると、バッチ挿入操作の動作が変更され、ユーザー指定のデータを一括コピーする操作に切り替わります。 このプロパティとその制約については、「[Using Bulk Copy API for batch insert operation (一括挿入操作での Bulk Copy API の使用)](use-bulk-copy-api-batch-insert-operation.md)」を参照してください。
+このプロパティは、既定では無効になっています。 Azure Synapse Analytics に大量のデータをプッシュするときに、それを有効にすることで、ユーザー アプリケーションのパフォーマンスを向上させることができます。 このプロパティを有効にすると、バッチ挿入操作の動作が変更され、ユーザー指定のデータを一括コピーする操作に切り替わります。 このプロパティとその制約については、「[Using Bulk Copy API for batch insert operation (一括挿入操作での Bulk Copy API の使用)](use-bulk-copy-api-batch-insert-operation.md)」を参照してください。
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>接続プロパティ cancelQueryTimeout を追加
 

@@ -3,18 +3,18 @@ title: キーボード ショートカットの作成とカスタマイズ
 description: Visual Studio Code のキーボード ショートカットを基盤とする機能を利用し、Azure Data Studio でキーボード ショートカットを表示、編集、作成する方法について説明します。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: e8f5e60d0a8f5c578e27dfb283459882d58a0195
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: fa4b5bc766b6d9bf269f08a1f00e2ef4d8c52b0e
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746122"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91363970"
 ---
 # <a name="keyboard-shortcuts-in-azure-data-studio"></a>Azure Data Studio のキーボード ショートカット
 

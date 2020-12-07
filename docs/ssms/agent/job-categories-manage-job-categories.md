@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 314318a46e6d93aa71f3715d781cf66379fe0863
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 880286e2ffa649316aa3c92c37f4bca461d62d4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468635"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037922"
 ---
 # <a name="job-categories---manage-job-categories"></a>[ジョブ カテゴリ] - [ジョブ カテゴリの管理]
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 **[ジョブ カテゴリ]** ダイアログ ボックスを使用すると、ジョブ カテゴリを追加したり削除したりできます。 組み込みジョブ カテゴリは削除できません。  
   
@@ -53,4 +53,3 @@ ms.locfileid: "88468635"
 #### <a name="to-access-the-job-categories-dialog-box"></a>[ジョブ カテゴリ] ダイアログ ボックスにアクセスするには  
   
 1.  **オブジェクト エクスプローラー**で、 **[SQL Server エージェント]** を展開し、 **[ジョブ]** を右クリックして、 **[ジョブ カテゴリの管理]** をクリックします。  
-  

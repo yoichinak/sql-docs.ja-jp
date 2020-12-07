@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fdad63c6b5d97d9b6b8193babc67ad8a57a32f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a694df5f4920ecd70e4aa27def778712fbbf953
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425744"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195304"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
 
@@ -66,7 +66,7 @@ ms.locfileid: "88425744"
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 メタデータ デザイン モードでは、スクリプト コンポーネントの入力と出力を追加および変更できますが、コードは記述できません。 すべての入力と出力を構成した後に、コード デザイン モードに切り替え、スクリプトを記述します。 スクリプト コンポーネントは、入力と出力のメタデータから、基本コードを自動的に生成します。 スクリプト コンポーネントで基本コードを生成した後にメタデータを変更すると、更新された基本コードと互換性がない可能性があるため、記述したコードをコンパイルできないことがあります。  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>コンポーネントが使用するスクリプトの記述  
- スクリプト コンポーネントでは、スクリプトを記述する環境として [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) が使用されます。 **スクリプト変換エディター**から VSTA にアクセスします。 詳細については、「 [スクリプト変換エディター ([スクリプト] ページ)](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)」を参照してください。  
+ スクリプト コンポーネントでは、スクリプトを記述する環境として [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) が使用されます。 **スクリプト変換エディター**から VSTA にアクセスします。 詳細については、「 [スクリプト変換エディター ([スクリプト] ページ)]()」を参照してください。  
   
  スクリプト コンポーネントでは、コンポーネントのメタデータを表す、ScriptMain という名前の自動生成クラスが含まれる VSTA プロジェクトが用意されています。 たとえば、スクリプト コンポーネントを 3 つの出力を持つ変換として使用する場合、ScriptMain には各出力のメソッドが含まれます。 ScriptMain は、スクリプトに対するエントリ ポイントです。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88425744"
 ### <a name="configuring-the-script-component-programmatically"></a>プログラムによるスクリプト コンポーネントの構成  
  **[プロパティ]** ウィンドウまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -181,7 +181,7 @@ ms.locfileid: "88425744"
  **Inputs and outputs**  
  左側で入力または出力を選択すると、右側の表にプロパティが表示されます。 編集に使用できるプロパティは、選択内容によって異なります。 表示されるプロパティの多くは読み取り専用です。 各プロパティの詳細については、次のトピックを参照してください。  
   
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
  [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -224,5 +224,4 @@ ms.locfileid: "88425744"
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
  [スクリプト コンポーネントによるデータ フローの拡張](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
-  
   

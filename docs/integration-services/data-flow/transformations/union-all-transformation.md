@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59756c7690301d35a1ad53b9db5bde441ce74c24
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425624"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194615"
 ---
 # <a name="union-all-transformation"></a>全体結合変換
 
@@ -47,7 +47,7 @@ ms.locfileid: "88425624"
 ## <a name="configuration-of-the-union-all-transformation"></a>全体結合変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」を参照してください。  
+ プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
  プロパティの設定方法の詳細については、次のトピックのいずれかを参照してください。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88425624"
   **[全体結合変換エディター]** ダイアログ ボックスを使用すると、複数の入力行セットを 1 つの出力行セットにマージできます。 データ フローに全体結合変換を含めることで、複数のデータ フローのデータをマージしたり、全体結合変換を入れ子にして複雑なデータセットを作成したり、データ内のエラーを修正した後で行を再マージしたりできます。  
   
 ### <a name="options"></a>オプション  
- **出力列の名前**  
+ **[出力列の名前]**  
  各列に対して別名を入力します。 既定では最初の (参照) 入力の入力列の名前が使用されますが、一意なわかりやすい名前を任意に付けることもできます。  
   
  **[全体結合 入力 1]**  
@@ -68,5 +68,4 @@ ms.locfileid: "88425624"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [全体結合変換を使用してデータをマージする](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
-  
   

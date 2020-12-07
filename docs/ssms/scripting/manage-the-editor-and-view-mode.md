@@ -21,12 +21,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093435"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038983"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>エディターと表示モードの管理
 
@@ -91,7 +91,7 @@ ms.locfileid: "89093435"
  仮想空間モードが無効な場合、カーソルは、ある行の最後から次の行の最初の文字に折り返されます。逆の場合も同様です。  
   
 ## <a name="displaying-line-numbers"></a>行番号の表示  
- コード行に行番号を付けることができます。 行番号は、コード内を移動する際に便利です。 詳細については、「 [コード内とテキスト内の移動](../../relational-databases/scripting/navigate-code-and-text.md)」を参照してください。  
+ コード行に行番号を付けることができます。 行番号は、コード内を移動する際に便利です。 詳細については、「 [コード内とテキスト内の移動](./navigate-code-and-text.md)」を参照してください。  
   
 > [!NOTE]  
 >  行番号を有効にしても、ドキュメントの印刷時に行番号が印刷されるわけではありません。 行番号を印刷するには、 **[ファイル]** メニューの **[ページ設定]** コマンドを選択し、 **[行番号]** チェック ボックスをオンにする必要があります。  
@@ -122,5 +122,4 @@ ms.locfileid: "89093435"
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>すべてのツール ウィンドウを一度に隠すには  
   
 1.  **[ウィンドウ]** メニューの **[すべて自動的に隠す]** を選択します。  
-  
   

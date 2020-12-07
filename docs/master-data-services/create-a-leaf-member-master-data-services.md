@@ -1,5 +1,6 @@
 ---
-title: リーフ メンバーを作成する (マスター データ サービス) | Microsoft Docs
+description: リーフ メンバーを作成する (マスター データ サービス)
+title: リーフ メンバーを作成する
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a7204fb8183ed84390bd3eaec38b16833dd8eb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f5436cf2d553209a80ae5f9bb9f32b3df1c7d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257819"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>リーフ メンバーを作成する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、マスター データをシステムに追加する場合は、リーフ メンバーを作成します。 データを一括で追加する場合は、ステージング テーブルを使用します。 詳細については、「[テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/import-data-from-tables-master-data-services.md)」を参照してください。  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、マスター データをシステムに追加する場合は、リーフ メンバーを作成します。 データを一括で追加する場合は、ステージング テーブルを使用します。 詳細については、「[テーブルからのデータのインポート &#40;マスターデータサービス](../master-data-services/import-data-from-tables-master-data-services.md)」を参照してください&#41;  
   
  データをインポートするには、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] も使用します。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -48,7 +49,7 @@ ms.locfileid: "67906744"
   
 4.  メニュー バーの **[エンティティ]** をポイントして、メンバーを追加するエンティティの名前をクリックします。  
   
-5.  **[メンバーの追加]** をクリックします。  
+5.  [ **メンバーの追加**] をクリックします。  
   
 6.  **[詳細]** ペインのフィールドに入力します。  
   
@@ -56,12 +57,12 @@ ms.locfileid: "67906744"
   
      フィルターの親属性およびドメイン ベースの属性の詳細については、「[ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)」を参照してください。  
   
-7.  任意。 **[注釈]** ボックスに、メンバーを追加した理由についてのコメントを入力します。 そのメンバーにアクセスできるすべてのユーザーが、その注釈を表示できます。  
+7.  省略可能。 **[注釈]** ボックスに、メンバーを追加した理由についてのコメントを入力します。 そのメンバーにアクセスできるすべてのユーザーが、その注釈を表示できます。  
   
 8.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [統合メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-consolidated-member-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [統合メンバー &#40;マスターデータサービスを作成&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
  [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)  
   
   

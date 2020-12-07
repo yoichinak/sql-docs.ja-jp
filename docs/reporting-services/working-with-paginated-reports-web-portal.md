@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1ebe16bd9b9474b892346ec2a8dd6f25254c6d0b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243578"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243764"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>ページ分割されたレポートの使用 (Web ポータル)
 
@@ -30,7 +30,7 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
 2.  **[ページ分割されたレポート]** を選択します。  
   
-    ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
+    ![[新規] ドロップダウン リストを示すスクリーンショット。[ページ分割されたレポート] オプションが選択されています。](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  レポート ビルダーが起動されるか、またはレポート ビルダーをダウンロードするように求められます。  
   
@@ -45,28 +45,28 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
 1.  管理するデータセットの省略記号 **[...]** を選択します。  
       
-    ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
+    ![データセットに対して省略記号オプションを選択しているユーザーを示すスクリーンショット。](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
 2.  **[管理]** を選択すると、編集画面に移動します。  
     
-    ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
+    ![省略記号オプションが選択され、[管理] オプションが選択されていること示すスクリーンショット。](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
 ## <a name="properties"></a>Properties  
   
 プロパティ画面では、ページ分割されたレポートの **[名前]** と **[説明]** を変更できます。 また、 **[削除]** 、 **[移動]** 、 **[リンク レポートの作成]** 、 **[レポート ビルダーでの編集]** 、 **[ダウンロード]** 、または **[置換]** を選択することもできます。  
     
-![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
+![[Company Sales の編集] ダイアログ ボックスの [プロパティ] 画面を示すスクリーンショット。](../reporting-services/media/ssrswebportal-report-properties.png)  
    
 ## <a name="parameters"></a>パラメーター  
   
 ページ分割されたレポートの既存のパラメーターを変更することができます。 新しいパラメーターを追加するには、レポート ビルダーまたは SQL Server Data Tools でレポートを編集する必要があります。  
   
-![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
+![[Company Sales の編集] ダイアログ ボックスの [パラメーター] 画面を示すスクリーンショット。](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
 ## <a name="data-source"></a>Data Source  
 共有データ ソースをポイントしたり、カスタム データ ソースの接続情報を入力したりできます。  
   
-![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
+![[Company Sales の編集] ダイアログ ボックスの [データ ソース] 画面を示すスクリーンショット。](../reporting-services/media/ssrswebportal-report-datasource.png)  
   
 以下のオプションを使用して、カスタム データ ソースを指定します。  
   
@@ -117,15 +117,15 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
 これにより、データ ソースに資格情報を提供しないことが許可されます。 データ ソースがユーザーのログオンを必要とする場合は、このオプションを選択しても効果がありません。 このオプションは、データ ソース接続にユーザーの資格情報を必要としない場合にのみ選択してください。  
   
-このオプションを使用するには、レポート サーバー用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報の手段がない場合に、外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、「 [自動実行アカウントの構成 (SSRS 構成マネージャー)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」をご覧ください。  
+このオプションを使用するには、レポート サーバー用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報の手段がない場合に、外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、「[自動実行アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="subscriptions"></a>サブスクリプション  
 Reporting Services サブスクリプションは、特定の時刻に、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。 詳細については、「[サブスクリプションの操作](working-with-subscriptions-web-portal.md)」を参照してください。
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
+![[Company Sales の編集] ダイアログ ボックスの [サブスクリプション] 画面を示すスクリーンショット。](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>依存アイテム  
-[依存アイテム] ページを使用すると、このレポートを参照しているアイテムの一覧を表示できます。 各アイテムの種類のアイコンは、その内容を表しています。 各アイテムの**省略記号 [...]** を選択すると、それらのアイテムの詳細を管理できます。  
+[依存アイテム] ページを使用すると、このレポートを参照しているアイテムの一覧を表示できます。 各アイテムの種類のアイコンは、その内容を表しています。 各アイテムの **省略記号 [...]** を選択すると、それらのアイテムの詳細を管理できます。  
   
 ## <a name="caching"></a>キャッシュ  
 ページ分割されたレポートのデータをキャッシュするにはいくつかのオプションがあります。 簡単な選択で始めことができます。  
@@ -136,11 +136,11 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
   
 3.  **[常に事前生成されたスナップショットに対してこのレポートを実行する]** は、一定期間のレポートのレイアウトとデータをキャッシュします。 レポートが予定外に (たとえば、スケジュールされたバックアップ中に) 実行されないように、レポートをレポート スナップショットとして実行することができます。 スナップショットは、スケジュールに従って更新できます。 [詳細情報]  
   
-![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
+![[Company Sales の編集] ダイアログ ボックスの [キャッシュ] 画面を示すスクリーンショット。[常に最新データを使用して、このレポートを実行する] オプションが選択されています。](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
 **[このレポートのコピーをキャッシュし、使用できるときはそれを使用する]** を選択すると、さらにいくつかのオプションが表示されます。  
   
-![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+![[Company Sales の編集] ダイアログ ボックスの [キャッシュ] 画面を示すスクリーンショット。[このレポートのコピーをキャッシュし、使用できるときはそれを使用する] オプションが選択されています。](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
 詳細については、「[スナップショットの操作](working-with-snapshots-web-portal.md)」を参照してください。
   
@@ -163,7 +163,7 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
   
 完了したら、 **[キャッシュ更新計画の作成]** を選択します。  
   
-![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
+![[キャッシュ更新計画の作成] オプションが表示されている [Company Sales の編集] ダイアログ ボックスのスクリーンショット。](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
 > キャッシュ更新計画を作成するには、SQL Server エージェントが動作している必要があります。  

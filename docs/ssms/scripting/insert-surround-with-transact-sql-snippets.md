@@ -16,12 +16,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a97616d707849e94de995e29bda6b7853f6631d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: e7596e6ef216682ad66695b30712b3e77e2aa5ab
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901928"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038997"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>ブロックの挿入 Transact-SQL スニペットの挿入
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901928"
 ## <a name="inserting-surround-with-snippets"></a>ブロックの挿入スニペットの挿入  
  ブロックの挿入スニペットは、ショートカット キー、 **[編集]** メニュー、およびショートカット メニューの 3 とおりの方法で起動できます。  
   
- このスニペットを挿入した後は、置換テキストを変更して、有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントにする必要があります。 詳細については、「 [Transact-SQL スニペットの作成](../../relational-databases/scripting/complete-transact-sql-snippets.md)」を参照してください。  
+ このスニペットを挿入した後は、置換テキストを変更して、有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントにする必要があります。 詳細については、「 [Transact-SQL スニペットの作成](./complete-transact-sql-snippets.md)」を参照してください。  
   
 #### <a name="to-insert-a-surround-with-snippet"></a>ブロックの挿入スニペットを挿入するには  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901928"
 3.  マウスを使用するか、スニペットの名前を入力し、Tab キーまたは Enter キーを押して、一覧からスニペットの名前 (BEGIN、IF、または WHILE) を選択します。  
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL スニペットの挿入](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
-  
+ [Transact-SQL スニペットの挿入](./insert-transact-sql-snippets.md)  
   

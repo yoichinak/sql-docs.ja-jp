@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 349ef2067c50a9955643c02cb8ba5226a1f15ddc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac628c06693b46aec49654541723937ff317b18c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422566"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380487"
 ---
 # <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422566"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 @@TEXTSIZE  
 ```  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88422566"
 ## <a name="examples"></a>例  
  次の例では使用 `SELECT` を表示する、 `@@TEXTSIZE` 値を変更した後と前に、 `SET``TEXTSIZE` ステートメントです。   
   
-```  
+```sql
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  
 SET TEXTSIZE 0  
 SELECT @@TEXTSIZE AS 'Text Size'  
@@ -69,7 +69,7 @@ Text Size
 2048
  ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)  
   

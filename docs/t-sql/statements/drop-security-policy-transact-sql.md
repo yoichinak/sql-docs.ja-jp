@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a9a0566b1601696dd63579f90b75cb81b6f8709c
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: cbf0c127a47fc18f3b2a56dd303ac60565689ddb
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646306"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379752"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 
@@ -54,14 +54,14 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *security_policy_name*  
  セキュリティ ポリシーの名前。 セキュリティ ポリシー名は識別子のルールに準拠し、データベースおよびそのスキーマで一意でなければなりません。  
   
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する ALTER ANY SECURITY POLICY 権限と ALTER 権限が必要です。  
   
 ## <a name="example"></a>例  
   
-```  
+```sql  
 DROP SECURITY POLICY secPolicy;  
 ```  
   

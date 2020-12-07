@@ -15,12 +15,12 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c810f8dea740e18588b9c199733be3296423162
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 966d76cd9d0582cc94d3419714c4368e24a68eac
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428244"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810796"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88428244"
 > [!NOTE]  
 >  標準の ODBC 接続属性 SQL_ATTR_CONNECTION_DEAD は、接続の最新の状態を返します。 これは現在の接続状態と異なる場合があります。  
   
-|値|説明|  
+|Value|説明|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|サーバーへの接続が失われました。|  
 |SQL_CD_FALSE|接続が開かれており、ステートメントの処理に使用できます。|  
@@ -51,7 +51,7 @@ ms.locfileid: "88428244"
   
  詳細については、「 [拡張イベントログの診断情報へのアクセス](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)」を参照してください。  
   
-|値|説明|  
+|Value|説明|  
 |-----------|-----------------|  
 |SQL_ERROR|接続に失敗しました。|  
 |SQL_SUCCESS|接続に成功しました。 クライアント接続 ID は出力バッファーで見つかります。|  
@@ -59,7 +59,7 @@ ms.locfileid: "88428244"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 属性は、現在のドライバーのパフォーマンス統計情報を保持する SQLPERF 構造体へのポインターを返します。 パフォーマンスログが有効になっていない場合、 **Sqlgetconnectattr**は NULL を返します。 SQLPERF 構造体内の統計情報がドライバーで動的に更新されることはありません。 パフォーマンス統計を更新する必要があるたびに、 **Sqlgetconnectattr** を呼び出します。  
   
-|値|説明|  
+|Value|説明|  
 |-----------|-----------------|  
 |NULL|パフォーマンスのログ記録が無効です。|  
 |その他の値|SQLPERF 構造体へのポインター。|  
@@ -70,7 +70,7 @@ ms.locfileid: "88428244"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 属性は、ユーザー データ ポインターを取得します。 ユーザー データはクライアントのメモリに格納され、接続ごとに記録されます。 ユーザー データ ポインターが設定されていない場合、SQL_UD_NOTSET という NULL ポインターが返されます。  
   
-|値|説明|  
+|Value|説明|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|ユーザー データ ポインターが設定されていません。|  
 |その他の値|ユーザー データへのポインターです。|  
@@ -85,11 +85,10 @@ ms.locfileid: "88428244"
  Spn の詳細については、「 [クライアント接続 &#40;ODBC&#41;のサービスプリンシパル名 &#40;spn&#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLGetConnectAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59347)   
+ [SQLGetConnectAttr 関数](../../odbc/reference/syntax/sqlgetconnectattr-function.md)   
  [ODBC API の実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET QUOTED_IDENTIFIER &#40;Transact-sql&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
-  
   

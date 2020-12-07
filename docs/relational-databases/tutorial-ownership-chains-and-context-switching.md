@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4c1494efa032ba58315e8a5f7fe5fd855b3e51f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472966"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809368"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>チュートリアル:所有権の継承とコンテキストの切り替え
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "88472966"
 ## <a name="prerequisites"></a>前提条件
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
-- [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
+- [AdventureWorks2017 サンプル データベース](../samples/adventureworks-install-configure.md)をダウンロードする。
 
-SQL Server Management Studio でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。   
+SQL Server Management Studio でデータベースを復元する手順については、[データベースの復元](./backup-restore/restore-a-database-backup-using-ssms.md)に関するページを参照してください。   
   
 ## <a name="1-configure-the-environment"></a>1.環境を構成する  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] と次のコードを使用して `AdventureWorks2017` データベースを開き、`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを使用して、dbo ユーザーがコンテキストとして表示されていることを確認します。  
@@ -334,6 +334,5 @@ GO
   
 ## <a name="see-also"></a>参照  
 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b350c746d498dbaeb63f952f1ca172d4ffeaefff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7524ea73ce04db70b75df3b8a4306c7304f475de
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395878"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125814"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>失敗した SQL Server のインストールの修復
 
@@ -82,6 +82,5 @@ ms.locfileid: "88395878"
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [インストール方法に関する記事](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [インストール方法に関する記事](/previous-versions/sql/)  
   

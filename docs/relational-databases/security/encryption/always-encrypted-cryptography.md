@@ -13,12 +13,12 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2cc6c779f441934e76108a71445078386dc4d567
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627558"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866918"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted による暗号
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85627558"
   
  列暗号化キー (CEK) は、CMK によって保護されているコンテンツ暗号化キー (たとえば、データを保護するために使用されるキー) です。  
   
- すべての [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK ストア プロバイダーでは、RSA-OAEP (RSA with Optimal Asymmetric Encryption Padding) を使用して CEK が暗号化されます。 Microsoft Cryptography API がサポートされているキー ストア プロバイダー:.NET Framework の Next Generation (CNG) ([SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) では、RFC 8017 のセクション A.2.1 で指定されている既定のパラメーターが使用されます。 これらの既定パラメーターでは、SHA-1 のハッシュ関数と、SHA-1 による MGF1 のマスク生成関数が使用されます。 他のすべてのキー ストア プロバイダーでは、SHA-256 が使用されます。 
+ すべての [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK ストア プロバイダーでは、RSA-OAEP (RSA with Optimal Asymmetric Encryption Padding) を使用して CEK が暗号化されます。 Microsoft Cryptography API がサポートされているキー ストア プロバイダー:.NET Framework の Next Generation (CNG) ([SqlColumnEncryptionCngProvider クラス](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)) では、RFC 8017 のセクション A.2.1 で指定されている既定のパラメーターが使用されます。 これらの既定パラメーターでは、SHA-1 のハッシュ関数と、SHA-1 による MGF1 のマスク生成関数が使用されます。 他のすべてのキー ストア プロバイダーでは、SHA-256 が使用されます。 
   
 ## <a name="data-encryption-algorithm"></a>データ暗号化のアルゴリズム  
  Always Encrypted では **AEAD_AES_256_CBC_HMAC_SHA_256** アルゴリズムを使用して、データベース内のデータを暗号化します。  
@@ -181,5 +181,4 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="see-also"></a>参照  
  - [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Always Encrypted を使用したアプリケーションの開発](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
-  
   

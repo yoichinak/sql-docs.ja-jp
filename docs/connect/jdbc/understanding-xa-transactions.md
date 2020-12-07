@@ -2,7 +2,7 @@
 title: XA トランザクションについて
 description: Microsoft JDBC Driver for SQL Server では、Java Platform Enterprise Edition/JDBC 2.0 のオプションの分散トランザクションがサポートされています。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f64cbc7b054f6e60285b3a34921e3219ddd507ff
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294001"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529333"
 ---
 # <a name="understanding-xa-transactions"></a>XA トランザクションについて
 
@@ -63,7 +63,7 @@ ms.locfileid: "84294001"
 > JDBC 分散トランザクション コンポーネントは、JDBC Driver のインストール先の xa ディレクトリに含まれます。 これらのコンポーネントには、xa_install.sql および sqljdbc_xa.dll のファイルが含まれます。 さまざまなクライアントで JDBC ドライバーのさまざまなバージョンがある場合、サーバーで最新の sqljdbc_xa.dll を使用することをお勧めします。  
 
 > [!NOTE]  
-> SQL Server 2019 パブリック プレビュー CTP 2.0 以降では、JDBC XA 分散トランザクション コンポーネントが SQL Server エンジンに含まれており、システム ストアド プロシージャを使用して有効または無効にできます。
+> JDBC XA 分散トランザクション コンポーネントは、SQL Server 2017 (累積的更新プログラム 16 以降) および SQL Server 2019 の SQL Server エンジンに含まれており、システム ストアド プロシージャを使用して有効または無効にできます。
 > JDBC ドライバーを使用して XA 分散トランザクションを実行するために必要なコンポーネントを有効にするには、次のストアド プロシージャを実行します。
 >
 > EXEC sp_sqljdbc_xa_install
@@ -86,7 +86,7 @@ Windows Vista 以降の場合:
   
 4. **[ローカル DTC のプロパティ]** ダイアログ ボックスの **[セキュリティ]** タブをクリックします。  
   
-5. **[XA トランザクションを有効にする]** チェック ボックスをオンにし、 **[OK]** をクリックします。 これにより、MS DTC サービスが再開されます。
+5. **[XA トランザクションを有効にする]** チェック ボックスをオンにし、 **[OK]** をクリックします。 この操作により、MS DTC サービスが再開されます。
   
 6. 再度 **[OK]** をクリックして **[プロパティ]** ダイアログ ボックスを閉じ、次に **[コンポーネント サービス]** を閉じます。  
   
@@ -170,14 +170,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 ### <a name="configuring-the-user-defined-roles"></a>ユーザー定義ロールを構成する
 
-JDBC Driver を使用して分散トランザクションに参加する、特定のユーザーに対してアクセス許可を与えるには、そのユーザーを SqlJDBCXAUser ロールに追加します。 たとえば、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを使用して、'shelby' というユーザー ('shelby' という名前の付いた、SQL の標準的なログイン ユーザー) を SqlJDBCXAUser ロールに追加します。  
+JDBC Driver を使用して分散トランザクションに参加する、特定のユーザーに対してアクセス許可を与えるには、そのユーザーを SqlJDBCXAUser ロールに追加します。 たとえば、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを使用して、"shelly" というユーザー ("shelly" という名前の付いた、SQL の標準的なログイン ユーザー) を SqlJDBCXAUser ロールに追加します。  
 
 ```sql
 USE master  
 GO  
-EXEC sp_grantdbaccess 'shelby', 'shelby'  
+EXEC sp_grantdbaccess 'shelly', 'shelly'  
 GO  
-EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
+EXEC sp_addrolemember [SqlJDBCXAUser], 'shelly'  
 ```
 
 SQL ユーザー定義ロールは、データベースごとに定義されます。 セキュリティ上の目的で独自のロールを作成するには、各データベースでロールを定義し、データベースごとにユーザーを追加する必要があります。 SqlJDBCXAUser ロールは、マスターに存在する SQL JDBC 拡張ストアド プロシージャへのアクセス許可に使用されるため、master データベースで厳密に定義されています。 まず、個々のユーザーのマスターへのアクセスを許可し、次に、master データベースにログオンしてから、SqlJDBCXAUser ロールへのアクセスを許可する必要があります。  

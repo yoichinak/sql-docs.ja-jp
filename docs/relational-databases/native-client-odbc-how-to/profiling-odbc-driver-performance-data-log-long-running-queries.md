@@ -1,6 +1,6 @@
 ---
 description: ODBC ドライバー パフォーマンス データのプロファイル - 長時間実行クエリのログ
-title: 実行時間の長いクエリのログ記録 (ODBC) |Microsoft Docs
+title: ログ Long-Running クエリ (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 650ce0033a09913c8f30b8ff51534f31c628a6e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c4942428a1f73275aeb85d9c41220467b89e3ab9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465341"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868894"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>ODBC ドライバー パフォーマンス データのプロファイル - 長時間実行クエリのログ
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88465341"
   このサンプルでは、実行時間の長いクエリをログに記録するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー固有のオプションを示します。 このサンプルを実行すると Odbcqry.log が作成されます。このファイルには、アプリケーションの設定間隔よりも実行時間が長いクエリの一覧が格納されます。 このサンプルは IA64 ではサポートされていません。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>ODBC アドミニストレーターを使用して実行時間の長いクエリをログに記録するには  
   
@@ -221,5 +221,4 @@ int main() {
   
 ## <a name="see-also"></a>参照  
  [Odbc&#41;&#40;ODBC ドライバーのパフォーマンスのプロファイル方法に関するトピック ](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

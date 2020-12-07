@@ -10,25 +10,25 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e00d3814b20f774568da007ba1e60f6784b1c9fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ec47525a79738eafc2746808a669ee50df0363a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484075"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194494"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python と R のチュートリアルの航空会社フライト到着デモ データ
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 この演習では、R または Python の組み込みの航空会社デモ データ セットからインポートしたデータを格納する SQL Server データベースを作成します。 R と Python のディストリビューションには同等のデータが用意されており、Management Studio を使用してそれを SQL Server データベースにインポートできます。
 
-この演習を完了するには、[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) または T-SQL クエリを実行できる別のツールが必要です。
+この演習を完了するには、[SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) または T-SQL クエリを実行できる別のツールが必要です。
 
 このデータセットを使用したチュートリアルとクイックスタートには、次のものがあります。
 
 +  [revoscalepy を使用した Python モデルの作成](use-python-revoscalepy-to-create-model.md)
 
-## <a name="create-the-database"></a>データベースの作成
+## <a name="create-the-database"></a>データベースを作成する
 
 1. SQL Server Management Studio を開始し、R または Python 統合のあるデータベース エンジン インスタンスに接続します。  
 

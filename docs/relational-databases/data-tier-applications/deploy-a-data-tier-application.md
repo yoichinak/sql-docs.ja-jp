@@ -23,11 +23,11 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80745e9ea57da0a2307c304c46aaa2ea831f84ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386708"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125266"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88386708"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>同じ DAC パッケージを複数回配置する 
  同じ DAC パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] の単一のインスタンスに複数回配置することはできますが、配置は一度に 1 つずつ実行する必要があります。 各配置に指定される DAC インスタンス名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス内で一意である必要があります。  
   
- データベース エンジンのインスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに **SQL Server ユーティリティ**に組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の**ユーティリティ エクスプローラー**の **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、 **[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
+ データベース エンジンのインスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに **SQL Server ユーティリティ** に組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **ユーティリティ エクスプローラー** の **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、 **[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
   
 ###  <a name="database-options-and-settings"></a>データベースのオプションと設定  
  既定では、配置中に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定すべてが適用されます。ただし、次の設定は除きます。  
@@ -62,7 +62,7 @@ ms.locfileid: "88386708"
   
 ## <a name="deploy-a-dac-using-the-wizard"></a>ウィザードを使用して DAC を配置する  
   
-1.  **オブジェクト エクスプローラー**で、DAC を配置するインスタンスのノードを展開します。  
+1.  **オブジェクト エクスプローラー** で、DAC を配置するインスタンスのノードを展開します。  
   
 2.  **[データベース]** ノードを右クリックし、**[データ層アプリケーションの配置]** をクリックします。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "88386708"
   
 4.  **add_DacActionStarted** と **add_DacActionFinished** を使用して、DAC 配置イベントをサブスクライブします。  
   
-5.  **DatabaseDeploymentProperties**を設定します。  
+5.  **DatabaseDeploymentProperties** を設定します。  
   
 6.  **DacStore.Install** メソッドを使用して、DAC を配置します。  
   

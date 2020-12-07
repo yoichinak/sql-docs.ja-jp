@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03af390ecf43a70d3d80ad876e1d9944cd9297bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f13fcea7eaf2958ba2ebd9c856a86a743e050ffc
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445462"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195499"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,6 @@ ms.locfileid: "88445462"
  ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }  
 [ ; ]  
 ```  
@@ -73,7 +72,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 ## <a name="examples"></a>例  
  次の例では、ストアド プロシージャの実行前にアクティブなトランザクションが開始された場合に、トランザクション セーブポイントを使用して、ストアド プロシージャによる変更だけをロールバックする方法を示します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  

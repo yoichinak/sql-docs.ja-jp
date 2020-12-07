@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: da05183ae2b331f78f9692acc6aaff66a9455092
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f2d5761829c38aba06f36b4d473c8ea9dc36214
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459407"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124490"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,7 @@ ms.locfileid: "88459407"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   

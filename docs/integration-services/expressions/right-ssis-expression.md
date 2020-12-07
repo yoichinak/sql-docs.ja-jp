@@ -14,10 +14,10 @@ ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dbf49e07dd37e621ed5a733e8f1ad22e5d057b1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477434"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 式)
@@ -45,7 +45,7 @@ RIGHT(character_expression,integer_expression)
  DT_WSTR  
   
 ## <a name="remarks"></a>解説  
- *integer_expression* が *character_expression*より長い場合、関数は *character_expression*を返します。  
+ *integer_expression* が *character_expression* より長い場合、関数は *character_expression* を返します。  
   
  *integer_expression* が 0 の場合、関数は長さが 0 の文字列を返します。  
   

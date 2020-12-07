@@ -9,12 +9,12 @@ ms.technology: big-data-cluster
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 67881767174d3af101ba0541573730af999c5cf3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 54ef7f11e15a5cb75833701420fb53d9f28ebaa9
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914318"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235509"
 ---
 # <a name="sql-server-big-data-clusters-partners"></a>SQL Server ビッグ データ クラスター パートナー
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -24,8 +24,8 @@ SQL Server ビッグ データ クラスターを使用したソリューショ�
 
 | Partner | 説明 | リンク |
 | --- | --- | --- |
-|![dellemc][1] |Dell EMC では、組織がデータを格納、管理、保護、および分析するために必要なデータストレージ、情報セキュリティ、仮想化、分析、クラウド コンピューティング、およびその他の製品やサービスを販売しています。|[Marketplace][dellemc_marketplace]<br>[Web サイト][dellemc_website]<br>[データシート][dellemc_datasheet]<br>[Twitter][dellemc_twitter]<br>[ビデオ][dellemc_youtube]<br>[ブログ][dellemc_blog] |
-|![HPE][2] |Microsoft SQL Server のためのエンタープライズ パフォーマンス<br>弊社のストレージ ソリューションによって、心配無用の Microsoft SQL Server が提供されます。 統合により、コピー データの管理が強化され、データ保護が向上し、DevOps が高速化され、クラウドへのオンランプが提供されます。|[Web サイト][hpe_website]<br>[データシート][hpe_datasheet]<br>[評価版をダウンロードする][hpe_download]<br>[Twitter][hpe_twitter]<br>[ビデオ][hpe_youtube]<br>[ブログ][hpe_download]|
+|![dellemc のロゴ][1] |Dell EMC では、組織がデータを格納、管理、保護、および分析するために必要なデータストレージ、情報セキュリティ、仮想化、分析、クラウド コンピューティング、およびその他の製品やサービスを販売しています。|[Marketplace][dellemc_marketplace]<br>[Web サイトのロゴ][dellemc_website]<br>[データシート][dellemc_datasheet]<br>[Twitter][dellemc_twitter]<br>[ビデオ][dellemc_youtube]<br>[ブログ][dellemc_blog] |
+|![HPE のロゴ][2] |Microsoft SQL Server のためのエンタープライズ パフォーマンス<br>弊社のストレージ ソリューションによって、心配無用の Microsoft SQL Server が提供されます。 統合により、コピー データの管理が強化され、データ保護が向上し、DevOps が高速化され、クラウドへのオンランプが提供されます。|[Web サイト][hpe_website]<br>[データシート][hpe_datasheet]<br>[評価版をダウンロードする][hpe_download]<br>[Twitter][hpe_twitter]<br>[ビデオ][hpe_youtube]<br>[ブログ][hpe_download]|
 |![NetApp][3] |NetApp StorageGRID は、ソフトウェアによるオブジェクト ストレージです。 これは、ソフトウェア専用の特化されたアプライアンスとして、仮想化された環境に展開できます。<br/><br/>単一の名前空間で、StorageGRID は世界各地に配置された複数のデータセンターにわたってスケーリングできます。 StorageGRID では、動的なデータ管理による大規模な S3 オブジェクト ストレージが提供されます。これにより、お客様は、パブリック クラウド リソースを活用しながら、次世代のワークフローをオンプレミスで実行できます。 StorageGRID 独自のデータ管理ポリシー エンジンによって、最適化されたレベルのパフォーマンスおよび持続性と、データの局所性の要件への準拠が保証されます。 |[Web サイト][netapp_website]<br>[データシート][netapp_datasheet]<br>[Twitter][netapp_twitter]<br>[ビデオ][netapp_youtube]<br>[Docs][netapp_docs]|
 |![PureStorage][5] |Pure Storage では、組織がデータをインテリジェンスとアドバンテージに変えられるようにするシンプルな Evergreen&trade; プラットフォームを提供することにより、データでより良い世界を構築するためのイノベーションを支援しています。  ビッグ データ クラスター (BDC) に対応した Pure Storage には、Kubernetes と互換性のあるコンテナー オーケストレーション プラットフォーム用の高度にスケーラブルなストレージ ファブリックが用意されています。 FlashBlade by Pure は、SQL Server 2019 ビッグ データ クラスターの HDFS 階層化で利用できる、管理が容易なハイ パフォーマンスのストレージ プラットフォームであり、ペタバイト級の使用可能ストレージと数十ギガバイト規模の I/O 帯域幅に拡張することができます。 FlashArray と FlashBlade は、ビッグ データ クラスターでの使用に適しています。 |[Web サイト][purestorage_website]<br>[データシート][purestorage_datasheet]<br>[Twitter][purestorage_twitter]<br>[Docs][purestorage_docs]|
 |![StreamSets][4] |StreamSets では、ビッグ データ クラスターのデータ パイプラインの操作のための、コード不要のソリューションが提供されます。 <br/><ul><li> 直感的なビジュアル ツールで継続的なデータ フローを設計および操作するため、ビッグ データ システムのコーディング方法を理解する必要がなくなる</li><li>直感的なドラッグ アンド ドロップのユーザー インターフェイスを使用して、Apache Spark 上で複雑な分析アプリケーションを開発する </li><li>SQL Server と HDFS とのネイティブ統合により、さまざまなデータ ソースから大規模にデータを取り込んで処理する</li><li>リレーショナル データベース、Hadoop クラスター、NoSQL ストアからビッグ データ クラスターへの移行を加速する</li></ul>   | [Web サイト][streamsets_website]<br>[ブログ][streamsets_blog]<br>[ビデオ][streamsets_youtube]<br>[ドキュメント][streamsets_docs]|
@@ -94,4 +94,4 @@ SQL Server ビッグ データ クラスターを使用したソリューショ�
 <!--Docs-->
 [netapp_docs]:https://blog.netapp.com/microsoft-sql-server-big-data-clusters-with-storagegrid/
 [streamsets_docs]:https://streamsets.com/documentation/datacollector/latest/help/datacollector/UserGuide/Destinations/SQLServerBDCBulk.html#concept_hjv_5nn_r3b
-[purestorage_docs]:https://www.purestorage.com/pure-folio/docs.html
+[purestorage_docs]:https://www.purestorage.com/docs.html?item=/type/pdf/subtype/doc/path/content/dam/purestorage/pdf/datasheets/ps_ds3p_entry-level-storage_03.pdf

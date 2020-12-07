@@ -17,14 +17,14 @@ helpviewer_keywords:
 - overwriting filegroups
 - overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5fe155516996d9f5761ccb2b8b1d1071fb975bbe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5f5b0b6a43c3b6cc1dde0fa566fdb4547c831e76
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737695"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129094"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>既存のファイルにファイルとファイル グループを復元する (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,11 +68,11 @@ ms.locfileid: "85737695"
   
 #### <a name="to-restore-files-and-filegroups-over-existing-files"></a>ファイルとファイル グループを既存のファイルに復元するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
 2.  目的のデータベースを右クリックし、 **[タスク]** 、 **[復元]** の順にポイントし、 **[ファイルおよびファイル グループ]** をクリックします。  
   
-3.  **[全般]** ページの **[復元先データベース]** ボックスに、復元するデータベースの名前を入力します。 新しいデータベースを入力するか、ドロップダウン リストから既存のデータベースを選択します。 このリストには、システム データベース **master** および **tempdb**を除いた、サーバー上のすべてのデータベースが表示されます。  
+3.  **[全般]** ページの **[復元先データベース]** ボックスに、復元するデータベースの名前を入力します。 新しいデータベースを入力するか、ドロップダウン リストから既存のデータベースを選択します。 このリストには、システム データベース **master** および **tempdb** を除いた、サーバー上のすべてのデータベースが表示されます。  
   
 4.  復元するバックアップ セットの復元元ファイルと場所を指定するには、次のいずれかのオプションをクリックします。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "85737695"
     |-----------------|------------|  
     |**復元**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
     |**名前**|バックアップ セットの名前です。|  
-    |**[ファイルの種類]**|バックアップのデータの種類を指定します。**データ**、**ログ**、または **Filestream データ**です。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
+    |**[ファイルの種類]**|バックアップのデータの種類を指定します。**データ**、**ログ**、または **Filestream データ** です。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
     |**Type**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
     |**[サーバー]**|バックアップ操作を実行するデータベース エンジン インスタンスの名前です。|  
     |**[ファイルの論理名]**|ファイルの論理名です。|  

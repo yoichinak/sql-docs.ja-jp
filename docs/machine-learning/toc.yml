@@ -341,16 +341,10 @@
           href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
     - name: パフォーマンス
       items:
-        - name: R
+        - name: R コードのパフォーマンス
           items:
-            - name: R でのパフォーマンス チューニングの概要
-              href: ../machine-learning/r/sql-server-r-services-performance-tuning.md
-            - name: パフォーマンス チューニングのサーバーの構成
-              href: ../machine-learning/r/sql-server-configuration-r-services.md
-            - name: パフォーマンス チューニング - R でのデータの最適化
+            - name: R でのデータ最適化
               href: ../machine-learning/r/r-and-data-optimization-r-services.md
-            - name: R での結果のパフォーマンス チューニング
-              href: ../machine-learning/r/performance-case-study-r-services.md
             - name: R コード プロファイル関数の使用
               href: ../machine-learning/r/using-r-code-profiling-functions.md
 - name: リファレンス
@@ -374,7 +368,7 @@
 - name: リソース
   items:
     - name: リリース ノート 2019 >
-      href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
+      href: ../sql-server/sql-server-version-15-release-notes.md?toc=..%252ftoc.json
     - name: リリース ノート 2017 >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: リリース ノート 2016 >

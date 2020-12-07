@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8801e4727beba94c95408716606208c122e96204
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: a5c182e7425e51a06b170178ee2716c42c58e115
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480356"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521219"
 ---
 # <a name="query-store-usage-scenarios"></a>クエリ ストアの使用シナリオ
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89480356"
   
 -   前のプランのほうがパフォーマンスが高いことが証明された場合は、そのプランを履歴から強制的に実行します。 **[低下したクエリ]** の **[プランの強制]** ボタンを使って、選んだプランをクエリで強制的に実行します。  
   
- ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
+ ![プランの概要を示すクエリ ストアのスクリーンショット。](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
  このシナリオの詳細な説明については、「[Query Store:A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)」 (クエリ ストア: データベースのためのフライト データ レコーダー) ブログを参照してください。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "89480356"
   
  調査を開始する最も簡単な方法は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で **[Top Resource Consuming Queries]** (上位リソース消費クエリ) を開くことです。 ユーザー インターフェイスは、次の 3 つのウィンドウに分かれています。上位リソース消費クエリを表すヒストグラム (左側)、選択したクエリで使用されたプランの概要 (右側)、および選択したプランの視覚化されたクエリ プラン (下部)。 分析するクエリの数と関心のある期間を制御するには、 **[構成]** ボタンをクリックします。 異なるリソース消費ディメンション (期間、CPU、メモリ、IO、実行回数) とベースライン (平均、最小、最大、合計、標準偏差) も選択できます。  
   
- ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
+ ![リソース使用量が上位のクエリを特定して調整できることを示すクエリ ストアのスクリーンショット。](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
  右側のプランの概要を見て実行履歴を分析し、別のプランとそれらのランタイム統計を確認します。 下部ウィンドウで、別のプランを調べるか、別のプランを並べて ([比較] ボタンを使用します) それらを視覚的に比較します。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "89480356"
   
 -   高コストのクエリによって参照されているテーブルでの欠落したインデックスの作成。  
   
--   行レベルのセキュリティのためのセキュリティ ポリシーの適用。 詳細については、「[Optimizing Row Level Security with Query Store](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store)」(クエリ ストアによる行レベルのセキュリティの最適化) を参照してください。  
+-   行レベルのセキュリティのためのセキュリティ ポリシーの適用。 詳細については、「[Optimizing Row Level Security with Query Store](/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store)」(クエリ ストアによる行レベルのセキュリティの最適化) を参照してください。  
   
 -   OLTP アプリケーションによって頻繁に更新されるテーブルへの一時的なシステム バージョン管理の追加。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "89480356"
   
 次の図は、不足しているインデックスを作成した場合のクエリ ストアの分析 (手順 4) を示しています。 [プランの概要] ウィンドウにインデックスの作成による影響を受けたクエリのこのビューを取得するには、 **[リソースを消費するクエリの上位]** を開きます。  
   
-![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
+![不足しているインデックスの作成の場合の、クエリ ストアの分析 (手順 4) を示すスクリーンショット。](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
 さらに、インデックス作成の前と後のプランを並べて表示して、それらを比較できます (ツールバーの赤い四角形でマークされている [選択したクエリのプランを、別々のウィンドウで比較します] ツールバー オプションを選択します)。  
   
-![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
+![クエリ ストアと [選択したクエリのプランを、別々のウィンドウで比較します] ツール バー オプションを示すスクリーンショット。](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
 インデックス作成前のプラン (上段の plan_id = 1) にはインデックス不足ヒントがあるため、クラスター化インデックス スキャンがクエリの最も高コストの操作であることがわかります (赤色の四角形)。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "89480356"
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降では、すべてのクエリ オプティマイザーの変更は最新の[データベース互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)と連携しているため、プランの変更は、アップグレードの時点ではなく、ユーザーが `COMPATIBILITY_LEVEL` を最新のものに変更した時点で発生します。 この機能とクエリ ストアの組み合わせによって、アップグレード プロセス中のクエリのパフォーマンスを高いレベルで制御できます。 推奨されるアップグレードのワークフローを次の図に示します。  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![推奨されるアップグレード ワークフローを示す図。](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
 1.  データベース互換性レベルを変更しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードします。 最新のクエリ オプティマイザーの変更は公開されませんが、クエリ ストアなどの新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は提供されます。  
   
@@ -133,14 +133,14 @@ ms.locfileid: "89480356"
     b.  クエリ プランの適用に失敗した場合、またはパフォーマンスが依然として十分ではない場合は、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)を前の設定に戻し、Microsoft カスタマー サポートにお問い合わせください。  
     
 > [!TIP]
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *データベースのアップグレード* タスクを使用して、データベースの[データベース互換レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)をアップグレードします。 詳細については、「[クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)」を参照してください。
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *データベースのアップグレード* タスクを使用して、データベースの [データベース互換レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)をアップグレードします。 詳細については、「[クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)」を参照してください。
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>アドホックなワークロードを識別して改善する  
-一部のワークロードには、アプリケーション全体のパフォーマンス向上のために調整できる支配的なクエリがありません。 通常、これらのワークロードは、それぞれがシステムリソースの一部を消費する、比較的多数の異なるクエリに分類されます。 これらのクエリは非常にまれに実行される一意のクエリである (通常は 1 回のみ実行されます。このためアドホックという名前がついています) ため、それらのランタイム消費は重要ではありません。 一方で、アプリケーションが常に新しいクエリを生成する場合、システム リソースのかなりの部分がクエリのコンパイルで消費され、これは最適な状況ではありません。 このような状況はクエリ ストアにとって理想的ではなく、大量のクエリとプランが予約済みの領域に殺到した場合、クエリ ストアが非常に短時間で読み取り専用モードに至る可能性があることを意味します。 **サイズ ベース クリーンアップ ポリシー** がアクティブな場合 (クエリ ストアを常に稼働させるために[強くお勧めします](best-practice-with-the-query-store.md) )、バックグラウンド プロセスによってほぼ常にクエリ ストア構造がクリーンアップされますが、この動作もシステム リソースを大幅に消費します。  
+一部のワークロードには、アプリケーション全体のパフォーマンス向上のために調整できる支配的なクエリがありません。 通常、これらのワークロードは、それぞれがシステムリソースの一部を消費する、比較的多数の異なるクエリに分類されます。 これらのクエリは非常にまれに実行される一意のクエリである (通常は 1 回のみ実行されます。このためアドホックという名前がついています) ため、それらのランタイム消費は重要ではありません。 一方で、アプリケーションが常に新しいクエリを生成する場合、システム リソースのかなりの部分がクエリのコンパイルで消費され、これは最適な状況ではありません。 このような状況はクエリ ストアにとって理想的ではなく、大量のクエリとプランが予約済みの領域に殺到した場合、クエリ ストアが非常に短時間で読み取り専用モードに至る可能性があることを意味します。 **サイズ ベース クリーンアップ ポリシー** がアクティブな場合 (クエリ ストアを常に稼働させるために [強くお勧めします](best-practice-with-the-query-store.md) )、バックグラウンド プロセスによってほぼ常にクエリ ストア構造がクリーンアップされますが、この動作もシステム リソースを大幅に消費します。  
   
  **[リソースを消費するクエリの上位]** ビューに、ワークロードのアドホックな性質の最初の兆候が表示されます。  
   
-![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
+![リソース消費量上位のクエリの多くが 1 回しか実行されないことを示す [リソースを消費するクエリの上位] ビューのスクリーンショット。](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
 **[実行回数]** メトリックを使用して、上位クエリがアドホックであるかどうかを分析します (クエリ ストアを `QUERY_CAPTURE_MODE = ALL`で実行する必要があります)。 上の図から、 **[リソースを消費するクエリの上位]** の 90% が 1 回だけ実行されていることがわかります。  
   
@@ -157,7 +157,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
 ワークロードにアドホック クエリがある場合に取得できる可能性がある結果を次に示します。  
   
-![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
+![ワークロードにアドホック クエリがある場合に取得できる可能性がある結果のスクリーンショット。](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
   
 クエリの結果は、クエリ ストアに大量のクエリとプランがあるにもかかわらず、それらの query_hash と query_plan_hash には実際は違いがないことを示しています。 一意のクエリ テキストと一意の query_hash の 1 を大きく上回る比率は、ワークロードがパラメーター化に適した候補であることの兆候です。これは、クエリ間の違いが、クエリ テキストの一部として提供されるリテラル定数 (パラメーター) のみであるためです。  
   
@@ -199,7 +199,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 これらの手順のいずれかを適用した後、 **[Top Resource Consuming Queries]** (上位リソース消費クエリ) に、別のワークロードの図が表示されます。  
   
-![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![ワークロードの異なる図を示す [リソースを消費するクエリの上位] ビューのスクリーンショット。](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 アプリケーションで、自動パラメーター化の候補にならない大量の異なるクエリが生成される場合があります。 この場合、システムで大量のクエリが発生しているが、一意のクエリと一意の `query_hash` の比率が 1 に近い可能性があります。  
   
@@ -222,4 +222,3 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c4bbc8f1c5b96f659936cb955c1f6f31bd0ef0da
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458509"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933438"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML の接続の種類 (SSRS)
   XML データ ソースのデータをレポートに含めるには、種類が XML のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、XML データ拡張機能に基づいています。 このデータ ソースの種類を使用して、XML ドキュメント、Web サービス、またはクエリに埋め込まれた XML に接続し、データを取得します。  
@@ -45,7 +45,7 @@ ms.locfileid: "86458509"
   
 -   現在の Windows ユーザー (統合セキュリティとも呼ばれます)。  
   
--   資格情報を必要としない。 資格情報を選択しない場合には、匿名アクセスが使用されます。 レポート サーバーが外部データ ソースに接続するための自動実行アカウントが定義済みであることを確認してください。 XML データ処理拡張機能は、対象 URL または Web サービスに資格情報を渡しません。したがって、自動実行アカウントが定義されていないと接続に失敗します。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
+-   資格情報を必要としない。 資格情報を選択しない場合には、匿名アクセスが使用されます。 レポート サーバーが外部データ ソースに接続するための自動実行アカウントが定義済みであることを確認してください。 XML データ処理拡張機能は、対象 URL または Web サービスに資格情報を渡しません。したがって、自動実行アカウントが定義されていないと接続に失敗します。 詳細については、「[自動実行アカウントの構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
  保存された資格情報や要求された資格情報はサポートされていません。 Windows 統合セキュリティが無効になっていると、データの取得に Windows 統合セキュリティを使用できないので注意してください。 保存された資格情報や要求された資格情報を指定すると、実行時にエラーが発生します。  
   

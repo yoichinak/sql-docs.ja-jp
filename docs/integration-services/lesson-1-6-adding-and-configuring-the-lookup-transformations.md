@@ -11,10 +11,10 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
 ms.openlocfilehash: 4ab6f98a868dc504cf13fa770cd0d5ad5ceb1788
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88462047"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>レッスン 1-6:参照変換を追加し、構成する
@@ -44,7 +44,7 @@ ms.locfileid: "88462047"
   
 3.  **[データ フロー]** デザイン画面で、**[参照]** 変換の **[参照]** を選択し、名前を「**Lookup Currency Key**」に変更します。  
   
-4.  **Lookup Currency Key** 変換をダブルクリックし、**参照変換エディター**を表示します。  
+4.  **Lookup Currency Key** 変換をダブルクリックし、**参照変換エディター** を表示します。  
   
 5.  **[全般]** ページで、以下の選択を行います。  
   

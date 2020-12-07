@@ -35,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93397f5529a30cb0de1ac82ed36ea07fb0dd6c26
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 9cc3f414e9e771eb48734a2c8c188d28ac8bc321
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227236"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035863"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 句と JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -204,7 +204,7 @@ FROM { <table_source> [ ,...n ] }
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、「[行セット関数 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)」を参照してください。  
+ OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、「[行セット関数 &#40;Transact-SQL&#41;](../functions/opendatasource-transact-sql.md)」を参照してください。  
   
  OPENROWSET 関数および OPENQUERY 関数を使用したリモート オブジェクトの指定は、そのオブジェクトにアクセスする OLE DB プロバイダーの機能に依存します。  
   
@@ -899,4 +899,4 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)

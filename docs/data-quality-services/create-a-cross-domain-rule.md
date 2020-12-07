@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 96e56120e8573294ddc051932e2b629025cc76de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5da54333208b1e9781387387374f58a822e08f06
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487979"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728026"
 ---
 # <a name="create-a-cross-domain-rule"></a>クロス ドメイン ルールの作成
 
@@ -95,9 +95,8 @@ ms.locfileid: "88487979"
   
     6.  テストが完了したら、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスの **[閉じる]** をクリックします。  
   
-2.  クロス ドメイン ルールが完成したら、 **[完了]** をクリックし、「 [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+2.  クロス ドメイン ルールが完成したら、 **[完了]** をクリックし、「 [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> 補足情報: クロスドメインルールを作成した後  
  クロス ドメイン ルールを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
-  
   

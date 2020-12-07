@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04c84a81b61d0c8bb5e377dcd2c282495886fd02
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7c6236befd5ba532c1ed80de0da9c67072526d2b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173456"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195124"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>SQL Server と XDF ファイル間でデータを移動する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 13 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 13 です。
 
 このチュートリアルでは、XDF ファイルを使用して、リモートとローカルの両方のコンピューティング コンテキストでデータを転送する方法について説明します。 XDF ファイルにデータを格納すると、データを変換できるようになります。
 
-完了したら、ファイル内のデータで新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルを作成します。 関数 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) は、データを変換し、データ フレームと xdf ファイル間で変換を実行できます。
+完了したら、ファイル内のデータで新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルを作成します。 関数 [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) は、データを変換し、データ フレームと xdf ファイル間で変換を実行できます。
   
 ## <a name="create-a-sql-server-table-from-an-xdf-file"></a>XDF ファイルから SQL Server テーブルを作成する
 
@@ -65,7 +65,7 @@ ms.locfileid: "88173456"
     rxSetComputeContext("local")
     ```
     
-    [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) 関数を使用して、サポートされているデータ ソースからローカル XDF ファイルにデータをインポートできます。 データのローカル コピーを使用することは、同じクエリを何度も実行せずに、データに対してさまざまな分析を行う際に便利なことがあります。
+    [rxImport](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) 関数を使用して、サポートされているデータ ソースからローカル XDF ファイルにデータをインポートできます。 データのローカル コピーを使用することは、同じクエリを何度も実行せずに、データに対してさまざまな分析を行う際に便利なことがあります。
 
 5. **RxSqlServerData** の引数として以前定義したの変数を渡し、データ ソース オブジェクトを作成します。
   
@@ -86,7 +86,7 @@ ms.locfileid: "88173456"
   
     **rxImport** 関数から返される `localDs` オブジェクトは、ディスクにローカルに保存された `ccFraud.xdf` データ ファイルを表す軽量の **RxXdfData** データ ソース オブジェクトです。
   
-7. XDF ファイルで [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) を呼び出し、データ スキーマが同じであることを確認します。
+7. XDF ファイルで [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) を呼び出し、データ スキーマが同じであることを確認します。
   
     ```R
     rxGetVarInfo(data = localDS)
@@ -115,4 +115,4 @@ ms.locfileid: "88173456"
 **RevoScaleR** についての知識を深めるため、R チュートリアルの一覧に戻って、見逃した演習を順を追って進めることができます。 または、目次にあるハウツーに関する記事を参照して、一般的なタスクに関する情報を確認してください。
 
 > [!div class="nextstepaction"]
-> [SQL Server の R チュートリアル](sql-server-r-tutorials.md)
+> [SQL Server の R チュートリアル](./r-tutorials.md)

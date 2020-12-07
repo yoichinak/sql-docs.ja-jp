@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7e25d074aa561b81d5b6ea981787964eebbac189
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3cea756a7ba5ddb79bc9855af183663f53c91dd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479622"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128380"
 ---
 # <a name="x40x40pack_sent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88479622"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 @@PACK_SENT  
 ```  
   

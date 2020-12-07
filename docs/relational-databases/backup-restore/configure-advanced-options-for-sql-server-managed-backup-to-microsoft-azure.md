@@ -2,22 +2,24 @@
 title: マネージド バックアップ - 詳細設定オプションの構成
 description: このチュートリアルでは、既定のオプションがニーズに合致しない場合に、Microsoft Azure への SQL Server マネージド バックアップの詳細設定オプションを設定する方法について説明します。
 titleSuffix: to Microsoft Azure
-ms.custom: seo-lt-2019
-ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
+f1_keywords:
+- sql13.swb.managedbackup.configure.f1
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1e49a379ed12123c684497d84804c9ebd1ebf9ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.reviewer: ''
+ms.openlocfilehash: 3f59707810a698f59f73443066d6e551fbcb3e41
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748471"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130476"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップの詳細設定オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

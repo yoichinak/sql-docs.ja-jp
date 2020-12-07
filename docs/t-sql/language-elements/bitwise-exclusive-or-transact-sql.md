@@ -26,12 +26,12 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe64aa29987ee280a79afd66faed94cbbc89540e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7d027a1173962da36ccbefa9084311a496b70e8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417178"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189245"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (ビットごとの排他的 OR) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88417178"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 expression ^ expression  
 ```  
   
@@ -70,7 +70,7 @@ expression ^ expression
 ## <a name="examples"></a>例  
  次の例では、**int** データ型を使用して元の値を格納するテーブルを作成し、1 行に 2 つの値を挿入します。  
   
-```  
+```sql  
 CREATE TABLE bitwise (   
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL);
@@ -81,7 +81,7 @@ GO
   
  次のクエリでは、`a_int_value` 列と `b_int_value` 列との間でビットごとの排他的論理 OR を実行します。  
   
-```  
+```sql  
 SELECT a_int_value ^ b_int_value  
 FROM bitwise;  
 GO  

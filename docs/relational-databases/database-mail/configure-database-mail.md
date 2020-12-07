@@ -40,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421086"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126916"
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88421086"
  **Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 詳細については、「 [Database Mail XPs サーバー構成オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 」を参照してください。  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
- 任意のデータベースで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker を有効にするには、データベース ロックが必要です。 **msdb**で Service Broker が非アクティブ化された場合、データベース メールを有効にするには、最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを停止し、Service Broker が必要なロックを取得できるようにします。  
+ 任意のデータベースで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker を有効にするには、データベース ロックが必要です。 **msdb** で Service Broker が非アクティブ化された場合、データベース メールを有効にするには、最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを停止し、Service Broker が必要なロックを取得できるようにします。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
  データベース メールを構成するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。 データベース メールを送信するには、 **msdb** データベースの **DatabaseMailUserRole** データベース ロールのメンバーである必要があります。  
@@ -440,7 +440,7 @@ ms.locfileid: "88421086"
  テスト電子メール メッセージの **mailitem_id** 。  
   
  **[トラブルシューティング]**  
- クリックすると、オンライン ブックのトピック「 [データベース メールのトラブルシューティング](https://msdn.microsoft.com/library/ms188663.aspx)」が開きます。  
+ クリックすると、オンライン ブックのトピック「 [データベース メールのトラブルシューティング](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105))」が開きます。  
   
  [データベース メール構成ウィザードの使用](#DBWizard)  
   
@@ -455,10 +455,9 @@ ms.locfileid: "88421086"
   
 4.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。 **[テンプレート パラメーターの値の指定]** ウィンドウが開きます。  
   
-5.  **profile_name**、 **account_name**、 **SMTP_servername**、 **email_address**、および **display_name**の値を入力します。 SQL Server Management Studio によって、テンプレートに入力値が書き込まれます。  
+5.  **profile_name**、 **account_name**、 **SMTP_servername**、 **email_address**、および **display_name** の値を入力します。 SQL Server Management Studio によって、テンプレートに入力値が書き込まれます。  
   
 6.  スクリプトを実行して構成を行います。  
   
 7.  このスクリプトでは、どのデータベース ユーザーにもこのプロファイルにアクセスする権限が与えられません。 そのため、既定では、プロファイルを使用できるのは **sysadmin** 固定セキュリティ ロールのメンバーだけです。 プロファイルへのアクセスを許可する方法の詳細については、「[sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)」を参照してください。  
-  
   

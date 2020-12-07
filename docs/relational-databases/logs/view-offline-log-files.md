@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667855"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125138"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "85667855"
   
  登録済みサーバーを使用している場合は、接続するインスタンスが **[ローカル サーバー グループ]** または **[中央管理サーバー]** で登録されている必要があります。 (インスタンスは自身に登録するか、またはサーバー グループのメンバーにすることができます)。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを登録済みサーバーに追加する方法の詳細については、次のトピックを参照してください。  
   
--   [サーバー グループの作成または編集 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
+-   [サーバー グループの作成または編集 &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
--   [接続済みのサーバーの登録 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)  
+-   [接続済みのサーバーの登録 &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md)  
   
--   [中央管理サーバーとサーバー グループの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)  
+-   [中央管理サーバーとサーバー グループの作成 &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
  プログラムにより WMI および WQL クエリでオフライン ログ ファイルを表示する方法の詳細については、次のトピックを参照してください。  
   
@@ -115,12 +115,11 @@ ms.locfileid: "85667855"
   
     -   現在のユーザーとして接続するには、 **[別のユーザーとして接続する]** チェック ボックスがオフになっていることを確認し、 **[OK]** をクリックします。  
   
-    -   別のユーザーとして接続するには、 **[別のユーザーとして接続する]** チェック ボックスをオンにし、 **[ユーザーを設定]** をクリックします。 ユーザー資格情報を求められたら入力し (ユーザー名を *domain_name*\\*user_name*の形式で入力します)、 **[OK]** をクリックします。再度 **[OK]** をクリックして接続します。  
+    -   別のユーザーとして接続するには、 **[別のユーザーとして接続する]** チェック ボックスをオンにし、 **[ユーザーを設定]** をクリックします。 ユーザー資格情報を求められたら入力し (ユーザー名を *domain_name*\\*user_name* の形式で入力します)、 **[OK]** をクリックします。再度 **[OK]** をクリックして接続します。  
   
     > [!NOTE]  
     >  ログ ファイルの読み込みに時間がかかりすぎる場合は、[ログ ファイルの表示] ツール バーの **[停止]** をクリックできます。  
   
 ## <a name="see-also"></a>参照  
  [ログ ファイルの表示](../../relational-databases/logs/log-file-viewer.md)  
-  
   

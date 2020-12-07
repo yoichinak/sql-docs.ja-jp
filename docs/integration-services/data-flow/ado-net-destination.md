@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c1864f1a0a5e57a025f90d1219b8068656f87d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 146a75e907131d5faae03da46419b3b4137c01ca
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425904"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194875"
 ---
 # <a name="ado-net-destination"></a>ADO NET 変換先
 
@@ -33,7 +33,7 @@ ms.locfileid: "88425904"
 
   ADO NET 変換先では、データベースのテーブルやビューを使用する、さまざまな [!INCLUDE[vstecado](../../includes/vstecado-md.md)]互換データベースにデータを読み込みます。 このデータを既存のテーブルやビューに読み込むことができますが、新しいテーブルを作成して、そこにデータを読み込むこともできます。  
   
- ADO NET 変換先を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] に接続できます。 OLE DB を使用した [!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続はサポートされていません。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の詳細については、「[一般的な制限事項とガイドライン (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)」を参照してください。  
+ ADO NET 変換先を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] に接続できます。 OLE DB を使用した [!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続はサポートされていません。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の詳細については、「[一般的な制限事項とガイドライン (Azure SQL Database)](/previous-versions/azure/ee336245(v=azure.100))」を参照してください。  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>ADO NET 変換先のトラブルシューティング  
  ADO NET 変換先による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、ADO NET 変換先による外部データ ソースへのデータ保存に関するトラブルシューティングを行えます。 ADO NET 変換先による外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
@@ -55,7 +55,7 @@ ms.locfileid: "88425904"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [ADO NET カスタム プロパティ](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -96,9 +96,9 @@ ms.locfileid: "88425904"
   
  <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返す ADO.NET プロバイダーのみが <xref:System.Data.SqlClient.SqlBulkCopy> インターフェイスの使用をサポートしています。 .NET Data Provider for SQL Server (SqlClient) は <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返し、カスタム プロバイダーは <xref:System.Data.SqlClient.SqlConnection> オブジェクトを返す可能性があります。  
   
- .NET Data Provider for SQL Server (SqlClient) を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]に接続できます。  
+ .NET Data Provider for SQL Server (SqlClient) を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] に接続できます。  
   
- **[使用可能な場合は一括挿入を使用する]** を選択し、 **[エラー]** オプションを **[行をリダイレクトする]** に設定した場合、変換先によってエラー出力にリダイレクトされるデータのバッチに問題のない行が含まれる可能性があります。一括操作でのエラー処理の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。 **[エラー]** オプションの詳細については、「[[ADO NET 変換先エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)」を参照してください。  
+ **[使用可能な場合は一括挿入を使用する]** を選択し、 **[エラー]** オプションを **[行をリダイレクトする]** に設定した場合、変換先によってエラー出力にリダイレクトされるデータのバッチに問題のない行が含まれる可能性があります。一括操作でのエラー処理の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。 **[エラー]** オプションの詳細については、「[[ADO NET 変換先エディター] &#40;[エラー出力] ページ&#41;]()」を参照してください。  
   
 > [!NOTE]
 >  SQL Server または Sybase 変換元テーブルに ID 列が含まれる場合、SQL 実行タスクを利用し、ADO NET 変換先の前に IDENTITY_INSERT を有効にし、その後再び無効にする必要があります。 (ID 列プロパティは、列の増分値を指定します。 SET IDENTITY_INSERT ステートメントにより、変換先テーブルの ID 列に、変換元テーブルの明示的値を挿入できます。)  
@@ -171,5 +171,4 @@ ms.locfileid: "88425904"
   
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
-  
   

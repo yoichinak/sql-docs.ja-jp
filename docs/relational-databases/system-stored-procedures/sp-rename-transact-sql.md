@@ -2,7 +2,7 @@
 description: sp_rename (Transact-sql)
 title: sp_rename (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 10/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,19 +21,22 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edfe9a3a3d69c95b2a8778ca44583e005c6495c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: d9bcc769abf138658c4994a42b9ee1898e964509
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538651"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130895"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-sql)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   現在のデータベース内のユーザーが作成したオブジェクトの名前を変更します。 このオブジェクトには、テーブル、インデックス、列、別名データ型、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) ユーザー定義型を使用できます。  
   
+> [!NOTE]
+> で [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] は、sp_rename は **プレビュー** 段階であり、ユーザーオブジェクト内の列の名前を変更する場合にのみ使用できます。
+
 > [!CAUTION]  
 >  オブジェクト名の一部または全部を変更すると、スクリプトおよびストアド プロシージャが壊れる可能性があります。 ストアド プロシージャ、トリガー、ユーザー定義関数、またはビューの名前を変更する場合は、このステートメントを使用しないことをお勧めします。代わりに、オブジェクトを削除して新しい名前で再作成してください。  
   
@@ -41,15 +44,21 @@ ms.locfileid: "89538651"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```sql  
+-- Transact-SQL Syntax for sp_rename in SQL Server and Azure SQL Database
 sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'   
     [ , [ @objtype = ] 'object_type' ]   
 ```  
+
+```sql  
+-- Transact-SQL Syntax for sp_rename (preview) in Azure Synapse Analytics
+sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'   
+    , [ @objtype = ] 'COLUMN'   
+``` 
   
 ## <a name="arguments"></a>引数  
  [ @objname =] '*object_name*'  
- ユーザーオブジェクトまたはデータ型の現在の修飾名または修飾され名を指定します。 名前を変更するオブジェクトがテーブル内の列である場合は、 *object_name* の形式である必要があります *。 column また* は schema. *テーブル*です。 名前を変更するオブジェクトがインデックスの場合、 *object_name* *テーブル*の形式である必要があります。インデックスまたは*スキーマ。* 名前を変更するオブジェクトが制約の場合、 *object_name* は *schema. 制約*の形式である必要があります。  
+ ユーザーオブジェクトまたはデータ型の現在の修飾名または修飾され名を指定します。 名前を変更するオブジェクトがテーブル内の列である場合は、 *object_name* の形式である必要があります *。 column また* は schema. *テーブル* です。 名前を変更するオブジェクトがインデックスの場合、 *object_name* *テーブル* の形式である必要があります。インデックスまたは *スキーマ。* 名前を変更するオブジェクトが制約の場合、 *object_name* は *schema. 制約* の形式である必要があります。  
   
  引用符は、修飾オブジェクトを指定する場合のみ必要です。 データベース名を含む完全修飾名を指定する場合は、データベース名を現在のデータベースの名前にする必要があります。 *object_name* は **nvarchar (776)**,、既定値はありません。  
   
@@ -62,7 +71,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objtype =] '*object_type*'  
  名前を変更するオブジェクトの種類を指定します。 *object_type* は **varchar (13)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |COLUMN|名前を変更する列。|  
 |DATABASE|ユーザー定義データベース。 このオブジェクトの種類は、データベースの名前を変更するときに必要です。|  
@@ -71,19 +80,27 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |STATISTICS|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> ユーザーによって明示的に作成された、またはインデックスを使用して暗黙的に作成された統計。 インデックスの統計の名前を変更すると、インデックスの名前も自動的に変更されます。|  
 |USERDATATYPE|[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)または[sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)を実行して追加された[CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。|  
   
+[ @objtype =] '*COLUMN*' **が適用さ** れます: Azure Synapse Analytics  
+の sp_rename (プレビュー) では [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] 、 *列* は、名前を変更するオブジェクトの種類が列であることを指定する必須パラメーターです。 これは **varchar (13)** であり、既定値はありません。常に sp_rename (プレビュー) ステートメントに含める必要があります。 列が非ディストリビューション列である場合にのみ、列の名前を変更できます。
+
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数値 (失敗)  
   
 ## <a name="remarks"></a>解説  
- 現在のデータベースでのみ、オブジェクトまたはデータ型の名前を変更できます。 ほとんどのシステムデータ型とシステムオブジェクトの名前は変更できません。  
-  
+**適用対象** SQL Server (サポートされているすべてのバージョン) と Azure SQL Database  
  sp_rename では、PRIMARY KEY (主キー) または UNIQUE (一意) 制約の名前を変更した場合、関連するインデックスの名前も自動的に変更されます。 名前を変更したインデックスが PRIMARY KEY 制約に関連付けられている場合、PRIMARY KEY 制約も sp_rename によって自動的に名前が変更されます。  
-  
+
+**適用対象** SQL Server (サポートされているすべてのバージョン) と Azure SQL Database  
  sp_rename は、プライマリおよびセカンダリ XML インデックスの名前を変更する場合に使用できます。  
   
- ストアドプロシージャ、関数、ビュー、またはトリガーの名前を変更しても、対応するオブジェクトの名前は変更されません。これは、 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) カタログビューの定義列、または [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) の組み込み関数を使用して取得したものです。 したがって、これらのオブジェクトの種類の名前を変更する場合は、sp_rename を使用しないことをお勧めします。 代わりに、オブジェクトを削除して新しい名前で再作成してください。  
-  
+**適用対象** SQL Server (サポートされているすべてのバージョン) と Azure SQL Database  
+ ストアドプロシージャ、関数、ビュー、またはトリガーの名前を変更しても、対応するオブジェクトの名前は、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) カタログビューの定義列、または [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) の組み込み関数を使用して取得されます。 したがって、これらのオブジェクトの種類の名前を変更する場合は、sp_rename を使用しないことをお勧めします。 代わりに、オブジェクトを削除して新しい名前で再作成してください。  
+
+**適用対象** SQL Server (サポートされているすべてのバージョン)、Azure SQL Database、Azure Synapse Analytics  
  テーブルや列などのオブジェクトの名前を変更しても、そのオブジェクトへの参照の名前は自動的に変更されません。 名前が変更されたオブジェクトを参照するオブジェクトは、手動で変更する必要があります。 たとえば、テーブルの列の名前を変更するとき、その列がトリガーで参照されている場合は、新しい列名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトの名前を変更する前には、 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使ってオブジェクトの従属関係を一覧表示できます。  
+
+**適用対象** SQL Server (サポートされているすべてのバージョン)、Azure SQL Database、Azure Synapse Analytics  
+ 現在のデータベースでのみ、オブジェクトまたはデータ型の名前を変更できます。 ほとんどのシステムデータ型とシステムオブジェクトの名前は変更できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  オブジェクト、列、およびインデックスの名前を変更するには、オブジェクトに対する ALTER 権限が必要です。 ユーザー定義型の名前を変更するには、その型に対する CONTROL 権限が必要です。 データベースの名前を変更するには、sysadmin 固定サーバー ロールまたは dbcreator 固定サーバー ロールのメンバーシップが必要です。  
@@ -93,7 +110,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ### <a name="a-renaming-a-table"></a>A. テーブル名の変更  
  次の例では、`Sales` スキーマの `SalesTerritory` テーブルの名前を `SalesTerr` に変更します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';  
@@ -103,7 +120,7 @@ GO
 ### <a name="b-renaming-a-column"></a>B. 列の名前を変更する  
  次の例では、テーブルの列の名前 `TerritoryID` `SalesTerritory` をに変更 `TerrID` します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';  
@@ -113,7 +130,7 @@ GO
 ### <a name="c-renaming-an-index"></a>C. インデックス名を変更する  
  次の例では、インデックスの名前 `IX_ProductVendor_VendorID` をに変更 `IX_VendorID` します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename N'Purchasing.ProductVendor.IX_ProductVendor_VendorID', N'IX_VendorID', N'INDEX';  
@@ -123,7 +140,7 @@ GO
 ### <a name="d-renaming-an-alias-data-type"></a>D. 別名データ型の名前を変更する  
  次の例では、 `Phone` 別名データ型の名前をに変更し `Telephone` ます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename N'Phone', N'Telephone', N'USERDATATYPE';  
@@ -133,7 +150,7 @@ GO
 ### <a name="e-renaming-constraints"></a>E. 制約の名前変更  
  次の例では、PRIMARY KEY 制約、CHECK 制約、および FOREIGN KEY 制約の名前を変更します。 制約の名前を変更する際は、制約が属するスキーマを指定する必要があります。  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 -- Return the current Primary Key, Foreign Key and Check constraints for the Employee table.  
@@ -193,15 +210,25 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ```  
   
 ### <a name="f-renaming-statistics"></a>F. 統計の名前を変更する  
- 次の例では、contactMail1 という名前の統計オブジェクトを作成し、sp_rename を使用して、その統計の名前を NewContact に変更します。 統計の名前を変更する場合は、オブジェクトを schema. table. statistics_name の形式で指定する必要があります。  
+ 次の例では、contactMail1 という名前の統計オブジェクトを作成し、sp_rename を使用して、その統計の名前を NewContact に変更します。 統計の名前を変更する場合は、schema.table.statistics_name の形式でオブジェクトを指定する必要があります。  
   
-```  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
   
 sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';  
   
+```  
+
+## <a name="examples-sssdwfull"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+### <a name="g-renaming-a-column"></a>G. 列の名前を変更する  
+ 次の例では、テーブルの列の名前 `c1` `table1` をに変更 `col1` します。  
+  
+```sql  
+CREATE TABLE table1 (c1 INT, c2 INT);
+EXEC sp_rename 'table1.c1', 'col1', 'COLUMN';
+GO  
 ```  
   
 ## <a name="see-also"></a>参照  

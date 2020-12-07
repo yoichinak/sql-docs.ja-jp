@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a924e8e6ed7a19904ddc9c8cded38683b849edeb
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245669"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043735"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)
 このチュートリアルでは、Reporting Services の改ページ調整されたレポートに円グラフを作成します。 パーセンテージを追加し、小さいスライスを 1 つのスライスに結合します。
@@ -23,7 +23,7 @@ ms.locfileid: "87245669"
 
 次の図に、ここで作成する円グラフを示します。 
  
-![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
+![レポート ビルダーの円グラフのスクリーンショット。](../reporting-services/media/report-builder-pie-chart-final.png)
   
 円グラフのデータ ポイントが多すぎると、データ ポイント ラベルが過密状態になって見づらくなる場合があります。 その場合は、複数の小さいスライスを組み合わせて 1 つの大きなスライスにすることを検討してください。 円グラフは、データを少数のデータ ポイントに集計すると見やすくなります。  
  
@@ -94,7 +94,7 @@ ms.locfileid: "87245669"
   
     グラフがデザイン画面に追加されます。 円グラフの実際の値は表示されません。Product 1、Product 2 などが表示され、グラフがどのように表示されるかを確認できます。  
     
-    ![report-builder-pie-chart-first-design](../reporting-services/media/report-builder-pie-chart-first-design.png)
+    ![デザイン ビューでのレポート ビルダーの円グラフのスクリーンショット。](../reporting-services/media/report-builder-pie-chart-first-design.png)
   
 6.  グラフをクリックして、グラフのハンドルを表示します。 グラフの右下隅をドラッグして、グラフを大きくします。 レポート デザイン画面も、グラフ サイズに合わせて大きくなります。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "87245669"
   
 各製品に 1 つずつ、合計 8 個のスライスを含む円グラフがレポートに表示されます。 これで実際の製品が表示されます。各スライスのサイズはその製品の売上を表します。 これらのスライスのうち 3 つは、非常に小さくなります。  
 
-![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
+![レポート ビルダーの円グラフのプレビューを示すスクリーンショット。](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
 ## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3.各スライスにパーセンテージを表示する  
 円グラフの各スライスには、そのスライスの全体に占めるパーセンテージを表示できます。  
@@ -116,7 +116,7 @@ ms.locfileid: "87245669"
   
 4.  **[ラベル データ]** ボックスで、 **[#PERCENT]** を選択します。  
     
-5.  (省略可) ラベルに表示する小数点以下桁数を指定するには、 **[ラベル データ]** ボックスで、 **#PERCENT**の後に「 **{Pn}** 」と入力します。ここで、 *n* は、表示する小数点以下桁数を表します。 たとえば、小数点以下を表示しない場合は「 **#PERCENT{P0}** 」と入力します。  
+5.  (省略可) ラベルに表示する小数点以下桁数を指定するには、 **[ラベル データ]** ボックスで、 **#PERCENT** の後に「 **{Pn}** 」と入力します。ここで、 *n* は、表示する小数点以下桁数を表します。 たとえば、小数点以下を表示しない場合は「 **#PERCENT{P0}** 」と入力します。  
 
 6.  値をパーセンテージとして表示するには、UseValueAsLabel プロパティを false に設定する必要があります。 **[アクションの確認]** ダイアログでこの値の設定を求めるメッセージが表示されたら、 **[はい]** をクリックします。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "87245669"
   
 円グラフの各スライスがそれぞれ全体の何パーセントを占めているかが表示されます。  
 
-![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![レポート ビルダーの円グラフのプレビューを示すスクリーンショット。各スライスにパーセンテージが表示されています。](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
 ## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4.小さな複数のスライスを 1 つのスライスにまとめる  
 円グラフ内の 3 つのスライスは、非常に小さくなります。 この 3 つの小さなスライスをまとめて、"その他" という 1 つの大きなスライスで表すことができます。  
@@ -144,17 +144,17 @@ ms.locfileid: "87245669"
   
 5.  **[CollectedStyle]** プロパティを **[SingleSlice]** に設定します。  
 
-    ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![レポート ビルダーの円グラフで 1 つのスライスのプロパティを設定する方法を示すスクリーンショット。](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
 6.  **[CollectedThreshold]** プロパティが 5 に設定されていることを確認します。  
   
-7.  **[CollectedThresholdUsePercent]** プロパティが **True**に設定されていることを確認します。  
+7.  **[CollectedThresholdUsePercent]** プロパティが **True** に設定されていることを確認します。  
   
 8.  **[ホーム]** タブで **[実行]** をクリックして、レポートをプレビューします。  
   
 凡例に "その他" というカテゴリが表示されます。 この新しいスライスでは、5% 未満のすべてのスライスが 1 つにまとめられて、円グラフ全体の 6% を占めるスライスが作成されています。  
 
-![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![レポート ビルダーの円グラフがグラフの上部から 90 度の位置で始まっている様子を示すスクリーンショット。](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
 ## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5.円グラフの値の開始位置を円の最上部にする 
 
@@ -166,13 +166,13 @@ ms.locfileid: "87245669"
 
 2. 円グラフを選択します。
 
-3. プロパティ ペインの **[カスタム属性]** で、[PieStartAngle] を **0** から **270**に変更します。
+3. プロパティ ペインの **[カスタム属性]** で、[PieStartAngle] を **0** から **270** に変更します。
 
 4. **[実行]** をクリックして、レポートをプレビューします。
 
 これで、円グラフのスライスはアルファベット順になり、円の最上部から始まり、最後は "その他" スライスになります。
 
-![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![レポート ビルダーの円グラフがグラフの上部から始まっている様子を示すスクリーンショット。](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6.レポート タイトルを追加する  
   
@@ -182,7 +182,7 @@ ms.locfileid: "87245669"
 
 2. デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「 **Camera and Camcorder Sales**」と入力して Enter キーを押し、さらに「 **As a Percentage of Total Sales**」と入力します。次のように表示されます。  
+2.  「 **Camera and Camcorder Sales** 」と入力して Enter キーを押し、さらに「 **As a Percentage of Total Sales** 」と入力します。次のように表示されます。  
   
     **Camera and Camcorder Sales**  
   
@@ -206,7 +206,7 @@ ms.locfileid: "87245669"
   
 2.  **[ファイル]** メニューの **[保存]** をクリックします。  
   
-3.  **[名前]** に「 **Sales Pie Chart**」と入力します。  
+3.  **[名前]** に「 **Sales Pie Chart** 」と入力します。  
   
 4.  **[保存]** をクリックします。  
   

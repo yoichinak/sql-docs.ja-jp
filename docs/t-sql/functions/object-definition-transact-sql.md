@@ -22,10 +22,10 @@ ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 239a48b378e186e6149a31012785835939d2cde7
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115947"
 ---
 # <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)

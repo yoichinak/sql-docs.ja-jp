@@ -19,12 +19,12 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71e8c8187cb9e70e32e3c29deaf1e3a9bd912c94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90120272c94731f6ac2ba3f692c8a8c83ed3f129
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465297"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081981"
 ---
 # <a name="information-in-ole-db-defined-error-interfaces"></a>OLE DB 定義のエラーインターフェイスの情報
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88465297"
 |メンバー関数|説明|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|エラーに関する基本情報を ERRORINFO 構造体に設定します。 ERRORINFO 構造体には、エラーの HRESULT 戻り値およびエラーが適用されるプロバイダーとインターフェイスを特定するメンバーが含まれます。|  
-|**GetCustomErrorObject**|**ISQLErrorInfo** インターフェイスと [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) インターフェイスの参照を返します。|  
+|**GetCustomErrorObject**|**ISQLErrorInfo** インターフェイスと [ISQLServerErrorInfo](../native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md) インターフェイスの参照を返します。|  
 |**GetErrorInfo**|**IErrorInfo** インターフェイスの参照を返します。|  
 |**GetErrorParameters**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **GetErrorParameters**を介してコンシューマーにパラメーターを返しません。|  
 |**GetRecordCount**|使用できるエラー レコードの数を返します。|  
@@ -60,5 +60,4 @@ ms.locfileid: "88465297"
   
 ## <a name="see-also"></a>参照  
  [エラー](../../relational-databases/native-client-ole-db-errors/errors.md)  
-  
   

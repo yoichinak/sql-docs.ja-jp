@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 562b1584a86c290d294c2fc3117a9485e45211e8
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: b66ebab16bc26beec9ef9cd8699f53e75d36d478
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807076"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727439"
 ---
 # <a name="connecting-with-bcp"></a>bcp による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) ユーティリティは、Linux と macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用できます。 このページでは、`bcp` の Windows バージョンとの違いについて説明します。
+[bcp](../../../tools/bcp-utility.md) ユーティリティは、Linux と macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用できます。 このページでは、`bcp` の Windows バージョンとの違いについて説明します。
   
 - フィールド ターミネータはタブ ("\t") です。  
   

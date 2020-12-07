@@ -14,10 +14,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 433698b83ed1148f473062658b95d99e9657e6ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495757"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>[SAP BW 変換元エディター] ([詳細設定] ページ)
@@ -53,9 +53,9 @@ ms.locfileid: "88495757"
   
 |オプション|説明|  
 |------------|-----------------|  
-|**自動文字列変換**|SAP Netweaver BW システムが Unicode システムの場合に、 **nvarchar** にすべての文字列を変換します。 それ以外の場合は **varchar**にすべての文字列を変換します。|  
-|**文字列を varchar に変換**|**varchar**にすべての文字列を変換します。|  
-|**文字列を nvarchar に変換**|**nvarchar**にすべての文字列を変換します。|  
+|**自動文字列変換**|SAP Netweaver BW システムが Unicode システムの場合に、 **nvarchar** にすべての文字列を変換します。 それ以外の場合は **varchar** にすべての文字列を変換します。|  
+|**文字列を varchar に変換**|**varchar** にすべての文字列を変換します。|  
+|**文字列を nvarchar に変換**|**nvarchar** にすべての文字列を変換します。|  
   
  **タイムアウト (秒)**  
  ソースが待機する最大秒数を指定します。  

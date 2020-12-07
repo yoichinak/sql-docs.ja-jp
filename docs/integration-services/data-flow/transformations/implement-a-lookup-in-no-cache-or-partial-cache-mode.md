@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 75974b57a139413f43b44deebeb0e1488cfd5155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430674"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194180"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>キャッシュなしモードまたは部分キャッシュ モードの参照を実装する
 
@@ -49,7 +49,7 @@ ms.locfileid: "88430674"
 3.  参照変換をデータ フローに連結します。連結するには、変換元または前の変換から参照変換にコネクタをドラッグします。  
   
     > [!NOTE]  
-    >  その変換が空のデータ フィールドを含んだフラット ファイルに接続される場合、キャッシュなしのモードを使用して構成される参照変換は検証されない場合があります。 変換が検証されるかどうかは、フラット ファイルの接続マネージャーが NULL 値を保持するように構成されているかどうかによって決まります。 参照変換が検証されるようにするには、 **フラット ファイル ソース エディター**の **[接続マネージャー]** ページで、 **[データ ソースの NULL 値をデータ フローで NULL 値として保持する]** オプションを選択します。  
+    >  その変換が空のデータ フィールドを含んだフラット ファイルに接続される場合、キャッシュなしのモードを使用して構成される参照変換は検証されない場合があります。 変換が検証されるかどうかは、フラット ファイルの接続マネージャーが NULL 値を保持するように構成されているかどうかによって決まります。 参照変換が検証されるようにするには、 **フラット ファイル ソース エディター** の **[接続マネージャー]** ページで、 **[データ ソースの NULL 値をデータ フローで NULL 値として保持する]** オプションを選択します。  
   
 4.  変換元または前の変換をダブルクリックして、コンポーネントを構成します。  
   
@@ -108,11 +108,10 @@ ms.locfileid: "88430674"
     > [!NOTE]  
     >  このページで指定するオプションの SQL ステートメントは、**[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。  
   
-13. エラー出力を構成するには、 **[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
+13. エラー出力を構成するには、 **[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](./lookup-transformation.md)」をご覧ください。  
   
 14. **[OK]** をクリックして参照変換への変更を保存し、パッケージを実行します。  
   
 ## <a name="see-also"></a>関連項目  
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

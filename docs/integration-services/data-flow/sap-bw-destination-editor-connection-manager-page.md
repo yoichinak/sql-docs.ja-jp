@@ -14,10 +14,10 @@ ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccd18ea2d13b643899b5492b0151984b275b8c80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484574"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>[SAP BW 変換先エディター] ([接続マネージャー] ページ)
@@ -86,7 +86,7 @@ ms.locfileid: "88484574"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- **NN**がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を入力します。  
+ **NN** がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を入力します。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 577f31593aae858596ac08c4aa7f44e121a22ce8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2abd5aa8f15a0213a8eccee0965688cf626abc02
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480714"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988148"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>SQL Server Reporting Services と SharePoint グループのアクセス許可
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードのロール ベースおよびタスク ベースの承認機能を、SharePoint 製品のセキュリティ機能と比較します。 このトピックでは、ロール、タスク、SharePoint グループ、権限レベル、および権限の用語と特徴を比較します。  
@@ -63,7 +63,7 @@ ms.locfileid: "88480714"
 |---|**権限レベルのグループ:** たとえば、"閲覧者" グループに対応する "表示のみ"。|  
 |**タスク:** たとえば、"レポートの管理"。|**権限:** たとえば、"表示のみ" グループ内には、アイテムの表示、バージョンの表示、アプリケーション ページの表示の一覧に関連する権限があります。|  
   
- SharePoint の権限の詳細については、「 [アクセス許可レベルと権限](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) 」、および「 [アクセス許可レベルおよびグループを決定する (SharePoint 2013)](https://technet.microsoft.com/library/cc262690.aspx)」を参照してください。  
+ SharePoint の権限の詳細については、「 [アクセス許可レベルと権限](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) 」、および「 [アクセス許可レベルおよびグループを決定する (SharePoint 2013)](/SharePoint/sites/determine-permission-levels-and-groups-in-sharepoint-server)」を参照してください。  
   
 ##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> ネイティブ モードと SharePoint グループの比較  
  次の表では、ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で事前定義されているロールの定義と、標準の SharePoint グループとを比較しています。 SharePoint のグループが目的のロールと一致しない場合は、SharePoint でカスタム グループを作成し、権限レベルを割り当てることができます。  
@@ -118,5 +118,4 @@ ms.locfileid: "88480714"
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [ロールの定義](../../reporting-services/security/role-definitions.md)   
  [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)  
-  
   

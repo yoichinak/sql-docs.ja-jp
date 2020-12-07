@@ -27,11 +27,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: db8a01798c497131b4dc3597010e46b5b23df430
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116473"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124829"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -108,7 +108,7 @@ DATENAME ( datepart , date )
 ## <a name="default-returned-for-a-datepart-that-is-not-in-the-date-argument"></a>date 引数に存在しない datepart を指定した場合に返される既定値  
 *date* 引数のデータ型に *datepart* が指定されていない場合、`DATENAME` は、*date* 引数にリテラルが含まれる場合にのみ、その *datepart* の既定値を返します。
   
-など、既定の年-月-日の任意の**日付**データ型は 1900年-01-01 です。 このステートメントでは、*datepart* 引数と *date* 引数にそれぞれ日付部分と時刻を表す値が指定されています。`DATENAME` は `1900, January, 1, 1, Monday` を返します。
+など、既定の年-月-日の任意の **日付** データ型は 1900年-01-01 です。 このステートメントでは、*datepart* 引数と *date* 引数にそれぞれ日付部分と時刻を表す値が指定されています。`DATENAME` は `1900, January, 1, 1, Monday` を返します。
   
 ```sql
 SELECT DATENAME(year, '12:10:30.123')  

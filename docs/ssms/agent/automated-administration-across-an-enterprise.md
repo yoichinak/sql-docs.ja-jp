@@ -22,18 +22,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 447e1c66d9e94f654414ae1c7205772097fe575f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e043f333f752a515ca629c58c13045eac883127
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468890"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033596"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>エンタープライズ全体の管理の自動化
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスにわたって管理を自動化することを *マルチサーバー管理*といいます。 次の場合に、マルチサーバー管理を行います。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "88468890"
 マルチサーバー環境で自動化された管理により [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の自己チューニング機能を活用する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server データベース エンジンのインストールに関する旧バージョンとの互換性のトピック](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+[SQL Server データベース エンジンのインストールに関する旧バージョンとの互換性のトピック](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
 [サーバーの登録](../register-servers/register-servers.md)  
 [sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  
 [sp_delete_targetserver](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
@@ -99,4 +99,3 @@ ms.locfileid: "88468890"
 [sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
 [syslogins](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
 [systargetservers](../../relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
-  

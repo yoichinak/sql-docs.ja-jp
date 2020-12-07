@@ -1,22 +1,22 @@
 ---
-title: オフライン インストール用の更新プログラムをダウンロードする
+title: オフライン インストール用の CAB ダウンロード更新プログラム
 description: SQL Server Machine Learning Services 用の Python と R の CAB ファイルのダウンロードについて説明します。 これらの CAB ファイルには、インターネット アクセスがない場合にサーバーに SQL Server をインストールするときに使用できる、Machine Learning Services (Python と R) 機能の更新プログラムが含まれています。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/06/2020
+ms.date: 10/02/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d5e7210ca7ae9e4777c11b7c774b90572d2832b0
-ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
+ms.openlocfilehash: 1d36936a0dc921a02897bcf7f9a9bfceb6766293
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90570648"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956783"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の累積的な更新プログラムの CAB ダウンロード
+# <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の累積的な更新プログラムをオフラインでインストールするための CAB ダウンロード
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
@@ -50,7 +50,7 @@ CAB ファイルは、新しい順で一覧表示されます。 CAB ファイ�
 
 |Release | コンポーネント | ダウンロード リンク | 対処された問題 |
 |------- | --------- | ------------- | ---------------- |
-|**[SQL Server 2019 CU7](https://support.microsoft.com/help/4552255)** |  |  |  |
+|**[SQL Server 2019 CU8](https://support.microsoft.com/help/4577194)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | R Server              | [SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
@@ -108,9 +108,9 @@ CAB ファイルは、新しい順で一覧表示されます。 CAB ファイ�
 | | Python サーバー    |[SPS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2071421&clcid=1033)| パッケージ内のバイナリが署名されました。  |
 |**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 以前のバージョンからの変更はありません。 |
-| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| SQL Server セットアップを使用してインストールされた、[操作に対応したスタンドアロン R Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) をアップグレードするための修正プログラムが含まれています。 CU13 CAB を使用し、[こちらの手順](sql-machine-learning-standalone-windows-install.md#apply-cu)に従って更新プログラムを適用します。 |
+| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| SQL Server セットアップを使用してインストールされた、[操作に対応したスタンドアロン R Server](/machine-learning-server/what-is-operationalization) をアップグレードするための修正プログラムが含まれています。 CU13 CAB を使用し、[こちらの手順](sql-machine-learning-standalone-windows-install.md#apply-cu)に従って更新プログラムを適用します。 |
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 以前のバージョンからの変更はありません。 |
-| | Python サーバー    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| SQL Server セットアップを使用してインストールされた、[操作に対応したスタンドアロン Python Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) をアップグレードするための修正プログラムが含まれています。 CU13 CAB を使用し、[こちらの手順](sql-machine-learning-standalone-windows-install.md#apply-cu)に従って更新プログラムを適用します。 |
+| | Python サーバー    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| SQL Server セットアップを使用してインストールされた、[操作に対応したスタンドアロン Python Server](/machine-learning-server/what-is-operationalization) をアップグレードするための修正プログラムが含まれています。 CU13 CAB を使用し、[こちらの手順](sql-machine-learning-standalone-windows-install.md#apply-cu)に従って更新プログラムを適用します。 |
 |**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 以前のバージョンからの変更はありません。 |
 | | R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| 小さな修正。|
@@ -140,12 +140,12 @@ CAB ファイルは、新しい順で一覧表示されます。 CAB ファイ�
 | | Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 | | R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 | | Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 以前のバージョンからの変更はありません。 |
-| | Python サーバー    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| [rx_serialize_model 関数](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)を使用した、revoscalepy での Python モデルのシリアル化。<br/>[ネイティブのスコアリング](../predictions/native-scoring-predict-transact-sql.md)のサポートに加えて、[リアルタイム スコアリング](../predictions/real-time-scoring.md)の機能強化が行われました。 
+| | Python サーバー    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| [rx_serialize_model 関数](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)を使用した、revoscalepy での Python モデルのシリアル化。<br/>[ネイティブのスコアリング](../predictions/native-scoring-predict-transact-sql.md)のサポートに加えて、[リアルタイム スコアリング](../predictions/real-time-scoring.md)の機能強化が行われました。 
 |**[SQL Server 2017 CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| 以前のバージョンからの変更はありません。 |
 | | R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 以前のバージョンからの変更はありません。 | 
-| | Python サーバー    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | スキーマ情報を返すための rx_create_col_info を追加します。 <br/>`RxLocalParallel` コンピューティング コンテキストを使用した並列シナリオをサポートする [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) の機能強化。|
+| | Python サーバー    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | スキーマ情報を返すための rx_create_col_info を追加します。 <br/>`RxLocalParallel` コンピューティング コンテキストを使用した並列シナリオをサポートする [rx_exec](/machine-learning-server/python-reference/revoscalepy/rx-exec) の機能強化。|
 |**最初のリリース** |  |  |
 | | Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 | | R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
@@ -164,7 +164,7 @@ SQL Server 2016 R Services では、ベースライン リリースは RTM バ�
 
 |Release  |ダウンロード リンク  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU14**     |
+|**SQL Server 2016 SP2 CU14-CU15**     |
 |Microsoft R Open      |[SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)|
 |Microsoft R Server    |[SRS_9.4.7.958_1033.cab](https://go.microsoft.com/fwlink/?linkid=2136942)|
 |**SQL Server 2016 SP2 CU6-CU13**     |
@@ -202,7 +202,7 @@ SQL Server 2016 R Services では、ベースライン リリースは RTM バ�
 > 
 > SQL Server 2016 SP1 CU4 または SP1 CU5 をオフラインでインストールする場合は、SRO_3.2.2.16000_1033.cab をダウンロードします。 セットアップ ダイアログ ボックスに示されているように、FWLINK 831785 から SRO_3.2.2.13000_1033.cab をダウンロードした場合は、累積的な更新プログラムをインストールする前に、ファイルの名前を SRO_3.2.2.16000_1033.cab に変更します。
 
-Microsoft R のソース コードを表示する場合は、次のように tar 形式のアーカイブとしてダウンロードできます。[R Server インストーラーのダウンロード](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
+Microsoft R のソース コードを表示する場合は、次のように tar 形式のアーカイブとしてダウンロードできます。[R Server インストーラーのダウンロード](/machine-learning-server/install/r-server-install-windows#download)
 
 ::: moniker-end
 

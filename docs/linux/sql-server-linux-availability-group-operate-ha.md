@@ -1,20 +1,20 @@
 ---
 title: 可用性グループ SQL Server on Linux を操作する
 description: この記事では、可用性グループを使用し、Linux 上の SQL Server インスタンスでローリング アップグレードを実行する方法について説明します。 アップグレードする前に、ベスト プラクティスを確認してください。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 4c382b7f04b063ade451ee54d480db906c62e482
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a95d3e53f5ca2b15e0cccf87bd267258e2f4baab
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899097"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784749"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Linux で Always On 可用性グループを操作する
 

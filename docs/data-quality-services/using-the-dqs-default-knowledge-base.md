@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1954d4d732e239c4506f92ca3a5411201717e09a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a6967254559dda05fcedd1224a8b8769b08f10ed
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466580"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724658"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>DQS の既定のナレッジ ベースの使用
 
@@ -49,9 +49,8 @@ ms.locfileid: "88466580"
   
 -   既定のナレッジ ベースを使用して新しいナレッジ ベースを作成します。 既存のナレッジ ベースからナレッジ ベースを作成する方法については、「 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md)」を参照してください。  
   
--   「 [Integration Services の DQS クレンジング コンポーネント](https://go.microsoft.com/fwlink/?LinkId=238830) 」および「 [Excel 用マスター データ サービス アドイン](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)」で、それを使用します。  
+-   「 [Integration Services の DQS クレンジング コンポーネント](/previous-versions/sql/sql-server-2012/ee677619(v=sql.110)) 」および「 [Excel 用マスター データ サービス アドイン](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)」で、それを使用します。  
   
 ## <a name="see-also"></a>参照  
  [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
-  
   

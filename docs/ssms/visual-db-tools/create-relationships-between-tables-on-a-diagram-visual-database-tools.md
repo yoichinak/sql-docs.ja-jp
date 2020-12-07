@@ -13,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a90f644aeaf17bd51c8963f355c9932c85da7c58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b758a04f81dffc31844af91933a544960f6ba2d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468434"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037530"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>ダイアグラムでテーブル間のリレーションシップを作成する方法 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,6 +50,5 @@ ms.locfileid: "88468434"
   
 ## <a name="see-also"></a>参照  
 [[テーブルと列] ダイアログ ボックス (Visual Database Tools)](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[制約の使用](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[制約の使用](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [データベース ダイアグラムでのテーブルの使用 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
-  

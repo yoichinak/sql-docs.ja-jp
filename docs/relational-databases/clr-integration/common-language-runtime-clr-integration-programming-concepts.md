@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d6953f9ddc30f81cb37ca8d3b1775ca6d5e7a51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef7b3d4c2d3b48c289d49e31124f763dcec887bc
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789542"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809508"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>CLR (共通言語ランタイム) 統合のプログラミング概念
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85789542"
 >  既定では、.NET Framework は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共にインストールされますが、.NET Framework SDK はインストールされません。 SDK がコンピューターにインストールされていない場合やオンライン ブックに含まれていない場合は、このセクションにある SDK のコンテンツへのリンクが機能しません。 .NET Framework SDK をインストールしてください。 インストールが完了したら、「 [.NET FRAMEWORK sdk のインストール](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)」の手順に従って、Sdk をオンラインブックコレクションと目次に追加します。  
   
 > [!NOTE]  
->  Clr ユーザー関数などの CLR 機能は、Azure SQL Database ではサポートされて*いません*。  
+>  Clr ユーザー関数などの CLR 機能は、Azure SQL Database ではサポートされて *いません* 。  
   
  次の表に、このセクションの各トピックの一覧を示します。  
   
@@ -64,11 +64,10 @@ ms.locfileid: "85789542"
  [マネージド データベース オブジェクトの監視とトラブルシューティング](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行されるマネージド データベース オブジェクトとアセンブリの監視およびトラブルシューティングに使用できるツールに関する情報を提供します。  
   
- [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130))  
  CLR オブジェクトを使用する使用シナリオとコード サンプルについて説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アセンブリ &#40;データベースエンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [.NET Framework SDK のインストール](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
-  
   

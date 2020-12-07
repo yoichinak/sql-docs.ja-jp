@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49a16c2b5f18eeda3a6abd1396650131543ead4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88417138"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
@@ -40,11 +40,11 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>引数
 
- *inputString*。検索する文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *inputString* には、任意の文字データ型 (nvarchar、varchar、nchar、char) を指定できます。
+ *inputString*。検索する文字列 [式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *inputString* には、任意の文字データ型 (nvarchar、varchar、nchar、char) を指定できます。
 
- *characters*。置換対象の文字を含む文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *characters* には、任意の文字データ型を指定できます。
+ *characters*。置換対象の文字を含む文字列 [式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *characters* には、任意の文字データ型を指定できます。
 
-*translations*。置換文字を含む文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *translations* には、*characters* と同じデータ型および長さを指定する必要があります。
+*translations*。置換文字を含む文字列 [式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *translations* には、*characters* と同じデータ型および長さを指定する必要があります。
 
 ## <a name="return-types"></a>戻り値の型
 

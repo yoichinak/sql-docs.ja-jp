@@ -16,11 +16,11 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f6dd42e81d3b1d2db558962cbb9843488dd1ad16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425554"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127138"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 式)
 
@@ -41,7 +41,7 @@ DATEADD(datepart, number, date)
  日付の要素のうち、数値を追加する部分を指定するパラメーターです。  
   
  *number*  
- *datepart*に加算される値です。 式が解析される際、値は既知の整数である必要があります。  
+ *datepart* に加算される値です。 式が解析される際、値は既知の整数である必要があります。  
   
  *date*  
  有効な日付または日付形式の文字列を返す式です。  

@@ -1,5 +1,5 @@
 ---
-title: リリース ノート
+title: Azure Data Studio リリース ノート
 description: この記事では、2017 年 11 月から現在までの Azure Data Studio リリースのリリース ノートを取り上げています。 まとめられている問題の多くについては、追加詳細のリンクがあります。
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,17 +8,65 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/22/2020
-ms.openlocfilehash: 1eaeb177fbd4cdc16190cbbc40efc76a3b468ac5
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.date: 11/12/2020
+ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989985"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584805"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](./download-azure-data-studio.md)**
+
+## <a name="november-2020"></a>2020 年 11 月
+
+2020 年 11 月 12 日 &nbsp; / &nbsp; バージョン:1.24.0
+
+&nbsp;
+
+| Change | 詳細 |
+| ------ | ------- |
+| バグの修正 | 修正の全一覧については、[GitHub のバグと問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed)に関するページを参照してください。 |
+| 接続ダイアログ | 接続ダイアログの新しい参照タブを追加しました。 |
+| 拡張機能の更新 | Postgres 拡張機能の更新プログラムをリリースしました。 |
+| ノートブックの新機能 | ノートブックへの SQL のサポートに新機能を追加しました。 <br/> Notebook のパラメーター化のサポートに新機能を追加しました。 <br/>  SQL Notebook の結果ストリーミングに新機能を追加しました。 |
+| Python のインストール | PROSE パッケージが既定の Python インストールから削除されました。 |
+
+### <a name="known-issues-1240"></a>既知の問題 (1.24.0)
+
+| New Item | 詳細 | 回避策 |
+|----------|---------|------------|
+| Azure Arc の拡張機能 | [既知の問題:](https://github.com/microsoft/azuredatastudio/issues/13319)Arc MIAA & PG デプロイの [ノートブックへのスクリプト] ボタンを選択しても、ノートブックのスクリプトを作成する前にフィールドの検証が行われません。 これは、ユーザーがパスワードの確認入力に間違ったパスワードを入力した場合、パスワードの値が間違っているノートブックが生成される可能性があることを意味します。| ただし [デプロイ] ボタンは想定どおりに動作するため、ユーザーは代わりにこれを使用する必要があります。 |
+| オブジェクト エクスプローラー | [Azure Synapse Analytics SQL オンデマンド](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、1.24.0 より前の ADS のリリースでは、オブジェクト エクスプローラーに破壊的変更があります。 | Azure Synapse Analytics SQL オンデマンドと共に Azure Data Studio でオブジェクト エクスプローラーを引き続き利用するには、Azure Data Studio 1.24.0 以降を使用する必要があります。 |
+
+他の既知の問題について、および製品チームにフィードバックを提供するには、[Azure Data Studio フィードバック](https://github.com/microsoft/azuredatastudio)を参照してください。
+
+## <a name="october-2020"></a>2020 年 10 月
+
+2020 年 10 月 14 日 &nbsp; / &nbsp; バージョン: 1.23.0
+
+&nbsp;
+
+| Change | 詳細 |
+| ------ | ------- |
+| Azure SQL Edge | Azure SQL Edge オブジェクトのサポート。 |
+| バグの修正 | 修正の全一覧については、[GitHub のバグと問題](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed)に関するページを参照してください。 |
+| データベース| 同じデータベース参照のサポート。 |
+| 拡張機能の更新プログラム | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[スキーマ比較](extensions/schema-compare-extension.md)</br>SQL の評価</br>[SQL Database プロジェクト](extensions/sql-database-project-extension.md)</br>[SQL Server インポート](extensions/sql-server-import-extension.md) |
+| デプロイの新機能 | Azure SQL DB と VM のデプロイが追加されました。 |
+| PowerShell | PowerShell カーネル結果のストリーミングのサポートが追加されました。 |
+
+## <a name="september-2020-hotfix"></a>2020 年 9 月 (hotfix)
+
+2020 年 9 月 30 日 &nbsp; / &nbsp; バージョン:1.22.1
+
+&nbsp;
+
+| Change | 詳細 |
+| ------ | ------- |
+| バグと問題が解決されました | 修正の全一覧については、[GitHub のバグと問題](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1)に関するページを参照してください。 |
 
 ## <a name="september-2020"></a>2020 年 9 月
 
@@ -33,7 +81,7 @@ ms.locfileid: "90989985"
 | Kusto (KQL) の拡張機能 | Azure Data Studio にネイティブの Kusto エクスペリエンスを提供し、Azure Data Explorer で、格納されている大量のリアルタイム ストリーミング データに対してデータ探索とデータ分析を実行できるようになります。 このプレビュー リリースは、Azure Data Explorer クラスターの接続と参照、KQL クエリの作成、Kusto カーネルを使用したノートブックの作成をサポートしています。 |
 | Azure Arc の拡張機能 | ユーザーは、Azure Data Studio を通じて Azure Arc パブリック プレビューを試すことができます。 これには次のものが含まれます <br/> &bull; &nbsp; データ コントローラーをデプロイする <br/> &bull; &nbsp; Postgres をデプロイする <br/> &bull; &nbsp; Azure Arc 用 Managed Instance をデプロイする <br/> &bull; &nbsp; データ コントローラーに接続する <br/> &bull; &nbsp; データ サービス ダッシュボードにアクセスする <br/> &bull; &nbsp; Azure Arc Jupyter ブック |
 | デプロイ オプション | <br/> &bull; &nbsp; Azure SQL Database Edge <br/> (Edge には Azure SQL Edge デプロイの拡張機能が必要です) |
-| SQL Server インポート拡張機能の一般提供 | SQL Server インポート拡張機能の一般提供が発表され、機能はプレビュー段階ではなくなりました。 この拡張機能を使用すると、csv/txt ファイルのインポートが簡単になります。 拡張機能の詳細については、[この記事](sql-server-import-extension.md)を参照してください。 |
+| SQL Server インポート拡張機能の一般提供 | SQL Server インポート拡張機能の一般提供が発表され、機能はプレビュー段階ではなくなりました。 この拡張機能を使用すると、csv/txt ファイルのインポートが簡単になります。 拡張機能の詳細については、[この記事](./extensions/sql-server-import-extension.md)を参照してください。 |
 | バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed)を参照してください。 |
 
 ## <a name="august-2020"></a>2020 年 8 月
@@ -58,8 +106,8 @@ ms.locfileid: "90989985"
 
 | Change | 詳細 |
 | :----- | :------ |
-| バグの修正 #11372 オブジェクト エクスプローラーのドラッグ アンド ドロップ テーブルでテーブル名が正しくラップされない | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
-| バグの修正 #11356 ダーク テーマが既定のテーマになってしまう | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| バグの修正 #11372 オブジェクト エクスプローラーのドラッグ アンド ドロップ テーブルでテーブル名が正しくラップされない | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372) |
+| バグの修正 #11356 ダーク テーマが既定のテーマになってしまう | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356) |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>既知の問題
@@ -81,7 +129,6 @@ ms.locfileid: "90989985"
 | バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed)を参照してください。 |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2020"></a>2020 年 6 月
 
 2020 年 6 月 15 日 &nbsp; / &nbsp; バージョン:1.19.0
@@ -93,7 +140,7 @@ ms.locfileid: "90989985"
 | Azure portal 統合に Azure Data Studio が追加されました | ユーザーは Azure SQL Database 接続、Azure Postgres などから、Azure portal を直接起動できるようになりました。 |
 | ノートブックの新機能 | &bull; &nbsp; 新しいノートブック ツール バー <br/> &bull; &nbsp; 新しい [セルの編集] ツールバー <br/> &bull; &nbsp; Python 依存関係ウィザード UX の更新 <br/> &bull; &nbsp; ノートブック間のスペースの向上 |
 | SQL Assessment API 拡張機能の発表 | この拡張機能は、ADS における SQL Server ベスト プラクティス評価を追加します。 以前は PowerShell SqlServer モジュールおよび SMO でしか使用できなかった SQL Assessment API が公開されています。これにより SQL Server インスタンスを評価したり、SQL Server チームによるそれらの推奨事項を受け取ったりすることができるようになります。 [こちらの記事](../tools/sql-assessment-api/sql-assessment-api-overview.md)で、SQL Assessment API の詳細と、この拡張機能でできることについて説明します。 |
-| [Machine Learning 拡張機能の改善点](https://go.microsoft.com/fwlink/?linkid=2129918) | Azure SQL Managed Instance がサポートされるようになりました。 |
+| [Machine Learning 拡張機能の改善点](./extensions/machine-learning-extension.md) | Azure SQL Managed Instance がサポートされるようになりました。 |
 | データ仮想化拡張機能の改善点 | MongoDB と Teradata がサポートされるようになりました |
 | Postgres 拡張機能のバグの修正 | Azure MFA が修正されました |
 | バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2020+Release%22+is%3Aclosed)を参照してください。 |
@@ -431,7 +478,7 @@ ms.locfileid: "90989985"
 
 | Change | 詳細 |
 | :----- | :------ |
-| [Azure Data Studio 用の PostgreSQL 拡張機能](postgres-extension.md)が追加されました | サポートされている機能: <br/>&bull; &nbsp; 接続ダイアログ <br/>&bull; &nbsp; オブジェクト エクスプローラー <br/>&bull; &nbsp; クエリ エディター <br/>&bull; &nbsp; グラフ作成 <br/>&bull; &nbsp; ダッシュボード <br/>&bull; &nbsp; スニペット <br/>&bull; &nbsp; データの編集 <br/>&bull; &nbsp; ノートブック |
+| [Azure Data Studio 用の PostgreSQL 拡張機能](./extensions/postgres-extension.md)が追加されました | サポートされている機能: <br/>&bull; &nbsp; 接続ダイアログ <br/>&bull; &nbsp; オブジェクト エクスプローラー <br/>&bull; &nbsp; クエリ エディター <br/>&bull; &nbsp; グラフ作成 <br/>&bull; &nbsp; ダッシュボード <br/>&bull; &nbsp; スニペット <br/>&bull; &nbsp; データの編集 <br/>&bull; &nbsp; ノートブック |
 | 追加された SQL ノートブック | 組み込みの Notebook ビューアーに SQL カーネルのサポートが追加されました。 <br/>&bull; &nbsp; T-SQL のサポート <br/>&bull; &nbsp; PGSQL のサポート |
 | 追加された PowerShell 拡張機能 | VS Code から [PowerShell 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)を利用できます。  |
 | 追加された SQL Server dacpac の拡張機能  | SQL Server インポート拡張機能からデータ層アプリケーション ウィザードが削除され、新しい拡張機能が導入されました。  |
@@ -462,11 +509,11 @@ ms.locfileid: "90989985"
 
 | Change | 詳細 |
 | :----- | :------ |
-| 拡張パック **Admin pack for SQL Server** が追加されました。 | これにより、SQL Server の管理に関連する拡張機能がインストールしやすくなります。 これには次のものが含まれます<br/>&bull; &nbsp; [SQL Server エージェント](sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server プロファイラー](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server インポート](sql-server-import-extension.md) |
+| 拡張パック **Admin pack for SQL Server** が追加されました。 | これにより、SQL Server の管理に関連する拡張機能がインストールしやすくなります。 これには次のものが含まれます<br/>&bull; &nbsp; [SQL Server エージェント](./extensions/sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server プロファイラー](./extensions/sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server インポート](./extensions/sql-server-import-extension.md) |
 | プロファイラー拡張機能に、拡張イベントのフィルター処理のサポートが追加されました。 | &nbsp; |
 | T-SQL の結果を XML として保存できる "XML として保存" 機能が追加されました。 | &nbsp; |
 | データ層アプリケーション ウィザードの機能強化が追加されました。 | &bull; &nbsp; [スクリプトの生成] ボタンが追加されました<br/>&bull; &nbsp; デプロイ中にデータ損失の可能性があることを警告するためのビューが追加されました。 |
-| SQL Server 2019 Preview 拡張機能が更新されました。 | 「[データ仮想化の拡張機能](data-virtualization-extension.md)」を参照してください。 |
+| SQL Server 2019 Preview 拡張機能が更新されました。 | 「[データ仮想化の拡張機能](./extensions/data-virtualization-extension.md)」を参照してください。 |
 | 実行時間の長いクエリでは、結果のストリーミングが既定で有効になります。 | &nbsp; |
 | バグと問題が解決されました。 | [GitHub の「バグと問題」](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)を参照してください。 |
 | &nbsp; | &nbsp; |
@@ -494,7 +541,7 @@ ms.locfileid: "90989985"
 | Azure Active Directory 認証のサポートが追加されました。 | &nbsp; |
 | Idera SQL DM Performance Insights (プレビュー) の発表。 | &nbsp; |
 | SQL Server インポート拡張機能でのデータ層アプリケーション ウィザードのサポート。 | &nbsp; |
-| SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](data-virtualization-extension.md)」を参照してください。 |
+| SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](./extensions/data-virtualization-extension.md)」を参照してください。 |
 | SQL Server プロファイラーの機能強化。 | &nbsp; |
 | 大規模なクエリの結果のストリーミング (プレビュー)。 | &nbsp; |
 | コミュニティ拡張機能: sp_executesql から sql および新規データベースへ。 | &nbsp; |
@@ -509,7 +556,7 @@ ms.locfileid: "90989985"
 
 | Change | 詳細 |
 | :----- | :------ |
-| SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](data-virtualization-extension.md)」を参照してください。 |
+| SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](./extensions/data-virtualization-extension.md)」を参照してください。 |
 | Paste the Plan 拡張機能の導入。 | &nbsp; |
 | High Color クエリ拡張機能の導入 (SSMS エディター テーマを含む)。 | &nbsp; |
 | SQL Server エージェント、プロファイラー、およびインポート拡張機能の修正。 | &nbsp; |
@@ -539,7 +586,7 @@ ms.locfileid: "90989985"
 | Azure SQL Database を参照するための Azure Resource Explorer の導入。 | &nbsp; |
 | オブジェクト エクスプローラーとクエリ エディターの接続性の堅牢性が向上しました。 | &nbsp; |
 | SQL エージェント拡張機能の強化。 | &nbsp; |
-| SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](data-virtualization-extension.md)」を参照してください。 |
+| SQL Server 2019 Preview 拡張機能への更新。 | 「[データ仮想化の拡張機能](./extensions/data-virtualization-extension.md)」を参照してください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>バグの修正、2018 年 10 月
@@ -656,8 +703,8 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 | Change | 詳細 |
 | :----- | :------ |
-| [SQL Server Agent for SQL Operations Studio 拡張機能](sql-server-agent-extension.md)の機能強化。 | アラート、演算子、およびプロキシのビューと、左ペインのアイコンが追加されました。<br/><br/>新しいジョブ、新しいジョブ ステップ、新しいアラート、および新しい演算子のためのダイアログが追加されました。<br/><br/>[ジョブの削除]、[アラートの削除]、[Delete Operator]\(演算子の削除\)(右クリック) が追加されました。<br/><br/>前回の実行を表示する機能が追加されました。<br/><br/>列名ごとのフィルターが追加されました。 |
-| [SQL Server Profiler for SQL Operations Studio 拡張機能](sql-server-profiler-extension.md)の機能強化。 | 拡張イベントを表示するための 5 つの既定のテンプレートが追加されました。<br/><br/>サーバー/データベース接続名が追加されました。<br/><br/>Azure SQL Database インスタンスのサポートが追加されました。<br/><br/>プロファイラーの実行中にタブが閉じられたときに、プロファイラーを終了するかどうか尋ねるメッセージが追加されました。 |
+| [SQL Server Agent for SQL Operations Studio 拡張機能](./extensions/sql-server-agent-extension.md)の機能強化。 | アラート、演算子、およびプロキシのビューと、左ペインのアイコンが追加されました。<br/><br/>新しいジョブ、新しいジョブ ステップ、新しいアラート、および新しい演算子のためのダイアログが追加されました。<br/><br/>[ジョブの削除]、[アラートの削除]、[Delete Operator]\(演算子の削除\)(右クリック) が追加されました。<br/><br/>前回の実行を表示する機能が追加されました。<br/><br/>列名ごとのフィルターが追加されました。 |
+| [SQL Server Profiler for SQL Operations Studio 拡張機能](./extensions/sql-server-profiler-extension.md)の機能強化。 | 拡張イベントを表示するための 5 つの既定のテンプレートが追加されました。<br/><br/>サーバー/データベース接続名が追加されました。<br/><br/>Azure SQL Database インスタンスのサポートが追加されました。<br/><br/>プロファイラーの実行中にタブが閉じられたときに、プロファイラーを終了するかどうか尋ねるメッセージが追加されました。 |
 | スクリプト結合拡張機能のリリース。 | &nbsp; |
 | 拡張機能の作成者用に、ウィザードとダイアログ機能拡張ポイントが追加されました。 | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -807,7 +854,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 | Change | 詳細 |
 | :----- | :------ |
-| ダッシュボードの拡張性モデルが強化され、タブ付きの分析情報と構成ウィンドウがサポートされました。 | 拡張機能マネージャーを使用すると、拡張機能を簡単に取得できます。<br/><br/>[whoisactive.com](http://www.whoisactive.com) の sp\_whoisactive 用のダッシュボード拡張機能。<br/><br/>詳細については、「[SQL Operations Studio の機能を拡張する](extensions.md)」を参照してください。 |
+| ダッシュボードの拡張性モデルが強化され、タブ付きの分析情報と構成ウィンドウがサポートされました。 | 拡張機能マネージャーを使用すると、拡張機能を簡単に取得できます。<br/><br/>[whoisactive.com](http://www.whoisactive.com) の sp\_whoisactive 用のダッシュボード拡張機能。<br/><br/>詳細については、「[SQL Operations Studio の機能を拡張する](./extensions/add-extensions.md)」を参照してください。 |
 | [接続とオブジェクト エクスプローラー管理のための機能拡張 API](https://github.com/Microsoft/azuredatastudio/wiki/Extensibility-API) が追加されました。 | &nbsp; |
 | お客様に影響を与える重要な [GitHub の問題](https://github.com/Microsoft/azuredatastudio/issues)が引き続き修正されています。 | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -872,7 +919,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 | Change | 詳細 |
 | :----- | :------ |
-| Azure SQL Database と Azure SQL Data Warehouse に接続する際に、[ファイアウォール規則の作成] ダイアログ ボックスを使用できるようになりました。 | &nbsp; |
+| Azure SQL Database と Azure Synapse Analytics への接続に役立つ [ファイアウォール規則の作成] ダイアログ ボックスを使用できるようになりました。 | &nbsp; |
 | Windows セットアップと、Linux DEB および RPM のインストール パッケージが追加されました。 | &nbsp; |
 | [ダッシュボードの管理] ビジュアル レイアウト エディター。 | &nbsp; |
 | *[ALTER としてスクリプト]* および *[Script As Execute]\(EXECUTE としてスクリプト\)* コマンド。 | &nbsp; |
@@ -894,7 +941,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 - [SQL Server に対する接続およびクエリ](quickstart-sql-server.md)
 - [Azure SQL Database に対する接続およびクエリ](quickstart-sql-database.md)
-- [Azure Data Warehouse に対する接続およびクエリ](quickstart-sql-dw.md)
+- [Azure Synapse Analytics に対する接続およびクエリ](quickstart-sql-dw.md)
 
 Azure Data Studio への投稿:
 

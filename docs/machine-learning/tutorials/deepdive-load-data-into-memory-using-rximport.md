@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c31650525934b14bf31135264d9b86c52d85119
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5be5c314cf50add1c215bbe52b5cf0d94a77a237
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179947"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195134"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>rxImport を使用したメモリへのデータの読み込み (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 10 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 10 です。
 
 このチュートリアルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを取得し、**rxImport** 関数を使用して目的のデータをローカル ファイルに保存する方法について説明します。 この方法を利用すると、データベースに対して再クエリすることなく、ローカルの計算コンテキストでデータを繰り返し分析できます。
 
-[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 関数を使用すると、データ ソースからセッション メモリ内のデータ フレームに、またはディスク上の XDF ファイルにデータを移動できます。 移動先としてファイルを指定しない場合、データはデータ フレームとしてメモリに格納されます。
+[rxImport](/machine-learning-server/r-reference/revoscaler/rximport) 関数を使用すると、データ ソースからセッション メモリ内のデータ フレームに、またはディスク上の XDF ファイルにデータを移動できます。 移動先としてファイルを指定しない場合、データはデータ フレームとしてメモリに格納されます。
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server のデータのサブセットをローカル メモリに抽出する
 
@@ -44,7 +44,7 @@ ms.locfileid: "88179947"
         connectionString = sqlConnString)
     ```
 
-3. 関数 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) を呼び出して、ローカル R セッションのデータ フレームにデータを読み取ります。
+3. 関数 [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) を呼び出して、ローカル R セッションのデータ フレームにデータを読み取ります。
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)

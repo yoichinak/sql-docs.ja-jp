@@ -14,11 +14,11 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 34f4ba8e001f43d4c29379dac0de36b595163679
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430904"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127223"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
 

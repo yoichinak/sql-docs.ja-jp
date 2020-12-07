@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b953d49716cb6a99879ebc94c750fc1e765916e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385338"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128791"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User イベント クラス
 
@@ -49,7 +49,7 @@ ms.locfileid: "88385338"
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**OwnerName**|**nvarchar**|オブジェクト所有者のデータベース ユーザー名。|37|はい|  
 |**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|はい|  
-|**RoleName**|**nvarchar**|メンバーが変更されたデータベース ロールの名前 ( **sp_adduser**を使用した場合)。|38|はい|  
+|**RoleName**|**nvarchar**|メンバーが変更されたデータベース ロールの名前 ( **sp_adduser** を使用した場合)。|38|はい|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26||  
 |**SessionLoginName**|**Nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  

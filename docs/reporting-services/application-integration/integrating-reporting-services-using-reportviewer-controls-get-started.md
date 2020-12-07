@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d4195123fbe1660c1c081c810d2b5b6b0feebd80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569962"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891512"
 ---
 # <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>レポート ビューアー コントロールを使用した Reporting Services の統合 - 概要
 
-Report Viewer コントロールを使用して、Reporting Services の RDL レポートを WebForms アプリと WinForms アプリに統合できます。 最新の更新プログラムの詳細については、[changelog](changelog.md) を参照してください。
+Report Viewer コントロールを使用して、Reporting Services の RDL レポートを WebForms アプリと WinForms アプリに統合できます。 最新の更新プログラムの詳細については、[changelog](./release-notes-ssrs-application-integration.md) を参照してください。
 
 ## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>新しい Web プロジェクトにレポート ビューアー コントロールを追加する
 
@@ -270,9 +270,8 @@ Report Viewer コントロールは NuGet パッケージとして出荷され�
 
 ## <a name="forum-feedback"></a>フォーラムのフィードバック
 
-問題が発生した場合は、[Reporting Services フォーラム](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html) でチームにお知らせください。
+問題が発生した場合は、[Reporting Services フォーラム](/answers/topics/sql-server-reporting-services.html) でチームにお知らせください。
 
 ## <a name="see-also"></a>関連項目
 
-[Report Viewer コントロールのデータ コレクション](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-
+[Report Viewer コントロールのデータ コレクション](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)

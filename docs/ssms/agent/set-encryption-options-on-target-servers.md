@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 832b73c751a6c475afd75769c4cf18d8e2e609a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 164b825f2d896085d217e0bd7e87ac405511477c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418068"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038225"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>ターゲット サーバーでの暗号化オプションの設定
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 マスター サーバーと一部またはすべてのターゲット サーバーの間で トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) 暗号通信の証明書を使用できない場合、これらの間のチャネルを暗号化するには、必要なセキュリティ レベルを使用するようにターゲット サーバーを構成します。  
   
@@ -45,5 +45,4 @@ ms.locfileid: "88418068"
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## <a name="see-also"></a>参照  
-[方法: データベース エンジンへの暗号化接続の有効化 (SQL Server 構成マネージャー)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
-  
+[方法: データベース エンジンへの暗号化接続の有効化 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  

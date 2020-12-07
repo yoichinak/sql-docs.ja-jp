@@ -1,6 +1,6 @@
 ---
 title: MSSQLSERVER_10060 | Microsoft Docs
-description: SQL Server クライアントがサーバーに接続できません。 エラーの説明と考えられる解決策をご覧ください。
+description: SQL Server クライアントがサーバーに接続できません。 エラー 10060 の説明と、考えられる解決策をご確認ください。
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b952019acc3643baf10d5a69310ab4b9c2629d3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb6a706a664adc8dbc86760b6d5e7b519b8a192a
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781556"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521209"
 ---
 # <a name="mssqlserver_10060"></a>MSSQLSERVER_10060
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

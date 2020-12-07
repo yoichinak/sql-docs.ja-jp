@@ -1,8 +1,8 @@
 ---
-description: テーブルの複製
-title: テーブルの複製 | Microsoft Docs
+description: 行データのない、テーブルの複製コピーを作成します。
+title: テーブルを複製する | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/05/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,22 +12,23 @@ helpviewer_keywords:
 - copying tables
 - tables [SQL Server], duplicating
 - duplicating tables
+- duplicating table structures
 - table copying [SQL Server]
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35601b570c7c369efb2a9249f78298345df12f5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8faa1aab3237152934f0ce9eb4cb9ce541d5d3d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427524"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128670"
 ---
-# <a name="duplicate-tables"></a>テーブルの複製
+# <a name="duplicate-tables"></a>テーブルを複製する
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、新しいテーブルを作成して既存のテーブルから列情報をコピーすることで既存のテーブルを複製できます。  
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、新しいテーブルを作成して既存のテーブルから列情報をコピーすることで既存のテーブルを複製できます。  
   
 > [!IMPORTANT]  
 >  この操作によって複製されるのはテーブルの構造のみです。テーブル行は複製されません。  
@@ -84,5 +85,3 @@ ms.locfileid: "88427524"
 4.  新しいテーブルに必要でない列をすべて削除します。  
   
 5.  **[実行]** をクリックします。  
-  
-  

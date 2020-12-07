@@ -109,7 +109,7 @@ SQL Server の管理には、**sqlcmd** 以外に次のクロスプラットフ�
 | ツール | 説明 |
 | ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | クロスプラットフォームの GUI データベース管理ユーティリティ。 |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Transact-SQL ステートメントを mssql 拡張機能を使用して実行するクロスプラットフォーム GUI コードエディター。 |
+| [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) | Transact-SQL ステートメントを mssql 拡張機能を使用して実行するクロスプラットフォーム GUI コードエディター。 |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | コマンドレットを使用する、クロスプラットフォームの自動化および構成ツール。 |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Transact-SQL コマンドを実行するクロスプラットフォーム コマンドライン インターフェイス。 |
 

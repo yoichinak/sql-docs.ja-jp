@@ -16,12 +16,12 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b98ce67e61c1fe6f9370508d34cecc8d9289a44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15ce6ea1c72bee64ad8fe96e70b9a7c513c623e6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420266"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868275"
 ---
 # <a name="installing-smo"></a>SMO のインストール
 
@@ -40,9 +40,8 @@ ms.locfileid: "88420266"
 
 ## <a name="installing-the-package"></a>パッケージのインストール
 
-Nuget パッケージのインストールと使用の手順と例については、「 [nuget クイックスタート-パッケージを使用](https://docs.microsoft.com/nuget/quickstart/use-a-package) する」を参照してください。 
+Nuget パッケージのインストールと使用の手順と例については、「 [nuget クイックスタート-パッケージを使用](/nuget/quickstart/use-a-package) する」を参照してください。 
   
 ## <a name="system-requirements"></a>システム要件
   
  SMO [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] では、4.0 または .Net Core 2.0 が実行されている必要があるため、これを使用するアプリケーションでは、クライアントコンピューターがそのバージョン以降をインストールしていることを確認する必要があります。 NetFx SMO ライブラリと共にインストールされる一部のネイティブバイナリでは、VC 2013 ランタイムもインストールする必要があります。このランタイムはパッケージに含まれていません。 ターゲットアーキテクチャに適した再頒布可能ファイルは、 https://www.microsoft.com/download/details.aspx?id=40784
-  

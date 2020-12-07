@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d78df7ed144c1cb94f486a20bd65ffc9c1c9cafb
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989435"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496703"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe のリリース ノート
 
@@ -51,24 +51,24 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Always Encrypted | SQL Server 2019 向けセキュア エンクレーブ インポートおよびエクスポートのサポートが追加されました |
 | デプロイ | Azure SQL Database からエクスポートするとき、変更データ キャプチャ対応テーブルを無視するサポートが追加されました |
 | デプロイ | Azure SQL Database のインデックス オプション OPTIMIZE_FOR_SEQUENTIAL_KEY 向けサポートが追加されました |
-| デプロイ | Azure SQL Data Warehouse の ID 列のサポートが追加されました | 
+| デプロイ | Azure Synapse Analytics の ID 列のサポートが追加されました | 
 | ヘルプ | ヘルプ (/?) で sqlpackage バージョンを出力し、/version パラメーターをサポートします | 
 
 ### <a name="fixes"></a>修正
 | 機能 | 詳細 |
 | :------ | :------ | 
-| デプロイ | Azure SQL Database Managed Instance を非 sysadmin ユーザーとしてターゲットにすると、正しくないデプロイ スクリプトが生成される問題を解消しました  | 
+| デプロイ | Azure SQL Managed Instance を非 sysadmin ユーザーとしてターゲットにする場合に正しくないデプロイ スクリプトが生成される問題を解消しました  | 
 | デプロイ | スクリプト アクションを実行するとき、デプロイの共同作成者を読み込む問題を解消しました | 
 | ヘルプ | 操作に 1 日以上かかるとき、sqlpackage に正しい経過時間を出力します | 
 | デプロイ | .NET Core に対してデプロイするときの dacpac 登録の問題を解消しました | 
 | デプロイ | /accessToken (/at) パラメーターの .NET Core 処理の sqlpackage を修正しました | 
 | デプロイ | 最上位ではないステートメントとしてストアド プロシージャで ALTER TABLE ステートメントを許可します | 
-| デプロイ | 具体化されたビューの Azure SQL Data Warehouse 検証で大文字と小文字を区別しないように修正しました | 
+| デプロイ | 具体化されたビューの Azure Synapse Analytics 検証で大文字と小文字を区別しないように修正しました | 
 
 ### <a name="known-issues"></a>既知の問題
 | 機能 | 詳細 |
 | :------ | :------ |
-| デプロイ | Azure SQL Data Warehouse Workload Management 機能 (Workload Groups と Workload Classifiers) はまだサポートされていません | 
+| デプロイ | Azure Synapse Analytics ワークロード管理機能 (ワークロード グループとワークロード分類子) はまだサポートされていません | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -96,14 +96,14 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="features"></a>特徴
 | 特徴量 | 詳細 |
 | :------ | :------ |
-| デプロイ | SQL Server 2008 以降、Azure SQL Database、Azure SQL Data Warehouse でデータの秘密度の分類がサポートされるようになりました。 |
-| デプロイ | Azure SQL Data Warehouse でのテーブル制約のサポートを追加しました。 |
-| デプロイ | Azure SQL Data Warehouse での順序付けされたクラスター化列ストア インデックスのサポートを追加しました。 |
+| デプロイ | SQL Server 2008 以降、Azure SQL Database、Azure Synapse Analytics で、データの秘密度の分類がサポートされるようになりました |
+| デプロイ | Azure Synapse Analytics でのテーブル制約のサポートを追加しました |
+| デプロイ | Azure Synapse Analytics での順序付けされたクラスター化列ストア インデックスのサポートを追加しました |
 | デプロイ | 外部データ ソース (Oracle、Teradata、MongoDB/CosmosDB、ODBC、ビッグ データ クラスター用) と SQL Server 2019 ビッグ データ クラスター用の外部テーブルのサポートを追加しました。 |
 | デプロイ | サポートされるエディションとして SQL Database Edge インスタンスを追加しました。 |
 | デプロイ | '\<server>.\<dnszone>.database.windows.net' 形式の Managed Instance サーバー名をサポートします |
-| デプロイ | Azure SQL Data Warehouse でのコピー コマンドのサポートを追加しました。 |
-| デプロイ | Azure SQL Data Warehouse のテーブルのパーティション関数に変更がある場合にテーブルの再作成を回避するために、公開時のデプロイ オプション 'IgnoreTablePartitionOptions' を追加しました。 |
+| デプロイ | Azure Synapse Analytics でのコピー コマンドのサポートを追加しました |
+| デプロイ | Azure Synapse Analytics でテーブルのパーティション関数に変更がある場合に、テーブルの再作成を回避するために、公開時のデプロイ オプション 'IgnoreTablePartitionOptions' を追加しました |
 | .NET Core | sqlpackage の .NET Core バージョンでの Microsoft.Data.SqlClient のサポートを追加しました。 |
 | &nbsp; | &nbsp; |
 
@@ -114,9 +114,9 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | デプロイ | AlterAnyDatabaseScopedConfiguration および AlterAnySensitivityClassification 権限の GRANT ステートメントの生成を修正しました。 |
 | デプロイ | 認識されない External Script 権限を修正しました。 |
 | デプロイ | インライン プロパティの修正 - プロパティの暗黙的な追加では、違いを示す必要はありませんが、明示的な言及ではスクリプトを通じて示す必要があります。 |
-| デプロイ | 具体化されたビュー (MV) によって参照されるテーブルを変更すると、Azure SQL Data Warehouse の MV でサポートされていない ALTER VIEW ステートメントが生成される問題を解決しました。 |
-| デプロイ | Azure SQL Data Warehouse のデータを含むテーブルに列を追加したときの公開の失敗を修正しました。 |
-| デプロイ | Azure SQL Data Warehouse のディストリビューション列の種類を変更した場合に更新スクリプトでデータを新しいテーブルに移動する必要がある問題を修正しました。 |
+| デプロイ | 具体化されたビュー (MV) によって参照されるテーブルを変更すると、Azure Synapse Analytics の MV でサポートされていない ALTER VIEW ステートメントが生成される問題を解決しました |
+| デプロイ | Azure Synapse Analytics のデータが含まれるテーブルに列を追加した場合の公開の失敗を修正しました |
+| デプロイ | Azure Synapse Analytics のディストリビューション列の種類 (データ損失のシナリオ) を変更した場合に、更新スクリプトでデータを新しいテーブルに移動する必要があるという問題を修正しました |
 | ScriptDom | インライン インデックスの後に定義されたインライン制約を認識できない ScriptDom のバグを修正しました。 |
 | ScriptDom | ScriptDom で、バッチ ステートメントで SYSTEM_TIME の終わりかっこがない ScriptDom のバグを修正しました。 |
 | Always Encrypted | 接続が無効になったときに一時テーブルがなくなるため、sqlpackage を再接続したときに一時テーブルが既にない場合、#tmpErrors テーブルを削除できない問題を修正しました。 |
@@ -164,7 +164,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 特徴量 | 詳細 |
 | :------ | :------ |
-| デプロイ | Azure SQL Data Warehouse (GA) に配置できるようにサポートを追加しました。 | 
+| デプロイ | Azure Synapse Analytics (GA) に配置できるようにサポートを追加しました。 | 
 | プラットフォーム | macOS、Linux、および Windows 用の sqlpackage .NET Core GA。 | 
 | セキュリティ | SHA1 コード署名を削除しました。 |
 | デプロイ | 新たに次の Azure データベース エディションのサポートを追加しました: GeneralPurpose、BusinessCritical、および Hyperscale |
@@ -203,7 +203,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 特徴量 | 詳細 |
 | :------ | :------ |
-| デプロイ | Azure SQL Data Warehouse (プレビュー) に配置できるようにサポートを追加しました。 | 
+| デプロイ | Azure Synapse Analytics (プレビュー) に配置できるようにサポートを追加しました。 | 
 | デプロイ | /p:DatabaseLockTimeout=(INT32 '60') パラメーターを sqlpackage に追加しました。 | 
 | デプロイ | /p:LongRunningCommandTimeout=(INT32) パラメーターを sqlpackage に追加しました。 |
 | エクスポートおよび抽出 | /p:TempDirectoryForTableData=(STRING) パラメーターを sqlpackage に追加しました。 |
@@ -356,7 +356,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fix | 詳細 |
 | :-- | :------ |
-| [インポート] | Azure SQL Database の .bacpac をオンプレミスのインスタンスにインポートする際の、"_パスワードのないデータベース マスター キーは、このバージョンの SQL Server ではサポートされていません_" に起因するエラーが修正されました。 |
+| [インポート] | Azure SQL Database の .bacpac をオンプレミスのインスタンスにインポートする際の、" _パスワードのないデータベース マスター キーは、このバージョンの SQL Server ではサポートされていません_ " に起因するエラーが修正されました。 |
 | グラフ | グラフ テーブルの解決されない擬似列エラーが修正されました。 |
 | スキーマ比較 | スキーマを比較するための SQL 認証を修正しました。 | 
 | &nbsp; | &nbsp; |
@@ -370,7 +370,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 特徴量 | 詳細 |
 | :------ | :------ |
-| デプロイ |  SQL 2017 以降と Azure SQL Database での_テンポラル保持ポリシー_のサポートが追加されました。 | 
+| デプロイ |  SQL 2017 以降と Azure SQL Database での _テンポラル保持ポリシー_ のサポートが追加されました。 | 
 | 診断 | 診断情報を保存するファイル パスを指定する /DiagnosticsFile:"C:\Temp\sqlpackage.log" コマンドライン パラメーターが追加されました。 | 
 | 診断 | 診断情報をコンソールにログ記録する /Diagnostics コマンドライン パラメーターが追加されました。 |
 | &nbsp; | &nbsp; |

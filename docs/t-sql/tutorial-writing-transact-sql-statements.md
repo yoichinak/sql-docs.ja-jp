@@ -15,12 +15,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d842186c057df54276d19c2b5b5774225961b3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9058445789197a3ddcf8b2412028f0bfc5fc85f4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426474"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036835"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>チュートリアル: Transact-SQL ステートメントの作成
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88426474"
 >**注:** 初心者の方には、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ステートメントを記述するのでなく、 [!INCLUDE[tsql](../includes/tsql-md.md)] の使用をお勧めします。  
   
 ## <a name="finding-more-information"></a>詳細情報  
-特定のステートメントの詳細については、SQL Server オンライン ブックで名前を指定してステートメントを検索するか、[コンテンツ] を使用して、[Transact-SQL リファレンス (データベース エンジン)](../t-sql/transact-sql-reference-database-engine.md) の下にアルファベット順に列挙されている 1,800 の言語要素を参照してください。 情報を検索する別の方法として、興味のある内容に関連するキーワードを検索する方法があります。 たとえば、日付の一部 (月など) を返す方法を求めるには、 **日付 [SQL Server]** のインデックスを検索し、 **日付要素**を選択します。 これにより、トピック [「DATEPART (Transact-SQL)」](../t-sql/functions/datepart-transact-sql.md) が表示されます。 別の例として、文字列の操作方法を求めるには、 **文字列関数**を検索します。 これにより、トピック [「文字列関数 (Transact-SQL)」](../t-sql/functions/string-functions-transact-sql.md) が表示されます。  
+特定のステートメントの詳細については、SQL Server オンライン ブックで名前を指定してステートメントを検索するか、[コンテンツ] を使用して、[Transact-SQL リファレンス (データベース エンジン)](./language-reference.md) の下にアルファベット順に列挙されている 1,800 の言語要素を参照してください。 情報を検索する別の方法として、興味のある内容に関連するキーワードを検索する方法があります。 たとえば、日付の一部 (月など) を返す方法を求めるには、 **日付 [SQL Server]** のインデックスを検索し、 **日付要素**を選択します。 これにより、トピック [「DATEPART (Transact-SQL)」](../t-sql/functions/datepart-transact-sql.md) が表示されます。 別の例として、文字列の操作方法を求めるには、 **文字列関数**を検索します。 これにより、トピック [「文字列関数 (Transact-SQL)」](../t-sql/functions/string-functions-transact-sql.md) が表示されます。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
 このチュートリアルでは、データベースの作成、データベースのテーブルの作成、テーブルへのデータの挿入、データの更新、読み取り、削除、およびテーブルの削除の方法を示します。 ユーザーは、ビューやストアド プロシージャを作成し、データベースとデータのユーザーを構成します。  
@@ -58,5 +58,3 @@ ms.locfileid: "88426474"
  
   
   
-  
-

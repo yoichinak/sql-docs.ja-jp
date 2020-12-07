@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91af8d735fb27f5009d4c7067805523f02413ba4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f17681ffbb922b25cffc6b21ecf2f6317d400db
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550010"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753794"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。  
 
 バックアップ デバイスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに追加します。  
   
@@ -50,7 +50,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>引数  
 `[ @devtype = ] 'device_type'` バックアップデバイスの種類を示します。 *device_type* は **varchar (20)** で、既定値はありません。次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**ディスク**|バックアップデバイスとしてのハードディスクファイル。|  
 |**テープ**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows でサポートされるテープ デバイス。<br /><br /> 注:テープ バックアップ デバイスは、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
@@ -77,7 +77,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_addumpdevice** により、バックアップデバイスが **backup_devices** カタログビューに追加されます。 その後、そのデバイスを BACKUP ステートメントや RESTORE ステートメントで論理的に参照できるようになります。 **sp_addumpdevice** では、物理デバイスへのアクセスは一切実行されません。 BACKUP ステートメントや RESTORE ステートメントが実行されるときにだけ、指定されたデバイスにアクセスされます。 論理バックアップデバイスを作成すると、BACKUP ステートメントと RESTORE ステートメントが簡略化されます。デバイス名を指定する場合は、"TAPE =" または "DISK =" 句を使用してデバイスパスを指定します。  
+ **sp_addumpdevice** 、 **sys.backup_devices** カタログビューにバックアップデバイスを追加します。 その後、そのデバイスを BACKUP ステートメントや RESTORE ステートメントで論理的に参照できるようになります。 **sp_addumpdevice** では、物理デバイスへのアクセスは一切実行されません。 BACKUP ステートメントや RESTORE ステートメントが実行されるときにだけ、指定されたデバイスにアクセスされます。 論理バックアップデバイスを作成すると、BACKUP ステートメントと RESTORE ステートメントが簡略化されます。デバイス名を指定する場合は、"TAPE =" または "DISK =" 句を使用してデバイスパスを指定します。  
   
  所有権とアクセス許可の問題によって、ディスクまたはファイルバックアップデバイスの使用が妨げられることがあります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]を起動する Windows アカウントに適切なファイル権限が付与されているかどうかを確認してください。  
   
@@ -148,5 +148,4 @@ GO
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

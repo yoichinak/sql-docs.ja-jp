@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f68af2ae2176ed4860f92a829544c7ff463254e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472481"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987418"
 ---
 # <a name="managing-passwords-db2tosql"></a>パスワードの管理 (DB2ToSQL)
 このセクションでは、データベースのパスワードをセキュリティで保護する方法と、サーバー間でインポートまたはエクスポートする手順について説明します。  
@@ -108,13 +108,13 @@ _インポート機能_ は、サーバー id とパスワードの情報をセ�
 
 2. エクスポートされたファイルを保護するためのパスワードを入力します。
 
-3. を実行します。 &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`
+3. &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"` を実行します。
 
 4. エクスポートされたファイルを保護するためのパスワードを入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 5. パスワードの確認入力: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
-6. を実行します。 &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`
+6. &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"` を実行します。
 
 7. エクスポートされたファイルを保護するためのパスワードを入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
@@ -126,18 +126,17 @@ _インポート機能_ は、サーバー id とパスワードの情報をセ�
 
 2. インポートされたファイルを保護するためのパスワードを入力します。
 
-3. を実行します。 &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`
+3. &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"` を実行します。
 
 4. 暗号化されたファイルからサーバーをインポートするためのパスワードを入力します: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 5. パスワードの確認入力: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
-6. を実行します。 &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`
+6. &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"` を実行します。
 
 7. 暗号化されたファイルからサーバーをインポートするためのパスワードを入力します: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 8. パスワードの確認入力: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## <a name="see-also"></a>参照  
-[SSMA コンソールの実行](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[SSMA コンソールの実行](./executing-the-ssma-console-db2tosql.md)  

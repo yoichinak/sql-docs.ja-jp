@@ -10,12 +10,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286246"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890858"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>SharePoint 用 Reporting Services アドイン (SSRS) のインストールまたはアンインストール
 
@@ -53,7 +53,7 @@ ms.locfileid: "79286246"
 ##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> インストール方法の概要  
  SharePoint 製品用 SQL Server 2016 Reporting Services アドインは、次の 2 つの方法のいずれかを使ってインストールできます。  
   
--   **インストール ウィザード:** ![メモ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") SQL Server 2016 では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでアドインをインストールできます。 ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
+-   **インストール ウィザード:** ![メモ](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") SQL Server 2016 では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでアドインをインストールできます。 ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
   
 -   **rsSharepoint.msi:** アドインをインストール メディアから直接インストールするか、ダウンロードしてインストールできます。 rsSharepoint.msi は、グラフィカル ユーザー インターフェイスもコマンド ライン インストールもサポートしています。 .msi を管理者特権を使用して実行する必要があるため、まず高度な権限でコマンド プロンプトを開いてから、コマンド ラインから rsSharepoint.msi を実行します。 アドインのダウンロードの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   
@@ -213,7 +213,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a> セットアップ ログ ファイル  
- セットアップの実行中は、 **アドインをインストールしたユーザーの** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] フォルダー内のログ ファイルに情報が記録されます。 このフォルダーのパスは、**C:\Users\\<ユーザー名\>\AppData\Local\Temp** などです。ファイル名の形式は **RS_SP_\<番号>.log** で、実際の名前は **RS_SP_0.log** のようになります。 ログ内では、エラーは "SSRSCustomActionError" という文字列から始まります。  
+ セットアップの実行中は、 **アドインをインストールしたユーザーの** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] フォルダー内のログ ファイルに情報が記録されます。 たとえば、**c:\Users\\<username\>\AppData\Local\Temp** などです。ファイル名は、**RS_SP_\<number>.log** (**RS_SP_0.log** など) となります。 ログ内では、エラーは "SSRSCustomActionError" という文字列から始まります。  
   
 > [!NOTE]  
 >  AppData は Windows オペレーティング システム内の隠れたフォルダーです。 隠れたファイルとフォルダーを表示するには、Windows エクスプローラーのフォルダー設定を変更する必要がある場合があります。  

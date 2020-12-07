@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4b0bdb3d9edca685e3b939c5f9a3ab1a0ec68846
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382488"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130272"
 ---
 # <a name="enable-indexes-and-constraints"></a>インデックスと制約の有効化
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "88382488"
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>無効にされたインデックスを ALTER INDEX を使用して有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "88382488"
   
 #### <a name="to-enable-a-disabled-index-using-create-index"></a>無効にされたインデックスを CREATE INDEX を使用して有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "88382488"
   
 #### <a name="to-enable-a-disabled-index-using-dbcc-dbreindex"></a>無効にされたインデックスを DBCC DBREINDEX を使用して有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "88382488"
   
 #### <a name="to-enable-all-indexes-on-a-table-using-alter-index"></a>テーブル上のすべてのインデックスを ALTER INDEX を使用して有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "88382488"
   
 #### <a name="to-enable-all-indexes-on-a-table-using-dbcc-dbreindex"></a>テーブル上のすべてのインデックスを DBCC DBREINDEX を使用して有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

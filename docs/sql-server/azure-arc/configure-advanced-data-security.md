@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a51ec53b5b5e928bd19dd66cb1ac6a8da162e817
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 2bd589ebacd9ea35e15881eaaeb022d4f2302986
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990375"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988028"
 ---
 # <a name="configure-advanced-data-security-for-azure-arc-enabled-sql-server-instance"></a>Azure Arc が有効な SQL Server インスタンスの高度なデータ セキュリティを構成する
 
@@ -77,7 +77,7 @@ Azure Security Center でセキュリティの異常と脅威について調べ�
 
    ![脆弱性のレポート](media/configure-advanced-data-security/vulnerabilities-report.png)
 
-1. 任意のセキュリティ アラートをクリックして詳細を確認し、[Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview) で攻撃についてさらに調べます。 ブルート フォース アラートの例を次の図に示します。
+1. 任意のセキュリティ アラートをクリックして詳細を確認し、[Azure Sentinel](/azure/sentinel/overview) で攻撃についてさらに調べます。 ブルート フォース アラートの例を次の図に示します。
 
    ![ブルート フォース アラート](media/configure-advanced-data-security/brute-force-alert.png)
 

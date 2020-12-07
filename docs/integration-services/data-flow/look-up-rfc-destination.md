@@ -12,10 +12,10 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d938b3d742dd9d4b43f0a9b3704281392d89049d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495805"
 ---
 # <a name="look-up-rfc-destination"></a>[RFC 転送先の参照]
@@ -50,7 +50,7 @@ ms.locfileid: "88495805"
  ゲートウェイ ホストのサーバー名または IP アドレスを表示します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- **NN**がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を表示します。  
+ **NN** がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を表示します。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を表示します。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4edd8925bffec751d00379c9a9e78cc6d06a62c8
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: f41eef01d203a873b3d5beac61ab5feb2995867f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545594"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891402"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>リモート管理用のレポート サーバーの構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー インスタンスをローカルでもリモートでも構成できます。 リモートのレポート サーバー インスタンスを構成するには、Reporting Services 構成ツールを使用するか、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI (Windows Management Instrumentation) プロバイダーを利用するカスタム コードを作成します。 Reporting Services 構成ツールには WMI プロバイダーのグラフィカル インターフェイスが用意されているので、コードを記述しなくてもレポート サーバーの構成を行えます。 このツールを起動する際に、接続先のリモート サーバーを指定できます。  
@@ -140,6 +140,6 @@ ms.locfileid: "84545594"
 13. **[許可]** 列の **[アカウントの有効化]** 、 **[リモートの有効化]** 、 **[セキュリティの読み取り]** をオンにして、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

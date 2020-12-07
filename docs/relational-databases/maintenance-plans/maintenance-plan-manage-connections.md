@@ -14,10 +14,10 @@ ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ce9ac0469125a6077799e5bab0a69cdc1d06d82b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420836"
 ---
 # <a name="maintenance-plan-manage-connections"></a>[メンテナンス プラン] ([接続の管理])
@@ -32,7 +32,7 @@ ms.locfileid: "88420836"
  接続が Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のどちらで作成されるかを指定します。  
 
 > [!IMPORTANT]  
-> パッケージは **msdb** データベースに格納され、**ProtectionLevel** は **ServerStorage** に設定されるため、*SQL Server 認証*を使うと、**msdb** 内のパスワードは暗号化されません。 **msdb** がセキュリティで保護されている場合は *SQL Server 認証*を使ってもかまいませんが、"*Windows 認証*" を使うことをお勧めします
+> パッケージは **msdb** データベースに格納され、**ProtectionLevel** は **ServerStorage** に設定されるため、*SQL Server 認証* を使うと、**msdb** 内のパスワードは暗号化されません。 **msdb** がセキュリティで保護されている場合は *SQL Server 認証* を使ってもかまいませんが、"*Windows 認証*" を使うことをお勧めします
 
 ## <a name="see-also"></a>参照  
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)  

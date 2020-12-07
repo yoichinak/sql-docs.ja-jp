@@ -1,6 +1,6 @@
 ---
-description: server_resource_stats (Azure SQL Database)
-title: server_resource_stats (Azure SQL Database) |Microsoft Docs
+description: sys.server_resource_stats (Azure SQL Database)
+title: sys.server_resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
@@ -19,19 +19,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ed975dd768bc9d7979dd254fddec715ed07b3b2f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542508"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809322"
 ---
-# <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL Database)
+# <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデータを返します。 データは、5 分間隔で収集と集計が実行されます。 15 秒ごとの報告につき 1 行作成されます。 返されるデータには、CPU 使用率、ストレージサイズ、IO 使用率、SKU が含まれます。 履歴データは約 14 日間保持されます。
 
-**Server_resource_stats**ビューには、データベースが関連付けられている Azure SQL Managed Instance のバージョンによって異なる定義があります。 新しいサーバーバージョンにアップグレードするときに、これらの違いとアプリケーションで必要な変更を検討してください。
+**Sys.server_resource_stats**ビューの定義は、データベースが関連付けられている Azure SQL Managed Instance のバージョンによって異なります。 新しいサーバーバージョンにアップグレードするときに、これらの違いとアプリケーションで必要な変更を検討してください。
  
   
  次の表では、v12 サーバーで使用できる列について説明します。  
@@ -54,13 +54,13 @@ Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデ�
 
  
 > [!TIP]  
->  これらの制限とサービスレベルの詳細については、 [サービス階層の Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)に関するトピックを参照してください。  
+>  これらの制限とサービスレベルの詳細については、 [サービス階層の Managed Instance](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)に関するトピックを参照してください。  
     
 ## <a name="permissions"></a>アクセス許可  
  このビューは、 **master** データベースに接続する権限を持つすべてのユーザーロールで使用できます。  
   
-## <a name="remarks"></a>解説  
- **Server_resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルで許容される最大限度に対する割合として表される、avg_cpu 以外のバイトまたはメガバイト (列名で示される) で使用される合計として表現されます。  
+## <a name="remarks"></a>注釈  
+ **Sys.server_resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルで許容される最大限度に対する割合として表される、avg_cpu 以外のバイトまたはメガバイト (列名で示される) で使用される合計として表されます。  
  
 ## <a name="examples"></a>例  
  次の例では、過去1週間のコンピューティング使用率の平均が80% 以上のすべてのデータベースを返します。  
@@ -78,4 +78,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>参照  
- [Managed Instance サービスレベル](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [Managed Instance サービスレベル](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

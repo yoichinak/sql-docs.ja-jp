@@ -22,10 +22,10 @@ ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8444f4c3421f41cb94cdd716b1c2017f506b80c2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91114712"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
@@ -68,7 +68,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  更新の開始位置を 0 を起点として指定します。 **text** または **image** 型の列の場合、*insert_offset* には、既存の列の開始位置から新しいデータの開始位置までにスキップするバイト数を指定します。 **Ntext** 列の場合、*insert_offset* は文字数です (各 **ntext** 文字は 2 バイトを使用します)。 この 0 を起点とした開始位置から始まる既存の **text**、**ntext**、または **image** 型の各データは、新しいデータの分だけ右に移動します。 値 0 を指定した場合、新しいデータは既存のデータの先頭に挿入されます。 NULL の場合、新しいデータは既存のデータの最後に追加されます。  
   
  *delete_length*  
- 既存の**text**、**ntext**、または **image** 型の列で、*insert_offset* で指定した位置から後にある、削除するデータの長さを指定します。 *delete_length* 値は、**text** および **image** 型の列ではバイト単位で指定され、**ntext** 型の列では文字数で指定されます。 各 **ntext** 文字は 2 バイトを使用します。 値 0 を指定した場合、データは削除されません。 NULL の場合、既存の **text** 型または **image** 型の列で、*insert_offset* の位置から終わりまでのすべてのデータが削除されます。  
+ 既存の **text**、**ntext**、または **image** 型の列で、*insert_offset* で指定した位置から後にある、削除するデータの長さを指定します。 *delete_length* 値は、**text** および **image** 型の列ではバイト単位で指定され、**ntext** 型の列では文字数で指定されます。 各 **ntext** 文字は 2 バイトを使用します。 値 0 を指定した場合、データは削除されません。 NULL の場合、既存の **text** 型または **image** 型の列で、*insert_offset* の位置から終わりまでのすべてのデータが削除されます。  
   
  WITH LOG  
  ログ記録は、データベースで有効になっている復旧モデルによって異なります。  

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0190e48bb33b0e62eb711e0833de4492af9ad434
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 247bbc38945edb8fe51e348d4515ee9f4231a9e0
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426044"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679227"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
 
@@ -74,10 +74,10 @@ ms.locfileid: "88426044"
   
     |アイコン|状態と説明|  
     |-|-|  
-    |![Error](../../integration-services/change-data-capture/media/error.gif "エラー")|**エラー**。 再試行できないエラーが発生したため、Oracle CDC インスタンスは実行されていません。 次の副状態が利用できます。<br /><br /> **間違った構成**: 手動の介入を必要とする構成エラーが発生しました。<br /><br /> **パスワードが必要**: Oracle CDC インスタンスのパスワードが設定されていないか、パスワードが無効です。<br /><br /> **予期しないエラー**: その他すべての回復できないエラーです。|  
-    |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**実行中**: CDC インスタンスが実行されていて、変更レコードが処理されています。 次の副状態が利用できます。<br /><br /> **アイドル状態**: すべての変更レコードが処理され、ターゲット変更テーブルに格納されました。 アクティブなトランザクションはこれ以上ありません。<br /><br /> **処理**: 変更テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
-    |![Stop](../../integration-services/change-data-capture/media/stop.gif "Stop")|**停止**: CDC インスタンスが実行されていません。 停止状態は、CDC インスタンスが正常に停止したことを示します。|  
-    |![一時停止](../../integration-services/change-data-capture/media/paused.gif "一時停止")|**一時停止**: CDC インスタンスが実行されていますが、再試行できないエラーにより処理が中断されています。 次の副状態が利用できます。<br /><br /> **接続解除**: ソース Oracle データベースへの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> **ストレージ**: 記憶領域がいっぱいです。 追加の記憶領域に空きができると処理が再開されます。<br /><br /> **ロガー**: ロガーは Oracle に接続されていますが、必要なトランザクション ログが利用できないなどの一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
+    |:::image type="icon" source="../../integration-services/change-data-capture/media/error.gif":::|**エラー** 。 再試行できないエラーが発生したため、Oracle CDC インスタンスは実行されていません。 次の副状態が利用できます。<br /><br /> **間違った構成** : 手動の介入を必要とする構成エラーが発生しました。<br /><br /> **パスワードが必要** : Oracle CDC インスタンスのパスワードが設定されていないか、パスワードが無効です。<br /><br /> **予期しないエラー** : その他すべての回復できないエラーです。|  
+    |:::image type="icon" source="../../integration-services/change-data-capture/media/okay.gif":::|**実行中** : CDC インスタンスが実行されていて、変更レコードが処理されています。 次の副状態が利用できます。<br /><br /> **アイドル状態** : すべての変更レコードが処理され、ターゲット変更テーブルに格納されました。 アクティブなトランザクションはこれ以上ありません。<br /><br /> **処理** : 変更テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
+    |:::image type="icon" source="../../integration-services/change-data-capture/media/stop.gif":::|**停止** : CDC インスタンスが実行されていません。 停止状態は、CDC インスタンスが正常に停止したことを示します。|  
+    |:::image type="icon" source="../../integration-services/change-data-capture/media/paused.gif":::|**一時停止** : CDC インスタンスが実行されていますが、再試行できないエラーにより処理が中断されています。 次の副状態が利用できます。<br /><br /> **接続解除** : ソース Oracle データベースへの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> **ストレージ** : 記憶領域がいっぱいです。 追加の記憶領域に空きができると処理が再開されます。<br /><br /> **ロガー** : ロガーは Oracle に接続されていますが、必要なトランザクション ログが利用できないなどの一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
   
 -   **[詳細な状態]** : 現在の副状態です。  
   

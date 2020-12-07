@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f07e5cbcbe3604f140f197d64c4666d992f8112e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244562"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934863"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
   レポート サーバーは、資格情報を使用して、レポートにコンテンツを提供したり、データ ドリブン サブスクリプションに受信者の情報を提供する外部データ ソースに接続します。 Windows 認証、データベース認証、認証なし、またはカスタム認証を使用する資格情報を指定できます。 ネットワーク経由で接続要求を送信するときに、レポート サーバーはユーザー アカウントまたは自動実行アカウントのいずれかの権限を借用します。 接続要求の実行時に使用されるセキュリティ コンテキストの詳細については、このトピックの「 [データ ソースの構成とネットワーク接続](#DataSourceConfigurationConnections) 」をご覧ください。  
@@ -49,7 +49,7 @@ ms.locfileid: "75244562"
   
      レポート サーバーまたは SharePoint サイトに対して最初に保存、パブリッシュ、または参照を実行するとき、資格情報を入力する必要がある場合があります。 入力した資格情報は、レポート ビルダー セッションが終了するまで使用されます。 資格情報の保存を選択した場合、資格情報はユーザー設定と共に、使用しているコンピューターに安全に格納されます。 以降のレポート ビルダー セッションでは、同じレポート サーバーまたは SharePoint サイトへの接続に、保存した資格情報が使用されます。 レポート サーバーの管理者または SharePoint 管理者は、使用する資格情報を指定します。  
   
--   埋め込みデータ ソースの [[資格情報] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) ページで入力するデータ ソースの資格情報。  
+-   埋め込みデータ ソースの [[資格情報] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](/previous-versions/sql/) ページで入力するデータ ソースの資格情報。  
   
      これらの資格情報は、外部データ ソースへのデータ接続を行うために、レポート サーバーによって使用されます。 一部の種類のデータ ソース用に、資格情報をレポート サーバーに安全に格納できます。 これらの資格情報により、他のユーザーは基になるデータ接続の資格情報を指定することなく、レポートを実行できます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75244562"
   
      共有データ ソースの場合は、 **[パスワードを保存する]** オプションを使用して、資格情報をユーザー設定と共に、使用しているコンピューターにローカルに保存します。 レポート ビルダーは、対応する外部データ ソースに接続するたびに、保存されている資格情報を使用します。  
   
- 詳細については、「[[全般] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)」および「[レポート ビルダーでのレポートのプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)」を参照してください。  
+ 詳細については、「[[全般] &#40;[データ ソースのプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダー&#41;](/previous-versions/sql/)」および「[レポート ビルダーでのレポートのプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)」を参照してください。  
   
 ## <a name="using-remote-data-sources"></a>リモート データ ソースの使用  
  リモートのデータベース サーバーのデータをレポートに取得する場合、次の点を確認します。  
@@ -142,7 +142,7 @@ ms.locfileid: "75244562"
   
 -   レポートが、親レポートの資格情報を使用するサブレポートである。  
   
- このような条件下では、レポート サーバーは、事前に定義する必要がある自動実行アカウントを使用して、リモート データ ソースに接続します。 レポート サーバーはそのサービス資格情報を使用してリモート サーバーに接続しないため、レポート サーバーが接続のために使用できるアカウントを指定する必要があります。 このアカウントの作成の詳細については、「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
+ このような条件下では、レポート サーバーは、事前に定義する必要がある自動実行アカウントを使用して、リモート データ ソースに接続します。 レポート サーバーはそのサービス資格情報を使用してリモート サーバーに接続しないため、レポート サーバーが接続のために使用できるアカウントを指定する必要があります。 このアカウントの作成の詳細については、「[自動実行アカウントの構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="user-name-and-password-login"></a>ユーザー名とパスワードによるログイン  
  **[次のユーザー名とパスワードを使用]** を選択した場合、データ ソースへのアクセスにはユーザー名およびパスワードの指定が必要になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの場合は、この資格情報がデータベース ログイン用となる可能性があります。 この資格情報は、認証用にデータ ソースに渡されます。  
@@ -165,5 +165,4 @@ ms.locfileid: "75244562"
  [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)   
  [レポートのデータ ソースのプロパティを構成する](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
-  
   

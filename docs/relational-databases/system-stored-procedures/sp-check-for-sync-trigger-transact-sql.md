@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85908cad93f729ad1c3029aff35be7a2cb91fcef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ddd0563d0a58ec50fc43ed1ac78478068b553ab0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539104"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364856"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,10 +40,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [** @tabid =** ] '*tabid*'  
+ [ **@tabid =** ] ' *tabid* '  
  即時更新トリガーに対してチェックされるテーブルのオブジェクト ID です。 *tabid* は **int** で、既定値はありません。  
   
- [** @trigger_op =** ] '*trigger_output_parameters*' 出力  
+ [ **@trigger_op =** ] ' *trigger_output_parameters* ' 出力  
  出力パラメーターが呼び出し元のトリガーの種類を返すかどうかを指定します。 *trigger_output_parameters* は **char (10)** で、次のいずれかの値を指定できます。  
   
 |[値]|説明|  
@@ -53,17 +53,19 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Delete**|DELETE トリガーです。|  
 |NULL (既定値)||  
   
-`[ @fonpublisher = ] fonpublisher` ストアドプロシージャが実行される場所を指定します。 この**場合、既定***値は 0*です。 0の場合、サブスクライバーで実行されます。1の場合、パブリッシャーで実行されます。  
+`[ @fonpublisher = ] fonpublisher` ストアドプロシージャが実行される場所を指定します。 この **場合、既定***値は 0* です。 0の場合、サブスクライバーで実行されます。1の場合、パブリッシャーで実行されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0は、ストアドプロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1は、即時更新トリガーのコンテキスト内で呼び出されており、 * \@ trigger_op*で返されるトリガーの種類であることを示します。  
+ 0は、ストアドプロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1は、即時更新トリガーのコンテキスト内で呼び出されており、 *\@ trigger_op* で返されるトリガーの種類であることを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **sp_check_for_sync_trigger** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
- **sp_check_for_sync_trigger** は、レプリケーションとユーザー定義トリガーを調整するために使用されます。 このストアド プロシージャは、レプリケーション トリガーのコンテキスト内で呼び出されているかどうかを判別します。 たとえば、ユーザー定義トリガーの本文でプロシージャ **sp_check_for_sync_trigger** を呼び出すことができます。 **Sp_check_for_sync_trigger**が**0**を返した場合、ユーザー定義トリガーは処理を続行します。 **Sp_check_for_sync_trigger**が**1**を返した場合、ユーザー定義のトリガーは終了します。 これにより、レプリケーショントリガーによってテーブルが更新されたときに、ユーザー定義のトリガーが起動しなくなります。  
+ **sp_check_for_sync_trigger** は、レプリケーションとユーザー定義トリガーを調整するために使用されます。 このストアド プロシージャは、レプリケーション トリガーのコンテキスト内で呼び出されているかどうかを判別します。 たとえば、ユーザー定義トリガーの本文でプロシージャ **sp_check_for_sync_trigger** を呼び出すことができます。 **Sp_check_for_sync_trigger** が **0** を返した場合、ユーザー定義トリガーは処理を続行します。 **Sp_check_for_sync_trigger** が **1** を返した場合、ユーザー定義のトリガーは終了します。 これにより、レプリケーショントリガーによってテーブルが更新されたときに、ユーザー定義のトリガーが起動しなくなります。  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例
+
+### <a name="a-add-code-to-a-trigger-on-a-subscriber-table"></a>A. サブスクライバーテーブルのトリガーにコードを追加する
  次の例は、サブスクライバーテーブルのトリガーで使用できるコードを示しています。  
   
 ```  
@@ -74,7 +76,7 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## <a name="example"></a>例  
+### <a name="b-add-code-to-a-trigger-on-a-publisher-table"></a>B. パブリッシャーテーブルのトリガーにコードを追加する
  このコードは、パブリッシャーのテーブルのトリガーに追加することもできます。コードも似ていますが、 **sp_check_for_sync_trigger** の呼び出しには追加のパラメーターが含まれています。  
   
 ```  

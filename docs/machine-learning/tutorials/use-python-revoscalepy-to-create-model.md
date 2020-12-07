@@ -9,25 +9,25 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f5cebd0fa6f45530ea5853cf365ea60a4c535ad
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 02b30a427865774a313b999c62376fd83aa4e632
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179712"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193634"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Python と revoscalepy を使用して、SQL Server でリモートで実行されるモデルを作成します
 [!INCLUDE [SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
-Microsoft の [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python ライブラリでは、データの探索、視覚化、変換、解析のためのデータ サイエンス アルゴリズムを提供しています。 このライブラリは、SQL Server での Python による統合シナリオにおいて戦略的に重要です。 マルチコア サーバーでは、**revoscalepy** 関数を並列で実行できます。 中央サーバーとクライアント ワークステーションを使用した分散アーキテクチャ (それぞれの物理コンピューターが同じ **revoscalepy** ライブラリを保持) では、ローカルで Python コードを記述できますが、実行はデータが存在するリモートの SQL Server インスタンスに移って行います。
+Microsoft の [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python ライブラリでは、データの探索、視覚化、変換、解析のためのデータ サイエンス アルゴリズムを提供しています。 このライブラリは、SQL Server での Python による統合シナリオにおいて戦略的に重要です。 マルチコア サーバーでは、**revoscalepy** 関数を並列で実行できます。 中央サーバーとクライアント ワークステーションを使用した分散アーキテクチャ (それぞれの物理コンピューターが同じ **revoscalepy** ライブラリを保持) では、ローカルで Python コードを記述できますが、実行はデータが存在するリモートの SQL Server インスタンスに移って行います。
 
 **revoscalepy** については、次の Microsoft 製品およびディストリビューションを参照してください。
 
 + [SQL Server Machine Learning Services (データベース内)](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server (非 SQL、スタンドアロン サーバー)](https://docs.microsoft.com/machine-learning-server/index)
-+ [クライアント側の Python ライブラリ (開発ワークステーション用)](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) 
++ [Microsoft Machine Learning Server (非 SQL、スタンドアロン サーバー)](/machine-learning-server/index)
++ [クライアント側の Python ライブラリ (開発ワークステーション用)](/machine-learning-server/install/python-libraries-interpreter) 
 
-この演習では、[rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) で線形回帰モデルを作成する方法を学びます。これは、コンピューティング コンテキストを入力として受け入れる **revoscalepy** のアルゴリズムの1つです。 この演習で実行するコードは、リモート コンピューティング コンテキストを有効にする **revoscalepy** 関数によって、コードの実行をローカルからリモート コンピューティング環境にシフトします。
+この演習では、[rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) で線形回帰モデルを作成する方法を学びます。これは、コンピューティング コンテキストを入力として受け入れる **revoscalepy** のアルゴリズムの1つです。 この演習で実行するコードは、リモート コンピューティング コンテキストを有効にする **revoscalepy** 関数によって、コードの実行をローカルからリモート コンピューティング環境にシフトします。
 
 このチュートリアルを完了すると、次のことを行うことができます。
 
@@ -50,11 +50,11 @@ Microsoft の [revoscalepy](https://docs.microsoft.com/machine-learning-server/p
 
 このサンプルでは、リモート コンピューティング コンテキストで Python モデルを作成するプロセスを示します。これにより、クライアントから作業を行うことができますが、SQL Server、Spark、Machine Learning Server など、操作が実際に実行されるリモート環境を選択できます。 リモート コンピューティング コンテキストの目的は、データが存在する場所で計算させることです。
 
-SQL Server で Python コードを実行するには、**revoscalepy** パッケージが必要です。 これは、Microsoft が提供する特殊な Python パッケージで、R 言語用の **RevoScaleR** パッケージと似ています。 **revoscalepy** パッケージは、コンピューティング コンテキストの作成をサポートし、ローカル ワークステーションとリモート サーバーの間でデータとモデルを渡すためのインフラストラクチャを提供します。 データベース内コードの実行をサポートする **revoscalepy** 関数は、[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) です。
+SQL Server で Python コードを実行するには、**revoscalepy** パッケージが必要です。 これは、Microsoft が提供する特殊な Python パッケージで、R 言語用の **RevoScaleR** パッケージと似ています。 **revoscalepy** パッケージは、コンピューティング コンテキストの作成をサポートし、ローカル ワークステーションとリモート サーバーの間でデータとモデルを渡すためのインフラストラクチャを提供します。 データベース内コードの実行をサポートする **revoscalepy** 関数は、[RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) です。
 
-このレッスンでは、SQL Server のデータを使用して、非常に大規模なデータセットに対する回帰をサポートする **revoscalepy** の関数である [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) で線形モデルをトレーニングします。 
+このレッスンでは、SQL Server のデータを使用して、非常に大規模なデータセットに対する回帰をサポートする **revoscalepy** の関数である [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) で線形モデルをトレーニングします。 
 
-このレッスンでは、設定方法の基本を説明し、その後 Python での **SQL Server コンピューティング コンテキスト**の使用についても説明します。 コンピューティング コンテキストが他のプラットフォームとどのように機能し、どのコンピューティング コンテキストがサポートされるかについては、「[Machine Learning Server でのスクリプト実行のコンピューティング コンテキスト](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)」を参照してください。
+このレッスンでは、設定方法の基本を説明し、その後 Python での **SQL Server コンピューティング コンテキスト**の使用についても説明します。 コンピューティング コンテキストが他のプラットフォームとどのように機能し、どのコンピューティング コンテキストがサポートされるかについては、「[Machine Learning Server でのスクリプト実行のコンピューティング コンテキスト](/machine-learning-server/r/concept-what-is-compute-context)」を参照してください。
 
 
 ## <a name="run-the-sample-code"></a>サンプル コードを実行します。
@@ -129,9 +129,9 @@ def test_linmod_sql():
 
 + `sql_query` や `sql_connection_string` などの Python 変数は、データのソースと定義します。 
 
-    これらの変数を [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) コンストラクターに渡して、`data_source`という名前の**データソース オブジェクト**を実装します。
+    これらの変数を [RxSqlServerData](/r-server/python-reference/revoscalepy/rxsqlserverdata) コンストラクターに渡して、`data_source`という名前の**データソース オブジェクト**を実装します。
 
-+ [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) コンストラクターを使用して**コンピューティング コンテキスト オブジェクト**を作成します。 結果として得られる**コンピューティング コンテキスト　オブジェクト**には、`sql_cc`という名前が付けられます。
++ [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) コンストラクターを使用して**コンピューティング コンテキスト オブジェクト**を作成します。 結果として得られる**コンピューティング コンテキスト　オブジェクト**には、`sql_cc`という名前が付けられます。
 
     この例では、データ ソースで使用した同じ接続文字列を再利用します。これは、コンピューティング コンテキストとして使用するのと同じ SQL Server インスタンスにデータがあることを前提としています。 
     
@@ -153,13 +153,13 @@ def test_linmod_sql():
     
 `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
 
-このコンピューティング コンテキストは [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) の呼び出しで再利用されます。
+このコンピューティング コンテキストは [rxsummary](/machine-learning-server/python-reference/revoscalepy/rx-summary) の呼び出しで再利用されます。
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
 #### <a name="set-a-compute-context-explicitly-using-rx_set_compute_context"></a>Rx_set_compute_context を使用してコンピューティング コンテキストを明示的に設定する
 
-関数 [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) を使用すると、既に定義されているコンピューティング コンテキスト間で切り替えることができます。
+関数 [rx_set_compute_context](/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) を使用すると、既に定義されているコンピューティング コンテキスト間で切り替えることができます。
 
 アクティブなコンピューティング コンテキストを設定した後は、変更するまでアクティブ状態のままになります。
 

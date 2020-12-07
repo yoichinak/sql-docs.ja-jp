@@ -2,21 +2,20 @@
 title: Docker にインストールする
 titleSuffix: SQL Server Machine Learning Services
 description: Docker に SQL Server Machine Learning Services (Python と R) をインストールする方法を説明します。
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ms.date: 05/11/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6bf07a7c949c76ebeae0d17b632d47e4a87fce1b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e53acfa9e0fdfb7f7ee9b1ab6b7de5cd43ba8a9d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178241"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870040"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Docker に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -93,7 +92,7 @@ ms.locfileid: "88178241"
    ```
   
    > [!NOTE]
-   > SQL Server の実稼働エディションをコンテナーで実行するプロセスは、若干異なります。 詳細については、「[Docker で SQL Server コンテナーイメージを構成する](sql-server-linux-configure-docker.md)」を参照してください。 同じコンテナー名とポートを使う場合でも、このチュートリアルの残りの部分を引き続き実稼働のコンテナーに適用できます。
+   > SQL Server の実稼働エディションをコンテナーで実行するプロセスは、若干異なります。 詳細については、「[Docker で SQL Server コンテナーイメージを構成する](./sql-server-linux-docker-container-deployment.md)」を参照してください。 同じコンテナー名とポートを使う場合でも、このチュートリアルの残りの部分を引き続き実稼働のコンテナーに適用できます。
 
 2. Docker コンテナーを表示するには、`docker ps` コマンドを実行します。
 
@@ -101,7 +100,7 @@ ms.locfileid: "88178241"
    sudo docker ps -a
    ```
 
-3. **[STATUS]** 列に表示されている状態が **[Up]** の場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列で指定されているポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](sql-server-linux-configure-docker.md#troubleshooting)を参照してください。
+3. **[STATUS]** 列に表示されている状態が **[Up]** の場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列で指定されているポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](./sql-server-linux-docker-container-troubleshooting.md)を参照してください。
 
  
     出力:
@@ -130,4 +129,4 @@ Python 開発者は、次のチュートリアルに従って、SQL Server で P
 R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
 + [クイック スタート: T-SQL での R の実行](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [チュートリアル:R 開発者向けのデータベース内分析](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル:R 開発者向けのデータベース内分析](../machine-learning/tutorials/r-taxi-classification-introduction.md)

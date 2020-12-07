@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ae64d9e63d6c6a6c77642144275af00a8418a8d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb971143c7de2bdbf683b24f81162e088ffd2a8e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467907"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91378825"
 ---
 # <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88467907"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 SESSION_CONTEXT(N'key')  
 ```  
   
@@ -57,7 +57,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="examples"></a>例  
  次のような単純な例は、キーのセッション コンテキスト値を設定 `user_id` 4、および、使用する、 **SESSION_CONTEXT** 値を取得する関数。  
   
-```  
+```sql  
 EXEC sp_set_session_context 'user_id', 4;  
 SELECT SESSION_CONTEXT(N'user_id');  
 ```  

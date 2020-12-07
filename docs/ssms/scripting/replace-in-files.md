@@ -13,12 +13,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbf692581a7ad2cb6d1e2bb5ad600b65fc63d7c3
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 3d3ccbef48b79ef0706920ab2ff83a2daee68db9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901970"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036407"
 ---
 # <a name="replace-in-files"></a>[フォルダーを指定して置換]
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,10 +104,10 @@ ms.locfileid: "88901970"
  **[検索する文字列]** ボックスまたは **[置換後の文字列]** ボックスに入力された特殊文字を解釈する方法を指定します。 オプションは **[ワイルドカード]** と **[正規表現]** です。  
   
  **Regular Expressions**  
- 検索するテキストのパターンを定義する、特殊な表記です。 一覧については、「 [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)」を参照してください。  
+ 検索するテキストのパターンを定義する、特殊な表記です。 一覧については、「 [正規表現によるテキストの検索](./search-text-with-regular-expressions.md)」を参照してください。  
   
  **ワイルドカード**  
- アスタリスク (`*`) や疑問符 (`?`) などの特殊文字は、1 つまたは複数の文字を表します。 一覧については、「 [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
+ アスタリスク (`*`) や疑問符 (`?`) などの特殊文字は、1 つまたは複数の文字を表します。 一覧については、「 [ワイルドカードを使用したテキスト検索](./search-text-with-wildcards.md)」を参照してください。  
   
  **[次のファイルの種類を参照]**  
  この一覧は、 **[検索対象]** で指定したディレクトリ内で検索するファイルの種類を示します。 このボックスが空の場合、 **[検索対象]** に指定されているディレクトリ内のすべてのファイルが検索の対象となります。  
@@ -155,4 +155,4 @@ ms.locfileid: "88901970"
  このツール バー タブを使用すると、ダイアログ ボックスが **[シンボルの検索]** ダイアログ ボックスに変わります。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

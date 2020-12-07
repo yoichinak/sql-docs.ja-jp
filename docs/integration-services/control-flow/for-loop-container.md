@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a8c0bb1cb003605ec863b41e2194bad4e3cf3e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d95b3894351d156444b22e5b20c4cf5ed259990
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393568"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196507"
 ---
 # <a name="for-loop-container"></a>For ループ コンテナー
 
@@ -67,9 +67,9 @@ ms.locfileid: "88393568"
   
 2.  タスクとコンテナーを For ループ コンテナーに追加します。 詳細については、「 [制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
-3.  優先順位制約を使用して、For ループ コンテナー内のタスクとコンテナーを連結します。 詳細については、「 [既定の優先順位制約を使用してタスクとコンテナーを連結する](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)」を参照してください。  
+3.  優先順位制約を使用して、For ループ コンテナー内のタスクとコンテナーを連結します。 詳細については、「 [既定の優先順位制約を使用してタスクとコンテナーを連結する](./precedence-constraints.md)」を参照してください。  
   
-4.  For ループ コンテナーを構成します。 詳細については、「 [For ループ コンテナーを構成する](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)に評価されるまでそのワークフローを繰り返します。  
+4.  For ループ コンテナーを構成します。 詳細については、「 [For ループ コンテナーを構成する]()に評価されるまでそのワークフローを繰り返します。  
 
 ##  <a name="configure-the-for-loop-container"></a>For ループ コンテナーを構成する
 この手順では、 **[For ループ エディター]** ダイアログ ボックスを使用して、For ループ コンテナーを構成する方法について説明します。  
@@ -122,7 +122,7 @@ ms.locfileid: "88393568"
   
  式の内部で変数を指定する場合、変数名をアット マーク (@) で始める必要があります。 たとえば、**Counter** という名前の変数を指定するには、For ループ コンテナーが使用する式に「@Counter」と入力します。 変数の名前空間のプロパティを含める場合は、変数と名前空間を角かっこで囲む必要があります。 たとえば、**MyNamespace** 名前空間内にある **Counter** 変数については、「@MyNamespace::Counter」と入力します。  
   
- For ループ コンテナーが使用する変数は、For ループ コンテナーのスコープ、またはパッケージ コンテナー階層において上位層にある任意のコンテナーのスコープ内で定義する必要があります。 たとえば、For ループ コンテナーは、それ自体のスコープ内で定義された変数と、パッケージ スコープ内で定義された変数を使用できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+ For ループ コンテナーが使用する変数は、For ループ コンテナーのスコープ、またはパッケージ コンテナー階層において上位層にある任意のコンテナーのスコープ内で定義する必要があります。 たとえば、For ループ コンテナーは、それ自体のスコープ内で定義された変数と、パッケージ スコープ内で定義された変数を使用できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../integration-services-ssis-variables.md)」をご覧ください。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] の式文法には、評価、初期化、または代入に使用する複雑な式を実装するための、演算子と関数の完全なセットが用意されています。 詳細については、「 [Integration Services (SSIS) 式](../../integration-services/expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
@@ -130,5 +130,4 @@ ms.locfileid: "88393568"
 ## <a name="see-also"></a>参照  
  [制御フロー](../../integration-services/control-flow/control-flow.md)   
  [Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2abd40f651171717a5ef7f0351a38780812828b3
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 02b64deba925bdf355fa72746e5b0236c2cf14b5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742282"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987328"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>レポート サーバーでタイム ゾーンと時計の設定を変更する
   レポート サーバーでは、インストールされているコンピューターのローカル時刻が常に使用されます。 異なるタイム ゾーンを使用するように構成することはできません。 クライアント アプリケーションと、参照先のレポート サーバーのタイム ゾーンが異なる場合、スケジュールが設定された操作は、レポート サーバーのタイム ゾーンを使用して実行されます。 レポート マネージャーと SharePoint 管理ページの各スケジュール ページには、スケジュールが設定された操作が行われる正確な日時がわかるよう、タイム ゾーンが明記されます。 たとえば、カスタム スケジュールを作成するためのページには、"時間は (UTC-08:00) 太平洋標準時 (米国およびカナダ) で表されます" と表示されます。
@@ -35,7 +35,7 @@ ms.locfileid: "80742282"
  プロパティのタイムスタンプ値 (フォルダーまたはリンク レポート アイテムの作成日時など) は、新しいタイム ゾーンの設定に同期されません。 6 月 25 日の午前 9 時にアイテムを作成し、タイム ゾーンまたは時計の設定を変更しても、タイムスタンプは 6 月 25 日の午前 9 時のままです。  
   
 ## <a name="changing-the-time-zone-sharepoint-mode"></a>タイム ゾーンの変更 (SharePoint モード)  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのタイム ゾーンの構成は、SharePoint の地域設定の一部として管理されます。 詳細については、「[SharePoint Server 2010 SP1 の説明」(https://technet.microsoft.com/library/cc824907.aspx)](https://technet.microsoft.com/library/cc824907.aspx) を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのタイム ゾーンの構成は、SharePoint の地域設定の一部として管理されます。 詳細については、[地域設定 (SharePoint Server 2010 (/previous-versions/office/sharepoint-server-2010/cc824907(v=office.14))](/previous-versions/office/sharepoint-server-2010/cc824907(v=office.14)) に関する記事を参照してください。  
   
 ## <a name="changing-the-clock-settings"></a>時計の設定の変更  
  内蔵時計を変更しても、既存のタイムスタンプ値に影響はありません。たとえば、時計を 1 時間進めても、レポート履歴スナップショットのタイムスタンプは変わりません。 スケジュールおよび配信のプロセッサの設定が新しく切り替わるまでに、10 秒の遅延が発生する場合があります。 構成ファイルのポーリング間隔の設定を変更した場合、実際の遅延時間が異なることがあります。  
@@ -43,5 +43,4 @@ ms.locfileid: "80742282"
 ## <a name="see-also"></a>参照  
  [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [スケジュール](../../reporting-services/subscriptions/schedules.md)  
-  
   

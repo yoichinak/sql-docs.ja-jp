@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497850"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988678"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>ソースとターゲットのデータ型のマッピング (データ型)
 Access データベースの種類は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベースの種類とは異なります。 Access データベースオブジェクトをオブジェクトに変換する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データ型をアクセスからにマップする方法を指定する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の手順に示すように、既定のデータ型マッピングをそのまま使用することも、マッピングをカスタマイズすることもできます。  
   
 ## <a name="default-mappings"></a>既定のマップ  
-SSMA には、データ型マッピングの既定のセットがあります。 既定のマッピングの一覧については、「 [プロジェクトの設定 (型のマッピング)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)」を参照してください。  
+SSMA には、データ型マッピングの既定のセットがあります。 既定のマッピングの一覧については、「 [プロジェクトの設定 (型のマッピング)](./project-settings-type-mapping-accesstosql.md)」を参照してください。  
   
 ## <a name="customizing-data-type-mappings"></a>データ型マッピングのカスタマイズ  
 [プロジェクトの **設定** ] ダイアログボックスを使用すると、プロジェクト内のすべてのデータベースおよびデータベースオブジェクトに対して型をマップする方法をカスタマイズできます。 プロジェクトの型マッピングは、カスタム型マッピングを持たないすべてのデータベースおよびデータベースオブジェクトに適用されます。  
@@ -91,6 +91,5 @@ SSMA には、データ型マッピングの既定のセットがあります。
 ## <a name="next-steps"></a>次の手順  
 移行プロセスの次の手順では、 [access データベースオブジェクトを SQL Server オブジェクトに変換](converting-access-database-objects-accesstosql.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

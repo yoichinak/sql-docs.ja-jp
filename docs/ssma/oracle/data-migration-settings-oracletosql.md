@@ -11,19 +11,19 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 7df7afd3e58c93d2d9a4e30ef87039cdca9b5dc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a46cdca0d713dc9d33cc919e312a500d867fbfbd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492336"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038055"
 ---
 # <a name="data-migration-settings-oracletosql"></a>データ移行の設定 (OracleToSQL)
   
 ## <a name="data-migration-settings"></a>データの移行設定  
 **データ移行設定** を使用すると、ユーザーはデータ移行のためのカスタムクエリを作成できます。  
   
--   このタブは、[プロジェクトの設定] で [**非表示**] に設定した場合に、[**拡張データ移行オプション**] が [**表示**] に設定され、非表示になるときに使用できます。 プロジェクトの移行設定の詳細については、「 [プロジェクトの設定 (移行)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) 」を参照してください。  
+-   このタブは、[プロジェクトの設定] で [**非表示**] に設定した場合に、[**拡張データ移行オプション**] が [**表示**] に設定され、非表示になるときに使用できます。 プロジェクトの移行設定の詳細については、「 [プロジェクトの設定 (移行)](./project-settings-migration-oracletosql.md) 」を参照してください。  
   
 -   カスタム SQL ステートメントの解析は、テーブルノードの [ **データ移行の設定** ] タブで実装されます。  
   
@@ -53,6 +53,5 @@ ms.locfileid: "88492336"
   
 -   **取り消し:** 変更が行われる前に設定を復元するには、[ **キャンセル** ] をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Oracle データの SQL Server への移行](migrating-oracle-data-into-sql-server-oracletosql.md)  
-  

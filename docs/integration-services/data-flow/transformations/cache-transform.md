@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fddf4562e1d2899e667f245b32309617c4147b29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495753"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123433"
 ---
 # <a name="cache-transform"></a>キャッシュ変換
 
@@ -33,7 +33,7 @@ ms.locfileid: "88495753"
   
  参照変換をフル キャッシュ モードで実行するように構成する場合は、キャッシュ接続マネージャーを使用できます。 このモードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  
   
- キャッシュ接続マネージャーおよびキャッシュ変換でフル キャッシュ モードの参照変換を構成する手順については、「 [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)」(キャッシュ接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する) を参照してください。  
+ キャッシュ接続マネージャーおよびキャッシュ変換でフル キャッシュ モードの参照変換を構成する手順については、「 [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)」(キャッシュ接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する) を参照してください。  
   
  参照データセットのキャッシュの詳細については、「 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)」を参照してください。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88495753"
   
  単一のパッケージ内で同じキャッシュ接続マネージャーにデータを書き込むことができるのは 1 つのキャッシュ変換だけです。 パッケージに複数のキャッシュ変換が含まれている場合、パッケージが実行されたときに最初に呼び出されたキャッシュ変換が接続マネージャーにデータを書き込みます。 それ以降のキャッシュ変換による書き込み操作は失敗します。  
   
- 詳細については、「[キャッシュ接続マネージャー](../../../integration-services/data-flow/transformations/cache-connection-manager.md)」を参照してください。  
+ 詳細については、「[キャッシュ接続マネージャー](../../connection-manager/cache-connection-manager.md)」を参照してください。  
   
 ## <a name="configuration-of-the-cache-transform"></a>キャッシュ変換の構成  
  データをキャッシュ ファイル (.caw) に保存するようにキャッシュ接続マネージャーを構成できます。  
@@ -65,7 +65,7 @@ ms.locfileid: "88495753"
 ## <a name="cache-transformation-editor-connection-manager-page"></a>[キャッシュ変換エディター] ([接続マネージャー] ページ)
   **[キャッシュ変換エディター]** ダイアログ ボックスの **[接続マネージャー]** タブを使用すると、既存のキャッシュ接続マネージャーを選択したり、新しいキャッシュ接続マネージャーを作成したりできます。  
   
- キャッシュ接続マネージャーの詳細については、「 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)」を参照してください。  
+ キャッシュ接続マネージャーの詳細については、「 [Cache Connection Manager](../../connection-manager/cache-connection-manager.md)」を参照してください。  
   
 ### <a name="options"></a>Options  
  **[フル キャッシュ]**  
@@ -80,5 +80,4 @@ ms.locfileid: "88495753"
 ## <a name="see-also"></a>参照  
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [データ フロー](../../../integration-services/data-flow/data-flow.md)  
-  
   

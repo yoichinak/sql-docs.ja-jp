@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ab82f18d59bd6a2f8df0c236cd44031b740ee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486878"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130250"
 ---
 # <a name="create-unique-indexes"></a>一意のインデックスの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "88486878"
   
 ###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> 一意インデックスの利点  
   
--   複数列の一意なインデックスにより、インデックス キーのそれぞれの値の組み合わせが一意であることが保証されます。 たとえば、 **LastName**列、 **FirstName**列、および **MiddleName** 列の組み合わせに一意インデックスを作成した場合、テーブル内の 2 つの行がこれらの列に対して同じ値の組み合わせを持つことはできません。  
+-   複数列の一意なインデックスにより、インデックス キーのそれぞれの値の組み合わせが一意であることが保証されます。 たとえば、 **LastName** 列、 **FirstName** 列、および **MiddleName** 列の組み合わせに一意インデックスを作成した場合、テーブル内の 2 つの行がこれらの列に対して同じ値の組み合わせを持つことはできません。  
   
 -   列のデータが一意である場合、1 つのテーブルに 1 つの一意クラスター化インデックスと、複数の一意非クラスター化インデックスを作成できます。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "88486878"
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>テーブルに一意のインデックスを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

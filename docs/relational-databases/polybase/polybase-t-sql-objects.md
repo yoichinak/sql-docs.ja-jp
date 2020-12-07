@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 40763d6caadc420a3bb1794a4759c848d579007c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2f52e71caddf2c2c7800e094ba3e40905a8d8833
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173383"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005703"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL リファレンス
 
@@ -121,7 +121,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Azure BLOB ストレージ用の外部テーブルを作成します。  
-適用対象:SQL Server (2016 以降)、Azure SQL Data Warehouse、Parallel Data Warehouse
+適用対象:SQL Server (2016 以降)、Azure Synapse Analytics、Parallel Data Warehouse
 
 **1.データベース スコープ ベースの資格情報を作成する**  
 
@@ -196,9 +196,9 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store 用の外部テーブルを作成する
-適用対象:Azure SQL Data Warehouse
+適用対象:Azure Synapse Analytics
 
-詳しくは、「[Azure Data Lake Store から Azure SQL Data Warehouse へのデータの読み込み](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)」をご覧ください
+詳しくは、「[Azure Data Lake Store から Azure SQL Data Warehouse へのデータの読み込み](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)」をご覧ください
 
 **1.データベース スコープ ベースの資格情報を作成する**   
 
@@ -567,5 +567,5 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 クエリの例については、「 [PolyBase Queries (PolyBase のクエリ)](../../relational-databases/polybase/polybase-queries.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
-[PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)   
+[PolyBase の概要](./polybase-guide.md)   
 [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)

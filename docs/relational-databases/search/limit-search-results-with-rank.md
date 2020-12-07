@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f68204154f2bbbc3c78d3aeec7e9221a625f355d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470156"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK を使用して検索結果を制限する方法
@@ -33,7 +33,7 @@ ms.locfileid: "88470156"
 > [!NOTE]  
 >  CONTAINS 述語と FREETEXT 述語は順位値を返しません。  
   
- 検索条件と一致するアイテムの数が膨大になることがよくあります。 CONTAINSTABLE クエリまたは FREETEXTTABLE クエリから多数の一致結果が返されないようにするには、オプションの *top_n_by_rank* パラメーターを使用して、返される行を制限します。 *top_n_by_rank* は整数値です。 *n*は、降順で上位 *n* 個の一致結果のみを返すことを示します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。  
+ 検索条件と一致するアイテムの数が膨大になることがよくあります。 CONTAINSTABLE クエリまたは FREETEXTTABLE クエリから多数の一致結果が返されないようにするには、オプションの *top_n_by_rank* パラメーターを使用して、返される行を制限します。 *top_n_by_rank* は整数値です。 *n* は、降順で上位 *n* 個の一致結果のみを返すことを示します。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一致結果を順位で並べ替え、指定された数の行のみを返します。 このオプションを使用すると、パフォーマンスが大幅に向上します。 たとえば、通常ならば 100 万行のテーブルから 10 万行を返すクエリに対して、上位 100 行だけを返すように要求すれば、そのクエリの処理が速くなります。  
   

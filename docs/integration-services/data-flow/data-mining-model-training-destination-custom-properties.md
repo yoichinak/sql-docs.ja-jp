@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6427b808d31c9b1938b093da2bdf14d59bec90cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ed5f1b09cbbaa4d20c891a03d9846949eedc8bc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457365"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196447"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>データ マイニング モデル トレーニング変換先のカスタム プロパティ
 
@@ -37,7 +37,6 @@ ms.locfileid: "88457365"
   
  詳細については、「 [データ マイニング モデル トレーニング変換先](../../integration-services/data-flow/data-mining-model-training-destination.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+## <a name="see-also"></a>参照  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

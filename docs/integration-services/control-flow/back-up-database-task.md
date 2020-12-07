@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 291a9fd0e0138eeb7b304e673f404163217f9ae5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63e02be4fe2c7fdd1c0293cd5e76dcb9e0adca22
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431074"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123603"
 ---
 # <a name="back-up-database-task"></a>データベースのバックアップ タスク
 
@@ -55,6 +55,5 @@ ms.locfileid: "88431074"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d884f38d93d7e79094fd1e2074e92e37050ddfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beb9a1e1dcb25f42e2d9a49c1e0e5c1a77a3f0ea
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477256"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193062"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS パッケージを実行する
 
@@ -27,7 +27,7 @@ SQL Server Management Studio は、SQL Server から SQL Database まで、SQL �
 
 ## <a name="prerequisites"></a>前提条件
 
-開始する前に、最新バージョンの SQL Server Management Studio (SSMS) があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
+開始する前に、最新バージョンの SQL Server Management Studio (SSMS) があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
 Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
 
@@ -86,4 +86,4 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
     - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)
     - [コマンド プロンプトから SSIS パッケージを実行する](./ssis-quickstart-run-cmdline.md)
     - [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
-    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md) 
+    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md)

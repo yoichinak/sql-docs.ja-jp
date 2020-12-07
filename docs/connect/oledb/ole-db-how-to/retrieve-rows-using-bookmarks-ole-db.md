@@ -13,12 +13,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01adeff5f66d1d37309967147b00f63b1d5b75a4
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: d456e16308944d8678d5938e0e56d094a0afa196
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860254"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727057"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>ブックマークを使用した行の取得 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860254"
   コンシューマーは、バインド構造体の **dwFlag** フィールド値に DBCOLUMNSINFO_ISBOOKMARK を設定して、その列がブックマークに使用されることを示します。 また、コンシューマーは行セット プロパティ DBPROP_BOOKMARKS に VARIANT_TRUE を設定します。 これによって、列 0 を行セットに入れることができます。 次に **IRowsetLocate::GetRowsAt** メソッドが使用され、ブックマークからのオフセットで指定される行から始まる行が取り出されます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>ブックマークを使用して行を取得するには  
   
@@ -385,5 +385,4 @@ int ProcessResultSet() {
    return 0;  
 }  
 ```  
-  
   

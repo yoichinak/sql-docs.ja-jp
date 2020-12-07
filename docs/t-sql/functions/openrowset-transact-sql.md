@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0c60e9fb687ffc4cc17626b75462c29a91cdb075
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 4019a1e661b14825532596091918f2f14eac1e92
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115939"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405069"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -82,17 +82,17 @@ OPENROWSET
 
 ## <a name="arguments"></a>引数
 
-### <a name="provider_name"></a>'*provider_name*'
+### <a name="provider_name"></a>' *provider_name* '
 レジストリの OLE DB プロバイダーの表示名 (または PROGID) を表す文字列を指定します。 *provider_name* 既定値はありません。 プロバイダー名の例としては、`Microsoft.Jet.OLEDB.4.0`、`SQLNCLI`、`MSDASQL` があります。
 
-### <a name="datasource"></a>'*datasource*'
+### <a name="datasource"></a>' *datasource* '
 特定の OLE DB データ ソースに対応する文字列定数を指定します。 *datasource* は DBPROP_INIT_DATASOURCE のプロパティで、プロバイダーの IDBProperties インターフェイスに渡され、プロバイダーの初期化に使用されます。 一般的に、この文字列にはデータベース ファイルの名前、データベース サーバーの名前、プロバイダーがデータベースを検索する際に認識する名前のいずれかを指定します。
 データ ソースには、`Microsoft.Jet.OLEDB.4.0` プロバイダーの場合はファイル パス `C:\SAMPLES\Northwind.mdb'`、`SQLNCLI` プロバイダーの場合は接続文字列 `Server=Seattle1;Trusted_Connection=yes;` を指定できます。
 
-### <a name="user_id"></a>'*user_id*'
+### <a name="user_id"></a>' *user_id* '
 指定した OLE DB プロバイダーに渡されるユーザー名を表す文字列定数を指定します。 *user_id* は接続のセキュリティ コンテキストを示し、DBPROP_AUTH_USERID プロパティとして渡され、プロバイダーの初期化に使用されます。 *user_id* Microsoft Windows のログイン名にすることはできません。
 
-### <a name="password"></a>'*password*'
+### <a name="password"></a>' *password* '
 OLE DB プロバイダーに渡されるユーザー パスワードを表す文字列定数を指定します。 *password* は DBPROP_AUTH_PASSWORD プロパティとして引き渡され、プロバイダーの初期化に使用されます。 *password* を Microsoft Windows のパスワードとすることはできません。
 
 ```sql
@@ -104,7 +104,7 @@ SELECT a.*
                    Customers) AS a;
 ```
 
-### <a name="provider_string"></a>'*provider_string*'
+### <a name="provider_string"></a>' *provider_string* '
 プロバイダー固有の接続文字列を指定します。DBPROP_INIT_PROVIDERSTRING プロパティとして渡され、プロバイダーの初期化に使用されます。 *provider_string* 通常、プロバイダーの初期化に必要なすべての接続情報をカプセル化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで認識されるキーワードの一覧については、「[初期化プロパティと承認プロパティ](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。
 
 ```sql
@@ -125,7 +125,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
                  AdventureWorks2012.HumanResources.Department) AS d;
 ```
 
-### <a name="query"></a>'*query*'
+### <a name="query"></a>' *query* '
 プロバイダーに送られ、プロバイダーによって実行される文字列定数を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスでは、このクエリは処理されず、プロバイダーから返されたクエリ結果が処理されます (パススルー クエリ)。 パススルー クエリは、表形式のデータをテーブル名ではなくコマンド言語のみで公開するプロバイダーで使用すると便利です。 パススルー クエリは、クエリ プロバイダーが OLE DB をサポートしていれば、リモート サーバーでサポートされてコマンド オブジェクトとその必須インターフェイス。 詳細については、[SQL Server Native Client &#40;OLE DB&#41; のリファレンス](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)をご覧ください。
 
 ```sql
@@ -141,7 +141,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 > [!IMPORTANT]
 > Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
 
-BULK オプションの引数を使用すると、データの読み取りを開始および終了する場所や、エラーの取り扱い、データの解釈方法について、細かく制御することができます。 たとえば、データ ファイルを **varbinary**、**varchar**、**nvarchar** 型の単一行、単一列の行セットとして読み取るように指定できます。 既定の動作については、後の引数の説明を参照してください。
+BULK オプションの引数を使用すると、データの読み取りを開始および終了する場所や、エラーの取り扱い、データの解釈方法について、細かく制御することができます。 たとえば、データ ファイルを **varbinary** 、 **varchar** 、 **nvarchar** 型の単一行、単一列の行セットとして読み取るように指定できます。 既定の動作については、後の引数の説明を参照してください。
 
  BULK オプションの使用方法の詳細については、後の「解説」を参照してください。 BULK オプションに必要な権限については、このトピックで後述する「アクセス許可」を参照してください。
 
@@ -150,7 +150,7 @@ BULK オプションの引数を使用すると、データの読み取りを開
 
 データを一括インポート用に準備する方法については、「[一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)」をご覧ください。
 
-#### <a name="bulk-data_file"></a>BULK '*data_file*'
+#### <a name="bulk-data_file"></a>BULK ' *data_file* '
 データを対象テーブルにコピーするデータ ファイルの完全なパスを指定します。
 
 ```sql
@@ -168,7 +168,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="bulk-error-handling-options"></a>BULK エラー処理オプション
 
 ##### <a name="errorfile"></a>ERRORFILE
-`ERRORFILE` ='*file_name*' は、形式エラーがあり、OLE DB 行セットに変換できない行を収集するために使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。
+`ERRORFILE` =' *file_name* ' は、形式エラーがあり、OLE DB 行セットに変換できない行を収集するために使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。
 
 エラー ファイルはコマンドの実行開始時に作成されます。 存在するファイルの場合にはエラーが発生し、 さらに、拡張子 .ERROR.txt の制御ファイルが作成されます。 このファイルにはエラー ファイルの各行の参照と、エラーの診断が含まれています。 エラーが修正されると、データは読み込み可能になります。
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
@@ -214,10 +214,10 @@ ROWS_PER_BATCH の既定値はありません。 ROWS_PER_BATCH = 0 の指定は
 
 データ ファイル内の実際の行が指定の順序で並べ替えられていない場合、または UNIQUE ヒントが指定された一方で重複したキーが存在する場合は、エラーが返されます。
 
-ORDER を使用する場合は列の別名が必要です。 列の別名リストは、BULK 句によってアクセスされる派生テーブルを参照する必要があります。 ORDER 句に指定された列名は、この列の別名リストを参照します。 大きな値の型 (**varchar (max)** , 、**nvarchar (max)** , 、**varbinary (max)** , 、および **xml**) およびラージ オブジェクト (LOB) 型 (**text**, 、**ntext**, 、および **image**) 列を指定することはできません。
+ORDER を使用する場合は列の別名が必要です。 列の別名リストは、BULK 句によってアクセスされる派生テーブルを参照する必要があります。 ORDER 句に指定された列名は、この列の別名リストを参照します。 大きな値の型 ( **varchar (max)** , 、 **nvarchar (max)** , 、 **varbinary (max)** , 、および **xml** ) およびラージ オブジェクト (LOB) 型 ( **text** , 、 **ntext** , 、および **image** ) 列を指定することはできません。
 
 ##### <a name="single_blob"></a>SINGLE_BLOB
-*data_file* の内容を、**varbinary(max)** 型の単一行、単一列の行セットとして返します。
+*data_file* の内容を、 **varbinary(max)** 型の単一行、単一列の行セットとして返します。
 
 > [!IMPORTANT]
 > すべての Windows エンコード変換がサポートされるのは SINGLE_BLOB オプションだけなので、SINGLE_CLOB オプションや SINGLE_NCLOB オプションではなく、SINGLE_BLOB オプションだけを使用して XML データをインポートすることをお勧めします。
@@ -236,7 +236,7 @@ SELECT *
 #### <a name="bulk-input-file-format-options"></a>BULK 入力ファイル フォーマットのオプション
 
 ##### <a name="codepage"></a>CODEPAGE
-`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*code_page*' } データ ファイル内のデータのコード ページを指定します。 CODEPAGE は、データに **char**、**varchar**、**text** 列 (文字値が 127 より大きいか、32 未満) が含まれている場合にのみ当てはまります。
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| ' *code_page* ' } データ ファイル内のデータのコード ページを指定します。 CODEPAGE は、データに **char** 、 **varchar** 、 **text** 列 (文字値が 127 より大きいか、32 未満) が含まれている場合にのみ当てはまります。
 
 > [!IMPORTANT]
 > `CODEPAGE` は、Linux ではサポートされていないオプションです。
@@ -246,8 +246,8 @@ SELECT *
 
 |CODEPAGE の値|説明|
 |--------------------|-----------------|
-|ACP|**char**、**varchar**、または **text** データ型の列を、ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コード ページ (ISO 1252) から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換します。|
-|OEM (既定値)|**char**、**varchar**、または **text** データ型の列を、システムの OEM コード ページから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換します。|
+|ACP|**char** 、 **varchar** 、または **text** データ型の列を、ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コード ページ (ISO 1252) から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換します。|
+|OEM (既定値)|**char** 、 **varchar** 、または **text** データ型の列を、システムの OEM コード ページから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換します。|
 |RAW|コード ページの変換は行われません。 これは最も高速なオプションです。|
 |*code_page*|データ ファイルの文字データのエンコードに使用されているソースのコード ページを示します (例 : 850)。<br /><br /> **重要**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンではコード ページ 65001 (UTF-8 エンコード) がサポートされません。|
 
@@ -264,7 +264,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 ##### <a name="formatfile"></a>FORMATFILE
-`FORMATFILE` ='*format_file_path*' フォーマット ファイルの完全なパスを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます: XML と非 XML。
+`FORMATFILE` =' *format_file_path* ' フォーマット ファイルの完全なパスを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます: XML と非 XML。
 
 フォーマット ファイルは、結果セットの列の型を定義する場合に必要となります。 ただし SINGLE_CLOB、SINGLE_BLOB、または SINGLE_NCLOB を指定した場合は例外で、この場合はフォーマット ファイルは必要ありません。
 
@@ -283,7 +283,7 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
 
 リモートの OLE DB データ ソースにアクセスするとき、信頼関係接続のログイン ID は、クライアントの接続先サーバーからクエリの対象サーバーに自動的に委任されるわけではありません。 したがって、認証の委任を構成する必要があります。
 
-指定したデータ ソースにおいて、OLE DB プロバイダーが複数のカタログとスキーマをサポートする場合は、カタログ名とスキーマ名を指定する必要があります。 _カタログ_と_スキーマ_の値は、OLE DB プロバイダーではサポートしていない場合は省略できます。 プロバイダーがスキーマ名しかサポートしていない場合は、_スキーマ_ **.** _オブジェクト_ という形式の 2 部構成の名前を指定する必要があります。 プロバイダーがカタログ名しかサポートしていない場合は、_カタログ_ **.** _スキーマ_ **.** _オブジェクト_ という形式の 3 部構成の名前を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するパススルー クエリには、3 つの部分で構成される名前を指定する必要があります。 詳しくは、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」をご覧ください。
+指定したデータ ソースにおいて、OLE DB プロバイダーが複数のカタログとスキーマをサポートする場合は、カタログ名とスキーマ名を指定する必要があります。 _カタログ_ と _スキーマ_ の値は、OLE DB プロバイダーではサポートしていない場合は省略できます。 プロバイダーがスキーマ名しかサポートしていない場合は、 _スキーマ_ **.** _オブジェクト_ という形式の 2 部構成の名前を指定する必要があります。 プロバイダーがカタログ名しかサポートしていない場合は、 _カタログ_ **.** _スキーマ_ **.** _オブジェクト_ という形式の 3 部構成の名前を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するパススルー クエリには、3 つの部分で構成される名前を指定する必要があります。 詳しくは、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」をご覧ください。
 
 `OPENROWSET` の引数に変数は指定できません。
 
@@ -314,7 +314,7 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
 
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>SQLCHAR、SQLNCHAR、または SQLBINARY データの一括インポート
 
-OPENROWSET(BULK...) では、指定がない場合、SQLCHAR、SQLNCHAR、および SQLBINARY データの最大の長さが 8000 バイトを超えないものと想定されます。 インポートされるデータが 8000 バイトを超える **varchar(max)** 、**nvarchar(max)** 、または **varbinary(max)** オブジェクトを含む LOB データ フィールドにある場合、XML フォーマット ファイルを使用してそのデータ フィールドの最大の長さを定義する必要があります。 最大の長さを指定するには、フォーマット ファイルを編集して MAX_LENGTH 属性を宣言します。
+OPENROWSET(BULK...) では、指定がない場合、SQLCHAR、SQLNCHAR、および SQLBINARY データの最大の長さが 8000 バイトを超えないものと想定されます。 インポートされるデータが 8000 バイトを超える **varchar(max)** 、 **nvarchar(max)** 、または **varbinary(max)** オブジェクトを含む LOB データ フィールドにある場合、XML フォーマット ファイルを使用してそのデータ フィールドの最大の長さを定義する必要があります。 最大の長さを指定するには、フォーマット ファイルを編集して MAX_LENGTH 属性を宣言します。
 
 > [!NOTE]
 > 自動生成されたフォーマット ファイルには、LOB フィールドの長さまたは最大長の指定がありません。 ただし、手作業でフォーマット ファイルを編集して長さまたは最大の長さを指定できます。
@@ -520,43 +520,18 @@ WITH ( TYPE = BLOB_STORAGE,
 );
 
 INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
+> Azure SQL Database でサポートされるのは、SAS トークンを使用した Azure Blob Storage からの読み取りのみです。
 
-ストレージ アカウントにアクセスする別の方法として、[マネージド ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) を使用することもできます。 これを行うには、[手順 1 から 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) に従って、マネージド ID を使用してストレージにアクセスするように SQL Database を構成します。その後、次のようにコード サンプルを実装できます。
-```sql
---> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
-GO
-
---> Change to using Managed Identity instead of SAS key 
-CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
-GO
-
-CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
-WITH ( TYPE = BLOB_STORAGE,
-          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
-          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
-);
-
-INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
-```
 ### <a name="additional-examples"></a>その他の例
 
 `INSERT...SELECT * FROM OPENROWSET(BULK...)` のその他の使用例については、次のトピックをご覧ください。

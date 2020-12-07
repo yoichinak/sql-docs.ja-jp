@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37a7a0e8be59136eb3ab6e0454c7910b9c9e3198
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352918"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726163"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  指定されたデータマイニングオブジェクトを処理します。 マイニングモデルとマイニング構造の処理の詳細については、「 [データマイニング&#41;&#40;処理の要件と考慮事項 ](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining)」を参照してください。  
+  指定されたデータマイニングオブジェクトを処理します。 マイニングモデルとマイニング構造の処理の詳細については、「 [データマイニング&#41;&#40;処理の要件と考慮事項 ](/analysis-services/data-mining/processing-requirements-and-considerations-data-mining)」を参照してください。  
   
  マイニング構造が指定されている場合、ステートメントはマイニング構造とそれに関連付けられているすべてのマイニングモデルを処理します。 マイニングモデルが指定されている場合、ステートメントはマイニングモデルだけを処理します。  
   
@@ -35,7 +35,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  モデル識別子。  
   
- *structure*  
+ *データ*  
  構造体識別子。  
   
  *マップされたモデル列*  
@@ -49,7 +49,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  2番目の構文形式を使用して、をに挿入 *\<object>* します。COLUMN_VALUES、モデルをトレーニングしなくても、モデル列にデータを直接挿入できます。 この方法では、階層または順序付けられた列を含むデータセットを操作する場合に便利な簡潔な順序で列データをモデルに提供します。  
   
- **INSERT INTO**をマイニングモデルまたはマイニング構造と共に使用し、引数と引数を省略した場合、 \<mapped model columns> \<source data query> 既に存在するバインドを使用して、ステートメントは**processdefault**のように動作します。 バインドが存在しない場合、ステートメントはエラーを返します。 **Processdefault**の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)」を参照してください。 構文の例を次に示します。  
+ **INSERT INTO**をマイニングモデルまたはマイニング構造と共に使用し、引数と引数を省略した場合、 \<mapped model columns> \<source data query> 既に存在するバインドを使用して、ステートメントは**processdefault**のように動作します。 バインドが存在しない場合、ステートメントはエラーを返します。 **Processdefault**の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)」を参照してください。 構文の例を次に示します。  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -124,5 +124,4 @@ AS [Models]
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

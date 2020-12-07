@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a13617ec599390718e5c56222fb40b5e78f384fd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245121"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892072"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4:子レポートのデータ接続とデータ テーブルを定義する
 親レポートを設計した後は、子レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2014 データベースを使用します。  
@@ -62,7 +62,7 @@ ms.locfileid: "87245121"
     > [!WARNING]  
     > **[更新を直接データベースに送信するためのメソッドを作成する (GenerateDBDirectMethods)]** は、必ずオフにしてください。  
   
-    これで、レポート用のデータ ソースとして ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) を構成する作業は完了です。 Visual Studio の [データセット デザイナー] ページに、追加した **DataTable** にクエリで指定した列が表示されます。 DataSet2 には、クエリに基づいて PurhcaseOrderDetail テーブルのデータが含まれています。  
+    これで、レポート用のデータ ソースとして ADO.NET [DataTable](/dotnet/api/system.data.datatable) を構成する作業は完了です。 Visual Studio の [データセット デザイナー] ページに、追加した **DataTable** にクエリで指定した列が表示されます。 DataSet2 には、クエリに基づいて PurhcaseOrderDetail テーブルのデータが含まれています。  
   
 11. ファイルを保存します。  
   
@@ -70,5 +70,3 @@ ms.locfileid: "87245121"
   
 ## <a name="next-task"></a>次の作業  
 これで、子レポートのデータ接続とデータ テーブルを作成できました。 次は、レポート ウィザードを使用して子レポートを設計します。 「[レッスン 5:レポート ウィザードを使用して子レポートを設計する](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)」を参照してください。  
-  
-

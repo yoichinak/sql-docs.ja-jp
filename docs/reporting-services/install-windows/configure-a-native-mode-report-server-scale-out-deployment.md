@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7730435d762d6e9e9bc4690dbdc644f0801fe20a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460004"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890871"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>ネイティブ モード レポート サーバーのスケールアウト配置の構成
 
@@ -62,7 +62,7 @@ SQL Server 2016 Reporting Services 以前の場合、SharePoint モードのレ�
   
          サーバー インスタンスを共有データベースに接続するときにデータベースの互換性エラーが発生しないようにするには、すべてのインスタンスが同じバージョンであることを確認します。 たとえば、SQL Server 2016 レポート サーバー インスタンスを使用してレポート サーバー データベースを作成する場合は、同じ配置の他のすべてのインスタンスも SQL Server 2016 である必要があります。  
   
-    -   Reporting Services 構成マネージャーを使用して、各レポート サーバーを共有データベースに接続します。 一度に接続および構成できるレポート サーバーは、1 つだけです。  
+    -   レポート サーバー構成マネージャーを使用して、各レポート サーバーを共有データベースに接続します。 一度に接続および構成できるレポート サーバーは、1 つだけです。  
   
     -   Reporting Services 構成ツールを使用して、レポート サーバー データベースに既に接続されている最初のレポート サーバー インスタンスに新しいレポート サーバー インスタンスを追加してスケールアウトを完了します。  
   

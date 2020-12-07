@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 799e3f877f2a92fb0b476037f08013e624f2d518
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 58cc14aaa1dace81c3711dfd6bb7d9a24664165d
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458184"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891742"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>データ ソースの変換 (レポート ビルダーおよび SSRS)
   レポート データ ペインの各データ ソースは、レポートに固有のものとして埋め込まれている場合と、共有されている場合とがあります。 レポート ビルダーにおける共有データ ソースの参照先は、レポート サーバー上または SharePoint サイト上にパブリッシュされた共有データ ソースです。 レポート デザイナーにおける共有データ ソースの参照先は、ソリューション エクスプローラーの **[共有データ ソース]** フォルダーに表示される共有データ ソースです。  
   
- 埋め込みデータ ソースと共有データ ソースの相違点の詳細については、「[埋め込みおよび共有のデータ接続またはデータ ソース &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)」を参照してください。  
+ 埋め込みデータ ソースと共有データ ソースの相違点の詳細については、「[埋め込みおよび共有のデータ接続またはデータ ソース &#40;レポート ビルダーおよび SSRS&#41;](./data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
- 共有データ ソースの作成方法の詳細については、「[埋め込みデータ ソースまたは共有データ ソースを作成する &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)」を参照してください。  
+ 共有データ ソースの作成方法の詳細については、「[埋め込みデータ ソースまたは共有データ ソースを作成する &#40;SSRS&#41;](/previous-versions/sql/)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -63,5 +63,4 @@ ms.locfileid: "86458184"
 ## <a name="see-also"></a>参照  
  [レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)   
  [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
   

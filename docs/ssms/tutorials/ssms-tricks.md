@@ -1,12 +1,12 @@
 ---
 title: SSMS 使用のヒントとテクニック
 description: SQL Server Management Studio でコードをコメント化する、コードのコメント化を解除する、テキストをインデントする、オブジェクトをフィルター処理する、エラー ログにアクセスする、SQL Server インスタンス名を見つける方法について説明します。
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
@@ -19,43 +19,43 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 1f05ea22f092573364e663165559be73857ca320
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462346"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038919"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) の使用に関するヒントとテクニック
 
-この記事では、SQL Server Management Studio (SSMS) の使用に関するいくつかのヒントとテクニックをご紹介します。 この記事で取り上げるテクニック: 
+この記事では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) を使用するためのヒントとテクニックについて説明します。 この記事で取り上げるテクニック: 
 
 > [!div class="checklist"]
 > * Transact-SQL (T-SQL) のテキストをコメント化する/コメント解除する
 > * テキストをインデントする
 > * オブジェクト エクスプローラーでオブジェクトにフィルターを適用する
-> * SQL Server のエラー ログにアクセスする
-> * 使っている SQL Server インスタンスの名前を調べる
+> * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログにアクセスする
+> * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を検索する
 
 ## <a name="prerequisites"></a>前提条件
 
-この記事に記載されている手順をテストするには、SQL Server Management Studio、SQL サーバーへのアクセス、AdventureWorks データベースが必要です。 
+この記事に記載されている手順をテストするには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQL サーバーへのアクセス、および AdventureWorks データベースが必要です。 
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
-* [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
-* [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 SSMS でデータベースを復元する方法については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+* [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md) をインストールします。
+* [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
+* [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 SSMS でデータベースを復元する方法については、[データベースの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)に関するページを参照してください。 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>T-SQL コードをコメント化する/コメント解除する
 
 ツール バーの **[コメント]** ボタンを使用し、テキストの一部をコメント化したり、コメント化を解除したりできます。 コメント化されたテキストは実行されません。
 
-1. SQL Server Management Studio を開きます。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開きます。
 
 2. SQL Server に接続します。
 
 3. [新しいクエリ] ウィンドウを開きます。
 
-4. 次の T-SQL コードをテキスト ウィンドウに貼り付けます。
+4. 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] をテキスト ウィンドウに貼り付けます。
 
     ```sql
     USE master
@@ -105,7 +105,7 @@ ms.locfileid: "84462346"
 
 1. [新しいクエリ] ウィンドウを開きます。
 
-2. 次の T-SQL コードをテキスト ウィンドウに貼り付けます。
+2. 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードをテキスト ウィンドウに貼り付けます。
 
     ```sql
     USE master
@@ -163,11 +163,11 @@ ms.locfileid: "84462346"
 
 ## <a name="access-your-sql-server-error-log"></a>SQL Server のエラー ログにアクセスする
 
-エラー ログは、SQL Server インスタンス内で発生したことに関する詳細な情報を含むファイルです。 SSMS では、エラー ログを参照したり、クエリを実行したりできます。 エラー ログは、ディスクに置かれている .log ファイルです。
+エラー ログは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内で発生したことに関する詳細な情報を含むファイルです。 SSMS では、エラー ログを参照したり、クエリを実行したりできます。 エラー ログは、ディスクに置かれている .log ファイルです。
 
 ### <a name="open-the-error-log-in-ssms"></a>SSMS でエラー ログを開く
 
-1. SQL Server に接続します。  
+1. ご利用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します  
 
 2. **[管理]**  >  **[SQL Server ログ]** の順に展開します。 
 
@@ -181,7 +181,7 @@ ms.locfileid: "84462346"
 
 2. [新しいクエリ] ウィンドウを開きます。
 
-3. 次の T-SQL コードをクエリ ウィンドウに貼り付けます。
+3. 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードをクエリ ウィンドウに貼り付けます。
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
@@ -195,11 +195,11 @@ ms.locfileid: "84462346"
 
 ### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>SQL Server に接続されている場合にエラー ログの場所を検索する
 
-1. SQL Server に接続します。
+1. ご利用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します
 
 2. [新しいクエリ] ウィンドウを開きます。
 
-3. クエリ ウィンドウに次の T-SQL コードを貼り付け、 **[実行]** を選択します。
+3. クエリ ウィンドウに次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを貼り付けて、 **[実行]** を選択します。
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -211,13 +211,13 @@ ms.locfileid: "84462346"
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>SQL Server に接続できない場合にエラー ログの場所を検索する
 
-SQL Server のエラー ログのパスは、構成設定によって異なる場合があります。 エラー ログの場所のパスは、SQL Server 構成マネージャー内の、起動時のパラメーターで確認できます。 次の手順に従って、SQL Server のエラー ログの場所を特定するための、関連する起動時のパラメーターを見つけます。 "*ユーザーのパスは次に示されるパスとは異なる場合があります*"。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログのパスは、構成設定によって異なる場合があります。 エラー ログの場所のパスは、SQL Server 構成マネージャー内の、起動時のパラメーターで確認できます。 次の手順に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログの場所を特定するための、関連する起動時のパラメーターを見つけます。 "*ユーザーのパスは次に示されるパスとは異なる場合があります*"。
 
 1. SQL Server 構成マネージャーを開きます。
 
 2. **[サービス]** を展開します。
 
-3. SQL Server インスタンスを右クリックし、 **[プロパティ]** を選択します。
+3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを右クリックして、 **[プロパティ]** を選択します。
 
     ![構成マネージャー サーバーのプロパティ](media/ssms-tricks/serverproperties.PNG)
 
@@ -227,13 +227,13 @@ SQL Server のエラー ログのパスは、構成設定によって異なる�
 
     ![エラー ログ](media/ssms-tricks/errorlog.png)
 
-    この場所には複数の errorlog.* ファイルがあります。 *.log で終わるファイル名が現在のエラー ログ ファイルです。 数字で終わるファイル名は以前のログ ファイルです。 SQL Server が再起動するたびに新しいログが作成されます。
+    この場所には複数のエラー ログ ファイルがあります。 *.log で終わるファイル名が現在のエラー ログ ファイルです。 数字で終わるファイル名は以前のログ ファイルです。 SQL Server が再起動するたびに新しいログが作成されます。
 
-6. メモ帳で errorlog.log ファイルを開きます。 
+6. メモ帳で errorlog.log ファイルを開きます。
 
-## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>SQL Server インスタンス名を見つける
+## <a name="find-sql-server-instance-name"></a>SQL Server インスタンス名を見つける
 
-SQL Server に接続する前に、あるいは接続した後に、いくつかの方法で SQL server の名前を検索できます。  
+SQL Server に接続する前に、あるいは接続した後に、いくつかの方法で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前を検索できます。  
 
 ### <a name="before-you-connect-to-sql-server"></a>SQL Server に接続する前
 
@@ -243,7 +243,7 @@ SQL Server に接続する前に、あるいは接続した後に、いくつか
 
 3. *Server name is* というテキストを探します。
 
-    単一引用符で囲まれているのが、これから接続する SQL Server インスタンスの名前です。
+    単一引用符で囲まれているのが、これから接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前です。
 
     ![エラー ログでサーバー名を見つける](media/ssms-tricks/servernameinlog.png)
 
@@ -251,7 +251,7 @@ SQL Server に接続する前に、あるいは接続した後に、いくつか
 
 ### <a name="when-youre-connected-to-sql-server"></a>SQL Server に接続しているとき
 
-SQL Server に接続しているとき、3 か所でサーバー名が見つかります。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続しているとき、3 か所でサーバー名が見つかります。 
 
 1. サーバーの名前はオブジェクト エクスプローラーに表示されます。
 
@@ -266,19 +266,19 @@ SQL Server に接続しているとき、3 か所でサーバー名が見つか�
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>別名または可用性グループ リスナーに接続している場合
 
-別名または可用性グループ リスナーに接続している場合、その情報がオブジェクト エクスプローラーとプロパティに表示されます。 その場合、SQL Server の名前はすぐにはわからないことがあり、クエリを行う必要があります。
+別名または可用性グループ リスナーに接続している場合、その情報がオブジェクト エクスプローラーとプロパティに表示されます。 その場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前はすぐにはわからないことがあり、クエリを行う必要があります。
 
 1. SQL Server に接続します。
 
 2. [新しいクエリ] ウィンドウを開きます。
 
-3. 次の T-SQL コードをウィンドウに貼り付けます。
+3. 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを新しいファイルに貼り付けます。
 
       ```sql
        select @@Servername
      ```
 
-4. クエリの結果を見て、接続している SQL Server インスタンスの名前を確認します。 
+4. クエリの結果を見て、接続している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を確認します。 
 
     ![SQL Server 名を問い合わせる](media/ssms-tricks/queryservername.png)
 
@@ -286,7 +286,7 @@ SQL Server に接続しているとき、3 か所でサーバー名が見つか�
 
 SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。  以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 
-* [インスタンスに接続してクエリを実行する](connect-query-sql-server.md)
+* [インスタンスに接続してクエリを実行する](../quickstarts/connect-query-sql-server.md)
 * [スクリプトの作成](scripting-ssms.md)
 * [SSMS でテンプレートを使用する](../template/templates-ssms.md)
 * [SSMS を構成する](ssms-configuration.md)

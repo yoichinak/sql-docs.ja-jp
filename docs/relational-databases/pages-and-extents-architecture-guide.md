@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991853"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439396"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>ページとエクステントのアーキテクチャ ガイド
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,8 +85,8 @@ varchar 型、nvarchar 型、varbinary 型、または sql_variant 型の列を�
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、2 種類のエクステントがあります。 
 
-* **単一**エクステントは、単一のオブジェクトに所有され、所有しているオブジェクトだけがエクステント内の 8 ページすべてを使用できます。
-* **混合**エクステントは最大 8 つのオブジェクトによって共有されます。 エクステント内の各 8 ページを、それぞれ異なるオブジェクトが所有できます。
+* **単一** エクステントは、単一のオブジェクトに所有され、所有しているオブジェクトだけがエクステント内の 8 ページすべてを使用できます。
+* **混合** エクステントは最大 8 つのオブジェクトによって共有されます。 エクステント内の各 8 ページを、それぞれ異なるオブジェクトが所有できます。
 
 ![単一エクステントと混合エクステント](../relational-databases/media/extents.gif)
 
@@ -97,7 +97,7 @@ varchar 型、nvarchar 型、varbinary 型、または sql_variant 型の列を�
 > [!NOTE]
 > [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] までは、トレース フラグ 1118 を使用して、常に単一エクステントを使用するように既定の割り当てを変更できます。 このトレースフラグの詳細については、「[DBCC TRACEON - トレース フラグ](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。   
 >   
-> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降では、TF 1118 によって提供される機能が tempdb に対して自動的に有効になります。 ユーザー データベースの場合、この動作は `ALTER DATABASE` の `SET MIXED_PAGE_ALLOCATION` オプションによって制御され、既定値は OFF に設定され、トレース フラグ 1118 には効果がありません。 詳細については、「[ALTER DATABASE SET オプション (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降では、TF 1118 によって提供される機能が tempdb およびすべてのデータベースに対して自動的に有効になります。 ユーザー データベースの場合、この動作は `ALTER DATABASE` の `SET MIXED_PAGE_ALLOCATION` オプションによって制御され、既定値は OFF に設定され、トレース フラグ 1118 には効果がありません。 詳細については、「[ALTER DATABASE SET オプション (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降では、`sys.dm_db_database_page_allocations` システム関数を使用して、データベース、テーブル、インデックス、パーティションに対するページ割り当て情報を取得できます。
 
@@ -182,7 +182,7 @@ IAM ページはアロケーション ユニットごとに必要に応じて割
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]によりアロケーション ユニットに新しいエクステントが割り当てられるのは、挿入する行を格納するのに必要な空き領域のあるページが既存のエクステントの中ですぐに見つからない場合のみです。 
 
-<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は**比例配分割り当てアルゴリズム**を使用して、ファイル グループ内の利用可能なエクステントからエクステントを割り当てます。 同じファイル グループに 2 つのファイルがあり、一方のファイルにもう一方の 2 倍の空き領域がある場合は、空きが少ないファイルから 1 ページ割り当てられるごとに、空きが多いファイルからは 2 ページが割り当てられます。 したがって、ファイル グループ内のすべてのファイルは、使用済み領域のパーセンテージがほとんど同じになります。 
+<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は **比例配分割り当てアルゴリズム** を使用して、ファイル グループ内の利用可能なエクステントからエクステントを割り当てます。 同じファイル グループに 2 つのファイルがあり、一方のファイルにもう一方の 2 倍の空き領域がある場合は、空きが少ないファイルから 1 ページ割り当てられるごとに、空きが多いファイルからは 2 ページが割り当てられます。 したがって、ファイル グループ内のすべてのファイルは、使用済み領域のパーセンテージがほとんど同じになります。 
 
 ## <a name="tracking-modified-extents"></a>変更されたエクステントの追跡 
 

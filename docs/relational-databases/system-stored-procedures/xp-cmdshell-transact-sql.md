@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3333e8d26c6f79bc3f99298e2854f05789caac9f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f545d556069e31e349c0a8badf0fd9d95e6dcef
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541049"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257609"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,14 +65,15 @@ The command(s) completed successfully.
   
 ## <a name="remarks"></a>解説  
  **Xp_cmdshell**によって生成される Windows プロセスには、サービスアカウントと同じセキュリティ権限が与えられ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+ 
+> [!IMPORTANT]
+>  **xp_cmdshell** は非常に強力な機能であり、既定で無効になっています。 **xp_cmdshell** を有効または無効にするには、ポリシーベースの管理を使用するか、 **sp_configure**を実行します。 詳細については、「 [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md) 」および「 [Xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
   
- **xp_cmdshell** は同期的に動作します。 コマンドシェルのコマンドが完了するまで、コントロールは呼び出し元に返されません。  
-  
- **xp_cmdshell** を有効または無効にするには、ポリシーベースの管理を使用するか、 **sp_configure**を実行します。 詳細については、「 [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md) 」および「 [Xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
-  
+ **xp_cmdshell** は同期的に動作します。 コマンドシェルのコマンドが完了するまで、コントロールは呼び出し元に返されません。 
+ 
 > [!IMPORTANT]
 >  バッチ内で **xp_cmdshell** が実行され、エラーが返された場合、バッチは失敗します。 これは動作の変更です。 以前のバージョンのでは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、バッチは引き続き実行されます。  
-  
+ 
 ## <a name="xp_cmdshell-proxy-account"></a>xp_cmdshell プロキシアカウント  
  **Sysadmin**固定サーバーロールのメンバーではないユーザーによって呼び出された場合、 **xp_cmdshell**は、" **# #xp_cmdshell_proxy_account # #**" という名前の資格情報に格納されているアカウント名とパスワードを使用して Windows に接続します。 このプロキシ資格情報が存在しない場合、 **xp_cmdshell** は失敗します。  
   

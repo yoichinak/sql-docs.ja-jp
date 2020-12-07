@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a031fdb7c4a71c26990d26a524e5a75ac784565
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a894198a994f98f9bcb2586c9b1b6a1428f562c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901873"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867910"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>マージ レプリケーションの詳細 - 競合の検出および解決
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "85901873"
  競合を表示する最も簡単な方法はレプリケーション競合表示モジュールを使用することです。このモジュールは [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] から使用できます ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、競合テーブルに対してクエリを実行するためのストアド プロシージャも用意されています)。 競合表示モジュールはインタラクティブ競合回避モジュールに似たツールです。ただし、インタラクティブ競合回避モジュールが同期実行時の競合の解決に使用されるのに対し、競合表示モジュールは解決後の競合の表示を目的として設計されています。 競合メタデータがシステム テーブルでまだ利用可能な場合 (競合メタデータの既定の保持期間は 14 日間)、競合表示モジュールを使用して競合の解決結果をオーバーライドできます。ただし、直接的な介入が定期的に必要となる場合は、インタラクティブ競合回避モジュールの使用を検討してください。  
   
 > [!NOTE]  
->  論理レコードに関連する競合は、競合表示モジュールに表示されません。 これらの競合に関する情報を表示するには、レプリケーション ストアド プロシージャを使用します。 詳細については、「[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)」を参照してください。  
+>  論理レコードに関連する競合は、競合表示モジュールに表示されません。 これらの競合に関する情報を表示するには、レプリケーション ストアド プロシージャを使用します。 詳細については、「[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../view-and-resolve-data-conflicts-for-merge-publications.md)」を参照してください。  
   
  競合表示モジュールには、次に示す 3 つのシステム テーブルの情報が表示されます。  
   
@@ -148,9 +148,8 @@ ms.locfileid: "85901873"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[マージ パブリケーションでのデータの競合の表示および解決 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング:[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング:[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 ## <a name="see-also"></a>参照  
  [データの同期](../../../relational-databases/replication/synchronize-data.md)  
-  
   

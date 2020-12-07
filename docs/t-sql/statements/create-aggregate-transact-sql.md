@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c6ae2579cad1a04239f6d4abc4691982a49d0ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547552"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126211"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,7 +93,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  EXTERNAL NAME 句で指定されているアセンブリ上に CREATE AGGREGATE 権限と REFERENCES 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例は、StringUtilities.csproj サンプル アプリケーションがコンパイルされていることを前提としています。 詳細については、「[文字列ユーティリティ関数サンプル](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c)」を参照してください。  
+ 次の例は、StringUtilities.csproj サンプル アプリケーションがコンパイルされていることを前提としています。 詳細については、「[文字列ユーティリティ関数サンプル](/previous-versions/sql/sql-server-2016/ff878119(v=sql.130))」を参照してください。  
   
  この例は集計 `Concatenate` を作成します。 集計が作成される前に、アセンブリ `StringUtilities.dll` がローカル データベースに登録されます。  
   
@@ -120,5 +120,4 @@ GO
   
 ## <a name="see-also"></a>参照  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
-  
   

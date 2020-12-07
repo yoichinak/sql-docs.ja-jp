@@ -2,19 +2,19 @@
 title: Azure Kubernetes Services (AKS) を使用して SQL Server コンテナーを配置する
 description: このチュートリアルでは、Azure Kubernetes Service で Kubernetes を使用して SQL Server 高可用性ソリューションを配置する方法について説明します。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4da229070afa69dc9f6f181ada1db21bc87b713b
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: db9b5c98bd073fcf92f7fd93a24c551f5bca0804
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89424412"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810522"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes Services (AKS) を使用して Kubernetes に SQL Server コンテナーを配置する
 
@@ -52,7 +52,7 @@ Kubernetes 1.6 以降では、[ストレージ クラス](https://kubernetes.io/
 * **Kubernetes クラスター**
    - このチュートリアルでは、Kubernetes クラスターが必要です。 この手順では、[kubectl](https://kubernetes.io/docs/user-guide/kubectl/) を使用してクラスターを管理します。 
 
-   - `kubectl` を使って AKS に単一ノード Kubernetes クラスターを作成して接続する方法については、[Azure Kubernetes Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)に関する記事をご覧ください。 
+   - `kubectl` を使って AKS に単一ノード Kubernetes クラスターを作成して接続する方法については、[Azure Kubernetes Service (AKS) クラスターのデプロイ](/azure/aks/tutorial-kubernetes-deploy-cluster)に関する記事をご覧ください。 
 
    >[!NOTE]
    >ノード障害から保護するため、Kubernetes クラスターには複数のノードが必要です。
@@ -66,7 +66,7 @@ Kubernetes クラスターで SA パスワードを作成します。 Kubernetes
 
 次のコマンドでは、SA アカウントのパスワードが作成されます。
 
-   ```azurecli
+   ```console
    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```  
 
@@ -85,7 +85,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
    ```yaml
    kind: StorageClass
-   apiVersion: storage.k8s.io/v1beta1
+   apiVersion: storage.k8s.io/v1
    metadata:
         name: azure-disk
    provisioner: kubernetes.io/azure-disk
@@ -111,7 +111,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
 1. Kubernetes で永続ボリューム要求を作成します。
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
@@ -123,7 +123,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
 1. 永続ボリューム要求を確認します。
 
-   ```azurecli
+   ```console
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
@@ -131,7 +131,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
    前のステップでは、永続ボリューム要求に `mssql-data` という名前が指定されています。 永続ボリューム要求に関するメタデータを表示するには、次のコマンドを実行します。
 
-   ```azurecli
+   ```console
    kubectl describe pvc mssql-data
    ```
 
@@ -145,7 +145,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
 1. 永続ボリュームを確認します。
 
-   ```azurecli
+   ```console
    kubectl describe pv
    ```
 
@@ -175,6 +175,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
            app: mssql
        spec:
          terminationGracePeriodSeconds: 30
+         hostname: mssqlinst
          securityContext:
            fsGroup: 10001
          containers:
@@ -243,7 +244,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
 1. 配置を作成します。
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
@@ -264,7 +265,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
 1. サービスが実行されていることを確認します。 次のコマンドを実行します。
 
-   ```azurecli
+   ```console
    kubectl get services 
    ```
 
@@ -280,13 +281,13 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
 1. 次のコマンドを実行する方法でも、コンテナーが非ルートとして実行されていることを確認できます。
 
-    ```azurecli
+    ```console
     kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
     ```
 
     次に 'whoami' を実行します。mssql としてユーザー名が表示されるはずです。 これは非ルート ユーザーです。
 
-    ```azurecli
+    ```console
     whoami
     ```
 
@@ -296,9 +297,9 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
 次のアプリケーションを使って、SQL Server インスタンスに接続できます。 
 
-* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](./sql-server-linux-manage-ssms.md)
 
-* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](./sql-server-linux-develop-use-ssdt.md)
 
 * sqlcmd
 
@@ -319,7 +320,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
 1. SQL Server が実行されているポッドの一覧を表示します。
 
-   ```azurecli
+   ```console
    kubectl get pods
    ```
 
@@ -327,7 +328,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
 1. ポッドを削除します。
 
-   ```azurecli
+   ```console
    kubectl delete pod mssql-deployment-0
    ```
 
@@ -349,4 +350,4 @@ Kubernetes では、ポッドが自動的に再作成されて SQL Server イン
 ## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
->[Kubernetes の概要](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Kubernetes の概要](/azure/aks/intro-kubernetes)

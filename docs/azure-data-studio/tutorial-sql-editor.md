@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: bd604ea3ad643aa7f70d0be2a1ee7727810b6705
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: e2c200bc57bc62a54a9850e85e13b9c9f15c49f0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745712"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243381"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>チュートリアル:Transact-SQL エディターを使用してデータベース オブジェクトを作成する - Azure Data Studio
 
@@ -38,9 +38,9 @@ ms.locfileid: "88745712"
 
 ## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>データベース オブジェクトを簡単に見つけ、一般的タスクを実行する
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] には、データベース オブジェクトを簡単に見つけるための検索ウィジェットがあります。 結果一覧からは、テーブルの*データ編集*など、選択したオブジェクトに関連する一般的タスクのコンテキスト メニューが与えられます。
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] には、データベース オブジェクトを簡単に見つけるための検索ウィジェットがあります。 結果一覧からは、テーブルの *データ編集* など、選択したオブジェクトに関連する一般的タスクのコンテキスト メニューが与えられます。
 
-1. [サーバー] サイドバーを開き (**Ctrl + G**)、 **[データベース]** を展開し、 **[TutorialDB]** を選択します。 
+1. [サーバー] サイドバーを開き ( **Ctrl + G** )、 **[データベース]** を展開し、 **[TutorialDB]** を選択します。 
 
 1. **[TutorialDB]** を右クリックし、コンテキスト メニューから **[管理]** を選択することで *[TutorialDB ダッシュボード]* を開きます。
 
@@ -53,7 +53,7 @@ ms.locfileid: "88745712"
 
    ![クイック検索ウィジェット](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 最初の行の **[電子メール]** 列を編集して「*orlando0\@adventure-works.com*」と入力し、**Enter** キーを押して変更を保存します。
+1. 最初の行の **[電子メール]** 列を編集して「 *orlando0\@adventure-works.com* 」と入力し、 **Enter** キーを押して変更を保存します。
 
    ![データの編集](./media/tutorial-sql-editor/edit-data.png)
 
@@ -64,13 +64,13 @@ Azure Data Studio には、ステートメントを簡単に作成するため�
 
 1. **Ctrl + N** を押し、新しいクエリ エディターを開きます。
 
-2. エディターに「**sql**」と入力し、矢印を下に押して **[sqlCreateStoredProcedure]** を見つけ、*Tab* キー (または *Enter*) を押して create ストアド プロシージャ スニペットを読み込みます。
+2. エディターに「 **sql** 」と入力し、矢印を下に押して **[sqlCreateStoredProcedure]** を見つけ、 *Tab* キー (または *Enter* ) を押して create ストアド プロシージャ スニペットを読み込みます。
 
-   ![スニペットの一覧](./media/tutorial-sql-editor/snippet-list.png)
+   ![エディターでの sql 型のクエリ エディターで sqlCreateStoredProcedure オプションが強調表示されているスクリーンショット。](./media/tutorial-sql-editor/snippet-list.png)
 
-3. create ストアド プロシージャには、簡単に編集するためのフィールドが 2 つ設定されています。*StoredProcedureName* と *SchemaName* です。 *[StoredProcedureName]* を選択し、右クリックし、 **[すべての出現箇所を変更]** を選択します。 ここで「*getCustomer*」と入力すると、*StoredProcedureName* エントリがすべて、*getCustomer* に変わります。
+3. create ストアド プロシージャには、簡単に編集するためのフィールドが 2 つ設定されています。 *StoredProcedureName* と *SchemaName* です。 *[StoredProcedureName]* を選択し、右クリックし、 **[すべての出現箇所を変更]** を選択します。 ここで「 *getCustomer* 」と入力すると、 *StoredProcedureName* エントリがすべて、 *getCustomer* に変わります。
 
-   ![スニペット](./media/tutorial-sql-editor/snippet.png)
+   ![クエリ エディターで [すべての出現箇所を変更] オプションが強調表示されているスクリーンショット。](./media/tutorial-sql-editor/snippet.png)
 
 5. *SchemaName* が出現する箇所をすべて *dbo* に変更します。 
 6. このスニペットには、更新を必要とするプレースホルダー パラメーターと本文テキストが含まれています。 *EXECUTE* ステートメントには、プレースホルダー テキストも含まれています。プロシージャに与えられるパラメーターの数がわからないためです。 このチュートリアルのために、次のコードのようになるようにスニペットを更新します。
@@ -106,7 +106,7 @@ Azure Data Studio には、ステートメントを簡単に作成するため�
     GO
     ```
     
-5. ストアド プロシージャを作成し、テスト実行するには、**F5** を押します。
+5. ストアド プロシージャを作成し、テスト実行するには、 **F5** を押します。
 
 これでストアド プロシージャが作成され、 **[結果]** ペインに返された顧客が JSON で表示されます。 書式設定された JSON を表示するには、返されたレコードをクリックします。 
 
@@ -117,8 +117,8 @@ Azure Data Studio では、[定義をここに表示] 機能を使用して、�
 
 1. **Ctrl + N** を押し、新しいエディターを開きます。 
 
-2. エディターに「*sql*」と入力し、矢印を下に押して *[sqlCreateStoredProcedure]* を見つけ、*Tab* キー (または *Enter*) を押して create ストアド プロシージャ スニペットを読み込みます。
-3. *[StoredProcedureName]* に「*setCustomer*」と入力し、 *[SchemaName]* に「*dbo*」と入力します。
+2. エディターに「 *sql* 」と入力し、矢印を下に押して *[sqlCreateStoredProcedure]* を見つけ、 *Tab* キー (または *Enter* ) を押して create ストアド プロシージャ スニペットを読み込みます。
+3. *[StoredProcedureName]* に「 *setCustomer* 」と入力し、 *[SchemaName]* に「 *dbo* 」と入力します。
 
 3. @param プレースホルダーを次のパラメーター定義に置き換えます。
 
@@ -177,7 +177,7 @@ Azure Data Studio では、[定義をここに表示] 機能を使用して、�
    GO
    ```
 
-8. *setCustomer* ストアド プロシージャを作成するには、**F5** を押します。
+8. *setCustomer* ストアド プロシージャを作成するには、 **F5** を押します。
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>クエリ結果を JSON として保存し、setCustomer ストアド プロシージャをテストする
 
@@ -192,7 +192,7 @@ Azure Data Studio では、[定義をここに表示] 機能を使用して、�
 
 4. エディターで JSON データを選択してコピーします。
 5. **Ctrl + N** を押し、新しいエディターを開きます。
-6. 前の手順からは、*setCustomer* プロシージャを呼び出せるように正しく書式設定されたデータを簡単に得る方法がわかります。 次のコードでは、新しい顧客詳細で同じ JSON フォーマットを使用しています。そのため、*setCustomer* プロシージャをテストできます。 ステートメントには、パラメーターを宣言し、新しい get プロシージャと set プロシージャを実行する構文が含まれています。 前のセクションからコピーしたデータを貼り付け、次の例と同じになるように編集できます。あるいは、クエリ エディターに次のステートメントを単純に貼り付けてください。
+6. 前の手順からは、 *setCustomer* プロシージャを呼び出せるように正しく書式設定されたデータを簡単に得る方法がわかります。 次のコードでは、新しい顧客詳細で同じ JSON フォーマットを使用しています。そのため、 *setCustomer* プロシージャをテストできます。 ステートメントには、パラメーターを宣言し、新しい get プロシージャと set プロシージャを実行する構文が含まれています。 前のセクションからコピーしたデータを貼り付け、次の例と同じになるように編集できます。あるいは、クエリ エディターに次のステートメントを単純に貼り付けてください。
 
    ```sql
    -- example to execute the stored procedure we just created
@@ -225,7 +225,7 @@ Azure Data Studio では、[定義をここに表示] 機能を使用して、�
 > * [定義をここに表示] と [定義へ移動] を使用し、データベース オブジェクトの詳細を確認する
 
 
-**最低速 5 つのクエリ**を有効にする方法については、次のチュートリアルを完了してください。
+**最低速 5 つのクエリ** を有効にする方法については、次のチュートリアルを完了してください。
 
 > [!div class="nextstepaction"]
 > [最低速クエリのサンプル分析情報ウィジェットを有効にする](tutorial-qds-sql-server.md)

@@ -22,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 3021389a5223cd45ef7fb2b0b2dba72c51ba7235
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 0b6f9130a4250bdb6f9c250bacbcaaa3943eeef3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226868"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810503"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
@@ -56,7 +56,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 > [!NOTE]  
 >  Azure の接続試行は、このフィールドと *start_ip_address* フィールドの両方がと等しい場合に許可され `0.0.0.0` ます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  データベースに対するデータベースレベルのファイアウォール設定の名前は一意である必要があります。 ストアド プロシージャに提供されるデータベース レベルのファイアウォール設定の名前がデータベース レベルのファイアウォール設定のテーブルに既に存在する場合は、開始 IP アドレスと終了 IP アドレスが更新されます。 それ以外の場合、新しいデータベースレベルのファイアウォール設定が作成されます。  
   
  開始 IP アドレスと終了 IP アドレスがに等しいデータベースレベルのファイアウォール設定を追加すると `0.0.0.0` 、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 任意の Azure リソースからサーバー内のデータベースにアクセスできるようになります。 *名前*パラメーターに値を指定すると、ファイアウォール設定の内容を覚えやすくなります。  
@@ -84,11 +84,10 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Azure SQL Database ファイアウォール](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [方法: ファイアウォール設定を構成する (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+## <a name="see-also"></a>参照  
+ [Azure SQL Database ファイアウォール](/azure/azure-sql/database/firewall-configure)   
+ [方法: ファイアウォール設定を構成する (Azure SQL Database)](/azure/azure-sql/database/firewall-configure)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
- [database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
-  
+ [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   

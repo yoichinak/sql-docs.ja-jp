@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: この 5 部構成のチュートリアル シリーズでは、二項分類を使用して NYC タクシーの料金を予測するために、SQL 機械学習を使用して SQL Server ストアド プロシージャと T-SQL 関数に R コードを埋め込む方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f9f1b43b9c49cebaed706bf3c8448881c4df46
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173659"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585056"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R チュートリアル:二項分類を使用して NYC タクシーの料金を予測する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -33,7 +33,7 @@ SQL プログラマー向けのこの 5 部構成のチュートリアル シリ
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-SQL プログラマー向けのこの 5 部構成のチュートリアル シリーズでは、[Azure SQL Managed Instance の Machine Learning Services (プレビュー)](/azure/azure-sql/managed-instance/machine-learning-services-overview) での R 統合について説明します。
+SQL プログラマー向けのこの 5 部構成のチュートリアル シリーズでは、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) での R 統合について説明します。
 ::: moniker-end
 
 SQL Server でサンプル データベースを使用して、R ベースの機械学習ソリューションをビルドしてデプロイします。 T-SQL、Azure Data Studio または SQL Server Management Studio、およびデータベース エンジン インスタンスを SQL 機械学習と R 言語サポートと共に使用します
@@ -72,6 +72,10 @@ SQL Server でサンプル データベースを使用して、R ベースの機
 + [R ライブラリ](../package-management/r-package-information.md)をインストールする
 
 + [Python スクリプトを実行するアクセス許可を付与する](../security/user-permission.md)
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
++ SQL Server 2019 以降、この分離メカニズムを使用して、プロット ファイルが保存されるディレクトリに適切なアクセス許可を与える必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
+::: moniker-end
 
 + [NYC タクシーのデモ データベース](demo-data-nyctaxi-in-sql.md)を復元する
 

@@ -12,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bae2ef1468110ba89d77d5f7a6360aecb324abd0
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 5d6830452d32de9a1b3ca954cbaf94d7d883f1b5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076697"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038352"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 
@@ -41,7 +41,7 @@ DBCC SHRINKLOG
 SIZE = { *target_size* [ MB \| **GB** \| TB ]  } \| **DEFAULT**  
 *target_size* は、DBCC SHRINKLOG が完了した後、すべての計算ノード全体のトランザクション ログの望ましいサイズです。 0 より大きい整数です。  
 ログのサイズは、メガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) で測定されます。 すべてのコンピューティング ノードの上のトランザクション ログの合計サイズです。  
-既定では、DBCC SHRINKLOG によりトランザクション ログはデータベースのメタデータに格納されているログ サイズに縮小されます。 メタデータのログ サイズは、[CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) または [ALTER DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) の LOG_SIZE パラメーターによって決まります。 DBCC SHRINKLOG は、`SIZE=DEFAULT` が指定されている場合、または `SIZE` 句が省略されている場合、トランザクション ログのサイズを既定サイズに縮小します。
+既定では、DBCC SHRINKLOG によりトランザクション ログはデータベースのメタデータに格納されているログ サイズに縮小されます。 メタデータのログ サイズは、[CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) または [ALTER DATABASE &#40;Azure Synapse Analytics&#41;](../statements/alter-database-transact-sql.md) の LOG_SIZE パラメーターによって決まります。 DBCC SHRINKLOG は、`SIZE=DEFAULT` が指定されている場合、または `SIZE` 句が省略されている場合、トランザクション ログのサイズを既定サイズに縮小します。
   
 WITH NO_INFOMSGS  
 情報メッセージは、DBCC SHRINKLOG の結果に表示されません。  

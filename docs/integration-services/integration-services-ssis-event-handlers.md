@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e2c7fb36708d615bd19dfb2c5854748081a9dbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 235bd7cd4a46441156b4e4d2b262daf76c6faa23
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449844"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193874"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) のイベント ハンドラー
 
@@ -76,7 +76,7 @@ ms.locfileid: "88449844"
 ## <a name="run-time-events"></a>実行時イベント  
  次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で用意されているイベント ハンドラーの一覧を示します。また、イベント ハンドラーによって実行される実行時イベントについて説明します。  
   
-|イベント ハンドラー|Event|  
+|イベント ハンドラー|event|  
 |-------------------|-----------|  
 |**OnError**|**OnError** イベントのイベント ハンドラーです。 このイベントは、エラー発生時に実行可能ファイルから発生します。|  
 |**OnExecStatusChanged**|**OnExecStatusChanged** イベントのイベント ハンドラーです。 このイベントは、実行状態が変化したときに実行可能ファイルから発生します。|  
@@ -100,7 +100,7 @@ ms.locfileid: "88449844"
   
  **[イベント ハンドラー]** タブがアクティブな場合、 **デザイナーにあるツールボックスの** [制御フロー項目] **および** [メンテナンス プランのタスク] [!INCLUDE[ssIS](../includes/ssis-md.md)] ノードには、イベント ハンドラーで制御フローを作成するためのタスクとコンテナーが含まれます。 **[データ フローの変換元]**、 **[変換]**、および **[データ フローの変換先]** ノードには、イベント ハンドラーでデータ フローを作成するためのデータ ソース、変換、および変換先が含まれます。 詳細については、「 [制御フロー](../integration-services/control-flow/control-flow.md) 」と「 [データ フロー](../integration-services/data-flow/data-flow.md)」を参照してください。  
   
- **[イベント ハンドラー]** タブには、 **[接続マネージャー]** 領域も含まれ、イベント ハンドラーがサーバーおよびデータ ソースに接続するために使用する、接続マネージャーの作成および変更を行うことができます。 詳細については、「 [接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)」を参照してください。  
+ **[イベント ハンドラー]** タブには、 **[接続マネージャー]** 領域も含まれ、イベント ハンドラーがサーバーおよびデータ ソースに接続するために使用する、接続マネージャーの作成および変更を行うことができます。 詳細については、「 [接続マネージャーを作成する](./connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>[イベント ハンドラー] タブでイベント ハンドラーを追加する  
   
@@ -129,11 +129,10 @@ ms.locfileid: "88449844"
 ## <a name="set-the-properties-of-an-event-handler"></a>イベント ハンドラーのプロパティを設定する  
  プロパティを設定するには、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィンドウで行うか、またはプログラムによって設定します。  
   
- これらのプロパティを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で設定する方法については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
+ これらのプロパティを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で設定する方法については、「 [タスクまたはコンテナーのプロパティを設定する](./control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
  プログラムによってこれらのプロパティを設定する方法については、 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- パッケージにイベント ハンドラーを追加する方法については、「 [パッケージにイベント ハンドラーを追加する](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)」を参照してください。  
-  
+ パッケージにイベント ハンドラーを追加する方法については、「 [パッケージにイベント ハンドラーを追加する]()」を参照してください。  
   

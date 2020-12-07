@@ -14,15 +14,15 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7193675df9f142977325a1c198343497b9b7501
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6caab752b3edc7c56d127fb3a378a9a5a69a18b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403270"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006299"
 ---
 # <a name="multilinestring"></a>MultiLineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **MultiLineString** は、0 個以上の **geometry** または **geographyLineString** インスタンスのコレクションです。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString インスタンス  

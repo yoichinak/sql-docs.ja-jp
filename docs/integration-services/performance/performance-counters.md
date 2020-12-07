@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8cb194e8da7b64bef3cf6f33e65a5a5ee1ab136c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 481f534c719d188d108ee1d9edd0776ee8b2bc9d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457097"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192452"
 ---
 # <a name="performance-counters"></a>パフォーマンス カウンター
 
@@ -76,7 +76,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   codeplex.com のツール ( [Business Intelligence Development Studio のための SSIS パフォーマンス ビジュアライゼーション (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626))  
   
--   msdn.microsoft.com のビデオ ( [社内の SSIS パッケージのパフォーマンスの測定と理解 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=150497))  
+-   msdn.microsoft.com のビデオ ( [社内の SSIS パッケージのパフォーマンスの測定と理解 (SQL Server ビデオ)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100)))  
   
 -   support.microsoft.com のサポート技術情報 ( [Windows Server 2008 へのアップグレード後にパフォーマンス モニターで SSIS パフォーマンス カウンターが使用できなくなる](https://go.microsoft.com/fwlink/?LinkId=235319))  
 
@@ -122,4 +122,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  [パフォーマンス ログと警告] サービスは、Administrators グループのメンバーであるローカル アカウントまたはドメイン アカウントを使用して起動する必要があります。  
 
 ## <a name="see-also"></a>参照  
- [プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md) [Integration Services パッケージによって記録されたイベント](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md) [Integration Services パッケージによって記録されたイベント](../../integration-services/performance/events-logged-by-an-integration-services-package.md)

@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17e236dd8563801c487adcf0e0bfcdf822cacef6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c1a7eb4523a3ac074e007e502f523b8507da4af
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425204"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192492"
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
 
@@ -59,7 +59,7 @@ ms.locfileid: "88425204"
 ## <a name="package-configurations"></a>[パッケージ構成]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、プロパティの値を実行時に更新するためのパッケージ構成が用意されています。  
   
-> **注:** パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。   
+> **注:** パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。   
   
  1 つの構成は、完了した状態のパッケージに追加するプロパティと値のペアで定義されます。 通常、パッケージの開発中にパッケージ オブジェクトにプロパティを設定したパッケージを作成し、そのパッケージに構成を追加します。 パッケージの実行時に、構成からこのプロパティの新しい値を取得します。 たとえば、構成を使用して、接続マネージャーの接続文字列を変更したり、変数の値を更新したりできます。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "88425204"
   
 -   **/ConfigFile** オプションを使用して、デザイン時に指定した構成を置き換える構成を読み込むことはできません。  
   
- これらのオプションの詳細と、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] と以前のバージョン間におけるこれらのオプションの動作の違いについては、「 [SQL Server 2016 における Integration Services 機能の動作の変更](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)」を参照してください。  
+ これらのオプションの詳細と、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] と以前のバージョン間におけるこれらのオプションの動作の違いについては、「 [SQL Server 2016 における Integration Services 機能の動作の変更](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130))」を参照してください。  
   
 ### <a name="package-configuration-types"></a>パッケージの構成の種類  
  パッケージの構成の種類を次の表に示します。  
@@ -182,7 +182,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **メモ:**
 > **パッケージ構成オーガナイザー** にアクセスするには、 **[構成]** プロパティの横にある参照ボタンをクリックする方法もあります。 構成プロパティは、パッケージのプロパティ ウィンドウに表示されます。  
 > 
-> パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。    
+> パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。    
 > 
 > **[パッケージ構成オーガナイザー]** ダイアログ ボックスでは、パッケージに対する構成の有効化、構成の追加および削除、構成の優先読み込み順序の設定を行えます。 
 > 
@@ -242,9 +242,9 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 6.  パッケージ構成ウィザードの最初のページが表示されたら、 **[次へ]** をクリックします。  
   
-7.  [構成の種類の選択] ページで構成の種類を指定してから、選択した構成の種類に対応するプロパティを設定します。 詳細については、「 [Package Configuration Wizard UI Reference](../../integration-services/packages/package-configuration-wizard-ui-reference.md)」を参照してください。  
+7.  [構成の種類の選択] ページで構成の種類を指定してから、選択した構成の種類に対応するプロパティを設定します。 詳細については、「 [Package Configuration Wizard UI Reference]()」を参照してください。  
   
-8.  [エクスポートするプロパティの選択] ページで、構成に含めるパッケージ オブジェクトのプロパティを選択します。 この構成の種類でサポートされているプロパティが 1 つのみである場合、ウィザード ページのタイトルは [対象になるプロパティの選択] になります。 詳細については、「 [Package Configuration Wizard UI Reference](../../integration-services/packages/package-configuration-wizard-ui-reference.md)」を参照してください。  
+8.  [エクスポートするプロパティの選択] ページで、構成に含めるパッケージ オブジェクトのプロパティを選択します。 この構成の種類でサポートされているプロパティが 1 つのみである場合、ウィザード ページのタイトルは [対象になるプロパティの選択] になります。 詳細については、「 [Package Configuration Wizard UI Reference]()」を参照してください。  
   
     > **注:** 構成の種類が **[XML 構成ファイル]** および **[SQL Server]** の場合のみ、構成に複数のプロパティを含めることができます。  
   
@@ -257,13 +257,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configurations-organizer"></a>[パッケージ構成オーガナイザー]
   **[パッケージ構成オーガナイザー]** ダイアログ ボックスを使用すると、パッケージ構成を有効にし、現在のパッケージの構成の一覧を表示して、構成の優先読み込み順序を指定できます。  
   
-> **注:** パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。    
+> **注:** パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。    
   
  複数の構成で同じプロパティを更新した場合、構成の一覧内で上の方にある構成の値は、一覧内で下の方にある構成の値に置き換えられます。 パッケージを実行するときに使用される値は、プロパティに最後に読み込まれた値です。 また、パッケージで XML 構成ファイルなどの直接構成と環境変数などの間接構成の組み合わせを使用している場合は、直接構成の場所を指す間接構成を一覧の上の方に置く必要があります。  
   
 > **注:** パッケージ構成を優先順序で読み込むと、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスに表示された一覧の上から下へと構成が読み込まれます。 ただし、実行時にパッケージ構成が優先順序で読み込まれるとは限りません。 具体的には、親のパッケージ構成は他の種類の構成の後に読み込まれます。  
   
- パッケージ オブジェクトのプロパティの値は、パッケージ構成によって実行時に更新されます。 パッケージが読み込まれると、パッケージの開発時に設定された値は、構成の値に置き換えられます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、さまざまな種類の構成がサポートされます。 たとえば、複数の構成を含むことができる XML ファイルや、単一の構成を含む環境変数を使用できます。 詳細については、「 [パッケージ構成](../../integration-services/packages/package-configurations.md)」を参照してください。  
+ パッケージ オブジェクトのプロパティの値は、パッケージ構成によって実行時に更新されます。 パッケージが読み込まれると、パッケージの開発時に設定された値は、構成の値に置き換えられます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、さまざまな種類の構成がサポートされます。 たとえば、複数の構成を含むことができる XML ファイルや、単一の構成を含む環境変数を使用できます。 詳細については、「 [パッケージ構成]()」を参照してください。  
   
 ### <a name="options"></a>Options  
  **[パッケージの構成を有効にする]**  
@@ -297,9 +297,9 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  構成を選択し、上矢印および下矢印を使用して、構成を一覧の上または下に移動します。 構成は、一覧に表示された順序で読み込まれます。  
 
 ## <a name="package-configuration-wizard-ui-reference"></a>パッケージ構成ウィザードの UI リファレンス
-  **パッケージ構成ウィザード** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、 **で** [SSIS] **メニューの** [パッケージ構成] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をクリックします。 詳細については、「 [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)」を参照してください。  
+  **パッケージ構成ウィザード** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、 **で** [SSIS] **メニューの** [パッケージ構成] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をクリックします。 詳細については、「 [パッケージ構成を作成する]()」を参照してください。  
   
-> **注:** パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。  
+> **注:** パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
  ここでは、ウィザードの各ページについて説明します。  
   
@@ -316,7 +316,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-configuration-type-page"></a>[構成の種類の選択] ページ  
  **[構成の種類の選択]** ページを使用すると、作成する構成を指定できます。  
   
- どの種類の構成を使用するか決定するための詳細な情報については、「 [パッケージ構成](../../integration-services/packages/package-configurations.md)」を参照してください。  
+ どの種類の構成を使用するか決定するための詳細な情報については、「 [パッケージ構成]()」を参照してください。  
   
 #### <a name="static-options"></a>静的オプション  
  **構成の種類**  
@@ -434,7 +434,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 > [!NOTE]  
 >  親パッケージの変数またはパラメーター、またはプロジェクトのパラメーターを子パッケージのパラメーターにマップするようにパッケージ実行タスクを構成することで、値を子パッケージに渡すこともできます。 詳細については、「 [パッケージ実行タスク](../../integration-services/control-flow/execute-package-task.md)」を参照してください。  
   
- 親パッケージ内のこの変数は、子パッケージのパッケージ構成を作成する前に作成する必要はありません。 変数はいつでも親パッケージに追加できますが、パッケージ構成では親変数の正確な名前を使用する必要があります。 ただし、親変数パッケージ構成を作成するには、子パッケージ内に、この構成で更新できる変数が既に存在している必要があります。 変数の追加と構成の詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
+ 親パッケージ内のこの変数は、子パッケージのパッケージ構成を作成する前に作成する必要はありません。 変数はいつでも親パッケージに追加できますが、パッケージ構成では親変数の正確な名前を使用する必要があります。 ただし、親変数パッケージ構成を作成するには、子パッケージ内に、この構成で更新できる変数が既に存在している必要があります。 変数の追加と構成の詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../integration-services-ssis-variables.md)」を参照してください。  
   
  親変数パッケージ構成で使用される親パッケージ内の変数のスコープは、パッケージ実行タスク、タスクを含むコンテナー、またはパッケージに設定できます。 パッケージ内で同じ名前の複数の変数が定義されている場合、パッケージ実行タスクのスコープ内で最も近い変数が使用されます。 パッケージ実行タスクに最も近いスコープは、タスク自体です。  
   
@@ -516,7 +516,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="deploy-packages-by-using-the-deployment-utility"></a>配置ユーティリティを使用してパッケージを配置する
   配置ユーティリティを構築し、その配置ユーティリティが構築されたコンピューター以外のコンピューターに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトのパッケージをインストールする場合は、最初に配置フォルダーを目的のコンピューターにコピーする必要があります。  
   
- 配置フォルダーのパスは、配置ユーティリティを作成した [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの DeploymentOutputPath プロパティで指定されます。 既定のパスは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを基準とする bin\Deployment です。 詳細については、「 [配置ユーティリティを作成する](../../integration-services/packages/create-a-deployment-utility.md)」を参照してください。  
+ 配置フォルダーのパスは、配置ユーティリティを作成した [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの DeploymentOutputPath プロパティで指定されます。 既定のパスは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを基準とする bin\Deployment です。 詳細については、「 [配置ユーティリティを作成する]()」を参照してください。  
   
  パッケージ インストール ウィザードを使用してパッケージをインストールします。 ウィザードを起動し、配置フォルダーをサーバーにコピーしてから、配置ユーティリティ ファイルをダブルクリックします。 このファイルは、\<project name>.SSISDeploymentManifest という名前で、インストール先のコンピューターの配置フォルダーにあります。  
   
@@ -568,7 +568,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  パッケージを配置する前に、構成を作成してパッケージに配置できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は構成を使用して、パッケージのプロパティとパッケージ オブジェクトを実行時に動的に更新します。 たとえば、接続文字列が含まれるプロパティに値をマップする構成を使用して、実行時に OLE DB 接続の接続文字列を動的に設定できます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを構築して配置ユーティリティを作成するまでは、パッケージ インストール ウィザードは実行できません。 詳細については、「 [配置ユーティリティを使用してパッケージを配置する](../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを構築して配置ユーティリティを作成するまでは、パッケージ インストール ウィザードは実行できません。 詳細については、「 [配置ユーティリティを使用してパッケージを配置する]()」を参照してください。  
   
  ここでは、ウィザードの各ページについて説明します。  
   
@@ -591,7 +591,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **構成ファイル**  
  一覧からファイルを選択して、構成ファイルの内容を編集します。  
   
- **関連トピック:** [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)  
+ **関連トピック:** [パッケージ構成を作成する]()  
   
  **パス**  
  構成するプロパティのパスを表示します。  
@@ -701,5 +701,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[パッケージ インストール ウィザードの完了]** ページを使用して、パッケージのインストール結果の要約を表示します。 このページでは、配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの名前、インストールされたパッケージ、構成ファイル、インストール場所などの詳細が表示されます。  
   
  **[完了]**  
- **[完了]** をクリックすると、ウィザードが終了します。  
-
+ **[完了]** をクリックすると、ウィザードが終了します。

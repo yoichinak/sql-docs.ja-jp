@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 97800bdd8137d20fabec298bce235bd2a4232b79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428584"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122740"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) イベント クラス
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88428584"
 |**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**Integer Data**|**int**|ハッシュ、並べ替え、インデックス作成などの操作を実行するためにクエリに与えられた "ワークスペース メモリ" の量 (KB 単位)。 このメモリは、実行中に必要に応じて取得されます。|25|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
-|**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\\ *\username*という形式の Windows ログイン資格情報)。|11|はい|  
+|**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\\ *\username* という形式の Windows ログイン資格情報)。|11|はい|  
 |**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  

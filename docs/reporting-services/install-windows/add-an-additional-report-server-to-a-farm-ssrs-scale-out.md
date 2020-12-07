@@ -9,12 +9,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b69bf8be4eef05ae8bb332afb4078eb1bca404
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 689d304798da13a8c8647598ac13d9ca232c6bfc
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418678"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934700"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>ファームへのレポート サーバーの追加 (SSRS スケールアウト)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88418678"
 > [!TIP]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、サーバーの追加およびレポート サーバーのスケールアウトに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用しません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスを使用する SharePoint サーバーがファームに追加されると、SharePoint 製品では Reporting Services のスケールアウトを管理します。  
   
- ネイティブ モードのレポート サーバーをスケールアウトする方法の詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
+ ネイティブ モードのレポート サーバーをスケールアウトする方法の詳細については、[ネイティブ モード レポート サーバーのスケールアウト配置の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) に関する記事を参照してください。  
   
 ##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> 負荷分散  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの負荷分散は、カスタムまたはサードパーティの負荷分散ソリューションが環境に含まれていない限り、SharePoint によって自動的に管理されます。 SharePoint の既定の負荷分散動作では、各 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーション サービスは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスを開始したすべてのアプリケーション サーバー間で分散されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスがインストールされていて開始されていることを確認するには、SharePoint サーバーの全体管理で **[サーバーのサービスの管理]** をクリックします。  
@@ -81,7 +81,7 @@ The Reporting Services Web Service is not enabled. Configure at least one instan
 
 ## <a name="next-steps"></a>次のステップ
 
-[SharePoint Server 2016 での SharePoint サーバーのファームへの追加](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[SharePoint Server 2013 での SharePoint サーバーのファームへの追加](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[SharePoint Server 2016 での SharePoint サーバーのファームへの追加](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+[SharePoint Server 2013 での SharePoint サーバーのファームへの追加](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d547dc374de8171097ceda77afb234d4e5dfa451
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6457c4bfe1579453a68e8d5ea11f45b67980ca8b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772391"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785098"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Python スクリプトを使用して SQL Server ビッグ データ クラスターを Azure Kubernetes Service (AKS) に展開する
 
@@ -75,14 +75,20 @@ Windows PowerShell または Linux bash プロンプトで展開スクリプト�
    | **[Azure subscription ID]\(Azure サブスクリプション ID\)** | AKS に使用する Azure サブスクリプション ID。 別のコマンド ラインから `az account list` を実行して、すべてのサブスクリプションとその ID を一覧表示できます。 |
    | **Azure リソース グループ** | AKS クラスター用に作成する Azure リソース グループの名前。 |
    | **[Azure region]\(Azure リージョン\)** | 新しい AKS クラスター用の Azure リージョン (既定値は **westus**)。 |
-   | **[Machine size]\(マシン サイズ\)** | AKS クラスター内のノードに使用する[マシン サイズ](/azure/virtual-machines/windows/sizes) (既定値は **Standard_L8s**)。 |
+   | **[Machine size]\(マシン サイズ\)** | AKS クラスター内のノードに使用する[マシン サイズ](/azure/virtual-machines/windows/sizes) (既定値は **Standard_D16s_v3**)。 |
    | **[Worker nodes]\(ワーカー ノード\)** | AKS クラスター内のワーカー ノードの数 (既定値は **1**)。 |
    | **[Cluster name]\(クラスター名\)** | AKS クラスターとビッグ データ クラスターの両方の名前。 ビッグ データ クラスターの名前は、小文字の英数字のみを使用し、スペースを含めない必要があります (既定値は **sqlbigdata**)。 |
    | **パスワード** | コントローラー、HDFS/Spark ゲートウェイ、およびマスター インスタンスのパスワード (既定値は **MySQLBigData2019**)。 |
    | **ユーザー名** | コントローラー ユーザーのユーザー名 (既定値: **admin**)。 |
 
    > [!IMPORTANT]
-   > 既定の **Standard_L8s** マシン サイズは、すべての Azure リージョンで使用できるとは限りません。 別のマシン サイズを選択する場合は、クラスター内のノード間で接続できるディスクの合計数が 24 以上であることを確認します。 クラスター内の各永続ボリューム要求には、接続されたディスクが必要です。 現在、ビッグ データ クラスターには 24 個の永続的なボリューム要求が必要です。 たとえば、[Standard_L8s](/azure/virtual-machines/lsv2-series) マシン サイズでは、32 個の接続ディスクがサポートされているため、このマシン サイズの 1 つのノードでビッグ データ クラスターを評価することができます。
+   > 既定の **Standard_D16s_v3** マシン サイズは、すべての Azure リージョンで使用できるとは限りません。 別のマシン サイズを選択する場合は、クラスター内のノード間で接続できるディスクの合計数が 24 以上であることを確認します。 クラスター内の各永続ボリューム要求には、接続されたディスクが必要です。 現在、ビッグ データ クラスターには 24 個の永続的なボリューム要求が必要です。
+   >
+   >次のコマンドを実行して、使用可能な VM の種類を特定します。
+   >
+   >```azurecli-interactive
+   >az vm list-sizes --query "sort_by(@,&name)[?contains(name,'Standard_D16s')]" -l westus2 -o table
+   >```
 
    > [!NOTE]
    > SQL Server の `sa` アカウントは、ビッグ データ クラスターの展開の間に無効になります。 SQL Server のマスター インスタンスに、 **[ユーザー名]** 入力で指定したものと同じ名前と **[パスワード]** 入力に対応するパスワードで、新しい sysadmin ログインがプロビジョニングされます。 コントローラー管理者ユーザーのプロビジョニングにも、同じ**ユーザー名**と**パスワード**の値が使用されます。 SQL Server 2019 CU5 より前のバージョンで展開されるクラスターでは、ゲートウェイ (Knox) に対してサポートされているユーザーのみが **root** であり、パスワードは上記と同じです。

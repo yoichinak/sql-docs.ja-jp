@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1bc5a787f6bc1b214aa60ef54b5b8172f07c11a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a041e8dac7459e1f0322bd8492b5e5737ae80691
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494865"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195638"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX データ操作 - CREATE GLOBAL CUBE
 
 
-  サーバー上のキューブのサブキューブに基づいて、ローカルに保存されたキューブを作成して設定します。 ローカルに保存されたキューブに接続するために、サーバーへの接続は必要ありません。 ローカルキューブの詳細については、「 [ローカルキューブ &#40;Analysis Services-多次元データ&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)」を参照してください。  
+  サーバー上のキューブのサブキューブに基づいて、ローカルに保存されたキューブを作成して設定します。 ローカルに保存されたキューブに接続するために、サーバーへの接続は必要ありません。 ローカルキューブの詳細については、「 [ローカルキューブ &#40;Analysis Services-多次元データ&#41;](/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -93,13 +93,13 @@ FROM source_cube_name (<param list>)
  source_cube_name  
  ローカルキューブの基になるキューブの名前です。  
   
- source_cube_name。 measure_name  
+ source_cube_name source_cube_name.measure_name  
  ローカルキューブに含まれる、基になるメジャーの完全修飾名です。 メジャーディメンションの計算されるメンバーは使用できません。  
   
  measure_name  
  ローカルキューブ内のメジャーの名前。  
   
- source_cube_name。 dimension_name  
+ source_cube_name source_cube_name.dimension_name  
  ローカルキューブに含まれる、基になるディメンションの完全修飾名です。  
   
  dimension_name  
@@ -114,7 +114,7 @@ FROM source_cube_name (<param list>)
  \<level type>  
  派生ディメンションの定義のみの有効な仕様です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ローカルキューブは、メジャーとそれを定義する定義の definedin 用語です。 ディメンションには、次の2種類があります。  
   
 -   ソースディメンション-これは、ソースキューブの1つに含まれていたディメンションです。  
@@ -200,5 +200,4 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ## <a name="see-also"></a>参照  
  [Mdx&#41;&#40;mdx データ定義ステートメント ](../mdx/mdx-data-definition-statements-mdx.md)   
  [CREATE SESSION CUBE ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
-  
   

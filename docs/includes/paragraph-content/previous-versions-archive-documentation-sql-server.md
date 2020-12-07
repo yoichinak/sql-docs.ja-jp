@@ -1,7 +1,6 @@
-
 非常に古いバージョンの Microsoft SQL Server のドキュメントが、アーカイブされた Web ページのセットに蓄積され、保持されています。 アーカイブされた Web ページは、Bing.com や Google.com などの検索エンジンの対象にはなりません。 これらのアーカイブは、Microsoft の Docs の _previous-versions/sql/_ アドレスで確認できます。
 
-- [https://docs.microsoft.com/previous-versions/sql/](https://docs.microsoft.com/previous-versions/sql/)
+- [https://docs.microsoft.com/previous-versions/sql/](/previous-versions/sql/)
 
 これらのアーカイブには少なくとも次の古いドキュメントが含まれます。
 
@@ -19,6 +18,6 @@ FYI: In the following link syntax to SQL 2014 content, the two 'view' related pa
 [SQL Server 2014 documentation](/previous-versions/sql/2014/index?view=sql-server-2014&preserve-view=true) is still available on our main Docs address.
 -->
 
-[SQL Server 2019 のドキュメント](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15&preserve-view=true) は、メインの Docs アドレスから入手できます。 次に、ページの上部近くにある [バージョン管理] ドロップダウンを使用して、対象の別のバージョンを選択します。
+[SQL Server 2019 のドキュメント](../../sql-server/index.yml?preserve-view=true&view=sql-server-ver15) は、メインの Docs アドレスから入手できます。 次に、ページの上部近くにある [バージョン管理] ドロップダウンを使用して、対象の別のバージョンを選択します。
 
 以前のバージョンの SQL Server に関するドキュメントの詳細については、「[以前のバージョンの SQL Server ドキュメント](/previous-versions/sql/)」を参照してください。

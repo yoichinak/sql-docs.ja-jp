@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8540ade9e1c13dac159c20ffade0d5b0c1652071
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 2e4286b0c9d2b8f83926f8208c1b5f5da5c20deb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689522"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935381"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>レポートへのドリルスルー アクションの追加 (レポート ビルダーおよび SSRS)
   メイン レポートのリンクをクリックすると開くレポートが *詳細レポート*です。 このドリルスルー リンクを使用すると、ドリルスルー アクションを実行できます。  
@@ -59,8 +59,7 @@ ms.locfileid: "83689522"
 7.  リンクをテストするには、レポートを実行し、このリンクを設定したレポート アイテムをクリックします。  
   
 ## <a name="see-also"></a>参照  
- [アクション プロパティ ダイアログ ボックス (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
+ [アクション プロパティ ダイアログ ボックス (レポート ビルダーおよび SSRS)](./add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)   
  [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [系列へのツールヒントの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
-  
   

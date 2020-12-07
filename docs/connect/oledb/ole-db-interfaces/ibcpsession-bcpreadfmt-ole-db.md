@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPReadFmt method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1310e39aae4de72e85d6c3633b663d193995f12
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ee5dd620981f2e41c20dd6a51c52c0b3d536a126
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861936"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081781"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ HRESULT BCPReadFmt(
  メソッドが成功しました。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) インターフェイスを使用してください。  
+ プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) インターフェイスを使用してください。  
   
  E_OUTOFMEMORY  
  メモリ不足エラー。  
@@ -66,5 +66,4 @@ HRESULT BCPReadFmt(
 ## <a name="see-also"></a>参照  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [一括コピー操作の実行](../../oledb/features/performing-bulk-copy-operations.md)  
-  
   

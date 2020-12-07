@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 689ab632604d26a349dbb3f2a40d5f1b7cf8d702
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c7f2f5e8e3f46fc8e6301cf2e93afa709207dd0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353228"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726203"
 ---
 # <a name="export-dmx"></a>エクスポート (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,9 +33,9 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  省略可能。エクスポートするオブジェクトの種類です (マイニングモデルまたはマイニング構造のいずれか)。  
   
  *オブジェクト名*  
- 任意。 エクスポートするオブジェクトの名前。  
+ 省略可能。 エクスポートするオブジェクトの名前。  
   
- *ファイル名*  
+ *filename*  
  文字列としてエクスポートするファイルの名前と場所です。  
   
 ## <a name="remarks"></a>解説  
@@ -62,6 +62,5 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX&#41;のインポート &#40;](../dmx/import-dmx.md)   
- [データ マイニング オブジェクトのエクスポートおよびインポート](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
-  
+ [データ マイニング オブジェクトのエクスポートおよびインポート](/analysis-services/data-mining/export-and-import-data-mining-objects)  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1056cfe7d80bdf97c97c344d3b9f3dfc4dc6fdcd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 754aff825e0da8fd888deafb927936599a4d8631
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494675"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196766"
 ---
 # <a name="manage-data-collection"></a>データ コレクションの管理
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88494675"
   
 >**重要!!** 通常のストアド プロシージャとは異なり、データ コレクターで使用するストアド プロシージャではパラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、付属のコード サンプルを作成して実行します。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。 また、任意のエディターでクエリを作成し、.sql というファイル名拡張子を持つテキスト ファイルに保存することもできます。 このクエリは、Windows コマンド プロンプトから **sqlcmd** ユーティリティを使用して実行できます。 詳細については、「 [sqlcmd Utility の使用](../../relational-databases/scripting/sqlcmd-use-the-utility.md)」を参照してください。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、付属のコード サンプルを作成して実行します。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。 また、任意のエディターでクエリを作成し、.sql というファイル名拡張子を持つテキスト ファイルに保存することもできます。 このクエリは、Windows コマンド プロンプトから **sqlcmd** ユーティリティを使用して実行できます。 詳細については、「 [sqlcmd Utility の使用](../../ssms/scripting/sqlcmd-use-the-utility.md)」を参照してください。  
   
 ### <a name="stored-procedures-and-views"></a>ストアド プロシージャとビュー  
  **データ コレクターの操作**  
@@ -174,7 +174,6 @@ ms.locfileid: "88494675"
   
 ## <a name="see-also"></a>関連項目  
  [ストアド プロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [SQL Server Management Studio の使用 [SQL Server]](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [SQL Server Management Studio の使用 [SQL Server]](../../ssms/sql-server-management-studio-ssms.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
-  
   

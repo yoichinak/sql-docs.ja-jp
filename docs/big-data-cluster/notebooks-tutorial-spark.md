@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f42b454ebfc1b9b4ea8e841cba6fe2a4b209ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6961dd76f35316dbd3923bb24849011a20f184c0
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660376"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793739"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Spark を使用したサンプル ノートブックの実行
 
@@ -44,7 +44,7 @@ ms.locfileid: "85660376"
 1. 次の **curl** コマンドを実行し、GitHub からノートブック ファイルをダウンロードします。
 
    ```bash
-   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
+   curl https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb -o transform-csv-files.ipynb
    ```
 
 ## <a name="open-the-notebook"></a>ノートブックを開く
@@ -69,11 +69,11 @@ ms.locfileid: "85660376"
 
 サンプル ノートブック内の各セルを続けて実行します。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] でノートブックを使用する方法の詳細については、次のリソースを参照してください。
 
-- [ノートブックの使用方法](../azure-data-studio/notebooks-guidance.md)
+- [ノートブックの使用方法](../azure-data-studio/notebooks/notebooks-guidance.md)
 - [Azure Data Studio でノートブックを管理する方法](notebooks-manage-bdc.md)
 
 ## <a name="next-steps"></a>次のステップ
 
 ノートブックについてさらに学習します:
 > [!div class="nextstepaction"]
-> [ノートブックの使用方法](../azure-data-studio/notebooks-guidance.md)
+> [ノートブックの使用方法](../azure-data-studio/notebooks/notebooks-guidance.md)

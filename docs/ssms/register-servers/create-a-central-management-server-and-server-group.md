@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d0d43fe140f2165b19cb38a6c8d7391428a14e93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a66f57b77b5d92bf39795533a29faacacdf01b95
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370820"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037615"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>中央管理サーバーおよびサーバー グループの作成
 
@@ -65,7 +65,7 @@ ms.locfileid: "88370820"
   
 4.  **[登録済みサーバー]** で、サーバー名と説明 (省略可) を入力します。  
   
-5.  **[接続プロパティ]** タブで、ネットワークと接続のプロパティを確認または変更します。 詳細については、「[[サーバーへの接続] &#40;[接続プロパティ] ページ&#41; データベース エンジン](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)」を参照してください。  
+5.  **[接続プロパティ]** タブで、ネットワークと接続のプロパティを確認または変更します。 詳細については、「[[サーバーへの接続] &#40;[接続プロパティ] ページ&#41; データベース エンジン](../f1-help/connect-to-server-connection-properties-page-database-engine.md)」を参照してください。  
   
 6.  **[テスト]** をクリックして接続をテストします。  
   
@@ -79,13 +79,12 @@ ms.locfileid: "88370820"
   
 3.  **[登録済みサーバー]** で、サーバー グループを右クリックし、 **[新規サーバーの登録]** をクリックします。  
   
-4.  [新規サーバーの登録] で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択します。 詳細については、「[新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)」を参照してください。 必要に応じてサーバーを追加します。  
+4.  [新規サーバーの登録] で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択します。 詳細については、「[新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)」を参照してください。 必要に応じてサーバーを追加します。  
   
 #### <a name="to-execute-queries-against-several-configuration-targets-at-the-same-time"></a>複数の構成対象に対してクエリを同時に実行するには  
   
--   1 つの中央管理サーバー、1 つ以上のサーバー グループ、および 1 つ以上の登録済みサーバーを作成すると、グループ全体に対してクエリを同時に実行できるようになります。 サーバー グループ内の複数サーバーで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同時に実行する方法の詳細については、「[複数のサーバーに対してステートメントを同時に実行する方法 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md)」を参照してください。  
+-   1 つの中央管理サーバー、1 つ以上のサーバー グループ、および 1 つ以上の登録済みサーバーを作成すると、グループ全体に対してクエリを同時に実行できるようになります。 サーバー グループ内の複数サーバーで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同時に実行する方法の詳細については、「[複数のサーバーに対してステートメントを同時に実行する方法 &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [中央管理サーバーを使用した複数のサーバーの管理](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

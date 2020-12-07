@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9371d2f988642a5f5ab0e7b715130772a693bb52
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2dab1d48ca2aa98e4a70a08bac492366f2632b79
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173707"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584962"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python および R チュートリアル用の NYC タクシー のデモ データ
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 この記事では、[New York City Taxi and Limousine Commission (ニューヨーク市のタクシーとリムジンのコミッション)](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) からのパブリック データで構成されるサンプル データベースを設定する方法について説明します。 このデータは、SQL Server でのデータベース内分析のために、いくつかの R および Python のチュートリアルで使用されています。 サンプル コードの実行速度を高めるために、データの代表的な 1% のサンプルを作成しました。 システムでは、データベース バックアップ ファイルが 90 MB をわずかに上回り、プライマリ データ テーブル内に 170 万行が提供されます。
 
-この演習を完了するには、[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)、またはデータベース バックアップ ファイルを復元し、T-SQL クエリを実行できる別のツールが必要です。
+この演習を完了するには、[SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017&preserve-view=true)、またはデータベース バックアップ ファイルを復元し、T-SQL クエリを実行できる別のツールが必要です。
 
 このデータセットを使用したチュートリアルとクイックスタートには、次のものがあります。
 
@@ -41,7 +41,7 @@ ms.locfileid: "88173707"
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
 >[!NOTE]
->[Azure SQL Managed Instance の Machine Learning Services (プレビュー)](/azure/azure-sql/managed-instance/machine-learning-services-overview) でサンプル データベースを復元するには、[Azure SQL Managed Instance にデータベースを復元する](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)方法に関するクイックスタートの指示に従ってください。NYC タクシー デモ データベース .bak ファイル [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) が使用されます。
+>[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) でサンプル データベースを復元するには、[Azure SQL Managed Instance にデータベースを復元する](/azure/azure-sql/managed-instance/restore-sample-database-quickstart)方法に関するクイックスタートの指示に従ってください。NYC タクシー デモ データベース .bak ファイル [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) が使用されます。
 ::: moniker-end
 
 1. [NYCTaxi_Sample .bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) をクリックして、データベースのバックアップ ファイルをダウンロードします。

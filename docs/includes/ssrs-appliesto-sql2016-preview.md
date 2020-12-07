@@ -1,1 +1,1 @@
-**適用対象:** ![はい](media/yes-icon.png)SQL Server 2016 ![はい](media/yes-icon.png)Power BI Report Server
+**適用対象:** :::image type="icon" source="media/yes-icon.png":::SQL Server 2016 :::image type="icon" source="media/yes-icon.png":::Power BI Report Server

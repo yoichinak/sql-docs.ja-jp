@@ -24,10 +24,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990410"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services サービス (SSIS サービス)
@@ -37,7 +37,7 @@ ms.locfileid: "90990410"
 
   このセクションのトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスについて説明します。 Integration Service パッケージの作成、保存、および実行には、このサービスは不要です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] との互換性を維持するために、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービスをサポートしています。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、プロジェクト配置モデルを使用して **サーバーに配置したプロジェクトの ** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベースにオブジェクト、設定、業務データを格納します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベース エンジンのインスタンスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーは、データベースをホストします。 データベースの詳細については、「 [SSIS カタログ](../../integration-services/catalog/ssis-catalog.md)」を参照してください。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「[Integration Services (SSIS) のプロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、プロジェクト配置モデルを使用して **サーバーに配置したプロジェクトの** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベースにオブジェクト、設定、業務データを格納します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベース エンジンのインスタンスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーは、データベースをホストします。 データベースの詳細については、「 [SSIS カタログ](../../integration-services/catalog/ssis-catalog.md)」を参照してください。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「[Integration Services (SSIS) のプロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
 ## <a name="management-capabilities"></a>管理機能  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスです。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でのみ使用できます。  
@@ -229,7 +229,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 ```  
   
 ### <a name="modify-the-configuration-file"></a>構成ファイルを変更します  
- 構成ファイルを変更することによって、サービスが停止した場合にパッケージを継続して実行できるようにしたり、オブジェクト エクスプローラー内に別のルート フォルダーを表示したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するファイル システム内に別のフォルダーまたは追加のフォルダーを指定することができます。 たとえば、 **SqlServerFolder**型の別のルート フォルダーを作成して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の追加インスタンスの msdb データベースでパッケージを管理できます。  
+ 構成ファイルを変更することによって、サービスが停止した場合にパッケージを継続して実行できるようにしたり、オブジェクト エクスプローラー内に別のルート フォルダーを表示したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するファイル システム内に別のフォルダーまたは追加のフォルダーを指定することができます。 たとえば、 **SqlServerFolder** 型の別のルート フォルダーを作成して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の追加インスタンスの msdb データベースでパッケージを管理できます。  
   
 > [!NOTE]  
 >  一部の文字は、フォルダー名には無効です。 フォルダー名として有効な文字は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの **System.IO.Path** および **GetInvalidFilenameChars** フィールドによって決まります。 **GetInvalidFilenameChars** フィールドでは、 **Path** クラスのメンバーに渡されるパス文字列引数に指定できない、プラットフォーム固有の文字配列が指定されます。 無効な文字のセットは、ファイル システムによって異なる場合があります。 通常、無効な文字は、引用符 (")、小なり (<) 文字、およびパイプ (|) 文字です。  
@@ -364,7 +364,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 4.  2 つのダイアログ ボックスを使用して、 **[アクセスの許可]** と **[起動の許可]** を構成します。 リモートとローカルのアクセスは区別できません。アクセスの許可にはローカルとリモートのアクセス権が含まれており、起動の権限にはローカルとリモートの起動権限が含まれています。  
   
-5.  ダイアログ ボックスを閉じ、 **dcomcnfg.exe**を閉じます。  
+5.  ダイアログ ボックスを閉じ、 **dcomcnfg.exe** を閉じます。  
   
 6.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを再開します。  
   

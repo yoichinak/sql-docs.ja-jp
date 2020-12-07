@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a1dd8b47f7a251918eb87db9a8ec2dfd9d412a10
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c636a33632a44e9cc5d1510bb73b5967a68f21ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179892"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195114"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep を使用したチャンク分析の実行 (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 12 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 12 です。
 
 このチュートリアルでは、**rxDataStep** 関数を利用して、従来の R のように、データセット全体をメモリに読み込み、一度に処理することを要求せず、データをチャンク単位で処理します。**rxDataStep** 関数は、データをチャンク単位で読み込み、データの各チャンクに R 関数を順々に適用し、各チャンクをまとめた結果を共通の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースに書き込みます。 すべてのデータが読み込まれると、結果が結合されます。
 
@@ -118,4 +118,4 @@ ms.locfileid: "88179892"
 ## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [SQL Server の R チュートリアル](sql-server-r-tutorials.md)
+> [SQL Server の R チュートリアル](./r-tutorials.md)

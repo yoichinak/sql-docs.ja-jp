@@ -13,12 +13,12 @@ ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8e9756022e5536f941ac73734df41b74bf13aa2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad5b4033fdffd55f4a25717911e53b9b04e0aa22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88384098"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866781"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile イベント クラス
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88384098"
   
  Showplan XML For Query Compile イベント クラスでは完全なコンパイル時のデータが表示されるので、このイベント クラスを含んでいるトレースによって大きなパフォーマンス上のオーバーヘッドが発生する可能性があります。 これを最小限に抑えるには、特定の問題を短い期間監視するトレース以外に、このイベント クラスを使用しないようにします。  
   
- Showplan XML ドキュメントには、スキーマが関連付けられています。 このスキーマは、[Microsoft Web サイト](https://go.microsoft.com/fwlink/?LinkId=41740)、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの一部として見つけることができます。  
+ Showplan XML ドキュメントには、スキーマが関連付けられています。 このスキーマは、[Microsoft Web サイト](/previous-versions/aa720019(v=vs.71))、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの一部として見つけることができます。  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Showplan XML For Query Compile イベント クラスのデータ列  
   
@@ -64,5 +64,4 @@ ms.locfileid: "88384098"
 ## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
   

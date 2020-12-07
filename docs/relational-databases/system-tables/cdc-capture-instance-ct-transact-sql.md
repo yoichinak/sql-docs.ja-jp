@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0515c57b3c3249cc748c2ab96a12c2c1ef35d700
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d0a2dae85606a5e1cb0ffd5f86776e7aae25680
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538383"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809785"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc。 &lt;capture_instance &gt; _CT (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ソース テーブルに対して変更データ キャプチャを有効にすると作成される変更テーブルです。 ソース テーブルに対して実行された操作が挿入や削除の場合は、各操作について 1 行を返します。ソース テーブルに対して実行された操作が更新の場合は、各操作について 2 行を返します。 ソーステーブルが有効になっているときに変更テーブルの名前が指定されていない場合は、その名前が派生します。 名前の形式は cdc です。*capture_instance*_CT。 *capture_instance* は、ソーステーブルのスキーマ名と *schema_table*形式のソーステーブル名です。 たとえば、 **AdventureWorks**サンプルデータベースのテーブルの**ユーザー**が変更データキャプチャを有効にした場合、派生した変更テーブル名は cdc になり**ます。Person_Address_CT**。  
   
- **システムテーブルに対して直接クエリを実行しない**ことをお勧めします。 代わりに、 [fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) および [cdc. fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance 関数を実行します。  
+ **システムテーブルに対して直接クエリを実行しない**ことをお勧めします。 代わりに、 [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) を実行し、cdc.fn_cdc_get_net_changes_<[capture_instance 関数を>し ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) ます。  
   
 
   
@@ -44,9 +44,9 @@ ms.locfileid: "89538383"
 |*\<captured source table columns>*|多様|変更テーブルの残りの列は、キャプチャインスタンスの作成時にキャプチャされた列として識別された、ソーステーブルの列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列がこのテーブルに格納されます。|  
 |**__ $ command_id** |**int** |トランザクション内の操作の順序を追跡します。 |  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 
-列の列は、 `__$command_id` バージョン2012から2016の累積的な更新プログラムで導入されました。 バージョンおよびダウンロードの情報については、 [Microsoft SQL Server データベースに対して変更データキャプチャを有効にした後に、更新された行の変更テーブルの順序が正しく設定さ](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)れ3030352ていないことを確認してください。  詳細については、 [SQL Server 2012、2014、2016の最新の CU にアップグレードした後に、CDC の機能が停止する場合があり](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)ます。
+列の列は、 `__$command_id` バージョン2012から2016の累積的な更新プログラムで導入されました。 バージョンおよびダウンロードの情報については、 [Microsoft SQL Server データベースに対して変更データキャプチャを有効にした後に、更新された行の変更テーブルの順序が正しく設定さ](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)れ3030352ていないことを確認してください。  詳細については、 [SQL Server 2012、2014、2016の最新の CU にアップグレードした後に、CDC の機能が停止する場合があり](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016)ます。
 
 ## <a name="captured-column-data-types"></a>キャプチャされた列のデータ型  
  このテーブルに含まれるキャプチャ対象の列のデータ型と値は、対応するソース列と同じですが、次の例外があります。  
@@ -63,9 +63,9 @@ ms.locfileid: "89538383"
  既定では、INSERT、UPDATE、WRITETEXT、または UPDATETEXT の 1 回のステートメントでキャプチャ対象列に追加できる最大サイズは、65,536 バイト (64 KB) です。 大きな LOB データをサポートするためにこのサイズを大きくするには、 [max text repl Size サーバー構成オプション](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) を使用して、より大きな最大サイズを指定します。 詳細については、「 [max text repl size サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)」を参照してください。  
   
 ## <a name="data-definition-language-modifications"></a>データ定義言語の変更  
- 列の追加や削除など、ソーステーブルに対する DDL の変更は、 [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) テーブルに記録されます。 これらの変更は変更テーブルに適用されません。 つまり、変更テーブルの定義は一定のままです。 ソース テーブルには、キャプチャ対象列リストが関連付けられていますが、キャプチャ プロセスで変更テーブルに行を挿入する際、そのリストに存在しない列は無視されます。 キャプチャ対象列リストに指定されていた列が、ソース テーブルから既に削除されていた場合、その列には NULL 値が割り当てられます。  
+ 列の追加や削除など、ソーステーブルに対する DDL の変更は、 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) テーブルに記録されます。 これらの変更は変更テーブルに適用されません。 つまり、変更テーブルの定義は一定のままです。 ソース テーブルには、キャプチャ対象列リストが関連付けられていますが、キャプチャ プロセスで変更テーブルに行を挿入する際、そのリストに存在しない列は無視されます。 キャプチャ対象列リストに指定されていた列が、ソース テーブルから既に削除されていた場合、その列には NULL 値が割り当てられます。  
   
- ソーステーブル内の列のデータ型を変更することは、 [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) テーブルにも記録されます。 ただし、この変更によって、変更テーブルの定義が修正されることはありません。 ソース テーブルに対する DDL 変更のログ レコードがキャプチャ プロセスで見つかった場合は、変更テーブルにおけるキャプチャ対象列のデータ型が変更されます。  
+ ソーステーブル内の列のデータ型を変更すると、 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) テーブルにも記録されます。 ただし、この変更によって、変更テーブルの定義が修正されることはありません。 ソース テーブルに対する DDL 変更のログ レコードがキャプチャ プロセスで見つかった場合は、変更テーブルにおけるキャプチャ対象列のデータ型が変更されます。  
   
  ソーステーブル内のキャプチャされた列のデータ型を、データ型のサイズが小さくなるように変更する必要がある場合は、次の手順を実行して、変更テーブル内の同等の列が正常に変更されるようにします。  
   
@@ -83,7 +83,6 @@ ms.locfileid: "89538383"
  挿入操作と削除操作については、更新マスクのすべてのビットが設定されます。 更新操作の場合、更新中に変更された列を反映するように、update old 行と update new 行の両方の更新マスクが変更されます。  
   
 ## <a name="see-also"></a>参照  
- [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
-  
+ [sys.sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   

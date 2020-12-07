@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f74e8efc28591bb951d52aa7e242ee259810ff8f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 11c22c1756e580cc194db336fed4e192f5b67e3b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540041"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891642"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile クラス
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ WScript.Echo "Instance Name:  " & logFile.InstanceName & vbNewLine _
 Next   
 ```  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
  WQL ステートメントで *InstanceName* が指定されていない場合、クエリは既定のインスタンスの情報を返します。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) からすべてのログ ファイルに関する情報を返します。  
   
 ```  
@@ -95,10 +95,9 @@ Next
   
      ** \<Drive> : Server\MSSQL11** **。 \<InstanceName>\MSSQL\Log**  
   
- ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](https://go.microsoft.com/fwlink/?LinkId=178848)」を参照してください。  
+ ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SqlErrorLogEvent クラス](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   
  [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

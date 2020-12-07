@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 06/11/2020
 ms.author: mikeray
 ms.openlocfilehash: a866bfc50f3739e3065736d4779f9973a5f69e42
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85976945"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96116091"
 ---
 Azure Synapse Analytics

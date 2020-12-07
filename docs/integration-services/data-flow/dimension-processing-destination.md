@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5531a102eb4ec24fde1c9693c8f9939eb63b4335
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67a93e031afddb7533cea5251c4882da2760fbfe
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392638"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123498"
 ---
 # <a name="dimension-processing-destination"></a>ディメンション処理変換先
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  ディメンション処理変換先では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションが読み込まれ処理されます。 ディメンションの詳細については、「[ディメンション (Analysis Services - 多次元データ)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data)」を参照してください。  
+  ディメンション処理変換先では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションが読み込まれ処理されます。 ディメンションの詳細については、「[ディメンション (Analysis Services - 多次元データ)](/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data)」を参照してください。  
   
  ディメンション処理変換先には、次の機能が含まれます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "88392638"
   
 -   ディメンション テーブルの列への入力列のマッピング  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの処理に関する詳細については、「[処理オプションと設定 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの処理に関する詳細については、「[処理オプションと設定 (Analysis Services)](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)」を参照してください。  
   
 ## <a name="configuration-of-the-dimension-processing-destination"></a>ディメンション処理変換先の構成  
  ディメンション処理変換先は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを接続して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト、または、変換先が処理するディメンションを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
@@ -54,7 +54,7 @@ ms.locfileid: "88392638"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
  データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88392638"
   
 ### <a name="options"></a>オプション  
  **[既定のエラー構成を使用する]**  
- 既定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エラー処理を使用するかどうかを指定します。 既定では、この値は **True**です。  
+ 既定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エラー処理を使用するかどうかを指定します。 既定では、この値は **True** です。  
   
  **[キー エラー アクション]**  
  許容されないキー値を持つレコードを処理する方法を指定します。  
@@ -138,7 +138,7 @@ ms.locfileid: "88392638"
 |**ReportAndStop**|エラーを報告して処理を停止します。|  
   
  **[重複キー]**  
- 重複キーのエラーに対する操作を指定します。 既定では、この値は **IgnoreError**です。  
+ 重複キーのエラーに対する操作を指定します。 既定では、この値は **IgnoreError** です。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -147,7 +147,7 @@ ms.locfileid: "88392638"
 |**ReportAndStop**|エラーを報告して処理を停止します。|  
   
  **[不明な種類に変換された NULL キー]**  
- NULL キーが **UnknownMember** 値に変換された場合に実行する操作を指定します。 既定では、この値は **IgnoreError**です。  
+ NULL キーが **UnknownMember** 値に変換された場合に実行する操作を指定します。 既定では、この値は **IgnoreError** です。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -173,5 +173,4 @@ ms.locfileid: "88392638"
 ## <a name="see-also"></a>参照  
  [データ フロー](../../integration-services/data-flow/data-flow.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

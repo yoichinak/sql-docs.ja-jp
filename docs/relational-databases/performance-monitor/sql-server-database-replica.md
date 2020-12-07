@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 280fae3d260995a15a7baa9e40a861cb2cfdecc4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458336"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892232"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、データベース レプリカ
 
@@ -42,7 +42,7 @@ ms.locfileid: "86458336"
 |**Redo Bytes Remaining**|元に戻すフェーズを完了するために再実行されるログの残量 (KB 単位)。|セカンダリ レプリカ|  
 |**再適用バイト数/秒**|セカンダリ データベースで最近 1 秒間に再実行されたログ レコードの量。|セカンダリ レプリカ|  
 |**Total Log requiring undo**|元に戻す必要のあるログの合計 KB 数。|セカンダリ レプリカ|  
-|**Transaction Delay**|現在の全トランザクションに対する終了していないコミットの確認を待機中に生じた遅延 (ミリ秒単位)。 *Mirrored Write Transaction/sec* で割ると、*平均の Transaction Delay* が得られます。 詳細については、「[SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/)」 (SQL Server 2012 AlwaysOn – パート 12 – パフォーマンスの性質およびパフォーマンスの監視 II) を参照してください。|プライマリ レプリカ|  
+|**Transaction Delay**|現在の全トランザクションに対する終了していないコミットの確認を待機中に生じた遅延 (ミリ秒単位)。 *Mirrored Write Transaction/sec* で割ると、*平均の Transaction Delay* が得られます。 詳細については、「[SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii)」 (SQL Server 2012 AlwaysOn – パート 12 – パフォーマンスの性質およびパフォーマンスの監視 II) を参照してください。|プライマリ レプリカ|  
   
 ## <a name="see-also"></a>参照
   
@@ -50,4 +50,3 @@ ms.locfileid: "86458336"
  [SQL Server、Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server、Databases オブジェクト](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  

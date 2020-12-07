@@ -32,11 +32,11 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 60eca69999f7e21164eac2ce35add549d767dc26
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688526"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126185"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -103,7 +103,7 @@ WHERE database_id = DB_ID() ;
  ダイアログを開いたままにする最長時間を指定します。 ダイアログを正常に完了するには、有効期間の終了までに、双方のエンドポイントが明示的にダイアログを終了する必要があります。 *dialog_lifetime* の値は秒単位で表す必要があります。 有効期間は **int** 型です。LIFETIME 句を指定しない場合、ダイアログの有効期間は **int** データ型の最大値になります。  
   
  ENCRYPTION  
- このダイアログで送受信したメッセージを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの外部に送信する場合に、暗号化するかどうかを指定します。 暗号化が必要なダイアログは、*セキュリティで保護されたダイアログ*です。 ENCRYPTION = ON の状態で、暗号化のサポートに必要な証明書が構成されていない場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージ交換に関するエラー メッセージが返されます。 ENCRYPTION = OFF の状態で、*target_service_name* に対してリモート サービス バインドが構成されている場合は、暗号化が使用されます。それ以外の場合、メッセージは暗号化されずに送信されます。 この句を指定しない場合、既定値の ON が使用されます。  
+ このダイアログで送受信したメッセージを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの外部に送信する場合に、暗号化するかどうかを指定します。 暗号化が必要なダイアログは、*セキュリティで保護されたダイアログ* です。 ENCRYPTION = ON の状態で、暗号化のサポートに必要な証明書が構成されていない場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージ交換に関するエラー メッセージが返されます。 ENCRYPTION = OFF の状態で、*target_service_name* に対してリモート サービス バインドが構成されている場合は、暗号化が使用されます。それ以外の場合、メッセージは暗号化されずに送信されます。 この句を指定しない場合、既定値の ON が使用されます。  
   
 > [!NOTE]  
 >  同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにあるサービス間で交換されるメッセージは暗号化されません。 ただし、メッセージ交換を行うサービスが異なるデータベースにある場合は、暗号化したメッセージ交換を行うために、データベースのマスター キーと暗号化の証明書が必要になります。 これらを用意しておくと、メッセージ交換中にデータベースの 1 つが別のインスタンスに移動した場合でも、メッセージ交換を続行できます。  

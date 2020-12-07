@@ -15,12 +15,12 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9982af6b823e4a1e179ae2361c14ea85be0dc8c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ec97baa1cfa8f1d891c3c0950e530f52294a434
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482655"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811006"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88482655"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  SQL_SOPT_SS_NOCOUNT_STATUS 属性は、NOCOUNT オプションの現在の設定を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。これは、 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) が呼び出されたときに、がステートメントの影響を受ける行の数をレポートするかどうかを制御します。 *Valueptr*値の型は SQLLEN です。  
   
-|値|説明|  
+|Value|説明|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT を OFF にします。 SQLRowCount は、影響を受けた行数を返します。|  
 |SQL_NC_ON|NOCOUNT を ON にします。 影響を受ける行の数は SQLRowCount によって返されず、戻り値は0です。|  
@@ -53,7 +53,6 @@ ms.locfileid: "88482655"
  テーブル値パラメーターの詳細については、「 [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLSetStmtAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59370)   
+ [SQLSetStmtAttr 関数](../../odbc/reference/syntax/sqlsetstmtattr-function.md)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

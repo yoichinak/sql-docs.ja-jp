@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7eb89be3b94565f7a8642dad893642176a22822b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766441"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439296"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>クイック スタート:Azure Data Studio を使用して、Azure SQL Database に接続してクエリを実行する
 
@@ -39,7 +39,7 @@ Azure Data Studio を使用して、Azure SQL Database サーバーへの接続�
 
 1. 最初に Azure Data Studio を実行すると、 **[ようこそ]** ページが開きます。 **ウェルカム** ページが表示されない場合は、 **[ヘルプ]**  >  **[ようこそ]** を選択します。 **[新しい接続]** を選択して、 **[接続]** ウィンドウを開きます。
    
-   ![新しい接続アイコン](media/quickstart-sql-database/new-connection-icon.png)
+   ![[次の接続] オプションが選択されている Azure Delta Studio の [ようこそ] ダイアログ ボックスを示すスクリーンショット。](media/quickstart-sql-database/new-connection-icon.png)
 
 2. この記事では、SQL サインインを使用しますが、Windows 認証もサポートされています。 ご利用の Azure SQL サーバーのサーバー名、ユーザー名、パスワードを使用して、次のようにフィールドに入力します。
 
@@ -53,7 +53,7 @@ Azure Data Studio を使用して、Azure SQL Database サーバーへの接続�
    | **データベース名** | *空白のままにする* | ここでは、サーバーに接続するだけです。 |
    | **サーバー グループ** | <Default> を選択 | 作成した特定のサーバー グループにフィールドを設定できます。 | 
 
-   ![新しい接続アイコン](media/quickstart-sql-database/new-connection-screen.png)  
+   ![Azure Data Studio のスクリーンショット - [接続] ページ。](media/quickstart-sql-database/new-connection-screen.png)  
 
 3. **[接続]** を選択します。
 
@@ -88,7 +88,7 @@ Azure Data Studio を使用して、Azure SQL Database サーバーへの接続�
 
 ## <a name="create-a-table"></a>テーブルを作成する
 
-クエリ エディターは **master** データベースに接続されていますが、**TutorialDB** データベースにテーブルを作成する必要があります。 
+クエリ エディターは **master** データベースに接続されていますが、 **TutorialDB** データベースにテーブルを作成する必要があります。 
 
 1. **TutorialDB** データベースに接続します。
 

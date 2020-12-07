@@ -15,14 +15,14 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f505d4559529661738efc8504931c7f96ad8933f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0f99d649dfda393c5371039976321c4bf54be684
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114674"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121232"
 ---
 # <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>新しい Always On フェールオーバー クラスター インスタンスを作成する (セットアップ)
 

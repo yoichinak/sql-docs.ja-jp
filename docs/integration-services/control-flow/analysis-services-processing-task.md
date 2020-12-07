@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349988"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123679"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 処理タスク
 
@@ -75,7 +75,7 @@ ms.locfileid: "88349988"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックをクリックしてください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>プログラムによる Analysis Services 処理タスクの構成  
  プログラムによってこれらのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
@@ -123,7 +123,7 @@ ms.locfileid: "88349988"
 |--------------|-----------------|  
 |**[オブジェクト名]**|指定されたオブジェクト名を表示します。|  
 |**Type**|指定されたオブジェクトの種類を表示します。|  
-|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック**: [多次元モデルの処理 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック**: [多次元モデルの処理 (Analysis Services)](/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**設定**|指定されたオブジェクトの処理設定を表示します。|  
   
  **追加**  
@@ -135,7 +135,7 @@ ms.locfileid: "88349988"
  **[影響分析]**  
  選択したオブジェクトに対して影響分析を実行します。  
   
- **関連トピック:** [[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **関連トピック:** [[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)  
   
  **[バッチ設定の概要]**  
  
@@ -150,4 +150,4 @@ ms.locfileid: "88349988"
  **[設定の変更]**  
  処理オプションおよびディメンション キー内のエラー処理を変更します。  
   
- **関連トピック:** [[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **関連トピック:** [[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)

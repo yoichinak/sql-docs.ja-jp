@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: f335fef3f9918ebcd04362cd6b1edf2df6a29dfc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195148"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727300"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>クライアント接続でのサービス プリンシパル名 (SPN) のサポート
 
@@ -41,9 +41,9 @@ ms.locfileid: "89195148"
   
  Kerberos の詳細については、次の記事を参照してください。  
   
--   [Windows を対象とした Kerberos に関する技術的補足](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Windows を対象とした Kerberos に関する技術的補足](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
--   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos)  
   
 ## <a name="usage"></a>使用法  
  次の表では、セキュリティで保護された認証をクライアント アプリケーションで使用するための、最も一般的なシナリオについて説明します。  
@@ -110,4 +110,3 @@ ms.locfileid: "89195148"
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server の機能](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
-  

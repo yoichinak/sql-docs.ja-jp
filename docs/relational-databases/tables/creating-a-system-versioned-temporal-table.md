@@ -12,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035b1793515779102b9b6b24d0377a4d33cba3c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990399"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809300"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルの作成
 
@@ -84,7 +84,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 
 - **HISTORY_TABLE** パラメーターにはスキーマ名が必須です。
 - 指定したスキーマが存在しない場合、 **CREATE TABLE** ステートメントは失敗します。
-- **HISTORY_TABLE** パラメーターによって指定されているテーブルが既に存在する場合、新しく作成されるテンポラル テーブルに対して、 [スキーマの整合性およびテンポラル データの整合性](https://msdn.microsoft.com/library/dn935015.aspx)が検証されます。 無効な履歴テーブルを指定した場合、**CREATE TABLE** ステートメントは失敗します。
+- **HISTORY_TABLE** パラメーターによって指定されているテーブルが既に存在する場合、新しく作成されるテンポラル テーブルに対して、 [スキーマの整合性およびテンポラル データの整合性](./temporal-tables.md)が検証されます。 無効な履歴テーブルを指定した場合、**CREATE TABLE** ステートメントは失敗します。
 
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>ユーザー定義の履歴テーブルによるテンポラル テーブルの作成
 
@@ -207,4 +207,4 @@ ALTER TABLE ProjectTaskCurrent
 - [システム バージョン管理のテンポラル テーブルのデータの変更](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [システム バージョン管理されたテンポラル テーブルのスキーマを変更する](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

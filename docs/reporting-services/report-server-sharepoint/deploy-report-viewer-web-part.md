@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767036"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933561"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
 
@@ -53,7 +53,7 @@ SharePoint Server 2013、SharePoint Server 2016 または SharePoint Server 2019
 
 1. SharePoint サーバーの **[管理者として実行]** オプションを使用して、SharePoint 管理シェルを開きます。
 
-2. [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) を実行し、ファーム ソリューションを追加します。
+2. [Add-SPSolution](/powershell/module/sharepoint-server/Add-SPSolution) を実行し、ファーム ソリューションを追加します。
 
     ```
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -61,7 +61,7 @@ SharePoint Server 2013、SharePoint Server 2016 または SharePoint Server 2019
 
     コマンドレットにより、ソリューション名、ソリューション ID、および Deployed=False が返されます。 次の手順では、ソリューションを配置します。
 
-3. [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) コマンドレットを実行してファーム ソリューションを配置します。
+3. [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution) コマンドレットを実行してファーム ソリューションを配置します。
 
     **SharePoint 2013**
 
@@ -93,7 +93,7 @@ SharePoint Server 2013、SharePoint Server 2016 または SharePoint Server 2019
 
 6. 他のサイト コレクションについても、各サイトを開き、[サイトの操作] をクリックして手順を繰り返します。
 
-必要に応じて PowerShell を使用して、[Enable-spfeature](https://technet.microsoft.com/library/ff607803.aspx) コマンドレットを使用して、すべてのサイトでこの機能を有効にすることもできます。
+必要に応じて PowerShell を使用して、[Enable-spfeature](/powershell/module/sharepoint-server/Enable-SPFeature) コマンドレットを使用して、すべてのサイトでこの機能を有効にすることもできます。
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 

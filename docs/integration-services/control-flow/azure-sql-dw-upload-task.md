@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 643de07ff630c5f36147aac5c7721297236fc728
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5510fb2a0a4760b5465dad7f44eed8c85ef36251
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350018"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297963"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW アップロード タスク
 
@@ -27,14 +27,19 @@ ms.locfileid: "88350018"
 
 
 
-**Azure SQL DW アップロード タスク**により、SSIS パッケージはファイル システムまたは Azure Blob Storage から Azure SQL Data Warehouse (DW) に表形式データをコピーできます。
-「[Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)」(Azure SQL Data Warehouse の読み込みパターンと戦略) で説明されているように、このタスクはパフォーマンス向上のために PolyBase を利用します。
+**Azure SQL DW アップロード タスク** により、SSIS パッケージはファイル システムまたは Azure Blob Storage から Azure Synapse Analytics (DW) に表形式データをコピーできます。
+「[Azure Synapse Analytics Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)」(Azure Synapse Analytics の読み込みパターンと戦略) で説明されているように、このタスクはパフォーマンス向上のために PolyBase を利用します。
 現在サポートされているソース データ ファイル形式は、UTF8 エンコーディングの区切り記号付きテキストです。
 ファイル システムからのコピーでは、データは最初にステージングのために Azure Blob Storage にアップロードされ、それから Azure SQL DW にアップロードされます。 そのため、Azure Blob Storage アカウントが必要です。
 
-**Azure SQL DW アップロード タスク**は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
+> [!NOTE]
+> サービスの種類が Data Lake Gen2 の Azure Storage 接続マネージャーはサポートされていません。
+>
+> ステージングまたはソースに Azure Data Lake Gen2 を使用する場合は、サービスの種類が Blob Storage である Azure Storage 接続マネージャー経由で接続できます。
 
-**Azure SQL DW アップロード タスク**を追加するには、SSIS ツールボックスからデザイナー キャンバスにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして **[編集]** をクリックし、タスク エディター ダイアログ ボックスを表示します。
+**Azure SQL DW アップロード タスク** は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
+
+**Azure SQL DW アップロード タスク** を追加するには、SSIS ツールボックスからデザイナー キャンバスにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして **[編集]** をクリックし、タスク エディター ダイアログ ボックスを表示します。
 
 **[全般]** ページで、次のプロパティを構成します。
 
@@ -63,8 +68,8 @@ CompressionType|Azure Storage にファイルをアップロードするとき�
 CompressionLevel|圧縮形式に使用する圧縮レベルを指定します。
 AzureDwConnection|Azure SQL DW の ADO.NET 接続マネージャーを指定します。
 TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、 **[\<New Table ...>]** を選択して新規作成します。
-TableDistribution|新しいテーブルの配布方法を指定します。 **TableName**に新しいテーブル名が指定されている場合に適用されます。
-HashColumnName|ハッシュ テーブル配分に使用される列を指定します。 **TableDistribution** に **HASH**が指定されている場合に適用されます。
+TableDistribution|新しいテーブルの配布方法を指定します。 **TableName** に新しいテーブル名が指定されている場合に適用されます。
+HashColumnName|ハッシュ テーブル配分に使用される列を指定します。 **TableDistribution** に **HASH** が指定されている場合に適用されます。
 
 ### <a name="blobstorage"></a>BlobStorage
 
@@ -78,8 +83,8 @@ BlobDirectory|ソース データが存在する BLOB ディレクトリ (仮想
 CompressionType|ソース データに使用される圧縮形式を指定します。
 AzureDwConnection|Azure SQL DW の ADO.NET 接続マネージャーを指定します。
 TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、 **[\<New Table ...>]** を選択して新規作成します。
-TableDistribution|新しいテーブルの配布方法を指定します。 **TableName**に新しいテーブル名が指定されている場合に適用されます。
-HashColumnName|ハッシュ テーブル配分に使用される列を指定します。 **TableDistribution** に **HASH**が指定されている場合に適用されます。
+TableDistribution|新しいテーブルの配布方法を指定します。 **TableName** に新しいテーブル名が指定されている場合に適用されます。
+HashColumnName|ハッシュ テーブル配分に使用される列を指定します。 **TableDistribution** に **HASH** が指定されている場合に適用されます。
 
 新しいテーブルと既存のテーブルにいずれにコピーするかに基づき、異なる **[マッピング]** ページが表示されます。
 前者の場合、マッピングするアップロード元の列とそれに対応する、作成予定のアップロード先のテーブルの名前を構成します。

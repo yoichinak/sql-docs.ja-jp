@@ -1,26 +1,29 @@
 ---
 title: Linux での SQL Server データベースのバックアップと復元
 description: Linux で SQL Server データベースをバックアップおよび復元する方法について説明します。 また、SQL Server Management Studio (SSMS) を使用してバックアップと復元を行う方法についても説明します。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 743995e7615ac7c0398d525657dfa44138de3108
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088970"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784770"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux での SQL Server データベースのバックアップと復元
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 さまざまなオプションを使用して、Linux 上の SQL Server 2017 からデータベースのバックアップを作成できます。 Linux サーバーでは、**sqlcmd** を使用して SQL Server に接続してバックアップを作成できます。 Windows からは、SQL Server on Linux に接続して、ユーザー インターフェイスを使用してバックアップを作成できます。 バックアップ機能はプラットフォーム間で同じです。 たとえば、データベースのローカル バックアップ、リモート ドライブへのバックアップ、または [Microsoft Azure Blob ストレージ サービス](../relational-databases/backup-restore/sql-server-backup-to-url.md)へのバックアップを行うことができます。
+
+> [!IMPORTANT]
+> SQL Server on Linux により、ブロック BLOB を使用した Azure Blob Storage へのバックアップのみがサポートされています。 バックアップと復元にストレージ キーを使用すると、サポートされないページ BLOB が使用されてしまいます。 代わりに Shared Access Signature を使用します。 ブロック BLOB とページ BLOB の詳細については、「[ブロック BLOB とページ BLOB へのバックアップ](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob)」のページを参照してください。
 
 ## <a name="backup-a-database"></a>データベースをバックアップする
 

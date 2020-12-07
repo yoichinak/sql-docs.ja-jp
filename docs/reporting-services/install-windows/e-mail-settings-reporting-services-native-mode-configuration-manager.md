@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c58ed673834c0226f9998b80fa4b12f14538e0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866005"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892082"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)
 SQL Server Reporting Services には電子メール配信拡張機能があり、電子メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。
 
-既定では、レポート サーバーの電子メール配信拡張機能は構成されていません。 Reporting Services 構成マネージャーを使用して、この拡張機能の最低限の構成を行う必要があります。 詳細なプロパティを設定するには、RSReportServer.config ファイルを編集します。 この拡張機能を使用するようにレポート サーバーを構成できない場合は、代わりに共有フォルダーにレポートを配信できます。 詳細については、「Reporting Services でのファイル共有の配信」をご覧ください。
+既定では、レポート サーバーの電子メール配信拡張機能は構成されていません。 レポート サーバー構成マネージャーを使用して、この拡張機能の最低限の構成を行う必要があります。 詳細なプロパティを設定するには、RSReportServer.config ファイルを編集します。 この拡張機能を使用するようにレポート サーバーを構成できない場合は、代わりに共有フォルダーにレポートを配信できます。 詳細については、「Reporting Services でのファイル共有の配信」をご覧ください。
 
 ## <a name="configuration-requirements"></a>構成要件
 
@@ -41,16 +41,16 @@ SQL Server Reporting Services には電子メール配信拡張機能があり�
 
 電子メール配信用にレポート サーバーを構成するには、次の操作を行います。
 
-- SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するだけの場合は、Reporting Services 構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。
+- SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するのみの場合は、レポート サーバー構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。
 
 - (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 構成ファイルの検索と変更の詳細については、「[Reporting Services の構成ファイル (RSreportserver.config) の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。
 
 > [!NOTE] 
 > レポート サーバーの電子メール設定は CDO に基づいています。 特定の設定に関する詳細については、CDO の製品マニュアルを参照してください。
 
-## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Reporting Services 構成マネージャーを使用してレポート サーバーのメールを構成する
+## <a name="configure-report-server-e-mail-using-the-report-server-configuration-manager"></a><a name="rsconfigman"/>レポート サーバー構成マネージャーを使用してレポート サーバーのメールを構成する
 
-1. Reporting Services 構成マネージャーを起動して、レポート サーバー インスタンスに接続します。
+1. レポート サーバー構成マネージャーを起動して、レポート サーバー インスタンスに接続します。
 
 2. **[送信者アドレス]** に、生成されるメールの **[送信者]** フィールドに使用するメール アドレスを入力します。 
 
@@ -137,12 +137,12 @@ SQL Server Reporting Services には電子メール配信拡張機能があり�
 
 - `<SMTPServerPort>` 既定ではポート 25 に構成されます。
 - `<SMTPAuthenticate>` レポート サーバーがリモート SMTP サーバーに接続する方法を指定します。 既定値は **0** (認証なし) です。 この場合、接続は匿名アクセスをとおして行われます。 ドメインの構成によっては、レポート サーバーと SMTP サーバーが同じドメインのメンバーであることが必要になる場合があります。
-- 制限付きの配信リスト (たとえば、認証されたアカウントからの着信メッセージだけを受け付ける配信リスト) にメールを送信するには、 `<SMTPAuthenticate>` を **1** または **2**に設定します。 **1**に設定すると、 `<SendUserName>` と `<SendPassword>`も設定する必要があります。 Reporting Services 構成マネージャーからこれを行うことをお勧めします。そうすることにより、 `<SendUserName>` と `<SendPassword>`の値が暗号化されるためです。
+- 制限付きの配信リスト (たとえば、認証されたアカウントからの着信メッセージだけを受け付ける配信リスト) にメールを送信するには、 `<SMTPAuthenticate>` を **1** または **2**に設定します。 **1**に設定すると、 `<SendUserName>` と `<SendPassword>`も設定する必要があります。 これを行う際は、レポート サーバー構成マネージャーを使用することをお勧めします。そうすることで、`<SendUserName>` と `<SendPassword>` の値が暗号化されるためです。
 
 ### <a name="to-configure-a-remote-smtp-service-for-the-report-server"></a>リモート SMTP サービスをレポート サーバー用に構成するには
 
 > [!NOTE] 
-> メール サーバーは Reporting Services 構成マネージャーで構成することをお勧めします。
+> メール サーバーを構成する際は、レポート サーバー構成マネージャーを使用することをお勧めします。
 
 1. レポート サーバー Windows サービスが SMTP サーバー上で **Send As** 権限を保持していることを確認します。
 
@@ -154,7 +154,7 @@ SQL Server Reporting Services には電子メール配信拡張機能があり�
      
 5. `<SMTPServer>`で、SMTP サーバーの名前を入力します。 この値は、IP アドレス、企業イントラネット上のコンピューターの UNC 名、または完全修飾ドメイン名にすることができます。
 
-6. レポート サーバーのサービス アカウントを使用するには、 `<SendUsing>` の値を **2** に設定します。 基本認証の場合は、 `<SendUsing>` の値を **1** に設定します。 **1**に設定すると、さらに `<SendUserName>` と `<SendPassword>`の値を指定する必要があります。 これらの値を暗号化する場合は、Reporting Services 構成マネージャー内で認証を設定します。
+6. レポート サーバーのサービス アカウントを使用するには、 `<SendUsing>` の値を **2** に設定します。 基本認証の場合は、 `<SendUsing>` の値を **1** に設定します。 **1**に設定すると、さらに `<SendUserName>` と `<SendPassword>`の値を指定する必要があります。 これらの値を暗号化する場合は、レポート サーバー構成マネージャー内で認証を設定します。
 
 7. `<SMTPAuthenticate>` を 1 または 2 に設定する場合は、 **の値を** 1 `<SendUsing>` に設定します。
 
@@ -222,7 +222,7 @@ SQL Server Reporting Services には電子メール配信拡張機能があり�
 17. ファイルを保存します。
   
 ## <a name="see-also"></a>参照  
-[Reporting Services Configuration Manager (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   

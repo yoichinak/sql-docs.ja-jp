@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc5169c81b53f45ca036b064b47d370f21ec2e32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c307172d7bf8b258cbd56b4ef4abfe6704750358
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885921"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192362"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 統合の概要
 
@@ -90,7 +90,7 @@ End Class
   
 ```  
   
-この簡単なプログラムには、パブリック クラスの静的メソッドが 1 つ含まれています。 このメソッドでは、 **[Sqlcontext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** と**[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** という2つの新しいクラスを使用して、単純なテキストメッセージを出力するマネージデータベースオブジェクトを作成します。 また、このメソッドは文字列 "Hello world!" を out パラメーターの値として指定します。 このメソッドを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャとして宣言すれば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャと同じ方法で実行できます。  
+この簡単なプログラムには、パブリック クラスの静的メソッドが 1 つ含まれています。 このメソッドでは、 **[Sqlcontext](/dotnet/api/microsoft.sqlserver.server.sqlcontext)** と **[SqlPipe](/dotnet/api/microsoft.sqlserver.server.sqlpipe)** という2つの新しいクラスを使用して、単純なテキストメッセージを出力するマネージデータベースオブジェクトを作成します。 また、このメソッドは文字列 "Hello world!" を out パラメーターの値として指定します。 このメソッドを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャとして宣言すれば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャと同じ方法で実行できます。  
   
 このプログラムをライブラリとしてコンパイルし、に読み込んで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、ストアドプロシージャとして実行します。  
   
@@ -120,7 +120,7 @@ Visual C# ソース ファイルの場合は、次のコマンドを実行しま
 
 サンプル プロシージャを正常にコンパイルしたら、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でそのプロシージャをテストできます。 プロシージャをテストするには、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を起動し、適切なテスト データベース (AdventureWorks サンプル データベースなど) に接続して新しいクエリを作成します。  
   
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 CLR コードを有効にするには、 **sp_configure**システムストアドプロシージャを使用します。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 CLR コードを有効にするには、 **sp_configure** システムストアドプロシージャを使用します。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
   
 ストアド プロシージャにアクセスするには、アセンブリを作成する必要があります。 この例では、C:\ ディレクトリに helloworld.dll アセンブリが作成されているものとします。 クエリに次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを追加します。  
   
@@ -138,7 +138,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
-作成したプロシージャは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で記述された通常のストアド プロシージャと同様に実行できます。 次のコマンドを実行します。  
+作成したプロシージャは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で記述された通常のストアド プロシージャと同様に実行できます。 たとえば、次のコマンドを実行します。  
   
 ```sql
 DECLARE @J nchar(25)  
@@ -171,11 +171,11 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
    drop assembly helloworld  
 ```  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server での CLR 統合の詳細については、次の記事を参照してください。
 
-- [CLR ストアド プロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)
+- [CLR ストアド プロシージャ](/dotnet/framework/data/adonet/sql/clr-stored-procedures)
 - [ADO.NET に対する SQL Server インプロセス固有の拡張機能](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)
 - [CLR データベース オブジェクトのデバッグ](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)
 - [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)

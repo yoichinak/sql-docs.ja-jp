@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 20506baeb0a22e4e32fd1c4b24a7d00f4493b6d5
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283553"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956535"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services でリソース ガバナーを使用して Python と R のワークロードを管理する
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,9 +38,9 @@ Python および R の機械学習アルゴリズムは、多くのコンピュ�
 
 必要に応じて、関連するワークロード グループと分類子を使用してカスタムの**外部リソース プール**を作成し、特定のプログラム、ホスト、またはその他の条件によって送信された要求のリソース割り当てを決定することもできます。 外部リソース プールは、[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] に導入された種類のリソース プールです。データベース エンジン外部の R および Python のプロセスの管理に役立ちます。
 
-1. [リソース ガバナンスを有効にします](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (既定ではオフになっています)。
+1. [リソース ガバナンスを有効にします](../../relational-databases/resource-governor/enable-resource-governor.md) (既定ではオフになっています)。
 
-2. [外部リソース プールを作成する](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql)を実行してリソース プールを作成および構成し、その後 [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) を実行してこれを実装します。
+2. [外部リソース プールを作成する](../../t-sql/statements/create-external-resource-pool-transact-sql.md)を実行してリソース プールを作成および構成し、その後 [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) を実行してこれを実装します。
 
 3. トレーニングとスコア付けなど、粒度の細かい割り当て用のワークロード グループを作成します。
 

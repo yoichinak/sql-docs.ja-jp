@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf85cb8b432dcc6bf72208c12b934291bc72b049
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450034"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724652"
 ---
 # <a name="change-domain-values"></a>ドメイン値の変更
 
@@ -101,7 +101,7 @@ ms.locfileid: "88450034"
   
 11. **[選択したドメインの値を削除します]**: ドメインの既存の値を削除するには、削除する値を "値" テーブルで選択し、 **[選択したドメインの値を削除します]** をクリックします。 DQS_NULL というエントリは削除できません。したがって、削除する値を複数選択した場合に、選択した値の中に DQS_NULL が含まれていると、操作が失敗します。  
   
-12. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+12. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="follow-up-after-changing-domain-values"></a><a name="FollowUp"></a> 補足情報: ドメイン ルールの変更後  
  ドメイン値を変更した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
@@ -136,5 +136,4 @@ ms.locfileid: "88450034"
   
 ##  <a name="how-to-handle-null-equivalents"></a><a name="Null"></a> Null に相当するものを処理する方法  
  **[ドメイン値]** タブの各値テーブルに DQS_NULL という値が 1 つ含まれています。 データ ソース内の null は、値テーブルでは SQL_NULL として表示されます。 null に相当する値は、DQS_NULL のシノニムとして設定することができます。 これにより、null と null に相当する値がすべて DQS_NULL として処理されます。  
-  
   

@@ -23,19 +23,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0bab74ab5bbd51099ef8d38b7ad8471e1d7fee55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bcfa24368b913258b1e5538bae6c21da7330450
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88318458"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037819"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスのアカウントの選択
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> 現在、[Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 サービス開始アカウントにより、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] エージェントを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アカウントとそのネットワーク権限が定義されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスのアカウントを選択します。構成マネージャーでは、次のオプションから選択できます。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "88318458"
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>制限事項 1 : マルチサーバー管理での非管理者アカウントの使用  
 ターゲット サーバーをマスター サーバーに参加させると、"参加操作に失敗しました" というエラー メッセージが表示されることがあります。  
   
-このエラーを解決するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの両方を再起動します。 詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6) 」を参照してください。  
+このエラーを解決するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの両方を再起動します。 詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md) 」を参照してください。  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>制限事項 2 : マルチサーバー管理でのローカル システム アカウントの使用  
 マルチサーバー管理は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスがローカル システム アカウントで実行されるとき、同じコンピューターにマスター サーバーとターゲット サーバーの両方が存在する場合にのみサポートされます。 この構成を使用している場合に、ターゲット サーバーをマスター サーバーに参加させると、次のメッセージが返されます。  
@@ -120,13 +120,12 @@ ms.locfileid: "88318458"
   
 **SQL Server エージェントのメール プロファイルを指定するには**  
   
--   [方法: データベース メールを使用するように SQL Server エージェント メールを構成する](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [方法: データベース メールを使用するように SQL Server エージェント メールを構成する](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、オペレーティング システムを起動するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを開始する必要があることを指定します。  
   
 ## <a name="see-also"></a>参照  
 [Windows サービス アカウントの設定](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
-[サービスの管理方法に関するトピック (SQL Server 構成マネージャー)](https://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+[サービスの管理方法に関するトピック (SQL Server 構成マネージャー)](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)  
 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)  
-  

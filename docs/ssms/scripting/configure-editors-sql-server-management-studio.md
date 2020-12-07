@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99fb2ac932b3fde03c024d1ecce06de2ef37d5b1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 7da0e6a9eff582e69fa37ccd4396039fe6ac1727
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093506"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039096"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>エディターの構成 (SQL Server Management Studio)
 
@@ -42,7 +42,7 @@ ms.locfileid: "89093506"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|エクスプローラーで、指定された拡張子を持つファイルをダブルクリックしたときに開かれるエディターを指定する方法について説明します。|[ファイル拡張子をコード エディターに関連付ける方法](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
-|コードおよびテキストを読みやすくするためにフォントをカスタマイズする方法について説明します。|[フォントの色、サイズ、スタイルを変更する方法](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
-|プロパティの表示方法について説明します。|[Management Studio の [プロパティ] ウィンドウの使用](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
-|エディター オプション ダイアログの F1 ヘルプ ページの場所です。|[[クエリ オプション] ページの F1 ヘルプ](https://docs.microsoft.com/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio)|
+|エクスプローラーで、指定された拡張子を持つファイルをダブルクリックしたときに開かれるエディターを指定する方法について説明します。|[ファイル拡張子をコード エディターに関連付ける方法](./associate-file-extensions-to-a-code-editor.md)|  
+|コードおよびテキストを読みやすくするためにフォントをカスタマイズする方法について説明します。|[フォントの色、サイズ、スタイルを変更する方法](./change-font-color-size-and-style.md)|  
+|プロパティの表示方法について説明します。|[Management Studio の [プロパティ] ウィンドウの使用](./use-the-properties-window-in-management-studio.md)|  
+|エディター オプション ダイアログの F1 ヘルプ ページの場所です。|[[クエリ オプション] ページの F1 ヘルプ](../f1-help/f1-help-for-server-connections-sql-server-management-studio.md)|

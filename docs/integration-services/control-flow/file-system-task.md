@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dea2596647ab9c5ac69befde2336ac126a84f2ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d686ed80120622c2a53cbb9cc52eb4637cfd3f2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393778"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196516"
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
 
@@ -68,13 +68,13 @@ ms.locfileid: "88393778"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
--   [[ファイル システム タスク エディター]\([全般] ページ)](../../integration-services/control-flow/file-system-task-editor-general-page.md)  
+-   [[ファイル システム タスク エディター]\([全般] ページ)]()  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
  プログラムでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "88393778"
 ## <a name="file-system-task-editor-general-page"></a>[ファイル システム タスク エディター] \([全般] ページ)
   **[ファイル システム タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクで実行するファイル システム操作を構成できます。  
   
- SourceConnection プロパティと DestinationConnection プロパティを設定して、ソースとターゲットの接続マネージャーを指定する必要があります。 タスクでソースまたはターゲットとして使用されるファイルを指すファイル接続マネージャーの名前を指定することも、ファイルのパスが変数に格納されていれば変数の名前を指定することもできます。 変数を使用してファイル パスを保存するには、最初に、IsSourcePathVariable オプション (ソース接続) および IsDestinationPatheVariable オプション (ターゲット接続) を **True**に設定しておく必要があります。 その後で、既存のシステム変数またはユーザー定義変数を選択するか、新しい変数を作成できます。 変数のスコープは、 **[変数の追加]** ダイアログ ボックスで構成および指定できます。 スコープは、ファイル システム タスクまたは親コンテナーにする必要があります。 詳細については、「[Integration Services (SSIS) Variables](../../integration-services/integration-services-ssis-variables.md)」(Integration Services (SSIS) の変数) と「[Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」(パッケージで変数を使用する) を参照してください。  
+ SourceConnection プロパティと DestinationConnection プロパティを設定して、ソースとターゲットの接続マネージャーを指定する必要があります。 タスクでソースまたはターゲットとして使用されるファイルを指すファイル接続マネージャーの名前を指定することも、ファイルのパスが変数に格納されていれば変数の名前を指定することもできます。 変数を使用してファイル パスを保存するには、最初に、IsSourcePathVariable オプション (ソース接続) および IsDestinationPatheVariable オプション (ターゲット接続) を **True**に設定しておく必要があります。 その後で、既存のシステム変数またはユーザー定義変数を選択するか、新しい変数を作成できます。 変数のスコープは、 **[変数の追加]** ダイアログ ボックスで構成および指定できます。 スコープは、ファイル システム タスクまたは親コンテナーにする必要があります。 詳細については、「[Integration Services (SSIS) Variables](../../integration-services/integration-services-ssis-variables.md)」(Integration Services (SSIS) の変数) と「[Use Variables in Packages](../integration-services-ssis-variables.md)」(パッケージで変数を使用する) を参照してください。  
   
 > [!NOTE]  
 >  **SourceConnection** プロパティと **DestinationConnection** プロパティに選択した変数をオーバーライドするには、**Source** プロパティと **Destination** プロパティに式を入力します。 式は、 **ファイル システム タスク エディター** の **[式]** ページで入力します。 たとえば、タスクで変換先として使用するファイルのパスを設定するには、特定の状況下では変数 A、別の状況下では変数 B を使用することがあります。  
@@ -147,13 +147,13 @@ ms.locfileid: "88393778"
  **[DestinationVariable]**  
  一覧から変数名を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  
   
 #### <a name="isdestinationpathvariable--false"></a>[IsDestinationPathVariable] = [False]  
  **DestinationConnection**  
  一覧でファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../connection-manager/file-connection-manager.md)  
   
 ### <a name="issourcepathvariable-dynamic-options"></a>[IsSourcePathVariable] の動的オプション  
   
@@ -161,7 +161,7 @@ ms.locfileid: "88393778"
  **[SourceVariable]**  
  一覧から変数名を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](../integration-services-ssis-variables.md)  
   
 #### <a name="issourcepathvariable--false"></a>[IsSourcePathVariable] = [False]  
  **SourceConnection**  
@@ -191,5 +191,4 @@ ms.locfileid: "88393778"
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

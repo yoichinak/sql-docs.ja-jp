@@ -27,11 +27,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d2ec0e37ce2dd4818b0783ca2b0ee97cfecbcb9
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116488"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117895"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -148,7 +148,7 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ## <a name="fractional-seconds-precision"></a>秒の小数部の有効桁数
 `DATEADD` は、*date* データ型の **smalldatetime**、**date**、**datetime** について、**microsecond** または **nanosecond** の *datepart* に加算を許可しません。
   
-ミリ秒の小数点以下桁数は 3 (.123) です。マイクロ秒の小数点以下桁数は 6 (.123456) です。ナノ秒の小数点以下桁数は 9 (.123456789) です。 **time**、**datetime2**、および**datetimeoffset** データ型の小数点以下桁数は最大 7 (.1234567) です。 **nanosecond** の *datepart* については、*date* の 1 秒未満の秒を増やす前に、*number* を 100 にする必要があります。 1 から 49 の *number* は 0 に切り捨てられ、50 から 99 は 100 に切り上げられます。
+ミリ秒の小数点以下桁数は 3 (.123) です。マイクロ秒の小数点以下桁数は 6 (.123456) です。ナノ秒の小数点以下桁数は 9 (.123456789) です。 **time**、**datetime2**、および **datetimeoffset** データ型の小数点以下桁数は最大 7 (.1234567) です。 **nanosecond** の *datepart* については、*date* の 1 秒未満の秒を増やす前に、*number* を 100 にする必要があります。 1 から 49 の *number* は 0 に切り捨てられ、50 から 99 は 100 に切り上げられます。
   
 次のステートメントは、**millisecond**、**microsecond**、または **nanosecond** の *datepart* を加算します。
   

@@ -2,7 +2,7 @@
 description: PolyBase でのプッシュダウン計算
 title: PolyBase でのプッシュダウン計算 | Microsoft Docs
 dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 04/23/2019
+ms.date: 11/17/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,26 +10,29 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0b028d0476b55d17a7eca9a8cace18d9ca206bc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59ff1e7807a8bdd8427e3b902bf53c111d52c7b7
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482516"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96127844"
 ---
 # <a name="pushdown-computations-in-polybase"></a>PolyBase でのプッシュダウン計算
 
-## <a name="dmv"></a>DMV (DMV)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+プッシュダウン計算を使用すると、外部データ ソースに対するクエリのパフォーマンスが向上します。 SQL Server 2016 以降では、プッシュダウン計算は Hadoop の外部データ ソースで使用できました。 SQL Server 2019 には、他の種類の外部データ ソースのプッシュダウン計算が導入されています。
 
-プッシュダウン計算を使用すると、Hadoop クラスター上でのクエリ パフォーマンスを改善できます。
+## <a name="enable-pushdown-computation"></a> プッシュダウン計算を有効にする
 
-## <a name="enable-pushdown"></a>プッシュダウンを有効にする
+次の記事には、特定の種類の外部データ ソース用のプッシュダウン計算の構成に関する情報が含まれています。
 
-次の記事では、プッシュダウンを有効にするための手順が説明されています。
-
-[Enable pushdown computation in Hadoop (Hadoop でのプッシュダウン計算を有効にする)](polybase-configure-hadoop.md#pushdown)
+- [Enable pushdown computation in Hadoop (Hadoop でのプッシュダウン計算を有効にする)](polybase-configure-hadoop.md#pushdown)
+- [Oracle 上の外部データにアクセスするための PolyBase の構成](polybase-configure-oracle.md)
+- [Teradata 上の外部データにアクセスするための PolyBase の構成](polybase-configure-teradata.md)
+- [MongoDB 上の外部データにアクセスするための PolyBase の構成](polybase-configure-mongodb.md)
+- [ODBC ジェネリック型の外部データにアクセスするための PolyBase の構成](polybase-configure-odbc-generic.md)
+- [SQL Server 上の外部データにアクセスするための PolyBase の構成](polybase-configure-sql-server.md)
 
 ## <a name="select-a-subset-of-rows"></a>行のサブセットを選択する
 
@@ -46,35 +49,38 @@ SELECT * FROM SensorData WHERE Speed > 65;
 
 外部テーブルから列のサブセットを選択するクエリのパフォーマンスを改善するには、述語のプッシュダウンを使用します。
 
-このクエリでは、SQL Server で map-reduce ジョブを開始し、Hadoop の区切られたテキスト ファイルを前処理して、customer.name と customer.zip_code という 2 列のデータのみが SQL Server PDW にコピーされるようにします。
+このクエリでは、SQL Server で map-reduce ジョブを開始し、Hadoop の区切られたテキスト ファイルを前処理して、customer.name および customer.zip_code という 2 列のデータのみが SQL Server にコピーされるようにします。
 
 ```sql
-SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_balance < 200000
+SELECT customer.name, customer.zip_code
+FROM customer
+WHERE customer.account_balance < 200000
 ```
 
 ### <a name="pushdown-for-basic-expressions-and-operators"></a>基本的な式と演算子のプッシュダウン
 
 SQL Server では、述語のプッシュダウンに次の基本的な式と演算子を使用できます。
 
-+ 数値、日付値、時間値の 2 項比較演算子 (\<, >、=、!=、<>、>=、<=)。
+- 数値、日付値、時間値の 2 項比較演算子 (`<`、`>`、`=`、`!=`、`<>`、`>=`、`<=`)。
+- 算術演算子 (`+`、`-`、`*`、`/`、`%`)。
+- 論理演算子 (`AND`、`OR`)。
+- 単項演算子 (`NOT`、`IS NULL`、`IS NOT NULL`)。
 
-+ 算術演算子 (+、-、*、/、%)。
+`BETWEEN`、`NOT`、`IN`、および `LIKE` の演算子がプッシュダウンされる場合があります。 実際の動作は、クエリ オプティマイザーが演算子式をどのように基本的な関係演算子を使用する一連のステートメントとして書き換えるかに依存します。
 
-+ 論理演算子 (AND、OR)。
+この例のクエリには、Hadoop にプッシュダウンできる述語が複数あります。 SQL Server は、map-reduce ジョブを Hadoop にプッシュして、述語 `customer.account_balance <= 200000` を実行できます。 `BETWEEN 92656 AND 92677` の式もまた、Hadoop にプッシュできる 2 項演算子と論理演算子とで構成されます。 `customer.account_balance AND customer.zipcode` 内の論理 **積** が最後の式です。
 
-+ 単項演算子 (NOT、IS NULL、IS NOT NULL)。
-
-演算子 BETWEEN、NOT、IN、LIKE はプッシュダウンできる場合があります。 実際の動作は、クエリ オプティマイザーが演算子式をどのように基本的な関係演算子を使用する一連のステートメントとして書き換えるかに依存します。
-
-この例のクエリには、Hadoop にプッシュダウンできる述語が複数あります。 SQL Server は、map-reduce ジョブを Hadoop にプッシュして、述語 `customer.account_balance <= 200000` を実行できます。 `BETWEEN 92656 and 92677` の式もまた、Hadoop にプッシュできる 2 項演算子と論理演算子とで構成されます。 `customer.account_balance and customer.zipcode` 内の論理**積**が最後の式です。
-
-この述語の組み合わせで、map-reduce ジョブですべての WHERE 句を実行できます。 SELECT 条件を満たすデータのみが SQL Server PDW にコピーされます。
+この述語の組み合わせで、map-reduce ジョブですべての WHERE 句を実行できます。 `SELECT` 条件を満たすデータのみが SQL Server にコピーされて戻されます。
 
 ```sql
-SELECT * FROM customer WHERE customer.account_balance <= 200000 AND customer.zipcode BETWEEN 92656 AND 92677
+SELECT * FROM customer 
+WHERE customer.account_balance <= 200000 
+    AND customer.zipcode BETWEEN 92656 AND 92677
 ```
 
-## <a name="force-pushdown"></a>プッシュダウンを強制する
+## <a name="examples"></a>例
+
+### <a name="force-pushdown"></a>プッシュダウンを強制する
 
 ```sql
 SELECT * FROM [dbo].[SensorData]
@@ -82,7 +88,7 @@ WHERE Speed > 65
 OPTION (FORCE EXTERNALPUSHDOWN);
 ```
 
-## <a name="disable-pushdown"></a>プッシュダウンを無効にする
+### <a name="disable-pushdown"></a>プッシュダウンを無効にする
 
 ```sql
 SELECT * FROM [dbo].[SensorData]

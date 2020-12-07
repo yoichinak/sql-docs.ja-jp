@@ -22,12 +22,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdc1069f0dfd9d12307d27ec7e2309f2ef0a9aec
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5516a294c8cd3dfb331db7c447982099c513ad99
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480587"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935001"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)
   ウィザードを使用してマップまたはマップ レイヤーを [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートに追加した後、必要に応じてレポート内のマップの体裁を変更することができます。 改善のヒントを次に示します。  
@@ -87,7 +87,7 @@ ms.locfileid: "89480587"
   
 -   解像度と単純化。 線や多角形の描画にかかる時間を優先するか、アウトラインの詳細度を優先するかを検討します。  
   
- これらのオプションを変更するには、マップ ビューポートを右クリックして、 [[マップ ビューポートのプロパティ] ダイアログ ボックスの [全般]](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) ページおよび関連ページを使用してください。  
+ これらのオプションを変更するには、マップ ビューポートを右クリックして、 [[マップ ビューポートのプロパティ] ダイアログ ボックスの [全般]](./maps-report-builder-and-ssrs.md) ページおよび関連ページを使用してください。  
   
 ##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> 凡例のオプションを変更する  
  凡例は、マップ上に表示されているデータをユーザーが解釈する際に役に立ちます。  
@@ -122,7 +122,7 @@ ms.locfileid: "89480587"
   
  グループ式は、空間データとの間にリレーションシップを持つ分析データをレイヤー上の各マップ要素に対してどのように集計するかを指定します。 既定では、グループ式は、空間データと分析データの間のリレーションシップに対して指定された対応フィールドのセットです。 たとえば、国または地域の市区町村の場所と人口規模を表示するバブル マップの場合、同じ名前を持つ複数の市区町村が存在する可能性があるため、対応フィールドには、市区町村名を示す [City] と地域名を示す [Region] が含まれます。 対応するグループ式には、[City] と [Region] の 2 つのフィールドが含まれます。  
   
- 詳細については、「[Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data (マップ ヒント: シェープファイルの SQL Server へのインポートと空間データの集計方法)](https://docs.microsoft.com/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data)」を参照してください。  
+ 詳細については、「[Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data (マップ ヒント: シェープファイルの SQL Server へのインポートと空間データの集計方法)](/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data)」を参照してください。  
   
 ##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> レイヤー上のマップ要素のオプションを変更する  
  マップ要素とは、空間データに基づく、レイヤー上のポイント、線、または多角形をいいます。 マップ要素に関して設定できるオプションは次のとおりです。 これらのオプションは、埋め込みのマップ要素であるかどうかに関係なく、レイヤー上のすべてのマップ要素に適用されます。  
@@ -163,5 +163,4 @@ ms.locfileid: "89480587"
 ## <a name="see-also"></a>参照  
  [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
-  
   

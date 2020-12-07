@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 04e11f27d26a7979dfc84b29d7c7de1b02eb02ab
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7e1e56c9132fe59a91274ff90598ddce3a6fe21c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115433"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035875"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 
@@ -549,8 +549,7 @@ GO
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
- [フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
-  
   

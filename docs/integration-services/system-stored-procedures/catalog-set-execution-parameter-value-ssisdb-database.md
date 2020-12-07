@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5775b87b13fc126907dfc0f121e9838c2d490fd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425114"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129659"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB データベース)
 
@@ -114,7 +114,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|1 つまたは複数のイベント コード|  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例  
+
+### <a name="a-generate-dump-files-for-errors"></a>A. エラーのダンプ ファイルを生成する
+
  次の例では、パッケージの実行中にエラーが発生した場合に、Integration Services サーバーによりダンプ ファイルが生成されるように指定しています。  
   
 ```sql
@@ -122,7 +125,8 @@ exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
 ```  
   
-## <a name="example"></a>例  
+### <a name="b-generate-dump-files-for-events"></a>B. イベントのダンプ ファイルを生成する
+
  次の例では、パッケージの実行中にイベントが発生した場合に、Integration Services サーバーによりダンプ ファイルが生成されるように指定し、サーバーによるファイルの生成が行われる原因となるイベントを指定しています。  
   
 ```sql

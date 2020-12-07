@@ -4,22 +4,43 @@ description: 各リリースのアクセス用 (SSMA) の SQL Server Migration A
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 1175a66a0d87296204825542dfb4021b568c30e6
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863843"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036063"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access の新機能 (アクセス可能な Sql)
 
 この記事では、各リリースでのアクセス変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+ユーザー補助機能の強化に加えて、SSMA for Access の v 8.15 リリースには、次の変更が含まれています。
+
+* 外部キーに対して自動作成されたインデックスを無視する
+* 改良評価レポートを最新のブラウザーで動作させる
+* Azure AD 認証にデータベースによって提供される権限を使用する
+* ファイルから読み込まれたステートメントの名前付けを改善する
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+障碍のある方にとってアクセシビリティを向上させるための機能強化に加えて、SSMA for Access のリリースでは、プロジェクトのメタデータに完全なソース/ターゲットサーバーバージョンが格納されるようになったため、プロジェクトのアップグレードが必要になりました。
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+SSMA for Access の v 8.13 リリースには、次の変更が含まれています。
+
+* `ORDER BY`句を使用した変換の修正 `UNION`
+* フィルター選択された一意のインデックスのサポート
+* プロシージャと関数の呼び出しを変換するときに、暗黙的な型キャストを検討します。
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -60,18 +81,18 @@ SSMA for Access のバージョン8.8 には次のものが含まれます。
 SSMA for Access のリリースでは、クエリでの関数の変換が改善され、 `IIF` グラフィカルユーザーインターフェイスでの修正とパフォーマンスの向上が向上しています。
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v86"></a>SSMA v 8.6
 
 ユーザビリティとパフォーマンスを向上させるために設計された一連の修正に加え、SSMA の SSMA リリースは、ユーザーが変換されたコードで SSMA 拡張プロパティを省略できるようにする設定を追加することによって強化されています。
 
-Ssma for Access でこの設定を利用するには、[**ツール**] [  >  **プロジェクト設定**] [  >  **全般**  >  **変換**] の順に移動し、[その**他**] の [**拡張プロパティを省略**] 設定の値を **[はい]** に更新します。
+Ssma for Access でこの設定を利用するには、[ **ツール** ] [  >  **プロジェクト設定** ] [  >  **全般**  >  **変換** ] の順に移動し、[その **他** ] の [ **拡張プロパティを省略** ] 設定の値を **[はい]** に更新します。
 
 ![拡張プロパティの設定を省略する](../access/media/ssma-omit-extended-properties.png)
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v85"></a>SSMA v1.0
 
@@ -80,7 +101,7 @@ SSMA for Access の v1.0 リリースは、SQL server での JSON 機能の Azur
 さらに、SSMA for Access では、複数の標準関数 (、など) の変換がサポートされるようになりました `ISNULL` `IIF` 。
 
 > [!IMPORTANT]
-> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、 [ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
@@ -114,11 +135,11 @@ SSMA for Access の v2.0 リリースは、品質と変換メトリックの向�
 
 SSMA for Access の v2.0 リリースは、品質と変換メトリックの向上を目的とした修正を対象として強化されています。 このリリースには、次の新機能も用意されています。
 
-* ターゲットとしての**AZURE SQL Managed Instance**のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
+* ターゲットとしての **AZURE SQL Managed Instance** のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
 
   ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
-* 変換後の**修正アドバイザー**。 詳細について[は、こちら](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)を参照してください。
+* 変換後の **修正アドバイザー** 。 詳細について [は、こちら](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)を参照してください。
 
 * データベース/スキーマの事前選択。
 
@@ -164,7 +185,7 @@ SSMA for Access のバージョン7.5 リリースは、障碍のある方にと
 
 SSMA for Access のバージョン7.4 リリースには、次の変更が含まれています。
 
-* [**クエリタイムアウト**] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
+* [ **クエリタイムアウト** ] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
 
   ![クエリタイムアウトオプション](../media/query-timeout_red.png)
 
@@ -300,7 +321,7 @@ SSMA for Access の11月2006リリースには、次の変更が含まれてい�
 * 新しいデータベース移行ウィザードが追加されました。このウィザードでは、へのアクセスからへの1つのデータベースの移行を段階的に実行でき [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ます。
 * Access データベースを変換し、変換されたオブジェクトをに読み込んで、 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] データを [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] すべて1回の手順で移行する、新しい Convert、Load、Migrate コマンドを追加しました。
 * クエリの移行が改善されました。 クエリの移行により、より多くの SELECT クエリがビューに変換されるようになりました。 詳細については、「 [Access データベースオブジェクトの変換](converting-access-database-objects-accesstosql.md)」を参照してください。
-* [ [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **テーブル**] タブでテーブルとインデックスのプロパティを編集する機能が追加されました。
+* [ [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **テーブル** ] タブでテーブルとインデックスのプロパティを編集する機能が追加されました。
 * 新しいグローバル設定を追加しました:
   * エディターウィンドウで行番号を表示するように選択できます。
   * SSMA を構成して、重複するオブジェクトの置換を求めるメッセージを表示したり、スキーマの変換中に重複するオブジェクトを常に置き換えることができます。

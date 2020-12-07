@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b25b64b9e6cde8f7546ca21f7c3383460b3e1fce
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d484d2e95f3b2f0030744a87f00c7dc3f220aa40
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688501"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300227"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "90688501"
 指定したバイト ストリームまたはファイル パスから R または Python パッケージ ファイルをデータベースにアップロードします。 このステートメントは、データベース管理者が必要な成果物をアップロードするための一般的なメカニズムとして機能します。 
 
 > [!NOTE]
-> Azure SQL Managed Instance では、**sqlmlutils** を使用してライブラリをインストールすることができます。 詳細については、「[sqlmlutils を使用した Python パッケージのインストール](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current)」および「[sqlmlutils で新しい R パッケージをインストールする](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current)」を参照してください。
+> Azure SQL Managed Instance では、 **sqlmlutils** を使用してライブラリをインストールすることができます。 詳細については、「[sqlmlutils を使用した Python パッケージのインストール](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)」および「[sqlmlutils で新しい R パッケージをインストールする](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)」を参照してください。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -150,7 +150,7 @@ WITH ( LANGUAGE = <language> )
 
 インスタンスにアップロードされたライブラリは、パブリックまたはプライベートのいずれかにすることができます。 `dbo` のメンバーによってライブラリが作成された場合、そのライブラリはパブリックで、すべてのユーザーと共有することができます。 それ以外の場合、ライブラリはそのユーザーのみのプライベートになります。
 
-ライブラリ名は、特定のユーザーまたは所有者のコンテキスト内で一意と見なされる必要があります。 たとえば、**RUser1** と **RUser2** の 2 人のユーザーは、どちらも個別に R ライブラリ `ggplot2` をアップロードできます。 ただし、**RUser1** が新しいバージョンの `ggplot2` をアップロードする場合は、2 番目のインスタンスの名前を別のものにするか、既存のライブラリを置き換える必要があります。
+ライブラリ名は、特定のユーザーまたは所有者のコンテキスト内で一意と見なされる必要があります。 たとえば、 **RUser1** と **RUser2** の 2 人のユーザーは、どちらも個別に R ライブラリ `ggplot2` をアップロードできます。 ただし、 **RUser1** が新しいバージョンの `ggplot2` をアップロードする場合は、2 番目のインスタンスの名前を別のものにするか、既存のライブラリを置き換える必要があります。
 
 ライブラリ名は任意に割り当てることはできません。ライブラリ名は外部スクリプトからライブラリを読み込むために必要な名前と同じにする必要があります。
 
@@ -160,7 +160,7 @@ WITH ( LANGUAGE = <language> )
 
 データベース所有者が所有するライブラリは、データベースとランタイムに対してグローバルと見なされます。 つまり、データベース所有者は、多くのユーザーによって共有されているライブラリまたはパッケージの共通セットが含まれているライブラリを作成できます。 `dbo` ユーザー以外のユーザーによって外部ライブラリが作成されると、その外部ライブラリは、そのユーザーに対してのみプライベートになります。
 
-ユーザー **RUser1** が外部スクリプトを実行するときに、`libPath` の値に複数のパスを含めることができます。 最初のパスは常に、データベースの所有者によって作成された共有のライブラリへのパスになります。 `libPath` の 2 番目の部分では、**RUser1** によって個別にアップロードされたパッケージを含むパスを指定します。
+ユーザー **RUser1** が外部スクリプトを実行するときに、`libPath` の値に複数のパスを含めることができます。 最初のパスは常に、データベースの所有者によって作成された共有のライブラリへのパスになります。 `libPath` の 2 番目の部分では、 **RUser1** によって個別にアップロードされたパッケージを含むパスを指定します。
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
@@ -231,11 +231,11 @@ Python 言語の場合、.whl または .zip ファイルのパッケージは z
 
 インスタンスにアップロードされたライブラリは、パブリックまたはプライベートのいずれかにすることができます。 `dbo` のメンバーによってライブラリが作成された場合、そのライブラリはパブリックで、すべてのユーザーと共有することができます。 それ以外の場合、ライブラリはそのユーザーのみのプライベートになります。
 
-SQL インスタンスには、"*システム パッケージ*" という多数のパッケージが事前にインストールされています。 ユーザーがシステム パッケージを追加、更新、または削除することはできません。
+SQL インスタンスには、" *システム パッケージ* " という多数のパッケージが事前にインストールされています。 ユーザーがシステム パッケージを追加、更新、または削除することはできません。
 
 ## <a name="permissions"></a>アクセス許可
 
-`CREATE EXTERNAL LIBRARY` アクセス許可が必要です。 既定では、**db_owner** ロールのメンバーである **dbo** を持つすべてのユーザーに、外部ライブラリを作成する権限があります。 その他のすべてのユーザーには、特権として CREATE EXTERNAL LIBRARY を指定して、[GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) ステートメントを使用する権限を明示的に付与する必要があります。
+`CREATE EXTERNAL LIBRARY` アクセス許可が必要です。 既定では、 **db_owner** ロールのメンバーである **dbo** を持つすべてのユーザーに、外部ライブラリを作成する権限があります。 その他のすべてのユーザーには、特権として CREATE EXTERNAL LIBRARY を指定して、[GRANT](./grant-database-permissions-transact-sql.md) ステートメントを使用する権限を明示的に付与する必要があります。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 SQL Server 2019 では、ユーザーには 'CREATE EXTERNAL LIBRARY' アクセス許可に加えて、その外部言語の外部ライブラリを作成するために、外部言語に対する参照アクセス許可も必要です。
@@ -278,7 +278,7 @@ SQL Server 2019 の Python 言語の場合、`'R'` を `'Python'` に替えて�
 
 ### <a name="installing-packages-with-dependencies"></a>依存関係を持つパッケージをインストールする
 
-インストールするパッケージに依存関係がある場合は、ターゲットのパッケージをインストールする_前に_、最 1 レベルと第 2 レベルの両方の依存関係を分析し、必要なすべてのパッケージが利用できることを確認することが非常に重要です。
+インストールするパッケージに依存関係がある場合は、ターゲットのパッケージをインストールする _前に_ 、最 1 レベルと第 2 レベルの両方の依存関係を分析し、必要なすべてのパッケージが利用できることを確認することが非常に重要です。
 
 たとえば、新しいパッケージ `packageA` をインストールするとします。
 
@@ -287,7 +287,7 @@ SQL Server 2019 の Python 言語の場合、`'R'` を `'Python'` に替えて�
 
 `packageA` を正常にインストールするには、`packageA` を SQL Server に追加するのと同時に、`packageB` と `packageC` 用のライブラリを作成する必要があります。 必要なパッケージのバージョンも必ず確認してください。
 
-実際には、一般的なパッケージのパッケージの依存関係は、通常、この単純な例よりもはるかに複雑です。 たとえば、**ggplot2** には 30 を超えるパッケージが必要で、それらのパッケージには、サーバーで入手できない追加のパッケージが必要な場合があります。 パッケージが不足していたり、パッケージのバージョンが違っていたりすると、インストールが失敗する可能性があります。
+実際には、一般的なパッケージのパッケージの依存関係は、通常、この単純な例よりもはるかに複雑です。 たとえば、 **ggplot2** には 30 を超えるパッケージが必要で、それらのパッケージには、サーバーで入手できない追加のパッケージが必要な場合があります。 パッケージが不足していたり、パッケージのバージョンが違っていたりすると、インストールが失敗する可能性があります。
 
 パッケージ マニフェストを見ただけでは、すべての依存関係を判断するのは難しいため、[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) などのパッケージを使用して、インストールを正常に完了させるために必要なすべてのパッケージを特定することをお勧めします。
 
@@ -400,4 +400,4 @@ library(packageA)
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 9a278ecf99626aef66dde768c18e8577dbb39c94
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 404d2afc78765adebb191c49fb58f6d390516a6c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898089"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583891"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード:レプリカの追加ウィザード)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85898089"
   
 |タブ|簡単な説明|  
 |---------|-----------------------|  
-|[レプリカ](#ReplicasTab)|このタブを使用して、セカンダリ レプリカを現在ホストしている、またはホストする予定である [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。 現在接続しているサーバー インスタンスでプライマリ レプリカをホストする必要があることに注意してください。<br /><br /> 他のタブに進む前に、 **[レプリカ]** タブですべてのレプリカを指定してください。<br/><br/> クラスター タイプが **NONE** の場合、**自動フェールオーバー**は無効になります。 SQL Server は、可用性グループがクラスターに含まれないときに、手動フェールオーバーのみをサポートします。 <br/><br/> クラスター タイプが EXTERNAL の場合、フェールオーバー モードは **External** です。 <br/><br/> レプリカを追加するときは、新しいレプリカすべてが、既存のレプリカと同じオペレーティング システムの種類でホストされている必要があります。 <br/><br/>レプリカを追加するとき、プライマリ レプリカが WSFC にある場合、セカンダリ レプリカは同じクラスターに含まれていなければなりません。|
+|[レプリカ](#ReplicasTab)|このタブを使用して、セカンダリ レプリカを現在ホストしている、またはホストする予定である [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。 現在接続しているサーバー インスタンスでプライマリ レプリカをホストする必要があることに注意してください。<br /><br /> 他のタブに進む前に、 **[レプリカ]** タブですべてのレプリカを指定してください。<br/><br/> クラスター タイプが **NONE** の場合、**自動フェールオーバー** は無効になります。 SQL Server は、可用性グループがクラスターに含まれないときに、手動フェールオーバーのみをサポートします。 <br/><br/> クラスター タイプが EXTERNAL の場合、フェールオーバー モードは **External** です。 <br/><br/> レプリカを追加するときは、新しいレプリカすべてが、既存のレプリカと同じオペレーティング システムの種類でホストされている必要があります。 <br/><br/>レプリカを追加するとき、プライマリ レプリカが WSFC にある場合、セカンダリ レプリカは同じクラスターに含まれていなければなりません。|
 |[エンドポイント](#EndpointsTab)|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。|  
 |[バックアップの設定](#BackupPreferencesTab)|このタブを使用して、可用性グループ全体についてバックアップの設定を指定し、各可用性レプリカのバックアップ優先順位を指定します。|  
 |[リスナー](#Listener)|このタブ (使用可能な場合) を使用して、可用性グループ リスナーを作成します。 既定では、リスナーは作成されません。<br /><br /> このタブは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を実行している場合のみ使用できます。<br/><br/>クラスター タイプが EXTERNAL または NONE のいずれかの場合、DHCP は無効です。 |  
@@ -36,7 +36,7 @@ ms.locfileid: "85898089"
  **サーバー インスタンス**  
  可用性レプリカをホストするサーバー インスタンスの名前を表示します。  
   
- セカンダリ レプリカをホストするために使用するサーバー インスタンスが **[可用性レプリカ]** グリッドに表示されていない場合は、 **[レプリカの追加]** をクリックします。 ハイブリッド IT 環境で可用性グループを構成する場合は (「[Azure Virtual Machines での SQL Server の高可用性とディザスター リカバリー](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)」を参照)、 **[Azure のレプリカ追加]** ボタンをクリックして、セカンダリ レプリカを備えた仮想マシンを Azure に作成できます。  
+ セカンダリ レプリカをホストするために使用するサーバー インスタンスが **[可用性レプリカ]** グリッドに表示されていない場合は、 **[レプリカの追加]** をクリックします。 ハイブリッド IT 環境で可用性グループを構成する場合は (「[Azure Virtual Machines での SQL Server の高可用性とディザスター リカバリー](/previous-versions/azure/jj870962(v=azure.100))」を参照)、 **[Azure のレプリカ追加]** ボタンをクリックして、セカンダリ レプリカを備えた仮想マシンを Azure に作成できます。  
   
  **[初期ロール]**  
  新しいレプリカが初期状態で実行するロール(**プライマリ** または **セカンダリ**) を示します。  
@@ -67,7 +67,7 @@ ms.locfileid: "85898089"
  クリックすると、セカンダリ レプリカが可用性グループに追加されます。  
   
  **[Azure のレプリカ追加]**  
- 可用性グループのセカンダリ レプリカを実行する Azure 仮想マシンを作成する場合にクリックします。 このオプションは、オンプレミスのレプリカが含まれるハイブリッド IT 環境の可用性グループに対してのみ適用できます。 詳細については、「[Azure Virtual Machines での SQL Server の高可用性とディザスター リカバリー](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)」を参照してください。  
+ 可用性グループのセカンダリ レプリカを実行する Azure 仮想マシンを作成する場合にクリックします。 このオプションは、オンプレミスのレプリカが含まれるハイブリッド IT 環境の可用性グループに対してのみ適用できます。 詳細については、「[Azure Virtual Machines での SQL Server の高可用性とディザスター リカバリー](/previous-versions/azure/jj870962(v=azure.100))」を参照してください。  
   
  **[レプリカの削除]**  
  クリックすると、選択したセカンダリ レプリカが可用性グループから削除されます。  
@@ -213,5 +213,4 @@ ms.locfileid: "85898089"
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e25927358f87c63c2c7d6dcbfb92b565d02994e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88a927a23696e5de7a1e079cb517078dc318b69c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495115"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193764"
 ---
 # <a name="use-annotations-in-packages"></a>パッケージで注釈を使用する
 
@@ -31,7 +31,7 @@ ms.locfileid: "88495115"
   
  Enter キーを押すと、テキストが次の行に折り返されます。 テキスト行を追加すると、注釈ボックスのサイズが自動的に大きくなります。 パッケージ ファイルの CDATA セクションでは、パッケージの注釈はクリア テキストで残ります。  
   
- パッケージ ファイルの形式の変更の詳細については、「 [SSIS パッケージの形式](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94)」を参照してください。  
+ パッケージ ファイルの形式の変更の詳細については、「 [SSIS パッケージの形式](./integration-services-ssis-packages.md)」を参照してください。  
   
  パッケージを保存すると、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーはパッケージ内に注釈を保存します。  
   
@@ -56,4 +56,4 @@ ms.locfileid: "88495115"
   
 7.  グループに注釈を追加するには、注釈を右クリックし、 **[グループ]** をクリックします。  
   
-8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
+8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[すべてを保存]** をクリックします。

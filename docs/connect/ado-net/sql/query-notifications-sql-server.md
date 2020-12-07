@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 57222c852ac2ba8c1aedf42075b69587a4b3843d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5f4500645b60a98dd97166e12bdf0899149b1c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896574"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725603"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server でのクエリ通知
 
@@ -35,19 +35,19 @@ ADO.NET を使用してクエリ通知を実装する方法には、次の 3 つ
   
 通知は、SELECT および EXECUTE ステートメントに対して設定できます。 EXECUTE ステートメントを使用している場合、SQL Server はその EXECUTE ステートメント自体ではなく、実行されるコマンドについて通知を登録します。 コマンドは、SELECT ステートメントの要件と制限を満たしている必要があります。 通知を登録するコマンドに複数のステートメントが含まれている場合、Database Engine によりバッチ内のステートメントごとに通知が作成されます。  
   
-データ変更時に、信頼できる即時の通知が必要なアプリケーションを開発している場合は、SQL Server オンライン ブックの「[通知の計画](https://go.microsoft.com/fwlink/?LinkId=211984)」の「**効率的なクエリ通知方法の計画**」および「**クエリ通知に代わる方法**」を参照してください。 クエリ通知と SQL Server Service Broker の詳細については、SQL Server オンライン ブックのトピックへの次のリンクを参照してください。  
+データ変更時に、信頼できる即時の通知が必要なアプリケーションを開発している場合は、SQL Server オンライン ブックの「**通知の計画**」の「**効率的なクエリ通知方法の計画**」および「[クエリ通知に代わる方法](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105))」を参照してください。 クエリ通知と SQL Server Service Broker の詳細については、SQL Server オンライン ブックのトピックへの次のリンクを参照してください。  
   
 **SQL Server のドキュメント**  
   
-- [クエリ通知の使用](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [クエリ通知の使用](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [通知のためのクエリの作成](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [通知のためのクエリの作成](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [開発 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [開発 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Service Broker 開発者向けの情報](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 開発者向けの情報](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [開発者ガイド (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [開発者ガイド (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [クエリ通知の有効化](enable-query-notifications.md)  

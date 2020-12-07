@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3830563da106d8446a3ae8aadff5fa8e8ecc39f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 793db1e49becc3ea8b16076adae308c2b6c7f237
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547546"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300197"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
@@ -110,9 +110,9 @@ ON { SERVER | DATABASE }
 
 ## <a name="arguments"></a>引数
 
-*event_session_name* には、イベント セッションのユーザー定義の名前を指定します。 *event_session_name* には英数字を最大 128 文字まで使用できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意である必要があり、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。
+*event_session_name* には、イベント セッションのユーザー定義の名前を指定します。 *event_session_name* には英数字を最大 128 文字まで使用できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意である必要があり、 [識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。
 
-ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name* は、イベント セッションに関連付けるイベントです。各要素は次のとおりです。
+ADD EVENT [ *event_module_guid* ]. *event_package_name* . *event_name* は、イベント セッションに関連付けるイベントです。各要素は次のとおりです。
 
 - *event_module_guid* は、イベントを含むモジュールの GUID です。
 - *event_package_name* は、アクション オブジェクトを含むパッケージです。
@@ -120,9 +120,9 @@ ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name* は、イベ
 
 イベントは、object_type 'event' として sys.dm_xe_objects ビューに表示されます。
 
-SET { *event_customizable_attribute*= \<value> [ ,...*n*] } によって、イベントのカスタマイズ可能な属性を設定できます。 カスタマイズ可能な属性は、column_type 'customizable' および object_name = *event_name* として sys.dm_xe_object_columns ビューに表示されます。
+SET { *event_customizable_attribute*= \<value> [ ,... *n* ] } によって、イベントのカスタマイズ可能な属性を設定できます。 カスタマイズ可能な属性は、column_type 'customizable' および object_name = *event_name* として sys.dm_xe_object_columns ビューに表示されます。
 
-ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] }) は、イベント セッションに関連付けるアクションです。各要素は次のとおりです。
+ACTION ( { [ *event_module_guid* ]. *event_package_name* . *action_name* [ **,** ... *n* ] }) は、イベント セッションに関連付けるアクションです。各要素は次のとおりです。
 
 - *event_module_guid* は、イベントを含むモジュールの GUID です。
 - *event_package_name* は、アクション オブジェクトを含むパッケージです。
@@ -134,36 +134,36 @@ WHERE \<predicate_expression> では、イベントを処理する必要があ�
 
 *event_field_name* は、述語ソースを識別するイベント フィールドの名前です。
 
-[*event_module_guid*].*event_package_name*.*predicate_source_name* は、グローバル述語ソースの名前です。各要素は次のとおりです。
+[ *event_module_guid* ]. *event_package_name* . *predicate_source_name* は、グローバル述語ソースの名前です。各要素は次のとおりです。
 
 - *event_module_guid* は、イベントを含むモジュールの GUID です。
 - *event_package_name* は、述語オブジェクトを含むパッケージです。
 - *predicate_source_name* は、object_type 'pred_source' として sys.dm_xe_objects ビューに定義されます。
 
-[*event_module_guid*].*event_package_name*.*predicate_compare_name* は、イベントに関連付ける述語オブジェクトの名前です。各要素は次のとおりです。
+[ *event_module_guid* ]. *event_package_name* . *predicate_compare_name* は、イベントに関連付ける述語オブジェクトの名前です。各要素は次のとおりです。
 
 - *event_module_guid* は、イベントを含むモジュールの GUID です。
 - *event_package_name* は、述語オブジェクトを含むパッケージです。
 - *predicate_compare_name* は、object_type 'pred_compare' として sys.dm_xe_objects ビューに定義されるグローバル ソースです。
 
-*number* は、**decimal** を含む任意の数値型です。 制限として、使用可能な物理メモリの不足、または 64 ビット整数として表すのに大きすぎる数字が挙げられます。
+*number* は、 **decimal** を含む任意の数値型です。 制限として、使用可能な物理メモリの不足、または 64 ビット整数として表すのに大きすぎる数字が挙げられます。
 
-'*string*' は、述語の比較に必要な ANSI または Unicode 文字列です。 述語比較関数に対しては、暗黙の文字列型変換は行われません。 無効な型を渡すとエラーになります。
+' *string* ' は、述語の比較に必要な ANSI または Unicode 文字列です。 述語比較関数に対しては、暗黙の文字列型変換は行われません。 無効な型を渡すとエラーになります。
 
-ADD TARGET [*event_module_guid*].*event_package_name*.*target_name* は、イベント セッションに関連付けるターゲットです。各要素は次のとおりです。
+ADD TARGET [ *event_module_guid* ]. *event_package_name* . *target_name* は、イベント セッションに関連付けるターゲットです。各要素は次のとおりです。
 
 - *event_module_guid* は、イベントを含むモジュールの GUID です。
 - *event_package_name* は、アクション オブジェクトを含むパッケージです。
 - *target_name* はターゲットです。 ターゲットは、object_type 'target' として sys.dm_xe_objects ビューに表示されます。
 
-SET { *target_parameter_name*= \<value> [, ...*n*] } によって、ターゲット パラメーターを設定します。 ターゲット パラメーターは、column_type 'customizable' および object_name = *target_name* として sys.dm_xe_object_columns ビューに表示されます。
+SET { *target_parameter_name*= \<value> [, ... *n* ] } によって、ターゲット パラメーターを設定します。 ターゲット パラメーターは、column_type 'customizable' および object_name = *target_name* として sys.dm_xe_object_columns ビューに表示されます。
 
 > [!IMPORTANT]
-> リング バッファー ターゲットを使用している場合、max_memory ターゲット パラメーターを 2048 KB に設定し、XML 出力のデータの切り捨てを回避することをお勧めします。 さまざまなターゲットの種類の使用について詳しくは、「[SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」をご覧ください。
+> リング バッファー ターゲットを使用している場合、max_memory ターゲット パラメーターを 2048 KB に設定し、XML 出力のデータの切り捨てを回避することをお勧めします。 さまざまなターゲットの種類の使用について詳しくは、「[SQL Server 拡張イベント ターゲット](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))」をご覧ください。
 
-WITH ( \<event_session_options> [ ,...*n*] ) では、イベント セッションで使用するオプションを指定します。
+WITH ( \<event_session_options> [ ,... *n* ] ) では、イベント セッションで使用するオプションを指定します。
 
-MAX_MEMORY =*size* [ KB | **MB** ] によって、イベントのバッファーリング用にセッションに割り当てる最大メモリ容量を指定します。 既定値は 4 MB です。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。 最大容量は 2 GB を超える (2048 MB 未満にする) ことはできません。 しかし、GB 域のメモリの値を使用することはお勧めしません。
+MAX_MEMORY = *size* [ KB | **MB** ] によって、イベントのバッファーリング用にセッションに割り当てる最大メモリ容量を指定します。 既定値は 4 MB です。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。 最大容量は 2 GB を超える (2048 MB 未満にする) ことはできません。 しかし、GB 域のメモリの値を使用することはお勧めしません。
 
 EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS } によって、イベントの削除を処理するために使用するイベント保有モードを指定します。
 
@@ -182,7 +182,7 @@ MAX_DISPATCH_LATENCY = { *seconds* SECONDS | **INFINITE** } によって、イ�
 > [!NOTE]
 > MAX_DISPATCH_LATENCY = 0 SECONDS と MAX_DISPATCH_LATENCY = INFINITE は同じです。
 
-MAX_EVENT_SIZE =*size* [ KB | **MB** ] によって、イベントの最大許容サイズを指定します。 MAX_EVENT_SIZE は、MAX_MEMORY よりも大きな単独のイベントのみを許可するように設定する必要があります。MAX_MEMORY よりも小さな値を設定した場合はエラーが発生します。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。 *size* をキロバイト単位で指定する場合、最小許容サイズは 64 KB です。 MAX_EVENT_SIZE を設定すると、MAX_MEMORY に加えて、サイズが *size* のバッファーが 2 つ作成されます。 つまり、イベントのバッファリングに使用されるメモリの合計量は MAX_MEMORY + 2 * MAX_EVENT_SIZE となります。
+MAX_EVENT_SIZE = *size* [ KB | **MB** ] によって、イベントの最大許容サイズを指定します。 MAX_EVENT_SIZE は、MAX_MEMORY よりも大きな単独のイベントのみを許可するように設定する必要があります。MAX_MEMORY よりも小さな値を設定した場合はエラーが発生します。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。 *size* をキロバイト単位で指定する場合、最小許容サイズは 64 KB です。 MAX_EVENT_SIZE を設定すると、MAX_MEMORY に加えて、サイズが *size* のバッファーが 2 つ作成されます。 つまり、イベントのバッファリングに使用されるメモリの合計量は MAX_MEMORY + 2 * MAX_EVENT_SIZE となります。
 
 MEMORY_PARTITION_MODE = { **NONE** | PER_NODE | PER_CPU } によって、イベント バッファーを作成する場所を指定します。
 
@@ -233,7 +233,7 @@ GO
 ```
 ### <a name="sql-database-example"></a>SQL Database の例
 
-Azure SQL Database の例については、[SQL Database の拡張イベントのためのイベント ファイル ターゲット コード](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file#transact-sql-code)に関連する記事に記載されている例をご覧ください
+Azure SQL Database の例については、[SQL Database の拡張イベントのためのイベント ファイル ターゲット コード](/azure/sql-database/sql-database-xevent-code-event-file#transact-sql-code)に関連する記事に記載されている例をご覧ください
 
 ### <a name="code-examples-can-differ-for-azure-sql-database"></a>Azure SQL Database では、コード例が異なる可能性があります。
 

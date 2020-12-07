@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651007"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866622"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンでは、メモリ最適化テーブルの行内データのサイズは、[8,060 バイト](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)より長くすることができませんでした。 しかし、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および Azure SQL Database では、複数の大きな列 (複数の varbinary(8000) 列など) および LOB 列 (varbinary(max)、varchar(max)、nvarchar(max)) を含むメモリ最適化テーブルを作成し、ネイティブにコンパイルされた T-SQL モジュールとテーブル型を使ってこれらの列に対する操作を実行できるようになっています。 
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンでは、メモリ最適化テーブルの行内データのサイズは、[8,060 バイト](?viewFallbackFrom=sql-server-2014)より長くすることができませんでした。 しかし、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および Azure SQL Database では、複数の大きな列 (複数の varbinary(8000) 列など) および LOB 列 (varbinary(max)、varchar(max)、nvarchar(max)) を含むメモリ最適化テーブルを作成し、ネイティブにコンパイルされた T-SQL モジュールとテーブル型を使ってこれらの列に対する操作を実行できるようになっています。 
   
 行サイズの上限である 8060 バイトを超える列は、行外の、個別の内部テーブルに配置されます。 行外の列ごとに対応する内部テーブルがあり、 それぞれの内部テーブルには非クラスター化インデックスが 1 つ含まれます。 行外の列に使用されるこれらの内部テーブルについて詳しくは、「[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)」をご覧ください。 
  
@@ -238,9 +238,8 @@ where object_id = object_id('dbo.Orders')
 -   LOB の場合、ディスク ベース テーブルのサイズ制限が反映されます (LOB 値に対する 2 GB の制限)。 
 -   パフォーマンスを最適化するには、ほとんどの列を 8,060 バイトに収まるようにすることをお勧めします。 
 
-詳しくは、「[What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3)」(CTP3 以降の SQL Server 2016 でのメモリ内 OLTP に関する新機能) ブログ投稿をご覧ください。   
+詳しくは、「[What's new for In-Memory OLTP in SQL Server 2016 since CTP3](/archive/blogs/sqlserverstorageengine/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3)」(CTP3 以降の SQL Server 2016 でのメモリ内 OLTP に関する新機能) ブログ投稿をご覧ください。   
  
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [メモリ最適化テーブル](./sample-database-for-in-memory-oltp.md)  
   

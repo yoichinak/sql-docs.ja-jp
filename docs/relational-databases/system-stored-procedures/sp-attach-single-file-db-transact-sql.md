@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7774b738dd8ec6fc0619bc8f72fa85c9ab0db349
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0b8026e1aae3df927a6cc454f7fb4763e3d05093
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542013"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753497"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89542013"
   データ ファイルが 1 つだけ格納されているデータベースを現在のサーバーにアタッチします。 複数のデータファイルで**sp_attach_single_file_db**を使用することはできません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、CREATE DATABASE *database_name* FOR ATTACH を使用することをお勧めします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。 レプリケートされたデータベースには、このプロシージャを使用しないでください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、CREATE DATABASE *database_name* FOR ATTACH を使用することをお勧めします。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)」を参照してください。 レプリケートされたデータベースには、このプロシージャを使用しないでください。  
   
 > [!IMPORTANT]  
 >  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
@@ -52,7 +52,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 `[ @physname = ] 'physical_name'` データベースファイルの物理名 (パスを含む) を指定します。 *physical_name* は **nvarchar (260)**,、既定値は NULL です。  
   
 > [!NOTE]  
->  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+>  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)」を参照してください。  
   
  フルテキスト カタログ ファイルを含む [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー インスタンスにアタッチする場合、カタログ ファイルは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同様に他のデータベース ファイルと一緒に以前の場所からアタッチされます。 詳細については、「 [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
   
@@ -73,7 +73,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  レプリケートされたデータベースには、このプロシージャを使用しないでください。  
   
 ## <a name="permissions"></a>アクセス許可  
- データベースがアタッチされているときの権限の処理方法については、「 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
+ データベースがアタッチされているときの権限の処理方法については、「 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] をデタッチした後、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] から現在のサーバーに 1 つのファイルをアタッチします。  
@@ -92,5 +92,4 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
  [sp_detach_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

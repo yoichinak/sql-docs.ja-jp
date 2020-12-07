@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dfceb71c40b7214d9570a62c7ff65925b4f19849
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 851452d2fa7df6cab7771da294e01fea926b7af3
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410948"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081851"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +62,7 @@ PDOStatement オブジェクトを閉じるには、オブジェクトを null �
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
-## <a name="example"></a>例  
+## <a name="query-example"></a>クエリの例  
 この例では、いくつかのクエリを使用します。  
   
 ```  
@@ -118,8 +118,8 @@ $stmt = null;
 ?>  
 ```
 
-## <a name="example"></a>例
-このコード例では、[sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 型のテーブルを作成し、挿入されたデータをフェッチする方法を示しています。
+## <a name="sql_variant-example"></a>sql_variant の例
+このコード例では、[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 型のテーブルを作成し、挿入されたデータをフェッチする方法を示しています。
 
 ```
 <?php
@@ -170,4 +170,3 @@ Array
 [PDO クラス](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

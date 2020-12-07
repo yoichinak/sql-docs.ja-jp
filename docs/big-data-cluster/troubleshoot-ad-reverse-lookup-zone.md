@@ -9,12 +9,12 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4cac5fe891533d623a686a02641f63cb25d4b17f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63086a762e8c55109a43a32e39868b65808108f9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82154157"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257092"
 ---
 # <a name="ad-mode-deployment-stopped---missing-reverse-lookup-zone-entry-for-dc"></a>AD モードの展開が停止する - DC の逆引き参照ゾーン エントリが見つからない
 
@@ -90,12 +90,12 @@ azdata bdc debug copy-logs -n mssql-cluster -c security-support
 ログを抽出し、`\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log` を見つけます。
 
 > [!TIP]
-> ログを収集するには、複数の方法があります。 `azdata` を使用してログをコピーする代わりに、Azure Data Studio でノートブックを使用できます。
+> ログを収集するには、複数の方法があります。 [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] を使用してログをコピーする代わりに、Azure Data Studio でノートブックを使用できます。
 > Azure Data Studio で Kubernetes クラスターに接続し、適切なトラブルシューティング ノートブックを実行します。 ノートブックの例を次に示します。
 >
 > - TSG027 - クラスターのデプロイを観察する
 > - TSG061 - BDC 名前空間内にあるポッドのすべてのコンテナー ログの末尾を取得する
-> - TSG001 - `azdata` copy-logs を実行する
+> - TSG001 - `azdata copy-logs` を実行する
 >
 
 ## <a name="inspect-the-logs"></a>ログを調べる
@@ -146,4 +146,4 @@ $DcControllerDnsPtr_Result
 
 ## <a name="next-steps"></a>次のステップ
 
-[ドメイン コントローラーの逆引き DNS エントリ (PTR レコード) を検証します](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller)。
+[ドメイン コントローラーの逆引き DNS エントリ (PTR レコード) を検証します](active-directory-deploy.md#verify-reverse-dns-entry-for-domain-controller)。

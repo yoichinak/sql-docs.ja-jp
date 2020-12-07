@@ -16,12 +16,12 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bb6b097a811bc134a94ede766cc5774df5dfc3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 100973ff2e7ae4d3bf066bfe49f09aa3a979230f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420556"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866962"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>ハンドルの割り当てと SQL Server への接続 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "88420556"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドライバー固有のヘッダー ファイル Odbcss.h を含めます。  
   
-3.  SQL_HANDLE_ENV の**Handletype**を使用して[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)を呼び出し、ODBC を初期化して環境ハンドルを割り当てます。  
+3.  SQL_HANDLE_ENV の**Handletype**を使用して[SQLAllocHandle](../../odbc/reference/syntax/sqlallochandle-function.md)を呼び出し、ODBC を初期化して環境ハンドルを割り当てます。  
   
 4.  **属性**を SQL_ATTR_ODBC_VERSION に設定し、 **valueptr**を SQL_OV_ODBC3 に設定して[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)を呼び出し、アプリケーションで ODBC 3. x 形式の関数呼び出しを使用することを示します。  
   
-5.  必要に応じて、 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) を呼び出して他の環境オプションを設定するか、 [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) を呼び出して環境オプションを取得します。  
+5.  必要に応じて、 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) を呼び出して他の環境オプションを設定するか、 [SQLGetEnvAttr](../../odbc/reference/syntax/sqlgetenvattr-function.md) を呼び出して環境オプションを取得します。  
   
-6.  SQL_HANDLE_DBC の**Handletype**を使用して[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)を呼び出し、接続ハンドルを割り当てます。  
+6.  SQL_HANDLE_DBC の**Handletype**を使用して[SQLAllocHandle](../../odbc/reference/syntax/sqlallochandle-function.md)を呼び出し、接続ハンドルを割り当てます。  
   
 7.  必要に応じて、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) を呼び出して接続オプションを設定するか、 [Sqlgetconnectattr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) を呼び出して接続オプションを取得します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88420556"
   
      接続文字列が完全でない場合、 **SQLDriverConnect** は必要な情報の入力を求めることができます。 これは、 *Drivercompletion* パラメーターに指定された値によって制御されます。  
   
-     \- - または -  
+     \- または  
   
      反復的な方法で [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) を複数回呼び出して、接続文字列を作成し、に接続し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88420556"
 13. SQL_HANDLE_ENV の**Handletype**を使用して**sqlfreehandle**を呼び出し、環境ハンドルを解放します。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
  この例では、既存の ODBC データソースを必要とせずにのインスタンスに接続するための **SQLDriverConnect** の呼び出しを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 不完全な接続文字列を **SQLDriverConnect**に渡すと、ODBC ドライバーによって、不足している情報を入力するように求めるメッセージが表示されます。  
@@ -105,5 +105,4 @@ retcode = SQLDriverConnect(hdbc1,      // Connection handle
                   &cbConnStrOut,   // Address of output length  
                   SQL_DRIVER_PROMPT);  
 ```  
-  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_wait_stats (Transact-SQL)
-title: dm_os_wait_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_os_wait_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/19/2020
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678c6710e17d8383077be4acff8921268e9a0b6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bdf67ebe15b869cb295c3090fe24ed5cd4f50413
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532268"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834230"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-実行されたスレッドによって検出されたすべての待機に関する情報を返します。 この集計ビューを使って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および特定のクエリとバッチに関するパフォーマンスの問題を診断できます。 [transact-sql&#41;&#40;dm_exec_session_wait_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) は、セッションによって同様の情報を提供します。  
+実行されたスレッドによって検出されたすべての待機に関する情報を返します。 この集計ビューを使って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および特定のクエリとバッチに関するパフォーマンスの問題を診断できます。 [sys.dm_exec_session_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) は、セッションによって同様の情報を提供します。  
   
 > [!NOTE] 
-> ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] また [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は**からこれを呼び出すには、 **dm_pdw_nodes_os_wait_stats**という名前を使用します。  
+> ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] また [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は**からこれを呼び出すには、 **sys.dm_pdw_nodes_os_wait_stats**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -87,7 +87,7 @@ GO
   
  次の表は、タスクで発生する待機の種類の一覧です。  
 
-|型 |説明| 
+|type |説明| 
 |-------------------------- |--------------------------| 
 |ABR |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| | 
 |AM_INDBUILD_ALLOCATION |内部使用のみです。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
@@ -136,7 +136,7 @@ GO
 |BROKER_TRANSMISSION_OBJECT |内部使用のみです。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |BROKER_TRANSMISSION_TABLE |内部使用のみです。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |BROKER_TRANSMISSION_WORK |内部使用のみです。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|BROKER_TRANSMITTER |Service Broker 送信機能が作業を待機しているときに発生します。 Service Broker には、複数のダイアログからのメッセージを1つ以上の接続エンドポイント経由でネットワーク経由で送信されるようにスケジュールする、トランスミッタと呼ばれるコンポーネントがあります。 送信機には、この目的のための2つの専用スレッドがあります。 この待機の種類は、これらの送信スレッドがトランスポート接続を使用してダイアログメッセージを送信するのを待機している場合に課金されます。 この待機の種類の waiting_tasks_count の値が大きい場合は、これらの送信スレッドで断続的に機能し、パフォーマンスの問題を示すものではありません。 Service broker がまったく使用されていない場合、waiting_tasks_count は 2 (送信スレッド 2) であり、wait_time_ms インスタンスが起動してから2倍の時間が経過する必要があります。 「 [Service broker の待機統計](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types)」を参照してください。|
+|BROKER_TRANSMITTER |Service Broker 送信機能が作業を待機しているときに発生します。 Service Broker には、複数のダイアログからのメッセージを1つ以上の接続エンドポイント経由でネットワーク経由で送信されるようにスケジュールする、トランスミッタと呼ばれるコンポーネントがあります。 送信機には、この目的のための2つの専用スレッドがあります。 この待機の種類は、これらの送信スレッドがトランスポート接続を使用してダイアログメッセージを送信するのを待機している場合に課金されます。 この待機の種類の waiting_tasks_count の値が大きい場合は、これらの送信スレッドで断続的に機能し、パフォーマンスの問題を示すものではありません。 Service broker がまったく使用されていない場合、waiting_tasks_count は 2 (送信スレッド 2) であり、wait_time_ms インスタンスが起動してから2倍の時間が経過する必要があります。 「 [Service broker の待機統計](/archive/blogs/sql_service_broker/service-broker-wait-types)」を参照してください。|
 |BUILTIN_HASHKEY_MUTEX |この待機はインスタンスの起動後、内部データ構造の初期化中に発生することがあります。 データ構造がいったん初期化されると、それ以降に再発生することはありません。| 
 |CHANGE_TRACKING_WAITFORCHANGES |内部使用のみです。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |CHECK_PRINT_RECORD |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
@@ -331,7 +331,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |バックグラウンド タスクが、Windows Server フェールオーバー クラスタリングの通知を処理するバックグラウンド タスクの起動完了を待機しています。 内部使用のみです。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |バックグラウンド タスクが、Windows Server フェールオーバー クラスタリングの通知を処理するバックグラウンド タスクの終了を待機しています。 内部使用のみです。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_PARTNER_SYNC |パートナーの一覧でのコンカレンシー制御の待機です。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|HADR_READ_ALL_NETWORKS |WSFC ネットワークの一覧に対する読み取りまたは書き込みアクセスの取得を待機しています。 内部使用のみです。 注: エンジンは、動的管理ビュー (dm_hadr_cluster_networks など) で使用される WSFC ネットワークの一覧を保持するか、WSFC ネットワーク情報を参照する Transact-sql ステートメント Always On 検証します。 この一覧は、エンジンの起動時、WSFC 関連の通知、および内部 Always On の再起動時に更新されます (たとえば、WSFC クォーラムの損失や取り戻しなど)。 通常、この一覧の更新中はタスクがブロックされます。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
+|HADR_READ_ALL_NETWORKS |WSFC ネットワークの一覧に対する読み取りまたは書き込みアクセスの取得を待機しています。 内部使用のみです。 注: エンジンは、動的管理ビュー (sys.dm_hadr_cluster_networks など) で使用される WSFC ネットワークの一覧を保持するか、WSFC ネットワーク情報を参照する Transact-sql ステートメント Always On 検証します。 この一覧は、エンジンの起動時、WSFC 関連の通知、および内部 Always On の再起動時に更新されます (たとえば、WSFC クォーラムの損失や取り戻しなど)。 通常、この一覧の更新中はタスクがブロックされます。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |復旧を実行する前に、セカンダリ データベースがプライマリ データベースに接続するのを待機しています。 これは想定される待機であり、プライマリへの接続確立に時間がかかる場合は長くなる可能性があります。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |データベース復旧が、セカンダリ データベースが復帰および初期化フェーズを完了し、プライマリ データベースと共通のログ ポイントに戻るのを待機しています。 これは、フェールオーバー後に予想される待機です。元に戻す処理は、Windows システムモニター (perfmon.exe) および動的管理ビューを使用して追跡できます。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_REPLICAINFO_SYNC |コンカレンシー制御が現在のレプリカの状態を更新するのを待機しています。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
@@ -381,12 +381,12 @@ GO
 |KTM_ENLISTMENT |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
 |KTM_RECOVERY_MANAGER |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
 |KTM_RECOVERY_RESOLUTION |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
-|LATCH_DT  |DT (破棄) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
-|LATCH_EX  |EX (排他) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
-|LATCH_KP  |KP (保持) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
+|LATCH_DT  |DT (破棄) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、sys.dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
+|LATCH_EX  |EX (排他) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、sys.dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
+|LATCH_KP  |KP (保持) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、sys.dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
 |LATCH_NL  |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
-|LATCH_SH  |SH (共有) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
-|LATCH_UP  |UP (更新) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
+|LATCH_SH  |SH (共有) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、sys.dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
+|LATCH_UP  |UP (更新) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 ラッチ待機の一覧について \_ \* は、sys.dm_os_latch_stats を参照してください。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。| 
 |LAZYWRITER_SLEEP  |レイジーライタータスクが中断されたときに発生します。 待機中のバックグラウンド タスクで費やされた時間を測定することができます。 ユーザーの機能停止を検索しているときには、この待機状態は考慮しないでください。| 
 |LCK_M_BU  |タスクが一括更新 (BU) ロックの取得を待機しているときに発生します。| 
 |LCK_M_BU_ABORT_BLOCKERS |タスクがアボート ブロッカーによる一括更新 (BU) ロックの取得を待機しているときに発生します  (ALTER TABLE および ALTER INDEX の優先度の低い待機オプションに関連します)。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。| 
@@ -1024,12 +1024,11 @@ GO
   
 -   ddl_with_wait_at_low_priority  
   
- ロックの互換性マトリックスについては、「 [sys. dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)」を参照してください。  
+ ロックの互換性マトリックスについては、「 [sys.dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
     
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
-  
+ [sys.dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   

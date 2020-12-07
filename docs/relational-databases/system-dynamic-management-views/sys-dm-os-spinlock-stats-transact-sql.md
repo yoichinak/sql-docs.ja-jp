@@ -1,6 +1,6 @@
 ---
-description: dm_os_spinlock_stats (Transact-sql)
-title: dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
+description: sys.dm_os_spinlock_stats (Transact-sql)
+title: sys.dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,14 +23,14 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042753"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810108"
 ---
-# <a name="sysdm_os_spinlock_stats-transact-sql"></a>dm_os_spinlock_stats (Transact-sql)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-sql)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -53,9 +53,9 @@ ms.locfileid: "90042753"
   
 ## <a name="remarks"></a>注釈  
  
- スピンロックの競合の原因を特定するには、dm_os_spinlock_stats を使用できます。 場合によっては、スピンロックの競合を解決または減少させることができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
+ sys.dm_os_spinlock_stats は、スピンロックの競合の原因を特定するために使用できます。 場合によっては、スピンロックの競合を解決または減少させることができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
- 次のようにを使用して、dm_os_spinlock_stats の内容をリセットできます。 `DBCC SQLPERF`  
+ 次のようにを使用して sys.dm_os_spinlock_stats の内容をリセットでき `DBCC SQLPERF` ます。  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -405,7 +405,7 @@ GO
  
 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
@@ -413,6 +413,7 @@ GO
 
  [スピンロックが SQL Server の CPU 使用率の重要なドライバーです。](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
+ [SQL Server でのスピンロックの競合の診断と解決](../diagnose-resolve-spinlock-contention.md)
   
   
 

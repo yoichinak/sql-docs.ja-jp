@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 653698d6bb6699d5434d2bfd10b21ccd93aaefa1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ec09eb43fdd00d57860abf1f40e5010084eded97
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882481"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524034"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>論理レコードによる関連行への変更のグループ化
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "85882481"
   
  ![列名のみを持つ 3 つのテーブルの論理レコード](../../../relational-databases/replication/merge/media/logical-records-01.gif "列名のみを持つ 3 つのテーブルの論理レコード")  
   
- **Customers** テーブルは、このリレーションシップの親テーブルであり、主キー列 **CustID**を持ちます。 **Orders** テーブルは、主キー列 **OrderID**を持ちます。また、 **Customers** テーブルの **CustID** 列を参照する **CustID** 列に、外部キー制約が設定されています。 同様に、 **OrderItems** テーブルは主キー列 **OrderItemID**を持ちます。また、 **Orders** テーブルの **OrderID** 列を参照する **OrderID** 列に、外部キー制約が設定されています。  
+ **Customers** テーブルは、このリレーションシップの親テーブルであり、主キー列 **CustID** を持ちます。 **Orders** テーブルは、主キー列 **OrderID** を持ちます。また、 **Customers** テーブルの **CustID** 列を参照する **CustID** 列に、外部キー制約が設定されています。 同様に、 **OrderItems** テーブルは主キー列 **OrderItemID** を持ちます。また、 **Orders** テーブルの **OrderID** 列を参照する **OrderID** 列に、外部キー制約が設定されています。  
   
  この例の論理レコードは、単一の **CustID** 値に関連付けられている **Orders** テーブルのすべての行と、 **Orders** テーブル内の行に関連付けられている **OrderItems** テーブルのすべての行で構成されます。 次の図は、Customer2 の論理レコードに含まれる、3 つのテーブルのすべての行を示しています。  
   
- ![値を持つ 3 つのテーブルの論理レコード](../../../relational-databases/replication/merge/media/logical-records-02.gif "値を持つ 3 つのテーブルの論理レコード")  
+ ![値を持つ 3 つのテーブルの論理レコードの 1 つ目のスクリーンショット。](../../../relational-databases/replication/merge/media/logical-records-02.gif "値を持つ 3 つのテーブルの論理レコード")  
   
  アーティクル間で論理レコード リレーションシップを定義するには、「 [マージテーブル記事間の論理レコード関係を定義する](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)」を参照してください。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "85882481"
 ### <a name="the-application-of-changes-as-a-unit"></a>変更を 1 つの単位として適用  
  論理レコードを使用している場合、マージ処理が接続の切断などで中断されると、関連するレプリケートされた変更の部分的に完了したセットは、ロールバックされます。 たとえば、サブスクライバーが **OrderID** = 6 で新しい注文を追加し、 **OrderItems** テーブルに **OrderID** = 6 用の新しい 2 つの行を **OrderItemID** = 10 および **OrderItemID** = 11 で追加したとします。  
   
- ![値を持つ 3 つのテーブルの論理レコード](../../../relational-databases/replication/merge/media/logical-records-04.gif "値を持つ 3 つのテーブルの論理レコード")  
+ ![値を持つ 3 つのテーブルの論理レコードの 2 つ目のスクリーンショット。](../../../relational-databases/replication/merge/media/logical-records-04.gif "値を持つ 3 つのテーブルの論理レコード")  
   
  **OrderID** = 6 の **Orders** 行の処理を完了後、 **OrderItems** 10 および 11 の処理が完了するまでの間にレプリケーション処理が中断されると、論理レコードを使用していない場合、 **OrderID** = 6 の **OrderTotal** 値は、 **OrderItems** 行の **OrderAmount** 値の合計とは一致しません。 論理レコードを使用している場合、 **OrderID** = 6 の **Orders** 行は、関連する **OrderItems** の変更がレプリケートされるまで、コミットされません。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "85882481"
   
 -   パラメーター化されたフィルターを含むパブリケーションで論理レコードが使用されている場合、各サブスクライバーをそのパーティションのスナップショットで初期化する必要があります。 サブスクライバーを別の方法で初期化した場合、マージ エージェントは失敗します。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
--   論理レコードに関連する競合は、競合表示モジュールに表示されません。 これらの競合に関する情報を表示するには、レプリケーション ストアド プロシージャを使用します。 詳細については、「[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)」を参照してください。  
+-   論理レコードに関連する競合は、競合表示モジュールに表示されません。 これらの競合に関する情報を表示するには、レプリケーション ストアド プロシージャを使用します。 詳細については、「[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../view-and-resolve-data-conflicts-for-merge-publications.md)」を参照してください。  
   
 ### <a name="publication-settings"></a>パブリケーションの設定  
   
@@ -131,11 +131,11 @@ ms.locfileid: "85882481"
   
      ![複数の親テーブルを持つ子テーブル](../../../relational-databases/replication/merge/media/logical-records-03.gif "複数の親テーブルを持つ子テーブル")  
   
-     論理レコードを使用して、このリレーションシップの 3 つのテーブルを表すことはできません。これは、 **ClassMembers** の行が単一の主キー行と関連付けられていないからです。 テーブル **Classes** および **ClassMembers** で論理レコードを形成することは可能であり、テーブル **ClassMembers** および **Students**で論理レコードを形成することも可能です。しかし、3 つのテーブルすべてで論理レコードを形成することはできません。  
+     論理レコードを使用して、このリレーションシップの 3 つのテーブルを表すことはできません。これは、 **ClassMembers** の行が単一の主キー行と関連付けられていないからです。 テーブル **Classes** および **ClassMembers** で論理レコードを形成することは可能であり、テーブル **ClassMembers** および **Students** で論理レコードを形成することも可能です。しかし、3 つのテーブルすべてで論理レコードを形成することはできません。  
   
 -   パブリケーションに循環結合フィルター リレーションシップを含めることはできません。  
   
-     **Customers**テーブル、 **Orders**テーブル、および **OrderItems**テーブルの例でいうと、 **Orders** テーブルに **OrderItems** テーブルを参照する外部キー制約もある場合、論理レコードは使用できません。  
+     **Customers** テーブル、 **Orders** テーブル、および **OrderItems** テーブルの例でいうと、 **Orders** テーブルに **OrderItems** テーブルを参照する外部キー制約もある場合、論理レコードは使用できません。  
   
 ## <a name="performance-implications-of-logical-records"></a>論理レコードのパフォーマンスへの影響  
  論理レコード機能を使用すると、パフォーマンスに影響を与えます。 論理レコードを使用しない場合、レプリケーション エージェントは特定のアーティクルに対するすべての変更を同時に処理できます。また、変更は行ごとに適用されるため、変更を適用するために必要なロックおよびトランザクション ログの要件は、最小限になります。  
@@ -144,5 +144,4 @@ ms.locfileid: "85882481"
   
 ## <a name="see-also"></a>参照  
  [マージ レプリケーションのアーティクル オプション](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
   

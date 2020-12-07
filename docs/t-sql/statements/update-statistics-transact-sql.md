@@ -22,12 +22,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c338ebb3f64dc1752c4e68e33f6954e554d6d4e6
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 3225978926ade62bd932e41f9d46d8a5bdd8720b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227434"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036875"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,8 +86,10 @@ UPDATE STATISTICS [ schema_name . ] table_name
     ]  
 [;]  
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数
  *table_or_indexed_view_name*  
@@ -114,7 +116,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  ほとんどのワークロードでは、フル スキャンは必要なく、既定のサンプリングで十分です。  
 ただし、変化するデータ分布の影響を受ける特定のワークロードではサンプル サイズの増加が必要な場合があり、フル スキャンが必要な場合もあります。  
-詳しくは、[CSS SQL Escalation Services に関するブログ](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed)をご覧ください。  
+詳しくは、[CSS SQL Escalation Services に関するブログ](/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed)をご覧ください。  
   
  RESAMPLE  
  最新のサンプル レートを使用して各統計を更新します。  
@@ -214,7 +216,7 @@ EXEC sp_updatestats;
 ### <a name="pdw--azure-synapse-analytics"></a>PDW / Azure Synapse Analytics  
  以下の構文は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でサポートされていません  
   
-```syntaxsql
+```sql
 UPDATE STATISTICS t1 (a,b);   
 ```  
   
@@ -317,4 +319,4 @@ UPDATE STATISTICS Customer;
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)

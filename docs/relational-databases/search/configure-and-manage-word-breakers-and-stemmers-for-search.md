@@ -23,17 +23,17 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482300"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127789"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>検索用のワード ブレーカーとステミング機能の構成と管理 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 ワード ブレーカーとステミング機能は、すべてのフルテキスト インデックス データに対して言語分析を実行します。 言語分析では、次の 2 つを行います。
 
--   **単語の境界 (単語区切り) の検出**。 *ワード ブレーカー* が、言語の語彙の規則に基づいて単語の境界を検出し、個々の単語を識別します。 各単語 ( *トークン*ともいいます) は、サイズを縮小するために圧縮された表現でフルテキスト インデックスに挿入されます。
+-   **単語の境界 (単語区切り) の検出**。 *ワード ブレーカー* が、言語の語彙の規則に基づいて単語の境界を検出し、個々の単語を識別します。 各単語 ( *トークン* ともいいます) は、サイズを縮小するために圧縮された表現でフルテキスト インデックスに挿入されます。
 
 -   **動詞の活用 (ステミング)**。 *ステミング機能* はその言語の規則に基づいて特定の語の変化形を生成します (たとえば、"running"、"ran"、"runner" は、"run" という語の変化形です)。
 
@@ -73,7 +73,7 @@ GO
 ##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> 既定のフルテキスト言語オプションの設定  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカライズされたバージョンでは、適切な言語が存在する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって **default full-text language** オプションはサーバーの言語に設定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカライズされていないバージョンでは、 **[既定のフルテキスト言語]** オプションは英語になります。  
   
- フルテキスト インデックスを作成または変更する場合は、フルテキスト インデックス列ごとに言語を指定できます。 列に言語が指定されていない場合、既定では構成オプション **default full-text language**の値になります。  
+ フルテキスト インデックスを作成または変更する場合は、フルテキスト インデックス列ごとに言語を指定できます。 列に言語が指定されていない場合、既定では構成オプション **default full-text language** の値になります。  
   
 > [!NOTE]  
 >  1 つのフルテキスト クエリ関数句に指定されるすべての列は、クエリで LANGUAGE オプションが指定されていない限り、同じ言語を使用する必要があります。 クエリ対象のフルテキスト インデックスが付けられた列に使用する言語によって、フルテキスト クエリの述語 ([CONTAINS](../../t-sql/queries/contains-transact-sql.md) および [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) および関数 ([CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) および [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)) の引数に対して実行される言語分析が決まります。  

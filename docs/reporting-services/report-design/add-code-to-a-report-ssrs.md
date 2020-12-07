@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d54e2ce879e78787b9b51d20c8df83367038c7b
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: c732f159940beae761b18273ddaedd56ead60d97
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255685"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934797"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>レポートにコードを追加する (SSRS)
   どの式でも独自のカスタム コードを呼び出すことができます。 次の 2 つの方法でコードを提供できます。  
@@ -57,8 +57,7 @@ ms.locfileid: "84255685"
      この式をカテゴリの値を表示するテーブル セルに追加すると、"Bike" という単語がその行のデータセット フィールドに現れるたびに、テーブル セルの値は "Bicycle" という単語を表示します。  
   
 ## <a name="see-also"></a>参照  
- [[コード] ([レポートのプロパティ] ダイアログ ボックス)](https://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
+ [[コード] ([レポートのプロパティ] ダイアログ ボックス)](./expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
-  
   

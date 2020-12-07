@@ -1,7 +1,7 @@
 ---
 title: SQL サンプルでデータを生成 WideWorldImporters
 description: これらの SQL ステートメントを使用して、WideWorldImporters サンプルデータベースの現在の日付までのサンプルデータを生成してインポートします。
-ms.date: 04/04/2018
+ms.date: 10/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f60ad250ea68f58a98fb93da9f3c5853ad68bd47
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942193"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523937"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters データ生成
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "86942193"
 
 現在の日付までのサンプルデータを生成するには:
 
-1. WideWorldImporters データベースのクリーンバージョンをまだインストールしていない場合は、インストールします。 インストール手順については、「[インストールと構成](wide-world-importers-oltp-install-configure.md)」を参照してください。
+1. WideWorldImporters データベースのクリーンバージョンをまだインストールしていない場合は、インストールします。 インストール手順については、「 [インストールと構成](wide-world-importers-oltp-install-configure.md)」を参照してください。
 2. データベースで次のステートメントを実行します。
 
     ```
@@ -39,23 +39,26 @@ ms.locfileid: "86942193"
             @AreDatesPrinted = 1;
     ```
 
-    このステートメントは、現在の日付までのサンプルの売上および購入データをデータベースに追加します。 日単位のデータ生成の進行状況が表示されます。 データの生成には、データを必要とする年ごとに約10分かかることがあります。 データ生成にはランダムな要因があるため、実行の間に生成されるデータにはいくつかの違いがあります。
+    このステートメントは、現在の日付までのサンプルの売上および購入データをデータベースに追加します。 日単位のデータ生成の進行状況が表示されます。 データ生成にはランダムな要因があるため、実行の間に生成されるデータにはいくつかの違いがあります。
 
     1日あたりの注文に対して生成されるデータの量を増減するには、パラメーターの値を変更し `@AverageNumberOfCustomerOrdersPerDay` ます。 パラメーターとを使用して、 `@SaturdayPercentageOfNormalWorkDay` `@SundayPercentageOfNormalWorkDay` 週末の日付の注文量を決定します。
+
+> [!TIP]
+> データベースで [遅延持続性](../relational-databases/logs/control-transaction-durability.md) を適用すると、特にデータベーストランザクションログが待機時間の長いストレージサブシステム上にある場合に、データ生成速度が向上する可能性があります。 遅延持続性を使用する場合、 [データ損失](../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) の可能性があることに注意してください。また、データ生成中に遅延持続性を有効にすることを検討してください。
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>WideWorldImportersDW で生成されたデータをインポートする
 
 WideWorldImportersDW OLAP データベースの現在の日付までサンプルデータをインポートするには、次のようにします。
 
 1. 前のセクションの手順に従って、WideWorldImporters OLTP データベースでデータ生成ロジックを実行します。
-2. まだ行っていない場合は、WideWorldImportersDW データベースのクリーンバージョンをインストールします。 インストール手順については、「[インストールと構成](wide-world-importers-oltp-install-configure.md)」を参照してください。
+2. まだ行っていない場合は、WideWorldImportersDW データベースのクリーンバージョンをインストールします。 インストール手順については、「 [インストールと構成](wide-world-importers-oltp-install-configure.md)」を参照してください。
 3. データベースで次のステートメントを実行して、OLAP データベースを再シードします。
 
     ```sql
     EXECUTE [Application].Configuration_ReseedETL
     ```
 
-4. 日次の*ETL. ispac* SQL Server Integration Services パッケージを実行して、OLAP データベースにデータをインポートします。 ETL ジョブを実行する方法については、「 [WIDEWORLDIMPORTERS etl workflow](wide-world-importers-perform-etl.md)」を参照してください。
+4. 日次の *ETL. ispac* SQL Server Integration Services パッケージを実行して、OLAP データベースにデータをインポートします。 ETL ジョブを実行する方法については、「 [WIDEWORLDIMPORTERS etl workflow](wide-world-importers-perform-etl.md)」を参照してください。
 
 ## <a name="generate-data-in-wideworldimportersdw-for-performance-testing"></a>パフォーマンステストのために WideWorldImportersDW でデータを生成する
 

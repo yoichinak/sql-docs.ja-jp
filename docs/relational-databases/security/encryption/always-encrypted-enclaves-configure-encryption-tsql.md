@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90bb710e57e87bfb6bf86f4ae0543329a4500940
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490475"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863642"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Transact-SQL を使用してインプレースでの列の暗号化を構成する
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88490475"
 この記事の残りの部分では、SQL Server Management Studio から `ALTER TABLE`/`ALTER COLUMN` ステートメントを使用して、インプレース暗号化をトリガーする方法について説明します。 または、アプリケーションから `ALTER TABLE`/`ALTER COLUMN` を発行することもできます。 
 
 > [!NOTE]
-> 現時点では、SqlServer PowerShell モジュールの [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) コマンドレットや [sqlcmd](../../../tools/sqlcmd-utility.md) などの SSMS 以外のツールでは、インプレース暗号化操作に対する `ALTER TABLE`/`ALTER COLUMN` の使用はサポートされていません。
+> 現時点では、SqlServer PowerShell モジュールの [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) コマンドレットや [sqlcmd](../../../tools/sqlcmd-utility.md) などの SSMS 以外のツールでは、インプレース暗号化操作に対する `ALTER TABLE`/`ALTER COLUMN` の使用はサポートされていません。
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>SSMS で Transact-SQL を使用してインプレース暗号化を実行する
 ### <a name="pre-requisites"></a>前提条件

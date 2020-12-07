@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10bf743f0c09ab423dfef16da30730d80017896e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 897d83dcf6c85606ac513d9075cca9ebc316a6cf
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544860"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412818"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89544860"
 |**containing_group_name**|**nvarchar(120)**|指定されたアクションを含む監査グループの名前。 Name の値がグループの場合は NULL になります。|  
   
 ## <a name="permissions"></a>アクセス許可  
- プリンシパルには **SELECT** 権限が必要です。 既定では、これは Public に与えられます。  
+このビューはパブリックに表示されます。
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   

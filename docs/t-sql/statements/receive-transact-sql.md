@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b79e3a75f0b3590bcc0485a4d24b2a001bd8390
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548968"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91498189"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89548968"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
         <column_specifier> [ ,...n ]  
@@ -183,14 +182,14 @@ ms.locfileid: "89548968"
 ### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. メッセージ交換グループにあるすべてのメッセージの、すべての列を受信する  
  次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 このステートメントでは、メッセージが結果セットとして返されます。  
   
-```  
+```sql  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>B. メッセージ交換グループにあるすべてのメッセージを対象として、指定した列を受信する  
  次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 このステートメントでは、列 `conversation_handle`、`message_type_name`、`message_body` を含むメッセージが結果セットとして返されます。  
   
-```  
+```sql  
 RECEIVE conversation_handle, message_type_name, message_body  
 FROM ExpenseQueue ;  
 ```  
@@ -198,14 +197,14 @@ FROM ExpenseQueue ;
 ### <a name="c-receiving-the-first-available-message-in-the-queue"></a>C. キューで最初に使用可能なメッセージを受信する  
  次の例では、`ExpenseQueue` キューから、最初に使用可能なメッセージを結果セットとして受信します。  
   
-```  
+```sql  
 RECEIVE TOP (1) * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>D. 指定したメッセージ交換のすべてのメッセージを受信する  
  次の例では、`ExpenseQueue` キューから、指定したメッセージ交換に属している使用可能なすべてのメッセージを結果セットとして受信します。  
   
-```  
+```sql  
 DECLARE @conversation_handle UNIQUEIDENTIFIER ;  
   
 SET @conversation_handle = <retrieve conversation from database> ;  
@@ -218,7 +217,7 @@ WHERE conversation_handle = @conversation_handle ;
 ### <a name="e-receiving-messages-for-a-specified-conversation-group"></a>E. 指定したメッセージ交換グループのメッセージを受信する  
  次の例では、`ExpenseQueue` キューから、指定したメッセージ交換グループに属している使用可能なすべてのメッセージを結果セットとして受信します。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 SET @conversation_group_id =   
@@ -232,7 +231,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="f-receiving-into-a-table-variable"></a>F. 受信したメッセージをテーブル変数に挿入する  
  次の例では、`ExpenseQueue` キューから、指定したメッセージ交換グループに属している使用可能なすべてのメッセージを受信して、テーブル変数に挿入します。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 DECLARE @procTable TABLE(  
@@ -264,7 +263,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="g-receiving-messages-and-waiting-indefinitely"></a>G. メッセージを受信して無制限に待機する  
  次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 このステートメントは、少なくとも 1 つのメッセージが使用可能になるまで待機し、その後すべてのメッセージ列を含む結果セットを返します。  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue) ;  
@@ -273,7 +272,7 @@ WAITFOR (
 ### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>H. メッセージを受信して指定の期間待機する  
  次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 このステートメントは、60 秒が経過するか、少なくとも 1 つのメッセージが使用可能になるまで待機します。 少なくとも 1 つのメッセージが使用可能である場合、このステートメントはすべてのメッセージ列を含む結果セットを返します。 それ以外の場合は、空の結果セットを返します。  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue ),  
@@ -283,7 +282,7 @@ TIMEOUT 60000 ;
 ### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>I. メッセージを受信して列の型を変更する  
  次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 メッセージ型でメッセージに XML ドキュメントが含まれることが指定されている場合、このステートメントでは、メッセージ本文が XML に変換されます。  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE message_type_name,  
         CASE  
@@ -297,7 +296,7 @@ TIMEOUT 60000 ;
 ### <a name="j-receiving-a-message-extracting-data-from-the-message-body-retrieving-conversation-state"></a>J. メッセージを受信し、メッセージ本文からデータを抽出して、メッセージ交換の状態を取得する  
  次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している、次に使用可能なメッセージを取得します。 メッセージの型が `//Adventure-Works.com/Expenses/SubmitExpense` の場合、このステートメントでは、メッセージ本文から従業員 ID とアイテム一覧が抽出されます。 また、このステートメントでは `ConversationState` テーブルからメッセージ交換の状態も取得されます。  
   
-```  
+```sql  
 WAITFOR(  
     RECEIVE   
     TOP(1)  

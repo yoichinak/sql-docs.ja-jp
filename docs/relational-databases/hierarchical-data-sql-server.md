@@ -19,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382528"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91869056"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
 
@@ -44,14 +44,14 @@ ms.locfileid: "88382528"
   
 -   Web ページ間のリンクのグラフ  
   
- 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) を使用します。 階層データのクエリや管理を実行するには、 [!INCLUDE[tsql](../includes/tsql-md.md)] の [hierarchyid 関数](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) を使用します。  
+ 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) を使用します。 階層データのクエリや管理を実行するには、 [!INCLUDE[tsql](../includes/tsql-md.md)] の [hierarchyid 関数](../t-sql/data-types/hierarchyid-data-type-method-reference.md) を使用します。  
   
 ##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> hierarchyid の主要な特性  
  値、 **hierarchyid** データ型は、ツリー階層内の位置を表します。 値を **hierarchyid** 、次のプロパティがあります。  
   
 -   非常にコンパクト  
   
-     *n* 個のノードを持つツリー内の、1 つのノードを表すために必要な平均ビット数は、平均ファンアウト (ノードあたりの子の平均数) によって決まります。 ファンアウトが小さい場合 (0 ～ 7)、サイズは約 6\*logA*n* ビットです (A は平均ファンアウト)。 平均ファンアウトが 6 レベルで、100,000 人から成る組織階層の場合、1 つのノードには約 38 ビットが必要です。 格納時には、これが 40 ビット (5 バイト) に切り上げられます。  
+     *n* 個のノードを持つツリー内の、1 つのノードを表すために必要な平均ビット数は、平均ファンアウト (ノードあたりの子の平均数) によって決まります。 ファンアウトが小さい場合 (0 ～ 7)、サイズは約 6\*logA *n* ビットです (A は平均ファンアウト)。 平均ファンアウトが 6 レベルで、100,000 人から成る組織階層の場合、1 つのノードには約 38 ビットが必要です。 格納時には、これが 40 ビット (5 バイト) に切り上げられます。  
   
 -   深さ優先順で比較  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88382528"
   
 -   XML  
   
- 通常、これらの方法よりも**hierarchyid** の方が優れています。 しかし、次のような状況では、これらの代替方法を使用した方がよい場合があります。  
+ 通常、これらの方法よりも **hierarchyid** の方が優れています。 しかし、次のような状況では、これらの代替方法を使用した方がよい場合があります。  
   
 ### <a name="parentchild"></a>親/子  
  親/子の方法を使用すると、各行に親への参照が含まれます。 次のテーブルでは、親/子リレーションシップにある親と子の行を含めるための、一般的なテーブルを定義します。  
@@ -99,13 +99,13 @@ GO
   
  一般的な操作に関する親/子と **hierarchyid** の比較  
   
--   サブツリーのクエリは、 **hierarchyid**を使用した方がはるかに高速です。  
+-   サブツリーのクエリは、 **hierarchyid** を使用した方がはるかに高速です。  
   
--   直接の子孫のクエリは、 **hierarchyid**を使用するとわずかに遅くなります。  
+-   直接の子孫のクエリは、 **hierarchyid** を使用するとわずかに遅くなります。  
   
--   非リーフ ノードの移動は、 **hierarchyid**を使用すると遅くなります。  
+-   非リーフ ノードの移動は、 **hierarchyid** を使用すると遅くなります。  
   
--   非リーフ ノードを挿入する場合、およびリーフ ノードを挿入または移動する場合も、 **hierarchyid**を使用する場合と同様に複雑になります。  
+-   非リーフ ノードを挿入する場合、およびリーフ ノードを挿入または移動する場合も、 **hierarchyid** を使用する場合と同様に複雑になります。  
   
  次の条件に当てはまるときは、親/子を使用した方がよい場合があります。  
   
@@ -260,7 +260,7 @@ INSERT SimpleDemo
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
- これにより、考えられる問題が示されます。 Kyoto は、親レベル `/1/3/1/` がなくても、レベル `/1/3/`として挿入できます。 London と Kyoto の両方に同じ値の **hierarchyid**があります。 ここでもユーザーはこの階層がそれぞれの用途に適しているかどうかを判断して、それぞれの用途に適していない値をブロックする必要があります。  
+ これにより、考えられる問題が示されます。 Kyoto は、親レベル `/1/3/1/` がなくても、レベル `/1/3/`として挿入できます。 London と Kyoto の両方に同じ値の **hierarchyid** があります。 ここでもユーザーはこの階層がそれぞれの用途に適しているかどうかを判断して、それぞれの用途に適していない値をブロックする必要があります。  
   
  また、このテーブルは、階層 `'/'`の上部を使用していません。 すべての大陸に共通する親が存在しないため、省略されています。 地球を追加することで 1 を追加できます。  
   
@@ -540,8 +540,7 @@ GO
   
   
 ## <a name="see-also"></a>関連項目  
- [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [hierarchyid データ型メソッド リファレンス](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
  [チュートリアル:hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   

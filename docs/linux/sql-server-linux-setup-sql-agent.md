@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 6554acf46da19a9833cf649bce34a455cbc92e5b
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 9492b8fcdbcd4ddf930d9f5d1d5ee43415fb2a1c
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088810"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115775"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux 上に SQL Server エージェントをインストールする
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088810"
 
 この記事では、Linux 上での SQL Server エージェントの有効化またはインストールの方法について説明します。
 
-[SQL Server エージェント](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)は、スケジュールされた SQL Server ジョブを実行します。 SQL Server 2017 CU4 以降、SQL Server エージェントは **mssql-Server** パッケージに含まれており、既定で無効になっています。 このリリースの SQL Server エージェントでサポートされている機能とバージョン情報については、[リリース ノート](sql-server-linux-release-notes.md)を参照してください。
+[SQL Server エージェント](../ssms/agent/sql-server-agent.md)は、スケジュールされた SQL Server ジョブを実行します。 SQL Server 2017 CU4 以降、SQL Server エージェントは **mssql-Server** パッケージに含まれており、既定で無効になっています。 このリリースの SQL Server エージェントでサポートされている機能とバージョン情報については、[リリース ノート](sql-server-linux-release-notes.md)を参照してください。
 
 ## <a name="instructions"></a>Instructions
 

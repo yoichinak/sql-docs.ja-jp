@@ -16,16 +16,16 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 88741c77d43e3f68303c6624ba32e1d58a2d8392
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 60997f5a657db79dc9e31c17c47f02bfc12b3cad
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480288"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127906"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを新規作成したり、既存のポリシーを変更したりできます。 ポリシーの適用対象を一部のサーバーに制限するには、 **[対象]** 領域と **[サーバーの制限]** 領域をフィルターとして使用します。 対象フィルターとして使用する条件は、物理ファセットで定義する必要があり、関数や LIKE 演算子をその条件に含めることはできません。 ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、[https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes) を参照してください。  
+  このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを新規作成したり、既存のポリシーを変更したりできます。 ポリシーの適用対象を一部のサーバーに制限するには、 **[対象]** 領域と **[サーバーの制限]** 領域をフィルターとして使用します。 対象フィルターとして使用する条件は、物理ファセットで定義する必要があり、関数や LIKE 演算子をその条件に含めることはできません。 ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、[https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](/archive/blogs/sqlpbm/policy-evaluation-modes) を参照してください。  
   
 ## <a name="options"></a>オプション  
  **名前**  
@@ -74,5 +74,4 @@ ms.locfileid: "89480288"
   
 ## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
   

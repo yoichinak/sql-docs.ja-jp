@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3ed024269a385961cce9ff6eddef1298d22fea3d
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 7c8f4ffe7bc861fece68c37ae734a0d659bebb56
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646542"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380157"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>暗号化キーの列 (TRANSACT-SQL) を削除します。
 
@@ -39,7 +39,6 @@ ms.locfileid: "88646542"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  
 
@@ -58,7 +57,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
 ### <a name="a-dropping-a-column-encryption-key"></a>A. 列の暗号化キーを削除する  
  次の例では、列の暗号化キー `MyCEK` を削除します。  
   
-```  
+```sql  
 DROP COLUMN ENCRYPTION KEY MyCEK;  
 GO  
 ```  

@@ -16,15 +16,15 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d571e5b41937947e0c6d03e5d1a84fe0dc88e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88465274"
 ---
 # <a name="merge-agent-security"></a>[マージ エージェント セキュリティ]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **[マージ エージェント セキュリティ]** ダイアログ ボックスを使用すると、マージ エージェントの実行に使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定できます。 マージ エージェントは、プッシュ サブスクリプションの場合はディストリビューターで実行され、プル サブスクリプションの場合はサブスクライバーで実行されます。 エージェント プロセスがこのアカウントで実行されるため、Windows アカウントは *プロセス アカウント*とも呼ばれます。 ダイアログ ボックスで使用できる追加オプションは、次に示すアクセスの方法によって異なります。  
+  **[マージ エージェント セキュリティ]** ダイアログ ボックスを使用すると、マージ エージェントの実行に使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定できます。 マージ エージェントは、プッシュ サブスクリプションの場合はディストリビューターで実行され、プル サブスクリプションの場合はサブスクライバーで実行されます。 エージェント プロセスがこのアカウントで実行されるため、Windows アカウントは *プロセス アカウント* とも呼ばれます。 ダイアログ ボックスで使用できる追加オプションは、次に示すアクセスの方法によって異なります。  
   
 -   サブスクリプションの新規作成ウィザードからダイアログ ボックスを開いた場合は、マージ エージェントがプッシュ サブスクリプション用にサブスクライバーへの接続を作成するコンテキスト、またはプル サブスクリプション用にパブリッシャーおよびディストリビューターへの接続を作成するコンテキストを指定できます。 Windows アカウントを使用するか、指定した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントのコンテキストにより、接続を作成できます。  
   

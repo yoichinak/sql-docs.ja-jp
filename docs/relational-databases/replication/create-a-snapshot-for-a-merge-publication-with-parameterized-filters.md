@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b4f57e1593d9f8335f62095cf309ee85f74e1a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0229c5fb1166d49c8e4db2e80fbed03c0ea95a9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773908"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868303"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -285,7 +285,7 @@ PAUSE
 >  アーティクルをフィルター選択して、サブスクリプションごとに一意の重複しないパーティションを取得する場合 (マージ アーティクルの作成時、 F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription の値に P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption を指定した場合)、マージ エージェントの実行時に常にメタデータがクリーンアップされます。 これは、パーティション スナップショットの有効期間が短時間で切れてしまうことを意味します。 このオプションを使用する場合は、サブスクライバーからスナップショットの生成を要求できるようにする必要があります。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「適切なフィルター選択オプションの使用」を参照してください。  
   
 > [!IMPORTANT]  
->  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+>  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](/previous-versions/aa719848(v=vs.71)) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>サブスクライバーでスナップショットの生成と配信を開始するためのパブリケーションを作成するには  
   
@@ -424,5 +424,4 @@ PAUSE
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

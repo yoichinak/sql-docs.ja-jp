@@ -19,10 +19,10 @@ ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 00604f3066c746057e1ffaaefc0cffb00244d57b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88459004"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (geography データ型)
@@ -53,7 +53,7 @@ ms.locfileid: "88459004"
 ## <a name="remarks"></a>解説  
  ユーザーが作成した **geography** インスタンスの場合、STPointN() は、最初に入力した順序で地点を並べ替えることで、*expression* で指定された地点を返します。  
   
- システムによって作成された **geography** インスタンスの場合、STPointN() は、出力する順序ですべての地点を並べ替えることで、*式*で指定された地点を返します。出力する順序にするには、**geography** インスタンス、インスタンス内のリング (必要な場合)、リング内の地点の順に並べ替えます。 この順序は決定的です。  
+ システムによって作成された **geography** インスタンスの場合、STPointN() は、出力する順序ですべての地点を並べ替えることで、*式* で指定された地点を返します。出力する順序にするには、**geography** インスタンス、インスタンス内のリング (必要な場合)、リング内の地点の順に並べ替えます。 この順序は決定的です。  
   
  1 未満の値を指定してこのメソッドを呼び出すと、**ArgumentOutOfRangeException** がスローされます。  
   

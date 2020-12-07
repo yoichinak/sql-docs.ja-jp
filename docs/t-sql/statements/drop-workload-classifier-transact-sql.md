@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 1c67c085119a091985f8f87c5962b910890d0be9
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 89fca3ce657b036578eb5f1b90e9b307799f4a95
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226982"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067407"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -40,6 +40,9 @@ ms.locfileid: "91226982"
 ```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数
 

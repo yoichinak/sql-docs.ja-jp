@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98a4987e056b8475216bfb4e99fa2fe81582f881
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7485325af023c264193fcc8ce8a449553dcb0b9
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478731"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91498043"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE (システム オブジェクトの権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,6 @@ ms.locfileid: "88478731"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal   
 ```  
   
@@ -69,7 +68,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ## <a name="examples"></a>例  
  次の例では、`sp_addlinkedserver` に対する `EXECUTE` 権限を、`public` から取り消します。  
   
-```  
+```sql  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  
 GO  
 ```  

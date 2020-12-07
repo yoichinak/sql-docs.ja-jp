@@ -9,17 +9,27 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5e0193fb7e749b7127d59743557e58cb049e734c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778471"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011807"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>スケールアウト MPP データウェアハウスである Analytics Platform System の新機能
 Microsoft Analytics Platform System (APS) の最新のアプライアンス更新プログラムの新機能を参照してください。 APS は、MPP SQL Server 並列データウェアハウスをホストする、スケールアウトされたオンプレミスのアプライアンスです。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.7"></a>
+## <a name="aps-cu77"></a>APS CU 7.7
+リリース日-2020 年11月
+
+### <a name="scvmm2016"></a>SCVMM2016
+APS CU 7.7 ソフトウェアは、VMM VM を Windows Server 2016 にアップグレードし、SCVMM2016 をインストールします。 現在使用されている SCVMM 2012 R2 の有効期間の終了日は2022年7月です。 新しい SCVMM がサポートされるようにするには、CU 7.7 の必須アップグレードを行う必要があります。 お客様は、できるだけ早く CU 7.7 にアップグレードすることを推奨しています。
+
+### <a name="ssis-destination-adapter-for-sql-server-2019-as-target"></a>ターゲットとして SQL Server 2019 の SSIS 変換先アダプター
+SQL Server 2019 をサポートする新しい APS SSIS 変換先アダプター (展開ターゲットは [ダウンロードサイト](https://www.microsoft.com/download/details.aspx?id=57472)からダウンロードできます)。
+
 <a name="h2-aps-cu7.6"></a>
 ## <a name="aps-cu76"></a>APS CU7.6
 リリース日-2020 年4月
@@ -70,7 +80,7 @@ Informatica バージョン10.2.0 および10.2.0 修正プログラム1で動�
 
 #### <a name="supported-versions"></a>サポートされているバージョン
 
-| APS バージョン | Informatica PowerCenter | ドライバー |
+| APS バージョン | Informatica PowerCenter | Driver |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 2.x |
 | APS 2016 以降 | 10.2.0、10.2.0 Hotfix 1 | SQL Server Native Client 2.x |
@@ -87,7 +97,7 @@ APS CU 7.2 は、TLS 1.2 をサポートしています。 クライアントコ
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>PolyBase の Hadoop 暗号化ゾーンのサポート
 PolyBase が Hadoop 暗号化ゾーンと通信できるようになりました。 「 [Hadoop のセキュリティを構成する](polybase-configure-hadoop-security.md#encryptionzone)」で必要な APS 構成の変更を参照してください。
 
-### <a name="insert-select-maxdop-options"></a>挿入-maxdop オプションを選択する
+### <a name="insert-select-maxdop-options"></a>Maxdop オプションの Insert-Select
 挿入選択操作に対して1を超える maxdop 設定を選択できる [機能スイッチ](appliance-feature-switch.md) が追加されました。 Maxdop 設定を0、1、2、または4に設定できるようになりました。 既定値は 1 です。
 
 > [!IMPORTANT]  
@@ -164,7 +174,7 @@ Select @var がサポートされるようになりました。 詳細につい�
 APS AU7 には [Configuration Manager](launch-the-configuration-manager.md)の機能スイッチが導入されています。 AutoStatsEnabled と DmsProcessStopMessageTimeoutInSeconds は、管理者が変更できる構成可能なオプションになりました。
 
 ### <a name="known-issues"></a>既知の問題
-APS AU7 ソフトウェアでは、Intel BIOS の更新プログラムが提供されており、予測 *実行のサイドチャネル攻撃*として説明されている問題を修正します。 攻撃は、 *Spectre と Meltdown の脆弱性*と呼ばれるものを悪用することを目的としています。 APS と共にパッケージ化されますが、BIOS の更新プログラムは、APS AU7 ソフトウェアのインストールの一部としてではなく、手動でインストールされます。
+APS AU7 ソフトウェアでは、Intel BIOS の更新プログラムが提供されており、予測 *実行のサイドチャネル攻撃* として説明されている問題を修正します。 攻撃は、 *Spectre と Meltdown の脆弱性* と呼ばれるものを悪用することを目的としています。 APS と共にパッケージ化されますが、BIOS の更新プログラムは、APS AU7 ソフトウェアのインストールの一部としてではなく、手動でインストールされます。
 
 Microsoft は、すべてのお客様に BIOS の更新をインストールするようにアドバイスします。 Microsoft は、さまざまな環境におけるさまざまな SQL ワークロードに対して、カーネル仮想アドレスシャドウ (KVAS)、カーネルページテーブル間接 (中 TI)、および間接分岐予測軽減 (IBP) の影響を測定しました。 この測定では、一部のワークロードで大幅な低下が見られました。 結果に基づいて、BIOS 更新を有効にした場合のパフォーマンスへの影響をテストしてから、運用環境に展開することをお勧めします。 SQL Server ガイダンスを参照し[てください。](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)
 

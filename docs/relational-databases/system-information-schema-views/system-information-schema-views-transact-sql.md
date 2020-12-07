@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c283777fea2999d7948a3282b623cd92f0baf54
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542121"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907387"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>システム情報スキーマビュー (Transact-sql)
 
@@ -100,6 +100,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## <a name="permissions"></a>アクセス許可  
+情報スキーマビューでのメタデータの表示は、ユーザーが所有しているか、ユーザーが権限を許可されている securables に制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
+
+> [!NOTE]  
+> 情報スキーマビューはサーバー全体で定義されるため、ユーザーデータベースのコンテキスト内で拒否することはできません。 権限の取り消しまたは拒否 (SELECT) を行うには、master データベースを使用する必要があります。 既定では、public ロールにはすべての情報スキーマビューに対する SELECT 権限がありますが、コンテンツはメタデータ表示ルールによって制限されます。
 
 ## <a name="see-also"></a>参照
 

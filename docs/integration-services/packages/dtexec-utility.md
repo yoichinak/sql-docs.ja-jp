@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 206f7d54967eea85c96198e78471f026197a6a64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27f8433667f68bb654fae4317295358a45c82825
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477251"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197073"
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
 
@@ -180,13 +180,13 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Conf[igFile]** _filespec_:(省略可能)。 値を抽出する構成ファイルを指定します。 このオプションを使用すると、パッケージのデザイン時に指定された構成と異なる実行時構成を設定できます。 パッケージを実行するには、XML 構成ファイルに異なる構成設定を格納してから、 **/ConfigFile** オプションを使用して設定を読み込む必要があります。  
   
-     **/ConfigFile** オプションを使用すると、デザイン時に指定しなかった追加の構成を実行時に読み込むことができますが、 **/ConfigFile** オプションを使用しても、デザイン時に指定した構成値を置き換えることはできません。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](../../integration-services/packages/package-configurations.md)」を参照してください。  
+     **/ConfigFile** オプションを使用すると、デザイン時に指定しなかった追加の構成を実行時に読み込むことができますが、 **/ConfigFile** オプションを使用しても、デザイン時に指定した構成値を置き換えることはできません。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](./legacy-package-deployment-ssis.md)」を参照してください。  
   
 -   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_ :(省略可能)。 指定した名前または GUID の接続マネージャーがパッケージ内にあり、接続文字列が指定されていることを示します。  
   
      このオプションでは、接続マネージャーの名前または GUID を指定する *id_or_name* 引数と、有効な接続文字列を指定する *connection_string* 引数の両方のパラメーターが必須です。 詳細については、「[Integration Services (SSIS) の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
-     実行時に **/Connection** オプションを使用すると、デザイン時に指定した場所とは別の場所からパッケージ構成を読み込むことができます。 デザイン時に指定した値は、それらの構成の値で置き換えられます。 ただし、 **/Connection** オプションを使用できるのは、接続マネージャーを使用する構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成など) だけです。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](../../integration-services/packages/package-configurations.md) 」 (パッケージ構成) および「 [SQL Server 2016 における Integration Services 機能の動作の変更](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)」を参照してください。  
+     実行時に **/Connection** オプションを使用すると、デザイン時に指定した場所とは別の場所からパッケージ構成を読み込むことができます。 デザイン時に指定した値は、それらの構成の値で置き換えられます。 ただし、 **/Connection** オプションを使用できるのは、接続マネージャーを使用する構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成など) だけです。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](./legacy-package-deployment-ssis.md) 」 (パッケージ構成) および「 [SQL Server 2016 における Integration Services 機能の動作の変更](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130))」を参照してください。  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]:(省略可能)。 パッケージの実行中に、指定されたログ エントリをコンソールに表示します。 このオプションを省略した場合、ログ エントリはコンソールに表示されません。 表示を制限するパラメーターなしでオプションが指定された場合、すべてのログ エントリが表示されます。 コンソールに表示されるエントリを制限するには、 *displayoptions* パラメーターを使用して表示する列を指定し、 *list_options* パラメーターを使用してログ エントリの種類を制限します。  
   
@@ -228,7 +228,7 @@ dtexec /option [value] [/option [value]]...
   
      **/ConsoleLog** オプションの例については、「 **解説** 」を参照してください。  
   
--   **/D[ts]** _package_path_:(省略可能)。 SSIS パッケージ ストアからパッケージを読み込みます。 SSIS パッケージ ストアに格納されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。  
+-   **/D[ts]** _package_path_:(省略可能)。 SSIS パッケージ ストアからパッケージを読み込みます。 SSIS パッケージ ストアに格納されているパッケージは、従来のパッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
      *package_path* 引数には、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの相対パスを指定します。このパスは SSIS パッケージ ストアのルートから始まり、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの名前を含むパスです。 *package_path* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *package_path* 引数を引用符で囲む必要があります。  
   
@@ -417,13 +417,13 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、 **/Set** オプションを使用しても、デザイン時の構成で指定した値をオーバーライドすることはできません。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](../../integration-services/packages/package-configurations.md) 」 (パッケージ構成) および「 [SQL Server 2016 における Integration Services 機能の動作の変更](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)」を参照してください。  
+     **/Set** オプションを使用すると、パッケージ構成を読み込む場所を変更することができます。 ただし、 **/Set** オプションを使用しても、デザイン時の構成で指定した値をオーバーライドすることはできません。 パッケージ構成が適用されるしくみについては、「 [Package Configurations](./legacy-package-deployment-ssis.md) 」 (パッケージ構成) および「 [SQL Server 2016 における Integration Services 機能の動作の変更](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130))」を参照してください。  
   
 -   **/Ser[ver]** _server_:(省略可能)。 **/SQL** または **/DTS** オプションが指定されている場合、このオプションにはパッケージを取得するサーバーの名前を指定します。 **/Server** オプションを省略して **/SQL** オプションまたは **/DTS** オプションを指定した場合、ローカル サーバーに対してパッケージの実行が試行されます。 *server_instance* 値は引用符で囲むことができます。  
   
      **/Ser[ver]** オプションが指定されている場合、 **/ISServer** オプションは必須です。  
   
--   **/SQ[L]** _package_path_:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **msdb** データベースに格納されているパッケージを読み込みます。 **msdb** データベースに格納されているパッケージは、パッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。   
+-   **/SQ[L]** _package_path_:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **msdb** データベースに格納されているパッケージを読み込みます。 **msdb** データベースに格納されているパッケージは、パッケージ配置モデルを使用して配置されます。 プロジェクト配置モデルを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージを実行するには、 **/ISServer** オプションを使用します。 パッケージとプロジェクトの配置モデルの詳細については、「 [Deployment of Projects and Packages](./deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。   
   
 -   *package_path* 引数には、取得するパッケージの名前を指定します。 パス名を指定する場合、パス内のフォルダーの最後には円記号 ("\\") を指定します。 *Package_path* 値は引用符で囲むことができます。 *package_path* 引数に指定するパスまたはファイル名に空白文字を含める場合は、 *package_path* 引数を引用符で囲む必要があります。  
   
@@ -645,5 +645,4 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
   
 ## <a name="related-content"></a>関連コンテンツ  
  [www.mattmasson.com](www.mattmasson.com) のブログ エントリ「 [終了コード、DTEXEC、および SSIS カタログ](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)」  
-  
   

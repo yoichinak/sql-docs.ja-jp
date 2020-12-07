@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8eab13b0089b289dd7a6835b20c17b4fbc2ee60c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38193c05ecfa6c030954c6cbcbfcc50a1927d913
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496682"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92300500"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88496682"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'   
     DECRYPTION BY PASSWORD = 'password' [FORCE]  
 ```  
@@ -74,7 +73,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ## <a name="examples"></a>例  
  次の例では、バックアップ ファイルからサービス マスター キーを復元します。  
   
-```  
+```sql  
 RESTORE SERVICE MASTER KEY   
     FROM FILE = 'c:\temp_backups\keys\service_master_key'   
     DECRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
@@ -82,7 +81,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [サービス マスター キー](../../relational-databases/security/encryption/service-master-key.md)   
+ [サービス マスター キー](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)

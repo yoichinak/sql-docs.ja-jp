@@ -1,6 +1,6 @@
 ---
 description: ODBC ドライバー対応接続プールの開発
-title: ODBC ドライバーでの接続プールの認識の開発 |Microsoft Docs
+title: ODBC ドライバーでの Connection-Pool 認識の開発 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f22be001a7434c13158deae8677b8c7bcb2f0630
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476274"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192312"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC ドライバー対応接続プールの開発
 このトピックでは、ドライバーが接続プールサービスを提供する方法に関する情報を含む ODBC ドライバーの開発の詳細について説明します。  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>ドライバー対応接続プールの有効化  
+## <a name="enabling-driver-aware-connection-pooling"></a>Driver-Aware 接続プールの有効化  
  ドライバーは、次の ODBC サービスプロバイダーインターフェイス (SPI) 関数を実装する必要があります。  
   
 -   SQLSetConnectAttrForDbcInfo  
@@ -42,7 +42,7 @@ ms.locfileid: "88476274"
   
  ドライバーが対応するプールを有効にするには、次の既存の関数も実装する必要があります。  
   
-|機能|追加された機能|  
+|関数|追加された機能|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|新しいハンドルの種類をサポートしています: SQL_HANDLE_DBC_INFO_TOKEN (以下の説明を参照してください)。|  
 |[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|新しいセットのみの接続属性をサポートする: 接続をリセットするための SQL_ATTR_DBC_INFO_TOKEN ます (以下の説明を参照してください)。|  
@@ -68,7 +68,7 @@ ms.locfileid: "88476274"
 ## <a name="the-connection-rating"></a>接続の評価  
  新しい接続の確立と比較すると、プールされた接続の一部の接続情報 (データベースなど) をリセットすることで、パフォーマンスを向上させることができます。 したがって、キー属性のセットにデータベース名を含めることはできません。 そうしないと、データベースごとに個別のプールを作成できます。これは、顧客がさまざまな接続文字列を使用する中間層アプリケーションでは適切ではない可能性があります。  
   
- 属性の不一致がある接続を再利用する場合は常に、新しいアプリケーションの要求に基づいて一致しない属性をリセットし、返された接続がアプリケーションの要求と同一になるようにします ( [SQLSetConnectAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59368)の属性 SQL_ATTR_DBC_INFO_TOKEN の説明を参照してください)。 ただし、これらの属性をリセットすると、パフォーマンスが低下する可能性があります。 たとえば、データベースをリセットするには、サーバーへのネットワーク呼び出しが必要です。 そのため、完全に一致する接続を再利用できます (使用可能な場合)。  
+ 属性の不一致がある接続を再利用する場合は常に、新しいアプリケーションの要求に基づいて一致しない属性をリセットし、返された接続がアプリケーションの要求と同一になるようにします ( [SQLSetConnectAttr 関数](../syntax/sqlsetconnectattr-function.md)の属性 SQL_ATTR_DBC_INFO_TOKEN の説明を参照してください)。 ただし、これらの属性をリセットすると、パフォーマンスが低下する可能性があります。 たとえば、データベースをリセットするには、サーバーへのネットワーク呼び出しが必要です。 そのため、完全に一致する接続を再利用できます (使用可能な場合)。  
   
  ドライバーの評価関数は、新しい接続要求で既存の接続を評価できます。 たとえば、ドライバーの評価機能は次のことを判断できます。  
   

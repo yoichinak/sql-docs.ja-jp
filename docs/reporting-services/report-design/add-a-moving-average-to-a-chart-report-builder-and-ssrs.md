@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2c72f3720b397e20df7daa794e08ef7ca241abf
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 3820bee4c008bb82a2c1ffdb8a4a6bfb00335958
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255701"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907266"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>グラフへの移動平均の追加 (レポート ビルダーおよび SSRS)
 移動平均は、定義された期間にわたって計算される、系列内のデータの平均です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 改ページされたレポートでは、移動平均をグラフに表示すると、重要な傾向を特定することができます。  
 
-![レポート-ビルダー-列のグラフのチュートリアル](../../reporting-services/media/report-builder-column-chart-tutorial.png)
+![売上グラフのスクリーンショット。](../../reporting-services/media/report-builder-column-chart-tutorial.png)
   
  移動平均式は、技術的分析で最も一般的に使用される価格指標です。 他にも、平均値、中央値、標準偏差など、多くの式をグラフ上の系列から算出することができます。 移動平均を指定する場合、各式には、指定する必要のあるパラメーターが 1 つ以上設定されていることがあります。  
  

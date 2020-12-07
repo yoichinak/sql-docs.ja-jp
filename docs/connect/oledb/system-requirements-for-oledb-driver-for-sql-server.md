@@ -16,11 +16,11 @@ helpviewer_keywords:
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c86f62f98e81ce3c4fdd86e1e79e8f73e1422851
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861816"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127975"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のシステム要件
 
@@ -42,7 +42,7 @@ OLE DB Driver for SQL Server をサポートするオペレーティング シ�
 
 ## <a name="azure-active-directory-authentication-requirements"></a>Azure Active Directory 認証の要件  
 
-18.3 ***より前***のバージョンの OLE DB driver for SQL Server で Azure Active Directory 認証方法を使用する場合は、[SQL Server 用 Active Directory 認証ライブラリ](https://go.microsoft.com/fwlink/?LinkID=513072)が確実にインストールされていることを確認します (バージョン 18.3 には、インストーラー パッケージの一部として依存関係が含まれています)。ADAL は、他の認証方法や OLE DB 操作には必要ありません。 詳細については、次を参照してください。[Azure Active Directory の使用](features/using-azure-active-directory.md)。
+18.3 "***より前** _" のバージョンの OLE DB Driver for SQL Server で Azure Active Directory 認証方法を使用する場合は、[SQL Server 用 Active Directory 認証ライブラリ](https://go.microsoft.com/fwlink/?LinkID=513072)が確実にインストールされていることを確認します (バージョン 18.3 には、インストーラー パッケージの一部として依存関係が含まれています)。ADAL は、他の認証方法や OLE DB 操作には必要ありません。 詳細については、次を参照してください。[Azure Active Directory の使用](features/using-azure-active-directory.md)。
 
 ## <a name="sql-server-requirements"></a>SQL Server 要件  
 
@@ -56,7 +56,7 @@ OLE DB Driver for SQL Server の英語版は、サポートされているオペ
 
 アップグレードの要件を次に示します。  
 
-* OLE DB Driver for SQL Server の英語版は、OLE DB Driver for SQL Server の任意のローカライズ版にアップグレードできます。  
+_ OLE DB Driver for SQL Server の英語版は、OLE DB Driver for SQL Server の任意のローカライズ版にアップグレードできます。  
 * OLE DB Driver for SQL Server のローカライズ版は、同じ言語の OLE DB Driver for SQL Server のローカライズ版にアップグレードできます。  
 * OLE DB Driver for SQL Server のローカライズ版は、英語版の OLE DB Driver for SQL Server にアップグレードできます。  
 * OLE DB Driver for SQL Server のローカライズ版は、別のローカライズ言語でローカライズされた OLE DB Driver for SQL Server にアップグレードすることはできません。  

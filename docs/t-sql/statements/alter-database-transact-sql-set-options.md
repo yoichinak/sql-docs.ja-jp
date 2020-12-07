@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 2ba665e435b6245320f4f5c496a212d485df7951
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8050d90cfac0081629f4b7c1d18e2ff0aeb2b770
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538186"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983126"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -45,6 +45,9 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[
 お使いの特定バージョンの SQL の構文、引数、注釈、権限、例を表示するには、以下のいずれかのタブを選択します。
 
 構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
+
+> [!NOTE]
+> ALTER DATABASE で一部のオプションを設定する場合は、データベースへの排他アクセスが必要になることがあります。 ALTER DATABASE ステートメントが時間内に完了しない場合は、データベース内の他のセッションが ALTER DATABASE セッションをブロックしているかどうかを確認してください。
 
 ## <a name="select-a-product"></a>製品を選択する
 
@@ -60,7 +63,7 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -216,7 +219,7 @@ SET
 {
     QUERY_STORE
     {
-          = OFF [ FORCED ] 
+          = OFF [ ( FORCED ) ] 
         | = ON [ ( <query_store_option_list> [,...n] ) ]
         | ( < query_store_option_list> [,...n] )
         | CLEAR [ ALL ]
@@ -437,7 +440,7 @@ FORCE_LAST_GOOD_PLAN = { ON | **OFF** }
 ON     
 新しいクエリ プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。
 
-パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しいクエリ プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。
+パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しいクエリ プランを生成します。 クエリ ストアが有効でない場合、または *読み取り/書き込み* モードでない場合は、ステートメントは失敗します。
 
 OFF     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューのクエリ プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決できます。 既定値は OFF です。
@@ -462,7 +465,7 @@ CHANGE_RETENTION = *retention_period* { **DAYS** | HOURS | MINUTES }
 
 *retention_period* は、保有期間の数値部分を指定する整数です。
 
-既定の保有期間は **2 日**です。 最小保有期間は 1 分です。 保有期間の既定の型は **DAYS** です。
+既定の保有期間は **2 日** です。 最小保有期間は 1 分です。 保有期間の既定の型は **DAYS** です。
 
 OFF     
 データベースの変更の追跡を無効にします。 データベースの変更の追跡を無効にする前に、すべてのテーブルで変更の追跡を無効にしてください。
@@ -563,7 +566,7 @@ RESUME
 
 以前に一時停止した暗号化スキャンを再開するために使用できます。
 
-データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
+データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](/azure/azure-sql/database/transparent-data-encryption-tde-overview)」をご覧ください。
 
 データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに READ ONLY に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
 
@@ -763,19 +766,19 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
-ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
+ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。 詳細については、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md)」を参照してください。
 
 ON     
 クエリのストアを有効にします。
 
-OFF      
-クエリのストアを無効にします。 既定値は OFF です。 FORCED は省略可能です。 FORCED は、実行中のすべてのクエリ ストア バックグラウンド タスクを中止し、クエリ ストアがオフになっている場合は同期フラッシュをスキップします。 クエリ ストアが可能な限り早くシャットダウンされます。 FORCED は、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 以降のビルドに適用されます。
+OFF [ ( FORCED ) ]      
+クエリのストアを無効にします。 既定値は OFF です。 FORCED は省略可能です。 FORCED は、実行中のすべてのクエリ ストア バックグラウンド タスクを中止し、クエリ ストアがオフになっている場合は同期フラッシュをスキップします。 クエリ ストアが可能な限り早くシャットダウンされます。 FORCED は、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU14、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 以降のビルドに適用されます。
 
 > [!NOTE]  
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベースとエラスティック プールでは、クエリ ストアを無効にすることはできません。 `ALTER DATABASE [database] SET QUERY_STORE = OFF` を実行すると、警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.` が返されます。 
 
-CLEAR     
+CLEAR [ ALL ]     
 クエリ関連のデータをクエリ ストアから削除します。 ALL は省略可能です。 ALL を指定すると、クエリ関連のデータとメタデータがクエリ ストアから削除されます。
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
@@ -806,7 +809,7 @@ MAX_STORAGE_SIZE_MB
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
 
 INTERVAL_LENGTH_MINUTES     
-クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60**です。
+クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60** です。
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }     
 データの総量が最大サイズに近づいたときにクリーンアップを自動的にアクティブにするかどうかを制御します。
@@ -1203,7 +1206,7 @@ OFF
 **\<target_recovery_time_option> ::=**      
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
-間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は **1 分**であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
+間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は **1 分** であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
 TARGET_RECOVERY_TIME **=** *target_recovery_time* { SECONDS | MINUTES }     
 *target_recovery_time*     
@@ -1490,7 +1493,7 @@ SET QUERY_STORE = ON
         **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1780,7 +1783,7 @@ DEFAULT
 サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。
 
 ON     
-新しいクエリ プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しいクエリ プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。
+新しいクエリ プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しいクエリ プランを生成します。 クエリ ストアが有効でない場合、または *読み取り/書き込み* モードでない場合は、ステートメントは失敗します。
 
 OFF     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューのクエリ プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決できます。 これが既定値です。
@@ -1803,7 +1806,7 @@ CHANGE_RETENTION = *retention_period* { **DAYS** | HOURS | MINUTES }
 
 *retention_period* は、保有期間の数値部分を指定する整数です。
 
-既定の保有期間は **2 日**です。 最小保有期間は 1 分です。 保有期間の既定の型は **DAYS** です。
+既定の保有期間は **2 日** です。 最小保有期間は 1 分です。 保有期間の既定の型は **DAYS** です。
 
 OFF     
 データベースの変更の追跡を無効にします。 データベースの変更の追跡を無効にする前に、すべてのテーブルで変更の追跡を無効にしてください。
@@ -1826,7 +1829,7 @@ SET ステートメントを使用した接続レベルの設定は、CURSOR_CLO
 データベース暗号化の状態を制御します。
 
 ENCRYPTION { ON | OFF }     
-データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
+データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](/azure/azure-sql/database/transparent-data-encryption-tde-overview)」をご覧ください。
 
 データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに READ ONLY に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
 
@@ -1926,7 +1929,7 @@ MAX_STORAGE_SIZE_MB
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
 
 INTERVAL_LENGTH_MINUTES     
-クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60**です。
+クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60** です。
 
 SIZE_BASED_CLEANUP_MODE     
 データの総量が最大サイズに近づいたときに、クリーンアップを自動的にアクティブにするかどうかを制御します。
@@ -2385,7 +2388,7 @@ SET QUERY_STORE = ON
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -2616,7 +2619,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 
 FORCE_LAST_GOOD_PLAN = { ON | **OFF** }     
 ON     
-新しいクエリ プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しいクエリ プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。
+新しいクエリ プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しいクエリ プランを生成します。 クエリ ストアが有効でない場合、または *読み取り/書き込み* モードでない場合は、ステートメントは失敗します。
 
 OFF     
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューのクエリ プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決できます。 これが既定値です。
@@ -2638,7 +2641,7 @@ CHANGE_RETENTION = *retention_period* { **DAYS** | HOURS | MINUTES }
 
 *retention_period* は、保有期間の数値部分を指定する整数です。
 
-既定の保有期間は **2 日**です。 最小保有期間は 1 分です。 保有期間の既定の型は **DAYS** です。
+既定の保有期間は **2 日** です。 最小保有期間は 1 分です。 保有期間の既定の型は **DAYS** です。
 
 OFF     
 データベースの変更の追跡を無効にします。 データベースの変更の追跡を無効にする前に、すべてのテーブルで変更の追跡を無効にしてください。
@@ -2661,7 +2664,7 @@ SET ステートメントを使用した接続レベルの設定は、CURSOR_CLO
 データベース暗号化の状態を制御します。
 
 ENCRYPTION { ON | **OFF** }     
-データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
+データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](/azure/azure-sql/database/transparent-data-encryption-tde-overview)」をご覧ください。
 
 データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに READ ONLY に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
 
@@ -2752,7 +2755,7 @@ MAX_STORAGE_SIZE_MB
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
 
 INTERVAL_LENGTH_MINUTES     
-クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60**です。
+クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60** です。
 
 SIZE_BASED_CLEANUP_MODE     
 データの総量が最大サイズに近づいたときに、クリーンアップを自動的にアクティブにするかどうかを制御します。
@@ -3000,7 +3003,7 @@ OFF
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_recursive_triggers_on` 列または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsRecursiveTriggersEnabled` プロパティを調べることでこのオプションの状態を判断できます。
 
 **\<target_recovery_time_option> ::=**      
-間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は **1 分**であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
+間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は **1 分** であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
 TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }     
 *target_recovery_time*     
@@ -3179,7 +3182,7 @@ SET QUERY_STORE = ON
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -3317,7 +3320,7 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-このコマンドを実行すると、キャッシュ済みの結果を利用してクエリが実行されたか確認されます。  result_cache_hit 列では、キャッシュ ヒットの場合は 1、キャッシュ ミスの場合は 0、結果セットのキャッシュが使用されなかった理由については負の値が返されます。  詳細については、[sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7) を確認してください。  
+このコマンドを実行すると、キャッシュ済みの結果を利用してクエリが実行されたか確認されます。  result_cache_hit 列では、キャッシュ ヒットの場合は 1、キャッシュ ミスの場合は 0、結果セットのキャッシュが使用されなかった理由については負の値が返されます。  詳細については、[sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md?view=aps-pdw-2016-au7) を確認してください。  
 
 ```sql
 SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests

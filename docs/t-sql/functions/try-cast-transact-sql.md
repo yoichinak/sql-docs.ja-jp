@@ -19,12 +19,12 @@ ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: bd5c7d9ee466ba52d2cc82429e92f9ce6fec6ab2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02ec3dd7e7047411901dcaad4b76056781a9384c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467784"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379517"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88467784"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 TRY_CAST ( expression AS data_type [ ( length ) ] )  
 ```  
   
@@ -121,7 +120,7 @@ Explicit conversion from data type int to xml is not allowed.
 ### <a name="c-try_cast-succeeds"></a>C. TRY_CAST が成功する  
  この例は、式を求められている形式にする必要があることを示しています。  
   
-```  
+```sql
 SET DATEFORMAT mdy;  
 SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
 GO  

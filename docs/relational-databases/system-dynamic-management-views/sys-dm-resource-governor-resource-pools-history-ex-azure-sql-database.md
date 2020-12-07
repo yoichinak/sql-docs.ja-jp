@@ -1,6 +1,6 @@
 ---
-description: dm_resource_governor_resource_pools_history_ex (Transact-sql)
-title: dm_resource_governor_resource_pools_history_ex (Transact-sql) |Microsoft Docs
+description: sys.dm_resource_governor_resource_pools_history_ex (Transact-sql)
+title: sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 62aec7de63493a94ea05f91883e506d0fc0f6f7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cbc5d23a7c7843a2186cd951fd5bb16079489d3
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481793"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834326"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>dm_resource_governor_resource_pools_history_ex (Transact-sql)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-sql)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -104,7 +104,7 @@ Azure SQL Database のリソースプール統計の最後の32分 (合計 128) 
 
 このビューには VIEW SERVER STATE 権限が必要です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 ユーザーは、この動的管理ビューにアクセスして、ユーザーワークロードプールと Azure SQL Database インスタンスのシステム内部プールについて、ほぼリアルタイムのリソース消費を監視できます。
 
@@ -119,7 +119,7 @@ Azure SQL Database のリソースプール統計の最後の32分 (合計 128) 
 select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-次の例では、論理マスターに接続しなくても、elastic_pool_resource_stats と同様の情報が返されます。
+次の例では、論理マスターに接続しなくても同様の情報を sys.elastic_pool_resource_stats として返します。
 
 ```sql
 select snapshot_time, name, cap_vcores_used_percent,
@@ -135,6 +135,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 
 ## <a name="see-also"></a>参照
 
-- [翻訳ログレートガバナンス](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [エラスティック プールの DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [エラスティック プールの仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [翻訳ログレートガバナンス](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [エラスティック プールの DTU リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [エラスティック プールの仮想コア リソースの制限](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

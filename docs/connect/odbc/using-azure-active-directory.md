@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c71c9a458d285cdf33bd785e1bec74a6f33d5820
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: e6925b2b79629fbcbe84f6577e2617e9b45ea82c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288194"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727385"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC ドライバーでの Azure Active Directory の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -45,7 +45,7 @@ DSN または接続文字列を使用して接続する場合、`Authentication`
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_RESET`|(未設定)|上記の `Authentication` キーワードの説明を参照してください。 `SQL_AU_NONE` は、DSN または接続文字列で設定された `Authentication` 値を明示的にオーバーライドするために用意されています。それに対し、`SQL_AU_RESET` は、属性が設定されている場合にそれを設定解除し、DSN または接続文字列の値が優先されるようにします。|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|`ACCESSTOKEN` へのポインターまたは NULL|NULL|null 以外の場合は、使用する AzureAD アクセス トークンを指定します。 アクセス トークンを指定し、同時に `UID`、`PWD`、`Trusted_Connection`、または `Authentication` 接続文字列キーワードまたはそれと同等の属性を指定すると、エラーになります。 <br> **注:** ODBC ドライバー バージョン 13.1 では、_Windows_ でのみこれがサポートされます。|
-|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(説明を参照)|接続の暗号化を制御します。 `SQL_EN_OFF` を指定すると暗号化が無効になり、`SQL_EN_ON` を指定すると有効になります。 `Authentication` 設定の事前属性値が _none_ でないか、または `SQL_COPT_SS_ACCESS_TOKEN` が設定されていて、DSN または接続文字列のいずれかで `Encrypt` が指定されていなかった場合、既定値は `SQL_EN_ON` です。 それ以外の場合、既定値は `SQL_EN_OFF` です。 接続属性 `SQL_COPT_SS_AUTHENTICATION` が _none_ 以外に設定されていて、DSN または接続文字列で `Encrypt` が指定されていなかった場合は、`SQL_COPT_SS_ENCRYPT` を必要な値に明示的に設定してください。 この属性の有効な値によって、[接続に暗号化を使用するかどうか](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)が制御されます。|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(説明を参照)|接続の暗号化を制御します。 `SQL_EN_OFF` を指定すると暗号化が無効になり、`SQL_EN_ON` を指定すると有効になります。 `Authentication` 設定の事前属性値が _none_ でないか、または `SQL_COPT_SS_ACCESS_TOKEN` が設定されていて、DSN または接続文字列のいずれかで `Encrypt` が指定されていなかった場合、既定値は `SQL_EN_ON` です。 それ以外の場合、既定値は `SQL_EN_OFF` です。 接続属性 `SQL_COPT_SS_AUTHENTICATION` が _none_ 以外に設定されていて、DSN または接続文字列で `Encrypt` が指定されていなかった場合は、`SQL_COPT_SS_ENCRYPT` を必要な値に明示的に設定してください。 この属性の有効な値によって、[接続に暗号化を使用するかどうか](../../relational-databases/native-client/features/using-encryption-without-validation.md)が制御されます。|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Azure Active Directory ではサポートされません。Azure AD プリンシパルに対するパスワードの変更は、ODBC 接続を通じて行うことができないためです。 <br><br>SQL Server 2005 では、SQL Server 認証におけるパスワードの期限切れが導入されました。 クライアントから接続の古いパスワードと新しいパスワードの両方を提供できるようにするために、`SQL_COPT_SS_OLDPWD` 属性が追加されました。 この属性が設定されている場合、接続文字列には変更された "古いパスワード" が含まれているので、プロバイダーは最初の接続またはそれ以降の接続で接続プールを使用しません。|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|"_非推奨_" です。代わりに `SQL_COPT_SS_AUTHENTICATION` を `SQL_AU_AD_INTEGRATED` に設定して使用してください。 <br><br>サーバー ログインでのアクセス検証に Windows 認証 (Linux と macOS では Kerberos) を使用するように強制します。 Windows 認証を使用すると、ドライバーでは `SQLConnect`、`SQLDriverConnect`、または `SQLBrowseConnect` の処理の一環として提供されるユーザー ID とパスワードが無視されます。|
 
@@ -135,7 +135,7 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-`ACCESSTOKEN` は、4 バイト_長_と、その後のアクセス トークンを形成する不透明データのバイト_長_によって構成される、可変長構造体です。 SQL Server によるアクセス トークンの処理方法が原因で、[OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) JSON 応答を介して取得されたものを拡張して、ASCII 文字のみを含む UCS 2 文字列のように、各バイトの後に 0 埋め込みバイトを挿入することが必要です。ただし、トークンは不透明値であり、バイト単位で指定する長さに null 終端文字を含めることはできません。 この認証方法は、長さと形式の制約が非常に多いため、`SQL_COPT_SS_ACCESS_TOKEN` 接続属性を使用してプログラムでのみ使用できます。対応する DSN または接続文字列のキーワードはありません。 接続文字列には、`UID`、`PWD`、`Authentication`、または `Trusted_Connection` キーワードを含めることはできません。
+`ACCESSTOKEN` は、4 バイト_長_と、その後のアクセス トークンを形成する不透明データのバイト_長_によって構成される、可変長構造体です。 SQL Server によるアクセス トークンの処理方法が原因で、[OAuth 2.0](/azure/active-directory/develop/active-directory-authentication-scenarios) JSON 応答を介して取得されたものを拡張して、ASCII 文字のみを含む UCS 2 文字列のように、各バイトの後に 0 埋め込みバイトを挿入することが必要です。ただし、トークンは不透明値であり、バイト単位で指定する長さに null 終端文字を含めることはできません。 この認証方法は、長さと形式の制約が非常に多いため、`SQL_COPT_SS_ACCESS_TOKEN` 接続属性を使用してプログラムでのみ使用できます。対応する DSN または接続文字列のキーワードはありません。 接続文字列には、`UID`、`PWD`、`Authentication`、または `Trusted_Connection` キーワードを含めることはできません。
 
 > [!NOTE]
 > ODBC ドライバー バージョン 13.1 では、_Windows_ でのみこの認証がサポートされます。

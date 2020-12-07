@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b471d7e0f6ab13c5718e1ec37a87d423e7115f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420926"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869415"
 ---
 # <a name="linked-servers-database-engine"></a>リンク サーバー (データベース エンジン)
 
@@ -34,7 +34,7 @@ ms.locfileid: "88420926"
   リンク サーバーを使用すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] では、リモート データ ソースからデータを読み取ったり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの外部にあるリモート データベース サーバー (たとえば、OLE DB データ ソース) に対してコマンドを実行することができます。 通常、リンク サーバーを構成する目的は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスまたは別のデータベース製品 (Oracle など) のテーブルを含んだ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から実行できるようにすることです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel、Azure CosmosDB など、さまざまな種類の OLE DB データ ソースをリンク サーバーとして構成できます。
 
 > [!NOTE]
-> リンク サーバーは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]および [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] で使用できます。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] シングルトンおよびエラスティック プールでは使用できません。 [Managed Instance には、ここに示されるいくつかの制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers)があります。 
+> リンク サーバーは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]および [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] で使用できます。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] シングルトンおよびエラスティック プールでは使用できません。 [Managed Instance には、ここに示されるいくつかの制限](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers)があります。 
 
 ## <a name="when-to-use-linked-servers"></a>リンク サーバーを使用する場合
 
@@ -76,7 +76,7 @@ ms.locfileid: "88420926"
 > OLE DB プロバイダーを使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行しているアカウントには、プロバイダーがインストールされているディレクトリとそのすべてのサブディレクトリに対する読み取り権限と実行権限が必要です。 これには、Microsoft によってリリースされたプロバイダー、およびすべてのサードパーティのプロバイダーが含まれます。
 
 > [!NOTE]
-> リンク サーバーでは、完全委任を使用する場合に、Active Directory パススルー認証をサポートします。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 以降では、制約付き委任を使用したパススルー認証もサポートされています。ただし、[リソース ベースの制約付き委任](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)はサポートされません。
+> リンク サーバーでは、完全委任を使用する場合に、Active Directory パススルー認証をサポートします。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 以降では、制約付き委任を使用したパススルー認証もサポートされています。ただし、[リソース ベースの制約付き委任](/windows-server/security/kerberos/kerberos-constrained-delegation-overview)はサポートされません。
 
 ## <a name="managing-providers"></a>プロバイダーの管理  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が OLE DB プロバイダーを読み込んで使用する方法を制御する一連のオプションは、レジストリで指定されます。  
@@ -107,5 +107,4 @@ ms.locfileid: "88420926"
   
 ## <a name="related-content"></a>関連コンテンツ  
  [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)

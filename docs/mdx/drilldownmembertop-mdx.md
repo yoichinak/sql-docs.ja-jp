@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fe58cf1c2793206c3217f4a0f7ea132d13a242ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d90c382ca34316225760c1a25288034ba26ab726
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421916"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193505"
 ---
 # <a name="drilldownmembertop-mdx"></a>ドリルダウンメンバートップ (MDX)
 
@@ -50,7 +50,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Include_Calc_Members*  
  計算されるメンバーがドリルダウン結果に含まれるようにするキーワード。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  数値式が指定されている場合、 **ドリルダウン Membertop** 関数は、1番目のセット内の各メンバーの子を、子メンバーのセットに対して評価される数値式の値に基づいて降順で並べ替えます。 数値式が指定されていない場合、関数は、クエリコンテキストによって決定される子メンバーのセットによって表されるセルの値に基づいて、最初のセット内の各メンバーの子を降順で並べ替えます。 この動作は、並べ替えを行わずに、一連のメンバーを自然な順序で返す TopCount および Head (MDX) 関数に似ています。  
   
  並べ替えの後、 **ドリルダウン Membertop** 関数は、親メンバーと子メンバーの数を含むセットを返します。これは、最大値で、 *Count* で指定したもので、両方のセットに含まれています。  
@@ -61,7 +61,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  **ドリルダウンメンバートップ**関数は、[ドリルダウンメンバー](../mdx/drilldownmember-mdx.md)関数と似ていますが、2番目のセットにも含まれている最初のセット内の各メンバーのすべての子を含めるのではなく、**ドリルダウン membertop**関数は、各メンバーの子メンバーの最上位の数を返します。  
   
- XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「 [サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
+ XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「 [サポートされる Xmla プロパティ &#40;xmla&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、衣料カテゴリにドリルダウンして、出荷された注文の上位数量を持つ衣料の3つのサブカテゴリを返します。  
@@ -81,5 +81,4 @@ WHERE [Measures].[Reseller Order Quantity]
   
 ## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

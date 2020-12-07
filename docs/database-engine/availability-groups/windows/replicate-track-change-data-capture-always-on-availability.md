@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d09e76a26e0364857c70469ef1308f21e298727b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a38c7d3bdb94881a3fdc7c54b4a10d0e7cce406f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395047"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583995"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>レプリケーション、変更の追跡、変更データ キャプチャ - Always On 可用性グループ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "87395047"
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
         ON r.group_id = g.group_id  
-    WHERE g.name = N'MY_AG_NAME;  
+    WHERE g.name = N'MY_AG_NAME';  
     ```  
   
      可用性グループ リスナー名または明示的なノード名を使用してセカンダリ レプリカを検索できます。 可用性グループ リスナー名を使用すると、アクセスは適切なセカンダリ レプリカに送られます。  

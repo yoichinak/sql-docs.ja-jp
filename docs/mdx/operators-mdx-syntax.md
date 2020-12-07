@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9ad1f77a8e023d55a34e64d6c40ad956b0dac92
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471774"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193492"
 ---
 # <a name="operators-mdx-syntax"></a>演算子 (MDX 構文)
 
@@ -83,7 +83,7 @@ ms.locfileid: "88471774"
 ### <a name="determining-results"></a>結果の確認  
  単純な式を結合して複雑な式を作成する場合、演算子に関する規則とデータ型の優先順位に関する規則の組み合わせによって、結果の値のデータ型が決まります。  
   
- 結果が文字または Unicode 値の場合、演算子のルールと照合順序の優先順位に関するルールを組み合わせて、結果の照合順序を決定します。 照合順序の詳細については、「 [Analysis Services&#41;&#40;言語と照合順序 ](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services)」を参照してください。  
+ 結果が文字または Unicode 値の場合、演算子のルールと照合順序の優先順位に関するルールを組み合わせて、結果の照合順序を決定します。 照合順序の詳細については、「 [Analysis Services&#41;&#40;言語と照合順序 ](/analysis-services/languages-and-collations-analysis-services)」を参照してください。  
   
  また、単純式の有効桁数、小数点以下桁数、および長さに基づいて、結果の有効桁数、小数点以下桁数、および長さを決定するルールもあります。  
   
@@ -101,5 +101,4 @@ ms.locfileid: "88471774"
 ## <a name="see-also"></a>参照  
  [Mdx 演算子リファレンス &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [MDX 構文の要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

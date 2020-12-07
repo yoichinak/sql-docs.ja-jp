@@ -16,12 +16,12 @@ ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1c63fa4b7a7e57e15d158c065c3fad5b512e8c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f768aec9de1626f48cdd8fe896043242f743ba68
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475768"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867069"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>SELECT 結果セットの一括コピー (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88475768"
   このサンプルでは、一括コピー関数を使用して SELECT ステートメントの結果セットを一括コピーする方法を示します。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>SELECT ステートメントの結果セットを一括コピーするには  
   
@@ -168,5 +168,4 @@ int main() {
   
 ## <a name="see-also"></a>参照  
  [SQL Server ODBC ドライバーを使用した一括コピーの操作方法に関するトピック &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
-  
   
